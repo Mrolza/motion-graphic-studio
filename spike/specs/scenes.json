@@ -1,0 +1,99 @@
+[
+  {
+    "id": "Scene1_TrainDrive",
+    "componentName": "Scene1_TrainDrive",
+    "durationSec": 6,
+    "topic": "Kenapa kereta tidak tergelincir?",
+    "description": "Opening scene: a low-poly blueprint train car drives smoothly along the railway track past overhead poles while the camera dollys in.",
+    "entities": [
+      "Ground",
+      "Rail (length 30)",
+      "Pole (2 poles along the right side of the track)",
+      "TrainCar moving from [0,0,-7] to [0,0,4] with spinRps=2.2"
+    ],
+    "camera": {
+      "mode": "dolly",
+      "from": [6.5, 3.4, 8.5],
+      "to": [3.8, 2.2, 4.2],
+      "target": [0, 1.2, 0]
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "BLUEPRINT // 01", "title": "Kenapa Kereta Tidak Tergelincir?", "subtitle": "Rahasia di balik roda & rel baja", "position": "top" },
+      { "type": "CaptionBar", "text": "Melaju ratusan km/jam tanpa setir—bagaimana kereta tetap di jalur?" }
+    ]
+  },
+  {
+    "id": "Scene2_WheelFlange",
+    "componentName": "Scene2_WheelFlange",
+    "durationSec": 7,
+    "topic": "Flens pada sisi dalam roda kereta",
+    "description": "Close-up of a spinning railway Axle and Wheels on the Rail, with highlightFlange=true so the yellow inner flange pulses to show how it keeps the wheel from slipping off.",
+    "entities": [
+      "Ground",
+      "Rail (length 16)",
+      "Axle at [0, 0.63, 0] with spinRps=1.4 and highlightFlange=true"
+    ],
+    "camera": {
+      "mode": "closeUp",
+      "from": [2.6, 1.8, 3.2],
+      "to": [1.5, 1.15, 1.9],
+      "target": [-0.55, 0.63, 0]
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "BLUEPRINT // 02", "title": "Flens Pengaman Roda", "position": "top" },
+      { "type": "Callout", "title": "FLENS DALAM", "body": "Bibir roda di sisi dalam rel menahan posisi agar tidak keluar jalur.", "targetX": 350, "targetY": 670, "boxX": 500, "boxY": 470 },
+      { "type": "CaptionBar", "text": "Setiap roda punya flens di sisi dalam yang mengunci posisi terhadap kepala rel." }
+    ]
+  },
+  {
+    "id": "Scene3_RailGauge",
+    "componentName": "Scene3_RailGauge",
+    "durationSec": 6,
+    "topic": "Lebar standar rel kereta 1.435 mm",
+    "description": "Orbit camera over the highlighted railway track with an animated StatCounter counting from 1249 to 1435 mm and a DimensionLine across the track.",
+    "entities": [
+      "Ground",
+      "Rail (length 22, gauge=1.435, highlighted=true)",
+      "Axle at [0, 0.63, -1.2] with spinRps=0.8"
+    ],
+    "camera": {
+      "mode": "orbit",
+      "target": [0, 0.4, 0],
+      "radius": 4.2,
+      "height": 2.8,
+      "startAngleDeg": -25,
+      "endAngleDeg": 25
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "BLUEPRINT // 03", "title": "Presisi Lebar Rel", "position": "top" },
+      { "type": "StatCounter", "label": "Standard Gauge", "from": 1249, "to": 1435, "unit": "mm", "decimals": 0, "position": "top-right" },
+      { "type": "DimensionLine", "label": "1.435 mm", "x1": 200, "y1": 740, "x2": 520, "y2": 740 },
+      { "type": "CaptionBar", "text": "Lebar rel standar 1.435 mm dijaga presisi sepanjang jalur." }
+    ]
+  },
+  {
+    "id": "Scene4_Suspension",
+    "componentName": "Scene4_Suspension",
+    "durationSec": 6,
+    "topic": "Pegas suspensi meredam getaran",
+    "description": "Two helical Spring components oscillating above a spinning Axle on the Rail, showing how suspension absorbs track vibrations.",
+    "entities": [
+      "Ground",
+      "Rail (length 18)",
+      "Axle at [0, 0.63, 0] with spinRps=1.5",
+      "Spring left at [-0.72, 1.45, 0] with amplitude=0.25, freqHz=2.0, highlighted=true",
+      "Spring right at [0.72, 1.45, 0] with amplitude=0.25, freqHz=2.0, highlighted=true"
+    ],
+    "camera": {
+      "mode": "dolly",
+      "from": [3.6, 2.2, 4.2],
+      "to": [2.2, 1.7, 2.8],
+      "target": [0, 1.1, 0]
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "BLUEPRINT // 04", "title": "Suspensi Pegas", "position": "top" },
+      { "type": "Callout", "title": "PEGAS KOIL", "body": "Meredam hentakan vertikal agar roda tetap menapak di rel.", "targetX": 430, "targetY": 590, "boxX": 220, "boxY": 420 },
+      { "type": "CaptionBar", "text": "Pegas suspensi menyerap getaran sehingga kontak roda dan rel selalu terjaga." }
+    ]
+  }
+]
