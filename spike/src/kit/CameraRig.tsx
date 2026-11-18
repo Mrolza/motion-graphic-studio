@@ -1,12 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { EasingMode, getLocalProgress, useSceneTime } from './motion';
 
 export type CameraMode = 'dolly' | 'orbit' | 'closeUp';
+export type FramingPreset = 'default' | 'portrait-lower' | 'portrait-center' | 'portrait-closeup';
+
+const FRAMING_Y_OFFSET: Record<FramingPreset, number> = {
+  default: 0,
+  'portrait-center': 0.1,
+  'portrait-lower': 0.35,
+  'portrait-closeup': 0.2,
+};
 
 export interface CameraRigProps {
   mode: CameraMode;
+  framing?: FramingPreset;
   startSec?: number;
   durationSec?: number;
   easing?: EasingMode;
@@ -24,6 +33,7 @@ export interface CameraRigProps {
 
 export const CameraRig: React.FC<CameraRigProps> = ({
   mode,
+  framing = 'portrait-lower',
   startSec = 0,
   durationSec = 5,
   easing = 'easeInOut',
@@ -42,7 +52,7 @@ export const CameraRig: React.FC<CameraRigProps> = ({
   const { sec } = useSceneTime();
   const p = getLocalProgress(sec, startSec, durationSec, easing);
 
-  useEffect(() => {
+  const applyCamera = () => {
     if (camera instanceof THREE.PerspectiveCamera && camera.fov !== fov) {
       camera.fov = fov;
       camera.updateProjectionMatrix();
@@ -50,8 +60,9 @@ export const CameraRig: React.FC<CameraRigProps> = ({
 
     const lookFrom = targetFrom ?? target;
     const lookTo = targetTo ?? target;
+    const framingY = FRAMING_Y_OFFSET[framing];
     const lookX = lookFrom[0] + (lookTo[0] - lookFrom[0]) * p;
-    const lookY = lookFrom[1] + (lookTo[1] - lookFrom[1]) * p;
+    const lookY = lookFrom[1] + (lookTo[1] - lookFrom[1]) * p + framingY;
     const lookZ = lookFrom[2] + (lookTo[2] - lookFrom[2]) * p;
 
     if (mode === 'orbit') {
@@ -62,16 +73,8 @@ export const CameraRig: React.FC<CameraRigProps> = ({
         lookY + height,
         lookZ + Math.cos(rad) * radius
       );
-    } else if (mode === 'closeUp') {
-      const startPos = from;
-      const endPos = to;
-      camera.position.set(
-        startPos[0] + (endPos[0] - startPos[0]) * p,
-        startPos[1] + (endPos[1] - startPos[1]) * p,
-        startPos[2] + (endPos[2] - startPos[2]) * p
-      );
     } else {
-      // dolly
+      // dolly or closeUp
       camera.position.set(
         from[0] + (to[0] - from[0]) * p,
         from[1] + (to[1] - from[1]) * p,
@@ -81,21 +84,11 @@ export const CameraRig: React.FC<CameraRigProps> = ({
 
     camera.lookAt(lookX, lookY, lookZ);
     camera.updateMatrixWorld();
-  }, [
-    camera,
-    mode,
-    p,
-    from,
-    to,
-    target,
-    targetFrom,
-    targetTo,
-    radius,
-    height,
-    startAngleDeg,
-    endAngleDeg,
-    fov,
-  ]);
+  };
+
+  // Apply synchronously before ThreeCanvas draws the frame, and in useLayoutEffect as backup
+  applyCamera();
+  useLayoutEffect(applyCamera);
 
   return null;
 };

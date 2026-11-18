@@ -144,8 +144,11 @@ export const Wheel: React.FC<WheelProps> = ({
   const angle = spin(sec, startSec, durationSec, spinRps);
   const h = highlightFlange ? highlight(sec, startSec, durationSec) : 0;
 
-  // Inner side faces x = 0 (towards center of track)
-  const flangeX = side === 'left' ? width / 2 - flangeWidth / 2 : -width / 2 + flangeWidth / 2;
+  // Inner side faces x = 0 (towards center of track); +0.002 offset avoids coplanar z-fighting
+  const flangeX =
+    side === 'left'
+      ? width / 2 - flangeWidth / 2 + 0.002
+      : -width / 2 + flangeWidth / 2 - 0.002;
 
   return (
     <group position={position} rotation={[angle, 0, 0]}>

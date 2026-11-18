@@ -2,6 +2,13 @@ import React from 'react';
 import { BLUEPRINT_TOKENS } from './tokens';
 import { clamp01, getLocalProgress, useSceneTime } from './motion';
 
+export function formatNumberId(value: number, decimals = 0): string {
+  return new Intl.NumberFormat('id-ID', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  }).format(value);
+}
+
 export interface TitleCardProps {
   title: string;
   subtitle?: string;
@@ -32,7 +39,7 @@ export const TitleCard: React.FC<TitleCardProps> = ({
       ? { top: '42%', transform: `translateY(${(1 - enter) * 20}px)` }
       : position === 'bottom'
       ? { bottom: 230, transform: `translateY(${(1 - enter) * 20}px)` }
-      : { top: 96, transform: `translateY(${(1 - enter) * -18}px)` };
+      : { top: 64, transform: `translateY(${(1 - enter) * -18}px)` };
 
   return (
     <div
@@ -53,7 +60,7 @@ export const TitleCard: React.FC<TitleCardProps> = ({
       <div
         style={{
           fontFamily: BLUEPRINT_TOKENS.fonts.mono,
-          fontSize: 16,
+          fontSize: 18,
           letterSpacing: 2,
           color: BLUEPRINT_TOKENS.colors.yellow,
           marginBottom: 6,
@@ -64,9 +71,9 @@ export const TitleCard: React.FC<TitleCardProps> = ({
       <div
         style={{
           fontFamily: BLUEPRINT_TOKENS.fonts.sans,
-          fontSize: 34,
+          fontSize: 46,
           fontWeight: 800,
-          lineHeight: 1.15,
+          lineHeight: 1.12,
           color: BLUEPRINT_TOKENS.colors.white,
         }}
       >
@@ -76,9 +83,9 @@ export const TitleCard: React.FC<TitleCardProps> = ({
         <div
           style={{
             marginTop: 8,
-            fontSize: 20,
+            fontSize: 26,
             color: BLUEPRINT_TOKENS.colors.cyanGlow,
-            lineHeight: 1.35,
+            lineHeight: 1.3,
           }}
         >
           {subtitle}
@@ -114,14 +121,11 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   const fade = getLocalProgress(sec, startSec, 0.3, 'easeOut');
   const val = from + (to - from) * p;
 
-  const formatted = val.toLocaleString('en-US', {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
-  });
+  const formatted = formatNumberId(val, decimals);
 
   const posMap: Record<NonNullable<StatCounterProps['position']>, React.CSSProperties> = {
-    'top-left': { top: 260, left: 44 },
-    'top-right': { top: 260, right: 44 },
+    'top-left': { top: 295, left: 44 },
+    'top-right': { top: 295, right: 44 },
     'bottom-left': { bottom: 240, left: 44 },
     'bottom-right': { bottom: 240, right: 44 },
   };
@@ -291,15 +295,15 @@ export const Callout: React.FC<CalloutProps> = ({
           transform: 'translate(-50%, -50%)',
           backgroundColor: BLUEPRINT_TOKENS.colors.panelBg,
           border: `1.5px solid ${BLUEPRINT_TOKENS.colors.cyan}`,
-          padding: '10px 14px',
+          padding: '12px 16px',
           borderRadius: 6,
-          maxWidth: 260,
+          maxWidth: 320,
         }}
       >
         <div
           style={{
             fontFamily: BLUEPRINT_TOKENS.fonts.mono,
-            fontSize: 17,
+            fontSize: 26,
             fontWeight: 700,
             color: BLUEPRINT_TOKENS.colors.yellow,
           }}
@@ -307,7 +311,7 @@ export const Callout: React.FC<CalloutProps> = ({
           {title}
         </div>
         {body ? (
-          <div style={{ fontSize: 15, color: BLUEPRINT_TOKENS.colors.white, marginTop: 4 }}>
+          <div style={{ fontSize: 26, color: BLUEPRINT_TOKENS.colors.white, marginTop: 4, lineHeight: 1.25 }}>
             {body}
           </div>
         ) : null}
@@ -337,16 +341,16 @@ export const CaptionBar: React.FC<CaptionBarProps> = ({
         position: 'absolute',
         left: 44,
         right: 44,
-        bottom: 110,
+        bottom: 100,
         opacity: fade,
-        backgroundColor: 'rgba(4, 12, 24, 0.88)',
-        border: `1px solid ${BLUEPRINT_TOKENS.colors.panelBorder}`,
+        backgroundColor: 'rgba(4, 12, 24, 0.9)',
+        border: `1.5px solid ${BLUEPRINT_TOKENS.colors.panelBorder}`,
         borderRadius: 8,
-        padding: '14px 20px',
+        padding: '16px 22px',
         textAlign: 'center',
-        fontSize: 22,
+        fontSize: 32,
         fontWeight: 600,
-        lineHeight: 1.35,
+        lineHeight: 1.3,
         color: BLUEPRINT_TOKENS.colors.white,
       }}
     >

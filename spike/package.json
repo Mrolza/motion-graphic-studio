@@ -7,7 +7,9 @@
     "typecheck": "tsc --noEmit",
     "benchmark": "node --env-file=../.env.local --import tsx scripts/benchmark-render.ts",
     "generate": "node --env-file=../.env.local --import tsx scripts/run-scene-coder.ts",
-    "render:spike": "node --env-file=../.env.local --import tsx scripts/render-spike.ts"
+    "render:spike": "node --env-file=../.env.local --import tsx scripts/render-spike.ts",
+    "generate:p0b": "node --env-file=../.env.local --import tsx scripts/run-scene-coder-p0b.ts",
+    "render:p0b": "node --env-file=../.env.local --import tsx scripts/render-spike-p0b.ts"
   },
   "dependencies": {
     "@google/genai": "^1.0.0",
