@@ -72,3 +72,42 @@
 ### Catatan untuk Pemilik
 - `tsc --noEmit` di `spike/` lulus 0 error.
 - Temuan kecil: pada `Scene1` dan `Scene3`, posisi `Callout` dari Gemini bertumpuk dengan `StatCounter` `top-right`; di P3 perlu pengecekan anti-overlap antar-HUD.
+
+---
+
+## Fase P1 — Fondasi (`docs/P1-FOUNDATION.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p1-foundation` (tag awal: `p1-start`; spike P0+P0b sudah di-merge ke `main` dengan tag `p0-done`)
+- **Tanggal:** 2026-11-18
+
+### Apa yang Dibuat
+1. **Merge spike & struktur repo:**
+   - `phase/p0b-generalize` di-merge (`--no-ff`) ke `main` dengan tag `p0-done`, lalu dibuat branch `phase/p1-foundation` (`p1-start`).
+   - `spike/src/kit/` dipindahkan ke `remotion/src/kit/` via `git mv`; sisa `spike/` dipindahkan ke `archive/spike/`.
+   - Package utama (`/`) dan `remotion/` masing-masing memiliki `package.json` dan `tsconfig.json` terpisah (`tsc --noEmit` 0 error di keduanya).
+2. **Salinan modul dari `D:\content-studio`:**
+   - `tts.ts`, `audio-mix.ts`, `beats.ts`, `timeline.ts`, `captions.ts`, `quota.ts`, `cache.ts`, `providers.ts` (dipecah menjadi 3 file ≤ 400 baris), `commons.ts`, `wikimedia.ts`, `gemini-config.ts`, font OFL, dan SFX (`remotion/public/`).
+   - 7 suite test salinan (27 test) semuanya lulus; 0 ketergantungan ke `executor.ts`, `page.tsx`, atau Supabase.
+   - `THIRD_PARTY_NOTICES.md` mencatat lisensi dependensi, FFmpeg/ffprobe, font OFL, dan SFX.
+3. **Kontrak data (`src/core/contracts/`):**
+   - Skema Zod + tipe TypeScript untuk `Project`, `FactLedger`, `Script`, `Storyboard`, `Timeline`, dan `QcReport`, plus fixture valid & tidak valid di `tests/contracts.test.ts` (6/6 lulus).
+4. **Profil perangkat (`src/core/device/`) & penyimpanan proyek (`src/core/project/store.ts`):**
+   - Deteksi CPU/RAM/GPU/NPU + benchmark Remotion 3 detik (`angle` vs `swangle`) → memilih `standar` (`angle` c=2: `8.820 ms`, `swangle` c=1: `15.626 ms` pada `Intel(R) Core(TM) Ultra 7 256V`, `Intel(R) Arc(TM) 140V GPU`, `Intel(R) AI Boost`).
+   - Disimpan di `.mgs/device-profile.json` (gitignored).
+5. **Klien LLM (`src/core/llm/client.ts`):**
+   - `generateJson<T>(schema, prompt, opts)` dengan retry transient (`503`, `429`, timeout), retry JSON/Zod dengan pesan error, fast-fail `DailyQuotaExhaustedError` untuk kuota harian, dan pencatatan panggilan. Diuji dengan `fetch` mock di `tests/llmClient.test.ts` (5/5 lulus). Smoke call nyata: `NOT RUN` (opsional).
+6. **CLI (`src/cli/index.ts`) & Penjaga Struktur (`scripts/check-size.ts`, `tests/moduleBoundary.test.ts`):**
+   - `npm run mgs -- doctor|new|status|profile` teruji; `npm run verify` lulus penuh (`tsc` kedua package, 11 file / 41 test, `check:size`, batas modul).
+
+### Bukti (`out/review/p1/`)
+- [`verify.txt`](../out/review/p1/verify.txt): hasil penuh `npm run verify`
+- [`doctor.txt`](../out/review/p1/doctor.txt) & [`device-profile.json`](../out/review/p1/device-profile.json)
+- [`tree.txt`](../out/review/p1/tree.txt): struktur folder tanpa `node_modules`
+- [`sample-project.json`](../out/review/p1/sample-project.json) & [`sample-status.txt`](../out/review/p1/sample-status.txt)
+- [`kit-still.png`](../out/review/p1/kit-still.png): still dari `remotion/src/kit/`
+- [`copied-modules.md`](../out/review/p1/copied-modules.md)
+
+### Catatan untuk Pemilik
+- `npm run verify` lulus 100% (41/41 test, 0 error TypeScript, `check:size` 30 file OK).
+- Smoke call nyata `generateJson` ke Gemini berstatus `NOT RUN` (opsional di P1; sudah diuji penuh dengan mock `fetch`).

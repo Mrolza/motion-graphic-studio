@@ -1,0 +1,25 @@
+
+> motion-graphic-studio@0.1.0 mgs
+> node --env-file-if-exists=.env.local --import tsx src/cli/index.ts doctor
+
+=== MGS Doctor ===
+Environment variables (presence only):
+  GEMINI_API_KEY: SET
+  GEMINI_MODEL: SET
+  CLOUDFLARE_ACCOUNT_ID: SET
+  CLOUDFLARE_API_TOKEN: SET
+  PIXABAY_API_KEY: SET
+  ffmpeg: OK (ffmpeg version N-92722-gf22fcd4483 Copyright (c) 2000-2018 the FFmpeg developers)
+  ffprobe: OK (ffprobe version 2023-02-13-git-2296078397-essentials_build-www.gyan.dev Copyright (c) 2007-2023 the FFmpeg developers)
+  remotion_chromium: CACHED
+
+Running device detection & benchmark...
+  Profile: standar
+  Reason: angle benchmark OK (8820 ms, concurrency 2) on Intel(R) Arc(TM) 140V GPU (8GB).
+  CPU: Intel(R) Core(TM) Ultra 7 256V (8 cores)
+  RAM: 15921 MB
+  GPU: Intel Intel(R) Arc(TM) 140V GPU (8GB)
+  NPU: Intel(R) AI Boost
+  Benchmark:
+    angle (c=2): 8820 ms, minFreeRam=2180 MB
+    swangle (c=1): 15626 ms, minFreeRam=2456 MB

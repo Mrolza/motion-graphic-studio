@@ -1,0 +1,16 @@
+Project: kenapa-kereta-tidak-tergelincir-20261118
+Topic:   Kenapa kereta tidak tergelincir?
+Format:  how_it_works | Style: blueprint | Profile: standar
+Stages:
+  S1: pending      (llm_calls: 0)
+  S2: pending      (llm_calls: 0)
+  S3: pending      (llm_calls: 0)
+  S4: pending      (llm_calls: 0)
+  S5: pending      (llm_calls: 0)
+  S6: pending      (llm_calls: 0)
+  S7: pending      (llm_calls: 0)
+  S8: pending      (llm_calls: 0)
+  S9: pending      (llm_calls: 0)
+  S10: pending      (llm_calls: 0)
+  S11: pending      (llm_calls: 0)
+  S12: pending      (llm_calls: 0)

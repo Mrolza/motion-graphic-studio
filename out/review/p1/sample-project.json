@@ -1,0 +1,38 @@
+{
+  "id": "kenapa-kereta-tidak-tergelincir-20261118",
+  "created_at": "2026-11-18T14:35:15.819Z",
+  "topic": "Kenapa kereta tidak tergelincir?",
+  "format": "how_it_works",
+  "style": "blueprint",
+  "palette": "blueprint-navy",
+  "target_duration_sec": 45,
+  "device_profile": "standar",
+  "stages": {
+    "S1": "pending",
+    "S2": "pending",
+    "S3": "pending",
+    "S4": "pending",
+    "S5": "pending",
+    "S6": "pending",
+    "S7": "pending",
+    "S8": "pending",
+    "S9": "pending",
+    "S10": "pending",
+    "S11": "pending",
+    "S12": "pending"
+  },
+  "llm_calls": {
+    "S1": 0,
+    "S2": 0,
+    "S3": 0,
+    "S4": 0,
+    "S5": 0,
+    "S6": 0,
+    "S7": 0,
+    "S8": 0,
+    "S9": 0,
+    "S10": 0,
+    "S11": 0,
+    "S12": 0
+  }
+}
