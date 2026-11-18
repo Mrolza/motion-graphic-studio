@@ -1,0 +1,37 @@
+{
+  "profile": "standar",
+  "overridden": false,
+  "reason": "angle benchmark OK (8820 ms, concurrency 2) on Intel(R) Arc(TM) 140V GPU (8GB).",
+  "updated_at": "2026-11-18T14:34:38.441Z",
+  "hardware": {
+    "platform": "win32 10.0.26200",
+    "arch": "x64",
+    "cpuModel": "Intel(R) Core(TM) Ultra 7 256V",
+    "cpuCores": 8,
+    "totalRamMb": 15921,
+    "freeRamMb": 2893,
+    "gpus": [
+      {
+        "name": "Intel(R) Arc(TM) 140V GPU (8GB)",
+        "vendor": "Intel"
+      }
+    ],
+    "npu": "Intel(R) AI Boost"
+  },
+  "benchmark": [
+    {
+      "gl": "angle",
+      "concurrency": 2,
+      "renderMs": 8820,
+      "minFreeRamMb": 2180,
+      "ok": true
+    },
+    {
+      "gl": "swangle",
+      "concurrency": 1,
+      "renderMs": 15626,
+      "minFreeRamMb": 2456,
+      "ok": true
+    }
+  ]
+}
