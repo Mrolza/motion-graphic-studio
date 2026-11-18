@@ -1,0 +1,91 @@
+{
+  "totalFrames": 726,
+  "durationSec": 24.2,
+  "renderMs": 38237,
+  "stillChecks": [
+    {
+      "file": "Scene1_TrainDrive-start.png",
+      "frame": 10,
+      "isBlank": false,
+      "meanLuma": 21.21,
+      "nonBgRatio": 0.7025
+    },
+    {
+      "file": "Scene1_TrainDrive-mid.png",
+      "frame": 90,
+      "isBlank": false,
+      "meanLuma": 27.9,
+      "nonBgRatio": 0.8076
+    },
+    {
+      "file": "Scene1_TrainDrive-end.png",
+      "frame": 170,
+      "isBlank": false,
+      "meanLuma": 23.14,
+      "nonBgRatio": 0.7344
+    },
+    {
+      "file": "Scene2_WheelFlange-start.png",
+      "frame": 182,
+      "isBlank": false,
+      "meanLuma": 43.99,
+      "nonBgRatio": 0.8232
+    },
+    {
+      "file": "Scene2_WheelFlange-mid.png",
+      "frame": 277,
+      "isBlank": false,
+      "meanLuma": 46.35,
+      "nonBgRatio": 0.8063
+    },
+    {
+      "file": "Scene2_WheelFlange-end.png",
+      "frame": 372,
+      "isBlank": false,
+      "meanLuma": 48.96,
+      "nonBgRatio": 0.8226
+    },
+    {
+      "file": "Scene3_RailGauge-start.png",
+      "frame": 384,
+      "isBlank": false,
+      "meanLuma": 28.31,
+      "nonBgRatio": 0.8796
+    },
+    {
+      "file": "Scene3_RailGauge-mid.png",
+      "frame": 464,
+      "isBlank": false,
+      "meanLuma": 30.84,
+      "nonBgRatio": 0.8625
+    },
+    {
+      "file": "Scene3_RailGauge-end.png",
+      "frame": 544,
+      "isBlank": false,
+      "meanLuma": 32.29,
+      "nonBgRatio": 0.8644
+    },
+    {
+      "file": "Scene4_Suspension-start.png",
+      "frame": 556,
+      "isBlank": false,
+      "meanLuma": 36.37,
+      "nonBgRatio": 0.8126
+    },
+    {
+      "file": "Scene4_Suspension-mid.png",
+      "frame": 636,
+      "isBlank": false,
+      "meanLuma": 37.83,
+      "nonBgRatio": 0.8212
+    },
+    {
+      "file": "Scene4_Suspension-end.png",
+      "frame": 716,
+      "isBlank": false,
+      "meanLuma": 41.63,
+      "nonBgRatio": 0.8355
+    }
+  ]
+}
