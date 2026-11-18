@@ -1,0 +1,31 @@
+{
+  "name": "motion-graphic-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "mgs": "node --env-file-if-exists=.env.local --import tsx src/cli/index.ts",
+    "typecheck": "tsc --noEmit && npm --prefix remotion run typecheck",
+    "test": "vitest run",
+    "check:size": "node --import tsx scripts/check-size.ts",
+    "verify": "npm run typecheck && npm run test && npm run check:size"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2",
+    "@google/genai": "^1.0.0",
+    "@remotion/bundler": "4.0.545",
+    "@remotion/renderer": "4.0.545",
+    "fluent-ffmpeg": "^2.1.3",
+    "msedge-tts": "^2.1.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.28",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.1"
+  }
+}

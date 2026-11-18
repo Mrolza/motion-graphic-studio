@@ -18,6 +18,7 @@ build/
 out/*
 !out/review/
 projects/
+.mgs/
 public/storyboard/cache/
 
 # logs & OS
