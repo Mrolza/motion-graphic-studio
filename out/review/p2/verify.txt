@@ -1,0 +1,46 @@
+﻿
+> motion-graphic-studio@0.1.0 verify
+> npm run typecheck && npm run test && npm run check:size
+
+
+> motion-graphic-studio@0.1.0 typecheck
+> tsc --noEmit && npm --prefix remotion run typecheck
+
+
+> motion-graphic-studio-remotion@0.1.0 typecheck
+> tsc --noEmit
+
+
+> motion-graphic-studio@0.1.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mD:/motion-graphic-studio[39m
+
+ [32m✓[39m tests/moduleBoundary.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 45[2mms[22m[39m
+ [32m✓[39m tests/copied/quota.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m tests/copied/cache.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32m✓[39m tests/copied/wikimedia.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/copied/tts.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 604[2mms[22m[39m
+   [33m[2m✓[22m[39m trimAudioSilence (R3-1)[2m > [22mremoves leading and trailing silence from MP3 using bundled FFmpeg 4.1 [33m 599[2mms[22m[39m
+ [32m✓[39m tests/copied/beats.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/copied/timeline.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/llmClient.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/qcFacts.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/copied/captions.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/deviceProfile.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/copied/providers.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/copied/audioMix.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2266[2mms[22m[39m
+   [33m[2m✓[22m[39m audio-mix (M6)[2m > [22mmixes 3 scene sines + 3 SFX + 1 BGM sine on bundled FFmpeg 4.1 within ±0.05s and -14±1 LUFS [33m 2260[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m14 passed[39m[22m[90m (14)[39m
+[2m      Tests [22m [1m[32m49 passed[39m[22m[90m (49)[39m
+[2m   Start at [22m 22:41:36
+[2m   Duration [22m 3.22s[2m (transform 1.53s, setup 0ms, collect 5.53s, tests 3.12s, environment 4ms, prepare 3.42s)[22m
+
+
+> motion-graphic-studio@0.1.0 check:size
+> node --import tsx scripts/check-size.ts
+
+check:size OK (54 source files checked, all within limits).

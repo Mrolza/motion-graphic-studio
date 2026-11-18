@@ -111,3 +111,38 @@
 ### Catatan untuk Pemilik
 - `npm run verify` lulus 100% (41/41 test, 0 error TypeScript, `check:size` 30 file OK).
 - Smoke call nyata `generateJson` ke Gemini berstatus `NOT RUN` (opsional di P1; sudah diuji penuh dengan mock `fetch`).
+
+---
+
+## Fase P2 — Fakta & Naskah (`docs/P2-FACTS-SCRIPT.md`)
+
+- **Status:** **PARTIAL** (1/3 topik E2E + uji mutasi L3 + seluruh 49 unit test lulus; 2/3 topik E2E tertahan `Gemini HTTP 503 UNAVAILABLE` berkepanjangan pada `gemini-3.5-flash-lite`)
+- **Branch:** `phase/p2-facts-script` (tag awal: `p2-start`; P1 sudah di-merge ke `main` dengan tag `p1-done`)
+- **Tanggal:** 2026-11-18
+
+### Apa yang Dibuat
+1. **Tindak lanjut `REVIEW-P1.md` & merge P1:**
+   - `data/` ditambahkan ke `.gitignore`; state kuota di `src/core/assets/quota.ts` dipindah ke `.mgs/quota.json`.
+   - Ditambahkan test `captions.test.ts` (1 test) dan `cache.test.ts` (2 test).
+   - Bukti `out/review/p1/*.txt`/`*.json` dikonversi ke UTF-8.
+   - `phase/p1-foundation` di-merge (`--no-ff`) ke `main` dengan tag `p1-done`, lalu dibuat branch `phase/p2-facts-script` (`p2-start`).
+2. **S1 Ide (`src/core/stages/ideate.ts`):** menghasilkan 3 konsep beserta `core_claims[]` dan `search_queries[]`.
+3. **S2 Riset, Fact Ledger, L1 & L0 (`src/core/research/wikipedia.ts`, `src/core/qc/l1-ledger.ts`, `src/core/stages/research.ts`):**
+   - Pengambilan teks Wikipedia (`id`/`en`) dan Wikimedia On This Day (`today_in_history`) tanpa API key, disimpan ke `projects/<id>/sources/`.
+   - Pemeriksaan L1 (pencocokan kutipan verbatim setelah normalisasi spasi/kutip/dash + cek `value` sadar format angka `en`/`id-ID`) dan L0 (`concept_unverifiable`).
+4. **S3 Naskah & S4 QC L2/L3 (`src/core/prompts/scriptwriter.md`, `src/core/formats/format-packs.ts`, `src/core/qc/l2-script.ts`, `src/core/qc/l3-verifier.ts`, `src/core/stages/script.ts`):**
+   - Naskah hanya memakai klaim `verified`; pemeriksaan L2 (kode) + L3 (verifier LLM adversarial) + maks 1 kali tulis ulang otomatis.
+5. **Gerbang 1 via CLI (`src/cli/gate1.ts`, `src/cli/index.ts`):**
+   - `mgs ideate`, `mgs research`, `mgs script`, `mgs qc`, `mgs run <id> --until gate1`, `mgs review`, `mgs approve`.
+6. **Test & Uji Mutasi:**
+   - `tests/qcFacts.test.ts` (5 test perilaku L1/L0/L2 dengan fixture offline).
+   - Uji mutasi nyata (`scripts/run-p2-mutation.ts`): L2 dan L3 keduanya menangkap mutasi pada `p2-kereta`.
+   - Smoke call nyata `generateJson` ke `gemini-3.5-flash-lite` berhasil (`6.896 ms`).
+
+### Bukti (`out/review/p2/`, semua UTF-8)
+- [`p2-kereta/`](../out/review/p2/p2-kereta/): `fact-ledger.json`, `script.json`, `qc/` (`L0`–`L3`), `review.txt` (6 panggilan LLM, 0 error L2/L3, Gate 1 **APPROVED**).
+- [`mutation-test/`](../out/review/p2/mutation-test/): `mutated-script.json`, `qc-L2-mutated.json`, `qc-L3-mutated.json`, `mutation-summary.md`.
+- [`stats.md`](../out/review/p2/stats.md) & [`verify.txt`](../out/review/p2/verify.txt).
+
+### Yang Belum & Alasannya
+- Uji end-to-end topik `p2-mesin4tak` (`technical`) dan `p2-history-0720` (`today_in_history`) gagal diselesaikan karena API `gemini-3.5-flash-lite` mengalami lonjakan trafik berkepanjangan (`HTTP 503 UNAVAILABLE`) saat tahap S1/S2 meski sudah diberi 6 kali retry exponential backoff. Tinggal dijalankan ulang saat model stabil: `npm run mgs -- new ...` + `npm run mgs -- run <id> --until gate1`.

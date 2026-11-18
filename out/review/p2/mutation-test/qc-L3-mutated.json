@@ -1,0 +1,10 @@
+{
+  "layer": "L3",
+  "issues": [
+    {
+      "severity": "error",
+      "message": "L3_OVERSTATED: Kutipan menyatakan kecepatan maksimal 120 km/jam, sementara kalimat mengklaim 9.999 km/jam dan mustahil tergelincir, yang merupakan informasi palsu dan berlebihan.",
+      "ref": "S2.1"
+    }
+  ]
+}

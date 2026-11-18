@@ -1,0 +1,40 @@
+=== GATE 1 REVIEW: p2-kereta ===
+Topik: Kenapa kereta tidak tergelincir? | Format: how_it_works
+
+[Scene S1]
+  S1.1: Bagaimana kereta bisa melaju kencang tanpa tergelincir dari rel?
+    -> (non_factual: true)
+
+[Scene S2]
+  S2.1: Rangkaian kereta api menggunakan kerangka khusus yang disebut bogie.
+    -> [C2 | verified] Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.
+       Kutipan: "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan."
+       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+  S2.2: Komponen ini memanfaatkan suspensi udara untuk meredam guncangan.
+    -> [C2 | verified] Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.
+       Kutipan: "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan."
+       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+
+[Scene S3]
+  S3.1: Sistem tersebut mendukung kereta untuk melaju hingga 120 km/jam dengan minim guncangan.
+    -> [C2 | verified] Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.
+       Kutipan: "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan."
+       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+
+[Scene S4]
+  S4.1: Tetapi, bogie jenis tertentu dikenal sensitif terhadap kondisi rel serta belokan.
+    -> [C3 | verified] Bogie K9 dikenal sensitif terhadap kondisi rel dan belokan di Indonesia, sehingga rangkaian yang menggunakannya sering mengalami anjlok.
+       Kutipan: "Dalam pengoperasiannya, kereta api ini sering anjlok karena bogie K9 dikenal sensitif terhadap kondisi rel di Indonesia, terutama terhadap belokan."
+       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+  S4.2: INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering.
+    -> [C5 | verified] PT Kereta Api Indonesia melakukan penarikan rangkaian kereta dan pihak INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering (RE).
+       Kutipan: "Setelah Kereta Api Indonesia melakukan penarikan rangkaian kereta Argo Bromo Anggrek, INKA melakukan perbaikan, terutama pada bogie kereta—bogie K9 diubah menjadi K9 Re-Engineering (RE)."
+       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+
+=== LAPORAN QC (L0-L3) ===
+[L0] 0 isu
+[L1] 2 isu
+  ERROR (C1): SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan
+  ERROR (C7): QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber
+[L2] 0 isu
+[L3] 0 isu

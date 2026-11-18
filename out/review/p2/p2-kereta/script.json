@@ -1,0 +1,87 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Bagaimana kereta bisa melaju kencang tanpa tergelincir dari rel?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "melaju kencang",
+            "tergelincir"
+          ],
+          "non_factual": true
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Rangkaian kereta api menggunakan kerangka khusus yang disebut bogie.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "bogie"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Komponen ini memanfaatkan suspensi udara untuk meredam guncangan.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "suspensi udara",
+            "guncangan"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Sistem tersebut mendukung kereta untuk melaju hingga 120 km/jam dengan minim guncangan.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "120",
+            "minim guncangan"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Tetapi, bogie jenis tertentu dikenal sensitif terhadap kondisi rel serta belokan.",
+          "claim_refs": [
+            "C3"
+          ],
+          "emphasis_words": [
+            "sensitif",
+            "belokan"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "perbaikan",
+            "Re-Engineering"
+          ],
+          "non_factual": false
+        }
+      ]
+    }
+  ]
+}

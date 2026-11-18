@@ -1,0 +1,104 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "PT Kereta Api Indonesia (Persero) atau KAI merupakan operator kereta api milik negara utama di Indonesia.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://wikipedia.org",
+          "title": "Kereta Api Indonesia",
+          "quote": "PT Kereta Api Indonesia (Persero), atau biasa disingkat menjadi KAI, adalah operator kereta api milik negara utama di Indonesia.",
+          "retrieved_at": "2026-11-18T15:23:29.919Z"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.",
+      "value": 120,
+      "unit": "km/jam",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Kereta_api_Anggrek",
+          "title": "Kereta api Anggrek",
+          "quote": "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan.",
+          "retrieved_at": "2026-11-18T15:22:52.786Z"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "Bogie K9 dikenal sensitif terhadap kondisi rel dan belokan di Indonesia, sehingga rangkaian yang menggunakannya sering mengalami anjlok.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Kereta_api_Anggrek",
+          "title": "Kereta api Anggrek",
+          "quote": "Dalam pengoperasiannya, kereta api ini sering anjlok karena bogie K9 dikenal sensitif terhadap kondisi rel di Indonesia, terutama terhadap belokan.",
+          "retrieved_at": "2026-11-18T15:22:52.786Z"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Layanan kereta api ini pernah beroperasi menggunakan rangkaian kereta dengan bogie CL243 bolsterless (K9) sebelum mengalami pergantian nama.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Kereta_api_Anggrek",
+          "title": "Kereta api Anggrek",
+          "quote": "Kereta api yang diluncurkan pada 9 Mei 2026 ini merupakan salah satu kereta api antarkota unggulan karena pernah beroperasi menggunakan rangkaian kereta berbogie CL243 bolsterless (K9) pada saat sebelum ganti nama.",
+          "retrieved_at": "2026-11-18T15:22:52.786Z"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "PT Kereta Api Indonesia melakukan penarikan rangkaian kereta dan pihak INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering (RE).",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Kereta_api_Anggrek",
+          "title": "Kereta api Anggrek",
+          "quote": "Setelah Kereta Api Indonesia melakukan penarikan rangkaian kereta Argo Bromo Anggrek, INKA melakukan perbaikan, terutama pada bogie kereta—bogie K9 diubah menjadi K9 Re-Engineering (RE).",
+          "retrieved_at": "2026-11-18T15:22:52.786Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Kereta api JS950 menggunakan rangkaian kereta eksekutif buatan PT INKA tahun 1995 yang ditopang dengan bogie NT-60.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Kereta_api_Anggrek",
+          "title": "Kereta api Anggrek",
+          "quote": "Kereta api JS950 menggunakan rangkaian kereta eksekutif buatan PT INKA tahun 1995 dan ditopang dengan bogie NT-60.",
+          "retrieved_at": "2026-11-18T15:22:52.786Z"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "Rangkaian kereta kelas eksekutif baja nirkarat buatan INKA mulai digunakan untuk pengoperasian kereta api ini pada tanggal 21 Maret 2019.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Kereta_api_Anggrek",
+          "title": "Kereta api Anggrek",
+          "quote": "Rangkaian kereta kelas eksekutif baja nirkarat buatan INKA mulai dipakai untuk pengoperasian kereta api ini pada 21 Maret 2019...",
+          "retrieved_at": "2026-11-18T15:22:52.786Z"
+        }
+      ]
+    }
+  ]
+}
