@@ -79,9 +79,9 @@ export async function generateJson<T>(
   const model = resolveGeminiModel(opts.model);
   const stage = opts.stage ?? 'unknown';
   const timeoutMs = opts.timeoutMs ?? GEMINI_REQUEST_TIMEOUT_MS;
-  const maxTransientRetries = opts.maxTransientRetries ?? 2;
+  const maxTransientRetries = opts.maxTransientRetries ?? 6;
   const maxSchemaRetries = opts.maxSchemaRetries ?? 2;
-  const baseDelayMs = opts.retryDelayMs ?? 1500;
+  const baseDelayMs = opts.retryDelayMs ?? 2500;
 
   let currentPrompt = prompt;
   let attempts = 0;
@@ -125,7 +125,7 @@ export async function generateJson<T>(
       await opts.onCallRecord?.({ stage, model, durationMs, ok: false, error: msg });
       if (transientCount < maxTransientRetries) {
         transientCount++;
-        await sleep(baseDelayMs * transientCount);
+        await sleep(Math.min(20_000, baseDelayMs * Math.pow(2, transientCount - 1)));
         continue;
       }
       throw new Error(`Gemini request failed after ${attempts} attempts: ${msg}`);
@@ -149,7 +149,7 @@ export async function generateJson<T>(
       const isTransientStatus = res.status === 503 || res.status === 429 || res.status === 500;
       if (isTransientStatus && transientCount < maxTransientRetries) {
         transientCount++;
-        await sleep(baseDelayMs * transientCount);
+        await sleep(Math.min(20_000, baseDelayMs * Math.pow(2, transientCount - 1)));
         continue;
       }
       throw new Error(`Gemini HTTP ${res.status}: ${errText.slice(0, 300)}`);
