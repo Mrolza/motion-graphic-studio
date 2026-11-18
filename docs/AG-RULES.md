@@ -31,6 +31,7 @@ Sebuah fase hanya boleh ditulis **DONE** jika:
 2. Fase yang menyentuh UI: smoke test Playwright lulus.
 3. Ada **bukti yang bisa dilihat** di `out/review/<fase>/`: still, video, atau screenshot.
 4. Semua kriteria fase teruji. Kalau ada yang tidak teruji, tulis **PARTIAL** beserta daftar yang belum dan alasannya.
+5. Bukti harus memeriksa **perilaku di output** (frame, nilai, file hasil), bukan sekadar keberadaan fungsi atau pemanggilan di kode. Contoh: "gerak piston benar" dibuktikan dengan nilai posisi piston di frame sampel dibandingkan dengan perhitungan, bukan dengan "kode memanggil `solveCrankSlider`".
 
 ## 6. Pengujian langkah panjang
 - Langkah yang memanggil LLM atau render bisa memakan menit. Gunakan polling atau timeout klien minimal 10 menit.
