@@ -2,6 +2,7 @@ import React from 'react';
 import { Composition } from 'remotion';
 import { BenchmarkScene } from './scenes/BenchmarkScene';
 import { CombinedSpike } from './scenes/CombinedSpike';
+import { CombinedSpikeP0b } from './scenes/CombinedSpikeP0b';
 import { BLUEPRINT_TOKENS } from './kit';
 
 export const RemotionRoot: React.FC = () => {
@@ -18,6 +19,14 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CombinedSpike"
         component={CombinedSpike}
+        durationInFrames={726}
+        fps={BLUEPRINT_TOKENS.viewport.fps}
+        width={BLUEPRINT_TOKENS.viewport.width}
+        height={BLUEPRINT_TOKENS.viewport.height}
+      />
+      <Composition
+        id="CombinedSpikeP0b"
+        component={CombinedSpikeP0b}
         durationInFrames={726}
         fps={BLUEPRINT_TOKENS.viewport.fps}
         width={BLUEPRINT_TOKENS.viewport.width}
