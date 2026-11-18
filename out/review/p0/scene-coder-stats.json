@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-11-18T13:34:12.187Z",
+  "model": "gemini-3.5-flash-lite",
+  "totalSpecs": 4,
+  "totalCalls": 4,
+  "passedFirstTry": 4,
+  "passedAfterRetry": 0,
+  "failedTotal": 0,
+  "perScene": [
+    {
+      "id": "Scene1_TrainDrive",
+      "calls": 1,
+      "retries": 0,
+      "status": "passed_first",
+      "errors": []
+    },
+    {
+      "id": "Scene2_WheelFlange",
+      "calls": 1,
+      "retries": 0,
+      "status": "passed_first",
+      "errors": []
+    },
+    {
+      "id": "Scene3_RailGauge",
+      "calls": 1,
+      "retries": 0,
+      "status": "passed_first",
+      "errors": []
+    },
+    {
+      "id": "Scene4_Suspension",
+      "calls": 1,
+      "retries": 0,
+      "status": "passed_first",
+      "errors": []
+    }
+  ]
+}

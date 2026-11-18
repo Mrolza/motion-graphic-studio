@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-11-18T13:28:01.061Z",
+  "platform": "win32 10.0.26200 (x64)",
+  "cpus": 8,
+  "cpuModel": "Intel(R) Core(TM) Ultra 7 256V",
+  "totalRamMb": 15921,
+  "results": [
+    {
+      "gl": "angle",
+      "concurrency": 1,
+      "hardwareAcceleration": "disable",
+      "renderMs": 19009,
+      "minFreeRamMb": 754,
+      "startFreeRamMb": 1151,
+      "status": "ok"
+    },
+    {
+      "gl": "angle",
+      "concurrency": 2,
+      "hardwareAcceleration": "disable",
+      "renderMs": 10789,
+      "minFreeRamMb": 1406,
+      "startFreeRamMb": 1693,
+      "status": "ok"
+    },
+    {
+      "gl": "angle",
+      "concurrency": 4,
+      "hardwareAcceleration": "disable",
+      "renderMs": 7090,
+      "minFreeRamMb": 1057,
+      "startFreeRamMb": 2260,
+      "status": "ok"
+    },
+    {
+      "gl": "swangle",
+      "concurrency": 1,
+      "hardwareAcceleration": "disable",
+      "renderMs": 21385,
+      "minFreeRamMb": 1598,
+      "startFreeRamMb": 1796,
+      "status": "ok"
+    },
+    {
+      "gl": "swangle",
+      "concurrency": 2,
+      "hardwareAcceleration": "disable",
+      "renderMs": 17879,
+      "minFreeRamMb": 1441,
+      "startFreeRamMb": 2207,
+      "status": "ok"
+    },
+    {
+      "gl": "swangle",
+      "concurrency": 4,
+      "hardwareAcceleration": "disable",
+      "renderMs": 17044,
+      "minFreeRamMb": 1081,
+      "startFreeRamMb": 2200,
+      "status": "ok"
+    }
+  ],
+  "stillCheck": {
+    "angle": {
+      "isBlank": false,
+      "meanLuma": 30.43,
+      "stdDevLuma": 47.09,
+      "nonBgRatio": 0.8364,
+      "width": 720,
+      "height": 1280
+    },
+    "swangle": {
+      "isBlank": false,
+      "meanLuma": 30.03,
+      "stdDevLuma": 46.87,
+      "nonBgRatio": 0.8409,
+      "width": 720,
+      "height": 1280
+    },
+    "visualDiff": {
+      "meanDiff": 0.607,
+      "maxDiff": 155.3,
+      "withinToleranceRatio": 0.9856
+    }
+  }
+}

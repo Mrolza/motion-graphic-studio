@@ -1,0 +1,88 @@
+[
+  {
+    "id": "Scene1_EngineCutaway",
+    "componentName": "Scene1_EngineCutaway",
+    "durationSec": 6,
+    "topic": "Bagaimana mesin 4 tak bekerja?",
+    "description": "Cutaway blueprint view of a 4-stroke single-cylinder engine built from general primitives. The crankshaft spins continuously (rps=0.35), driving the connecting rod and piston via solveCrankSlider, while intake and exhaust valves open/close in sync with the 0..720 degree cycle.",
+    "crankCycleDeg": { "from": 0, "to": 756 },
+    "camera": {
+      "mode": "orbit",
+      "framing": "portrait-lower",
+      "target": [0, 2.1, 0],
+      "radius": 5.4,
+      "height": 1.1,
+      "startAngleDeg": -22,
+      "endAngleDeg": 18
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "BLUEPRINT // 01", "title": "Bagaimana Mesin 4 Tak Bekerja?", "subtitle": "4 langkah, 2 putaran engkol (720°)", "position": "top" },
+      { "type": "CaptionBar", "text": "Satu siklus 4 tak terdiri dari hisap, kompresi, usaha, dan buang." }
+    ]
+  },
+  {
+    "id": "Scene2_IntakeCompression",
+    "componentName": "Scene2_IntakeCompression",
+    "durationSec": 6,
+    "topic": "Langkah Hisap (0°-180°) dan Kompresi (180°-360°)",
+    "description": "First half of the 4-stroke cycle: crankAngle goes smoothly from 0 to 2*PI (0° to 360°). From 0-3s (0°-180°, Hisap), intake valve (left, cyan) drops open (-0.22) as piston moves down and cyan fuel-air mist fills the chamber. From 3-6s (180°-360°, Kompresi), both valves close and piston rises to compress the mixture.",
+    "crankCycleDeg": { "from": 0, "to": 360 },
+    "camera": {
+      "mode": "dolly",
+      "framing": "portrait-lower",
+      "from": [1.8, 2.6, 4.8],
+      "to": [1.0, 2.5, 4.0],
+      "target": [0, 2.3, 0]
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "LANGKAH 1 & 2", "title": "Hisap & Kompresi", "position": "top" },
+      { "type": "StatCounter", "label": "Sudut Engkol", "from": 0, "to": 360, "unit": "°", "decimals": 0, "position": "top-right" },
+      { "type": "Callout", "title": "KATUP HISAP", "body": "Terbuka saat piston turun (0°–180°) lalu menutup rapat.", "targetX": 325, "targetY": 540, "boxX": 195, "boxY": 400 },
+      { "type": "CaptionBar", "text": "Hisap memasukkan campuran udara-bahan bakar, lalu kompresi memadatkannya." }
+    ]
+  },
+  {
+    "id": "Scene3_PowerExhaust",
+    "componentName": "Scene3_PowerExhaust",
+    "durationSec": 7,
+    "topic": "Langkah Usaha (360°-540°) dan Buang (540°-720°)",
+    "description": "Second half of the 4-stroke cycle: crankAngle goes smoothly from 2*PI to 4*PI (360° to 720°). At 0-0.8s (near 360°), the spark plug fires a bright yellow Sphere flash, pushing the piston down during Usaha (0-3.5s, 360°-540°, both valves closed). From 3.5-7s (540°-720°, Buang), the exhaust valve (right, coral) drops open (-0.22) as piston rises to push exhaust out.",
+    "crankCycleDeg": { "from": 360, "to": 720 },
+    "camera": {
+      "mode": "closeUp",
+      "framing": "portrait-lower",
+      "from": [1.5, 2.7, 4.5],
+      "to": [-1.2, 2.5, 4.1],
+      "target": [0, 2.4, 0]
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "LANGKAH 3 & 4", "title": "Usaha & Buang", "position": "top" },
+      { "type": "StatCounter", "label": "Sudut Engkol", "from": 360, "to": 720, "unit": "°", "decimals": 0, "position": "top-right" },
+      { "type": "Callout", "title": "BUSI & KATUP BUANG", "body": "Percikan busi memicu langkah usaha; katup buang membuka di 540°–720°.", "targetX": 385, "targetY": 540, "boxX": 510, "boxY": 400 },
+      { "type": "CaptionBar", "text": "Ledakan pembakaran mendorong piston ke bawah, lalu gas sisa dibuang." }
+    ]
+  },
+  {
+    "id": "Scene4_CycleSummary",
+    "componentName": "Scene4_CycleSummary",
+    "durationSec": 6,
+    "topic": "Ringkasan Siklus 4 Tak hingga 6.000 RPM",
+    "description": "Full 4-stroke cycle (0° to 720° over 6s, rps = 1/3) with complete valve timing (intake open 0-180°, spark near 360°, exhaust open 540-720°). Show StatCounter counting up engine speed from 1.000 to 6.000 RPM (using id-ID number formatting) and a Callout highlighting the crank-rod linkage.",
+    "crankCycleDeg": { "from": 0, "to": 720 },
+    "camera": {
+      "mode": "orbit",
+      "framing": "portrait-lower",
+      "target": [0, 2.1, 0],
+      "radius": 5.5,
+      "height": 1.3,
+      "startAngleDeg": 15,
+      "endAngleDeg": -20
+    },
+    "hud": [
+      { "type": "TitleCard", "tag": "RINGKASAN SIKLUS", "title": "4 Langkah = 1 Siklus Daya", "position": "top" },
+      { "type": "StatCounter", "label": "Putaran Mesin", "from": 1000, "to": 6000, "unit": "RPM", "decimals": 0, "position": "top-right" },
+      { "type": "Callout", "title": "ENGKOL-BATANG", "body": "Mengubah gerak naik-turun piston menjadi putaran poros.", "targetX": 360, "targetY": 760, "boxX": 200, "boxY": 560 },
+      { "type": "CaptionBar", "text": "Siklus 4 tak berulang ribuan kali per menit untuk menghasilkan tenaga." }
+    ]
+  }
+]

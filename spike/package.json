@@ -1,0 +1,36 @@
+{
+  "name": "motion-graphic-studio-spike",
+  "version": "0.1.0",
+  "private": true,
+  "description": "P0 Spike: Blueprint 3D + Scene Kit + Gemini Scene Coder",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "benchmark": "node --env-file=../.env.local --import tsx scripts/benchmark-render.ts",
+    "generate": "node --env-file=../.env.local --import tsx scripts/run-scene-coder.ts",
+    "render:spike": "node --env-file=../.env.local --import tsx scripts/render-spike.ts",
+    "generate:p0b": "node --env-file=../.env.local --import tsx scripts/run-scene-coder-p0b.ts",
+    "render:p0b": "node --env-file=../.env.local --import tsx scripts/render-spike-p0b.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/bundler": "4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@remotion/renderer": "4.0.545",
+    "@remotion/three": "4.0.545",
+    "pngjs": "^7.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "4.0.545",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.187.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

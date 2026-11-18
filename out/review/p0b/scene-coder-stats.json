@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-11-18T13:59:31.445Z",
+  "model": "gemini-3.5-flash-lite",
+  "totalSpecs": 4,
+  "totalCalls": 8,
+  "passedFirstTry": 0,
+  "passedAfterRetry": 4,
+  "failedTotal": 0,
+  "perScene": [
+    {
+      "id": "Scene1_EngineCutaway",
+      "calls": 2,
+      "retries": 1,
+      "status": "passed_retry",
+      "errors": [
+        "Attempt 1 validation: File too long: 280 lines (max 220)."
+      ]
+    },
+    {
+      "id": "Scene2_IntakeCompression",
+      "calls": 2,
+      "retries": 1,
+      "status": "passed_retry",
+      "errors": [
+        "Attempt 1 validation: File too long: 266 lines (max 220)."
+      ]
+    },
+    {
+      "id": "Scene3_PowerExhaust",
+      "calls": 2,
+      "retries": 1,
+      "status": "passed_retry",
+      "errors": [
+        "Attempt 1 validation: File too long: 275 lines (max 220)."
+      ]
+    },
+    {
+      "id": "Scene4_CycleSummary",
+      "calls": 2,
+      "retries": 1,
+      "status": "passed_retry",
+      "errors": [
+        "Attempt 1 validation: File too long: 267 lines (max 220)."
+      ]
+    }
+  ]
+}
