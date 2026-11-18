@@ -19,7 +19,6 @@ import {
   type StickyProviderState,
   orderChainWithStickyProvider,
 } from "@core/assets/provider-remote";
-
 export * from "@core/assets/provider-local-cf";
 export { PollinationsPaymentRequiredError, PollinationsAdaptiveThrottle, type StickyProviderState, orderChainWithStickyProvider } from "@core/assets/provider-remote";
 /**
@@ -42,7 +41,6 @@ export async function generateBeatAssetWithChain(params: {
   const height = params.height || 1280;
   const config = getProviderChainConfig();
   const attempts: ProviderAttempt[] = [];
-
   // 1. Mode H6: Motion gratis untuk preset realistis (source = "stock")
   if (params.source === "stock") {
     const stockCacheKey = buildAssetCacheKey({
@@ -119,7 +117,6 @@ export async function generateBeatAssetWithChain(params: {
       });
     }
   }
-
   // 2. Cek Cache terlebih dahulu untuk semua provider di IMAGE_PROVIDER_CHAIN
   if (!params.bypassCache) {
     for (const step of config.chain) {
@@ -150,7 +147,6 @@ export async function generateBeatAssetWithChain(params: {
       }
     }
   }
-
   // 3. Jalankan IMAGE_PROVIDER_CHAIN berurutan (R3-3: sticky provider + no stock untuk preset ilustratif)
   let fallbackUsed = false;
   let fallbackReason: string | undefined;
@@ -158,11 +154,9 @@ export async function generateBeatAssetWithChain(params: {
     config.chain,
     params.stickyProviderState?.provider
   );
-
   for (let i = 0; i < orderedChain.length; i++) {
     const step = orderedChain[i];
     const t0 = Date.now();
-
     if (step.provider === "pixabay" && params.allowStockFallback === false) {
       attempts.push({
         provider: "pixabay",
@@ -173,7 +167,6 @@ export async function generateBeatAssetWithChain(params: {
       });
       continue;
     }
-
     if (step.provider === "gemini" && !config.geminiImageEnabled) {
       attempts.push({
         provider: "gemini",
@@ -184,7 +177,6 @@ export async function generateBeatAssetWithChain(params: {
       });
       continue;
     }
-
     if (
       (step.provider === "local" && step.model === "fastsd") ||
       step.provider === "fastsd"
@@ -201,7 +193,6 @@ export async function generateBeatAssetWithChain(params: {
         continue;
       }
     }
-
     if (step.provider === "comfyui-local" && !comfyuiLocalProvider.isConfigured()) {
       attempts.push({
         provider: "comfyui-local",
@@ -212,7 +203,6 @@ export async function generateBeatAssetWithChain(params: {
       });
       continue;
     }
-
     if (step.provider === "pollinations" && params.throttle.skippedForRun) {
       attempts.push({
         provider: "pollinations",
@@ -225,7 +215,6 @@ export async function generateBeatAssetWithChain(params: {
       fallbackReason = "pollinations_payment_required";
       continue;
     }
-
     if (step.provider === "cloudflare" && !cloudflareProvider.isConfigured()) {
       attempts.push({
         provider: "cloudflare",
@@ -236,7 +225,6 @@ export async function generateBeatAssetWithChain(params: {
       });
       continue;
     }
-
     const quotaProvider =
       step.provider === "pollinations" ||
       step.provider === "cloudflare" ||
@@ -255,12 +243,10 @@ export async function generateBeatAssetWithChain(params: {
       fallbackReason = `${step.provider}_daily_quota_exhausted`;
       continue;
     }
-
     try {
       let buffer: Buffer;
       let ext: "jpg" | "png" | "mp4" = "jpg";
       let mediaType: "image" | "video" = "image";
-
       if (step.provider === "pollinations") {
         buffer = await generateWithPollinations({
           prompt: params.visualPrompt,
@@ -303,7 +289,6 @@ export async function generateBeatAssetWithChain(params: {
       } else {
         throw new Error(`Provider tidak dikenal: ${step.provider}`);
       }
-
       let blurPadded = false;
       if (mediaType === "image") {
         const guarded = await ensureVertical916AspectGuard({
@@ -315,7 +300,6 @@ export async function generateBeatAssetWithChain(params: {
         ext = guarded.ext;
         blurPadded = guarded.padded;
       }
-
       const cacheKey = buildAssetCacheKey({
         provider_id: step.provider,
         model: step.model,
@@ -324,7 +308,6 @@ export async function generateBeatAssetWithChain(params: {
         width,
         height,
       });
-
       const saved = await saveAssetCache({
         hash: cacheKey,
         buffer,
@@ -333,14 +316,12 @@ export async function generateBeatAssetWithChain(params: {
         provider_id: step.provider,
         model: step.model,
       });
-
       attempts.push({
         provider: step.provider,
         model: step.model,
         ok: true,
         ms: Date.now() - t0,
       });
-
       if (params.stickyProviderState) {
         if (!params.stickyProviderState.provider) {
           params.stickyProviderState.provider = step.provider;
@@ -351,7 +332,6 @@ export async function generateBeatAssetWithChain(params: {
           params.stickyProviderState.provider = step.provider;
         }
       }
-
       return {
         media_url: saved.media_url,
         local_file_path: saved.local_file_path,
@@ -394,10 +374,8 @@ export async function generateBeatAssetWithChain(params: {
         : `${step.provider}_failed: ${msg.slice(0, 80)}`;
     }
   }
-
   const errSummary = attempts
     .map((a) => `${a.provider}:${a.skipped_reason || a.error || "failed"}`)
     .join(" | ");
   throw new Error(`Seluruh IMAGE_PROVIDER_CHAIN gagal: ${errSummary}`);
 }
-
