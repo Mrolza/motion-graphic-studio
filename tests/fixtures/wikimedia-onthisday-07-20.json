@@ -1,0 +1,1334 @@
+{
+    "selected":  [
+                     {
+                         "text":  "A suicide attack (aftermath pictured) in Suruç, Turkey, for which Islamic State of Iraq and the Levant (ISIL) claimed responsibility, killed 34 people and injured 104 others.",
+                         "pages":  [
+                                       {
+                                           "type":  "standard",
+                                           "title":  "Suruç_bombing",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç bombing\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q20685047",
+                                           "titles":  {
+                                                          "canonical":  "Suruç_bombing",
+                                                          "normalized":  "Suruç bombing",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç bombing\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  47287371,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/2015_Suru%C3%A7_bombing_in_Turkey.jpg/330px-2015_Suru%C3%A7_bombing_in_Turkey.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  186
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://upload.wikimedia.org/wikipedia/commons/0/0d/2015_Suru%C3%A7_bombing_in_Turkey.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                                 "width":  1032,
+                                                                 "height":  581
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1383084842",
+                                           "tid":  "a8357d51-d57a-11f1-b613-010cacf2dee7",
+                                           "timestamp":  "2026-10-31T22:30:21Z",
+                                           "description":  "2015 suicide attack in Suruç, Turkey",
+                                           "description_source":  "local",
+                                           "coordinates":  {
+                                                               "lat":  36.98055556,
+                                                               "lon":  38.42555556
+                                                           },
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7_bombing"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/Suru%C3%A7_bombing",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7_bombing"
+                                                                           }
+                                                            },
+                                           "extract":  "On 20 July 2015, the Dokumacılar, the Turkish sect of the Islamic State (ISIL), executed a suicide attack in the Suruç district of Şanlıurfa Province in Turkey. The attack took place outside the Amara Culture Centre, killing 34 people including the perpetrator, and 104 further injuries. Most victims were members of the Socialist Party of the Oppressed (ESP) Youth Wing and the Socialist Youth Associations Federation (SGDF), university students who were giving a press statement on their planned trip to reconstruct the Syrian border town of Kobanî.",
+                                           "extract_html":  "\u003cp\u003eOn 20 July 2015, the Dokumacılar, the Turkish sect of the Islamic State (ISIL), executed a suicide attack in the Suruç district of Şanlıurfa Province in Turkey. The attack took place outside the Amara Culture Centre, killing 34 people including the perpetrator, and 104 further injuries. Most victims were members of the Socialist Party of the Oppressed (ESP) Youth Wing and the Socialist Youth Associations Federation (SGDF), university students who were giving a press statement on their planned trip to reconstruct the Syrian border town of Kobanî.\u003c/p\u003e",
+                                           "normalizedtitle":  "Suruç bombing"
+                                       },
+                                       {
+                                           "type":  "standard",
+                                           "title":  "Suruç",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q917836",
+                                           "titles":  {
+                                                          "canonical":  "Suruç",
+                                                          "normalized":  "Suruç",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  4182029,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Suru%C3%A7_town_hall.jpg/330px-Suru%C3%A7_town_hall.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  223
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Suru%C3%A7_town_hall.jpg/3840px-Suru%C3%A7_town_hall.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                                 "width":  4125,
+                                                                 "height":  2785
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1379613607",
+                                           "tid":  "01743b5b-c508-11f1-91d5-a16b00d07fb2",
+                                           "timestamp":  "2026-10-11T00:09:20Z",
+                                           "description":  "District and municipality in Şanlıurfa, Turkey",
+                                           "description_source":  "local",
+                                           "coordinates":  {
+                                                               "lat":  36.975,
+                                                               "lon":  38.42444444
+                                                           },
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/Suru%C3%A7?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/Suru%C3%A7",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7"
+                                                                           }
+                                                            },
+                                           "extract":  "Suruç is a municipality and district of Şanlıurfa Province, Turkey. Its area is 744 km2, and its population is 100,961 (2022). It is on a plain near the Syrian border 46 kilometres (29 mi) southwest of the city of Urfa. Its inhabitants are Kurds.",
+                                           "extract_html":  "\u003cp\u003e\u003cb\u003eSuruç\u003c/b\u003e is a municipality and district of Şanlıurfa Province, Turkey. Its area is 744 km\u003csup\u003e2\u003c/sup\u003e, and its population is 100,961 (2022). It is on a plain near the Syrian border 46 kilometres (29 mi) southwest of the city of Urfa. Its inhabitants are Kurds.\u003c/p\u003e",
+                                           "normalizedtitle":  "Suruç"
+                                       },
+                                       {
+                                           "type":  "standard",
+                                           "title":  "Islamic_State",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eIslamic State\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q2429253",
+                                           "titles":  {
+                                                          "canonical":  "Islamic_State",
+                                                          "normalized":  "Islamic State",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eIslamic State\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  9087364,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Islamic_State_flag.svg/330px-Islamic_State_flag.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  248
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Islamic_State_flag.svg/1280px-Islamic_State_flag.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                                 "width":  1000,
+                                                                 "height":  750
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1385994794",
+                                           "tid":  "11320cde-e197-11f1-8363-c621beef52c7",
+                                           "timestamp":  "2026-11-16T08:23:57Z",
+                                           "description":  "Salafi jihadist militant organisation",
+                                           "description_source":  "local",
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/Islamic_State",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/Islamic_State?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/Islamic_State?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:Islamic_State"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/Islamic_State",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/Islamic_State",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/Islamic_State?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:Islamic_State"
+                                                                           }
+                                                            },
+                                           "extract":  "The Islamic State (IS), also known as the Islamic State of Iraq and the Levant (ISIL), the Islamic State of Iraq and Syria (ISIS), and by its Arabic acronym Da\u0027esh, is a transnational Salafi jihadist militant organisation and internationally unrecognised quasi-state. IS occupied a significant amount of territory in Syria during the Syrian civil war and in Iraq when U.S. troops withdrew after the Iraq war. In 2014 the group proclaimed itself to be a worldwide caliphate and claimed religious and political authority over all Muslims worldwide, a claim not accepted by the vast majority of Muslims. It is designated as a terrorist organisation by the United Nations, making it subject to binding counterterrorism sanctions in every UN member state, including all Muslim countries.",
+                                           "extract_html":  "\u003cp\u003eThe \u003cb\u003eIslamic State\u003c/b\u003e (\u003cb\u003eIS\u003c/b\u003e), also known as the \u003cb\u003eIslamic State of Iraq and the Levant\u003c/b\u003e (\u003cb\u003eISIL\u003c/b\u003e), the \u003cb\u003eIslamic State of Iraq and Syria\u003c/b\u003e (\u003cb\u003eISIS\u003c/b\u003e), and by its Arabic acronym \u003cb\u003eDa\u0027esh\u003c/b\u003e, is a transnational Salafi jihadist militant organisation and internationally unrecognised quasi-state. IS occupied a significant amount of territory in Syria during the Syrian civil war and in Iraq when U.S. troops withdrew after the Iraq war. In 2014 the group proclaimed itself to be a worldwide caliphate and claimed religious and political authority over all Muslims worldwide, a claim not accepted by the vast majority of Muslims. It is designated as a terrorist organisation by the United Nations, making it subject to binding counterterrorism sanctions in every UN member state, including all Muslim countries.\u003c/p\u003e",
+                                           "normalizedtitle":  "Islamic State"
+                                       }
+                                   ],
+                         "year":  2015
+                     },
+                     {
+                         "text":  "A gunman carried out a mass shooting at a movie theater in Aurora, Colorado, killing 12 people and injuring 58 others.",
+                         "pages":  [
+                                       {
+                                           "type":  "standard",
+                                           "title":  "James_Holmes_(mass_murderer)",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eJames Holmes (mass murderer)\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q1196106",
+                                           "titles":  {
+                                                          "canonical":  "James_Holmes_(mass_murderer)",
+                                                          "normalized":  "James Holmes (mass murderer)",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eJames Holmes (mass murderer)\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  36491954,
+                                           "thumbnail":  {
+                                                             "source":  "https://upload.wikimedia.org/wikipedia/en/b/b6/James_Holmes%2C_cropped.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                             "width":  217,
+                                                             "height":  224
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://upload.wikimedia.org/wikipedia/en/b/b6/James_Holmes%2C_cropped.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                                 "width":  217,
+                                                                 "height":  224
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1382537438",
+                                           "tid":  "75a73c64-d34e-11f1-88b9-f225900dc55d",
+                                           "timestamp":  "2026-10-29T04:08:56Z",
+                                           "description":  "American mass murderer (born 1987)",
+                                           "description_source":  "local",
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/James_Holmes_(mass_murderer)",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/James_Holmes_(mass_murderer)?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/James_Holmes_(mass_murderer)?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:James_Holmes_(mass_murderer)"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/James_Holmes_(mass_murderer)",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/James_Holmes_(mass_murderer)",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/James_Holmes_(mass_murderer)?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:James_Holmes_(mass_murderer)"
+                                                                           }
+                                                            },
+                                           "extract":  "James Eagan Holmes is an American convicted mass murderer who perpetrated the 2012 Aurora theater shooting in which he killed 12 people and injured 70 others at a Century 16 movie theater on July 20, 2012. He had no known criminal background before the shooting occurred. Before the shooting, Holmes booby-trapped his apartment with explosives, which were defused one day later by a bomb squad. The shooting is the deadliest by a lone gunman in the U.S. state of Colorado.",
+                                           "extract_html":  "\u003cp\u003e\u003cb\u003eJames Eagan Holmes\u003c/b\u003e is an American convicted mass murderer who perpetrated the 2012 Aurora theater shooting in which he killed 12 people and injured 70 others at a Century 16 movie theater on July 20, 2012. He had no known criminal background before the shooting occurred. Before the shooting, Holmes booby-trapped his apartment with explosives, which were defused one day later by a bomb squad. The shooting is the deadliest by a lone gunman in the U.S. state of Colorado.\u003c/p\u003e",
+                                           "normalizedtitle":  "James Holmes (mass murderer)"
+                                       },
+                                       {
+                                           "type":  "standard",
+                                           "title":  "2012_Aurora_theater_shooting",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003e2012 Aurora theater shooting\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q202512",
+                                           "titles":  {
+                                                          "canonical":  "2012_Aurora_theater_shooting",
+                                                          "normalized":  "2012 Aurora theater shooting",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003e2012 Aurora theater shooting\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  36488815,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/The_Century_16_theater_in_Aurora_CO_-_Shooting_location.jpg/330px-The_Century_16_theater_in_Aurora_CO_-_Shooting_location.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  248
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://upload.wikimedia.org/wikipedia/commons/0/03/The_Century_16_theater_in_Aurora_CO_-_Shooting_location.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                                 "width":  832,
+                                                                 "height":  624
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1386097295",
+                                           "tid":  "fcdd2925-e20d-11f1-8023-07efd1a489e0",
+                                           "timestamp":  "2026-11-16T22:35:13Z",
+                                           "description":  "Mass shooting in Colorado, U.S.",
+                                           "description_source":  "local",
+                                           "coordinates":  {
+                                                               "lat":  39.7059,
+                                                               "lon":  -104.8206
+                                                           },
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/2012_Aurora_theater_shooting",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/2012_Aurora_theater_shooting?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/2012_Aurora_theater_shooting?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:2012_Aurora_theater_shooting"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/2012_Aurora_theater_shooting",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/2012_Aurora_theater_shooting",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/2012_Aurora_theater_shooting?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:2012_Aurora_theater_shooting"
+                                                                           }
+                                                            },
+                                           "extract":  "On July 20, 2012, a mass shooting occurred inside a Mershops Town Center Century 16 movie theater in Aurora, Colorado, United States, during a midnight screening of the film The Dark Knight Rises. 24-year-old James Eagan Holmes set off tear gas grenades and shot into the audience with multiple firearms. Twelve people were killed and 70 others were injured, 58 of them due to gunfire. Holmes\u0027 shooting remains the deadliest mass shooting by a lone shooter in Colorado\u0027s history.",
+                                           "extract_html":  "\u003cp\u003eOn July 20, 2012, a mass shooting occurred inside a Mershops Town Center Century 16 movie theater in Aurora, Colorado, United States, during a midnight screening of the film \u003ci\u003eThe Dark Knight Rises\u003c/i\u003e. 24-year-old James Eagan Holmes set off tear gas grenades and shot into the audience with multiple firearms. Twelve people were killed and 70 others were injured, 58 of them due to gunfire. Holmes\u0027 shooting remains the deadliest mass shooting by a lone shooter in Colorado\u0027s history.\u003c/p\u003e",
+                                           "normalizedtitle":  "2012 Aurora theater shooting"
+                                       },
+                                       {
+                                           "type":  "standard",
+                                           "title":  "Aurora,_Colorado",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eAurora, Colorado\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q49246",
+                                           "titles":  {
+                                                          "canonical":  "Aurora,_Colorado",
+                                                          "normalized":  "Aurora, Colorado",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eAurora, Colorado\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  108353,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Aurora%2C_CO%2C_USA_-_panoramio_%281%29.jpg/330px-Aurora%2C_CO%2C_USA_-_panoramio_%281%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  248
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://upload.wikimedia.org/wikipedia/commons/1/15/Aurora%2C_CO%2C_USA_-_panoramio_%281%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                                 "width":  3472,
+                                                                 "height":  2604
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1383985663",
+                                           "tid":  "29c14d60-d979-11f1-a7a3-1d60dec8dd38",
+                                           "timestamp":  "2026-11-06T00:29:44Z",
+                                           "description":  "City in Colorado, US",
+                                           "description_source":  "local",
+                                           "coordinates":  {
+                                                               "lat":  39.70888889,
+                                                               "lon":  -104.72138889
+                                                           },
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/Aurora%2C_Colorado",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/Aurora%2C_Colorado?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/Aurora%2C_Colorado?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:Aurora%2C_Colorado"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/Aurora%2C_Colorado",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/Aurora%2C_Colorado",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/Aurora%2C_Colorado?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:Aurora%2C_Colorado"
+                                                                           }
+                                                            },
+                                           "extract":  "Aurora is a home rule city located within Arapahoe, Adams, and Douglas counties in the U.S. state of Colorado. The city\u0027s population was 386,261 at the 2020 census, with 336,035 residing in Arapahoe County, 47,720 in Adams County, and 2,506 in Douglas County. It is the third-most populous city in Colorado and the 50th-most populous city in the United States as of 2025. Aurora is a principal city of the Denver metropolitan area and a major city in the Front Range Urban Corridor.",
+                                           "extract_html":  "\u003cp\u003e\u003cb\u003eAurora\u003c/b\u003e is a home rule city located within Arapahoe, Adams, and Douglas counties in the U.S. state of Colorado. The city\u0027s population was 386,261 at the 2020 census, with 336,035 residing in Arapahoe County, 47,720 in Adams County, and 2,506 in Douglas County. It is the third-most populous city in Colorado and the 50th-most populous city in the United States as of 2025. Aurora is a principal city of the Denver metropolitan area and a major city in the Front Range Urban Corridor.\u003c/p\u003e",
+                                           "normalizedtitle":  "Aurora, Colorado"
+                                       }
+                                   ],
+                         "year":  2012
+                     },
+                     {
+                         "text":  "Twenty-three-year-old Italian anti-globalist Carlo Giuliani was shot dead by a police officer while protesting outside the 27th G8 summit held in Genoa, Italy.",
+                         "pages":  [
+                                       {
+                                           "type":  "standard",
+                                           "title":  "Killing_of_Carlo_Giuliani",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eKilling of Carlo Giuliani\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q164791",
+                                           "titles":  {
+                                                          "canonical":  "Killing_of_Carlo_Giuliani",
+                                                          "normalized":  "Killing of Carlo Giuliani",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eKilling of Carlo Giuliani\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  160516,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Fototessera_di_Carlo_Giuliani.jpg/330px-Fototessera_di_Carlo_Giuliani.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  452
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://upload.wikimedia.org/wikipedia/commons/6/6e/Fototessera_di_Carlo_Giuliani.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                                 "width":  378,
+                                                                 "height":  518
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1373412446",
+                                           "tid":  "5651eec1-a96b-11f1-b7f7-d81168833804",
+                                           "timestamp":  "2026-09-05T20:49:50Z",
+                                           "description":  "Death during an anti-globalization demonstration outside the 2001 G8 summit in Italy",
+                                           "description_source":  "local",
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/Killing_of_Carlo_Giuliani",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/Killing_of_Carlo_Giuliani?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/Killing_of_Carlo_Giuliani?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:Killing_of_Carlo_Giuliani"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/Killing_of_Carlo_Giuliani",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/Killing_of_Carlo_Giuliani",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/Killing_of_Carlo_Giuliani?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:Killing_of_Carlo_Giuliani"
+                                                                           }
+                                                            },
+                                           "extract":  "Carlo Giuliani was an Italian anti-globalization protester who was shot dead while attacking a Carabinieri van with a fire extinguisher, by an officer who was inside the van, during the anti-globalization riots outside the July 2001 G8 summit in Genoa, Italy, making his the first death during an anti-globalization demonstration since the movement\u0027s rise from the 1999 Seattle WTO protests.",
+                                           "extract_html":  "\u003cp\u003e\u003cb\u003eCarlo Giuliani\u003c/b\u003e was an Italian anti-globalization protester who was shot dead while attacking a Carabinieri van with a fire extinguisher, by an officer who was inside the van, during the anti-globalization riots outside the July 2001 G8 summit in Genoa, Italy, making his the first death during an anti-globalization demonstration since the movement\u0027s rise from the 1999 Seattle WTO protests.\u003c/p\u003e",
+                                           "normalizedtitle":  "Killing of Carlo Giuliani"
+                                       },
+                                       {
+                                           "type":  "standard",
+                                           "title":  "27th_G8_summit",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003e27th G8 summit\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q1143209",
+                                           "titles":  {
+                                                          "canonical":  "27th_G8_summit",
+                                                          "normalized":  "27th G8 summit",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003e27th G8 summit\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  288238,
+                                           "thumbnail":  {
+                                                             "source":  "https://upload.wikimedia.org/wikipedia/en/9/9f/Logo_GENOA_2001.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                             "width":  150,
+                                                             "height":  75
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://upload.wikimedia.org/wikipedia/en/9/9f/Logo_GENOA_2001.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                                 "width":  150,
+                                                                 "height":  75
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1386100081",
+                                           "tid":  "8d693782-e211-11f1-80c8-c3ff53c356f5",
+                                           "timestamp":  "2026-11-16T23:00:44Z",
+                                           "description":  "2001 international leader meeting in Italy",
+                                           "description_source":  "local",
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/27th_G8_summit",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/27th_G8_summit?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/27th_G8_summit?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:27th_G8_summit"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/27th_G8_summit",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/27th_G8_summit",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/27th_G8_summit?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:27th_G8_summit"
+                                                                           }
+                                                            },
+                                           "extract":  "The 27th G8 summit was held in Genoa, Italy, on 19–22 July 2001 and is remembered as a highpoint of the worldwide anti-globalization movement as well as for human rights violations against demonstrators.",
+                                           "extract_html":  "\u003cp\u003eThe \u003cb\u003e27th G8 summit\u003c/b\u003e was held in Genoa, Italy, on 19–22 July 2001 and is remembered as a highpoint of the worldwide anti-globalization movement as well as for human rights violations against demonstrators.\u003c/p\u003e",
+                                           "normalizedtitle":  "27th G8 summit"
+                                       },
+                                       {
+                                           "type":  "standard",
+                                           "title":  "Genoa",
+                                           "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eGenoa\u003c/span\u003e\u003c/span\u003e",
+                                           "namespace":  {
+                                                             "id":  0,
+                                                             "text":  ""
+                                                         },
+                                           "wikibase_item":  "Q1449",
+                                           "titles":  {
+                                                          "canonical":  "Genoa",
+                                                          "normalized":  "Genoa",
+                                                          "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eGenoa\u003c/span\u003e\u003c/span\u003e"
+                                                      },
+                                           "pageid":  47332321,
+                                           "thumbnail":  {
+                                                             "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Genoa%2C_Italy_skyline_5x3.jpg/330px-Genoa%2C_Italy_skyline_5x3.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                             "width":  330,
+                                                             "height":  198
+                                                         },
+                                           "originalimage":  {
+                                                                 "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Genoa%2C_Italy_skyline_5x3.jpg/3840px-Genoa%2C_Italy_skyline_5x3.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                                 "width":  8176,
+                                                                 "height":  4905
+                                                             },
+                                           "lang":  "en",
+                                           "dir":  "ltr",
+                                           "revision":  "1386241274",
+                                           "tid":  "5e8ca8ff-e285-11f1-a22c-047b115918de",
+                                           "timestamp":  "2026-11-17T12:49:47Z",
+                                           "description":  "Largest city in Liguria, Italy",
+                                           "description_source":  "local",
+                                           "coordinates":  {
+                                                               "lat":  44.40722222,
+                                                               "lon":  8.93388889
+                                                           },
+                                           "content_urls":  {
+                                                                "desktop":  {
+                                                                                "page":  "https://en.wikipedia.org/wiki/Genoa",
+                                                                                "revisions":  "https://en.wikipedia.org/wiki/Genoa?action=history",
+                                                                                "edit":  "https://en.wikipedia.org/wiki/Genoa?action=edit",
+                                                                                "talk":  "https://en.wikipedia.org/wiki/Talk:Genoa"
+                                                                            },
+                                                                "mobile":  {
+                                                                               "page":  "https://en.wikipedia.org/wiki/Genoa",
+                                                                               "revisions":  "https://en.wikipedia.org/wiki/Special:History/Genoa",
+                                                                               "edit":  "https://en.wikipedia.org/wiki/Genoa?action=edit",
+                                                                               "talk":  "https://en.wikipedia.org/wiki/Talk:Genoa"
+                                                                           }
+                                                            },
+                                           "extract":  "Genoa is the sixth-largest city in Italy and the capital of the region of Liguria in northern Italy. As of 2026, 566,247 people live within the city\u0027s administrative limits. While its metropolitan city has 820,691 inhabitants, more than 1.8 million people live in the wider metropolitan area stretching along the Italian Riviera.",
+                                           "extract_html":  "\u003cp\u003e\u003cb\u003eGenoa\u003c/b\u003e is the sixth-largest city in Italy and the capital of the region of Liguria in northern Italy. As of 2026, 566,247 people live within the city\u0027s administrative limits. While its metropolitan city has 820,691 inhabitants, more than 1.8 million people live in the wider metropolitan area stretching along the Italian Riviera.\u003c/p\u003e",
+                                           "normalizedtitle":  "Genoa"
+                                       }
+                                   ],
+                         "year":  2001
+                     }
+                 ],
+    "events":  [
+                   {
+                       "text":  "American businessman Jeff Bezos flies to space aboard New Shepard NS-16 operated by his private spaceflight company Blue Origin.",
+                       "pages":  [
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Jeff_Bezos",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eJeff Bezos\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q312556",
+                                         "titles":  {
+                                                        "canonical":  "Jeff_Bezos",
+                                                        "normalized":  "Jeff Bezos",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eJeff Bezos\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  142528,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg/330px-260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  440
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://upload.wikimedia.org/wikipedia/commons/f/fc/260202-D-PM193-2205_SECWAR_Arsenal_of_Freedom_Tour_-_Florida_%283x4_cropped_on_Bezos_and_rotated%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                               "width":  1046,
+                                                               "height":  1395
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1386205204",
+                                         "tid":  "4e1009b3-e254-11f1-9da4-58f11f42e5c8",
+                                         "timestamp":  "2026-11-17T06:58:34Z",
+                                         "description":  "American businessman (born 1964)",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Jeff_Bezos",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Jeff_Bezos?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Jeff_Bezos?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Jeff_Bezos"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Jeff_Bezos",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Jeff_Bezos",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Jeff_Bezos?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Jeff_Bezos"
+                                                                         }
+                                                          },
+                                         "extract":  "Jeffrey Preston Bezos is an American businessman, and the founder, executive chairman, and former president and CEO of Amazon, the world\u0027s largest e-commerce and cloud computing company. According to the Bloomberg Billionaires Index and Forbes, he was the world\u0027s wealthiest person from 2017 to 2021, and in 2026, his net worth was approximately US$284 billion. He is commonly considered part of the global elite.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eJeffrey Preston Bezos\u003c/b\u003e is an American businessman, and the founder, executive chairman, and former president and CEO of Amazon, the world\u0027s largest e-commerce and cloud computing company. According to the \u003ci\u003eBloomberg Billionaires Index\u003c/i\u003e and \u003ci\u003eForbes\u003c/i\u003e, he was the world\u0027s wealthiest person from 2017 to 2021, and in 2026, his net worth was approximately US$284 billion. He is commonly considered part of the global elite.\u003c/p\u003e",
+                                         "normalizedtitle":  "Jeff Bezos"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "New_Shepard",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eNew Shepard\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q3339012",
+                                         "titles":  {
+                                                        "canonical":  "New_Shepard",
+                                                        "normalized":  "New Shepard",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eNew Shepard\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  6385385,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/New_Shepard_booster_at_Oshkosh_Airventure_2017_03_%2836103651636%29.jpg/330px-New_Shepard_booster_at_Oshkosh_Airventure_2017_03_%2836103651636%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  440
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://upload.wikimedia.org/wikipedia/commons/a/a5/New_Shepard_booster_at_Oshkosh_Airventure_2017_03_%2836103651636%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                               "width":  3456,
+                                                               "height":  4608
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1384604291",
+                                         "tid":  "600305a3-dbe5-11f1-83e3-66ad839fa935",
+                                         "timestamp":  "2026-11-09T02:29:23Z",
+                                         "description":  "Rocket developed by Blue Origin",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/New_Shepard",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/New_Shepard?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/New_Shepard?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:New_Shepard"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/New_Shepard",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/New_Shepard",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/New_Shepard?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:New_Shepard"
+                                                                         }
+                                                          },
+                                         "extract":  "New Shepard is a fully reusable sub-orbital launch vehicle developed for space tourism by Blue Origin. The vehicle is named after Alan Shepard, for being the first American to travel into space, also being the fifth person to walk on the Moon. The vehicle is capable of vertical takeoff and landings. Additionally, it is also capable of carrying humans and customer payloads into a sub-orbital trajectory.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eNew Shepard\u003c/b\u003e is a fully reusable sub-orbital launch vehicle developed for space tourism by Blue Origin. The vehicle is named after Alan Shepard, for being the first American to travel into space, also being the fifth person to walk on the Moon. The vehicle is capable of vertical takeoff and landings. Additionally, it is also capable of carrying humans and customer payloads into a sub-orbital trajectory.\u003c/p\u003e",
+                                         "normalizedtitle":  "New Shepard"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Blue_Origin_NS-16",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eBlue Origin NS-16\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q107483347",
+                                         "titles":  {
+                                                        "canonical":  "Blue_Origin_NS-16",
+                                                        "normalized":  "Blue Origin NS-16",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eBlue Origin NS-16\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  68107375,
+                                         "thumbnail":  {
+                                                           "source":  "https://upload.wikimedia.org/wikipedia/en/d/d2/NS-16_logo.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                           "width":  300,
+                                                           "height":  300
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://upload.wikimedia.org/wikipedia/en/d/d2/NS-16_logo.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                               "width":  300,
+                                                               "height":  300
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1363345496",
+                                         "tid":  "06e3801a-7bb7-11f1-a45c-2c3a00818ebb",
+                                         "timestamp":  "2026-07-09T16:55:45Z",
+                                         "description":  "First crewed flight of New Shepard (2021)",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Blue_Origin_NS-16",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Blue_Origin_NS-16?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Blue_Origin_NS-16?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Blue_Origin_NS-16"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Blue_Origin_NS-16",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Blue_Origin_NS-16",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Blue_Origin_NS-16?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Blue_Origin_NS-16"
+                                                                         }
+                                                          },
+                                         "extract":  "Blue Origin NS-16 was a sub-orbital spaceflight mission operated by Blue Origin which flew on 20 July 2021. The mission was the sixteenth flight of the company\u0027s New Shepard integrated launch vehicle and spacecraft, and its first flight with humans aboard. It carried into space American billionaire and Blue Origin founder Jeff Bezos, his brother Mark, pilot and Mercury 13 member Wally Funk, and Dutch student Oliver Daemen. The flight commenced from Blue Origin\u0027s Corn Ranch sub-orbital launch site in West Texas aboard the third flight of New Shepard booster NS4 and the spacecraft RSS First Step, both having previously flown on NS-14 and NS-15 earlier in the year.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eBlue Origin NS-16\u003c/b\u003e was a sub-orbital spaceflight mission operated by Blue Origin which flew on 20 July 2021. The mission was the sixteenth flight of the company\u0027s New Shepard integrated launch vehicle and spacecraft, and its first flight with humans aboard. It carried into space American billionaire and Blue Origin founder Jeff Bezos, his brother Mark, pilot and Mercury 13 member Wally Funk, and Dutch student Oliver Daemen. The flight commenced from Blue Origin\u0027s Corn Ranch sub-orbital launch site in West Texas aboard the third flight of New Shepard booster NS4 and the spacecraft \u003cspan\u003eRSS \u003ci\u003eFirst Step\u003c/i\u003e\u003c/span\u003e, both having previously flown on NS-14 and NS-15 earlier in the year.\u003c/p\u003e",
+                                         "normalizedtitle":  "Blue Origin NS-16"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Private_spaceflight",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003ePrivate spaceflight\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q44906",
+                                         "titles":  {
+                                                        "canonical":  "Private_spaceflight",
+                                                        "normalized":  "Private spaceflight",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003ePrivate spaceflight\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  752732,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/NASA%E2%80%99s_SLS_and_SpaceX%E2%80%99s_Falcon_9_at_Launch_Complex_39A_%26_39B_%28NHQ202204060003%29.jpg/330px-NASA%E2%80%99s_SLS_and_SpaceX%E2%80%99s_Falcon_9_at_Launch_Complex_39A_%26_39B_%28NHQ202204060003%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  205
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/NASA%E2%80%99s_SLS_and_SpaceX%E2%80%99s_Falcon_9_at_Launch_Complex_39A_%26_39B_%28NHQ202204060003%29.jpg/3840px-NASA%E2%80%99s_SLS_and_SpaceX%E2%80%99s_Falcon_9_at_Launch_Complex_39A_%26_39B_%28NHQ202204060003%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  4359,
+                                                               "height":  2713
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1385993033",
+                                         "tid":  "2f970b25-e195-11f1-9b36-f1ce728be233",
+                                         "timestamp":  "2026-11-16T08:10:29Z",
+                                         "description":  "Spaceflight not by a government",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Private_spaceflight",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Private_spaceflight?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Private_spaceflight?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Private_spaceflight"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Private_spaceflight",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Private_spaceflight",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Private_spaceflight?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Private_spaceflight"
+                                                                         }
+                                                          },
+                                         "extract":  "Private spaceflight is any spaceflight development that is not conducted by a government agency, such as NASA or ESA.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003ePrivate spaceflight\u003c/b\u003e is any spaceflight development that is not conducted by a government agency, such as NASA or ESA.\u003c/p\u003e",
+                                         "normalizedtitle":  "Private spaceflight"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Blue_Origin",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eBlue Origin\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q885836",
+                                         "titles":  {
+                                                        "canonical":  "Blue_Origin",
+                                                        "normalized":  "Blue Origin",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eBlue Origin\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  887418,
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1384301553",
+                                         "tid":  "b0853f23-dac9-11f1-be4c-9db4699741d8",
+                                         "timestamp":  "2026-11-07T16:38:41Z",
+                                         "description":  "American aerospace company",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Blue_Origin",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Blue_Origin?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Blue_Origin?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Blue_Origin"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Blue_Origin",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Blue_Origin",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Blue_Origin?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Blue_Origin"
+                                                                         }
+                                                          },
+                                         "extract":  "Blue Origin Enterprises, L.P. is a private American space technology company headquartered in Kent, Washington. The company operates the suborbital New Shepard rocket and the heavy-lift New Glenn rocket. In addition to producing engines for its own rockets, Blue Origin supplies engines for other vehicles, including United Launch Alliance\u0027s Vulcan Centaur. It is also working on the Blue Moon human lunar lander for NASA\u0027s Artemis program, the Blue Ring spacecraft platform, and the Orbital Reef space station in partnership with other organizations.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eBlue Origin Enterprises, L.P.\u003c/b\u003e is a private American space technology company headquartered in Kent, Washington. The company operates the suborbital New Shepard rocket and the heavy-lift New Glenn rocket. In addition to producing engines for its own rockets, Blue Origin supplies engines for other vehicles, including United Launch Alliance\u0027s Vulcan Centaur. It is also working on the Blue Moon human lunar lander for NASA\u0027s Artemis program, the Blue Ring spacecraft platform, and the Orbital Reef space station in partnership with other organizations.\u003c/p\u003e",
+                                         "normalizedtitle":  "Blue Origin"
+                                     }
+                                 ],
+                       "year":  2021
+                   },
+                   {
+                       "text":  "Soyuz MS-13 is launched to the International Space Station on the 50th anniversary of the Apollo 11 moon landing.",
+                       "pages":  [
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Soyuz_MS-13",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSoyuz MS-13\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q28666241",
+                                         "titles":  {
+                                                        "canonical":  "Soyuz_MS-13",
+                                                        "normalized":  "Soyuz MS-13",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSoyuz MS-13\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  54154894,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/ISS-60_Soyuz_MS-13_spacecraft_approaches_the_ISS_%281%29.jpg/330px-ISS-60_Soyuz_MS-13_spacecraft_approaches_the_ISS_%281%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  220
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/ISS-60_Soyuz_MS-13_spacecraft_approaches_the_ISS_%281%29.jpg/3840px-ISS-60_Soyuz_MS-13_spacecraft_approaches_the_ISS_%281%29.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  5568,
+                                                               "height":  3712
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1356654204",
+                                         "tid":  "32c311e3-5aff-11f1-86b9-ee89b4929778",
+                                         "timestamp":  "2026-05-29T01:39:14Z",
+                                         "description":  "2019 Russian crewed spaceflight to the ISS",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Soyuz_MS-13",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Soyuz_MS-13?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Soyuz_MS-13?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Soyuz_MS-13"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Soyuz_MS-13",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Soyuz_MS-13",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Soyuz_MS-13?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Soyuz_MS-13"
+                                                                         }
+                                                          },
+                                         "extract":  "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019 – the 50th anniversary of the first Moon landing – carrying three members of the Expedition 60 crew to the International Space Station: a Russian commander, an American flight engineer, and a European flight engineer. Soyuz MS-13 was the 142nd flight of a Soyuz spacecraft. It was at one point the last Soyuz flight contracted by NASA in the expectation that subsequent astronaut transport would be provided by the Commercial Crew Program, but in early 2019, NASA sought to purchase two additional Soyuz seats to provide greater certainty given delays in that program. The European segment of the mission was called \"Beyond\".",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eSoyuz MS-13\u003c/b\u003e, also designated ISS flight \u003cb\u003e59S\u003c/b\u003e, was a crewed Soyuz mission launched on 20 July 2019 – the 50th anniversary of the first Moon landing – carrying three members of the Expedition 60 crew to the International Space Station: a Russian commander, an American flight engineer, and a European flight engineer. Soyuz MS-13 was the 142nd flight of a Soyuz spacecraft. It was at one point the last Soyuz flight contracted by NASA in the expectation that subsequent astronaut transport would be provided by the Commercial Crew Program, but in early 2019, NASA sought to purchase two additional Soyuz seats to provide greater certainty given delays in that program. The European segment of the mission was called \"Beyond\".\u003c/p\u003e",
+                                         "normalizedtitle":  "Soyuz MS-13"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "International_Space_Station",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eInternational Space Station\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q25271",
+                                         "titles":  {
+                                                        "canonical":  "International_Space_Station",
+                                                        "normalized":  "International Space Station",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eInternational Space Station\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  15043,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/The_station_pictured_from_the_SpaceX_Crew_Dragon_5.jpg/330px-The_station_pictured_from_the_SpaceX_Crew_Dragon_5.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  219
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/The_station_pictured_from_the_SpaceX_Crew_Dragon_5.jpg/3840px-The_station_pictured_from_the_SpaceX_Crew_Dragon_5.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  7556,
+                                                               "height":  5020
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1386175737",
+                                         "tid":  "a505e797-e234-11f1-9199-d24f7930ab81",
+                                         "timestamp":  "2026-11-17T03:11:56Z",
+                                         "description":  "Modular space station in low Earth orbit",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/International_Space_Station",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/International_Space_Station?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/International_Space_Station?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:International_Space_Station"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/International_Space_Station",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/International_Space_Station",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/International_Space_Station?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:International_Space_Station"
+                                                                         }
+                                                          },
+                                         "extract":  "The International Space Station (ISS) is a space station in low Earth orbit (LEO). It is the product of the International Space Station program and is operated by five partner space agencies: NASA, Roscosmos (Russia), ESA (Europe), JAXA (Japan), and CSA (Canada). It is the first space station built, maintained and crewed through international cooperation and the largest human spacecraft ever constructed. It is an orbital research station, where scientific experiments in microgravity are conducted and the space environment is studied. Since 2 November 2000, it has hosted the longest continuous human presence in space. Alongside China\u0027s Tiangong, it is one of two currently operational space stations.",
+                                         "extract_html":  "\u003cp\u003eThe \u003cb\u003eInternational Space Station\u003c/b\u003e (\u003cb\u003eISS\u003c/b\u003e) is a space station in low Earth orbit (LEO). It is the product of the International Space Station program and is operated by five partner space agencies: NASA, Roscosmos (Russia), ESA (Europe), JAXA (Japan), and CSA (Canada). It is the first space station built, maintained and crewed through international cooperation and the largest human spacecraft ever constructed. It is an orbital research station, where scientific experiments in microgravity are conducted and the space environment is studied. Since 2 November 2000, it has hosted the longest continuous human presence in space. Alongside China\u0027s \u003cspan\u003e\u003ci\u003eTiangong\u003c/i\u003e\u003c/span\u003e, it is one of two currently operational space stations.\u003c/p\u003e",
+                                         "normalizedtitle":  "International Space Station"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Apollo_11_anniversaries",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eApollo 11 anniversaries\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q60768325",
+                                         "titles":  {
+                                                        "canonical":  "Apollo_11_anniversaries",
+                                                        "normalized":  "Apollo 11 anniversaries",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eApollo 11 anniversaries\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  59570886,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/President_George_Bush_and_Apollo_11_Astronauts_-_GPN-2000-001665.jpg/330px-President_George_Bush_and_Apollo_11_Astronauts_-_GPN-2000-001665.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  221
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://upload.wikimedia.org/wikipedia/commons/0/07/President_George_Bush_and_Apollo_11_Astronauts_-_GPN-2000-001665.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                               "width":  2990,
+                                                               "height":  2006
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1383696918",
+                                         "tid":  "bd7a0d51-d815-11f1-9537-68904407e399",
+                                         "timestamp":  "2026-11-04T06:05:31Z",
+                                         "description":  "Anniversaries of the first human moon landing",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Apollo_11_anniversaries?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Apollo_11_anniversaries?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Apollo_11_anniversaries"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Apollo_11_anniversaries",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Apollo_11_anniversaries?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Apollo_11_anniversaries"
+                                                                         }
+                                                          },
+                                         "extract":  "Apollo 11 was the first human spaceflight to land on the Moon. In the decades after its 1969 mission took place, widespread celebrations have been held to celebrate its anniversaries.",
+                                         "extract_html":  "\u003cp\u003eApollo 11 was the first human spaceflight to land on the Moon. In the decades after its 1969 mission took place, widespread celebrations have been held to celebrate its anniversaries.\u003c/p\u003e",
+                                         "normalizedtitle":  "Apollo 11 anniversaries"
+                                     }
+                                 ],
+                       "year":  2019
+                   },
+                   {
+                       "text":  "O. J. Simpson is granted parole to be released from prison after serving nine years of a 33-year sentence after being convicted of armed robbery in Las Vegas.",
+                       "pages":  [
+                                     {
+                                         "type":  "standard",
+                                         "title":  "O._J._Simpson",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eO. J. Simpson\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q44473",
+                                         "titles":  {
+                                                        "canonical":  "O._J._Simpson",
+                                                        "normalized":  "O. J. Simpson",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eO. J. Simpson\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  8955445,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG/330px-O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  446
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://upload.wikimedia.org/wikipedia/commons/c/c8/O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                               "width":  584,
+                                                               "height":  789
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1386104195",
+                                         "tid":  "4e89b0b3-e216-11f1-868b-779e2406767c",
+                                         "timestamp":  "2026-11-16T23:34:46Z",
+                                         "description":  "American football player and actor (1947–2024)",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/O._J._Simpson",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/O._J._Simpson?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/O._J._Simpson?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:O._J._Simpson"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/O._J._Simpson",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/O._J._Simpson",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/O._J._Simpson?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:O._J._Simpson"
+                                                                         }
+                                                          },
+                                         "extract":  "Orenthal James Simpson, nicknamed \"the Juice\", was an American football player, actor, and media personality. He played in the National Football League (NFL) for 11 seasons—nine of which with the Buffalo Bills—and is regarded as one of the greatest running backs of all time. His success is widely considered to be overshadowed by his two criminal charges for the 1994 murders of his ex-wife Nicole Brown and her friend Ron Goldman, and the contentious criminal trial in which he was acquitted on both counts.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eOrenthal James Simpson\u003c/b\u003e, nicknamed \"\u003cb\u003ethe Juice\u003c/b\u003e\", was an American football player, actor, and media personality. He played in the National Football League (NFL) for 11 seasons—nine of which with the Buffalo Bills—and is regarded as one of the greatest running backs of all time. His success is widely considered to be overshadowed by his two criminal charges for the 1994 murders of his ex-wife Nicole Brown and her friend Ron Goldman, and the contentious criminal trial in which he was acquitted on both counts.\u003c/p\u003e",
+                                         "normalizedtitle":  "O. J. Simpson"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Las_Vegas",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eLas Vegas\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q23768",
+                                         "titles":  {
+                                                        "canonical":  "Las_Vegas",
+                                                        "normalized":  "Las Vegas",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eLas Vegas\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  47737,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Center_Strip_Before_Sunrise.jpg/330px-Center_Strip_Before_Sunrise.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  220
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Center_Strip_Before_Sunrise.jpg/3840px-Center_Strip_Before_Sunrise.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  7774,
+                                                               "height":  5183
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1384981972",
+                                         "tid":  "5e76415b-dd91-11f1-bc85-432f270739a1",
+                                         "timestamp":  "2026-11-11T05:33:05Z",
+                                         "description":  "Most populous city in Nevada, United States",
+                                         "description_source":  "local",
+                                         "coordinates":  {
+                                                             "lat":  36.16916667,
+                                                             "lon":  -115.14055556
+                                                         },
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Las_Vegas",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Las_Vegas?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Las_Vegas?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Las_Vegas"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Las_Vegas",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Las_Vegas",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Las_Vegas?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Las_Vegas"
+                                                                         }
+                                                          },
+                                         "extract":  "Las Vegas, colloquially shortened to Vegas, is the most populous city in the U.S. state of Nevada and the county seat of Clark County. It is the 24th-most populous city in the United States, with 641,903 residents at the 2020 census. The Las Vegas metropolitan area has an estimated 2.4 million residents and is the 29th-largest metropolitan area in the country. Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife. Most of these venues are located in downtown Las Vegas or on the Las Vegas Strip, which is outside city limits in the unincorporated towns of Paradise and Winchester. The Las Vegas Valley serves as the leading financial, commercial, and cultural center in Nevada.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eLas Vegas\u003c/b\u003e, \u003cspan class=\"extiw\"\u003ecolloquially\u003c/span\u003e shortened to \u003cb\u003eVegas\u003c/b\u003e, is the most populous city in the U.S. state of Nevada and the county seat of Clark County. It is the 24th-most populous city in the United States, with 641,903 residents at the 2020 census. The Las Vegas metropolitan area has an estimated 2.4 million residents and is the 29th-largest metropolitan area in the country. Las Vegas is an internationally renowned major resort city, known primarily for its gambling, shopping, fine dining, entertainment, and nightlife. Most of these venues are located in downtown Las Vegas or on the Las Vegas Strip, which is outside city limits in the unincorporated towns of Paradise and Winchester. The Las Vegas Valley serves as the leading financial, commercial, and cultural center in Nevada.\u003c/p\u003e",
+                                         "normalizedtitle":  "Las Vegas"
+                                     }
+                                 ],
+                       "year":  2017
+                   },
+                   {
+                       "text":  "A huge explosion in the mostly Kurdish border town of Suruç, Turkey, targeting the Socialist Youth Associations Federation, kills at least 31 people and injures over 100.",
+                       "pages":  [
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Suruç_bombing",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç bombing\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q20685047",
+                                         "titles":  {
+                                                        "canonical":  "Suruç_bombing",
+                                                        "normalized":  "Suruç bombing",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç bombing\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  47287371,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/2015_Suru%C3%A7_bombing_in_Turkey.jpg/330px-2015_Suru%C3%A7_bombing_in_Turkey.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  186
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://upload.wikimedia.org/wikipedia/commons/0/0d/2015_Suru%C3%A7_bombing_in_Turkey.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail_unscaled",
+                                                               "width":  1032,
+                                                               "height":  581
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1383084842",
+                                         "tid":  "a8357d51-d57a-11f1-b613-010cacf2dee7",
+                                         "timestamp":  "2026-10-31T22:30:21Z",
+                                         "description":  "2015 suicide attack in Suruç, Turkey",
+                                         "description_source":  "local",
+                                         "coordinates":  {
+                                                             "lat":  36.98055556,
+                                                             "lon":  38.42555556
+                                                         },
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7_bombing"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Suru%C3%A7_bombing",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7_bombing?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7_bombing"
+                                                                         }
+                                                          },
+                                         "extract":  "On 20 July 2015, the Dokumacılar, the Turkish sect of the Islamic State (ISIL), executed a suicide attack in the Suruç district of Şanlıurfa Province in Turkey. The attack took place outside the Amara Culture Centre, killing 34 people including the perpetrator, and 104 further injuries. Most victims were members of the Socialist Party of the Oppressed (ESP) Youth Wing and the Socialist Youth Associations Federation (SGDF), university students who were giving a press statement on their planned trip to reconstruct the Syrian border town of Kobanî.",
+                                         "extract_html":  "\u003cp\u003eOn 20 July 2015, the Dokumacılar, the Turkish sect of the Islamic State (ISIL), executed a suicide attack in the Suruç district of Şanlıurfa Province in Turkey. The attack took place outside the Amara Culture Centre, killing 34 people including the perpetrator, and 104 further injuries. Most victims were members of the Socialist Party of the Oppressed (ESP) Youth Wing and the Socialist Youth Associations Federation (SGDF), university students who were giving a press statement on their planned trip to reconstruct the Syrian border town of Kobanî.\u003c/p\u003e",
+                                         "normalizedtitle":  "Suruç bombing"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Kurds",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eKurds\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q12223",
+                                         "titles":  {
+                                                        "canonical":  "Kurds",
+                                                        "normalized":  "Kurds",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eKurds\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  17068,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Kurdistan.svg/330px-Flag_of_Kurdistan.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  220
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Kurdistan.svg/960px-Flag_of_Kurdistan.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  900,
+                                                               "height":  600
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1385998017",
+                                         "tid":  "d468155a-e19a-11f1-85c4-0e4e8a1dc2a6",
+                                         "timestamp":  "2026-11-16T08:50:53Z",
+                                         "description":  "Iranic ethnic group",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Kurds",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Kurds?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Kurds?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Kurds"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Kurds",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Kurds",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Kurds?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Kurds"
+                                                                         }
+                                                          },
+                                         "extract":  "Kurds, or the Kurdish people, are an Iranic ethnic group from West Asia. They are indigenous to Kurdistan, which is a geographic region spanning southeastern Turkey, northwestern Iran, northern Iraq, and northeastern Syria. Consisting of 30–45 million people, the global Kurdish population is largely concentrated in Kurdistan, but significant communities of the Kurdish diaspora exist in parts of West Asia beyond Kurdistan and in parts of Europe, most notably including: Turkey\u0027s Central Anatolian Kurds, as well as Istanbul Kurds; Iran\u0027s Khorasani Kurds; the Caucasian Kurds, primarily in Azerbaijan and Armenia; and the Kurdish populations in various European countries, namely Germany, France, Sweden, and the Netherlands.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eKurds\u003c/b\u003e, or the \u003cb\u003eKurdish people\u003c/b\u003e, are an Iranic ethnic group from West Asia. They are indigenous to Kurdistan, which is a geographic region spanning southeastern Turkey, northwestern Iran, northern Iraq, and northeastern Syria. Consisting of 30–45 million people, the global Kurdish population is largely concentrated in Kurdistan, but significant communities of the Kurdish diaspora exist in parts of West Asia beyond Kurdistan and in parts of Europe, most notably including: Turkey\u0027s Central Anatolian Kurds, as well as Istanbul Kurds; Iran\u0027s Khorasani Kurds; the Caucasian Kurds, primarily in Azerbaijan and Armenia; and the Kurdish populations in various European countries, namely Germany, France, Sweden, and the Netherlands.\u003c/p\u003e",
+                                         "normalizedtitle":  "Kurds"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Suruç",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q917836",
+                                         "titles":  {
+                                                        "canonical":  "Suruç",
+                                                        "normalized":  "Suruç",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eSuruç\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  4182029,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Suru%C3%A7_town_hall.jpg/330px-Suru%C3%A7_town_hall.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  223
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Suru%C3%A7_town_hall.jpg/3840px-Suru%C3%A7_town_hall.jpg?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  4125,
+                                                               "height":  2785
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1379613607",
+                                         "tid":  "01743b5b-c508-11f1-91d5-a16b00d07fb2",
+                                         "timestamp":  "2026-10-11T00:09:20Z",
+                                         "description":  "District and municipality in Şanlıurfa, Turkey",
+                                         "description_source":  "local",
+                                         "coordinates":  {
+                                                             "lat":  36.975,
+                                                             "lon":  38.42444444
+                                                         },
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Suru%C3%A7?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Suru%C3%A7",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Suru%C3%A7",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Suru%C3%A7?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Suru%C3%A7"
+                                                                         }
+                                                          },
+                                         "extract":  "Suruç is a municipality and district of Şanlıurfa Province, Turkey. Its area is 744 km2, and its population is 100,961 (2022). It is on a plain near the Syrian border 46 kilometres (29 mi) southwest of the city of Urfa. Its inhabitants are Kurds.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eSuruç\u003c/b\u003e is a municipality and district of Şanlıurfa Province, Turkey. Its area is 744 km\u003csup\u003e2\u003c/sup\u003e, and its population is 100,961 (2022). It is on a plain near the Syrian border 46 kilometres (29 mi) southwest of the city of Urfa. Its inhabitants are Kurds.\u003c/p\u003e",
+                                         "normalizedtitle":  "Suruç"
+                                     }
+                                 ],
+                       "year":  2015
+                   },
+                   {
+                       "text":  "The United States and Cuba resume full diplomatic relations after five decades.",
+                       "pages":  [
+                                     {
+                                         "type":  "standard",
+                                         "title":  "United_States",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eUnited States\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q30",
+                                         "titles":  {
+                                                        "canonical":  "United_States",
+                                                        "normalized":  "United States",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eUnited States\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  3434750,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg/330px-Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  174
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg/1280px-Flag_of_the_United_States_%28DDD-F-416E_specifications%29.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  1235,
+                                                               "height":  650
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1385853817",
+                                         "tid":  "ccfa2a80-e10c-11f1-89c8-457f478a5291",
+                                         "timestamp":  "2026-11-15T15:54:12Z",
+                                         "description":  "Country primarily in North America",
+                                         "description_source":  "local",
+                                         "coordinates":  {
+                                                             "lat":  40,
+                                                             "lon":  -100
+                                                         },
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/United_States",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/United_States?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/United_States?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:United_States"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/United_States",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/United_States",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/United_States?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:United_States"
+                                                                         }
+                                                          },
+                                         "extract":  "The United States of America (USA), also known as the United States (U.S.) or America, is a country primarily located in North America. It is a federal republic consisting of 50 states and a federal capital district, Washington, D.C. The 48 contiguous states border Canada to the north and Mexico to the south, with the semi-exclave of Alaska in the northwest and the archipelago of Hawaii in the Pacific Ocean. The United States also asserts sovereignty over five major island territories and various uninhabited islands in Oceania and the Caribbean. It has the world\u0027s fourth-largest total area and third-largest population, exceeding 341 million.",
+                                         "extract_html":  "\u003cp\u003eThe \u003cb\u003eUnited States of America\u003c/b\u003e (\u003cb\u003eUSA\u003c/b\u003e), also known as the \u003cb\u003eUnited States\u003c/b\u003e (\u003cb\u003eU.S.\u003c/b\u003e) or \u003cb\u003eAmerica\u003c/b\u003e, is a country primarily located in North America. It is a federal republic consisting of 50 states and a federal capital district, Washington, D.C. The 48 contiguous states border Canada to the north and Mexico to the south, with the semi-exclave of Alaska in the northwest and the archipelago of Hawaii in the Pacific Ocean. The United States also asserts sovereignty over five major island territories and various uninhabited islands in Oceania and the Caribbean. It has the world\u0027s fourth-largest total area and third-largest population, exceeding 341 million.\u003c/p\u003e",
+                                         "normalizedtitle":  "United States"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Cuba",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eCuba\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q241",
+                                         "titles":  {
+                                                        "canonical":  "Cuba",
+                                                        "normalized":  "Cuba",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eCuba\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  5042481,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/330px-Flag_of_Cuba.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  165
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/1280px-Flag_of_Cuba.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  1200,
+                                                               "height":  600
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1386033752",
+                                         "tid":  "8f0f0d1e-e1c9-11f1-b245-5be43880abcd",
+                                         "timestamp":  "2026-11-16T14:25:23Z",
+                                         "description":  "Country in the Caribbean",
+                                         "description_source":  "local",
+                                         "coordinates":  {
+                                                             "lat":  22,
+                                                             "lon":  -80
+                                                         },
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Cuba",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Cuba?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Cuba?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Cuba"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Cuba",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Cuba",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Cuba?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Cuba"
+                                                                         }
+                                                          },
+                                         "extract":  "Cuba, officially the Republic of Cuba, is an island country in the Caribbean. It comprises the eponymous main island as well as 4,195 islands, islets, and cays. Situated at the convergence of the Caribbean Sea, Gulf of Mexico, and Atlantic Ocean, Cuba is located east of the Yucatán Peninsula, south of both Florida and the Bahamas, west of Hispaniola, and north of Jamaica and the Cayman Islands. Cuba is the largest country in the Caribbean by area and the third-largest by population, after Haiti and the Dominican Republic. Culturally, Cuba is considered to be part of Latin America. Its capital and largest city is Havana.",
+                                         "extract_html":  "\u003cp\u003e\u003cb\u003eCuba\u003c/b\u003e, officially the \u003cb\u003eRepublic of Cuba\u003c/b\u003e, is an island country in the Caribbean. It comprises the eponymous main island as well as 4,195 islands, islets, and cays. Situated at the convergence of the Caribbean Sea, Gulf of Mexico, and Atlantic Ocean, Cuba is located east of the Yucatán Peninsula, south of both Florida and the Bahamas, west of Hispaniola, and north of Jamaica and the Cayman Islands. Cuba is the largest country in the Caribbean by area and the third-largest by population, after Haiti and the Dominican Republic. Culturally, Cuba is considered to be part of Latin America. Its capital and largest city is Havana.\u003c/p\u003e",
+                                         "normalizedtitle":  "Cuba"
+                                     },
+                                     {
+                                         "type":  "standard",
+                                         "title":  "Cuba–United_States_relations",
+                                         "displaytitle":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eCuba–United States relations\u003c/span\u003e\u003c/span\u003e",
+                                         "namespace":  {
+                                                           "id":  0,
+                                                           "text":  ""
+                                                       },
+                                         "wikibase_item":  "Q2032314",
+                                         "titles":  {
+                                                        "canonical":  "Cuba–United_States_relations",
+                                                        "normalized":  "Cuba–United States relations",
+                                                        "display":  "\u003cspan lang=\"en\" dir=\"ltr\"\u003e\u003cspan class=\"mw-page-title-main\"\u003eCuba–United States relations\u003c/span\u003e\u003c/span\u003e"
+                                                    },
+                                         "pageid":  5231073,
+                                         "thumbnail":  {
+                                                           "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cuba_USA_Locator_2.svg/330px-Cuba_USA_Locator_2.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                           "width":  330,
+                                                           "height":  231
+                                                       },
+                                         "originalimage":  {
+                                                               "source":  "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cuba_USA_Locator_2.svg/1920px-Cuba_USA_Locator_2.svg.png?utm_source=en.wikipedia.org\u0026utm_campaign=api\u0026utm_content=thumbnail",
+                                                               "width":  1400,
+                                                               "height":  980
+                                                           },
+                                         "lang":  "en",
+                                         "dir":  "ltr",
+                                         "revision":  "1385788041",
+                                         "tid":  "fe480b32-e0b6-11f1-a01a-3c7df2186b96",
+                                         "timestamp":  "2026-11-15T05:39:58Z",
+                                         "description":  "",
+                                         "description_source":  "local",
+                                         "content_urls":  {
+                                                              "desktop":  {
+                                                                              "page":  "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations",
+                                                                              "revisions":  "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations?action=history",
+                                                                              "edit":  "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations?action=edit",
+                                                                              "talk":  "https://en.wikipedia.org/wiki/Talk:Cuba%E2%80%93United_States_relations"
+                                                                          },
+                                                              "mobile":  {
+                                                                             "page":  "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations",
+                                                                             "revisions":  "https://en.wikipedia.org/wiki/Special:History/Cuba%E2%80%93United_States_relations",
+                                                                             "edit":  "https://en.wikipedia.org/wiki/Cuba%E2%80%93United_States_relations?action=edit",
+                                                                             "talk":  "https://en.wikipedia.org/wiki/Talk:Cuba%E2%80%93United_States_relations"
+                                                                         }
+                                                          },
+                                         "extract":  "Modern diplomatic relations between Cuba and the United States are cold, stemming from historic conflict and divergent political ideologies. The two nations restored diplomatic relations on July 20, 2015, after relations had been severed in 1961 during the Cold War. The U.S. has maintained a comprehensive trade embargo against Cuba since 1960. The embargo includes restrictions on all commercial, economic, and financial activity, making it illegal for U.S. corporations to do business with Cuba.",
+                                         "extract_html":  "\u003cp\u003eModern diplomatic relations between Cuba and the United States are cold, stemming from historic conflict and divergent political ideologies. The two nations restored diplomatic relations on July 20, 2015, after relations had been severed in 1961 during the Cold War. The U.S. has maintained a comprehensive trade embargo against Cuba since 1960. The embargo includes restrictions on all commercial, economic, and financial activity, making it illegal for U.S. corporations to do business with Cuba.\u003c/p\u003e",
+                                         "normalizedtitle":  "Cuba–United States relations"
+                                     }
+                                 ],
+                       "year":  2015
+                   }
+               ]
+}
