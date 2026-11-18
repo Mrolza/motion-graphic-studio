@@ -1,0 +1,91 @@
+{
+  "totalFrames": 726,
+  "durationSec": 24.2,
+  "renderMs": 37061,
+  "stillChecks": [
+    {
+      "file": "Scene1_EngineCutaway-start.png",
+      "frame": 10,
+      "isBlank": false,
+      "meanLuma": 32.13,
+      "nonBgRatio": 0.6461
+    },
+    {
+      "file": "Scene1_EngineCutaway-mid.png",
+      "frame": 90,
+      "isBlank": false,
+      "meanLuma": 31.65,
+      "nonBgRatio": 0.6766
+    },
+    {
+      "file": "Scene1_EngineCutaway-end.png",
+      "frame": 170,
+      "isBlank": false,
+      "meanLuma": 34.26,
+      "nonBgRatio": 0.7043
+    },
+    {
+      "file": "Scene2_IntakeCompression-start.png",
+      "frame": 182,
+      "isBlank": false,
+      "meanLuma": 37.81,
+      "nonBgRatio": 0.6428
+    },
+    {
+      "file": "Scene2_IntakeCompression-mid.png",
+      "frame": 262,
+      "isBlank": false,
+      "meanLuma": 37.89,
+      "nonBgRatio": 0.6332
+    },
+    {
+      "file": "Scene2_IntakeCompression-end.png",
+      "frame": 342,
+      "isBlank": false,
+      "meanLuma": 39.41,
+      "nonBgRatio": 0.6607
+    },
+    {
+      "file": "Scene3_PowerExhaust-start.png",
+      "frame": 354,
+      "isBlank": false,
+      "meanLuma": 39.12,
+      "nonBgRatio": 0.6949
+    },
+    {
+      "file": "Scene3_PowerExhaust-mid.png",
+      "frame": 449,
+      "isBlank": false,
+      "meanLuma": 37.61,
+      "nonBgRatio": 0.6276
+    },
+    {
+      "file": "Scene3_PowerExhaust-end.png",
+      "frame": 544,
+      "isBlank": false,
+      "meanLuma": 38.16,
+      "nonBgRatio": 0.6291
+    },
+    {
+      "file": "Scene4_CycleSummary-start.png",
+      "frame": 556,
+      "isBlank": false,
+      "meanLuma": 32.2,
+      "nonBgRatio": 0.5668
+    },
+    {
+      "file": "Scene4_CycleSummary-mid.png",
+      "frame": 636,
+      "isBlank": false,
+      "meanLuma": 31.26,
+      "nonBgRatio": 0.5249
+    },
+    {
+      "file": "Scene4_CycleSummary-end.png",
+      "frame": 716,
+      "isBlank": false,
+      "meanLuma": 30.88,
+      "nonBgRatio": 0.5358
+    }
+  ]
+}
