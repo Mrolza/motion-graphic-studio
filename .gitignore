@@ -19,6 +19,7 @@ out/*
 !out/review/
 projects/
 .mgs/
+data/
 public/storyboard/cache/
 
 # logs & OS

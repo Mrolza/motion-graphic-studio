@@ -70,7 +70,7 @@ export interface QuotaState {
   exhausted_until: Partial<Record<ProviderId, string>>;
 }
 
-const QUOTA_FILE_PATH = path.join(process.cwd(), "data", "quota.json");
+const QUOTA_FILE_PATH = path.join(process.cwd(), ".mgs", "quota.json");
 
 function getTodayUtc(): string {
   return new Date().toISOString().slice(0, 10);
