@@ -1,0 +1,132 @@
+{
+  "mutated": {
+    "scenes": [
+      {
+        "id": "S1",
+        "sentences": [
+          {
+            "text": "Pernahkah kamu mikir, gimana caranya kereta yang gak punya setir bisa tetep belok dan gak keluar jalur?",
+            "claim_refs": [],
+            "emphasis_words": [
+              "gak punya setir"
+            ],
+            "non_factual": true
+          }
+        ]
+      },
+      {
+        "id": "S2",
+        "sentences": [
+          {
+            "text": "Sebagian besar roda kereta memiliki bentuk kerucut dengan kemiringan sekitar 1 banding 20.",
+            "claim_refs": [
+              "C1"
+            ],
+            "emphasis_words": [
+              "bentuk kerucut",
+              "1 banding 20"
+            ],
+            "non_factual": false
+          },
+          {
+            "text": "Bentuk ini membuat roda dapat mengikuti tikungan secara pas.",
+            "claim_refs": [
+              "C1"
+            ],
+            "emphasis_words": [
+              "mengikuti tikungan"
+            ],
+            "non_factual": false
+          }
+        ]
+      },
+      {
+        "id": "S3",
+        "sentences": [
+          {
+            "text": "Sementara itu, sayap pesawat terbang menghasilkan gaya angkat karena perbedaan tekanan udara di atas dan bawah sayap.",
+            "claim_refs": [],
+            "emphasis_words": [
+              "pesawat"
+            ],
+            "non_factual": true
+          }
+        ]
+      },
+      {
+        "id": "S4",
+        "sentences": [
+          {
+            "text": "Bentuk kerucut memperbesar diameter efektif roda ketika bergeser ke sisi luar rel.",
+            "claim_refs": [
+              "C3"
+            ],
+            "emphasis_words": [
+              "diameter efektif"
+            ],
+            "non_factual": false
+          },
+          {
+            "text": "Karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh.",
+            "claim_refs": [
+              "C3"
+            ],
+            "emphasis_words": [
+              "terpasang kaku",
+              "lebih jauh"
+            ],
+            "non_factual": false
+          }
+        ]
+      },
+      {
+        "id": "S5",
+        "sentences": [
+          {
+            "text": "Proses cerdas ini membantu lokomotif mengikuti tikungan secara efisien tanpa setir mekanis.",
+            "claim_refs": [
+              "C3"
+            ],
+            "emphasis_words": [
+              "efisien"
+            ],
+            "non_factual": false
+          }
+        ]
+      }
+    ]
+  },
+  "l2": {
+    "layer": "L2",
+    "issues": []
+  },
+  "l0b": {
+    "answers_question": true,
+    "scores": {
+      "answers_direct": 4,
+      "coverage": 4,
+      "structure": 3,
+      "on_topic": 3
+    },
+    "report": {
+      "layer": "L0b",
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "L0B_NOTE: Ada bagian yang menyimpang membahas sayap pesawat (S3) yang tidak relevan dengan topik kereta.",
+          "ref": "script"
+        }
+      ]
+    }
+  },
+  "l3": {
+    "layer": "L3",
+    "issues": [
+      {
+        "severity": "warning",
+        "message": "L3_NOTE: Kalimat pada S3 tidak memiliki rujukan fakta dan keluar dari topik pembahasan kereta.",
+        "ref": "script"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+=== GATE 1 REVIEW: p2-mesin4tak ===
+Topik: Bagaimana mesin 4 tak bekerja? | Format: technical
+
+[Scene S1]
+  S1.1: Tahukah kamu bagaimana mesin motor andalanmu menghasilkan tenaga dari gerakan piston?
+    -> [C1 | verified] Siklus 4 tak terdiri dari empat langkah terpisah yang memerlukan putaran poros engkol.
+       Kutipan: "A four-stroke (also four-cycle) engine is an internal combustion engine (ICE or IC engine) in which the piston completes four separate strokes while turning the crankshaft."
+       Sumber:  https://en.wikipedia.org/wiki/Four-stroke_engine
+
+[Scene S2]
+  S2.1: Siklus empat tak terdiri dari empat langkah terpisah yang memerlukan putaran poros engkol penuh.
+    -> [C1 | verified] Siklus 4 tak terdiri dari empat langkah terpisah yang memerlukan putaran poros engkol.
+       Kutipan: "A four-stroke (also four-cycle) engine is an internal combustion engine (ICE or IC engine) in which the piston completes four separate strokes while turning the crankshaft."
+       Sumber:  https://en.wikipedia.org/wiki/Four-stroke_engine
+    -> [C6 | verified] Siklus 4 tak terdiri dari langkah hisap, kompresi, tenaga, dan buang yang memerlukan dua putaran poros engkol penuh.
+       Kutipan: "The intake stroke and compression stroke require one rotation of the engine crankshaft. The power stroke and exhaust stroke require another rotation."
+       Sumber:  https://en.wikipedia.org/wiki/Otto_cycle
+
+[Scene S3]
+  S3.1: Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar melalui katup masuk.
+    -> [C2 | verified] Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk yang terbuka.
+       Kutipan: "In this stroke the intake valve must be in the open position while the piston pulls an air-fuel mixture into the cylinder by producing a partial vacuum (negative pressure) in the cylinder through its downward motion."
+       Sumber:  https://en.wikipedia.org/wiki/Four-stroke_engine
+  S3.2: Langkah kompresi menaikkan piston untuk memadatkan campuran tersebut dengan kedua katup tertutup.
+    -> [C3 | verified] Langkah kompresi menaikkan piston untuk memadatkan campuran udara dan bahan bakar dengan kedua katup tertutup.
+       Kutipan: "In this stroke the piston compresses the air-fuel mixture in preparation for ignition during the power stroke (below). Both the intake and exhaust valves are closed during this stage."
+       Sumber:  https://en.wikipedia.org/wiki/Four-stroke_engine
+  S3.3: Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.
+    -> [C9 | verified] Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.
+       Kutipan: "The increased high pressure exerts a force on the piston and pushes it towards the BDC. Expansion of working fluid takes place isentropically and work is done by the system on the piston."
+       Sumber:  https://en.wikipedia.org/wiki/Otto_cycle
+  S3.4: Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang.
+    -> [C5 | verified] Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang saat piston bergerak kembali ke atas.
+       Kutipan: "During the exhaust stroke, the piston, once again, returns from B.D.C. to T.D.C. while the exhaust valve is open. This action expels the spent air-fuel mixture through the exhaust port."
+       Sumber:  https://en.wikipedia.org/wiki/Four-stroke_engine
+
+[Scene S4]
+  S4.1: Desain mekanis yang teratur ini membuat mesin empat langkah sangat efisien dan andal.
+    -> (non_factual: true)
+
+=== LAPORAN QC (L0-L3) ===
+[L0] 0 isu
+[L0b] 0 isu
+[L1] 0 isu
+[L2] 0 isu
+[L3] 0 isu

@@ -2,39 +2,49 @@
 Topik: Kenapa kereta tidak tergelincir? | Format: how_it_works
 
 [Scene S1]
-  S1.1: Bagaimana kereta bisa melaju kencang tanpa tergelincir dari rel?
+  S1.1: Pernahkah kamu mikir, gimana caranya kereta yang gak punya setir bisa tetep belok dan gak keluar jalur?
     -> (non_factual: true)
 
 [Scene S2]
-  S2.1: Rangkaian kereta api menggunakan kerangka khusus yang disebut bogie.
-    -> [C2 | verified] Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.
-       Kutipan: "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan."
-       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
-  S2.2: Komponen ini memanfaatkan suspensi udara untuk meredam guncangan.
-    -> [C2 | verified] Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.
-       Kutipan: "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan."
-       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+  S2.1: Sebagian besar roda kereta memiliki bentuk kerucut dengan kemiringan sekitar 1 banding 20.
+    -> [C1 | verified] Sebagian besar roda kereta memiliki bentuk kerucut (tapered) dengan kemiringan sekitar 1 banding 20 agar roda dapat mengikuti tikungan tanpa flens roda bergesekan dengan sisi rel.
+       Kutipan: "Most train wheels have a conical taper of about 1 in 20 to enable the wheelset to follow curves with less chance of the wheel flanges coming in contact with the rail sides, and to reduce curve resistance."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
+  S2.2: Bentuk ini membuat roda dapat mengikuti tikungan secara pas.
+    -> [C1 | verified] Sebagian besar roda kereta memiliki bentuk kerucut (tapered) dengan kemiringan sekitar 1 banding 20 agar roda dapat mengikuti tikungan tanpa flens roda bergesekan dengan sisi rel.
+       Kutipan: "Most train wheels have a conical taper of about 1 in 20 to enable the wheelset to follow curves with less chance of the wheel flanges coming in contact with the rail sides, and to reduce curve resistance."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
 
 [Scene S3]
-  S3.1: Sistem tersebut mendukung kereta untuk melaju hingga 120 km/jam dengan minim guncangan.
-    -> [C2 | verified] Kereta api ini menggunakan rangkaian kereta dengan bogie CL243 bolsterless yang dikembangkan bersama Alstom menggunakan suspensi udara agar dapat melaju hingga 120 km/jam dengan minim guncangan.
-       Kutipan: "Kereta api ini beroperasi menggunakan rangkaian kereta yang dilengkapi bogie CL243 bolsterless (K9)—bogie yang dikembangkan bersama Alstom menggunakan suspensi udara sehingga dapat melaju hingga 120 km/jam dengan sedikit guncangan."
-       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+  S3.1: Tanpa bentuk kerucut, inersia kendaraan akan membuat roda terus melaju lurus di tikungan.
+    -> [C2 | verified] Tanpa bentuk kerucut, inersia kendaraan akan membuat roda terus melaju lurus sehingga roda bergeser ke arah rel luar saat melewati tikungan.
+       Kutipan: "Without the conical shape, a wheel would tend to continue in a straight path due to the inertia of the rail vehicle, causing the wheelset to move towards the outer rail on the curve."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
+  S3.2: Akibatnya, roda akan bergeser ke arah rel luar saat melewati tikungan.
+    -> [C2 | verified] Tanpa bentuk kerucut, inersia kendaraan akan membuat roda terus melaju lurus sehingga roda bergeser ke arah rel luar saat melewati tikungan.
+       Kutipan: "Without the conical shape, a wheel would tend to continue in a straight path due to the inertia of the rail vehicle, causing the wheelset to move towards the outer rail on the curve."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
 
 [Scene S4]
-  S4.1: Tetapi, bogie jenis tertentu dikenal sensitif terhadap kondisi rel serta belokan.
-    -> [C3 | verified] Bogie K9 dikenal sensitif terhadap kondisi rel dan belokan di Indonesia, sehingga rangkaian yang menggunakannya sering mengalami anjlok.
-       Kutipan: "Dalam pengoperasiannya, kereta api ini sering anjlok karena bogie K9 dikenal sensitif terhadap kondisi rel di Indonesia, terutama terhadap belokan."
-       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
-  S4.2: INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering.
-    -> [C5 | verified] PT Kereta Api Indonesia melakukan penarikan rangkaian kereta dan pihak INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering (RE).
-       Kutipan: "Setelah Kereta Api Indonesia melakukan penarikan rangkaian kereta Argo Bromo Anggrek, INKA melakukan perbaikan, terutama pada bogie kereta—bogie K9 diubah menjadi K9 Re-Engineering (RE)."
-       Sumber:  https://id.wikipedia.org/wiki/Kereta_api_Anggrek
+  S4.1: Bentuk kerucut memperbesar diameter efektif roda ketika bergeser ke sisi luar rel.
+    -> [C3 | verified] Bentuk kerucut memperbesar diameter efektif roda ketika bergeser ke rel luar, dan karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh untuk membantu mengikuti tikungan secara efisien.
+       Kutipan: "The cone increases the effective diameter of the wheel as it moves towards the outer rail, and since the wheels are mounted rigidly on the axle, the outer wheels travel slightly farther, causing the wheelsets to more efficiently follow the curve."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
+  S4.2: Karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh.
+    -> [C3 | verified] Bentuk kerucut memperbesar diameter efektif roda ketika bergeser ke rel luar, dan karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh untuk membantu mengikuti tikungan secara efisien.
+       Kutipan: "The cone increases the effective diameter of the wheel as it moves towards the outer rail, and since the wheels are mounted rigidly on the axle, the outer wheels travel slightly farther, causing the wheelsets to more efficiently follow the curve."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
+
+[Scene S5]
+  S5.1: Proses cerdas ini membantu lokomotif mengikuti tikungan secara efisien tanpa setir mekanis.
+    -> [C3 | verified] Bentuk kerucut memperbesar diameter efektif roda ketika bergeser ke rel luar, dan karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh untuk membantu mengikuti tikungan secara efisien.
+       Kutipan: "The cone increases the effective diameter of the wheel as it moves towards the outer rail, and since the wheels are mounted rigidly on the axle, the outer wheels travel slightly farther, causing the wheelsets to more efficiently follow the curve."
+       Sumber:  https://en.wikipedia.org/wiki/Wheelset_(rail_transport)
 
 === LAPORAN QC (L0-L3) ===
 [L0] 0 isu
-[L1] 2 isu
-  ERROR (C1): SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan
-  ERROR (C7): QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber
+[L0b] 0 isu
+[L1] 1 isu
+  ERROR (C4): SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan
 [L2] 0 isu
 [L3] 0 isu

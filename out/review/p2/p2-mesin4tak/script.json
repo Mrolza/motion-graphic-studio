@@ -1,0 +1,100 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Tahukah kamu bagaimana mesin motor andalanmu menghasilkan tenaga dari gerakan piston?",
+          "claim_refs": [
+            "C1"
+          ],
+          "emphasis_words": [
+            "tenaga",
+            "piston"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Siklus empat tak terdiri dari empat langkah terpisah yang memerlukan putaran poros engkol penuh.",
+          "claim_refs": [
+            "C1",
+            "C6"
+          ],
+          "emphasis_words": [
+            "empat langkah",
+            "poros engkol"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar melalui katup masuk.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "Langkah hisap",
+            "katup masuk"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran tersebut dengan kedua katup tertutup.",
+          "claim_refs": [
+            "C3"
+          ],
+          "emphasis_words": [
+            "Langkah kompresi",
+            "memadatkan"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
+          "claim_refs": [
+            "C9"
+          ],
+          "emphasis_words": [
+            "Langkah tenaga",
+            "dorongan"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "Langkah buang",
+            "katup buang"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Desain mekanis yang teratur ini membuat mesin empat langkah sangat efisien dan andal.",
+          "claim_refs": [],
+          "emphasis_words": [
+            "efisien",
+            "andal"
+          ],
+          "non_factual": true
+        }
+      ]
+    }
+  ]
+}

@@ -4,12 +4,7 @@
     {
       "severity": "error",
       "message": "SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan",
-      "ref": "C1"
-    },
-    {
-      "severity": "error",
-      "message": "QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber",
-      "ref": "C7"
+      "ref": "C4"
     }
   ]
 }

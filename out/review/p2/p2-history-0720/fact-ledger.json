@@ -1,0 +1,116 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Peluncuran misi Soyuz MS-13 terjadi pada tanggal 20 Juli 2019 yang menandai peringatan 50 tahun pendaratan pertama di Bulan.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
+          "title": "Soyuz MS-13",
+          "quote": "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019 – the 50th anniversary of the first Moon landing",
+          "retrieved_at": "2026-11-19T12:58:58.413Z"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Tanggal 20 Juli dikaitkan dengan peringatan pendaratan pertama manusia di Bulan.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
+          "title": "Soyuz MS-13",
+          "quote": "the 50th anniversary of the first Moon landing",
+          "retrieved_at": "2026-11-19T12:58:58.413Z"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "Misi berawak Soyuz MS-13 diluncurkan pada tanggal 20 Juli.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
+          "title": "Soyuz MS-13",
+          "quote": "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019",
+          "retrieved_at": "2026-11-19T12:58:58.413Z"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Pendaratan pertama di Bulan terjadi beberapa dekade sebelum tahun 2019.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
+          "title": "Soyuz MS-13",
+          "quote": "50th anniversary of the first Moon landing",
+          "retrieved_at": "2026-11-19T12:58:58.413Z"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "Apollo 11 adalah penerbangan luar angkasa berawak pertama yang mendarat di Bulan.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
+          "title": "Apollo 11 anniversaries",
+          "quote": "Apollo 11 was the first human spaceflight to land on the Moon.",
+          "retrieved_at": "2026-11-19T12:58:59.840Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Awak Apollo 11 yaitu Buzz Aldrin, Neil Armstrong, dan Michael Collins berpartisipasi dalam upacara di Washington, D.C. pada 20 Juli 1979.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
+          "title": "Apollo 11 anniversaries",
+          "quote": "The Apollo 11 crew, Buzz Aldrin, Neil Armstrong, and Michael Collins, who had not appeared publicly since the 5th anniversary, participated in ceremonies in Washington, D.C., on July 20, 1979.",
+          "retrieved_at": "2026-11-19T12:58:59.840Z"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "Pada tanggal 20 Juli 2009, Armstrong, Aldrin, dan Collins bertemu dengan Presiden AS Barack Obama di Gedung Putih.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
+          "title": "Apollo 11 anniversaries",
+          "quote": "On July 20, 2009, Armstrong, Aldrin, and Collins met with U.S. President Barack Obama at the White House.",
+          "retrieved_at": "2026-11-19T12:58:59.840Z"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "text": "Festival luar ruangan selama tiga hari dari tanggal 18 hingga 20 Juli 2019 menampilkan pameran interaktif dan pembicara seperti ilmuwan NASA.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
+          "title": "Apollo 11 anniversaries",
+          "quote": "The three day (July 18 to 20, 2019) outdoor festival featured hands-on exhibits and activities, live performances, and speakers such as Adam Savage and NASA scientists.",
+          "retrieved_at": "2026-11-19T12:58:59.840Z"
+        }
+      ]
+    }
+  ]
+}

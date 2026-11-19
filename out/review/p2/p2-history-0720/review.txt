@@ -1,0 +1,45 @@
+=== GATE 1 REVIEW: p2-history-0720 ===
+Topik: Peristiwa bersejarah tanggal 07-20 | Format: today_in_history
+
+[Scene S1]
+  S1.1: Tahukah kamu bahwa tanggal 20 Juli selalu dikenang sebagai peringatan pendaratan pertama manusia di Bulan?
+    -> [C2 | verified] Tanggal 20 Juli dikaitkan dengan peringatan pendaratan pertama manusia di Bulan.
+       Kutipan: "the 50th anniversary of the first Moon landing"
+       Sumber:  https://en.wikipedia.org/wiki/Soyuz_MS-13
+
+[Scene S2]
+  S2.1: Apollo 11 mencatatkan sejarah sebagai penerbangan luar angkasa berawak pertama yang mendarat di Bulan.
+    -> [C5 | verified] Apollo 11 adalah penerbangan luar angkasa berawak pertama yang mendarat di Bulan.
+       Kutipan: "Apollo 11 was the first human spaceflight to land on the Moon."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+
+[Scene S3]
+  S3.1: Para awak misi yang terdiri dari Buzz Aldrin, Neil Armstrong, dan Michael Collins hadir dalam upacara di Washington, D.C. pada 20 Juli 1979.
+    -> [C6 | verified] Awak Apollo 11 yaitu Buzz Aldrin, Neil Armstrong, dan Michael Collins berpartisipasi dalam upacara di Washington, D.C. pada 20 Juli 1979.
+       Kutipan: "The Apollo 11 crew, Buzz Aldrin, Neil Armstrong, and Michael Collins, who had not appeared publicly since the 5th anniversary, participated in ceremonies in Washington, D.C., on July 20, 1979."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+  S3.2: Mereka juga sempat bertemu dengan Presiden Amerika Serikat Barack Obama di Gedung Putih pada 20 Juli 2009.
+    -> [C7 | verified] Pada tanggal 20 Juli 2009, Armstrong, Aldrin, dan Collins bertemu dengan Presiden AS Barack Obama di Gedung Putih.
+       Kutipan: "On July 20, 2009, Armstrong, Aldrin, and Collins met with U.S. President Barack Obama at the White House."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+
+[Scene S4]
+  S4.1: Pada tanggal 20 Juli 2019, misi berawak Soyuz MS-13 diluncurkan untuk memperingati lima puluh tahun pendaratan tersebut.
+    -> [C1 | verified] Peluncuran misi Soyuz MS-13 terjadi pada tanggal 20 Juli 2019 yang menandai peringatan 50 tahun pendaratan pertama di Bulan.
+       Kutipan: "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019 – the 50th anniversary of the first Moon landing"
+       Sumber:  https://en.wikipedia.org/wiki/Soyuz_MS-13
+  S4.2: Perayaan ini dimeriahkan dengan pameran interaktif bersama para ilmuwan NASA dalam festival luar ruangan.
+    -> [C8 | verified] Festival luar ruangan selama tiga hari dari tanggal 18 hingga 20 Juli 2019 menampilkan pameran interaktif dan pembicara seperti ilmuwan NASA.
+       Kutipan: "The three day (July 18 to 20, 2019) outdoor festival featured hands-on exhibits and activities, live performances, and speakers such as Adam Savage and NASA scientists."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+
+=== LAPORAN QC (L0-L3) ===
+[L0] 0 isu
+[L0b] 2 isu
+  ERROR (script): L0B_LOW_SCORE: skor coverage = 2/5 (< 3)
+  WARNING (script): L0B_NOTE: Naskah melenceng dari core_claims yang diminta (fokus pada modul Eagle, durasi berjalan di Bulan, RAM komputer, dan jumlah pekerja 400.000), malah membahas upacara peringatan dan peluncuran Soyuz.
+[L1] 0 isu
+[L2] 2 isu
+  WARNING (S3.2): NAME_NOT_IN_CLAIM: nama "Amerika" tidak ditemukan di klaim rujukan (C7)
+  WARNING (S3.2): NAME_NOT_IN_CLAIM: nama "Serikat" tidak ditemukan di klaim rujukan (C7)
+[L3] 0 isu

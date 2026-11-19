@@ -1,0 +1,15 @@
+{
+  "layer": "L2",
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "NAME_NOT_IN_CLAIM: nama \"Amerika\" tidak ditemukan di klaim rujukan (C7)",
+      "ref": "S3.2"
+    },
+    {
+      "severity": "warning",
+      "message": "NAME_NOT_IN_CLAIM: nama \"Serikat\" tidak ditemukan di klaim rujukan (C7)",
+      "ref": "S3.2"
+    }
+  ]
+}

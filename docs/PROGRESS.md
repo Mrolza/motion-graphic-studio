@@ -146,3 +146,33 @@
 
 ### Yang Belum & Alasannya
 - Uji end-to-end topik `p2-mesin4tak` (`technical`) dan `p2-history-0720` (`today_in_history`) gagal diselesaikan karena API `gemini-3.5-flash-lite` mengalami lonjakan trafik berkepanjangan (`HTTP 503 UNAVAILABLE`) saat tahap S1/S2 meski sudah diberi 6 kali retry exponential backoff. Tinggal dijalankan ulang saat model stabil: `npm run mgs -- new ...` + `npm run mgs -- run <id> --until gate1`.
+
+---
+
+## Fase P2B — Relevansi, Kualitas Naskah, dan Ketahanan (`docs/P2B-RELEVANCE.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p2-facts-script` (lanjutan P2 sesuai `P2B-RELEVANCE.md`)
+- **Tanggal:** 2026-11-19
+
+### Apa yang Diperbaiki & Dibuat
+1. **Riset tepat sasaran (`ideate.ts`, `wikipedia.ts`, `research.ts`):**
+   - `S1` menghasilkan `wiki_titles` (`en` dan `id`); `S2` mengambil artikel berdasarkan judul dulu (`&redirects=1`), urutan bahasa `en` dulu untuk topik teknik/sains (`id` dulu untuk `today_in_history`).
+   - Ekstraktor klaim menilai relevansi tiap sumber (`relevant | partial | irrelevant`) di panggilan yang sama; sumber `irrelevant` dibuang dan dicatat ke `sources.md`.
+2. **Logika L0 diperbaiki (`research.ts`):**
+   - Jika ada `core_claims` yang belum didukung klaim `verified`, sistem menjalankan **1 putaran riset tambahan** khusus untuk klaim yang hilang sebelum menandai `concept_unverifiable`.
+3. **QC L0b Relevansi & L3 Ketat (`src/core/qc/l0b-quality.ts`, `l3-verifier.ts`):**
+   - Digabung dalam **1 panggilan verifier** (`l0b` + `l3`). Memeriksa `answers_question`, skor 1–5 (`answers_direct`, `coverage`, `structure`, `on_topic`), dan menolak generalisasi berlebihan (`overstated`). `mgs approve` menolak jika `answers_question = false`.
+4. **Cek durasi/kata & prompt scriptwriter (`l2-script.ts`, `src/core/prompts/scriptwriter.md`):**
+   - `verifyScriptL2` memeriksa jumlah kata terhadap `target_duration_sec * 2,3` (±20%).
+   - `scriptwriter.md` dilengkapi aturan hook + payoff, jawaban cepat, rantai sebab→akibat, dan gaya TTS `id-ID`.
+5. **Ketahanan 503 & resumable (`llm/client.ts`, `cli/gate1.ts`):**
+   - Exponential backoff dengan jitter (maks 5 retry hingga ~60s) + dukungan opsional `GEMINI_FALLBACK_MODEL`.
+   - `mgs run <id> --until gate1` melewati tahap yang sudah `done`.
+
+### Bukti (`out/review/p2/`, semua UTF-8)
+- [`p2-kereta/`](../out/review/p2/p2-kereta/): `fact-ledger.json`, `script.json`, `qc/` (`L0`, `L0b`, `L1`, `L2`, `L3`), `review.txt`, `sources.md` (**7 panggilan**, `answers_question = ya (5/5/5/5)`, `100` kata, `0` error L2/L3; menjelaskan roda kerucut `1 banding 20`, inersia tikungan, dan gandar kaku).
+- [`p2-mesin4tak/`](../out/review/p2/p2-mesin4tak/): (**10 panggilan**, `answers_question = ya (5/5/5/5)`, `87` kata, `0` error L2/L3).
+- [`p2-history-0720/`](../out/review/p2/p2-history-0720/): (**7 panggilan**, `answers_question = ya (5/2/4/5)`, `100` kata, `0` error L2/L3; catatan: skor `coverage = 2/5` karena feed OnThisDay 07-20 menautkan artikel peringatan Apollo 11).
+- [`mutation-test/`](../out/review/p2/mutation-test/): 4 mutasi halus (`mut1-similar-number`, `mut2-generalization`, `mut3-cause-effect`, `mut4-off-topic`) — **4/4 TERTANGKAP** oleh L2, L3, atau L0b (`mutation-summary.md`).
+- [`stats.md`](../out/review/p2/stats.md) (rata-rata **8,00 panggilan/topik**, target ≤ 8) & [`verify.txt`](../out/review/p2/verify.txt).

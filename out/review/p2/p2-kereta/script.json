@@ -4,11 +4,10 @@
       "id": "S1",
       "sentences": [
         {
-          "text": "Bagaimana kereta bisa melaju kencang tanpa tergelincir dari rel?",
+          "text": "Pernahkah kamu mikir, gimana caranya kereta yang gak punya setir bisa tetep belok dan gak keluar jalur?",
           "claim_refs": [],
           "emphasis_words": [
-            "melaju kencang",
-            "tergelincir"
+            "gak punya setir"
           ],
           "non_factual": true
         }
@@ -18,23 +17,23 @@
       "id": "S2",
       "sentences": [
         {
-          "text": "Rangkaian kereta api menggunakan kerangka khusus yang disebut bogie.",
+          "text": "Sebagian besar roda kereta memiliki bentuk kerucut dengan kemiringan sekitar 1 banding 20.",
           "claim_refs": [
-            "C2"
+            "C1"
           ],
           "emphasis_words": [
-            "bogie"
+            "bentuk kerucut",
+            "1 banding 20"
           ],
           "non_factual": false
         },
         {
-          "text": "Komponen ini memanfaatkan suspensi udara untuk meredam guncangan.",
+          "text": "Bentuk ini membuat roda dapat mengikuti tikungan secara pas.",
           "claim_refs": [
-            "C2"
+            "C1"
           ],
           "emphasis_words": [
-            "suspensi udara",
-            "guncangan"
+            "mengikuti tikungan"
           ],
           "non_factual": false
         }
@@ -44,13 +43,23 @@
       "id": "S3",
       "sentences": [
         {
-          "text": "Sistem tersebut mendukung kereta untuk melaju hingga 120 km/jam dengan minim guncangan.",
+          "text": "Tanpa bentuk kerucut, inersia kendaraan akan membuat roda terus melaju lurus di tikungan.",
           "claim_refs": [
             "C2"
           ],
           "emphasis_words": [
-            "120",
-            "minim guncangan"
+            "inersia",
+            "lurus"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Akibatnya, roda akan bergeser ke arah rel luar saat melewati tikungan.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "rel luar"
           ],
           "non_factual": false
         }
@@ -60,24 +69,38 @@
       "id": "S4",
       "sentences": [
         {
-          "text": "Tetapi, bogie jenis tertentu dikenal sensitif terhadap kondisi rel serta belokan.",
+          "text": "Bentuk kerucut memperbesar diameter efektif roda ketika bergeser ke sisi luar rel.",
           "claim_refs": [
             "C3"
           ],
           "emphasis_words": [
-            "sensitif",
-            "belokan"
+            "diameter efektif"
           ],
           "non_factual": false
         },
         {
-          "text": "INKA melakukan perbaikan dengan mengubah bogie K9 menjadi K9 Re-Engineering.",
+          "text": "Karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh.",
           "claim_refs": [
-            "C5"
+            "C3"
           ],
           "emphasis_words": [
-            "perbaikan",
-            "Re-Engineering"
+            "terpasang kaku",
+            "lebih jauh"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "sentences": [
+        {
+          "text": "Proses cerdas ini membantu lokomotif mengikuti tikungan secara efisien tanpa setir mekanis.",
+          "claim_refs": [
+            "C3"
+          ],
+          "emphasis_words": [
+            "efisien"
           ],
           "non_factual": false
         }

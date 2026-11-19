@@ -1,0 +1,90 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Tahukah kamu bahwa tanggal 20 Juli selalu dikenang sebagai peringatan pendaratan pertama manusia di Bulan?",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "20 Juli",
+            "Bulan"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Apollo 11 mencatatkan sejarah sebagai penerbangan luar angkasa berawak pertama yang mendarat di Bulan.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "Apollo 11",
+            "berawak"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Para awak misi yang terdiri dari Buzz Aldrin, Neil Armstrong, dan Michael Collins hadir dalam upacara di Washington, D.C. pada 20 Juli 1979.",
+          "claim_refs": [
+            "C6"
+          ],
+          "emphasis_words": [
+            "Buzz Aldrin",
+            "Neil Armstrong"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Mereka juga sempat bertemu dengan Presiden Amerika Serikat Barack Obama di Gedung Putih pada 20 Juli 2009.",
+          "claim_refs": [
+            "C7"
+          ],
+          "emphasis_words": [
+            "Barack Obama",
+            "Gedung Putih"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Pada tanggal 20 Juli 2019, misi berawak Soyuz MS-13 diluncurkan untuk memperingati lima puluh tahun pendaratan tersebut.",
+          "claim_refs": [
+            "C1"
+          ],
+          "emphasis_words": [
+            "Soyuz MS-13",
+            "20 Juli 2019"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Perayaan ini dimeriahkan dengan pameran interaktif bersama para ilmuwan NASA dalam festival luar ruangan.",
+          "claim_refs": [
+            "C8"
+          ],
+          "emphasis_words": [
+            "ilmuwan",
+            "NASA"
+          ],
+          "non_factual": false
+        }
+      ]
+    }
+  ]
+}
