@@ -4,7 +4,7 @@ import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
-import { runIdeateStage } from '@core/stages/ideate';
+import { runIdeateStage, type ConceptsOutput } from '@core/stages/ideate';
 import { runResearchStage } from '@core/stages/research';
 import { runQcOnly, runScriptAndQcStage } from '@core/stages/script';
 
@@ -67,32 +67,58 @@ export async function cmdRun(args: string[]) {
     throw new Error('Usage: mgs run <id> --until gate1');
   }
 
-  console.log(`[1/3] S1 Ideation for ${id}...`);
-  const concepts = await runIdeateStage(id);
+  let proj = await loadProject(id);
+  const dir = getProjectDir(id);
 
-  console.log(`[2/3] S2 Research & L1/L0 for ${id}...`);
-  let chosenIdx = -1;
-  for (let i = 0; i < concepts.concepts.length; i++) {
-    const res = await runResearchStage(id, { conceptIndex: i });
-    const verifiedCount = res.ledger.claims.filter((c) => c.status === 'verified').length;
-    console.log(`  Concept [${i}] "${res.concept.title}": ${verifiedCount}/${res.ledger.claims.length} verified, L0=${res.l0Passed ? 'PASS' : 'FAIL'}`);
-    if (res.l0Passed && verifiedCount > 0) {
-      chosenIdx = i;
-      break;
+  let concepts: ConceptsOutput;
+  if (proj.stages.S1 === 'done') {
+    console.log(`[1/3] S1 Ideation already done for ${id}, reusing concepts.json...`);
+    concepts = JSON.parse(await readFile(path.join(dir, 'concepts.json'), 'utf-8')) as ConceptsOutput;
+  } else {
+    console.log(`[1/3] S1 Ideation for ${id}...`);
+    concepts = await runIdeateStage(id);
+  }
+
+  proj = await loadProject(id);
+  if (proj.stages.S2 === 'done') {
+    console.log(`[2/3] S2 Research already done for ${id}, reusing fact-ledger.json...`);
+  } else {
+    console.log(`[2/3] S2 Research & L1/L0 for ${id}...`);
+    let chosenIdx = -1;
+    for (let i = 0; i < concepts.concepts.length; i++) {
+      const res = await runResearchStage(id, { conceptIndex: i });
+      const verifiedCount = res.ledger.claims.filter((c) => c.status === 'verified').length;
+      console.log(
+        `  Concept [${i}] "${res.concept.title}": ${verifiedCount}/${res.ledger.claims.length} verified, L0=${
+          res.l0Passed ? 'PASS' : 'FAIL'
+        }`
+      );
+      if (res.l0Passed && verifiedCount > 0) {
+        chosenIdx = i;
+        break;
+      }
+    }
+    if (chosenIdx === -1) {
+      throw new Error('Semua konsep gagal L0 (concept_unverifiable).');
     }
   }
-  if (chosenIdx === -1) {
-    throw new Error('Semua konsep gagal L0 (concept_unverifiable).');
-  }
 
-  console.log(`[3/3] S3 Script & S4 QC (L2/L3) for ${id}...`);
-  const scriptRes = await runScriptAndQcStage(id);
-  const proj = await loadProject(id);
-  console.log(
-    `Gate 1 ready for ${id}: status=${proj.stages.S4}, rewritten=${scriptRes.rewritten}, total_llm_calls=${Object.values(
-      proj.llm_calls
-    ).reduce((a, b) => a + b, 0)}`
-  );
+  proj = await loadProject(id);
+  if (proj.stages.S3 === 'done' && proj.stages.S4 === 'done') {
+    console.log(`[3/3] S3/S4 Script & QC already done for ${id}, skipping...`);
+  } else {
+    console.log(`[3/3] S3 Script & S4 QC (L0b/L2/L3) for ${id}...`);
+    const scriptRes = await runScriptAndQcStage(id);
+    proj = await loadProject(id);
+    console.log(
+      `Gate 1 ready for ${id}: status=${proj.stages.S4}, words=${scriptRes.wordCount}, answers_question=${
+        scriptRes.l0bFinal.answers_question
+      }, rewritten=${scriptRes.rewritten}, total_llm_calls=${Object.values(proj.llm_calls).reduce(
+        (a, b) => a + b,
+        0
+      )}`
+    );
+  }
 }
 
 export async function formatReviewText(id: string, repoRoot = process.cwd()): Promise<string> {
@@ -103,7 +129,7 @@ export async function formatReviewText(id: string, repoRoot = process.cwd()): Pr
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
 
   const qcReports: QcReport[] = [];
-  for (const layer of ['L0', 'L1', 'L2', 'L3']) {
+  for (const layer of ['L0', 'L0b', 'L1', 'L2', 'L3']) {
     try {
       qcReports.push(JSON.parse(await readFile(path.join(dir, 'qc', `${layer}.json`), 'utf-8')) as QcReport);
     } catch {
@@ -163,19 +189,28 @@ export async function cmdApprove(args: string[]) {
   const dir = getProjectDir(id);
   const l1 = JSON.parse(await readFile(path.join(dir, 'qc', 'L1.json'), 'utf-8')) as QcReport;
   const l2 = JSON.parse(await readFile(path.join(dir, 'qc', 'L2.json'), 'utf-8')) as QcReport;
+  let l0bAnswers = true;
+  try {
+    const l0b = JSON.parse(await readFile(path.join(dir, 'qc', 'L0b.json'), 'utf-8')) as {
+      answers_question?: boolean;
+    };
+    l0bAnswers = l0b.answers_question !== false;
+  } catch {
+    l0bAnswers = true;
+  }
   const script = JSON.parse(await readFile(path.join(dir, 'script.json'), 'utf-8')) as Script;
   const ledger = JSON.parse(await readFile(path.join(dir, 'fact-ledger.json'), 'utf-8')) as FactLedger;
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
 
-  // Only reject if L2 has errors, OR if script references a claim that failed L1
+  // Only reject if L2 has errors, script references unverified claim, or L0b answers_question = false
   const referencedIds = new Set(script.scenes.flatMap((s) => s.sentences.flatMap((st) => st.claim_refs)));
   const l1ErrorsOnUsedClaims = l1.issues.filter((i) => i.severity === 'error' && referencedIds.has(i.ref));
   const l2Errors = l2.issues.filter((i) => i.severity === 'error');
   const unverifiedUsed = [...referencedIds].filter((cid) => claimMap.get(cid)?.status !== 'verified');
 
-  if (l1ErrorsOnUsedClaims.length > 0 || l2Errors.length > 0 || unverifiedUsed.length > 0) {
+  if (l1ErrorsOnUsedClaims.length > 0 || l2Errors.length > 0 || unverifiedUsed.length > 0 || !l0bAnswers) {
     throw new Error(
-      `Gerbang 1 DITOLAK: masih ada error L1/L2 (L2 errors=${l2Errors.length}, unverified refs=${unverifiedUsed.length}).`
+      `Gerbang 1 DITOLAK: L2 errors=${l2Errors.length}, unverified refs=${unverifiedUsed.length}, answers_question=${l0bAnswers}.`
     );
   }
 

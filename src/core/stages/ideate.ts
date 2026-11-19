@@ -15,6 +15,12 @@ export const ConceptSchema = z.object({
   angle: z.string().min(1),
   hook: z.string().min(1),
   core_claims: z.array(z.string().min(1)).min(3).max(5),
+  wiki_titles: z
+    .object({
+      en: z.array(z.string().min(1)).max(5),
+      id: z.array(z.string().min(1)).max(5),
+    })
+    .optional(),
   search_queries: z.array(z.string().min(1)).min(2).max(6),
 });
 
@@ -39,8 +45,9 @@ Aturan ketat:
 - Hindari mitos populer dan klaim yang tidak bisa diverifikasi di Wikipedia.
 - Setiap konsep wajib memiliki 3-5 core_claims faktual yang konkret dan dapat diverifikasi.
 - Untuk format what_if, premis boleh hipotetis tetapi core_claims HARUS fakta ilmiah nyata yang mendasari skenario tersebut.
-- search_queries wajib berisi kata kunci pencarian Wikipedia dalam bahasa Indonesia dan Inggris (2-6 query).
-- Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "core_claims": ["..."], "search_queries": ["..."] }] }.`;
+- wiki_titles wajib berisi judul artikel Wikipedia berbahasa Inggris ("en", 2-5 judul) dan Indonesia ("id", 1-3 judul) yang paling tepat menjawab pertanyaan topik (misalnya untuk kereta: "Wheelset (rail transport)", "Flange", "Track gauge", "Hunting oscillation", "Derailment").
+- search_queries wajib berisi kata kunci pencarian Wikipedia cadangan (2-6 query).
+- Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "core_claims": ["..."], "wiki_titles": { "en": ["..."], "id": ["..."] }, "search_queries": ["..."] }] }.`;
 
   const prompt = `Topik: "${project.topic}"
 Format: ${project.format}

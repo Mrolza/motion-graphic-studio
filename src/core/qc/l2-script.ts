@@ -35,7 +35,20 @@ function extractMidSentenceProperNames(sentence: string): string[] {
   return names;
 }
 
-export function verifyScriptL2(script: Script, ledger: FactLedger): QcReport {
+export function countScriptWords(script: Script): number {
+  return script.scenes
+    .flatMap((sc) => sc.sentences)
+    .map((s) => s.text.trim())
+    .join(' ')
+    .split(/\s+/)
+    .filter(Boolean).length;
+}
+
+export function verifyScriptL2(
+  script: Script,
+  ledger: FactLedger,
+  targetDurationSec?: number
+): QcReport {
   const issues: QcIssue[] = [];
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
 
@@ -120,6 +133,20 @@ export function verifyScriptL2(script: Script, ledger: FactLedger): QcReport {
         }
       }
     });
+  }
+
+  if (targetDurationSec && targetDurationSec > 0) {
+    const wordCount = countScriptWords(script);
+    const idealWords = Math.round(targetDurationSec * 2.3);
+    const minWords = Math.round(idealWords * 0.8);
+    const maxWords = Math.round(idealWords * 1.2);
+    if (wordCount < minWords || wordCount > maxWords) {
+      issues.push({
+        severity: 'warning',
+        message: `DURATION_WORD_COUNT: jumlah kata ${wordCount} di luar rentang ideal ${minWords}–${maxWords} kata untuk target ${targetDurationSec} detik`,
+        ref: 'script',
+      });
+    }
   }
 
   return { layer: 'L2', issues };

@@ -69,12 +69,12 @@ async function searchWikipediaTitles(lang: 'id' | 'en', query: string, limit = 3
   }
 }
 
-async function fetchWikipediaExtract(
+export async function fetchWikipediaExtract(
   lang: 'id' | 'en',
   title: string,
   keywords: string[]
 ): Promise<{ title: string; url: string; text: string } | null> {
-  const url = `https://${lang}.wikipedia.org/w/api.php?action=query&prop=extracts|info&inprop=url&explaintext=1&titles=${encodeURIComponent(
+  const url = `https://${lang}.wikipedia.org/w/api.php?action=query&prop=extracts|info&inprop=url&explaintext=1&redirects=1&titles=${encodeURIComponent(
     title
   )}&format=json`;
   try {
@@ -107,39 +107,60 @@ async function fetchWikipediaExtract(
 }
 
 export async function fetchWikipediaSourcesForConcept(params: {
+  wikiTitles?: { en?: string[]; id?: string[] };
   queries: string[];
   keywords: string[];
+  preferEnglishFirst?: boolean;
   maxPages?: number;
+  startIndex?: number;
 }): Promise<WikipediaSource[]> {
   const maxPages = params.maxPages ?? 4;
+  const startIndex = params.startIndex ?? 0;
+  const preferEn = params.preferEnglishFirst ?? true;
+  const langOrder: Array<'en' | 'id'> = preferEn ? ['en', 'id'] : ['id', 'en'];
   const seen = new Set<string>();
   const sources: WikipediaSource[] = [];
 
+  const tryAddTitle = async (lang: 'en' | 'id', title: string) => {
+    if (sources.length >= maxPages) return;
+    const key = `${lang}:${title.toLowerCase()}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+
+    const extracted = await fetchWikipediaExtract(lang, title, params.keywords);
+    if (extracted) {
+      const canonicalKey = `${lang}:${extracted.title.toLowerCase()}`;
+      if (sources.some((s) => `${s.lang}:${s.title.toLowerCase()}` === canonicalKey)) return;
+      seen.add(canonicalKey);
+      sources.push({
+        source_id: `S${startIndex + sources.length + 1}`,
+        url: extracted.url,
+        title: extracted.title,
+        lang,
+        text: extracted.text,
+        retrieved_at: new Date().toISOString(),
+      });
+    }
+  };
+
+  // 1. Fetch by explicit wiki_titles first (following redirects)
+  for (const lang of langOrder) {
+    const titles = params.wikiTitles?.[lang] ?? [];
+    for (const title of titles) {
+      if (sources.length >= maxPages) break;
+      await tryAddTitle(lang, title);
+    }
+  }
+
+  // 2. Fallback to free search if still under maxPages
   for (const query of params.queries) {
     if (sources.length >= maxPages) break;
-    const isLikelyId = /\b(kereta|mesin|bumi|sejarah|bagaimana|kenapa|rel|roda)\b/i.test(query);
-    const langs: Array<'id' | 'en'> = isLikelyId ? ['id', 'en'] : ['en', 'id'];
-
-    for (const lang of langs) {
+    for (const lang of langOrder) {
       if (sources.length >= maxPages) break;
       const titles = await searchWikipediaTitles(lang, query, 2);
       for (const title of titles) {
         if (sources.length >= maxPages) break;
-        const key = `${lang}:${title.toLowerCase()}`;
-        if (seen.has(key)) continue;
-        seen.add(key);
-
-        const extracted = await fetchWikipediaExtract(lang, title, params.keywords);
-        if (extracted) {
-          sources.push({
-            source_id: `S${sources.length + 1}`,
-            url: extracted.url,
-            title: extracted.title,
-            lang,
-            text: extracted.text,
-            retrieved_at: new Date().toISOString(),
-          });
-        }
+        await tryAddTitle(lang, title);
       }
     }
   }
@@ -149,15 +170,33 @@ export async function fetchWikipediaSourcesForConcept(params: {
 
 export async function fetchTodayInHistorySources(
   mmDd: string,
-  maxPages = 4
+  maxPages = 4,
+  topicKeyword = ''
 ): Promise<{ eventText: string; eventYear: number; sources: WikipediaSource[] }> {
   const [mmRaw, ddRaw] = mmDd.split('-');
   const mm = (mmRaw || '07').padStart(2, '0');
   const dd = (ddRaw || '20').padStart(2, '0');
 
   const feed = await fetchOnThisDay(mm, dd);
-  const candidates = selectOnThisDayCandidates(feed);
-  const top = candidates[0];
+  const candidates = selectOnThisDayCandidates(feed, '');
+  const kwWords = topicKeyword
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w.length >= 4);
+
+  let top = candidates[0];
+  if (kwWords.length > 0 && candidates.length > 0) {
+    let bestScore = -1;
+    for (const c of [...(feed.selected ?? []), ...(feed.events ?? [])]) {
+      const hay = `${c.year} ${c.text} ${(c.pages ?? []).map((p) => p.title).join(' ')}`.toLowerCase();
+      const hits = kwWords.reduce((acc, w) => acc + (hay.includes(w) ? 1 : 0), 0);
+      if (hits > bestScore && (c.pages?.length ?? 0) > 0) {
+        bestScore = hits;
+        top = c;
+      }
+    }
+  }
   if (!top) {
     throw new Error(`No OnThisDay events found for ${mm}-${dd}`);
   }
