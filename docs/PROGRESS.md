@@ -419,3 +419,13 @@
 
 ### Yang Menunggu Pemulihan Kuota (Bagian C)
 - Menjalankan Bagian C (`p2-kereta` profil Standar & `p2-mesin4tak` profil Hemat, batas ≤ 20 panggilan/run) untuk menghasilkan `final.mp4`, `final-qc.json`, `captions.srt`, `publish.md`, `llm-calls.jsonl`, `stats.md`, serta mutasi real-render 8–11.
+
+### Perbaikan F1–F4 (`docs/REVIEW-P4B.md`, 2026-11-21, 0 Panggilan Gemini)
+1. **F1 (`RailCrossSection.tsx` & `cross-section/`):** Rel tetap diam; wheelset bergeser ke samping dengan tinggi roda dan kemiringan gandar mengikuti perpotongan tapak kerucut (`12×`) di permukaan kepala rel, serta **garis jari-jari** dari pusat gandar ke titik kontak (`radius_left` / `radius_right`). Telemetri `DemoCrossSection` (`passed: true`):
+   - `shift-left` (`-0.060 m`): kontak kiri `161 px (dalam rel)`, jari-jari kiri `138 px` vs kanan `118 px` (**+16,9%**).
+   - `shift-center` (`-0.004 m`): `128 px` vs `127 px` (**±1 px**).
+   - `shift-right` (`0.052 m`): `119 px` vs `136 px` (**+14,3%**).
+   - Bukti dilengkapi 3 crop zoom area kontak ([`crop-left.png`](../out/review/p4/cross-section/crop-left.png), [`crop-center.png`](../out/review/p4/cross-section/crop-center.png), [`crop-right.png`](../out/review/p4/cross-section/crop-right.png)) & [`radii-telemetry.md`](../out/review/p4/cross-section/radii-telemetry.md).
+2. **F2 (`CameraRig.tsx`, `KitFramingHarness.tsx`, `framing-matrix.md`):** Pemeriksaan containment ketat terhadap **zona bebas `y=240..780`** dengan status jujur (`PASS`/`WARN`/`FAIL`). Seluruh **18/18** sel kini berada di dalam zona bebas (`0 FAIL`: 12 `PASS` dan 6 `WARN` untuk rakitan vertikal tinggi `PistonCrankAssembly` & `Suspension` 24–27%).
+3. **F3 (`storyboard-code.ts`, `mutation-summary.md`):** `SHOT_VIEW_MISMATCH` mewajibkan `rail_cross_section` pada `cross_section`; Mutasi 4 kini mencatat kedua error (`SHOT_VIEW_MISMATCH` + `VIS_EXAGGERATION_UNLABELED`).
+4. **F4 (`kinematics.ts`, `run-p4b-nonllm.ts`):** Selisih lingkaran `EffectiveDiameterCompare` diturunkan dari 47% menjadi **21%** (`46 px` vs `38 px`, berada di rentang 15–25%); Mutasi 14 & 15 dieksekusi langsung dengan klien tiruan saat membuat [`mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md).

@@ -229,7 +229,8 @@ describe('P4B Part A & B — Budget, Cache, Kit Fault, Compare, & HUD Length', (
   it('validates EffectiveDiameterCompare radii & sign and rejects >12 word Callouts (HUD_TOO_LONG)', () => {
     const cRight = computeEffectiveCompareRadii(0.06, 0.06);
     expect(cRight.outerSide).toBe('right');
-    expect(cRight.outerRadiusPx).toBeGreaterThanOrEqual(cRight.innerRadiusPx * 1.1);
+    expect(cRight.outerRadiusPx).toBeGreaterThanOrEqual(cRight.innerRadiusPx * 1.15);
+    expect(cRight.outerRadiusPx).toBeLessThanOrEqual(cRight.innerRadiusPx * 1.25);
 
     const cLeft = computeEffectiveCompareRadii(-0.06, 0.06);
     expect(cLeft.outerSide).toBe('left');

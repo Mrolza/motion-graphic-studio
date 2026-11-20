@@ -141,7 +141,7 @@ export function computeEffectiveCompareRadii(
 ): CompareRadiiResult {
   const base = 42;
   const norm = Math.max(-1, Math.min(1, lateralShift / Math.max(1e-4, maxShift)));
-  const delta = Math.abs(norm) * 8;
+  const delta = Math.abs(norm) * 4; // at max shift: outer=46px, inner=38px (+21% in 15-25%)
   if (Math.abs(norm) < 0.05) {
     return {
       leftRadiusPx: base,

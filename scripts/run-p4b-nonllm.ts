@@ -1,5 +1,6 @@
 import { execFile } from 'node:child_process';
-import { mkdir, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import os from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
@@ -9,6 +10,7 @@ import type { Script } from '@core/contracts/script';
 import type { Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { checkQuotaBeforeRun, LlmBudgetExceededError, RunLlmTracker } from '@core/llm/budget';
+import { createProject, loadProject, saveProject } from '@core/project/store';
 import { checkCaptionsQc } from '@core/qc/captions-qc';
 import { precheckAbsoluteWords } from '@core/qc/l5-semantic';
 import { verifyStoryboardCode } from '@core/qc/storyboard-code';
@@ -16,8 +18,9 @@ import { checkFramingFromTelemetry, checkVisibilityFromTelemetry } from '@core/q
 import { checkOnscreenTruthFromTelemetry } from '@core/qc/visual/media-checks';
 import { getRemotionBundle, runVisualQc } from '@core/qc/visual/runner';
 import { buildKineticCaptions } from '@core/render/kinetic-captions';
+import { LAYOUT_9X16 } from '@core/render/layout-zones';
 import { validatePublishSources } from '@core/stages/publish';
-import { KitFaultError } from '@core/stages/scene-coder';
+import { KitFaultError, runScenesStage } from '@core/stages/scene-coder';
 
 const execFileAsync = promisify(execFile);
 const REPO = process.cwd();
@@ -26,7 +29,6 @@ const OUT_DIR = path.join(REPO, 'out', 'review', 'p4');
 async function buildKitFramingMatrix(serveUrl: string) {
   const kfDir = path.join(OUT_DIR, 'kit-framing');
   await mkdir(kfDir, { recursive: true });
-  const comp = await selectComposition({ serveUrl, id: 'KitFramingHarness', inputProps: {} });
 
   const matrix: Array<{
     assembly: 'TrainCar' | 'WheelsetOnRail' | 'RailCrossSection' | 'EngineBlock' | 'PistonCrankAssembly' | 'Suspension';
@@ -34,12 +36,16 @@ async function buildKitFramingMatrix(serveUrl: string) {
     minFill: number;
   }> = [
     { assembly: 'TrainCar', values: [-2, 0, 3], minFill: 0.3 },
-    { assembly: 'WheelsetOnRail', values: [-2, 0, 3], minFill: 0.2 },
-    { assembly: 'RailCrossSection', values: [-0.06, 0, 0.06], minFill: 0.2 },
+    { assembly: 'WheelsetOnRail', values: [-2, 0, 3], minFill: 0.35 },
+    { assembly: 'RailCrossSection', values: [-0.055, 0, 0.055], minFill: 0.35 },
     { assembly: 'EngineBlock', values: [0, 180, 540], minFill: 0.3 },
-    { assembly: 'PistonCrankAssembly', values: [0, 180, 540], minFill: 0.2 },
-    { assembly: 'Suspension', values: [0, 1.5, 3.1], minFill: 0.2 },
+    { assembly: 'PistonCrankAssembly', values: [0, 180, 540], minFill: 0.35 },
+    { assembly: 'Suspension', values: [0, 1.5, 3.1], minFill: 0.35 },
   ];
+
+  const freeTop = LAYOUT_9X16.zones.free.top; // 240
+  const freeBottom = freeTop + LAYOUT_9X16.zones.free.maxHeight; // 780
+  const freeArea = 720 * LAYOUT_9X16.zones.free.maxHeight;
 
   const rows: string[] = [];
   const stillPaths: string[] = [];
@@ -50,22 +56,17 @@ async function buildKitFramingMatrix(serveUrl: string) {
       stillPaths.push(outPng);
       const itemProps = { telemetry: false, assembly: item.assembly, driverValue: val };
       const itemComp = await selectComposition({ serveUrl, id: 'KitFramingHarness', inputProps: itemProps });
-      await renderStill({
-        composition: itemComp,
-        serveUrl,
-        output: outPng,
-        frame: 0,
-        inputProps: itemProps,
-      });
+      await rm(outPng, { force: true }).catch(() => {});
+      await renderStill({ composition: itemComp, serveUrl, output: outPng, frame: 0, inputProps: itemProps });
 
-      const qc = await runVisualQc({
+      await runVisualQc({
         spec: {
           compositionId: 'KitFramingHarness',
           focusEntities: ['focus_entity'],
           invariants: [],
           usesFrameEntities: true,
           minSubjectFillRatio: item.minFill,
-          requireFillError: item.minFill >= 0.3,
+          requireFillError: item.minFill <= 0.3,
         },
         outputDir: path.join(kfDir, '_tmp', `${item.assembly}-${i}`),
         videoOutPath: path.join(kfDir, '_tmp', `${item.assembly}-${i}.mp4`),
@@ -75,24 +76,26 @@ async function buildKitFramingMatrix(serveUrl: string) {
         sampleIntervalSec: 0.9,
       });
 
-      const framingErrs = qc.reports.framing.issues.filter((x) => x.severity === 'error');
-      const { readFile } = await import('node:fs/promises');
-      const tel = JSON.parse(await readFile(path.join(kfDir, '_tmp', `${item.assembly}-${i}`, 'KitFramingHarness-telemetry.json'), 'utf-8'));
+      const tel = JSON.parse(
+        await readFile(path.join(kfDir, '_tmp', `${item.assembly}-${i}`, 'KitFramingHarness-telemetry.json'), 'utf-8')
+      );
       const ent = tel[0]?.entities?.find((e: { id: string }) => e.id === 'focus_entity');
       const b = ent?.bbox ?? { x: 0, y: 0, width: 0, height: 0 };
-      const fillPct = Math.round(((b.width * b.height) / (720 * 560)) * 100);
-      rows.push(`| ${item.assembly} | ${val} | [${b.x}, ${b.y}, ${b.width}×${b.height}] | ${fillPct}% | ${framingErrs.length === 0 ? 'PASS' : framingErrs[0]?.message} |`);
+      const fillPct = Math.round(((b.width * b.height) / freeArea) * 100);
+      const inFreeZone = b.x >= 0 && b.x + b.width <= 720 && b.y >= freeTop && b.y + b.height <= freeBottom;
+
+      let status = 'PASS';
+      if (!inFreeZone) {
+        status = `FAIL (keluar zona bebas y=${freeTop}..${freeBottom})`;
+      } else if (fillPct < Math.round(item.minFill * 100)) {
+        status = item.minFill <= 0.3 ? `FAIL (isi ${fillPct}% < 30%)` : `WARN (isi ${fillPct}% < 35%)`;
+      } else if (fillPct > 75) {
+        status = `WARN (isi ${fillPct}% > 75%)`;
+      }
+      rows.push(`| ${item.assembly} | ${val} | [${b.x}, ${b.y}, ${b.width}×${b.height}] | ${fillPct}% | ${inFreeZone ? 'Ya' : 'Tidak'} | ${status} |`);
     }
   }
 
-  // Build contact sheet (6x3) from the 18 stills
-  await execFileAsync(ffmpegInstaller.path, [
-    '-y',
-    '-v',
-    'error',
-    '-i',
-    path.join(kfDir, '%s').replace('%s', 'TrainCar-0.png'),
-  ]).catch(() => {});
   const inputs = stillPaths.flatMap((p) => ['-i', p]);
   const filter = `${stillPaths.map((_, idx) => `[${idx}:v]scale=240:-1[v${idx}]`).join(';')};${stillPaths.map((_, idx) => `[v${idx}]`).join('')}xstack=inputs=18:layout=0_0|240_0|480_0|720_0|960_0|1200_0|0_426|240_426|480_426|720_426|960_426|1200_426|0_852|240_852|480_852|720_852|960_852|1200_852[out]`;
   await execFileAsync(ffmpegInstaller.path, ['-y', '-v', 'error', ...inputs, '-filter_complex', filter, '-map', '[out]', path.join(kfDir, 'contact-sheet.png')]);
@@ -100,7 +103,7 @@ async function buildKitFramingMatrix(serveUrl: string) {
   await rm(path.join(kfDir, '_tmp'), { recursive: true, force: true });
   await writeFile(
     path.join(kfDir, 'framing-matrix.md'),
-    `# Matriks Framing Kit (720×1280)\n\n| Rakitan | Driver | BBox (px) | Isi Zona Bebas | Status |\n|---|---:|---|---:|---|\n${rows.join('\n')}\n`,
+    `# Matriks Framing Kit (720×1280, Zona Bebas y=${freeTop}..${freeBottom})\n\n| Rakitan | Driver | BBox (px) | Isi Zona Bebas | Di Zona Bebas? | Status |\n|---|---:|---|---:|---|---|\n${rows.join('\n')}\n`,
     'utf-8'
   );
 }
@@ -110,7 +113,6 @@ async function buildDemoCrossSectionEvidence(serveUrl: string) {
   await mkdir(csDir, { recursive: true });
   const comp = await selectComposition({ serveUrl, id: 'DemoCrossSection', inputProps: { telemetry: false } });
 
-  // Run DemoCrossSection QC + telemetry capture across 30 samples (frames 0..89)
   const qcDir = path.join(csDir, '_qc');
   const qc = await runVisualQc({
     spec: {
@@ -127,10 +129,8 @@ async function buildDemoCrossSectionEvidence(serveUrl: string) {
     sampleIntervalSec: 0.2,
   });
 
-  const { readFile } = await import('node:fs/promises');
   const samples = JSON.parse(await readFile(path.join(qcDir, 'DemoCrossSection-telemetry.json'), 'utf-8')) as Array<{
     frame: number;
-    drivers: Record<string, { value: number }>;
     entities: Array<{
       id: string;
       parts?: Record<string, { x: number; y: number; width: number; height: number }>;
@@ -138,45 +138,71 @@ async function buildDemoCrossSectionEvidence(serveUrl: string) {
     }>;
   }>;
 
-  const first = samples[0]!;
-  const mid = samples[Math.floor(samples.length / 2)]!;
-  const last = samples[samples.length - 1]!;
+  // Pick shift-left (f0), shift-center (closest to 0), and shift-right (last)
+  const centerSample = samples.reduce((best, cur) => {
+    const curS = Math.abs(Number(cur.entities.find((e) => e.id === 'rail_cross_section')?.partStates?.lateral_shift ?? 1));
+    const bestS = Math.abs(Number(best.entities.find((e) => e.id === 'rail_cross_section')?.partStates?.lateral_shift ?? 1));
+    return curS < bestS ? cur : best;
+  }, samples[0]!);
+
   const picks = [
-    { name: 'shift-left', s: first },
-    { name: 'shift-center', s: mid },
-    { name: 'shift-right', s: last },
+    { name: 'shift-left', crop: 'crop-left', s: samples[0]! },
+    { name: 'shift-center', crop: 'crop-center', s: centerSample },
+    { name: 'shift-right', crop: 'crop-right', s: samples[samples.length - 1]! },
   ];
 
   const rows: string[] = [];
   for (const p of picks) {
+    const stillPath = path.join(csDir, `${p.name}.png`);
     await renderStill({
       composition: comp,
       serveUrl,
-      output: path.join(csDir, `${p.name}.png`),
+      output: stillPath,
       frame: p.s.frame,
       inputProps: { telemetry: false },
     });
+
     const ent = p.s.entities.find((e) => e.id === 'rail_cross_section');
     const cL = ent?.parts?.contact_left;
     const cR = ent?.parts?.contact_right;
-    const fl = ent?.parts?.flange;
+    const rHeadL = ent?.parts?.rail_left;
+    const radL = ent?.parts?.radius_left;
+    const radR = ent?.parts?.radius_right;
     const cLx = cL ? Math.round(cL.x + cL.width / 2) : 0;
     const cRx = cR ? Math.round(cR.x + cR.width / 2) : 0;
-    const flX = fl ? Math.round(fl.x + fl.width / 2) : 0;
+    const cLy = cL ? Math.round(cL.y + cL.height / 2) : 0;
+    const railLMinX = rHeadL ? Math.round(rHeadL.x) : 0;
+    const railLMaxX = rHeadL ? Math.round(rHeadL.x + rHeadL.width) : 0;
+    const radLPx = radL ? Math.round(radL.height) : 0;
+    const radRPx = radR ? Math.round(radR.height) : 0;
     const shiftVal = Number(ent?.partStates?.lateral_shift ?? 0);
-    const rL = Number(ent?.partStates?.left_effective_radius ?? 0);
-    const rR = Number(ent?.partStates?.right_effective_radius ?? 0);
-    rows.push(`| ${p.name}.png | f${p.s.frame} | ${shiftVal.toFixed(3)} m | ${cLx} px | ${cRx} px | ${flX} px | ${rL.toFixed(4)} m / ${rR.toFixed(4)} m |`);
-  }
 
-  const cL0 = picks[0]!.s.entities.find((e) => e.id === 'rail_cross_section')?.parts?.contact_left;
-  const cL2 = picks[2]!.s.entities.find((e) => e.id === 'rail_cross_section')?.parts?.contact_left;
-  const pxShift = cL0 && cL2 ? Math.abs(Math.round(cL2.x - cL0.x)) : 0;
+    // Crop zoom area kontak kiri (200x200 centered around left contact point, scaled 2x)
+    const cropX = Math.max(0, Math.min(520, cLx - 100));
+    const cropY = Math.max(0, Math.min(1080, cLy - 110));
+    await execFileAsync(ffmpegInstaller.path, [
+      '-y',
+      '-v',
+      'error',
+      '-i',
+      stillPath,
+      '-vf',
+      `crop=200:200:${cropX}:${cropY},scale=400:400:flags=neighbor`,
+      '-frames:v',
+      '1',
+      path.join(csDir, `${p.crop}.png`),
+    ]);
+
+    const inRailHead = cLx >= railLMinX && cLx <= railLMaxX;
+    rows.push(
+      `| ${p.name}.png / ${p.crop}.png | f${p.s.frame} | ${shiftVal.toFixed(3)} m | ${cLx} px (${inRailHead ? 'dalam rel' : 'LUAR'}) | ${cRx} px | ${radLPx} px | ${radRPx} px |`
+    );
+  }
 
   await rm(qcDir, { recursive: true, force: true });
   await writeFile(
     path.join(csDir, 'radii-telemetry.md'),
-    `# Cross-Section Telemetry (DemoCrossSection)\n\n- QC DemoCrossSection passed: **${qc.passed}**\n- Pergeseran titik kontak kiri (kiri ↔ kanan): **${pxShift} px**\n\n| Still | Frame | Lateral Shift | contact_left X | contact_right X | flange X | Jari-jari Efektif (Kiri / Kanan) |\n|---|---|---:|---:|---:|---:|---|\n${rows.join('\n')}\n`,
+    `# Cross-Section Telemetry (DemoCrossSection)\n\n- QC DemoCrossSection passed: **${qc.passed}**\n\n| Still & Crop | Frame | Lateral Shift | contact_left X | contact_right X | Garis Jari-Jari Kiri | Garis Jari-Jari Kanan |\n|---|---|---:|---|---:|---:|---:|\n${rows.join('\n')}\n`,
     'utf-8'
   );
 }
@@ -233,13 +259,14 @@ async function runNonLlmMutations() {
   rows.push(`| mut1-driver-label | L5 | ${m1.length} | ${m1.find((i) => i.message.includes('L5_DRIVER_LABEL_MISMATCH'))?.message} |`);
   rows.push(`| mut2-unsourced-driver-value | L5 | ${m1.filter((i) => i.message.includes('L5_UNSOURCED_DRIVER_VALUE')).length} | ${m1.find((i) => i.message.includes('L5_UNSOURCED_DRIVER_VALUE'))?.message} |`);
 
-  // Mut 3 (precheck without Gemini)
+  // Mut 3
   const m3 = precheckAbsoluteWords('Mengikuti tikungan tanpa flens bergesekan', 'with less chance of flange contact');
   rows.push(`| mut3-semantic-precheck | L5 Semantic Precheck | ${m3.length} | ${m3[0]} |`);
 
-  // Mut 4
+  // Mut 4 (F3: both SHOT_VIEW_MISMATCH and VIS_EXAGGERATION_UNLABELED)
   const sbView = structuredClone(sb);
   sbView.scenes[1]!.focus_entities = ['wheelset'];
+  delete sbView.scenes[1]!.view;
   const m4a = verifyStoryboardCode(sbView, script, timeline, ledger).issues.filter((i) => i.message.includes('SHOT_VIEW_MISMATCH'));
   const m4b = checkVisibilityFromTelemetry(
     [{ frame: 0, sec: 0, drivers: {}, entities: [{ id: 'rail_cross_section', role: 'focus', partStates: { taper_exaggeration: 5 } }], hud: [] }],
@@ -272,7 +299,7 @@ async function runNonLlmMutations() {
   const m12 = validatePublishSources('Sumber: https://unknown.example.org/fake', ledger);
   rows.push(`| mut12-publish-unknown-url | Publish | ${m12.unknownUrls.length} | PUBLISH_UNKNOWN_SOURCE: ${m12.unknownUrls[0]} |`);
 
-  // Mut 13: Budget limit 3 (mock tracker)
+  // Mut 13: Budget limit 3
   const tr = new RunLlmTracker({ projectDir: mutDir, runId: 'mut13', limit: 3 });
   await tr.recordCall({ stage: 'S6', purpose: 'mock', ok: true });
   await tr.recordCall({ stage: 'S7', purpose: 'mock', ok: true });
@@ -286,11 +313,62 @@ async function runNonLlmMutations() {
   await rm(path.join(mutDir, 'llm-calls.jsonl'), { force: true });
   rows.push(`| mut13-budget-limit-3 | Budget | 1 | ${m13Msg} |`);
 
-  // Mut 14 & 15: Verified in unit tests (tests/p4bBudgetAndKit.test.ts)
-  rows.push(`| mut14-partial-scene-reuse | Scene Cache (Mock LLM) | 1 | Re-run generated only 2/3 uncached scenes; S1 cached=true (0 LLM calls) |`);
-  rows.push(`| mut15-kit-fault-no-s9 | Kit Ownership | 1 | ${new KitFaultError('KIT_FAULT: FRAMING_OUT_OF_BOUNDS -> 0 S9 calls').message} |`);
+  // Mut 14 & 15: Live mock-LLM execution (F4)
+  const tmp = await mkdtemp(path.join(os.tmpdir(), 'mgs-mut1415-'));
+  try {
+    await createProject({ id: 'p-mut', topic: 'Mut', format: 'how_its_made', style: 'blueprint' }, tmp);
+    const pr = await loadProject('p-mut', tmp);
+    pr.stages.S7 = 'done';
+    await saveProject(pr, tmp);
+    const pDir = path.join(tmp, 'projects', 'p-mut');
+    await writeFile(path.join(pDir, 'script.json'), JSON.stringify(script));
+    await writeFile(path.join(pDir, 'timeline.json'), JSON.stringify(timeline));
+    await writeFile(path.join(pDir, 'fact-ledger.json'), JSON.stringify(ledger));
+    await writeFile(path.join(pDir, 'storyboard.json'), JSON.stringify(sb));
 
-  // Mut 16: Callout 14 words -> HUD_TOO_LONG
+    const validTsx = `import React from 'react';
+import { BlueprintStage, CameraRig, Ground, Hud, HudLayout, HudZone, StoryboardHudProvider, TelemetryProvider, TrainCar, useDriver } from '../../../kit';
+export const Scene_S1: React.FC<{ telemetry?: boolean; hudData?: any[] }> = ({ telemetry = false, hudData = [] }) => {
+  const driver = useDriver({ name: 'distance', from: 0, to: 1, unit: 'm', startSec: 0, durationSec: 2 });
+  return (<TelemetryProvider enabled={telemetry}><StoryboardHudProvider items={hudData}><BlueprintStage telemetry={telemetry} hud={<HudLayout><HudZone zone="title"><Hud id="S1_H1" driver={driver} /></HudZone></HudLayout>}><CameraRig mode="frameEntities" focusBox={{ center: [0, 1, 0], size: [2, 2, 4] }} /><Ground size={20} divisions={20} y={0} /><TrainCar entityId="train_car" distance={driver.value} /></BlueprintStage></StoryboardHudProvider></TelemetryProvider>);
+};`;
+    let calls = 0;
+    const mockLlm = async (_s: unknown, _p: string, opts: { sceneId?: string | null; tracker?: RunLlmTracker }) => {
+      calls++;
+      await opts.tracker?.recordCall({ stage: 'S8', purpose: 'mock', scene_id: opts.sceneId, ok: true });
+      return { data: { tsx: validTsx.replace(/Scene_S1/g, `Scene_${opts.sceneId ?? 'S1'}`) }, model: 'mock', attempts: 1, httpRetries: 0, totalDurationMs: 1 };
+    };
+    let failS2 = true;
+    const mockQc = async (params: { spec: { compositionId: string } }) => {
+      const ok = !(params.spec.compositionId.endsWith('-S2') && failS2);
+      const rep = (issues: Array<{ severity: 'error'; message: string; ref: string; owner?: 'kit' | 'scene' }>) => ({ layer: 'framing' as const, issues });
+      return {
+        compositionId: params.spec.compositionId, passed: ok, sampleCount: 1, renderMs: 1,
+        reports: { mechanics: rep([]), geometry: rep([]), visibility: rep([]), framing: ok ? rep([]) : rep([{ severity: 'error', message: 'FRAMING_OUT_OF_BOUNDS', ref: 'f0', owner: 'kit' }]), hudOverlap: rep([]), hudFormat: rep([]), onscreenTruth: rep([]), sync: rep([]), blank: rep([]) },
+      };
+    };
+
+    const tr15 = new RunLlmTracker({ projectDir: pDir, runId: 'r-mut15', limit: 20 });
+    let mut15Err = '';
+    try {
+      await runScenesStage('p-mut', tmp, { tracker: tr15, generateJsonFn: mockLlm as never, runVisualQcFn: mockQc as never, skipTscAndRegistry: true });
+    } catch (e) {
+      if (e instanceof KitFaultError) mut15Err = e.message;
+    }
+    const s9CallsMut15 = tr15.usedCalls - 2; // S1 S8 + S2 S8 = 2 calls, 0 S9 calls
+
+    failS2 = false;
+    calls = 0;
+    const res14 = await runScenesStage('p-mut', tmp, { tracker: tr15, generateJsonFn: mockLlm as never, runVisualQcFn: mockQc as never, skipTscAndRegistry: true });
+    const reusedCount = res14.filter((r) => r.cached).length;
+
+    rows.push(`| mut14-partial-scene-reuse | Scene Cache (Mock LLM) | 1 | Re-run generated ${calls} scenes, reused ${reusedCount} cached scene(s) |`);
+    rows.push(`| mut15-kit-fault-no-s9 | Kit Ownership | 1 | ${mut15Err} (S9 calls=${s9CallsMut15}) |`);
+  } finally {
+    await rm(tmp, { recursive: true, force: true });
+  }
+
+  // Mut 16
   const longSb = structuredClone(sb);
   longSb.scenes[1]!.hud[0]!.props = { label: 'Satu dua tiga empat lima enam tujuh delapan sembilan sepuluh sebelas dua belas tiga belas empat belas' };
   const m16 = verifyStoryboardCode(longSb, script, timeline, ledger).issues.filter((i) => i.message.includes('HUD_TOO_LONG'));
@@ -310,7 +388,7 @@ async function main() {
   await buildKitFramingMatrix(serveUrl);
   await buildDemoCrossSectionEvidence(serveUrl);
   await runNonLlmMutations();
-  console.log('P4B non-LLM evidence & mutations complete!');
+  console.log('P4B non-LLM F1-F4 evidence & mutations complete!');
 }
 
 main().catch((err) => {

@@ -98,8 +98,8 @@ const KitFramingInner: React.FC<Required<KitFramingHarnessProps>> = ({
           <>
             <CameraRig
               mode="frameEntities"
-              focusBox={{ center: [0, 1.65, 0], size: [1.85, 2.5, 1.85] }}
-              padding={1.08}
+              focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }}
+              padding={1.25}
               startAngleDeg={-28}
               endAngleDeg={-28}
               elevationDeg={18}
@@ -112,11 +112,11 @@ const KitFramingInner: React.FC<Required<KitFramingHarnessProps>> = ({
           <>
             <CameraRig
               mode="frameEntities"
-              focusBox={{ center: [0, 1.65, 0], size: [1.5, 2.75, 1.5] }}
-              padding={1.18}
-              startAngleDeg={-18}
-              endAngleDeg={-18}
-              elevationDeg={10}
+              focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
+              padding={1.22}
+              startAngleDeg={-24}
+              endAngleDeg={-24}
+              elevationDeg={12}
             />
             <PistonCrankAssembly entityId="focus_entity" crankAngleDeg={driverValue} position={[0, 0.45, 0]} cutaway palette="blueprint-navy" />
           </>
@@ -126,8 +126,8 @@ const KitFramingInner: React.FC<Required<KitFramingHarnessProps>> = ({
           <>
             <CameraRig
               mode="frameEntities"
-              focusBox={{ center: [0, 1.0, 0], size: [1.2, 2.0, 1.2] }}
-              padding={1.2}
+              focusBox={{ center: [0, 0.55, 0], size: [0.55, 1.0, 0.55] }}
+              padding={1.08}
               startAngleDeg={-20}
               endAngleDeg={-20}
               elevationDeg={15}
