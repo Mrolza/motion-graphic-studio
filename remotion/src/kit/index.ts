@@ -1,5 +1,11 @@
 export { BLUEPRINT_TOKENS } from './tokens';
 export {
+  PALETTES,
+  getThemeTokens,
+  type PaletteId,
+  type ThemeTokens,
+} from './tokens/index';
+export {
   useSceneTime,
   clamp01,
   applyEasing,
@@ -10,56 +16,93 @@ export {
   highlight,
   type EasingMode,
 } from './motion';
-export { BlueprintStage, type BlueprintStageProps } from './BlueprintStage';
-export { CameraRig, type CameraRigProps, type CameraMode, type FramingPreset } from './CameraRig';
+export { useDriver, type DriverConfig, type DriverValue } from './drivers/useDriver';
 export {
   solveCrankSlider,
   crankAngleFromTime,
+  gearRatioAngle,
+  wheelAngleFromDistance,
+  wheelAngleDegFromDistance,
+  springOscillation,
+  valveStateFromCrankAngle,
+  formatIdNumber,
   type CrankSliderInput,
   type CrankSliderSolution,
-} from './linkage';
+  type StrokePhase,
+  type ValveCycleState,
+} from './drivers/kinematics';
+export { BlueprintStage, type BlueprintStageProps } from './BlueprintStage';
 export {
-  Box,
-  Cylinder,
-  Sphere,
-  Torus,
-  Cone,
-  Group,
-  Grid,
-  type BasePrimitiveProps,
-  type BoxProps,
-  type CylinderProps,
-  type SphereProps,
-  type TorusProps,
-  type ConeProps,
-  type GroupProps,
-  type GridProps,
-} from './GeneralPrimitives3D';
-export {
-  Ground,
-  Rail,
-  Wheel,
-  Axle,
-  Pole,
-  Spring,
-  type GroundProps,
-  type RailProps,
-  type WheelProps,
-  type AxleProps,
-  type PoleProps,
-  type SpringProps,
-} from './Primitives3D';
+  CameraRig,
+  type CameraRigProps,
+  type CameraMode,
+  type FramingPreset,
+  type FocusBox,
+} from './CameraRig';
+export * from './primitives/index';
 export { TrainCar, type TrainCarProps } from './TrainCar';
+export { WheelsetOnRail, type WheelsetOnRailProps } from './assemblies/WheelsetOnRail';
 export {
-  TitleCard,
+  PistonCrankAssembly,
+  type PistonCrankAssemblyProps,
+} from './assemblies/PistonCrankAssembly';
+export { Suspension, type SuspensionProps } from './assemblies/Suspension';
+export {
+  ParallaxForeground,
+  type ParallaxForegroundProps,
+} from './foreground/ParallaxForeground';
+export {
+  SceneTransition,
+  type SceneTransitionProps,
+} from './transitions/SceneTransition';
+export {
+  TelemetryProvider,
+  TelemetryBridge,
+  TelemetryEmitter,
+  useTelemetry,
+  type TelemetryProviderProps,
+} from './telemetry/TelemetryContext';
+export { TelemetryEntity, type TelemetryEntityProps } from './telemetry/TelemetryEntity';
+export { projectBox3ToScreen } from './telemetry/projection';
+export {
+  TELEMETRY_LOG_PREFIX,
+  type ScreenBox,
+  type TelemetryDriverSample,
+  type TelemetryEntitySample,
+  type TelemetryHudSample,
+  type TelemetryFramePayload,
+} from './telemetry/types';
+export {
+  HudLayout,
+  HudZone,
+  TelemetryHudBox,
+  type HudZoneId,
+  type HudLayoutProps,
+  type HudZoneProps,
+  type TelemetryHudBoxProps,
+} from './hud/HudZones';
+export {
+  KineticTitle,
   StatCounter,
+  MeasureReveal,
   DimensionLine,
   Callout,
-  CaptionBar,
-  formatNumberId,
-  type TitleCardProps,
+  type KineticTitleProps,
   type StatCounterProps,
+  type MeasureRevealProps,
   type DimensionLineProps,
   type CalloutProps,
-  type CaptionBarProps,
-} from './Hud2D';
+} from './hud/HudCore';
+export {
+  ListReveal,
+  DateStamp,
+  Timeline,
+  CompareCard,
+  Waveform,
+  type ListRevealProps,
+  type DateStampProps,
+  type TimelineProps,
+  type CompareCardProps,
+  type WaveformProps,
+} from './hud/HudExtras';
+export { TitleCard, CaptionBar, formatNumberId, type TitleCardProps, type CaptionBarProps } from './Hud2D';

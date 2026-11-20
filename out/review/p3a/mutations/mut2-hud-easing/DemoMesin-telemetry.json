@@ -1,0 +1,4862 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 170.7,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 841.5
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999889,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999179,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999103,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 0 °",
+        "numericValue": 0
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999028,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 12,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 170.7,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 851.2
+        },
+        "partStates": {
+          "crank_angle_deg": 12,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.983
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 35 °",
+        "numericValue": 35.403
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 24,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 170.7,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 858.1
+        },
+        "partStates": {
+          "crank_angle_deg": 24,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.935
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 70 °",
+        "numericValue": 69.627
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 36,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 170.7,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 862
+        },
+        "partStates": {
+          "crank_angle_deg": 36,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.858
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 103 °",
+        "numericValue": 102.69
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 48,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 170.7,
+          "y": 252.2,
+          "width": 402.7,
+          "height": 862.8
+        },
+        "partStates": {
+          "crank_angle_deg": 48,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.759
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 135 °",
+        "numericValue": 134.613
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 60,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 170.8,
+          "y": 252.2,
+          "width": 402.6,
+          "height": 860.4
+        },
+        "partStates": {
+          "crank_angle_deg": 60,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.645
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 165 °",
+        "numericValue": 165.417
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 72,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 171,
+          "y": 252.2,
+          "width": 402.3,
+          "height": 854.9
+        },
+        "partStates": {
+          "crank_angle_deg": 72,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.522
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 195 °",
+        "numericValue": 195.12
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 84,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 171.1,
+          "y": 252.2,
+          "width": 402,
+          "height": 846.4
+        },
+        "partStates": {
+          "crank_angle_deg": 84,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.4
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 224 °",
+        "numericValue": 223.743
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 96,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 171.4,
+          "y": 252.2,
+          "width": 401.7,
+          "height": 846.3
+        },
+        "partStates": {
+          "crank_angle_deg": 96,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.285
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 251 °",
+        "numericValue": 251.307
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 108,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 171.7,
+          "y": 252.2,
+          "width": 401.1,
+          "height": 854.5
+        },
+        "partStates": {
+          "crank_angle_deg": 108,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.182
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 278 °",
+        "numericValue": 277.83
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 120,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 172,
+          "y": 252.3,
+          "width": 400.5,
+          "height": 876.4
+        },
+        "partStates": {
+          "crank_angle_deg": 120,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.095
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 303 °",
+        "numericValue": 303.333
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 132,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 172.5,
+          "y": 252.3,
+          "width": 399.7,
+          "height": 897
+        },
+        "partStates": {
+          "crank_angle_deg": 132,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.023
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 328 °",
+        "numericValue": 327.837
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 144,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 173.1,
+          "y": 252.3,
+          "width": 398.8,
+          "height": 912.7
+        },
+        "partStates": {
+          "crank_angle_deg": 144,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.969
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 351 °",
+        "numericValue": 351.36
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 156,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 173.7,
+          "y": 252.3,
+          "width": 397.6,
+          "height": 923.1
+        },
+        "partStates": {
+          "crank_angle_deg": 156,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.93
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 374 °",
+        "numericValue": 373.923
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 168,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 174.5,
+          "y": 252.3,
+          "width": 396.3,
+          "height": 927.5
+        },
+        "partStates": {
+          "crank_angle_deg": 168,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.908
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 396 °",
+        "numericValue": 395.547
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah HISAP — Hisap: BUKA | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "crank_angle": {
+        "value": 180,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 175.4,
+          "y": 252.3,
+          "width": 394.7,
+          "height": 925.9
+        },
+        "partStates": {
+          "crank_angle_deg": 180,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.9
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 416 °",
+        "numericValue": 416.25
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 192,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 176.4,
+          "y": 252.3,
+          "width": 392.9,
+          "height": 926.5
+        },
+        "partStates": {
+          "crank_angle_deg": 192,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.908
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 436 °",
+        "numericValue": 436.053
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 204,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 177.6,
+          "y": 252.4,
+          "width": 390.8,
+          "height": 921.2
+        },
+        "partStates": {
+          "crank_angle_deg": 204,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.93
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 455 °",
+        "numericValue": 454.977
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 216,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 179,
+          "y": 252.4,
+          "width": 388.4,
+          "height": 909.9
+        },
+        "partStates": {
+          "crank_angle_deg": 216,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.969
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 473 °",
+        "numericValue": 473.04
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 228,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 180.5,
+          "y": 252.4,
+          "width": 385.7,
+          "height": 893.2
+        },
+        "partStates": {
+          "crank_angle_deg": 228,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.023
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 490 °",
+        "numericValue": 490.263
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 240,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 182.2,
+          "y": 252.5,
+          "width": 382.6,
+          "height": 871.6
+        },
+        "partStates": {
+          "crank_angle_deg": 240,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.095
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 507 °",
+        "numericValue": 506.667
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 252,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 184.2,
+          "y": 252.5,
+          "width": 379.1,
+          "height": 848.8
+        },
+        "partStates": {
+          "crank_angle_deg": 252,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.182
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 522 °",
+        "numericValue": 522.27
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 264,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.3,
+          "y": 252.5,
+          "width": 375.1,
+          "height": 839.5
+        },
+        "partStates": {
+          "crank_angle_deg": 264,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.285
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 537 °",
+        "numericValue": 537.093
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 276,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 188.8,
+          "y": 252.6,
+          "width": 370.7,
+          "height": 838.4
+        },
+        "partStates": {
+          "crank_angle_deg": 276,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.4
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 551 °",
+        "numericValue": 551.157
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 288,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 191.4,
+          "y": 252.6,
+          "width": 365.7,
+          "height": 845.4
+        },
+        "partStates": {
+          "crank_angle_deg": 288,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.522
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 564 °",
+        "numericValue": 564.48
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 300,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 194.4,
+          "y": 252.7,
+          "width": 360.1,
+          "height": 849.4
+        },
+        "partStates": {
+          "crank_angle_deg": 300,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.645
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 577 °",
+        "numericValue": 577.083
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 312,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 197.7,
+          "y": 252.8,
+          "width": 353.9,
+          "height": 850.2
+        },
+        "partStates": {
+          "crank_angle_deg": 312,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.759
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 589 °",
+        "numericValue": 588.987
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 324,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 198.5,
+          "y": 252.8,
+          "width": 349.7,
+          "height": 847.6
+        },
+        "partStates": {
+          "crank_angle_deg": 324,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.858
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 600 °",
+        "numericValue": 600.21
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 336,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.9,
+          "y": 252.9,
+          "width": 350.6,
+          "height": 841.8
+        },
+        "partStates": {
+          "crank_angle_deg": 336,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.935
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 611 °",
+        "numericValue": 610.773
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 348,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 189.2,
+          "y": 253,
+          "width": 351.2,
+          "height": 832.9
+        },
+        "partStates": {
+          "crank_angle_deg": 348,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.983
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 621 °",
+        "numericValue": 620.697
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah KOMPRESI — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "crank_angle": {
+        "value": 360,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 184.3,
+          "y": 253.1,
+          "width": 351.4,
+          "height": 821.1
+        },
+        "partStates": {
+          "crank_angle_deg": 360,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 630 °",
+        "numericValue": 630
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP | BUSI MENYALA"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 372,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 179.6,
+          "y": 253,
+          "width": 351.2,
+          "height": 832.9
+        },
+        "partStates": {
+          "crank_angle_deg": 372,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 1.983
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 639 °",
+        "numericValue": 638.703
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP | BUSI MENYALA"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 384,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 175.4,
+          "y": 252.9,
+          "width": 350.6,
+          "height": 841.8
+        },
+        "partStates": {
+          "crank_angle_deg": 384,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.935
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 647 °",
+        "numericValue": 646.827
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 396,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 171.7,
+          "y": 252.8,
+          "width": 349.7,
+          "height": 847.6
+        },
+        "partStates": {
+          "crank_angle_deg": 396,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.858
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 654 °",
+        "numericValue": 654.39
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 408,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 168.4,
+          "y": 252.8,
+          "width": 353.9,
+          "height": 850.2
+        },
+        "partStates": {
+          "crank_angle_deg": 408,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.759
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 661 °",
+        "numericValue": 661.413
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 420,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 165.5,
+          "y": 252.7,
+          "width": 360.1,
+          "height": 849.4
+        },
+        "partStates": {
+          "crank_angle_deg": 420,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.645
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 668 °",
+        "numericValue": 667.917
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 288,
+    "sec": 9.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 432,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 162.9,
+          "y": 252.6,
+          "width": 365.7,
+          "height": 845.4
+        },
+        "partStates": {
+          "crank_angle_deg": 432,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.522
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 674 °",
+        "numericValue": 673.92
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 296,
+    "sec": 9.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 444,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 160.6,
+          "y": 252.6,
+          "width": 370.7,
+          "height": 838.4
+        },
+        "partStates": {
+          "crank_angle_deg": 444,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.4
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 679 °",
+        "numericValue": 679.443
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 304,
+    "sec": 10.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 456,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 158.6,
+          "y": 252.5,
+          "width": 375.1,
+          "height": 839.5
+        },
+        "partStates": {
+          "crank_angle_deg": 456,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.285
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 685 °",
+        "numericValue": 684.507
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 312,
+    "sec": 10.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 468,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 156.8,
+          "y": 252.5,
+          "width": 379.1,
+          "height": 848.8
+        },
+        "partStates": {
+          "crank_angle_deg": 468,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.182
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 689 °",
+        "numericValue": 689.13
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 320,
+    "sec": 10.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 480,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 155.2,
+          "y": 252.5,
+          "width": 382.6,
+          "height": 871.6
+        },
+        "partStates": {
+          "crank_angle_deg": 480,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.095
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 693 °",
+        "numericValue": 693.333
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 328,
+    "sec": 10.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 492,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 153.8,
+          "y": 252.4,
+          "width": 385.7,
+          "height": 893.2
+        },
+        "partStates": {
+          "crank_angle_deg": 492,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.023
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 697 °",
+        "numericValue": 697.137
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 336,
+    "sec": 11.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 504,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 152.6,
+          "y": 252.4,
+          "width": 388.4,
+          "height": 909.9
+        },
+        "partStates": {
+          "crank_angle_deg": 504,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.969
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 701 °",
+        "numericValue": 700.56
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 344,
+    "sec": 11.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 516,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 151.6,
+          "y": 252.4,
+          "width": 390.8,
+          "height": 921.2
+        },
+        "partStates": {
+          "crank_angle_deg": 516,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.93
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 704 °",
+        "numericValue": 703.623
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 352,
+    "sec": 11.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 528,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 150.7,
+          "y": 252.3,
+          "width": 392.9,
+          "height": 926.5
+        },
+        "partStates": {
+          "crank_angle_deg": 528,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 0.908
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 706 °",
+        "numericValue": 706.347
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah USAHA — Hisap: TUTUP | Buang: TUTUP"
+      }
+    ]
+  },
+  {
+    "frame": 360,
+    "sec": 12,
+    "drivers": {
+      "crank_angle": {
+        "value": 540,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 149.9,
+          "y": 252.3,
+          "width": 394.7,
+          "height": 925.9
+        },
+        "partStates": {
+          "crank_angle_deg": 540,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 0.9
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 709 °",
+        "numericValue": 708.75
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 368,
+    "sec": 12.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 552,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 149.2,
+          "y": 252.3,
+          "width": 396.3,
+          "height": 927.5
+        },
+        "partStates": {
+          "crank_angle_deg": 552,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 0.908
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 711 °",
+        "numericValue": 710.853
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 376,
+    "sec": 12.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 564,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 148.7,
+          "y": 252.3,
+          "width": 397.6,
+          "height": 923.1
+        },
+        "partStates": {
+          "crank_angle_deg": 564,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 0.93
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 713 °",
+        "numericValue": 712.677
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 384,
+    "sec": 12.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 576,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 148.2,
+          "y": 252.3,
+          "width": 398.8,
+          "height": 912.7
+        },
+        "partStates": {
+          "crank_angle_deg": 576,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 0.969
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 714 °",
+        "numericValue": 714.24
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 392,
+    "sec": 13.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 588,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 147.8,
+          "y": 252.3,
+          "width": 399.7,
+          "height": 897
+        },
+        "partStates": {
+          "crank_angle_deg": 588,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.023
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 716 °",
+        "numericValue": 715.563
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 400,
+    "sec": 13.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 600,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 147.5,
+          "y": 252.3,
+          "width": 400.5,
+          "height": 876.4
+        },
+        "partStates": {
+          "crank_angle_deg": 600,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.095
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 717 °",
+        "numericValue": 716.667
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 408,
+    "sec": 13.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 612,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 147.2,
+          "y": 252.2,
+          "width": 401.1,
+          "height": 854.5
+        },
+        "partStates": {
+          "crank_angle_deg": 612,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.182
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 718 °",
+        "numericValue": 717.57
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 416,
+    "sec": 13.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 624,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 147,
+          "y": 252.2,
+          "width": 401.7,
+          "height": 846.3
+        },
+        "partStates": {
+          "crank_angle_deg": 624,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.285
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 718 °",
+        "numericValue": 718.293
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 424,
+    "sec": 14.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 636,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.8,
+          "y": 252.2,
+          "width": 402,
+          "height": 846.4
+        },
+        "partStates": {
+          "crank_angle_deg": 636,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.4
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 719 °",
+        "numericValue": 718.857
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 432,
+    "sec": 14.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 648,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.7,
+          "y": 252.2,
+          "width": 402.3,
+          "height": 854.9
+        },
+        "partStates": {
+          "crank_angle_deg": 648,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.522
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 719 °",
+        "numericValue": 719.28
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 440,
+    "sec": 14.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 660,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.6,
+          "y": 252.2,
+          "width": 402.6,
+          "height": 860.4
+        },
+        "partStates": {
+          "crank_angle_deg": 660,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.645
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 720 °",
+        "numericValue": 719.583
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 448,
+    "sec": 14.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 672,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.6,
+          "y": 252.2,
+          "width": 402.7,
+          "height": 862.8
+        },
+        "partStates": {
+          "crank_angle_deg": 672,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.759
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 720 °",
+        "numericValue": 719.787
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 456,
+    "sec": 15.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 684,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.5,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 862
+        },
+        "partStates": {
+          "crank_angle_deg": 684,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.858
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 720 °",
+        "numericValue": 719.91
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 464,
+    "sec": 15.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 696,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.5,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 858.1
+        },
+        "partStates": {
+          "crank_angle_deg": 696,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.935
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 720 °",
+        "numericValue": 719.973
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  },
+  {
+    "frame": 472,
+    "sec": 15.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 708,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 146.5,
+          "y": 252.2,
+          "width": 402.8,
+          "height": 851.2
+        },
+        "partStates": {
+          "crank_angle_deg": 708,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.983
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Dua putaran poros engkol penuh (720°)"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 896,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 720 °",
+        "numericValue": 719.997
+      },
+      {
+        "id": "callout_valves",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 971,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah BUANG — Hisap: TUTUP | Buang: BUKA"
+      }
+    ]
+  }
+]

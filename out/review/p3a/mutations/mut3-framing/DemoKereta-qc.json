@@ -1,0 +1,254 @@
+{
+  "compositionId": "DemoKereta",
+  "passed": false,
+  "sampleCount": 45,
+  "renderMs": 10375,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9538.1,380.1,7801.2x2095.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8344.8,422.5,6466.8x1832.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8591.5,460.3,6676.2x1822.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8758,444.8,6841.8x1875.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9786.2,394.7,7957x2119.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-11761.6,379.4,10060x2422.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-13294.1,403.6,11701.4x2554] keluar area aman [0..720, 60..1220]",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-13580.7,440.3,12023.9x2513.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-13175.2,428.6,11618.7x2480.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-11960.4,384.9,10350.4x2413.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9972.8,378.1,8240.1x2169.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8187,412,6344.6x1818.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-7955.9,454,6094.8x1713] keluar area aman [0..720, 60..1220]",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-7792.1,446,5950.1x1693.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8164.1,392.4,6410.7x1839.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9424.2,370.9,7796.2x2072.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10566.2,388.2,9053.9x2178.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-11009.7,430.2,9534.9x2145.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-11098.4,429.9,9615.3x2161.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10788.6,384.4,9247.5x2227.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9655.4,373.8,7974.5x2117.5] keluar area aman [0..720, 60..1220]",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8406.1,403.2,6591.1x1869.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8293.9,457.8,6398.1x1772.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8490.7,459.7,6578.3x1806.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9010.6,407.6,7148.7x1971.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10954.1,379.3,9206.8x2319.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-12895.1,391.7,11276.9x2530.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-13658.7,440.2,12091.6x2527.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-13621.3,440.8,12060.5x2519.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-12825.4,396.3,11229.9x2505.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10947.7,377.3,9242.5x2311.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8994.5,398.1,7177.5x1980.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8218.2,450.3,6337.8x1768] keluar area aman [0..720, 60..1220]",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8031.4,454.8,6163.5x1726.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-7906,409.6,6088.6x1769.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9128.9,374.1,7445.5x2032.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10350,379,8805.3x2174.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10920.8,419.6,9441.4x2155.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-11010.3,429.9,9538.1x2145.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-10792.1,394.7,9286.7x2196.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-9847.8,372.1,8233.1x2132.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8603,387.7,6853.7x1924.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8043.2,438.3,6187.6x1752.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8231.3,456.8,6346.3x1760.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-8375.8,422.8,6495.1x1838.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f352 (11.73s)"
+        }
+      ]
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}

@@ -211,3 +211,40 @@
 - Tidak ada **error** tersisa di `L0`, `L0b`, `L1`, `L2`, maupun `L3` pada ketiga topik.
 - Masih terdapat `1 WARNING` di `L2` pada `p2-history-0720` (`NAME_NOT_IN_CLAIM` pada `S1.2` karena kata `"Bulan"` muncul di naskah sementara klaim `C6` merujuk `Base Tranquillity`), serta `info` pada klaim `L1` yang tidak dipakai (`1I` di `p2-kereta`, `2I` di `p2-history-0720`).
 - Rata-rata panggilan LLM kumulatif pada `stats.md` adalah **14,00** panggilan/topik (karena `p2-kereta` & `p2-mesin4tak` membawa akumulasi panggilan dari run P2B + rewrite P2C; untuk run segar `p2-history-0720` tercatat **9** panggilan).
+
+---
+
+## Fase P3A — Scene Kit Blueprint + QC Visual Otomatis (`docs/P3A-SCENE-KIT.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p3a-scene-kit` (tag awal `p3a-start`, setelah merge P2 ke `main` dengan tag `p2-done`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Dikerjakan & Dibuat
+1. **Langkah 0 (`REVIEW-P2C.md` + Merge P2):**
+   - Menerapkan 4 tindak lanjut: `CLAIM_NAME_NOT_IN_QUOTE` (`l1-ledger.ts`), `hook_paid` & `main_event_named` (`l0b-quality.ts`, `format-packs.ts`, `scriptwriter.md`), serta `llm_calls_last_run` terpisah (`project.ts`, `store.ts`, `gate1.ts`, `script.ts`).
+   - Uji ulang S4 `p2-history-0720` lulus Gerbang 1 (**APPROVED**, 0 error setelah 1x rewrite; [`followup.md`](../out/review/p2/followup.md)).
+   - Merge `phase/p2-facts-script` ke `main` (`--no-ff`), tag `p2-done`, lalu buat `phase/p3a-scene-kit` (`p3a-start`).
+2. **Scene Kit (`remotion/src/kit/`):**
+   - `tokens/`: 3 palet (`blueprint-navy`, `industrial-orange`, `dark-mystery`), font OFL, ukuran minimum teks (`≥44px` judul, `≥32px` caption, `≥26px` callout).
+   - `primitives/`: `Box`, `Cylinder`, `Sphere`, `Torus`, `Cone`, `Group`, `Ground`/`Grid`, `Line3D`, `Arrow3D`, `Label3D`, dukungan `cutaway`/transparansi.
+   - `drivers/`: `useDriver` (single driver) + helper kinematika murni (`solveCrankSlider`, `gearRatioAngle`, `wheelAngleFromDistance`, `springOscillation`, `valveStateFromCrankAngle`, `formatIdNumber`).
+   - `camera/`: `CameraRig` dengan preset 9:16 dan mode `frameEntities`.
+   - `assemblies/`: `WheelsetOnRail` (menapak rel, tanpa z-fighting), `PistonCrankAssembly` (cutaway, piston/batang/engkol/katup/busi dari `crankAngleDeg`), `Suspension` (pegas tersambung ke rangka).
+   - `foreground/` & `transitions/`: `ParallaxForeground` (tiang lewat & garis kedalaman) dan `SceneTransition`.
+   - `hud/`: tata letak berbasis zona (`HudLayout`, `HudZone` untuk `title`, `free`, `callout`, `caption`), `KineticTitle`, `StatCounter` (`bindToDriver` tanpa easing sendiri), `MeasureReveal` (garis ukur + nilai tetap tanpa count-up), `DimensionLine`, `Callout`, `ListReveal`, `DateStamp`, `Timeline`, `CompareCard`, `Waveform`.
+   - `telemetry/`: `TelemetryProvider` (`inputProps.telemetry = true`), `TelemetryEntity` (proyeksi `Box3` ke bounding box layar 2D + `partStates`), `TelemetryHudBox` (bounding box DOM HUD), log `MGS_TELEMETRY {...}`.
+   - `KIT-API.md`: dihasilkan otomatis dari AST TypeScript & JSDoc via `scripts/generate-kit-api.ts` (66 item di 10 kategori).
+3. **QC Visual Otomatis (`src/core/qc/visual/`) & CLI:**
+   - 5 pemeriksaan: `mechanics`, `framing`, `hud-overlap`, `hud-format`, dan `blank` (luma mean/std via FFmpeg), dengan CLI `mgs qc-visual --composition <id>`.
+4. **Komposisi Demo & Uji Mutasi:**
+   - `DemoKereta` (12s, 360 frame) dan `DemoMesin` (16s, 480 frame), keduanya lulus semua QC visual.
+   - 5 mutasi perilaku (`mut1-time-valve`, `mut2-hud-easing`, `mut3-framing`, `mut4-hud-overlap`, `mut5-hud-format`) semuanya **FAIL** dengan error pada layer yang tepat.
+
+### Bukti (`out/review/p3a/`)
+- [`demo-kereta.mp4`](../out/review/p3a/demo-kereta.mp4) & [`demo-kereta-contact-sheet.png`](../out/review/p3a/demo-kereta-contact-sheet.png) (720×1280, 30 fps, 12s).
+- [`demo-mesin.mp4`](../out/review/p3a/demo-mesin.mp4) & [`demo-mesin-contact-sheet.png`](../out/review/p3a/demo-mesin-contact-sheet.png) (720×1280, 30 fps, 16s).
+- [`qc/`](../out/review/p3a/qc/): `DemoKereta-qc.json` (`passed: true`, 45 sampel, 0 error) & `DemoMesin-qc.json` (`passed: true`, 60 sampel, 0 error).
+- [`mutations/mutation-summary.md`](../out/review/p3a/mutations/mutation-summary.md): 5/5 mutasi tertangkap (`mechanics`: 29 & 59 error; `framing`: 45 error; `hudOverlap`: 45 error; `hudFormat`: 1 error).
+- [`perf.md`](../out/review/p3a/perf.md): `DemoKereta` normal `9794 ms` vs telemetri `11883 ms` (`+21.3%`); `DemoMesin` normal `13894 ms` vs telemetri `14171 ms` (`+2.0%`).
+- [`KIT-API.md`](../out/review/p3a/KIT-API.md), [`followup.md`](../out/review/p3a/followup.md), [`verify.txt`](../out/review/p3a/verify.txt).

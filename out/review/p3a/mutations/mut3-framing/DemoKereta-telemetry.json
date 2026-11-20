@@ -1,0 +1,4232 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "distance": {
+        "value": -3.2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9538.1,
+          "y": 380.1,
+          "width": 7801.2,
+          "height": 2095.1
+        },
+        "partStates": {
+          "distance": -3.2,
+          "wheel_angle_deg": -398.58,
+          "lateral_shift": 0,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3059.1,
+          "y": 412.8,
+          "width": 927.6,
+          "height": 404
+        },
+        "partStates": {
+          "spring_length": 0.42,
+          "compression_ratio": 0.5
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999889,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999179,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999093,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -3,2 m",
+        "driverName": "distance",
+        "numericValue": -3.2
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999018,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "distance": {
+        "value": -3.058,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8344.8,
+          "y": 422.5,
+          "width": 6466.8,
+          "height": 1832.9
+        },
+        "partStates": {
+          "distance": -3.058,
+          "wheel_angle_deg": -380.86,
+          "lateral_shift": 0.023,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3075.9,
+          "y": 384,
+          "width": 944.4,
+          "height": 432.7
+        },
+        "partStates": {
+          "spring_length": 0.467,
+          "compression_ratio": 0.034
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -3,1 m",
+        "driverName": "distance",
+        "numericValue": -3.058
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "distance": {
+        "value": -2.916,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8591.5,
+          "y": 460.3,
+          "width": 6676.2,
+          "height": 1822.6
+        },
+        "partStates": {
+          "distance": -2.916,
+          "wheel_angle_deg": -363.15,
+          "lateral_shift": 0.044,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3071.3,
+          "y": 392,
+          "width": 939.8,
+          "height": 424.8
+        },
+        "partStates": {
+          "spring_length": 0.454,
+          "compression_ratio": 0.162
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,9 m",
+        "driverName": "distance",
+        "numericValue": -2.916
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "distance": {
+        "value": -2.773,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8758,
+          "y": 444.8,
+          "width": 6841.8,
+          "height": 1875.6
+        },
+        "partStates": {
+          "distance": -2.773,
+          "wheel_angle_deg": -345.44,
+          "lateral_shift": 0.062,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3051.2,
+          "y": 426.4,
+          "width": 919.7,
+          "height": 390.4
+        },
+        "partStates": {
+          "spring_length": 0.398,
+          "compression_ratio": 0.721
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,8 m",
+        "driverName": "distance",
+        "numericValue": -2.773
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "distance": {
+        "value": -2.631,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9786.2,
+          "y": 394.7,
+          "width": 7957,
+          "height": 2119.3
+        },
+        "partStates": {
+          "distance": -2.631,
+          "wheel_angle_deg": -327.72,
+          "lateral_shift": 0.074,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3041.3,
+          "y": 443.3,
+          "width": 909.9,
+          "height": 373.5
+        },
+        "partStates": {
+          "spring_length": 0.37,
+          "compression_ratio": 0.998
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,6 m",
+        "driverName": "distance",
+        "numericValue": -2.631
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "distance": {
+        "value": -2.489,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -11761.6,
+          "y": 379.4,
+          "width": 10060,
+          "height": 2422.1
+        },
+        "partStates": {
+          "distance": -2.489,
+          "wheel_angle_deg": -310.01,
+          "lateral_shift": 0.08,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3054.1,
+          "y": 421.4,
+          "width": 922.6,
+          "height": 395.4
+        },
+        "partStates": {
+          "spring_length": 0.406,
+          "compression_ratio": 0.64
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,5 m",
+        "driverName": "distance",
+        "numericValue": -2.489
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "distance": {
+        "value": -2.347,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -13294.1,
+          "y": 403.6,
+          "width": 11701.4,
+          "height": 2554
+        },
+        "partStates": {
+          "distance": -2.347,
+          "wheel_angle_deg": -292.29,
+          "lateral_shift": 0.079,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3073.4,
+          "y": 388.3,
+          "width": 941.9,
+          "height": 428.4
+        },
+        "partStates": {
+          "spring_length": 0.46,
+          "compression_ratio": 0.103
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,3 m",
+        "driverName": "distance",
+        "numericValue": -2.347
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "distance": {
+        "value": -2.204,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -13580.7,
+          "y": 440.3,
+          "width": 12023.9,
+          "height": 2513.8
+        },
+        "partStates": {
+          "distance": -2.204,
+          "wheel_angle_deg": -274.58,
+          "lateral_shift": 0.071,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3074.5,
+          "y": 386.4,
+          "width": 943,
+          "height": 430.3
+        },
+        "partStates": {
+          "spring_length": 0.463,
+          "compression_ratio": 0.073
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,2 m",
+        "driverName": "distance",
+        "numericValue": -2.204
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "distance": {
+        "value": -2.062,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -13175.2,
+          "y": 428.6,
+          "width": 11618.7,
+          "height": 2480.8
+        },
+        "partStates": {
+          "distance": -2.062,
+          "wheel_angle_deg": -256.86,
+          "lateral_shift": 0.057,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3056,
+          "y": 418.2,
+          "width": 924.5,
+          "height": 398.6
+        },
+        "partStates": {
+          "spring_length": 0.411,
+          "compression_ratio": 0.587
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -2,1 m",
+        "driverName": "distance",
+        "numericValue": -2.062
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "distance": {
+        "value": -1.92,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -11960.4,
+          "y": 384.9,
+          "width": 10350.4,
+          "height": 2413.4
+        },
+        "partStates": {
+          "distance": -1.92,
+          "wheel_angle_deg": -239.15,
+          "lateral_shift": 0.038,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3041.6,
+          "y": 442.9,
+          "width": 910.1,
+          "height": 373.9
+        },
+        "partStates": {
+          "spring_length": 0.371,
+          "compression_ratio": 0.99
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,9 m",
+        "driverName": "distance",
+        "numericValue": -1.92
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "distance": {
+        "value": -1.778,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9972.8,
+          "y": 378.1,
+          "width": 8240.1,
+          "height": 2169.3
+        },
+        "partStates": {
+          "distance": -1.778,
+          "wheel_angle_deg": -221.43,
+          "lateral_shift": 0.017,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3049.5,
+          "y": 429.3,
+          "width": 918,
+          "height": 387.5
+        },
+        "partStates": {
+          "spring_length": 0.393,
+          "compression_ratio": 0.768
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,8 m",
+        "driverName": "distance",
+        "numericValue": -1.778
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "distance": {
+        "value": -1.636,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8187,
+          "y": 412,
+          "width": 6344.6,
+          "height": 1818.3
+        },
+        "partStates": {
+          "distance": -1.636,
+          "wheel_angle_deg": -203.72,
+          "lateral_shift": -0.007,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3069.8,
+          "y": 394.6,
+          "width": 938.3,
+          "height": 422.2
+        },
+        "partStates": {
+          "spring_length": 0.45,
+          "compression_ratio": 0.204
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,6 m",
+        "driverName": "distance",
+        "numericValue": -1.636
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "distance": {
+        "value": -1.493,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -7955.9,
+          "y": 454,
+          "width": 6094.8,
+          "height": 1713
+        },
+        "partStates": {
+          "distance": -1.493,
+          "wheel_angle_deg": -186,
+          "lateral_shift": -0.03,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3076.5,
+          "y": 383,
+          "width": 945,
+          "height": 433.8
+        },
+        "partStates": {
+          "spring_length": 0.468,
+          "compression_ratio": 0.017
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,5 m",
+        "driverName": "distance",
+        "numericValue": -1.493
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "distance": {
+        "value": -1.351,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -7792.1,
+          "y": 446,
+          "width": 5950.1,
+          "height": 1693.4
+        },
+        "partStates": {
+          "distance": -1.351,
+          "wheel_angle_deg": -168.29,
+          "lateral_shift": -0.05,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3061,
+          "y": 409.5,
+          "width": 929.6,
+          "height": 407.3
+        },
+        "partStates": {
+          "spring_length": 0.425,
+          "compression_ratio": 0.446
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,4 m",
+        "driverName": "distance",
+        "numericValue": -1.351
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "distance": {
+        "value": -1.209,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8164.1,
+          "y": 392.4,
+          "width": 6410.7,
+          "height": 1839.3
+        },
+        "partStates": {
+          "distance": -1.209,
+          "wheel_angle_deg": -150.57,
+          "lateral_shift": -0.066,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3043.3,
+          "y": 440,
+          "width": 911.8,
+          "height": 376.8
+        },
+        "partStates": {
+          "spring_length": 0.376,
+          "compression_ratio": 0.944
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,2 m",
+        "driverName": "distance",
+        "numericValue": -1.209
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "distance": {
+        "value": -1.067,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9424.2,
+          "y": 370.9,
+          "width": 7796.2,
+          "height": 2072.9
+        },
+        "partStates": {
+          "distance": -1.067,
+          "wheel_angle_deg": -132.86,
+          "lateral_shift": -0.076,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3045.7,
+          "y": 435.8,
+          "width": 914.2,
+          "height": 380.9
+        },
+        "partStates": {
+          "spring_length": 0.382,
+          "compression_ratio": 0.875
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -1,1 m",
+        "driverName": "distance",
+        "numericValue": -1.067
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "distance": {
+        "value": -0.924,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10566.2,
+          "y": 388.2,
+          "width": 9053.9,
+          "height": 2178.1
+        },
+        "partStates": {
+          "distance": -0.924,
+          "wheel_angle_deg": -115.15,
+          "lateral_shift": -0.08,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3065.3,
+          "y": 402.2,
+          "width": 933.8,
+          "height": 414.5
+        },
+        "partStates": {
+          "spring_length": 0.437,
+          "compression_ratio": 0.328
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,9 m",
+        "driverName": "distance",
+        "numericValue": -0.924
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "distance": {
+        "value": -0.782,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -11009.7,
+          "y": 430.2,
+          "width": 9534.9,
+          "height": 2145.2
+        },
+        "partStates": {
+          "distance": -0.782,
+          "wheel_angle_deg": -97.43,
+          "lateral_shift": -0.077,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3077.1,
+          "y": 381.9,
+          "width": 945.7,
+          "height": 434.8
+        },
+        "partStates": {
+          "spring_length": 0.47,
+          "compression_ratio": 0
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,8 m",
+        "driverName": "distance",
+        "numericValue": -0.782
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "distance": {
+        "value": -0.64,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -11098.4,
+          "y": 429.9,
+          "width": 9615.3,
+          "height": 2161.4
+        },
+        "partStates": {
+          "distance": -0.64,
+          "wheel_angle_deg": -79.72,
+          "lateral_shift": -0.067,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3066,
+          "y": 401.1,
+          "width": 934.5,
+          "height": 415.7
+        },
+        "partStates": {
+          "spring_length": 0.439,
+          "compression_ratio": 0.309
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,6 m",
+        "driverName": "distance",
+        "numericValue": -0.64
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "distance": {
+        "value": -0.498,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10788.6,
+          "y": 384.4,
+          "width": 9247.5,
+          "height": 2227.2
+        },
+        "partStates": {
+          "distance": -0.498,
+          "wheel_angle_deg": -62,
+          "lateral_shift": -0.052,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3046.2,
+          "y": 435,
+          "width": 914.7,
+          "height": 381.8
+        },
+        "partStates": {
+          "spring_length": 0.384,
+          "compression_ratio": 0.862
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,5 m",
+        "driverName": "distance",
+        "numericValue": -0.498
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "distance": {
+        "value": -0.356,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9655.4,
+          "y": 373.8,
+          "width": 7974.5,
+          "height": 2117.5
+        },
+        "partStates": {
+          "distance": -0.356,
+          "wheel_angle_deg": -44.29,
+          "lateral_shift": -0.032,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3042.9,
+          "y": 440.6,
+          "width": 911.5,
+          "height": 376.2
+        },
+        "partStates": {
+          "spring_length": 0.375,
+          "compression_ratio": 0.953
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,4 m",
+        "driverName": "distance",
+        "numericValue": -0.356
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "distance": {
+        "value": -0.213,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8406.1,
+          "y": 403.2,
+          "width": 6591.1,
+          "height": 1869.4
+        },
+        "partStates": {
+          "distance": -0.213,
+          "wheel_angle_deg": -26.57,
+          "lateral_shift": -0.01,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3060.3,
+          "y": 410.7,
+          "width": 928.8,
+          "height": 406
+        },
+        "partStates": {
+          "spring_length": 0.423,
+          "compression_ratio": 0.466
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,2 m",
+        "driverName": "distance",
+        "numericValue": -0.213
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "distance": {
+        "value": -0.071,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8293.9,
+          "y": 457.8,
+          "width": 6398.1,
+          "height": 1772.4
+        },
+        "partStates": {
+          "distance": -0.071,
+          "wheel_angle_deg": -8.86,
+          "lateral_shift": 0.014,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3076.3,
+          "y": 383.3,
+          "width": 944.8,
+          "height": 433.4
+        },
+        "partStates": {
+          "spring_length": 0.468,
+          "compression_ratio": 0.023
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: -0,1 m",
+        "driverName": "distance",
+        "numericValue": -0.071
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "distance": {
+        "value": 0.071,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8490.7,
+          "y": 459.7,
+          "width": 6578.3,
+          "height": 1806.3
+        },
+        "partStates": {
+          "distance": 0.071,
+          "wheel_angle_deg": 8.86,
+          "lateral_shift": 0.036,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3070.3,
+          "y": 393.6,
+          "width": 938.9,
+          "height": 423.2
+        },
+        "partStates": {
+          "spring_length": 0.451,
+          "compression_ratio": 0.188
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,1 m",
+        "driverName": "distance",
+        "numericValue": 0.071
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "distance": {
+        "value": 0.213,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9010.6,
+          "y": 407.6,
+          "width": 7148.7,
+          "height": 1971.4
+        },
+        "partStates": {
+          "distance": 0.213,
+          "wheel_angle_deg": 26.57,
+          "lateral_shift": 0.055,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3050.1,
+          "y": 428.2,
+          "width": 918.7,
+          "height": 388.6
+        },
+        "partStates": {
+          "spring_length": 0.395,
+          "compression_ratio": 0.751
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,2 m",
+        "driverName": "distance",
+        "numericValue": 0.213
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "distance": {
+        "value": 0.356,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10954.1,
+          "y": 379.3,
+          "width": 9206.8,
+          "height": 2319.7
+        },
+        "partStates": {
+          "distance": 0.356,
+          "wheel_angle_deg": 44.29,
+          "lateral_shift": 0.069,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3041.5,
+          "y": 443.1,
+          "width": 910,
+          "height": 373.7
+        },
+        "partStates": {
+          "spring_length": 0.371,
+          "compression_ratio": 0.994
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,4 m",
+        "driverName": "distance",
+        "numericValue": 0.356
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "distance": {
+        "value": 0.498,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -12895.1,
+          "y": 391.7,
+          "width": 11276.9,
+          "height": 2530.3
+        },
+        "partStates": {
+          "distance": 0.498,
+          "wheel_angle_deg": 62,
+          "lateral_shift": 0.078,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3055.3,
+          "y": 419.4,
+          "width": 923.8,
+          "height": 397.4
+        },
+        "partStates": {
+          "spring_length": 0.409,
+          "compression_ratio": 0.607
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,5 m",
+        "driverName": "distance",
+        "numericValue": 0.498
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "distance": {
+        "value": 0.64,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -13658.7,
+          "y": 440.2,
+          "width": 12091.6,
+          "height": 2527.1
+        },
+        "partStates": {
+          "distance": 0.64,
+          "wheel_angle_deg": 79.72,
+          "lateral_shift": 0.08,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3074.1,
+          "y": 387.1,
+          "width": 942.6,
+          "height": 429.6
+        },
+        "partStates": {
+          "spring_length": 0.462,
+          "compression_ratio": 0.084
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,6 m",
+        "driverName": "distance",
+        "numericValue": 0.64
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "distance": {
+        "value": 0.782,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -13621.3,
+          "y": 440.8,
+          "width": 12060.5,
+          "height": 2519.4
+        },
+        "partStates": {
+          "distance": 0.782,
+          "wheel_angle_deg": 97.43,
+          "lateral_shift": 0.075,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3073.8,
+          "y": 387.6,
+          "width": 942.4,
+          "height": 429.2
+        },
+        "partStates": {
+          "spring_length": 0.461,
+          "compression_ratio": 0.091
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,8 m",
+        "driverName": "distance",
+        "numericValue": 0.782
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "distance": {
+        "value": 0.924,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -12825.4,
+          "y": 396.3,
+          "width": 11229.9,
+          "height": 2505.9
+        },
+        "partStates": {
+          "distance": 0.924,
+          "wheel_angle_deg": 115.15,
+          "lateral_shift": 0.064,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3054.8,
+          "y": 420.2,
+          "width": 923.3,
+          "height": 396.6
+        },
+        "partStates": {
+          "spring_length": 0.408,
+          "compression_ratio": 0.62
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 0,9 m",
+        "driverName": "distance",
+        "numericValue": 0.924
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "distance": {
+        "value": 1.067,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10947.7,
+          "y": 377.3,
+          "width": 9242.5,
+          "height": 2311.1
+        },
+        "partStates": {
+          "distance": 1.067,
+          "wheel_angle_deg": 132.86,
+          "lateral_shift": 0.047,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3041.4,
+          "y": 443.2,
+          "width": 909.9,
+          "height": 373.6
+        },
+        "partStates": {
+          "spring_length": 0.37,
+          "compression_ratio": 0.996
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,1 m",
+        "driverName": "distance",
+        "numericValue": 1.067
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "distance": {
+        "value": 1.209,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8994.5,
+          "y": 398.1,
+          "width": 7177.5,
+          "height": 1980.4
+        },
+        "partStates": {
+          "distance": 1.209,
+          "wheel_angle_deg": 150.57,
+          "lateral_shift": 0.026,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3050.5,
+          "y": 427.5,
+          "width": 919.1,
+          "height": 389.3
+        },
+        "partStates": {
+          "spring_length": 0.396,
+          "compression_ratio": 0.739
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,2 m",
+        "driverName": "distance",
+        "numericValue": 1.209
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "distance": {
+        "value": 1.351,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8218.2,
+          "y": 450.3,
+          "width": 6337.8,
+          "height": 1768
+        },
+        "partStates": {
+          "distance": 1.351,
+          "wheel_angle_deg": 168.29,
+          "lateral_shift": 0.003,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3070.7,
+          "y": 392.9,
+          "width": 939.2,
+          "height": 423.8
+        },
+        "partStates": {
+          "spring_length": 0.452,
+          "compression_ratio": 0.178
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,4 m",
+        "driverName": "distance",
+        "numericValue": 1.351
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "distance": {
+        "value": 1.493,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8031.4,
+          "y": 454.8,
+          "width": 6163.5,
+          "height": 1726.2
+        },
+        "partStates": {
+          "distance": 1.493,
+          "wheel_angle_deg": 186,
+          "lateral_shift": -0.02,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3076.2,
+          "y": 383.6,
+          "width": 944.7,
+          "height": 433.2
+        },
+        "partStates": {
+          "spring_length": 0.467,
+          "compression_ratio": 0.027
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,5 m",
+        "driverName": "distance",
+        "numericValue": 1.493
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "distance": {
+        "value": 1.636,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -7906,
+          "y": 409.6,
+          "width": 6088.6,
+          "height": 1769.4
+        },
+        "partStates": {
+          "distance": 1.636,
+          "wheel_angle_deg": 203.72,
+          "lateral_shift": -0.042,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3059.8,
+          "y": 411.6,
+          "width": 928.4,
+          "height": 405.2
+        },
+        "partStates": {
+          "spring_length": 0.422,
+          "compression_ratio": 0.48
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,6 m",
+        "driverName": "distance",
+        "numericValue": 1.636
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "distance": {
+        "value": 1.778,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9128.9,
+          "y": 374.1,
+          "width": 7445.5,
+          "height": 2032.7
+        },
+        "partStates": {
+          "distance": 1.778,
+          "wheel_angle_deg": 221.43,
+          "lateral_shift": -0.06,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3042.7,
+          "y": 440.9,
+          "width": 911.3,
+          "height": 375.9
+        },
+        "partStates": {
+          "spring_length": 0.374,
+          "compression_ratio": 0.958
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,8 m",
+        "driverName": "distance",
+        "numericValue": 1.778
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 288,
+    "sec": 9.6,
+    "drivers": {
+      "distance": {
+        "value": 1.92,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10350,
+          "y": 379,
+          "width": 8805.3,
+          "height": 2174.2
+        },
+        "partStates": {
+          "distance": 1.92,
+          "wheel_angle_deg": 239.15,
+          "lateral_shift": -0.073,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3046.5,
+          "y": 434.4,
+          "width": 915,
+          "height": 382.3
+        },
+        "partStates": {
+          "spring_length": 0.385,
+          "compression_ratio": 0.852
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 1,9 m",
+        "driverName": "distance",
+        "numericValue": 1.92
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 296,
+    "sec": 9.867,
+    "drivers": {
+      "distance": {
+        "value": 2.062,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10920.8,
+          "y": 419.6,
+          "width": 9441.4,
+          "height": 2155.6
+        },
+        "partStates": {
+          "distance": 2.062,
+          "wheel_angle_deg": 256.86,
+          "lateral_shift": -0.079,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3066.4,
+          "y": 400.3,
+          "width": 934.9,
+          "height": 416.4
+        },
+        "partStates": {
+          "spring_length": 0.44,
+          "compression_ratio": 0.297
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,1 m",
+        "driverName": "distance",
+        "numericValue": 2.062
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 304,
+    "sec": 10.133,
+    "drivers": {
+      "distance": {
+        "value": 2.204,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -11010.3,
+          "y": 429.9,
+          "width": 9538.1,
+          "height": 2145.3
+        },
+        "partStates": {
+          "distance": 2.204,
+          "wheel_angle_deg": 274.58,
+          "lateral_shift": -0.079,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3077.1,
+          "y": 382,
+          "width": 945.6,
+          "height": 434.8
+        },
+        "partStates": {
+          "spring_length": 0.47,
+          "compression_ratio": 0.001
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,2 m",
+        "driverName": "distance",
+        "numericValue": 2.204
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 312,
+    "sec": 10.4,
+    "drivers": {
+      "distance": {
+        "value": 2.347,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -10792.1,
+          "y": 394.7,
+          "width": 9286.7,
+          "height": 2196.1
+        },
+        "partStates": {
+          "distance": 2.347,
+          "wheel_angle_deg": 292.29,
+          "lateral_shift": -0.072,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3064.8,
+          "y": 403,
+          "width": 933.4,
+          "height": 413.7
+        },
+        "partStates": {
+          "spring_length": 0.436,
+          "compression_ratio": 0.341
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,3 m",
+        "driverName": "distance",
+        "numericValue": 2.347
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 320,
+    "sec": 10.667,
+    "drivers": {
+      "distance": {
+        "value": 2.489,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -9847.8,
+          "y": 372.1,
+          "width": 8233.1,
+          "height": 2132.3
+        },
+        "partStates": {
+          "distance": 2.489,
+          "wheel_angle_deg": 310.01,
+          "lateral_shift": -0.059,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3045.4,
+          "y": 436.4,
+          "width": 913.9,
+          "height": 380.4
+        },
+        "partStates": {
+          "spring_length": 0.382,
+          "compression_ratio": 0.884
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,5 m",
+        "driverName": "distance",
+        "numericValue": 2.489
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 328,
+    "sec": 10.933,
+    "drivers": {
+      "distance": {
+        "value": 2.631,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8603,
+          "y": 387.7,
+          "width": 6853.7,
+          "height": 1924.4
+        },
+        "partStates": {
+          "distance": 2.631,
+          "wheel_angle_deg": 327.72,
+          "lateral_shift": -0.041,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3043.5,
+          "y": 439.6,
+          "width": 912,
+          "height": 377.2
+        },
+        "partStates": {
+          "spring_length": 0.376,
+          "compression_ratio": 0.938
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,6 m",
+        "driverName": "distance",
+        "numericValue": 2.631
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 336,
+    "sec": 11.2,
+    "drivers": {
+      "distance": {
+        "value": 2.773,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8043.2,
+          "y": 438.3,
+          "width": 6187.6,
+          "height": 1752.9
+        },
+        "partStates": {
+          "distance": 2.773,
+          "wheel_angle_deg": 345.44,
+          "lateral_shift": -0.02,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3061.5,
+          "y": 408.7,
+          "width": 930,
+          "height": 408.1
+        },
+        "partStates": {
+          "spring_length": 0.427,
+          "compression_ratio": 0.433
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,8 m",
+        "driverName": "distance",
+        "numericValue": 2.773
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 344,
+    "sec": 11.467,
+    "drivers": {
+      "distance": {
+        "value": 2.916,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8231.3,
+          "y": 456.8,
+          "width": 6346.3,
+          "height": 1760.6
+        },
+        "partStates": {
+          "distance": 2.916,
+          "wheel_angle_deg": 363.15,
+          "lateral_shift": 0.004,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3076.6,
+          "y": 382.8,
+          "width": 945.2,
+          "height": 434
+        },
+        "partStates": {
+          "spring_length": 0.469,
+          "compression_ratio": 0.014
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 2,9 m",
+        "driverName": "distance",
+        "numericValue": 2.916
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  },
+  {
+    "frame": 352,
+    "sec": 11.733,
+    "drivers": {
+      "distance": {
+        "value": 3.058,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": -8375.8,
+          "y": 422.8,
+          "width": 6495.1,
+          "height": 1838.2
+        },
+        "partStates": {
+          "distance": 3.058,
+          "wheel_angle_deg": 380.86,
+          "lateral_shift": 0.027,
+          "on_rail": true
+        }
+      },
+      {
+        "id": "suspension_left",
+        "role": "prop",
+        "bbox": {
+          "x": -3069.4,
+          "y": 395.2,
+          "width": 937.9,
+          "height": 421.5
+        },
+        "partStates": {
+          "spring_length": 0.449,
+          "compression_ratio": 0.215
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 96,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Roda Kerucut 1:20 — Mengapa kereta tidak tergelincir di tikungan?"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 820,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Kemiringan Tapak Roda: 1:20"
+      },
+      {
+        "id": "stat_distance",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 906,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Jarak Tempuh: 3,1 m",
+        "driverName": "distance",
+        "numericValue": 3.058
+      },
+      {
+        "id": "callout_wheel",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 981,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Kontak Tapak Kerucut — Lebar rel 1.435 mm"
+      }
+    ]
+  }
+]
