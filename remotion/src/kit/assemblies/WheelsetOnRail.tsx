@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { computeWheelsetLayout } from '../drivers/geometry';
 import { TelemetryEntity } from '../telemetry/TelemetryEntity';
@@ -39,8 +39,8 @@ export interface WheelsetOnRailProps {
 }
 
 /**
- * Conical wheelset seated flush on twin Z-axis rail heads, with axle perpendicular
- * to the track, inner flanges, and rotation derived strictly from distance.
+ * Conical wheelset seated flush on twin Z-axis rail heads, with solid conical
+ * lathe tread + integral inner flange, perpendicular axle, and rotation from distance.
  */
 export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
   entityId = 'wheelset',
@@ -80,11 +80,22 @@ export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
     yawOffsetRad,
   });
 
-  const effectiveTaper = coneRatio * taperExaggeration;
-  const outerR = Math.max(0.2, wheelRadius - 0.08 * effectiveTaper * 12);
-  const innerR = wheelRadius + 0.08 * effectiveTaper * 12;
-  const flangeRadius = innerR + 0.085;
+  const slopeDelta = Math.min(0.16, 0.025 * taperExaggeration);
+  const outerR = Math.max(0.24, wheelRadius - slopeDelta);
+  const innerR = wheelRadius + slopeDelta;
+  const flangeRadius = innerR + 0.095;
   const wheelAngleDeg = Math.round(((layout.spinRad * 180) / Math.PI) * 100) / 100;
+
+  // Solid lathe profile: Y in lathe = axial coordinate (0 at inner flange -> +0.28 at outer tread)
+  const solidTreadGeo = useMemo(() => {
+    const pts = [
+      new THREE.Vector2(0.06, -0.14),
+      new THREE.Vector2(innerR, -0.14),
+      new THREE.Vector2(outerR, 0.14),
+      new THREE.Vector2(0.06, 0.14),
+    ];
+    return new THREE.LatheGeometry(pts, 36);
+  }, [innerR, outerR]);
 
   return (
     <TelemetryEntity
@@ -131,49 +142,49 @@ export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
           const isRight = side > 0;
           const xWheel = isRight ? layout.rightWheelLocalX : layout.leftWheelLocalX;
           const xFlange = isRight ? layout.rightFlangeLocalX : layout.leftFlangeLocalX;
-          const effR = isRight ? layout.rightEffectiveRadius : layout.leftEffectiveRadius;
-          const treadRotZ = isRight ? Math.PI / 2 : -Math.PI / 2;
+          const treadRotZ = isRight ? -Math.PI / 2 : Math.PI / 2;
+          // Exaggerated effective diameter rings when lateralShift > 0
+          const visualRingR = isRight ? wheelRadius + 0.12 : wheelRadius - 0.14;
 
           return (
             <group key={side}>
-              {/* Conical wheel tread (rotates around X to roll along Z) */}
+              {/* Solid conical wheel tread (rotates around X to roll along Z) */}
               <group
                 ref={isRight ? wheelRightRef : wheelLeftRef}
                 position={[xWheel, 0, 0]}
                 rotation={[layout.spinRad, 0, 0]}
               >
-                <mesh rotation={[0, 0, treadRotZ]}>
-                  <cylinderGeometry args={[outerR, innerR, 0.16, 32]} />
+                <mesh geometry={solidTreadGeo} rotation={[0, 0, treadRotZ]}>
                   <meshStandardMaterial
                     color={tokens.colors.steelLight}
-                    metalness={0.65}
-                    roughness={0.3}
+                    metalness={0.55}
+                    roughness={0.35}
                     transparent={cutaway}
                     opacity={cutaway ? 0.4 : 1}
                   />
                 </mesh>
                 {/* Radial spoke marker */}
-                <mesh position={[side * 0.088, wheelRadius * 0.42, 0]}>
-                  <boxGeometry args={[0.014, wheelRadius * 0.68, 0.05]} />
+                <mesh position={[side * 0.15, wheelRadius * 0.4, 0]}>
+                  <boxGeometry args={[0.016, wheelRadius * 0.65, 0.055]} />
                   <meshStandardMaterial
                     color={tokens.colors.primary}
                     emissive={tokens.colors.primary}
-                    emissiveIntensity={0.75}
+                    emissiveIntensity={0.8}
                   />
                 </mesh>
               </group>
 
-              {/* Inner flange */}
+              {/* Solid integral inner flange */}
               <mesh
                 ref={isRight ? undefined : flangeRef}
                 position={[xFlange, 0, 0]}
                 rotation={[layout.spinRad, 0, Math.PI / 2]}
               >
-                <cylinderGeometry args={[flangeRadius, flangeRadius, 0.032, 32]} />
+                <cylinderGeometry args={[flangeRadius, flangeRadius, 0.045, 36]} />
                 <meshStandardMaterial
                   color={tokens.colors.accent}
                   emissive={tokens.colors.accent}
-                  emissiveIntensity={0.25}
+                  emissiveIntensity={0.28}
                   metalness={0.5}
                   roughness={0.35}
                   polygonOffset
@@ -194,14 +205,14 @@ export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
                 />
               </mesh>
 
-              {/* Effective diameter comparison ring */}
+              {/* Exaggerated effective diameter ring on outer vs inner wheel */}
               {showEffectiveDiameter ? (
-                <mesh position={[xWheel, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
-                  <torusGeometry args={[effR, isRight ? 0.028 : 0.018, 12, 36]} />
+                <mesh position={[xWheel + side * 0.06, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
+                  <torusGeometry args={[visualRingR, isRight ? 0.038 : 0.022, 12, 36]} />
                   <meshStandardMaterial
                     color={isRight ? tokens.colors.accentWarm : tokens.colors.primaryGlow}
                     emissive={isRight ? tokens.colors.accent : tokens.colors.primary}
-                    emissiveIntensity={1.1}
+                    emissiveIntensity={1.25}
                   />
                 </mesh>
               ) : null}

@@ -1,0 +1,6422 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 215.9,
+          "y": 183.6,
+          "width": 303.2,
+          "height": 639.2
+        },
+        "parts": {
+          "piston": {
+            "x": 245.3,
+            "y": 360.7,
+            "width": 238.7,
+            "height": 81.7
+          },
+          "crank": {
+            "x": 310.7,
+            "y": 631.3,
+            "width": 99.9,
+            "height": 163
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 192.9,
+            "width": 87.6,
+            "height": 103.2
+          },
+          "exhaust_valve": {
+            "x": 364.7,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999063,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 0°",
+        "driverName": "crank_angle",
+        "numericValue": 0
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 12,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 215.9,
+          "y": 183.6,
+          "width": 303.2,
+          "height": 647.4
+        },
+        "parts": {
+          "piston": {
+            "x": 245.3,
+            "y": 363.3,
+            "width": 238.7,
+            "height": 82
+          },
+          "crank": {
+            "x": 303.1,
+            "y": 629.8,
+            "width": 115,
+            "height": 172.8
+          },
+          "intake_valve": {
+            "x": 267.6,
+            "y": 203.4,
+            "width": 87.5,
+            "height": 102.5
+          },
+          "exhaust_valve": {
+            "x": 364.7,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 12,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.433
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 12°",
+        "driverName": "crank_angle",
+        "numericValue": 12
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 24,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 215.9,
+          "y": 183.6,
+          "width": 303.2,
+          "height": 653.3
+        },
+        "parts": {
+          "piston": {
+            "x": 245.4,
+            "y": 370.9,
+            "width": 238.4,
+            "height": 83
+          },
+          "crank": {
+            "x": 297.7,
+            "y": 632.8,
+            "width": 128.8,
+            "height": 175.9
+          },
+          "intake_valve": {
+            "x": 267.7,
+            "y": 213.5,
+            "width": 87.4,
+            "height": 101.8
+          },
+          "exhaust_valve": {
+            "x": 364.7,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 24,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.385
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 24°",
+        "driverName": "crank_angle",
+        "numericValue": 24
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 36,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 215.9,
+          "y": 183.6,
+          "width": 303.1,
+          "height": 656.6
+        },
+        "parts": {
+          "piston": {
+            "x": 245.6,
+            "y": 383,
+            "width": 238.1,
+            "height": 84.6
+          },
+          "crank": {
+            "x": 294.7,
+            "y": 639.6,
+            "width": 148.5,
+            "height": 172.4
+          },
+          "intake_valve": {
+            "x": 267.8,
+            "y": 222.6,
+            "width": 87.3,
+            "height": 101.1
+          },
+          "exhaust_valve": {
+            "x": 364.7,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 36,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.308
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 36°",
+        "driverName": "crank_angle",
+        "numericValue": 36
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 48,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216,
+          "y": 183.7,
+          "width": 303.1,
+          "height": 657.2
+        },
+        "parts": {
+          "piston": {
+            "x": 245.8,
+            "y": 398.6,
+            "width": 237.6,
+            "height": 86.7
+          },
+          "crank": {
+            "x": 294.1,
+            "y": 650.6,
+            "width": 162.3,
+            "height": 162.1
+          },
+          "intake_valve": {
+            "x": 267.8,
+            "y": 230.5,
+            "width": 87.2,
+            "height": 100.6
+          },
+          "exhaust_valve": {
+            "x": 364.7,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 48,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.209
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 48°",
+        "driverName": "crank_angle",
+        "numericValue": 48
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 60,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216,
+          "y": 183.7,
+          "width": 303,
+          "height": 655.2
+        },
+        "parts": {
+          "piston": {
+            "x": 246.1,
+            "y": 416.6,
+            "width": 237.1,
+            "height": 89
+          },
+          "crank": {
+            "x": 296.1,
+            "y": 665.1,
+            "width": 169.8,
+            "height": 145.5
+          },
+          "intake_valve": {
+            "x": 267.9,
+            "y": 236.7,
+            "width": 87.1,
+            "height": 100.1
+          },
+          "exhaust_valve": {
+            "x": 364.8,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 60,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.095
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 60°",
+        "driverName": "crank_angle",
+        "numericValue": 60
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 72,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216.1,
+          "y": 183.7,
+          "width": 302.8,
+          "height": 650.5
+        },
+        "parts": {
+          "piston": {
+            "x": 246.4,
+            "y": 435.6,
+            "width": 236.5,
+            "height": 91.5
+          },
+          "crank": {
+            "x": 300.5,
+            "y": 678.8,
+            "width": 170.7,
+            "height": 127.2
+          },
+          "intake_valve": {
+            "x": 268,
+            "y": 241,
+            "width": 87.1,
+            "height": 99.8
+          },
+          "exhaust_valve": {
+            "x": 364.8,
+            "y": 195.5,
+            "width": 88.8,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 72,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.972
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 72°",
+        "driverName": "crank_angle",
+        "numericValue": 72
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 84,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216.2,
+          "y": 183.7,
+          "width": 302.6,
+          "height": 643.5
+        },
+        "parts": {
+          "piston": {
+            "x": 246.7,
+            "y": 454.6,
+            "width": 235.8,
+            "height": 93.9
+          },
+          "crank": {
+            "x": 307.1,
+            "y": 685.1,
+            "width": 165.1,
+            "height": 113.6
+          },
+          "intake_valve": {
+            "x": 268,
+            "y": 243.1,
+            "width": 87,
+            "height": 99.7
+          },
+          "exhaust_valve": {
+            "x": 364.8,
+            "y": 195.5,
+            "width": 88.8,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.3,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 84,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.85
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 84°",
+        "driverName": "crank_angle",
+        "numericValue": 84
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 96,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216.4,
+          "y": 183.7,
+          "width": 302.3,
+          "height": 643.4
+        },
+        "parts": {
+          "piston": {
+            "x": 247,
+            "y": 472.4,
+            "width": 235.1,
+            "height": 96.2
+          },
+          "crank": {
+            "x": 307.1,
+            "y": 685.1,
+            "width": 165.1,
+            "height": 113.6
+          },
+          "intake_valve": {
+            "x": 268,
+            "y": 243.2,
+            "width": 86.9,
+            "height": 99.7
+          },
+          "exhaust_valve": {
+            "x": 364.9,
+            "y": 195.5,
+            "width": 88.7,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.3,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 96,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.735
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 96°",
+        "driverName": "crank_angle",
+        "numericValue": 96
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 108,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216.6,
+          "y": 183.7,
+          "width": 301.9,
+          "height": 650.4
+        },
+        "parts": {
+          "piston": {
+            "x": 247.4,
+            "y": 488.3,
+            "width": 234.4,
+            "height": 98.2
+          },
+          "crank": {
+            "x": 300.6,
+            "y": 678.9,
+            "width": 170.6,
+            "height": 127
+          },
+          "intake_valve": {
+            "x": 268,
+            "y": 241,
+            "width": 86.8,
+            "height": 99.8
+          },
+          "exhaust_valve": {
+            "x": 365,
+            "y": 195.5,
+            "width": 88.6,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.3,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 108,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.632
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 108°",
+        "driverName": "crank_angle",
+        "numericValue": 108
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 120,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 216.9,
+          "y": 183.7,
+          "width": 301.5,
+          "height": 665.5
+        },
+        "parts": {
+          "piston": {
+            "x": 247.7,
+            "y": 501.9,
+            "width": 233.7,
+            "height": 99.9
+          },
+          "crank": {
+            "x": 296.4,
+            "y": 675,
+            "width": 169.5,
+            "height": 145.6
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 236.7,
+            "width": 86.6,
+            "height": 100.1
+          },
+          "exhaust_valve": {
+            "x": 365.1,
+            "y": 195.5,
+            "width": 88.5,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.5,
+            "y": 196.9,
+            "width": 29.2,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 120,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.545
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 120°",
+        "driverName": "crank_angle",
+        "numericValue": 120
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 132,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 217.2,
+          "y": 183.8,
+          "width": 300.9,
+          "height": 681.7
+        },
+        "parts": {
+          "piston": {
+            "x": 248.1,
+            "y": 512.8,
+            "width": 232.9,
+            "height": 101.2
+          },
+          "crank": {
+            "x": 294.6,
+            "y": 673.7,
+            "width": 161.6,
+            "height": 162.4
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 230.6,
+            "width": 86.5,
+            "height": 100.5
+          },
+          "exhaust_valve": {
+            "x": 365.2,
+            "y": 195.4,
+            "width": 88.3,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.5,
+            "y": 196.9,
+            "width": 29.2,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 132,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.473
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 132°",
+        "driverName": "crank_angle",
+        "numericValue": 132
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 144,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 217.6,
+          "y": 183.8,
+          "width": 300.2,
+          "height": 694.1
+        },
+        "parts": {
+          "piston": {
+            "x": 248.5,
+            "y": 521.2,
+            "width": 232.2,
+            "height": 102.2
+          },
+          "crank": {
+            "x": 295.3,
+            "y": 675.1,
+            "width": 147.4,
+            "height": 172.8
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 222.7,
+            "width": 86.3,
+            "height": 101
+          },
+          "exhaust_valve": {
+            "x": 365.4,
+            "y": 195.4,
+            "width": 88.2,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.5,
+            "y": 196.9,
+            "width": 29.1,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 144,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.419
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 144°",
+        "driverName": "crank_angle",
+        "numericValue": 144
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 156,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 218,
+          "y": 183.8,
+          "width": 299.3,
+          "height": 702.2
+        },
+        "parts": {
+          "piston": {
+            "x": 248.9,
+            "y": 527.1,
+            "width": 231.4,
+            "height": 102.8
+          },
+          "crank": {
+            "x": 298.5,
+            "y": 679,
+            "width": 127.4,
+            "height": 176.3
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 213.6,
+            "width": 86.1,
+            "height": 101.6
+          },
+          "exhaust_valve": {
+            "x": 365.6,
+            "y": 195.4,
+            "width": 87.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.6,
+            "y": 196.9,
+            "width": 29,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 156,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.38
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 156°",
+        "driverName": "crank_angle",
+        "numericValue": 156
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 168,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 218.6,
+          "y": 183.9,
+          "width": 298.4,
+          "height": 705.5
+        },
+        "parts": {
+          "piston": {
+            "x": 249.4,
+            "y": 530.6,
+            "width": 230.5,
+            "height": 103.2
+          },
+          "crank": {
+            "x": 304.1,
+            "y": 684.9,
+            "width": 113.2,
+            "height": 173.4
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 203.6,
+            "width": 85.9,
+            "height": 102.3
+          },
+          "exhaust_valve": {
+            "x": 365.8,
+            "y": 195.4,
+            "width": 87.7,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.6,
+            "y": 196.9,
+            "width": 28.9,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 168,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.358
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: BUKA · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "1. Hisap"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 168°",
+        "driverName": "crank_angle",
+        "numericValue": 168
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "crank_angle": {
+        "value": 180,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 219.2,
+          "y": 184,
+          "width": 297.2,
+          "height": 704
+        },
+        "parts": {
+          "piston": {
+            "x": 249.9,
+            "y": 531.8,
+            "width": 229.6,
+            "height": 103.2
+          },
+          "crank": {
+            "x": 311.8,
+            "y": 692.7,
+            "width": 97.7,
+            "height": 163.7
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 193.1,
+            "width": 85.6,
+            "height": 103
+          },
+          "exhaust_valve": {
+            "x": 366,
+            "y": 195.4,
+            "width": 87.4,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.7,
+            "y": 196.9,
+            "width": 28.8,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 180,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.35
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 180°",
+        "driverName": "crank_angle",
+        "numericValue": 180
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 192,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 219.9,
+          "y": 184,
+          "width": 295.9,
+          "height": 705
+        },
+        "parts": {
+          "piston": {
+            "x": 250.4,
+            "y": 530.7,
+            "width": 228.6,
+            "height": 102.9
+          },
+          "crank": {
+            "x": 304.4,
+            "y": 685,
+            "width": 112.6,
+            "height": 173.1
+          },
+          "intake_valve": {
+            "x": 268.2,
+            "y": 193.2,
+            "width": 85.2,
+            "height": 102.9
+          },
+          "exhaust_valve": {
+            "x": 366.3,
+            "y": 195.4,
+            "width": 87.1,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.7,
+            "y": 196.9,
+            "width": 28.7,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 192,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.358
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 192°",
+        "driverName": "crank_angle",
+        "numericValue": 192
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 204,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 220.8,
+          "y": 184.1,
+          "width": 294.4,
+          "height": 701.1
+        },
+        "parts": {
+          "piston": {
+            "x": 251,
+            "y": 527.3,
+            "width": 227.5,
+            "height": 102.3
+          },
+          "crank": {
+            "x": 296.1,
+            "y": 679.4,
+            "width": 126.3,
+            "height": 175.8
+          },
+          "intake_valve": {
+            "x": 268.4,
+            "y": 193.2,
+            "width": 84.7,
+            "height": 102.9
+          },
+          "exhaust_valve": {
+            "x": 366.6,
+            "y": 195.4,
+            "width": 86.7,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.8,
+            "y": 196.9,
+            "width": 28.5,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 204,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.38
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 204°",
+        "driverName": "crank_angle",
+        "numericValue": 204
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 216,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 221.7,
+          "y": 184.2,
+          "width": 292.7,
+          "height": 692.5
+        },
+        "parts": {
+          "piston": {
+            "x": 251.6,
+            "y": 521.5,
+            "width": 226.3,
+            "height": 101.4
+          },
+          "crank": {
+            "x": 279.4,
+            "y": 676.3,
+            "width": 146,
+            "height": 172.1
+          },
+          "intake_valve": {
+            "x": 268.6,
+            "y": 193.3,
+            "width": 84.1,
+            "height": 102.8
+          },
+          "exhaust_valve": {
+            "x": 366.9,
+            "y": 195.3,
+            "width": 86.2,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345.9,
+            "y": 196.9,
+            "width": 28.4,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 216,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.419
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 216°",
+        "driverName": "crank_angle",
+        "numericValue": 216
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 228,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 222.8,
+          "y": 184.3,
+          "width": 290.7,
+          "height": 679.6
+        },
+        "parts": {
+          "piston": {
+            "x": 252.4,
+            "y": 513.2,
+            "width": 225,
+            "height": 100.2
+          },
+          "crank": {
+            "x": 265.8,
+            "y": 675.7,
+            "width": 160,
+            "height": 161.4
+          },
+          "intake_valve": {
+            "x": 268.8,
+            "y": 193.4,
+            "width": 83.5,
+            "height": 102.7
+          },
+          "exhaust_valve": {
+            "x": 367.3,
+            "y": 195.3,
+            "width": 85.7,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346,
+            "y": 196.9,
+            "width": 28.2,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 228,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.473
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 228°",
+        "driverName": "crank_angle",
+        "numericValue": 228
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 240,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 223.9,
+          "y": 184.4,
+          "width": 288.5,
+          "height": 662.8
+        },
+        "parts": {
+          "piston": {
+            "x": 253.1,
+            "y": 502.3,
+            "width": 223.5,
+            "height": 98.6
+          },
+          "crank": {
+            "x": 256.1,
+            "y": 677.8,
+            "width": 167.6,
+            "height": 144.2
+          },
+          "intake_valve": {
+            "x": 269.1,
+            "y": 193.5,
+            "width": 82.8,
+            "height": 102.7
+          },
+          "exhaust_valve": {
+            "x": 367.8,
+            "y": 195.3,
+            "width": 85.1,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.1,
+            "y": 196.9,
+            "width": 28,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 240,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.545
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 240°",
+        "driverName": "crank_angle",
+        "numericValue": 240
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 252,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 225.3,
+          "y": 184.6,
+          "width": 286,
+          "height": 647.1
+        },
+        "parts": {
+          "piston": {
+            "x": 254,
+            "y": 488.8,
+            "width": 221.9,
+            "height": 96.8
+          },
+          "crank": {
+            "x": 250.8,
+            "y": 682.3,
+            "width": 168.2,
+            "height": 125.1
+          },
+          "intake_valve": {
+            "x": 269.4,
+            "y": 193.6,
+            "width": 82,
+            "height": 102.6
+          },
+          "exhaust_valve": {
+            "x": 368.3,
+            "y": 195.3,
+            "width": 84.5,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 196.9,
+            "width": 27.7,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 252,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.632
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 252°",
+        "driverName": "crank_angle",
+        "numericValue": 252
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 264,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 226.8,
+          "y": 184.7,
+          "width": 283.2,
+          "height": 639.6
+        },
+        "parts": {
+          "piston": {
+            "x": 255,
+            "y": 472.9,
+            "width": 220.1,
+            "height": 94.6
+          },
+          "crank": {
+            "x": 250,
+            "y": 689.1,
+            "width": 161.9,
+            "height": 111.3
+          },
+          "intake_valve": {
+            "x": 269.7,
+            "y": 193.7,
+            "width": 81.1,
+            "height": 102.5
+          },
+          "exhaust_valve": {
+            "x": 368.8,
+            "y": 195.2,
+            "width": 83.7,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.4,
+            "y": 196.9,
+            "width": 27.4,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 264,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.735
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 264°",
+        "driverName": "crank_angle",
+        "numericValue": 264
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 276,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 228.4,
+          "y": 184.9,
+          "width": 280,
+          "height": 639
+        },
+        "parts": {
+          "piston": {
+            "x": 256.1,
+            "y": 455.1,
+            "width": 218.1,
+            "height": 92.3
+          },
+          "crank": {
+            "x": 250.4,
+            "y": 689.3,
+            "width": 161.1,
+            "height": 110.8
+          },
+          "intake_valve": {
+            "x": 270.1,
+            "y": 193.8,
+            "width": 80.1,
+            "height": 102.4
+          },
+          "exhaust_valve": {
+            "x": 369.4,
+            "y": 195.2,
+            "width": 82.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.5,
+            "y": 197,
+            "width": 27.1,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 276,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.85
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 276°",
+        "driverName": "crank_angle",
+        "numericValue": 276
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 288,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 230.3,
+          "y": 185.1,
+          "width": 276.5,
+          "height": 645.3
+        },
+        "parts": {
+          "piston": {
+            "x": 257.3,
+            "y": 436.2,
+            "width": 215.8,
+            "height": 89.8
+          },
+          "crank": {
+            "x": 251.9,
+            "y": 682.7,
+            "width": 166,
+            "height": 123.4
+          },
+          "intake_valve": {
+            "x": 270.6,
+            "y": 193.9,
+            "width": 79,
+            "height": 102.3
+          },
+          "exhaust_valve": {
+            "x": 370,
+            "y": 195.2,
+            "width": 81.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.7,
+            "y": 197,
+            "width": 26.8,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 288,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.972
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 288°",
+        "driverName": "crank_angle",
+        "numericValue": 288
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 300,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 232.3,
+          "y": 185.3,
+          "width": 272.6,
+          "height": 649.1
+        },
+        "parts": {
+          "piston": {
+            "x": 258.7,
+            "y": 417,
+            "width": 213.2,
+            "height": 87.4
+          },
+          "crank": {
+            "x": 257.9,
+            "y": 668.8,
+            "width": 164.1,
+            "height": 141.1
+          },
+          "intake_valve": {
+            "x": 271.1,
+            "y": 194.1,
+            "width": 77.7,
+            "height": 102.1
+          },
+          "exhaust_valve": {
+            "x": 370.7,
+            "y": 195.2,
+            "width": 80.9,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.9,
+            "y": 197,
+            "width": 26.4,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 300,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.095
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 300°",
+        "driverName": "crank_angle",
+        "numericValue": 300
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 312,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 234.6,
+          "y": 185.5,
+          "width": 268.3,
+          "height": 650.2
+        },
+        "parts": {
+          "piston": {
+            "x": 260.2,
+            "y": 399,
+            "width": 210.2,
+            "height": 85.1
+          },
+          "crank": {
+            "x": 268.3,
+            "y": 653.7,
+            "width": 155.2,
+            "height": 157.2
+          },
+          "intake_valve": {
+            "x": 271.8,
+            "y": 194.2,
+            "width": 76.4,
+            "height": 102
+          },
+          "exhaust_valve": {
+            "x": 371.4,
+            "y": 195.1,
+            "width": 79.7,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 347.1,
+            "y": 197,
+            "width": 26,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 312,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.209
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 312°",
+        "driverName": "crank_angle",
+        "numericValue": 312
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 324,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 237,
+          "y": 185.7,
+          "width": 263.5,
+          "height": 648.6
+        },
+        "parts": {
+          "piston": {
+            "x": 262,
+            "y": 383.3,
+            "width": 206.8,
+            "height": 83.1
+          },
+          "crank": {
+            "x": 282.8,
+            "y": 642.2,
+            "width": 139.6,
+            "height": 167.2
+          },
+          "intake_valve": {
+            "x": 272.5,
+            "y": 194.4,
+            "width": 74.9,
+            "height": 101.8
+          },
+          "exhaust_valve": {
+            "x": 372.2,
+            "y": 195.1,
+            "width": 78.4,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 347.3,
+            "y": 197,
+            "width": 25.5,
+            "height": 93.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 324,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.308
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 324°",
+        "driverName": "crank_angle",
+        "numericValue": 324
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 336,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 234.8,
+          "y": 186,
+          "width": 263.1,
+          "height": 644.2
+        },
+        "parts": {
+          "piston": {
+            "x": 263.1,
+            "y": 371.2,
+            "width": 203.8,
+            "height": 81.6
+          },
+          "crank": {
+            "x": 300.6,
+            "y": 634.8,
+            "width": 117.8,
+            "height": 170.8
+          },
+          "intake_valve": {
+            "x": 273.3,
+            "y": 194.6,
+            "width": 73.2,
+            "height": 101.7
+          },
+          "exhaust_valve": {
+            "x": 373,
+            "y": 195,
+            "width": 77,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 347.6,
+            "y": 197,
+            "width": 25,
+            "height": 93.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 336,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.385
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 336°",
+        "driverName": "crank_angle",
+        "numericValue": 336
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 348,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 231.6,
+          "y": 186.3,
+          "width": 263.4,
+          "height": 637.3
+        },
+        "parts": {
+          "piston": {
+            "x": 260.5,
+            "y": 363.5,
+            "width": 204.2,
+            "height": 80.6
+          },
+          "crank": {
+            "x": 309.9,
+            "y": 631.7,
+            "width": 102.1,
+            "height": 168
+          },
+          "intake_valve": {
+            "x": 272.4,
+            "y": 194.8,
+            "width": 73.1,
+            "height": 101.5
+          },
+          "exhaust_valve": {
+            "x": 373.9,
+            "y": 195,
+            "width": 75.4,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 347.9,
+            "y": 197.1,
+            "width": 24.4,
+            "height": 93.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 348,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.433
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "2. Kompresi"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 348°",
+        "driverName": "crank_angle",
+        "numericValue": 348
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "crank_angle": {
+        "value": 360,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 228.2,
+          "y": 186.6,
+          "width": 263.5,
+          "height": 628
+        },
+        "parts": {
+          "piston": {
+            "x": 257.8,
+            "y": 360.8,
+            "width": 204.3,
+            "height": 80.1
+          },
+          "crank": {
+            "x": 317,
+            "y": 633.1,
+            "width": 86.1,
+            "height": 158.6
+          },
+          "intake_valve": {
+            "x": 271.5,
+            "y": 195,
+            "width": 73.6,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 374.8,
+            "y": 195,
+            "width": 73.6,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 327.1,
+            "y": 195.3,
+            "width": 65.8,
+            "height": 117.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 360,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP · BUSI MENYALA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 360°",
+        "driverName": "crank_angle",
+        "numericValue": 360
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 372,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 225,
+          "y": 186.3,
+          "width": 263.4,
+          "height": 637.3
+        },
+        "parts": {
+          "piston": {
+            "x": 255.3,
+            "y": 363.5,
+            "width": 204.2,
+            "height": 80.6
+          },
+          "crank": {
+            "x": 308.1,
+            "y": 631.7,
+            "width": 102.1,
+            "height": 168
+          },
+          "intake_valve": {
+            "x": 270.7,
+            "y": 195,
+            "width": 75.4,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 374.5,
+            "y": 194.8,
+            "width": 73.1,
+            "height": 101.5
+          },
+          "spark_plug": {
+            "x": 326.3,
+            "y": 195.2,
+            "width": 66.3,
+            "height": 117.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 372,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.433
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP · BUSI MENYALA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 372°",
+        "driverName": "crank_angle",
+        "numericValue": 372
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 384,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 222.1,
+          "y": 186,
+          "width": 263.1,
+          "height": 644.2
+        },
+        "parts": {
+          "piston": {
+            "x": 253.1,
+            "y": 371.2,
+            "width": 203.8,
+            "height": 81.6
+          },
+          "crank": {
+            "x": 301.5,
+            "y": 634.8,
+            "width": 117.8,
+            "height": 170.8
+          },
+          "intake_valve": {
+            "x": 270,
+            "y": 195,
+            "width": 77,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 373.6,
+            "y": 194.6,
+            "width": 73.2,
+            "height": 101.7
+          },
+          "spark_plug": {
+            "x": 347.4,
+            "y": 197,
+            "width": 25,
+            "height": 93.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 384,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.385
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 384°",
+        "driverName": "crank_angle",
+        "numericValue": 384
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 396,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 219.5,
+          "y": 185.7,
+          "width": 263.5,
+          "height": 648.6
+        },
+        "parts": {
+          "piston": {
+            "x": 251.2,
+            "y": 383.3,
+            "width": 206.8,
+            "height": 83.1
+          },
+          "crank": {
+            "x": 297.7,
+            "y": 642.2,
+            "width": 139.6,
+            "height": 167.2
+          },
+          "intake_valve": {
+            "x": 269.4,
+            "y": 195.1,
+            "width": 78.4,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 372.7,
+            "y": 194.4,
+            "width": 74.9,
+            "height": 101.8
+          },
+          "spark_plug": {
+            "x": 347.2,
+            "y": 197,
+            "width": 25.5,
+            "height": 93.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 396,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.308
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 396°",
+        "driverName": "crank_angle",
+        "numericValue": 396
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 408,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 217.2,
+          "y": 185.5,
+          "width": 268.3,
+          "height": 650.2
+        },
+        "parts": {
+          "piston": {
+            "x": 249.5,
+            "y": 399,
+            "width": 210.2,
+            "height": 85.1
+          },
+          "crank": {
+            "x": 296.5,
+            "y": 653.7,
+            "width": 155.2,
+            "height": 157.2
+          },
+          "intake_valve": {
+            "x": 268.9,
+            "y": 195.1,
+            "width": 79.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 371.9,
+            "y": 194.2,
+            "width": 76.4,
+            "height": 102
+          },
+          "spark_plug": {
+            "x": 346.9,
+            "y": 197,
+            "width": 26,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 408,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.209
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 408°",
+        "driverName": "crank_angle",
+        "numericValue": 408
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 420,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 215.1,
+          "y": 185.3,
+          "width": 272.6,
+          "height": 649.1
+        },
+        "parts": {
+          "piston": {
+            "x": 248.1,
+            "y": 417,
+            "width": 213.2,
+            "height": 87.4
+          },
+          "crank": {
+            "x": 298,
+            "y": 668.8,
+            "width": 164.1,
+            "height": 141.1
+          },
+          "intake_valve": {
+            "x": 268.5,
+            "y": 195.2,
+            "width": 80.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 371.1,
+            "y": 194.1,
+            "width": 77.7,
+            "height": 102.1
+          },
+          "spark_plug": {
+            "x": 346.7,
+            "y": 197,
+            "width": 26.4,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 420,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.095
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 420°",
+        "driverName": "crank_angle",
+        "numericValue": 420
+      }
+    ]
+  },
+  {
+    "frame": 288,
+    "sec": 9.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 432,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 213.2,
+          "y": 185.1,
+          "width": 276.5,
+          "height": 645.3
+        },
+        "parts": {
+          "piston": {
+            "x": 246.9,
+            "y": 436.2,
+            "width": 215.8,
+            "height": 89.8
+          },
+          "crank": {
+            "x": 302.1,
+            "y": 682.7,
+            "width": 166,
+            "height": 123.4
+          },
+          "intake_valve": {
+            "x": 268.1,
+            "y": 195.2,
+            "width": 81.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 370.4,
+            "y": 193.9,
+            "width": 79,
+            "height": 102.3
+          },
+          "spark_plug": {
+            "x": 346.5,
+            "y": 197,
+            "width": 26.8,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 432,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.972
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 432°",
+        "driverName": "crank_angle",
+        "numericValue": 432
+      }
+    ]
+  },
+  {
+    "frame": 296,
+    "sec": 9.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 444,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 211.5,
+          "y": 184.9,
+          "width": 280,
+          "height": 639
+        },
+        "parts": {
+          "piston": {
+            "x": 245.8,
+            "y": 455.1,
+            "width": 218.1,
+            "height": 92.3
+          },
+          "crank": {
+            "x": 308.5,
+            "y": 689.3,
+            "width": 161.1,
+            "height": 110.8
+          },
+          "intake_valve": {
+            "x": 267.8,
+            "y": 195.2,
+            "width": 82.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 369.8,
+            "y": 193.8,
+            "width": 80.1,
+            "height": 102.4
+          },
+          "spark_plug": {
+            "x": 346.4,
+            "y": 197,
+            "width": 27.1,
+            "height": 93.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 444,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.85
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 444°",
+        "driverName": "crank_angle",
+        "numericValue": 444
+      }
+    ]
+  },
+  {
+    "frame": 304,
+    "sec": 10.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 456,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 210.1,
+          "y": 184.7,
+          "width": 283.2,
+          "height": 639.6
+        },
+        "parts": {
+          "piston": {
+            "x": 244.9,
+            "y": 472.9,
+            "width": 220.1,
+            "height": 94.6
+          },
+          "crank": {
+            "x": 308.1,
+            "y": 689.1,
+            "width": 161.9,
+            "height": 111.3
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 195.2,
+            "width": 83.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 369.2,
+            "y": 193.7,
+            "width": 81.1,
+            "height": 102.5
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 196.9,
+            "width": 27.4,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 456,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.735
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 456°",
+        "driverName": "crank_angle",
+        "numericValue": 456
+      }
+    ]
+  },
+  {
+    "frame": 312,
+    "sec": 10.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 468,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 208.7,
+          "y": 184.6,
+          "width": 286,
+          "height": 647.1
+        },
+        "parts": {
+          "piston": {
+            "x": 244,
+            "y": 488.8,
+            "width": 221.9,
+            "height": 96.8
+          },
+          "crank": {
+            "x": 301,
+            "y": 682.3,
+            "width": 168.2,
+            "height": 125.1
+          },
+          "intake_valve": {
+            "x": 267.3,
+            "y": 195.3,
+            "width": 84.5,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 368.6,
+            "y": 193.6,
+            "width": 82,
+            "height": 102.6
+          },
+          "spark_plug": {
+            "x": 346.1,
+            "y": 196.9,
+            "width": 27.7,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 468,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.632
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 468°",
+        "driverName": "crank_angle",
+        "numericValue": 468
+      }
+    ]
+  },
+  {
+    "frame": 320,
+    "sec": 10.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 480,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 207.6,
+          "y": 184.4,
+          "width": 288.5,
+          "height": 662.8
+        },
+        "parts": {
+          "piston": {
+            "x": 243.3,
+            "y": 502.3,
+            "width": 223.5,
+            "height": 98.6
+          },
+          "crank": {
+            "x": 296.3,
+            "y": 677.8,
+            "width": 167.6,
+            "height": 144.2
+          },
+          "intake_valve": {
+            "x": 267.1,
+            "y": 195.3,
+            "width": 85.1,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 368.1,
+            "y": 193.5,
+            "width": 82.8,
+            "height": 102.7
+          },
+          "spark_plug": {
+            "x": 345.9,
+            "y": 196.9,
+            "width": 28,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 480,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.545
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 480°",
+        "driverName": "crank_angle",
+        "numericValue": 480
+      }
+    ]
+  },
+  {
+    "frame": 328,
+    "sec": 10.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 492,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 206.6,
+          "y": 184.3,
+          "width": 290.7,
+          "height": 679.6
+        },
+        "parts": {
+          "piston": {
+            "x": 242.6,
+            "y": 513.2,
+            "width": 225,
+            "height": 100.2
+          },
+          "crank": {
+            "x": 294.2,
+            "y": 675.7,
+            "width": 160,
+            "height": 161.4
+          },
+          "intake_valve": {
+            "x": 267,
+            "y": 195.3,
+            "width": 85.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 367.7,
+            "y": 193.4,
+            "width": 83.5,
+            "height": 102.7
+          },
+          "spark_plug": {
+            "x": 345.8,
+            "y": 196.9,
+            "width": 28.2,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 492,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.473
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 492°",
+        "driverName": "crank_angle",
+        "numericValue": 492
+      }
+    ]
+  },
+  {
+    "frame": 336,
+    "sec": 11.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 504,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 205.7,
+          "y": 184.2,
+          "width": 292.7,
+          "height": 692.5
+        },
+        "parts": {
+          "piston": {
+            "x": 242,
+            "y": 521.5,
+            "width": 226.3,
+            "height": 101.4
+          },
+          "crank": {
+            "x": 294.6,
+            "y": 676.3,
+            "width": 146,
+            "height": 172.1
+          },
+          "intake_valve": {
+            "x": 266.8,
+            "y": 195.3,
+            "width": 86.2,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 367.3,
+            "y": 193.3,
+            "width": 84.1,
+            "height": 102.8
+          },
+          "spark_plug": {
+            "x": 345.7,
+            "y": 196.9,
+            "width": 28.4,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 504,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.419
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 504°",
+        "driverName": "crank_angle",
+        "numericValue": 504
+      }
+    ]
+  },
+  {
+    "frame": 344,
+    "sec": 11.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 516,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 204.9,
+          "y": 184.1,
+          "width": 294.4,
+          "height": 701.1
+        },
+        "parts": {
+          "piston": {
+            "x": 241.5,
+            "y": 527.3,
+            "width": 227.5,
+            "height": 102.3
+          },
+          "crank": {
+            "x": 297.6,
+            "y": 679.4,
+            "width": 126.3,
+            "height": 175.8
+          },
+          "intake_valve": {
+            "x": 266.7,
+            "y": 195.4,
+            "width": 86.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 366.9,
+            "y": 193.2,
+            "width": 84.7,
+            "height": 102.9
+          },
+          "spark_plug": {
+            "x": 345.7,
+            "y": 196.9,
+            "width": 28.5,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 516,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.38
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 516°",
+        "driverName": "crank_angle",
+        "numericValue": 516
+      }
+    ]
+  },
+  {
+    "frame": 352,
+    "sec": 11.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 528,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 204.2,
+          "y": 184,
+          "width": 295.9,
+          "height": 705
+        },
+        "parts": {
+          "piston": {
+            "x": 241,
+            "y": 530.7,
+            "width": 228.6,
+            "height": 102.9
+          },
+          "crank": {
+            "x": 303,
+            "y": 685,
+            "width": 112.6,
+            "height": 173.1
+          },
+          "intake_valve": {
+            "x": 266.7,
+            "y": 195.4,
+            "width": 87.1,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 366.6,
+            "y": 193.2,
+            "width": 85.2,
+            "height": 102.9
+          },
+          "spark_plug": {
+            "x": 345.6,
+            "y": 196.9,
+            "width": 28.7,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 528,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.358
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: TUTUP"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "3. Usaha"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 528°",
+        "driverName": "crank_angle",
+        "numericValue": 528
+      }
+    ]
+  },
+  {
+    "frame": 360,
+    "sec": 12,
+    "drivers": {
+      "crank_angle": {
+        "value": 540,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 203.6,
+          "y": 184,
+          "width": 297.2,
+          "height": 704
+        },
+        "parts": {
+          "piston": {
+            "x": 240.5,
+            "y": 531.8,
+            "width": 229.6,
+            "height": 103.2
+          },
+          "crank": {
+            "x": 310.5,
+            "y": 692.7,
+            "width": 97.7,
+            "height": 163.7
+          },
+          "intake_valve": {
+            "x": 266.6,
+            "y": 195.4,
+            "width": 87.4,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 366.3,
+            "y": 193.1,
+            "width": 85.6,
+            "height": 103
+          },
+          "spark_plug": {
+            "x": 345.5,
+            "y": 196.9,
+            "width": 28.8,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 540,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.35
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 540°",
+        "driverName": "crank_angle",
+        "numericValue": 540
+      }
+    ]
+  },
+  {
+    "frame": 368,
+    "sec": 12.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 552,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 203.1,
+          "y": 183.9,
+          "width": 298.4,
+          "height": 705.5
+        },
+        "parts": {
+          "piston": {
+            "x": 240.1,
+            "y": 530.6,
+            "width": 230.5,
+            "height": 103.2
+          },
+          "crank": {
+            "x": 302.7,
+            "y": 684.9,
+            "width": 113.2,
+            "height": 173.4
+          },
+          "intake_valve": {
+            "x": 266.5,
+            "y": 195.4,
+            "width": 87.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 366,
+            "y": 203.6,
+            "width": 85.9,
+            "height": 102.3
+          },
+          "spark_plug": {
+            "x": 345.5,
+            "y": 196.9,
+            "width": 28.9,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 552,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.358
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 552°",
+        "driverName": "crank_angle",
+        "numericValue": 552
+      }
+    ]
+  },
+  {
+    "frame": 376,
+    "sec": 12.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 564,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 202.6,
+          "y": 183.8,
+          "width": 299.3,
+          "height": 702.2
+        },
+        "parts": {
+          "piston": {
+            "x": 239.7,
+            "y": 527.1,
+            "width": 231.4,
+            "height": 102.8
+          },
+          "crank": {
+            "x": 294.1,
+            "y": 679,
+            "width": 127.4,
+            "height": 176.3
+          },
+          "intake_valve": {
+            "x": 266.5,
+            "y": 195.4,
+            "width": 87.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365.8,
+            "y": 213.6,
+            "width": 86.1,
+            "height": 101.6
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 564,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.38
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 564°",
+        "driverName": "crank_angle",
+        "numericValue": 564
+      }
+    ]
+  },
+  {
+    "frame": 384,
+    "sec": 12.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 576,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 202.2,
+          "y": 183.8,
+          "width": 300.2,
+          "height": 694.1
+        },
+        "parts": {
+          "piston": {
+            "x": 239.3,
+            "y": 521.2,
+            "width": 232.2,
+            "height": 102.2
+          },
+          "crank": {
+            "x": 277.3,
+            "y": 675.1,
+            "width": 147.4,
+            "height": 172.8
+          },
+          "intake_valve": {
+            "x": 266.5,
+            "y": 195.4,
+            "width": 88.2,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365.6,
+            "y": 222.7,
+            "width": 86.3,
+            "height": 101
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 196.9,
+            "width": 29.1,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 576,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.419
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 576°",
+        "driverName": "crank_angle",
+        "numericValue": 576
+      }
+    ]
+  },
+  {
+    "frame": 392,
+    "sec": 13.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 588,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201.9,
+          "y": 183.8,
+          "width": 300.9,
+          "height": 681.7
+        },
+        "parts": {
+          "piston": {
+            "x": 239,
+            "y": 512.8,
+            "width": 232.9,
+            "height": 101.2
+          },
+          "crank": {
+            "x": 263.8,
+            "y": 673.7,
+            "width": 161.6,
+            "height": 162.4
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.4,
+            "width": 88.3,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365.4,
+            "y": 230.6,
+            "width": 86.5,
+            "height": 100.5
+          },
+          "spark_plug": {
+            "x": 345.3,
+            "y": 196.9,
+            "width": 29.2,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 588,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.473
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 588°",
+        "driverName": "crank_angle",
+        "numericValue": 588
+      }
+    ]
+  },
+  {
+    "frame": 400,
+    "sec": 13.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 600,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201.7,
+          "y": 183.7,
+          "width": 301.5,
+          "height": 665.5
+        },
+        "parts": {
+          "piston": {
+            "x": 238.6,
+            "y": 501.9,
+            "width": 233.7,
+            "height": 99.9
+          },
+          "crank": {
+            "x": 254.2,
+            "y": 675,
+            "width": 169.5,
+            "height": 145.6
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.5,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365.3,
+            "y": 236.7,
+            "width": 86.6,
+            "height": 100.1
+          },
+          "spark_plug": {
+            "x": 345.3,
+            "y": 196.9,
+            "width": 29.2,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 600,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.545
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 600°",
+        "driverName": "crank_angle",
+        "numericValue": 600
+      }
+    ]
+  },
+  {
+    "frame": 408,
+    "sec": 13.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 612,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201.5,
+          "y": 183.7,
+          "width": 301.9,
+          "height": 650.4
+        },
+        "parts": {
+          "piston": {
+            "x": 238.2,
+            "y": 488.3,
+            "width": 234.4,
+            "height": 98.2
+          },
+          "crank": {
+            "x": 248.8,
+            "y": 678.9,
+            "width": 170.6,
+            "height": 127
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.6,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365.2,
+            "y": 241,
+            "width": 86.8,
+            "height": 99.8
+          },
+          "spark_plug": {
+            "x": 345.3,
+            "y": 196.9,
+            "width": 29.3,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 612,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.632
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 612°",
+        "driverName": "crank_angle",
+        "numericValue": 612
+      }
+    ]
+  },
+  {
+    "frame": 416,
+    "sec": 13.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 624,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201.3,
+          "y": 183.7,
+          "width": 302.3,
+          "height": 643.4
+        },
+        "parts": {
+          "piston": {
+            "x": 237.9,
+            "y": 472.4,
+            "width": 235.1,
+            "height": 96.2
+          },
+          "crank": {
+            "x": 247.8,
+            "y": 685.1,
+            "width": 165.1,
+            "height": 113.6
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365.1,
+            "y": 243.2,
+            "width": 86.9,
+            "height": 99.7
+          },
+          "spark_plug": {
+            "x": 345.3,
+            "y": 196.9,
+            "width": 29.3,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 624,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.735
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 624°",
+        "driverName": "crank_angle",
+        "numericValue": 624
+      }
+    ]
+  },
+  {
+    "frame": 424,
+    "sec": 14.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 636,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201.2,
+          "y": 183.7,
+          "width": 302.6,
+          "height": 643.5
+        },
+        "parts": {
+          "piston": {
+            "x": 237.5,
+            "y": 454.6,
+            "width": 235.8,
+            "height": 93.9
+          },
+          "crank": {
+            "x": 247.8,
+            "y": 685.1,
+            "width": 165.1,
+            "height": 113.6
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.8,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365,
+            "y": 243.1,
+            "width": 87,
+            "height": 99.7
+          },
+          "spark_plug": {
+            "x": 345.3,
+            "y": 196.9,
+            "width": 29.3,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 636,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.85
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 636°",
+        "driverName": "crank_angle",
+        "numericValue": 636
+      }
+    ]
+  },
+  {
+    "frame": 432,
+    "sec": 14.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 648,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201.1,
+          "y": 183.7,
+          "width": 302.8,
+          "height": 650.5
+        },
+        "parts": {
+          "piston": {
+            "x": 237.2,
+            "y": 435.6,
+            "width": 236.5,
+            "height": 91.5
+          },
+          "crank": {
+            "x": 248.8,
+            "y": 678.8,
+            "width": 170.7,
+            "height": 127.2
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.8,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365,
+            "y": 241,
+            "width": 87.1,
+            "height": 99.8
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 648,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.972
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 648°",
+        "driverName": "crank_angle",
+        "numericValue": 648
+      }
+    ]
+  },
+  {
+    "frame": 440,
+    "sec": 14.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 660,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201,
+          "y": 183.7,
+          "width": 303,
+          "height": 655.2
+        },
+        "parts": {
+          "piston": {
+            "x": 236.8,
+            "y": 416.6,
+            "width": 237.1,
+            "height": 89
+          },
+          "crank": {
+            "x": 254.1,
+            "y": 665.1,
+            "width": 169.8,
+            "height": 145.5
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 365,
+            "y": 236.7,
+            "width": 87.1,
+            "height": 100.1
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 660,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.095
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 660°",
+        "driverName": "crank_angle",
+        "numericValue": 660
+      }
+    ]
+  },
+  {
+    "frame": 448,
+    "sec": 14.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 672,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 201,
+          "y": 183.7,
+          "width": 303.1,
+          "height": 657.2
+        },
+        "parts": {
+          "piston": {
+            "x": 236.6,
+            "y": 398.6,
+            "width": 237.6,
+            "height": 86.7
+          },
+          "crank": {
+            "x": 263.5,
+            "y": 650.6,
+            "width": 162.3,
+            "height": 162.1
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 364.9,
+            "y": 230.5,
+            "width": 87.2,
+            "height": 100.6
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 672,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.209
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 672°",
+        "driverName": "crank_angle",
+        "numericValue": 672
+      }
+    ]
+  },
+  {
+    "frame": 456,
+    "sec": 15.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 684,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 200.9,
+          "y": 183.6,
+          "width": 303.1,
+          "height": 656.6
+        },
+        "parts": {
+          "piston": {
+            "x": 236.3,
+            "y": 383,
+            "width": 238.1,
+            "height": 84.6
+          },
+          "crank": {
+            "x": 276.8,
+            "y": 639.6,
+            "width": 148.5,
+            "height": 172.4
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 364.9,
+            "y": 222.6,
+            "width": 87.3,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 684,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.308
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 684°",
+        "driverName": "crank_angle",
+        "numericValue": 684
+      }
+    ]
+  },
+  {
+    "frame": 464,
+    "sec": 15.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 696,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 200.9,
+          "y": 183.6,
+          "width": 303.2,
+          "height": 653.3
+        },
+        "parts": {
+          "piston": {
+            "x": 236.1,
+            "y": 370.9,
+            "width": 238.4,
+            "height": 83
+          },
+          "crank": {
+            "x": 293.5,
+            "y": 632.8,
+            "width": 128.8,
+            "height": 175.9
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 364.9,
+            "y": 213.5,
+            "width": 87.4,
+            "height": 101.8
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 696,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.385
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 696°",
+        "driverName": "crank_angle",
+        "numericValue": 696
+      }
+    ]
+  },
+  {
+    "frame": 472,
+    "sec": 15.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 708,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 200.9,
+          "y": 183.6,
+          "width": 303.2,
+          "height": 647.4
+        },
+        "parts": {
+          "piston": {
+            "x": 236,
+            "y": 363.3,
+            "width": 238.7,
+            "height": 82
+          },
+          "crank": {
+            "x": 301.9,
+            "y": 629.8,
+            "width": 115,
+            "height": 172.8
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.5,
+            "width": 88.9,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 364.9,
+            "y": 203.4,
+            "width": 87.5,
+            "height": 102.5
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 196.9,
+            "width": 29.4,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 708,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.433
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_mesin",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Siklus Mesin 4 Tak — Hisap: TUTUP · Buang: BUKA"
+      },
+      {
+        "id": "list_strokes",
+        "component": "ListReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 64
+        },
+        "text": "4. Buang"
+      },
+      {
+        "id": "stat_crank_angle",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 936,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 708°",
+        "driverName": "crank_angle",
+        "numericValue": 708
+      }
+    ]
+  }
+]

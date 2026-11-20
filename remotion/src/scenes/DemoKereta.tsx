@@ -80,7 +80,7 @@ const DemoKeretaHud: React.FC<{
         ) : isSceneB ? (
           <Callout
             id="callout_inertia"
-            label="Inersia Kendaraan (C2)"
+            label="Inersia Kendaraan"
             detail="Roda cenderung lurus → bergeser ke rel luar"
             claimRef="C2"
             palette="blueprint-navy"
@@ -89,16 +89,16 @@ const DemoKeretaHud: React.FC<{
           <>
             <CompareCard
               id="compare_diameter"
-              leftTitle="Roda Dalam"
-              leftValue="Diameter lebih kecil"
-              rightTitle="Roda Luar"
-              rightValue="Diameter lebih besar"
+              leftTitle="Roda Dalam (kecil)"
+              leftValue="Jarak lebih pendek"
+              rightTitle="Roda Luar (besar)"
+              rightValue="Jarak lebih jauh"
               palette="blueprint-navy"
             />
             <Callout
               id="callout_effective"
-              label="Gandar Kaku (C3)"
-              detail="Roda luar menempuh jarak lebih jauh"
+              label="Gandar Kaku (skala dilebih-lebihkan)"
+              detail="Roda luar menempuh jarak lebih jauh di tikungan"
               claimRef="C3"
               palette="blueprint-navy"
             />
@@ -217,14 +217,14 @@ const DemoKeretaInner: React.FC<DemoKeretaProps> = ({
           palette="blueprint-navy"
         />
 
-        {/* Inertia vector arrow during curve entry (Adegan B: 5-10s) */}
+        {/* Bold inertia vector arrow pointing straight (+Z) toward outer rail during curve entry (5-10s) */}
         {sec >= 5 && sec < 10 ? (
           <Arrow3D
             from={[layout.center[0], 1.28, layout.center[2]]}
-            to={[layout.center[0], 1.28, layout.center[2] + 1.15]}
-            radius={0.03}
-            headRadius={0.09}
-            headLength={0.24}
+            to={[layout.center[0], 1.28, layout.center[2] + 1.55]}
+            radius={0.055}
+            headRadius={0.18}
+            headLength={0.42}
             palette="blueprint-navy"
           />
         ) : null}

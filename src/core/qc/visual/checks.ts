@@ -117,6 +117,16 @@ export function checkFramingFromTelemetry(
           message: `FRAMING_OUT_OF_BOUNDS: "${focusId}" bbox=[${b.x},${b.y},${b.width}x${b.height}] keluar area aman [${safe.minX}..${safe.maxX}, ${safe.minY}..${safe.maxY}]`,
           ref,
         });
+      } else {
+        const freeZoneArea = 720 * 560;
+        const focusArea = b.width * b.height;
+        if (focusArea / freeZoneArea < 0.2) {
+          issues.push({
+            severity: 'warning',
+            message: `FRAMING_TOO_SMALL: "${focusId}" hanya mengisi ${Math.round((focusArea / freeZoneArea) * 100)}% zona bebas (< 20%)`,
+            ref,
+          });
+        }
       }
     }
   }
@@ -191,6 +201,18 @@ export function checkHudFormatFromTelemetry(samples: TelemetrySample[]): QcIssue
   for (const sample of samples) {
     const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
     for (const h of sample.hud) {
+      const leakMatch = h.text.match(/\(C\d+\)/);
+      if (leakMatch) {
+        const key = `${h.id}:leak:${leakMatch[0]}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          issues.push({
+            severity: 'error',
+            message: `HUD_CLAIM_ID_LEAK: "${h.id}" membocorkan ID klaim ${leakMatch[0]} ke layar ("${h.text}")`,
+            ref,
+          });
+        }
+      }
       const badMatches = h.text.match(/\b\d{1,3}(?:,\d{3})+\b/g);
       if (badMatches && badMatches.length > 0) {
         const key = `${h.id}:${badMatches.join(',')}`;

@@ -217,5 +217,13 @@ describe('Visual QC pure telemetry checks', () => {
     expect(checkGeometryFromTelemetry([badSample], geoSpec)).toHaveLength(2);
     expect(checkVisibilityFromTelemetry([badSample], geoSpec)[0]?.message).toContain('VISIBILITY_OCCLUDED_BY_HUD');
     expect(checkHudOverlapFromTelemetry([badSample], geoSpec)[0]?.message).toContain('HUD_BUDGET_EXCEEDED');
+
+    const leakSample: TelemetrySample = {
+      ...badSample,
+      entities: [{ id: 'wheelset', role: 'focus', bbox: { x: 250, y: 400, width: 200, height: 200 } }],
+      hud: [{ id: 'h1', component: 'Callout', zone: 'callout', bbox: { x: 48, y: 860, width: 300, height: 60 }, text: 'Inersia (C2)' }],
+    };
+    expect(checkHudFormatFromTelemetry([leakSample])[0]?.message).toContain('HUD_CLAIM_ID_LEAK');
+    expect(checkFramingFromTelemetry([leakSample], geoSpec)[0]?.message).toContain('FRAMING_TOO_SMALL');
   });
 });

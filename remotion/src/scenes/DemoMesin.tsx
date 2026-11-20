@@ -109,8 +109,8 @@ const DemoMesinInner: React.FC<DemoMesinProps> = ({
         <CameraRig
           mode="frameEntities"
           framing="portrait-lower"
-          focusBox={{ center: [0, 1.55, 0], size: [1.8, 3.2, 1.8] }}
-          padding={1.22}
+          focusBox={{ center: [0, 1.65, 0], size: [1.5, 2.75, 1.5] }}
+          padding={1.18}
           startAngleDeg={-16}
           endAngleDeg={16}
           durationSec={16}

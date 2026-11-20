@@ -109,7 +109,12 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   const rawVal = bindToDriver && driver ? driver.value : from + (to - from) * p;
   const resolvedUnit = driver?.unit ?? unit;
   const formatted = formatIdNumber(rawVal, decimals);
-  const displayText = `${label}: ${formatted}${resolvedUnit ? ` ${resolvedUnit}` : ''}`;
+  const unitSuffix = resolvedUnit
+    ? resolvedUnit === '°' || resolvedUnit === '%'
+      ? resolvedUnit
+      : ` ${resolvedUnit}`
+    : '';
+  const displayText = `${label}: ${formatted}${unitSuffix}`;
 
   return (
     <TelemetryHudBox
@@ -140,7 +145,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
         }}
       >
         {formatted}
-        {resolvedUnit ? ` ${resolvedUnit}` : ''}
+        {unitSuffix}
       </span>
     </TelemetryHudBox>
   );
