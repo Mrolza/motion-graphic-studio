@@ -3,8 +3,8 @@
     "frame": 0,
     "sec": 0,
     "drivers": {
-      "distance": {
-        "value": 0,
+      "curveRadius": {
+        "value": 100,
         "unit": "m"
       }
     },
@@ -13,46 +13,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 156.8,
-          "y": 393.5,
-          "width": 407.6,
-          "height": 358.9
+          "x": 86.4,
+          "y": 329.2,
+          "width": 562.7,
+          "height": 509.1
         },
         "parts": {
           "wheel_left": {
-            "x": 169.6,
-            "y": 455,
-            "width": 163.4,
-            "height": 273.3
+            "x": 341.9,
+            "y": 369.1,
+            "width": 300.2,
+            "height": 372.5
           },
           "wheel_right": {
-            "x": 383.2,
-            "y": 412.9,
-            "width": 165.9,
-            "height": 249
+            "x": 91.2,
+            "y": 383.9,
+            "width": 289.1,
+            "height": 387.2
           },
           "contact_left": {
-            "x": 239.8,
-            "y": 646.9,
-            "width": 27.9,
-            "height": 29.7
+            "x": 462,
+            "y": 601.8,
+            "width": 34.9,
+            "height": 30.7
           },
           "contact_right": {
-            "x": 445.1,
-            "y": 590.7,
-            "width": 26.3,
-            "height": 26.9
+            "x": 219.1,
+            "y": 624.5,
+            "width": 35.3,
+            "height": 32
           },
           "flange": {
-            "x": 199.1,
-            "y": 434.7,
-            "width": 142.8,
-            "height": 304.1
+            "x": 324,
+            "y": 347.2,
+            "width": 302.4,
+            "height": 420.8
           }
         },
         "partStates": {
-          "distance": 0,
-          "wheel_angle_deg": 0,
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -68,41 +68,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": -999897,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": -999139,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": -999033,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -111,8 +87,8 @@
     "frame": 8,
     "sec": 0.267,
     "drivers": {
-      "distance": {
-        "value": 0,
+      "curveRadius": {
+        "value": 100,
         "unit": "m"
       }
     },
@@ -121,46 +97,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 156.9,
-          "y": 393.5,
-          "width": 407.6,
-          "height": 358.8
+          "x": 86.4,
+          "y": 329.2,
+          "width": 562.7,
+          "height": 509.1
         },
         "parts": {
           "wheel_left": {
-            "x": 169.6,
-            "y": 455,
-            "width": 163.2,
-            "height": 273.3
+            "x": 341.9,
+            "y": 369.1,
+            "width": 300.2,
+            "height": 372.5
           },
           "wheel_right": {
-            "x": 383.3,
-            "y": 412.9,
-            "width": 165.8,
-            "height": 249
+            "x": 91.2,
+            "y": 383.9,
+            "width": 289.1,
+            "height": 387.2
           },
           "contact_left": {
-            "x": 239.7,
-            "y": 646.9,
-            "width": 27.9,
-            "height": 29.7
+            "x": 462,
+            "y": 601.9,
+            "width": 34.9,
+            "height": 30.7
           },
           "contact_right": {
-            "x": 445.2,
-            "y": 590.7,
-            "width": 26.3,
-            "height": 26.9
+            "x": 219.1,
+            "y": 624.5,
+            "width": 35.3,
+            "height": 32
           },
           "flange": {
-            "x": 199.1,
-            "y": 434.7,
-            "width": 142.6,
-            "height": 304.1
+            "x": 324,
+            "y": 347.2,
+            "width": 302.3,
+            "height": 420.8
           }
         },
         "partStates": {
-          "distance": 0,
-          "wheel_angle_deg": 0,
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -176,41 +152,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88.9,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -219,8 +171,8 @@
     "frame": 16,
     "sec": 0.533,
     "drivers": {
-      "distance": {
-        "value": 0,
+      "curveRadius": {
+        "value": 100,
         "unit": "m"
       }
     },
@@ -229,46 +181,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 157,
-          "y": 393.6,
-          "width": 407.6,
-          "height": 358.5
+          "x": 86.5,
+          "y": 329.2,
+          "width": 562.6,
+          "height": 509.1
         },
         "parts": {
           "wheel_left": {
-            "x": 169.7,
-            "y": 454.7,
-            "width": 162.3,
-            "height": 273.3
+            "x": 342,
+            "y": 369.1,
+            "width": 300.1,
+            "height": 372.5
           },
           "wheel_right": {
-            "x": 384.1,
-            "y": 413,
-            "width": 165.2,
-            "height": 249.3
+            "x": 91.3,
+            "y": 383.9,
+            "width": 288.9,
+            "height": 387.1
           },
           "contact_left": {
-            "x": 239.3,
-            "y": 646.6,
-            "width": 27.9,
-            "height": 29.6
+            "x": 462,
+            "y": 601.9,
+            "width": 34.9,
+            "height": 30.7
           },
           "contact_right": {
-            "x": 445.6,
-            "y": 591,
-            "width": 26.3,
-            "height": 26.9
+            "x": 219.1,
+            "y": 624.5,
+            "width": 35.3,
+            "height": 32
           },
           "flange": {
-            "x": 199.4,
-            "y": 434.4,
-            "width": 141.4,
-            "height": 304.3
+            "x": 324.1,
+            "y": 347.3,
+            "width": 302.2,
+            "height": 420.9
           }
         },
         "partStates": {
-          "distance": 0,
-          "wheel_angle_deg": 0,
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -284,41 +236,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -327,8 +255,8 @@
     "frame": 24,
     "sec": 0.8,
     "drivers": {
-      "distance": {
-        "value": 0,
+      "curveRadius": {
+        "value": 100,
         "unit": "m"
       }
     },
@@ -337,46 +265,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 157.5,
-          "y": 393.9,
-          "width": 407.3,
-          "height": 357.7
+          "x": 86.8,
+          "y": 329.2,
+          "width": 562.4,
+          "height": 509
         },
         "parts": {
           "wheel_left": {
-            "x": 169.9,
-            "y": 454,
-            "width": 159.6,
-            "height": 273.5
+            "x": 342.2,
+            "y": 369.2,
+            "width": 299.9,
+            "height": 372.7
           },
           "wheel_right": {
-            "x": 386.2,
-            "y": 413.3,
-            "width": 163.5,
-            "height": 249.9
+            "x": 91.5,
+            "y": 383.8,
+            "width": 288.4,
+            "height": 387.1
           },
           "contact_left": {
-            "x": 238.3,
-            "y": 646,
-            "width": 27.7,
-            "height": 29.6
+            "x": 462.1,
+            "y": 602,
+            "width": 34.9,
+            "height": 30.7
           },
           "contact_right": {
-            "x": 446.8,
-            "y": 591.6,
-            "width": 26.3,
-            "height": 26.9
+            "x": 219,
+            "y": 624.3,
+            "width": 35.2,
+            "height": 32
           },
           "flange": {
-            "x": 200.2,
-            "y": 433.7,
-            "width": 137.9,
-            "height": 304.8
+            "x": 324.4,
+            "y": 347.3,
+            "width": 301.8,
+            "height": 421
           }
         },
         "partStates": {
-          "distance": 0,
-          "wheel_angle_deg": 0,
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -392,41 +320,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -435,8 +339,8 @@
     "frame": 32,
     "sec": 1.067,
     "drivers": {
-      "distance": {
-        "value": 0,
+      "curveRadius": {
+        "value": 100,
         "unit": "m"
       }
     },
@@ -445,46 +349,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 158.7,
-          "y": 394.4,
-          "width": 406.4,
-          "height": 356.1
+          "x": 87.2,
+          "y": 329.3,
+          "width": 561.8,
+          "height": 508.8
         },
         "parts": {
           "wheel_left": {
-            "x": 170.6,
-            "y": 452.7,
-            "width": 154.3,
-            "height": 273.7
+            "x": 342.8,
+            "y": 369.3,
+            "width": 299.3,
+            "height": 372.9
           },
           "wheel_right": {
-            "x": 390.2,
-            "y": 413.9,
-            "width": 160.1,
-            "height": 251.1
+            "x": 92,
+            "y": 383.6,
+            "width": 287.4,
+            "height": 387
           },
           "contact_left": {
-            "x": 236.5,
-            "y": 644.6,
-            "width": 27.5,
-            "height": 29.4
+            "x": 462.3,
+            "y": 602.3,
+            "width": 34.9,
+            "height": 30.7
           },
           "contact_right": {
-            "x": 449.1,
-            "y": 592.8,
-            "width": 26.2,
-            "height": 26.9
+            "x": 219,
+            "y": 624.1,
+            "width": 35.2,
+            "height": 32
           },
           "flange": {
-            "x": 201.9,
-            "y": 432.3,
-            "width": 131.1,
-            "height": 305.8
+            "x": 325,
+            "y": 347.4,
+            "width": 301.1,
+            "height": 421.3
           }
         },
         "partStates": {
-          "distance": 0,
-          "wheel_angle_deg": 0,
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -500,41 +404,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -543,8 +423,8 @@
     "frame": 40,
     "sec": 1.333,
     "drivers": {
-      "distance": {
-        "value": 0,
+      "curveRadius": {
+        "value": 100,
         "unit": "m"
       }
     },
@@ -553,46 +433,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 160.9,
-          "y": 395.4,
-          "width": 404.2,
-          "height": 353.1
+          "x": 88,
+          "y": 329.4,
+          "width": 561,
+          "height": 508.5
         },
         "parts": {
           "wheel_left": {
-            "x": 172.1,
-            "y": 450.5,
-            "width": 145.3,
-            "height": 273.8
+            "x": 343.6,
+            "y": 369.5,
+            "width": 298.4,
+            "height": 373.2
           },
           "wheel_right": {
-            "x": 396.8,
-            "y": 415.1,
-            "width": 154.1,
-            "height": 253
+            "x": 92.7,
+            "y": 383.3,
+            "width": 285.7,
+            "height": 386.8
           },
           "contact_left": {
-            "x": 233.7,
-            "y": 642.3,
-            "width": 26.9,
-            "height": 29.1
+            "x": 462.6,
+            "y": 602.7,
+            "width": 34.9,
+            "height": 30.7
           },
           "contact_right": {
-            "x": 452.6,
-            "y": 594.9,
-            "width": 26,
-            "height": 26.8
+            "x": 218.8,
+            "y": 623.7,
+            "width": 35.1,
+            "height": 31.9
           },
           "flange": {
-            "x": 204.9,
-            "y": 430.1,
-            "width": 119.6,
-            "height": 307.1
+            "x": 326,
+            "y": 347.5,
+            "width": 299.8,
+            "height": 421.7
           }
         },
         "partStates": {
-          "distance": 0,
-          "wheel_angle_deg": 0,
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -608,41 +488,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -651,8 +507,8 @@
     "frame": 48,
     "sec": 1.6,
     "drivers": {
-      "distance": {
-        "value": 0.104,
+      "curveRadius": {
+        "value": 104.167,
         "unit": "m"
       }
     },
@@ -661,46 +517,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 156.6,
-          "y": 370.4,
-          "width": 421.8,
-          "height": 407.9
+          "x": 88.9,
+          "y": 347.7,
+          "width": 560,
+          "height": 470.3
         },
         "parts": {
           "wheel_left": {
-            "x": 167.7,
-            "y": 422.6,
-            "width": 147.2,
-            "height": 326.4
+            "x": 338.1,
+            "y": 403.3,
+            "width": 309.3,
+            "height": 342.8
           },
           "wheel_right": {
-            "x": 398.3,
-            "y": 393.8,
-            "width": 164.3,
-            "height": 305
+            "x": 90.3,
+            "y": 389.4,
+            "width": 291.6,
+            "height": 331
           },
           "contact_left": {
-            "x": 230.3,
-            "y": 638.9,
-            "width": 26,
-            "height": 28.7
+            "x": 464.3,
+            "y": 622.7,
+            "width": 39.1,
+            "height": 33.2
           },
           "contact_right": {
-            "x": 457.5,
-            "y": 598.2,
-            "width": 25.7,
-            "height": 26.7
+            "x": 221.3,
+            "y": 602.4,
+            "width": 37,
+            "height": 31.9
           },
           "flange": {
-            "x": 201.4,
-            "y": 398.3,
-            "width": 120.9,
-            "height": 369.9
+            "x": 318.6,
+            "y": 382.9,
+            "width": 309,
+            "height": 380.3
           }
         },
         "partStates": {
-          "distance": 0.104,
-          "wheel_angle_deg": 12.97,
+          "distance": 104.167,
+          "wheel_angle_deg": 12974.59,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -716,41 +572,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -759,8 +591,8 @@
     "frame": 56,
     "sec": 1.867,
     "drivers": {
-      "distance": {
-        "value": 0.278,
+      "curveRadius": {
+        "value": 111.111,
         "unit": "m"
       }
     },
@@ -769,46 +601,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 161,
-          "y": 347,
-          "width": 423.6,
-          "height": 458.7
+          "x": 135.1,
+          "y": 351.1,
+          "width": 463.3,
+          "height": 448.6
         },
         "parts": {
           "wheel_left": {
-            "x": 170.8,
-            "y": 394.7,
-            "width": 133.4,
-            "height": 376.6
+            "x": 299.2,
+            "y": 430.7,
+            "width": 282.7,
+            "height": 337.2
           },
           "wheel_right": {
-            "x": 406.8,
-            "y": 374,
-            "width": 161.6,
-            "height": 357.7
+            "x": 152.9,
+            "y": 375.8,
+            "width": 258.9,
+            "height": 298.4
           },
           "contact_left": {
-            "x": 226.9,
-            "y": 634,
-            "width": 24.4,
-            "height": 27.9
+            "x": 424.2,
+            "y": 655.3,
+            "width": 30.8,
+            "height": 31.1
           },
           "contact_right": {
-            "x": 463.4,
-            "y": 603.1,
-            "width": 24.9,
-            "height": 26.5
+            "x": 275.1,
+            "y": 577.3,
+            "width": 27.1,
+            "height": 27.1
           },
           "flange": {
-            "x": 206.4,
-            "y": 366.8,
-            "width": 103.9,
-            "height": 430.9
+            "x": 277.5,
+            "y": 406,
+            "width": 295,
+            "height": 371.5
           }
         },
         "partStates": {
-          "distance": 0.278,
-          "wheel_angle_deg": 34.6,
+          "distance": 111.111,
+          "wheel_angle_deg": 13839.56,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -824,41 +656,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -867,8 +675,8 @@
     "frame": 64,
     "sec": 2.133,
     "drivers": {
-      "distance": {
-        "value": 0.451,
+      "curveRadius": {
+        "value": 118.056,
         "unit": "m"
       }
     },
@@ -877,46 +685,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 180.7,
-          "y": 351.3,
-          "width": 388.3,
-          "height": 445.1
+          "x": 80.5,
+          "y": 327.5,
+          "width": 583.1,
+          "height": 516.2
         },
         "parts": {
           "wheel_left": {
-            "x": 187.2,
-            "y": 390.1,
-            "width": 92.8,
-            "height": 372.3
+            "x": 170,
+            "y": 412.1,
+            "width": 364.4,
+            "height": 408.7
           },
           "wheel_right": {
-            "x": 427.7,
-            "y": 378.6,
-            "width": 128.2,
-            "height": 361.7
+            "x": 212.4,
+            "y": 348.2,
+            "width": 315.9,
+            "height": 346.7
           },
           "contact_left": {
-            "x": 224.9,
-            "y": 627.3,
-            "width": 22,
-            "height": 26.8
+            "x": 331,
+            "y": 664.5,
+            "width": 39.2,
+            "height": 35.4
           },
           "contact_right": {
-            "x": 469.6,
-            "y": 610.1,
-            "width": 23.5,
-            "height": 26
+            "x": 351.1,
+            "y": 567.3,
+            "width": 34.3,
+            "height": 29.4
           },
           "flange": {
-            "x": 226.4,
-            "y": 362.3,
-            "width": 56,
-            "height": 429.7
+            "x": 167,
+            "y": 383.3,
+            "width": 372.2,
+            "height": 449.5
           }
         },
         "partStates": {
-          "distance": 0.451,
-          "wheel_angle_deg": 56.22,
+          "distance": 118.056,
+          "wheel_angle_deg": 14704.53,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -932,41 +740,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -975,8 +759,8 @@
     "frame": 72,
     "sec": 2.4,
     "drivers": {
-      "distance": {
-        "value": 0.625,
+      "curveRadius": {
+        "value": 125,
         "unit": "m"
       }
     },
@@ -985,46 +769,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 180.3,
-          "y": 384.9,
-          "width": 357.5,
-          "height": 365.4
+          "x": 136.7,
+          "y": 383.8,
+          "width": 457.4,
+          "height": 377.7
         },
         "parts": {
           "wheel_left": {
-            "x": 187.9,
-            "y": 408.8,
-            "width": 79.6,
-            "height": 312.5
+            "x": 166.3,
+            "y": 449.7,
+            "width": 199.2,
+            "height": 292.7
           },
           "wheel_right": {
-            "x": 454.1,
-            "y": 409.3,
-            "width": 76.4,
-            "height": 312.8
+            "x": 355.4,
+            "y": 400.2,
+            "width": 193.6,
+            "height": 260.6
           },
           "contact_left": {
-            "x": 224.8,
-            "y": 618.8,
-            "width": 21.1,
-            "height": 25.2
+            "x": 249.7,
+            "y": 649.2,
+            "width": 33.5,
+            "height": 32.3
           },
           "contact_right": {
-            "x": 474.3,
-            "y": 619.5,
-            "width": 20.9,
-            "height": 25.2
+            "x": 429.4,
+            "y": 581,
+            "width": 31.3,
+            "height": 28.5
           },
           "flange": {
-            "x": 233.5,
-            "y": 384.9,
-            "width": 34.2,
-            "height": 364.4
+            "x": 191.7,
+            "y": 428.6,
+            "width": 180.2,
+            "height": 324.3
           }
         },
         "partStates": {
-          "distance": 0.625,
-          "wheel_angle_deg": 77.85,
+          "distance": 125,
+          "wheel_angle_deg": 15569.51,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1040,41 +824,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1083,8 +843,8 @@
     "frame": 80,
     "sec": 2.667,
     "drivers": {
-      "distance": {
-        "value": 0.799,
+      "curveRadius": {
+        "value": 131.944,
         "unit": "m"
       }
     },
@@ -1093,46 +853,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 157.9,
-          "y": 382.4,
-          "width": 382.9,
-          "height": 376.4
+          "x": 97.1,
+          "y": 330.4,
+          "width": 552.9,
+          "height": 504.6
         },
         "parts": {
           "wheel_left": {
-            "x": 169.7,
-            "y": 405.4,
-            "width": 122.7,
-            "height": 299.6
+            "x": 100,
+            "y": 377.2,
+            "width": 269.3,
+            "height": 382.8
           },
           "wheel_right": {
-            "x": 438.2,
-            "y": 420.5,
-            "width": 95.6,
-            "height": 310.4
+            "x": 351.6,
+            "y": 374.4,
+            "width": 293.6,
+            "height": 380.1
           },
           "contact_left": {
-            "x": 228,
-            "y": 608,
-            "width": 23.9,
-            "height": 26.2
+            "x": 218,
+            "y": 615.2,
+            "width": 34,
+            "height": 31.3
           },
           "contact_right": {
-            "x": 472.1,
-            "y": 629.2,
-            "width": 22.7,
-            "height": 27.1
+            "x": 466.7,
+            "y": 611,
+            "width": 35.3,
+            "height": 31.1
           },
           "flange": {
-            "x": 207.6,
-            "y": 385,
-            "width": 88.3,
-            "height": 346.3
+            "x": 122.5,
+            "y": 353.3,
+            "width": 265.9,
+            "height": 431.8
           }
         },
         "partStates": {
-          "distance": 0.799,
-          "wheel_angle_deg": 99.47,
+          "distance": 131.944,
+          "wheel_angle_deg": 16434.48,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1148,41 +908,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1191,8 +927,8 @@
     "frame": 88,
     "sec": 2.933,
     "drivers": {
-      "distance": {
-        "value": 0.972,
+      "curveRadius": {
+        "value": 138.889,
         "unit": "m"
       }
     },
@@ -1201,46 +937,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 131,
-          "y": 347.9,
-          "width": 435.8,
-          "height": 458.1
+          "x": 116.8,
+          "y": 345.8,
+          "width": 515.7,
+          "height": 468.5
         },
         "parts": {
           "wheel_left": {
-            "x": 148.4,
-            "y": 374.5,
-            "width": 174.7,
-            "height": 350
+            "x": 119.8,
+            "y": 375.8,
+            "width": 291,
+            "height": 315.5
           },
           "wheel_right": {
-            "x": 404,
-            "y": 399.7,
-            "width": 151.5,
-            "height": 372.5
+            "x": 305.4,
+            "y": 419,
+            "width": 323.8,
+            "height": 349.6
           },
           "contact_left": {
-            "x": 234.9,
-            "y": 599.9,
-            "width": 25.4,
-            "height": 26.7
+            "x": 252.4,
+            "y": 583.3,
+            "width": 32.2,
+            "height": 29.3
           },
           "contact_right": {
-            "x": 465.6,
-            "y": 637.2,
-            "width": 25.5,
-            "height": 28.4
+            "x": 441.8,
+            "y": 645.8,
+            "width": 36.5,
+            "height": 33
           },
           "flange": {
-            "x": 177,
-            "y": 352.1,
-            "width": 153.3,
-            "height": 403.1
+            "x": 124.6,
+            "y": 360.3,
+            "width": 307,
+            "height": 353.8
           }
         },
         "partStates": {
-          "distance": 0.972,
-          "wheel_angle_deg": 121.1,
+          "distance": 138.889,
+          "wheel_angle_deg": 17299.45,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1256,41 +992,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1299,8 +1011,8 @@
     "frame": 96,
     "sec": 3.2,
     "drivers": {
-      "distance": {
-        "value": 1.146,
+      "curveRadius": {
+        "value": 145.833,
         "unit": "m"
       }
     },
@@ -1309,46 +1021,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 121.6,
-          "y": 342,
-          "width": 460.2,
-          "height": 474
+          "x": 143.4,
+          "y": 356.2,
+          "width": 460.7,
+          "height": 439.2
         },
         "parts": {
           "wheel_left": {
-            "x": 141.7,
-            "y": 368.7,
-            "width": 203,
-            "height": 350.2
+            "x": 212.1,
+            "y": 375.7,
+            "width": 266.3,
+            "height": 282
           },
           "wheel_right": {
-            "x": 378.4,
-            "y": 401.8,
-            "width": 188.9,
-            "height": 379.8
+            "x": 224.1,
+            "y": 445,
+            "width": 307.4,
+            "height": 328.4
           },
           "contact_left": {
-            "x": 242.6,
-            "y": 594.1,
-            "width": 26.1,
-            "height": 26.8
+            "x": 331.6,
+            "y": 568.6,
+            "width": 28.1,
+            "height": 27.2
           },
           "contact_right": {
-            "x": 458.1,
-            "y": 643.2,
-            "width": 27.1,
-            "height": 29.2
+            "x": 360.4,
+            "y": 665.7,
+            "width": 32.4,
+            "height": 32.4
           },
           "flange": {
-            "x": 163.1,
-            "y": 347.4,
-            "width": 191.1,
-            "height": 401.7
+            "x": 202.2,
+            "y": 363.6,
+            "width": 287.4,
+            "height": 316.3
           }
         },
         "partStates": {
-          "distance": 1.146,
-          "wheel_angle_deg": 142.72,
+          "distance": 145.833,
+          "wheel_angle_deg": 18164.42,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1364,41 +1076,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1407,8 +1095,8 @@
     "frame": 104,
     "sec": 3.467,
     "drivers": {
-      "distance": {
-        "value": 1.319,
+      "curveRadius": {
+        "value": 152.778,
         "unit": "m"
       }
     },
@@ -1417,46 +1105,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 134.8,
-          "y": 362.9,
-          "width": 444,
-          "height": 427.7
+          "x": 109.4,
+          "y": 330.6,
+          "width": 542.6,
+          "height": 501.8
         },
         "parts": {
           "wheel_left": {
-            "x": 153.7,
-            "y": 386.3,
-            "width": 197.4,
-            "height": 304
+            "x": 301.5,
+            "y": 351.8,
+            "width": 279,
+            "height": 356.1
           },
           "wheel_right": {
-            "x": 370.5,
-            "y": 426.9,
-            "width": 193.3,
-            "height": 334
+            "x": 137.2,
+            "y": 403,
+            "width": 295.9,
+            "height": 406.5
           },
           "contact_left": {
-            "x": 249.6,
-            "y": 590.2,
-            "width": 26.3,
-            "height": 26.9
+            "x": 414,
+            "y": 576.2,
+            "width": 32.7,
+            "height": 28.8
           },
           "contact_right": {
-            "x": 451.3,
-            "y": 647.5,
-            "width": 28,
-            "height": 29.7
+            "x": 264.1,
+            "y": 654.5,
+            "width": 35,
+            "height": 33.4
           },
           "flange": {
-            "x": 172.2,
-            "y": 369.5,
-            "width": 188.8,
-            "height": 346.4
+            "x": 290.6,
+            "y": 332.8,
+            "width": 281.2,
+            "height": 405.9
           }
         },
         "partStates": {
-          "distance": 1.319,
-          "wheel_angle_deg": 164.34,
+          "distance": 152.778,
+          "wheel_angle_deg": 19029.4,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1472,41 +1160,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1515,8 +1179,8 @@
     "frame": 112,
     "sec": 3.733,
     "drivers": {
-      "distance": {
-        "value": 1.493,
+      "curveRadius": {
+        "value": 159.722,
         "unit": "m"
       }
     },
@@ -1525,46 +1189,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 148.3,
-          "y": 379.6,
-          "width": 423.8,
-          "height": 390.8
+          "x": 178.2,
+          "y": 387.9,
+          "width": 384,
+          "height": 358.5
         },
         "parts": {
           "wheel_left": {
-            "x": 165.8,
-            "y": 400.5,
-            "width": 187.6,
-            "height": 268.6
+            "x": 423.7,
+            "y": 412.7,
+            "width": 131.2,
+            "height": 282.7
           },
           "wheel_right": {
-            "x": 367.7,
-            "y": 446.6,
-            "width": 189.5,
-            "height": 297.6
+            "x": 181.8,
+            "y": 424,
+            "width": 105.7,
+            "height": 290.3
           },
           "contact_left": {
-            "x": 255.1,
-            "y": 587.7,
-            "width": 26.3,
-            "height": 26.8
+            "x": 469,
+            "y": 607.1,
+            "width": 25.7,
+            "height": 26.9
           },
           "contact_right": {
-            "x": 445.9,
-            "y": 650.4,
-            "width": 28.5,
-            "height": 30
+            "x": 223.5,
+            "y": 623,
+            "width": 24.2,
+            "height": 27.7
           },
           "flange": {
-            "x": 182.8,
-            "y": 387.1,
-            "width": 180.5,
-            "height": 304
+            "x": 419.4,
+            "y": 393.6,
+            "width": 101.4,
+            "height": 325.2
           }
         },
         "partStates": {
-          "distance": 1.493,
-          "wheel_angle_deg": 185.97,
+          "distance": 159.722,
+          "wheel_angle_deg": 19894.37,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1580,41 +1244,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1623,8 +1263,8 @@
     "frame": 120,
     "sec": 4,
     "drivers": {
-      "distance": {
-        "value": 1.667,
+      "curveRadius": {
+        "value": 166.667,
         "unit": "m"
       }
     },
@@ -1633,46 +1273,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 124.6,
-          "y": 347.2,
-          "width": 468,
-          "height": 464.1
+          "x": 139.9,
+          "y": 340.2,
+          "width": 489,
+          "height": 473.8
         },
         "parts": {
           "wheel_left": {
-            "x": 146.6,
-            "y": 372.3,
-            "width": 229.3,
-            "height": 324.4
+            "x": 334.1,
+            "y": 405,
+            "width": 293,
+            "height": 373.2
           },
           "wheel_right": {
-            "x": 340.7,
-            "y": 418.2,
-            "width": 233.5,
-            "height": 361
+            "x": 141.1,
+            "y": 367,
+            "width": 245.6,
+            "height": 340.1
           },
           "contact_left": {
-            "x": 258.9,
-            "y": 586.1,
-            "width": 26.3,
-            "height": 26.8
+            "x": 449.1,
+            "y": 643.2,
+            "width": 33.7,
+            "height": 31.4
           },
           "contact_right": {
-            "x": 442.1,
-            "y": 652.2,
-            "width": 28.7,
-            "height": 30.1
+            "x": 248,
+            "y": 586.6,
+            "width": 28.6,
+            "height": 28.3
           },
           "flange": {
-            "x": 157.5,
-            "y": 354.5,
-            "width": 231.8,
-            "height": 369.2
+            "x": 316.9,
+            "y": 378.8,
+            "width": 293.4,
+            "height": 416.6
           }
         },
         "partStates": {
-          "distance": 1.667,
-          "wheel_angle_deg": 207.59,
+          "distance": 166.667,
+          "wheel_angle_deg": 20759.34,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1688,41 +1328,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1731,8 +1347,8 @@
     "frame": 128,
     "sec": 4.267,
     "drivers": {
-      "distance": {
-        "value": 1.84,
+      "curveRadius": {
+        "value": 173.611,
         "unit": "m"
       }
     },
@@ -1741,46 +1357,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 118.9,
-          "y": 339.4,
-          "width": 479.7,
-          "height": 481.6
+          "x": 173.3,
+          "y": 358.9,
+          "width": 386.8,
+          "height": 418.6
         },
         "parts": {
           "wheel_left": {
-            "x": 142.2,
-            "y": 365.5,
-            "width": 242.1,
-            "height": 336.6
+            "x": 228.7,
+            "y": 451.8,
+            "width": 310.4,
+            "height": 303.8
           },
           "wheel_right": {
-            "x": 330.4,
-            "y": 412.1,
-            "width": 248.6,
-            "height": 375.6
+            "x": 207.3,
+            "y": 379.9,
+            "width": 268.5,
+            "height": 266
           },
           "contact_left": {
-            "x": 261.3,
-            "y": 585.2,
-            "width": 26.2,
-            "height": 26.8
+            "x": 369,
+            "y": 667.2,
+            "width": 24,
+            "height": 28.7
           },
           "contact_right": {
-            "x": 439.8,
-            "y": 653.3,
-            "width": 28.8,
-            "height": 30.2
+            "x": 331.5,
+            "y": 570.2,
+            "width": 20.5,
+            "height": 24.4
           },
           "flange": {
-            "x": 150.6,
-            "y": 346.9,
-            "width": 248.1,
-            "height": 383.2
+            "x": 204.5,
+            "y": 427.9,
+            "width": 349.3,
+            "height": 330.4
           }
         },
         "partStates": {
-          "distance": 1.84,
-          "wheel_angle_deg": 229.22,
+          "distance": 173.611,
+          "wheel_angle_deg": 21624.31,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1796,41 +1412,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1839,8 +1431,8 @@
     "frame": 136,
     "sec": 4.533,
     "drivers": {
-      "distance": {
-        "value": 2.014,
+      "curveRadius": {
+        "value": 180.556,
         "unit": "m"
       }
     },
@@ -1849,46 +1441,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 133.6,
-          "y": 356.8,
-          "width": 454.1,
-          "height": 442.4
+          "x": 134.3,
+          "y": 368,
+          "width": 421.6,
+          "height": 408.7
         },
         "parts": {
           "wheel_left": {
-            "x": 154.6,
-            "y": 380.5,
-            "width": 222.6,
-            "height": 304.1
+            "x": 135.5,
+            "y": 444.6,
+            "width": 268.2,
+            "height": 308
           },
           "wheel_right": {
-            "x": 339.3,
-            "y": 429.4,
-            "width": 230.2,
-            "height": 339.9
+            "x": 317.5,
+            "y": 388.4,
+            "width": 230.5,
+            "height": 272.5
           },
           "contact_left": {
-            "x": 262.4,
-            "y": 584.8,
-            "width": 26.2,
-            "height": 26.7
+            "x": 264.1,
+            "y": 655.1,
+            "width": 31.5,
+            "height": 31
           },
           "contact_right": {
-            "x": 438.6,
-            "y": 653.8,
-            "width": 28.8,
-            "height": 30.2
+            "x": 418.6,
+            "y": 577.5,
+            "width": 26.3,
+            "height": 27
           },
           "flange": {
-            "x": 164.7,
-            "y": 364.7,
-            "width": 225.7,
-            "height": 344.9
+            "x": 145.6,
+            "y": 422.2,
+            "width": 275.2,
+            "height": 338
           }
         },
         "partStates": {
-          "distance": 2.014,
-          "wheel_angle_deg": 250.84,
+          "distance": 180.556,
+          "wheel_angle_deg": 22489.29,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -1904,41 +1496,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -1947,8 +1515,8 @@
     "frame": 144,
     "sec": 4.8,
     "drivers": {
-      "distance": {
-        "value": 2.188,
+      "curveRadius": {
+        "value": 187.5,
         "unit": "m"
       }
     },
@@ -1957,46 +1525,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 157.3,
-          "y": 386.1,
-          "width": 411.3,
-          "height": 376.9
+          "x": 107.7,
+          "y": 337,
+          "width": 464,
+          "height": 478
         },
         "parts": {
           "wheel_left": {
-            "x": 174.5,
-            "y": 405.8,
-            "width": 187.8,
-            "height": 250.9
+            "x": 113.3,
+            "y": 379,
+            "width": 215.7,
+            "height": 383.7
           },
           "wheel_right": {
-            "x": 357.4,
-            "y": 457.7,
-            "width": 195.6,
-            "height": 280.8
+            "x": 395,
+            "y": 372.2,
+            "width": 174.6,
+            "height": 377
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.7,
-            "width": 26.2,
-            "height": 26.7
+            "x": 219.9,
+            "y": 619.6,
+            "width": 30.1,
+            "height": 29
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 469.5,
+            "y": 609.1,
+            "width": 27.1,
+            "height": 28.5
           },
           "flange": {
-            "x": 188.1,
-            "y": 394.6,
-            "width": 184.9,
-            "height": 282.4
+            "x": 142.2,
+            "y": 352.8,
+            "width": 196.2,
+            "height": 438.2
           }
         },
         "partStates": {
-          "distance": 2.188,
-          "wheel_angle_deg": 272.47,
+          "distance": 187.5,
+          "wheel_angle_deg": 23354.26,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2012,41 +1580,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2055,8 +1599,8 @@
     "frame": 152,
     "sec": 5.067,
     "drivers": {
-      "distance": {
-        "value": 2.361,
+      "curveRadius": {
+        "value": 194.444,
         "unit": "m"
       }
     },
@@ -2065,46 +1609,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 128.7,
-          "y": 350.7,
-          "width": 463.1,
-          "height": 456.2
+          "x": 111.2,
+          "y": 368,
+          "width": 469.1,
+          "height": 411.5
         },
         "parts": {
           "wheel_left": {
-            "x": 150.6,
-            "y": 375.2,
-            "width": 230.6,
-            "height": 314.8
+            "x": 156.1,
+            "y": 385.9,
+            "width": 204.6,
+            "height": 297.3
           },
           "wheel_right": {
-            "x": 334.4,
-            "y": 423.8,
-            "width": 238.5,
-            "height": 352
+            "x": 359.2,
+            "y": 429.2,
+            "width": 202.1,
+            "height": 330.4
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 252.1,
+            "y": 584,
+            "width": 31.1,
+            "height": 28.4
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 444.5,
+            "y": 646,
+            "width": 32.2,
+            "height": 31.8
           },
           "flange": {
-            "x": 159.6,
-            "y": 358.5,
-            "width": 235.3,
-            "height": 357.5
+            "x": 176.9,
+            "y": 370.1,
+            "width": 190,
+            "height": 338.7
           }
         },
         "partStates": {
-          "distance": 2.361,
-          "wheel_angle_deg": 294.09,
+          "distance": 194.444,
+          "wheel_angle_deg": 24219.23,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2120,41 +1664,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2163,8 +1683,8 @@
     "frame": 160,
     "sec": 5.333,
     "drivers": {
-      "distance": {
-        "value": 2.535,
+      "curveRadius": {
+        "value": 201.389,
         "unit": "m"
       }
     },
@@ -2173,46 +1693,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 118.9,
-          "y": 339,
-          "width": 480.6,
-          "height": 482.6
+          "x": 80.4,
+          "y": 338.8,
+          "width": 526,
+          "height": 484.1
         },
         "parts": {
           "wheel_left": {
-            "x": 142.4,
-            "y": 365.1,
-            "width": 245,
-            "height": 336.2
+            "x": 197.4,
+            "y": 358.9,
+            "width": 297.2,
+            "height": 320.5
           },
           "wheel_right": {
-            "x": 326.6,
-            "y": 412.5,
-            "width": 253,
-            "height": 375.8
+            "x": 199.4,
+            "y": 425,
+            "width": 342.3,
+            "height": 375.7
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 332.9,
+            "y": 567.9,
+            "width": 31.6,
+            "height": 28.4
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 354.7,
+            "y": 665,
+            "width": 36.1,
+            "height": 34
           },
           "flange": {
-            "x": 149.9,
-            "y": 346.5,
-            "width": 252.3,
-            "height": 382.6
+            "x": 191.2,
+            "y": 344,
+            "width": 314.4,
+            "height": 361.8
           }
         },
         "partStates": {
-          "distance": 2.535,
-          "wheel_angle_deg": 315.71,
+          "distance": 201.389,
+          "wheel_angle_deg": 25084.2,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2228,41 +1748,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2271,8 +1767,8 @@
     "frame": 168,
     "sec": 5.6,
     "drivers": {
-      "distance": {
-        "value": 2.708,
+      "curveRadius": {
+        "value": 208.333,
         "unit": "m"
       }
     },
@@ -2281,46 +1777,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 130.1,
-          "y": 352.3,
-          "width": 460.7,
-          "height": 452.5
+          "x": 97.2,
+          "y": 339.4,
+          "width": 503.3,
+          "height": 477.8
         },
         "parts": {
           "wheel_left": {
-            "x": 151.7,
-            "y": 376.6,
-            "width": 228.5,
-            "height": 311.8
+            "x": 292.4,
+            "y": 367.1,
+            "width": 293.7,
+            "height": 318.7
           },
           "wheel_right": {
-            "x": 335.5,
-            "y": 425.4,
-            "width": 236.5,
-            "height": 348.7
+            "x": 111.3,
+            "y": 419.5,
+            "width": 325.7,
+            "height": 359.4
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 419.8,
+            "y": 577.8,
+            "width": 28.9,
+            "height": 27.8
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 260.8,
+            "y": 653.8,
+            "width": 33.1,
+            "height": 31.9
           },
           "flange": {
-            "x": 161,
-            "y": 360.2,
-            "width": 233,
-            "height": 354
+            "x": 271.5,
+            "y": 351.1,
+            "width": 317.5,
+            "height": 358.8
           }
         },
         "partStates": {
-          "distance": 2.708,
-          "wheel_angle_deg": 337.34,
+          "distance": 208.333,
+          "wheel_angle_deg": 25949.18,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2336,41 +1832,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2379,8 +1851,8 @@
     "frame": 176,
     "sec": 5.867,
     "drivers": {
-      "distance": {
-        "value": 2.882,
+      "curveRadius": {
+        "value": 215.278,
         "unit": "m"
       }
     },
@@ -2389,46 +1861,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 159.7,
-          "y": 389.2,
-          "width": 406.9,
-          "height": 370
+          "x": 88.2,
+          "y": 364.7,
+          "width": 525.5,
+          "height": 428.8
         },
         "parts": {
           "wheel_left": {
-            "x": 176.5,
-            "y": 408.5,
-            "width": 184.1,
-            "height": 245.4
+            "x": 357.9,
+            "y": 406.5,
+            "width": 254.7,
+            "height": 301.4
           },
           "wheel_right": {
-            "x": 359.3,
-            "y": 460.7,
-            "width": 191.9,
-            "height": 274.6
+            "x": 89.5,
+            "y": 415.5,
+            "width": 272.6,
+            "height": 308.1
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 464.4,
+            "y": 606.3,
+            "width": 36.4,
+            "height": 31.9
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 216,
+            "y": 619,
+            "width": 38.3,
+            "height": 32.6
           },
           "flange": {
-            "x": 190.5,
-            "y": 397.7,
-            "width": 180.7,
-            "height": 275.9
+            "x": 341.1,
+            "y": 390.4,
+            "width": 249.6,
+            "height": 335.4
           }
         },
         "partStates": {
-          "distance": 2.882,
-          "wheel_angle_deg": 358.96,
+          "distance": 215.278,
+          "wheel_angle_deg": 26814.15,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2444,41 +1916,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2487,8 +1935,8 @@
     "frame": 184,
     "sec": 6.133,
     "drivers": {
-      "distance": {
-        "value": 3.056,
+      "curveRadius": {
+        "value": 222.222,
         "unit": "m"
       }
     },
@@ -2497,46 +1945,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 132.2,
-          "y": 354.9,
-          "width": 456.9,
-          "height": 446.7
+          "x": 115.9,
+          "y": 336.3,
+          "width": 473.8,
+          "height": 481.2
         },
         "parts": {
           "wheel_left": {
-            "x": 153.5,
-            "y": 378.8,
-            "width": 225.4,
-            "height": 307.2
+            "x": 359.1,
+            "y": 400.2,
+            "width": 212.5,
+            "height": 383.7
           },
           "wheel_right": {
-            "x": 337.2,
-            "y": 427.8,
-            "width": 233.4,
-            "height": 343.5
+            "x": 141.1,
+            "y": 362.5,
+            "width": 219.6,
+            "height": 349.6
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 451.4,
+            "y": 643.9,
+            "width": 28.7,
+            "height": 30
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 248.8,
+            "y": 587.2,
+            "width": 27,
+            "height": 27.1
           },
           "flange": {
-            "x": 163.1,
-            "y": 362.8,
-            "width": 229.3,
-            "height": 348.5
+            "x": 345,
+            "y": 371.9,
+            "width": 203.3,
+            "height": 432.7
           }
         },
         "partStates": {
-          "distance": 3.056,
-          "wheel_angle_deg": 380.59,
+          "distance": 222.222,
+          "wheel_angle_deg": 27679.12,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2552,41 +2000,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2595,8 +2019,8 @@
     "frame": 192,
     "sec": 6.4,
     "drivers": {
-      "distance": {
-        "value": 3.229,
+      "curveRadius": {
+        "value": 229.167,
         "unit": "m"
       }
     },
@@ -2605,46 +2029,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 119,
-          "y": 339.1,
-          "width": 480.3,
-          "height": 482.2
+          "x": 72,
+          "y": 348,
+          "width": 563.6,
+          "height": 469.9
         },
         "parts": {
           "wheel_left": {
-            "x": 142.6,
-            "y": 365.2,
-            "width": 244.7,
-            "height": 335.8
+            "x": 225.9,
+            "y": 431,
+            "width": 321,
+            "height": 366.8
           },
           "wheel_right": {
-            "x": 326.7,
-            "y": 412.7,
-            "width": 252.8,
-            "height": 375.4
+            "x": 192.4,
+            "y": 366,
+            "width": 280.4,
+            "height": 311.2
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 367.4,
+            "y": 663.2,
+            "width": 40.5,
+            "height": 35.9
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 318,
+            "y": 567.9,
+            "width": 35.6,
+            "height": 29.9
           },
           "flange": {
-            "x": 150,
-            "y": 346.7,
-            "width": 252.1,
-            "height": 382.2
+            "x": 222.9,
+            "y": 405.4,
+            "width": 317.5,
+            "height": 401.8
           }
         },
         "partStates": {
-          "distance": 3.229,
-          "wheel_angle_deg": 402.21,
+          "distance": 229.167,
+          "wheel_angle_deg": 28544.09,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2660,41 +2084,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2703,8 +2103,8 @@
     "frame": 200,
     "sec": 6.667,
     "drivers": {
-      "distance": {
-        "value": 3.403,
+      "curveRadius": {
+        "value": 236.111,
         "unit": "m"
       }
     },
@@ -2713,46 +2113,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 126.9,
-          "y": 348.5,
-          "width": 466.4,
-          "height": 461.1
+          "x": 109.7,
+          "y": 347.4,
+          "width": 492.9,
+          "height": 460.7
         },
         "parts": {
           "wheel_left": {
-            "x": 149.1,
-            "y": 373.3,
-            "width": 233.2,
-            "height": 318.8
+            "x": 151,
+            "y": 427.6,
+            "width": 285.9,
+            "height": 354.3
           },
           "wheel_right": {
-            "x": 333,
-            "y": 421.7,
-            "width": 241.2,
-            "height": 356.5
+            "x": 295.8,
+            "y": 369.1,
+            "width": 259.3,
+            "height": 309
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 276.9,
+            "y": 658.5,
+            "width": 33,
+            "height": 32.2
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 404.6,
+            "y": 574,
+            "width": 29.1,
+            "height": 27.7
           },
           "flange": {
-            "x": 157.8,
-            "y": 356.3,
-            "width": 238.5,
-            "height": 362.2
+            "x": 161.5,
+            "y": 401.6,
+            "width": 291.5,
+            "height": 391
           }
         },
         "partStates": {
-          "distance": 3.403,
-          "wheel_angle_deg": 423.84,
+          "distance": 236.111,
+          "wheel_angle_deg": 29409.07,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2768,41 +2168,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2811,8 +2187,8 @@
     "frame": 208,
     "sec": 6.933,
     "drivers": {
-      "distance": {
-        "value": 3.576,
+      "curveRadius": {
+        "value": 243.056,
         "unit": "m"
       }
     },
@@ -2821,46 +2197,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 153.9,
-          "y": 381.8,
-          "width": 417.6,
-          "height": 386.5
+          "x": 60.8,
+          "y": 327,
+          "width": 590.2,
+          "height": 518.4
         },
         "parts": {
           "wheel_left": {
-            "x": 171.6,
-            "y": 402.1,
-            "width": 192.9,
-            "height": 258.7
+            "x": 62.6,
+            "y": 387.2,
+            "width": 342.1,
+            "height": 388.4
           },
           "wheel_right": {
-            "x": 354.6,
-            "y": 453.6,
-            "width": 200.8,
-            "height": 289.4
+            "x": 318.1,
+            "y": 367.3,
+            "width": 331.2,
+            "height": 368.8
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 219.6,
+            "y": 628,
+            "width": 38.6,
+            "height": 33.3
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 457.7,
+            "y": 597.6,
+            "width": 36.6,
+            "height": 31.4
           },
           "flange": {
-            "x": 184.7,
-            "y": 390.2,
-            "width": 191,
-            "height": 291.5
+            "x": 79.5,
+            "y": 363,
+            "width": 349,
+            "height": 432.3
           }
         },
         "partStates": {
-          "distance": 3.576,
-          "wheel_angle_deg": 445.46,
+          "distance": 243.056,
+          "wheel_angle_deg": 30274.04,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2876,41 +2252,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -2919,8 +2271,8 @@
     "frame": 216,
     "sec": 7.2,
     "drivers": {
-      "distance": {
-        "value": 3.75,
+      "curveRadius": {
+        "value": 250,
         "unit": "m"
       }
     },
@@ -2929,46 +2281,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 136.1,
-          "y": 359.7,
-          "width": 449.8,
-          "height": 435.8
+          "x": 121.7,
+          "y": 378.1,
+          "width": 478.5,
+          "height": 394.6
         },
         "parts": {
           "wheel_left": {
-            "x": 156.8,
-            "y": 383,
-            "width": 219.5,
-            "height": 298.5
+            "x": 125.1,
+            "y": 409.6,
+            "width": 231.3,
+            "height": 268.7
           },
           "wheel_right": {
-            "x": 340.4,
-            "y": 432.4,
-            "width": 227.5,
-            "height": 333.8
+            "x": 364,
+            "y": 437.1,
+            "width": 233.4,
+            "height": 286.6
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
-          },
-          "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
+            "x": 231,
+            "y": 594.6,
+            "width": 34.1,
             "height": 30.2
           },
+          "contact_right": {
+            "x": 460.2,
+            "y": 632.5,
+            "width": 35.7,
+            "height": 32.4
+          },
           "flange": {
-            "x": 167.1,
-            "y": 367.7,
-            "width": 222.3,
-            "height": 338.3
+            "x": 143.8,
+            "y": 396.6,
+            "width": 225.8,
+            "height": 299.6
           }
         },
         "partStates": {
-          "distance": 3.75,
-          "wheel_angle_deg": 467.09,
+          "distance": 250,
+          "wheel_angle_deg": 31139.01,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -2984,41 +2336,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3027,8 +2355,8 @@
     "frame": 224,
     "sec": 7.467,
     "drivers": {
-      "distance": {
-        "value": 3.924,
+      "curveRadius": {
+        "value": 256.944,
         "unit": "m"
       }
     },
@@ -3037,46 +2365,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 119.8,
-          "y": 340,
-          "width": 479.1,
-          "height": 480.2
+          "x": 73.9,
+          "y": 328.4,
+          "width": 568.9,
+          "height": 511.8
         },
         "parts": {
           "wheel_left": {
-            "x": 143.2,
-            "y": 366,
-            "width": 243.7,
-            "height": 334.2
+            "x": 153.6,
+            "y": 350.5,
+            "width": 295.4,
+            "height": 350.4
           },
           "wheel_right": {
-            "x": 327.3,
-            "y": 413.6,
-            "width": 251.7,
-            "height": 373.6
+            "x": 252.4,
+            "y": 407.9,
+            "width": 328.8,
+            "height": 406.1
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 291.6,
+            "y": 571.9,
+            "width": 33.1,
+            "height": 29.1
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 400,
+            "y": 659.3,
+            "width": 37.4,
+            "height": 34.3
           },
           "flange": {
-            "x": 150.8,
-            "y": 347.6,
-            "width": 250.8,
-            "height": 380.3
+            "x": 155.1,
+            "y": 332.7,
+            "width": 304.2,
+            "height": 398.2
           }
         },
         "partStates": {
-          "distance": 3.924,
-          "wheel_angle_deg": 488.71,
+          "distance": 256.944,
+          "wheel_angle_deg": 32003.98,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3092,41 +2420,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3135,8 +2439,8 @@
     "frame": 232,
     "sec": 7.733,
     "drivers": {
-      "distance": {
-        "value": 4.097,
+      "curveRadius": {
+        "value": 263.889,
         "unit": "m"
       }
     },
@@ -3145,46 +2449,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 124.2,
-          "y": 345.3,
-          "width": 471.2,
-          "height": 468.3
+          "x": 77.4,
+          "y": 342.2,
+          "width": 561.5,
+          "height": 482.1
         },
         "parts": {
           "wheel_left": {
-            "x": 146.8,
-            "y": 370.5,
-            "width": 237.2,
-            "height": 324.6
+            "x": 248.5,
+            "y": 361.1,
+            "width": 287.8,
+            "height": 322.1
           },
           "wheel_right": {
-            "x": 330.8,
-            "y": 418.6,
-            "width": 245.2,
-            "height": 362.9
+            "x": 163,
+            "y": 424.8,
+            "width": 328.9,
+            "height": 378.5
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 371.8,
+            "y": 568.5,
+            "width": 34.7,
+            "height": 29.6
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 306.9,
+            "y": 662.8,
+            "width": 39.6,
+            "height": 35.4
           },
           "flange": {
-            "x": 155.2,
-            "y": 353,
-            "width": 243.1,
-            "height": 369
+            "x": 242.1,
+            "y": 346.3,
+            "width": 293.9,
+            "height": 364.2
           }
         },
         "partStates": {
-          "distance": 4.097,
-          "wheel_angle_deg": 510.33,
+          "distance": 263.889,
+          "wheel_angle_deg": 32868.96,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3200,41 +2504,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3243,8 +2523,8 @@
     "frame": 240,
     "sec": 8,
     "drivers": {
-      "distance": {
-        "value": 4.271,
+      "curveRadius": {
+        "value": 270.833,
         "unit": "m"
       }
     },
@@ -3253,46 +2533,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 148.4,
-          "y": 374.9,
-          "width": 427.5,
-          "height": 401.9
+          "x": 112.6,
+          "y": 353,
+          "width": 492.6,
+          "height": 449
         },
         "parts": {
           "wheel_left": {
-            "x": 167,
-            "y": 396.1,
-            "width": 201.2,
-            "height": 271
+            "x": 340.4,
+            "y": 381.6,
+            "width": 252.6,
+            "height": 309.4
           },
           "wheel_right": {
-            "x": 350.2,
-            "y": 447,
-            "width": 209.1,
-            "height": 303.2
+            "x": 122.5,
+            "y": 420.7,
+            "width": 260.3,
+            "height": 339.5
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 442.6,
+            "y": 586.6,
+            "width": 30.7,
+            "height": 28.6
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 237.3,
+            "y": 642.8,
+            "width": 33.3,
+            "height": 31.7
           },
           "flange": {
-            "x": 179.3,
-            "y": 383.2,
-            "width": 200.7,
-            "height": 306.1
+            "x": 324.9,
+            "y": 365.4,
+            "width": 257.6,
+            "height": 349.2
           }
         },
         "partStates": {
-          "distance": 4.271,
-          "wheel_angle_deg": 531.96,
+          "distance": 270.833,
+          "wheel_angle_deg": 33733.93,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3308,41 +2588,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3351,8 +2607,8 @@
     "frame": 248,
     "sec": 8.267,
     "drivers": {
-      "distance": {
-        "value": 4.444,
+      "curveRadius": {
+        "value": 277.778,
         "unit": "m"
       }
     },
@@ -3361,46 +2617,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 140.5,
-          "y": 365.2,
-          "width": 441.8,
-          "height": 423.7
+          "x": 54.1,
+          "y": 323.1,
+          "width": 611.7,
+          "height": 530.1
         },
         "parts": {
           "wheel_left": {
-            "x": 160.5,
-            "y": 387.7,
-            "width": 213,
-            "height": 288.7
+            "x": 318,
+            "y": 375.9,
+            "width": 346,
+            "height": 390.9
           },
           "wheel_right": {
-            "x": 343.9,
-            "y": 437.6,
-            "width": 220.9,
-            "height": 322.8
+            "x": 55.9,
+            "y": 370.6,
+            "width": 345.1,
+            "height": 385.4
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 465.6,
+            "y": 616.4,
+            "width": 38.9,
+            "height": 33
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 217.1,
+            "y": 608.3,
+            "width": 38.5,
+            "height": 32.5
           },
           "flange": {
-            "x": 171.5,
-            "y": 373.2,
-            "width": 214.6,
-            "height": 326.7
+            "x": 294.1,
+            "y": 352.7,
+            "width": 353.4,
+            "height": 436.9
           }
         },
         "partStates": {
-          "distance": 4.444,
-          "wheel_angle_deg": 553.58,
+          "distance": 277.778,
+          "wheel_angle_deg": 34598.9,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3416,41 +2672,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3459,8 +2691,8 @@
     "frame": 256,
     "sec": 8.533,
     "drivers": {
-      "distance": {
-        "value": 4.618,
+      "curveRadius": {
+        "value": 284.722,
         "unit": "m"
       }
     },
@@ -3469,46 +2701,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 121.1,
-          "y": 341.5,
-          "width": 476.8,
-          "height": 476.8
+          "x": 154.5,
+          "y": 379.9,
+          "width": 416.4,
+          "height": 383.4
         },
         "parts": {
           "wheel_left": {
-            "x": 144.2,
-            "y": 367.3,
-            "width": 241.8,
-            "height": 331.5
+            "x": 355.7,
+            "y": 451.2,
+            "width": 199.4,
+            "height": 286.9
           },
           "wheel_right": {
-            "x": 328.3,
-            "y": 415,
-            "width": 249.8,
-            "height": 370.5
+            "x": 172,
+            "y": 400.1,
+            "width": 191.6,
+            "height": 256.5
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
+            "x": 438.6,
+            "y": 650.5,
+            "width": 28.9,
+            "height": 30.2
+          },
+          "contact_right": {
+            "x": 262.4,
+            "y": 581.7,
             "width": 26.2,
             "height": 26.7
           },
-          "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
-          },
           "flange": {
-            "x": 152,
-            "y": 349.2,
-            "width": 248.6,
-            "height": 377.1
+            "x": 342.3,
+            "y": 430,
+            "width": 190.4,
+            "height": 316.3
           }
         },
         "partStates": {
-          "distance": 4.618,
-          "wheel_angle_deg": 575.21,
+          "distance": 284.722,
+          "wheel_angle_deg": 35463.87,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3524,41 +2756,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3567,8 +2775,8 @@
     "frame": 264,
     "sec": 8.8,
     "drivers": {
-      "distance": {
-        "value": 4.792,
+      "curveRadius": {
+        "value": 291.667,
         "unit": "m"
       }
     },
@@ -3577,46 +2785,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 122.1,
-          "y": 342.7,
-          "width": 475,
-          "height": 474.1
+          "x": 58.2,
+          "y": 327.3,
+          "width": 603.9,
+          "height": 520.1
         },
         "parts": {
           "wheel_left": {
-            "x": 145.1,
-            "y": 368.3,
-            "width": 240.3,
-            "height": 329.3
+            "x": 189.9,
+            "y": 410.9,
+            "width": 364.3,
+            "height": 413.6
           },
           "wheel_right": {
-            "x": 329.1,
-            "y": 416.2,
-            "width": 248.4,
-            "height": 368.1
+            "x": 189.8,
+            "y": 347.6,
+            "width": 315.8,
+            "height": 350.1
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 352,
+            "y": 664,
+            "width": 41,
+            "height": 36.1
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 331.2,
+            "y": 567.1,
+            "width": 35.7,
+            "height": 30
           },
           "flange": {
-            "x": 153,
-            "y": 350.4,
-            "width": 246.9,
-            "height": 374.5
+            "x": 185.8,
+            "y": 382.2,
+            "width": 367.3,
+            "height": 455.1
           }
         },
         "partStates": {
-          "distance": 4.792,
-          "wheel_angle_deg": 596.83,
+          "distance": 291.667,
+          "wheel_angle_deg": 36328.85,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3632,41 +2840,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]
@@ -3675,8 +2859,8 @@
     "frame": 272,
     "sec": 9.067,
     "drivers": {
-      "distance": {
-        "value": 4.965,
+      "curveRadius": {
+        "value": 298.611,
         "unit": "m"
       }
     },
@@ -3685,46 +2869,46 @@
         "id": "wheelset",
         "role": "focus",
         "bbox": {
-          "x": 143.3,
-          "y": 368.6,
-          "width": 436.8,
-          "height": 416
+          "x": 104.5,
+          "y": 342.6,
+          "width": 511.1,
+          "height": 473.2
         },
         "parts": {
           "wheel_left": {
-            "x": 162.8,
-            "y": 390.7,
-            "width": 208.8,
-            "height": 282.5
+            "x": 145.2,
+            "y": 419.5,
+            "width": 281.9,
+            "height": 369.2
           },
           "wheel_right": {
-            "x": 346.1,
-            "y": 440.9,
-            "width": 216.7,
-            "height": 316
+            "x": 304.4,
+            "y": 364.8,
+            "width": 260.1,
+            "height": 323.3
           },
           "contact_left": {
-            "x": 262.8,
-            "y": 584.6,
-            "width": 26.2,
-            "height": 26.7
+            "x": 268.3,
+            "y": 656.1,
+            "width": 33.8,
+            "height": 32.5
           },
           "contact_right": {
-            "x": 438.2,
-            "y": 654,
-            "width": 28.8,
-            "height": 30.2
+            "x": 411.8,
+            "y": 575.6,
+            "width": 30.1,
+            "height": 28.1
           },
           "flange": {
-            "x": 174.2,
-            "y": 376.7,
-            "width": 209.7,
-            "height": 319.5
+            "x": 159.3,
+            "y": 392.7,
+            "width": 282.7,
+            "height": 409.2
           }
         },
         "partStates": {
-          "distance": 4.965,
-          "wheel_angle_deg": 618.46,
+          "distance": 298.611,
+          "wheel_angle_deg": 37193.82,
           "lateral_shift": 0,
           "left_effective_radius": 0.46,
           "right_effective_radius": 0.46
@@ -3740,41 +2924,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Inersia & Geseran Roda — Kendaraan melaju lurus di tikungan"
-      },
-      {
-        "id": "c1",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Inersia Tikungan — Kecenderungan melaju lurus ke arah rel luar",
-        "claimRef": "C2"
-      },
-      {
-        "id": "m1",
-        "component": "MeasureReveal",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 74
-        },
-        "text": "Jarak Tempuh: 5,0 m",
+        "text": "Inersia membuat roda melaju lurus",
         "claimRef": "C2"
       }
     ]

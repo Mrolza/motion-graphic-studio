@@ -3,9 +3,9 @@
     "frame": 0,
     "sec": 0,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 360,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -67,44 +67,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": -999897,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": -999139,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": -999033,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 360 deg",
-        "driverName": "crank_angle",
-        "numericValue": 360,
-        "claimRef": "C5"
       }
     ]
   },
@@ -112,9 +86,9 @@
     "frame": 8,
     "sec": 0.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 368.751,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -176,44 +150,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88.9,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 369 deg",
-        "driverName": "crank_angle",
-        "numericValue": 368.751,
-        "claimRef": "C5"
       }
     ]
   },
@@ -221,9 +169,9 @@
     "frame": 16,
     "sec": 0.533,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 377.502,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -285,44 +233,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 378 deg",
-        "driverName": "crank_angle",
-        "numericValue": 377.502,
-        "claimRef": "C5"
       }
     ]
   },
@@ -330,9 +252,9 @@
     "frame": 24,
     "sec": 0.8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 386.253,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -394,44 +316,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 386 deg",
-        "driverName": "crank_angle",
-        "numericValue": 386.253,
-        "claimRef": "C5"
       }
     ]
   },
@@ -439,9 +335,9 @@
     "frame": 32,
     "sec": 1.067,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 395.005,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -503,44 +399,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 395 deg",
-        "driverName": "crank_angle",
-        "numericValue": 395.005,
-        "claimRef": "C5"
       }
     ]
   },
@@ -548,9 +418,9 @@
     "frame": 40,
     "sec": 1.333,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 403.756,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -612,44 +482,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 404 deg",
-        "driverName": "crank_angle",
-        "numericValue": 403.756,
-        "claimRef": "C5"
       }
     ]
   },
@@ -657,9 +501,9 @@
     "frame": 48,
     "sec": 1.6,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 412.507,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -721,44 +565,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 413 deg",
-        "driverName": "crank_angle",
-        "numericValue": 412.507,
-        "claimRef": "C5"
       }
     ]
   },
@@ -766,9 +584,9 @@
     "frame": 56,
     "sec": 1.867,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 421.258,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -830,44 +648,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 421 deg",
-        "driverName": "crank_angle",
-        "numericValue": 421.258,
-        "claimRef": "C5"
       }
     ]
   },
@@ -875,9 +667,9 @@
     "frame": 64,
     "sec": 2.133,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 430.009,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -939,44 +731,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 430 deg",
-        "driverName": "crank_angle",
-        "numericValue": 430.009,
-        "claimRef": "C5"
       }
     ]
   },
@@ -984,9 +750,9 @@
     "frame": 72,
     "sec": 2.4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 438.76,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1048,44 +814,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 439 deg",
-        "driverName": "crank_angle",
-        "numericValue": 438.76,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1093,9 +833,9 @@
     "frame": 80,
     "sec": 2.667,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 447.511,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1157,44 +897,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 448 deg",
-        "driverName": "crank_angle",
-        "numericValue": 447.511,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1202,9 +916,9 @@
     "frame": 88,
     "sec": 2.933,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 456.263,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1266,44 +980,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 456 deg",
-        "driverName": "crank_angle",
-        "numericValue": 456.263,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1311,9 +999,9 @@
     "frame": 96,
     "sec": 3.2,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 465.014,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1375,44 +1063,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 465 deg",
-        "driverName": "crank_angle",
-        "numericValue": 465.014,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1420,9 +1082,9 @@
     "frame": 104,
     "sec": 3.467,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 473.765,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1484,44 +1146,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 474 deg",
-        "driverName": "crank_angle",
-        "numericValue": 473.765,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1529,9 +1165,9 @@
     "frame": 112,
     "sec": 3.733,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 482.516,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1593,44 +1229,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 483 deg",
-        "driverName": "crank_angle",
-        "numericValue": 482.516,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1638,9 +1248,9 @@
     "frame": 120,
     "sec": 4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 491.267,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1702,44 +1312,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 491 deg",
-        "driverName": "crank_angle",
-        "numericValue": 491.267,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1747,9 +1331,9 @@
     "frame": 128,
     "sec": 4.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 500.018,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1811,44 +1395,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 500 deg",
-        "driverName": "crank_angle",
-        "numericValue": 500.018,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1856,9 +1414,9 @@
     "frame": 136,
     "sec": 4.533,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 508.769,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1920,44 +1478,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 509 deg",
-        "driverName": "crank_angle",
-        "numericValue": 508.769,
-        "claimRef": "C5"
       }
     ]
   },
@@ -1965,9 +1497,9 @@
     "frame": 144,
     "sec": 4.8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 517.521,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2029,44 +1561,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 518 deg",
-        "driverName": "crank_angle",
-        "numericValue": 517.521,
-        "claimRef": "C5"
       }
     ]
   },
@@ -2074,9 +1580,9 @@
     "frame": 152,
     "sec": 5.067,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 526.272,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2138,44 +1644,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 526 deg",
-        "driverName": "crank_angle",
-        "numericValue": 526.272,
-        "claimRef": "C5"
       }
     ]
   },
@@ -2183,9 +1663,9 @@
     "frame": 160,
     "sec": 5.333,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 535.023,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2247,44 +1727,18 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
+        "text": "Langkah Tenaga",
         "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 535 deg",
-        "driverName": "crank_angle",
-        "numericValue": 535.023,
-        "claimRef": "C5"
       }
     ]
   },
@@ -2292,9 +1746,9 @@
     "frame": 168,
     "sec": 5.6,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 543.774,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2356,43 +1810,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 544 deg",
-        "driverName": "crank_angle",
-        "numericValue": 543.774,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -2401,9 +1829,9 @@
     "frame": 176,
     "sec": 5.867,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 552.525,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2465,43 +1893,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 553 deg",
-        "driverName": "crank_angle",
-        "numericValue": 552.525,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -2510,9 +1912,9 @@
     "frame": 184,
     "sec": 6.133,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 561.276,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2574,43 +1976,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 561 deg",
-        "driverName": "crank_angle",
-        "numericValue": 561.276,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -2619,9 +1995,9 @@
     "frame": 192,
     "sec": 6.4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 570.027,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2683,43 +2059,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 570 deg",
-        "driverName": "crank_angle",
-        "numericValue": 570.027,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -2728,9 +2078,9 @@
     "frame": 200,
     "sec": 6.667,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 578.778,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2792,43 +2142,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 579 deg",
-        "driverName": "crank_angle",
-        "numericValue": 578.778,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -2837,9 +2161,9 @@
     "frame": 208,
     "sec": 6.933,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 587.53,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2901,43 +2225,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 588 deg",
-        "driverName": "crank_angle",
-        "numericValue": 587.53,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -2946,9 +2244,9 @@
     "frame": 216,
     "sec": 7.2,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 596.281,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3010,43 +2308,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 596 deg",
-        "driverName": "crank_angle",
-        "numericValue": 596.281,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3055,9 +2327,9 @@
     "frame": 224,
     "sec": 7.467,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 605.032,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3119,43 +2391,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 605 deg",
-        "driverName": "crank_angle",
-        "numericValue": 605.032,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3164,9 +2410,9 @@
     "frame": 232,
     "sec": 7.733,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 613.783,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3228,43 +2474,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 614 deg",
-        "driverName": "crank_angle",
-        "numericValue": 613.783,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3273,9 +2493,9 @@
     "frame": 240,
     "sec": 8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 622.534,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3337,43 +2557,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 623 deg",
-        "driverName": "crank_angle",
-        "numericValue": 622.534,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3382,9 +2576,9 @@
     "frame": 248,
     "sec": 8.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 631.285,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3446,43 +2640,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 631 deg",
-        "driverName": "crank_angle",
-        "numericValue": 631.285,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3491,9 +2659,9 @@
     "frame": 256,
     "sec": 8.533,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 640.036,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3555,43 +2723,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 640 deg",
-        "driverName": "crank_angle",
-        "numericValue": 640.036,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3600,9 +2742,9 @@
     "frame": 264,
     "sec": 8.8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 648.788,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3664,43 +2806,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 649 deg",
-        "driverName": "crank_angle",
-        "numericValue": 648.788,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3709,9 +2825,9 @@
     "frame": 272,
     "sec": 9.067,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 657.539,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3773,43 +2889,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 658 deg",
-        "driverName": "crank_angle",
-        "numericValue": 657.539,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3818,9 +2908,9 @@
     "frame": 280,
     "sec": 9.333,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 666.29,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3882,43 +2972,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 666 deg",
-        "driverName": "crank_angle",
-        "numericValue": 666.29,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -3927,9 +2991,9 @@
     "frame": 288,
     "sec": 9.6,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 675.041,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3991,43 +3055,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 675 deg",
-        "driverName": "crank_angle",
-        "numericValue": 675.041,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -4036,9 +3074,9 @@
     "frame": 296,
     "sec": 9.867,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 683.792,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4100,43 +3138,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 684 deg",
-        "driverName": "crank_angle",
-        "numericValue": 683.792,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -4145,9 +3157,9 @@
     "frame": 304,
     "sec": 10.133,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 692.543,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4209,43 +3221,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 693 deg",
-        "driverName": "crank_angle",
-        "numericValue": 692.543,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -4254,9 +3240,9 @@
     "frame": 312,
     "sec": 10.4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 701.294,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4318,43 +3304,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 701 deg",
-        "driverName": "crank_angle",
-        "numericValue": 701.294,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -4363,9 +3323,9 @@
     "frame": 320,
     "sec": 10.667,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 710.046,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4427,43 +3387,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 710 deg",
-        "driverName": "crank_angle",
-        "numericValue": 710.046,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]
@@ -4472,9 +3406,9 @@
     "frame": 328,
     "sec": 10.933,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 718.797,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4536,43 +3470,17 @@
     ],
     "hud": [
       {
-        "id": "title_S3",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Tenaga & Buang — Ekspansi gas dan pembuangan sisa"
-      },
-      {
-        "id": "c9",
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Siklus Daya — Tekanan tinggi mendorong piston",
-        "claimRef": "C9"
-      },
-      {
-        "id": "c5",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 719 deg",
-        "driverName": "crank_angle",
-        "numericValue": 718.797,
+        "text": "Langkah Buang",
         "claimRef": "C5"
       }
     ]

@@ -4,34 +4,34 @@
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 101
+    "lineCount": 90
   },
   {
     "sceneId": "S2",
-    "fixes": 0,
+    "fixes": 2,
     "passed": true,
     "errors": [],
-    "lineCount": 99
+    "lineCount": 70
   },
   {
     "sceneId": "S3",
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 102
+    "lineCount": 93
   },
   {
     "sceneId": "S4",
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 103
+    "lineCount": 90
   },
   {
     "sceneId": "S5",
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 97
+    "lineCount": 88
   }
 ]

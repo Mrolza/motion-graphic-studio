@@ -2,7 +2,7 @@
   "compositionId": "gen-p2-kereta-S1",
   "passed": true,
   "sampleCount": 17,
-  "renderMs": 4640,
+  "renderMs": 7097,
   "reports": {
     "mechanics": {
       "layer": "L5",
@@ -18,13 +18,63 @@
     },
     "framing": {
       "layer": "L5",
-      "issues": []
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 18% zona bebas (< 20%)",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 14% zona bebas (< 20%)",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 12% zona bebas (< 20%)",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 12% zona bebas (< 20%)",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 14% zona bebas (< 20%)",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 15% zona bebas (< 20%)",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 16% zona bebas (< 20%)",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 16% zona bebas (< 20%)",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 16% zona bebas (< 20%)",
+          "ref": "f128 (4.27s)"
+        }
+      ]
     },
     "hudOverlap": {
       "layer": "L5",
       "issues": []
     },
     "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "onscreenTruth": {
       "layer": "L5",
       "issues": []
     },

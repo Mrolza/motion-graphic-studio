@@ -10,10 +10,34 @@ import { generateJson } from '@core/llm/client';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
 import { extractNumericValuesFromText } from '@core/qc/l1-ledger';
 
+const DISPLAY_FIELDS = [
+  'title',
+  'subtitle',
+  'label',
+  'detail',
+  'valueText',
+  'leftTitle',
+  'leftValue',
+  'rightTitle',
+  'rightValue',
+  'dateText',
+  'items',
+  'steps',
+];
+
 function collectTextValues(obj: Record<string, unknown>): string {
-  return Object.values(obj)
-    .map((v) => (typeof v === 'string' || typeof v === 'number' ? String(v) : ''))
-    .join(' ');
+  const parts: string[] = [];
+  for (const key of DISPLAY_FIELDS) {
+    const v = obj[key];
+    if (typeof v === 'string' || typeof v === 'number') {
+      parts.push(String(v));
+    } else if (Array.isArray(v)) {
+      for (const item of v) {
+        if (typeof item === 'string' || typeof item === 'number') parts.push(String(item));
+      }
+    }
+  }
+  return parts.join(' ');
 }
 
 /**
@@ -99,7 +123,30 @@ export function verifyStoryboardCode(
       });
     }
 
+    if (!sbScene.shot_type) {
+      issues.push({
+        severity: 'error',
+        message: `SB_MISSING_SHOT_TYPE: adegan ${sbScene.id} wajib menentukan shot_type`,
+        ref,
+      });
+    }
+
     for (const h of sbScene.hud) {
+      if (!h.hud_id) {
+        issues.push({
+          severity: 'error',
+          message: `SB_MISSING_HUD_ID: HUD "${h.component}" di ${sbScene.id} wajib memiliki hud_id unik`,
+          ref,
+        });
+      }
+      if (h.bind_to_driver && !sbScene.driver) {
+        issues.push({
+          severity: 'error',
+          message: `SB_HUD_NO_DRIVER: HUD "${h.hud_id ?? h.component}" memakai bind_to_driver tetapi adegan tidak punya driver`,
+          ref,
+        });
+      }
+
       const propText = collectTextValues(h.props);
       if (/\(C\d+\)/.test(propText)) {
         issues.push({
@@ -182,6 +229,32 @@ export function verifyStoryboardCode(
     }
   }
 
+  // Shot variation checks
+  const shotTypes = storyboard.scenes.map((s) => s.shot_type).filter(Boolean);
+  if (storyboard.scenes.length >= 3 && new Set(shotTypes).size < 3) {
+    issues.push({
+      severity: 'error',
+      message: `SB_LOW_SHOT_VARIETY: hanya ${new Set(shotTypes).size} jenis shot_type berbeda (minimal 3 per video)`,
+      ref: 'storyboard',
+    });
+  }
+  for (let i = 1; i < storyboard.scenes.length; i++) {
+    const prev = storyboard.scenes[i - 1]!;
+    const cur = storyboard.scenes[i]!;
+    if (
+      prev.shot_type &&
+      cur.shot_type &&
+      prev.shot_type === cur.shot_type &&
+      prev.focus_entities.join(',') === cur.focus_entities.join(',')
+    ) {
+      issues.push({
+        severity: 'error',
+        message: `SB_CONSECUTIVE_DUPLICATE_SHOT: ${prev.id} dan ${cur.id} memakai shot_type (${cur.shot_type}) dan focus_entities (${cur.focus_entities.join(',')}) yang sama berturut-turut`,
+        ref: cur.id,
+      });
+    }
+  }
+
   return { layer: 'L4', issues };
 }
 
@@ -224,6 +297,7 @@ export async function runStoryboardQcStage(
         `Periksa konsistensi visual storyboard terhadap naskah dan klaim verified:\n` +
           `1. Apakah rencana visual & komponen tiap adegan konsisten dengan klaim yang dirujuk (mis. flens di sisi dalam, piston turun saat hisap)?\n` +
           `2. Apakah visual menjelaskan kalimat narasi adegan itu (bukan sekadar dekorasi)?\n\n` +
+          `Kembalikan JSON dengan format persis: {"consistent": boolean, "issues": [{"scene_id": string, "severity": "error" | "warning", "message": string}]}.\n\n` +
           `Naskah:\n${JSON.stringify(script, null, 2)}\n\nKlaim:\n${JSON.stringify(
             ledger.claims.filter((c) => c.status === 'verified'),
             null,

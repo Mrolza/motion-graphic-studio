@@ -51,6 +51,84 @@ export function checkSyncFromTelemetry(
 }
 
 /**
+ * Runtime L5 check: every rendered HUD element must have a valid storyboard hud_id,
+ * and every number/unit must match its referenced verified claim.
+ */
+export function checkOnscreenTruthFromTelemetry(
+  samples: TelemetrySample[],
+  spec: VisualCheckSpec
+): QcIssue[] {
+  const issues: QcIssue[] = [];
+  if (!spec.expectedHud) return issues;
+  const expectedMap = new Map(spec.expectedHud.map((e) => [e.hud_id, e]));
+  const seen = new Set<string>();
+
+  for (const sample of samples) {
+    const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
+    for (const h of sample.hud) {
+      const hid = h.hud_id ?? h.id;
+      const exp = expectedMap.get(hid);
+      if (!exp) {
+        const key = `unsanctioned:${hid}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          issues.push({
+            severity: 'error',
+            message: `L5_UNSANCTIONED_HUD: elemen HUD "${hid}" ("${h.text}") tidak ada di storyboard`,
+            ref,
+          });
+        }
+        continue;
+      }
+
+      if (!exp.bind_to_driver && exp.claim_ref) {
+        if (exp.claimUnit) {
+          const unitMatches = [...h.text.matchAll(/\b\d+(?:[.,]\d+)*\s*(mm|cm|m|km|deg|°|%)\b/gi)];
+          for (const um of unitMatches) {
+            const actualUnit = um[1]!.toLowerCase();
+            const expectedUnit = exp.claimUnit.toLowerCase();
+            if (actualUnit !== expectedUnit) {
+              const key = `unit:${hid}:${actualUnit}`;
+              if (!seen.has(key)) {
+                seen.add(key);
+                issues.push({
+                  severity: 'error',
+                  message: `L5_FACT_MISMATCH: HUD "${hid}" menampilkan satuan "${um[1]}" padahal klaim ${exp.claim_ref} bersatuan "${exp.claimUnit}"`,
+                  ref,
+                });
+              }
+            }
+          }
+        }
+        if (exp.claimAllowedNumbers && exp.claimAllowedNumbers.length > 0) {
+          const numTokens = h.text.match(/\d+(?:[.,]\d+)*/g) ?? [];
+          for (const raw of numTokens) {
+            const val = /^\d{1,3}(?:\.\d{3})+$/.test(raw)
+              ? Number(raw.replace(/\./g, ''))
+              : Number(raw.replace(',', '.'));
+            if (
+              Number.isFinite(val) &&
+              !exp.claimAllowedNumbers.some((a) => Math.abs(a - val) < 1e-4)
+            ) {
+              const key = `num:${hid}:${val}`;
+              if (!seen.has(key)) {
+                seen.add(key);
+                issues.push({
+                  severity: 'error',
+                  message: `L5_FACT_MISMATCH: angka ${raw} pada HUD "${hid}" tidak cocok dengan klaim ${exp.claim_ref}`,
+                  ref,
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return issues;
+}
+
+/**
  * Checks sampled PNG frames using FFmpeg rawvideo luminance mean and standard deviation.
  */
 export async function checkBlankFrames(framePngPaths: string[]): Promise<QcIssue[]> {

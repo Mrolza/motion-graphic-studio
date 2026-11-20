@@ -1,9 +1,10 @@
-# Uji Mutasi P3B (5 Mutasi)
+# Uji Mutasi P3C (6 Mutasi — Render & Telemetri Sungguhan)
 
 | Mutasi | Layer | Jumlah Error | Pesan Pertama |
 |---|---|---:|---|
-| mut1-hud-number-not-in-ledger | Storyboard QC | 1 error | SB_HUD_NUMBER_NOT_IN_CLAIM: angka 9876 di HUD "Angka Palsu 9876 mm" tidak ada di klaim C1 |
-| mut2-missing-trigger-word | Storyboard QC | 1 error | SB_MISSING_TRIGGER_WORD: kata pemicu "kata_yang_tidak_ada_di_naskah" tidak ada di narasi adegan S1 |
-| mut3-three-hud-panels | Storyboard QC | 4 error | SB_HUD_BUDGET: 3 panel HUD di S1 (maks 2) |
-| mut4-unverified-claim-ref | Storyboard QC | 1 error | SB_UNVERIFIED_CLAIM: claim_ref "C4" tidak ditemukan atau belum verified |
-| mut5-sync-delayed | Sync QC | 1 error | SYNC_OUT_OF_WINDOW: gerak utama "distance" mulai pada 2.50s (target 1.00s ±0.35s) |
+| mut1-unsanctioned-hud | onscreenTruth (L5) | 5 | L5_UNSANCTIONED_HUD: elemen HUD "measure_taper" ("Kemiringan Tapak Kerucut: 1:20 (dilebihkan)") tidak ada di storyboard |
+| mut2-fact-mismatch | onscreenTruth (L5) | 3 | L5_FACT_MISMATCH: angka 1,435 pada HUD "measure_taper" tidak cocok dengan klaim C1 |
+| mut3-phase-hud | mechanics | 44 | MECHANICS_HUD_OUT_OF_PHASE: HUD "stat_crank_angle" tampil pada driver=0 di luar rentang [360,540] |
+| mut4-deg-unit | hudFormat | 1 | HUD_UNNORMALIZED_UNIT: "callout_deg_mut" menampilkan satuan "deg" (gunakan "°" tanpa spasi) pada "Sudut Aktif — 524 deg" |
+| mut5-shot-variety | Storyboard QC | 5 | SB_LOW_SHOT_VARIETY: hanya 1 jenis shot_type berbeda (minimal 3 per video) |
+| mut6-sync-real-render | sync | 1 | SYNC_OUT_OF_WINDOW: gerak utama "crank_angle" mulai pada 1.60s (target 0.00s ±0.35s) |

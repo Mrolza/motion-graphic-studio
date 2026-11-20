@@ -1,0 +1,265 @@
+{
+  "compositionId": "DemoMesin",
+  "passed": false,
+  "sampleCount": 60,
+  "renderMs": 17538,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=0 di luar rentang [360,540]",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=12 di luar rentang [360,540]",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=24 di luar rentang [360,540]",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=36 di luar rentang [360,540]",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=48 di luar rentang [360,540]",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=60 di luar rentang [360,540]",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=72 di luar rentang [360,540]",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=84 di luar rentang [360,540]",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=96 di luar rentang [360,540]",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=108 di luar rentang [360,540]",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=120 di luar rentang [360,540]",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=132 di luar rentang [360,540]",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=144 di luar rentang [360,540]",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=156 di luar rentang [360,540]",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=168 di luar rentang [360,540]",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=180 di luar rentang [360,540]",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=192 di luar rentang [360,540]",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=204 di luar rentang [360,540]",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=216 di luar rentang [360,540]",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=228 di luar rentang [360,540]",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=240 di luar rentang [360,540]",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=252 di luar rentang [360,540]",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=264 di luar rentang [360,540]",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=276 di luar rentang [360,540]",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=288 di luar rentang [360,540]",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=300 di luar rentang [360,540]",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=312 di luar rentang [360,540]",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=324 di luar rentang [360,540]",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=336 di luar rentang [360,540]",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=348 di luar rentang [360,540]",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=552 di luar rentang [360,540]",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=564 di luar rentang [360,540]",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=576 di luar rentang [360,540]",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=588 di luar rentang [360,540]",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=600 di luar rentang [360,540]",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=612 di luar rentang [360,540]",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=624 di luar rentang [360,540]",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=636 di luar rentang [360,540]",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=648 di luar rentang [360,540]",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=660 di luar rentang [360,540]",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=672 di luar rentang [360,540]",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=684 di luar rentang [360,540]",
+          "ref": "f456 (15.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=696 di luar rentang [360,540]",
+          "ref": "f464 (15.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_OUT_OF_PHASE: HUD \"stat_crank_angle\" tampil pada driver=708 di luar rentang [360,540]",
+          "ref": "f472 (15.73s)"
+        }
+      ]
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "onscreenTruth": {
+      "layer": "L5",
+      "issues": []
+    },
+    "sync": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}

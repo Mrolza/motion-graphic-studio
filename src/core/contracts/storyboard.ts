@@ -1,6 +1,16 @@
 import { z } from 'zod';
 
-export const StoryboardLaneSchema = z.enum(['code_2d', 'code_3d', 'code_asset']);
+export const StoryboardLaneSchema = z.enum(['code_3d', 'code_2d', 'code_asset']);
+
+export const ShotTypeSchema = z.enum([
+  'establishing',
+  'closeup',
+  'cutaway',
+  'cross_section',
+  'diagram_overlay',
+  'comparison',
+  'summary',
+]);
 
 export const StoryboardDriverSchema = z.object({
   name: z.string().min(1),
@@ -19,11 +29,17 @@ export const StoryboardInvariantSchema = z.object({
 
 export const StoryboardHudItemSchema = z
   .object({
+    hud_id: z.string().min(1).optional(),
     component: z.string().min(1),
     props: z.record(z.unknown()),
     claim_ref: z.string().min(1).optional(),
     bind_to_driver: z.boolean().optional(),
     illustrative: z.boolean().optional(),
+    when: z
+      .object({
+        driver_between: z.tuple([z.number(), z.number()]),
+      })
+      .optional(),
   })
   .refine(
     (hud) => {
@@ -44,6 +60,8 @@ export const StoryboardHudItemSchema = z
 export const StoryboardSceneSchema = z.object({
   id: z.string().min(1),
   lane: StoryboardLaneSchema,
+  shot_type: ShotTypeSchema.optional(),
+  camera_move: z.string().min(1).optional(),
   duration_sec: z.number().positive(),
   sentence_refs: z.array(z.string().min(1)),
   focus_entities: z.array(z.string().min(1)).min(1),
@@ -59,6 +77,7 @@ export const StoryboardSchema = z.object({
 });
 
 export type StoryboardLane = z.infer<typeof StoryboardLaneSchema>;
+export type ShotType = z.infer<typeof ShotTypeSchema>;
 export type StoryboardDriver = z.infer<typeof StoryboardDriverSchema>;
 export type StoryboardInvariant = z.infer<typeof StoryboardInvariantSchema>;
 export type StoryboardHudItem = z.infer<typeof StoryboardHudItemSchema>;

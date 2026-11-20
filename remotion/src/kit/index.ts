@@ -26,6 +26,8 @@ export {
   springOscillation,
   valveStateFromCrankAngle,
   formatIdNumber,
+  normalizeUnit,
+  formatValueWithUnit,
   type CrankSliderInput,
   type CrankSliderSolution,
   type StrokePhase,
@@ -51,11 +53,21 @@ export {
 } from './drivers/geometry';
 export { CurvedRail, type CurvedRailProps } from './assemblies/CurvedRail';
 export { WheelsetOnRail, type WheelsetOnRailProps } from './assemblies/WheelsetOnRail';
+export { RailCrossSection, type RailCrossSectionProps } from './assemblies/RailCrossSection';
+export { EngineBlock, type EngineBlockProps } from './assemblies/EngineBlock';
 export {
   PistonCrankAssembly,
   type PistonCrankAssemblyProps,
 } from './assemblies/PistonCrankAssembly';
 export { Suspension, type SuspensionProps } from './assemblies/Suspension';
+export {
+  StoryboardHudProvider,
+  Hud,
+  type StoryboardHudDataItem,
+  type StoryboardHudProviderProps,
+  type HudProps,
+} from './hud/StoryboardHudContext';
+export { DiagramOverlay, type DiagramOverlayProps } from './hud/DiagramOverlay';
 export {
   ParallaxForeground,
   type ParallaxForegroundProps,

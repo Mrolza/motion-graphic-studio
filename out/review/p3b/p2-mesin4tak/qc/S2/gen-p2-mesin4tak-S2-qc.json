@@ -2,7 +2,7 @@
   "compositionId": "gen-p2-mesin4tak-S2",
   "passed": true,
   "sampleCount": 47,
-  "renderMs": 10220,
+  "renderMs": 14883,
   "reports": {
     "mechanics": {
       "layer": "L5",
@@ -25,6 +25,10 @@
       "issues": []
     },
     "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "onscreenTruth": {
       "layer": "L5",
       "issues": []
     },

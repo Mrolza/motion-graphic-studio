@@ -3,9 +3,9 @@
     "frame": 0,
     "sec": 0,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 0,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -67,44 +67,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": -999897,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": -999139,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": -999033,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 0 deg",
-        "driverName": "crank_angle",
-        "numericValue": 0,
-        "claimRef": "C3"
       }
     ]
   },
@@ -112,9 +86,9 @@
     "frame": 8,
     "sec": 0.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 7.692,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -176,44 +150,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88.9,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 8 deg",
-        "driverName": "crank_angle",
-        "numericValue": 7.692,
-        "claimRef": "C3"
       }
     ]
   },
@@ -221,9 +169,9 @@
     "frame": 16,
     "sec": 0.533,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 15.385,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -285,44 +233,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 15 deg",
-        "driverName": "crank_angle",
-        "numericValue": 15.385,
-        "claimRef": "C3"
       }
     ]
   },
@@ -330,9 +252,9 @@
     "frame": 24,
     "sec": 0.8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 23.077,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -394,44 +316,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 23 deg",
-        "driverName": "crank_angle",
-        "numericValue": 23.077,
-        "claimRef": "C3"
       }
     ]
   },
@@ -439,9 +335,9 @@
     "frame": 32,
     "sec": 1.067,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 30.769,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -503,44 +399,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 31 deg",
-        "driverName": "crank_angle",
-        "numericValue": 30.769,
-        "claimRef": "C3"
       }
     ]
   },
@@ -548,9 +418,9 @@
     "frame": 40,
     "sec": 1.333,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 38.462,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -612,44 +482,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 38 deg",
-        "driverName": "crank_angle",
-        "numericValue": 38.462,
-        "claimRef": "C3"
       }
     ]
   },
@@ -657,9 +501,9 @@
     "frame": 48,
     "sec": 1.6,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 46.154,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -721,44 +565,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 46 deg",
-        "driverName": "crank_angle",
-        "numericValue": 46.154,
-        "claimRef": "C3"
       }
     ]
   },
@@ -766,9 +584,9 @@
     "frame": 56,
     "sec": 1.867,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 53.846,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -830,44 +648,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 54 deg",
-        "driverName": "crank_angle",
-        "numericValue": 53.846,
-        "claimRef": "C3"
       }
     ]
   },
@@ -875,9 +667,9 @@
     "frame": 64,
     "sec": 2.133,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 61.538,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -939,44 +731,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 62 deg",
-        "driverName": "crank_angle",
-        "numericValue": 61.538,
-        "claimRef": "C3"
       }
     ]
   },
@@ -984,9 +750,9 @@
     "frame": 72,
     "sec": 2.4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 69.231,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1048,44 +814,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 69 deg",
-        "driverName": "crank_angle",
-        "numericValue": 69.231,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1093,9 +833,9 @@
     "frame": 80,
     "sec": 2.667,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 76.923,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1157,44 +897,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 77 deg",
-        "driverName": "crank_angle",
-        "numericValue": 76.923,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1202,9 +916,9 @@
     "frame": 88,
     "sec": 2.933,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 84.615,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1266,44 +980,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 85 deg",
-        "driverName": "crank_angle",
-        "numericValue": 84.615,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1311,9 +999,9 @@
     "frame": 96,
     "sec": 3.2,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 92.308,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1375,44 +1063,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 92 deg",
-        "driverName": "crank_angle",
-        "numericValue": 92.308,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1420,9 +1082,9 @@
     "frame": 104,
     "sec": 3.467,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 100,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1484,44 +1146,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 100 deg",
-        "driverName": "crank_angle",
-        "numericValue": 100,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1529,9 +1165,9 @@
     "frame": 112,
     "sec": 3.733,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 107.692,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1593,44 +1229,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 108 deg",
-        "driverName": "crank_angle",
-        "numericValue": 107.692,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1638,9 +1248,9 @@
     "frame": 120,
     "sec": 4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 115.385,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1702,44 +1312,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 115 deg",
-        "driverName": "crank_angle",
-        "numericValue": 115.385,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1747,9 +1331,9 @@
     "frame": 128,
     "sec": 4.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 123.077,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1811,44 +1395,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 123 deg",
-        "driverName": "crank_angle",
-        "numericValue": 123.077,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1856,9 +1414,9 @@
     "frame": 136,
     "sec": 4.533,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 130.769,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -1920,44 +1478,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 131 deg",
-        "driverName": "crank_angle",
-        "numericValue": 130.769,
-        "claimRef": "C3"
       }
     ]
   },
@@ -1965,9 +1497,9 @@
     "frame": 144,
     "sec": 4.8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 138.462,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2029,44 +1561,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 138 deg",
-        "driverName": "crank_angle",
-        "numericValue": 138.462,
-        "claimRef": "C3"
       }
     ]
   },
@@ -2074,9 +1580,9 @@
     "frame": 152,
     "sec": 5.067,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 146.154,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2138,44 +1644,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 146 deg",
-        "driverName": "crank_angle",
-        "numericValue": 146.154,
-        "claimRef": "C3"
       }
     ]
   },
@@ -2183,9 +1663,9 @@
     "frame": 160,
     "sec": 5.333,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 153.846,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2247,44 +1727,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 154 deg",
-        "driverName": "crank_angle",
-        "numericValue": 153.846,
-        "claimRef": "C3"
       }
     ]
   },
@@ -2292,9 +1746,9 @@
     "frame": 168,
     "sec": 5.6,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 161.538,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2356,44 +1810,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 162 deg",
-        "driverName": "crank_angle",
-        "numericValue": 161.538,
-        "claimRef": "C3"
       }
     ]
   },
@@ -2401,9 +1829,9 @@
     "frame": 176,
     "sec": 5.867,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 169.231,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2465,44 +1893,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 169 deg",
-        "driverName": "crank_angle",
-        "numericValue": 169.231,
-        "claimRef": "C3"
       }
     ]
   },
@@ -2510,9 +1912,9 @@
     "frame": 184,
     "sec": 6.133,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 176.923,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2574,44 +1976,18 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H1",
+        "hud_id": "S2_H1",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "text": "Langkah Hisap",
         "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 177 deg",
-        "driverName": "crank_angle",
-        "numericValue": 176.923,
-        "claimRef": "C3"
       }
     ]
   },
@@ -2619,9 +1995,9 @@
     "frame": 192,
     "sec": 6.4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 184.615,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2683,43 +2059,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 185 deg",
-        "driverName": "crank_angle",
-        "numericValue": 184.615,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -2728,9 +2078,9 @@
     "frame": 200,
     "sec": 6.667,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 192.308,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2792,43 +2142,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 192 deg",
-        "driverName": "crank_angle",
-        "numericValue": 192.308,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -2837,9 +2161,9 @@
     "frame": 208,
     "sec": 6.933,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 200,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -2901,43 +2225,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 200 deg",
-        "driverName": "crank_angle",
-        "numericValue": 200,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -2946,9 +2244,9 @@
     "frame": 216,
     "sec": 7.2,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 207.692,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3010,43 +2308,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 208 deg",
-        "driverName": "crank_angle",
-        "numericValue": 207.692,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3055,9 +2327,9 @@
     "frame": 224,
     "sec": 7.467,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 215.385,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3119,43 +2391,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 215 deg",
-        "driverName": "crank_angle",
-        "numericValue": 215.385,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3164,9 +2410,9 @@
     "frame": 232,
     "sec": 7.733,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 223.077,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3228,43 +2474,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 223 deg",
-        "driverName": "crank_angle",
-        "numericValue": 223.077,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3273,9 +2493,9 @@
     "frame": 240,
     "sec": 8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 230.769,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3337,43 +2557,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 231 deg",
-        "driverName": "crank_angle",
-        "numericValue": 230.769,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3382,9 +2576,9 @@
     "frame": 248,
     "sec": 8.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 238.462,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3446,43 +2640,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 238 deg",
-        "driverName": "crank_angle",
-        "numericValue": 238.462,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3491,9 +2659,9 @@
     "frame": 256,
     "sec": 8.533,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 246.154,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3555,43 +2723,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 246 deg",
-        "driverName": "crank_angle",
-        "numericValue": 246.154,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3600,9 +2742,9 @@
     "frame": 264,
     "sec": 8.8,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 253.846,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3664,43 +2806,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 254 deg",
-        "driverName": "crank_angle",
-        "numericValue": 253.846,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3709,9 +2825,9 @@
     "frame": 272,
     "sec": 9.067,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 261.538,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3773,43 +2889,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 262 deg",
-        "driverName": "crank_angle",
-        "numericValue": 261.538,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3818,9 +2908,9 @@
     "frame": 280,
     "sec": 9.333,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 269.231,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3882,43 +2972,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 269 deg",
-        "driverName": "crank_angle",
-        "numericValue": 269.231,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -3927,9 +2991,9 @@
     "frame": 288,
     "sec": 9.6,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 276.923,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -3991,43 +3055,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 277 deg",
-        "driverName": "crank_angle",
-        "numericValue": 276.923,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4036,9 +3074,9 @@
     "frame": 296,
     "sec": 9.867,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 284.615,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4100,43 +3138,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 285 deg",
-        "driverName": "crank_angle",
-        "numericValue": 284.615,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4145,9 +3157,9 @@
     "frame": 304,
     "sec": 10.133,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 292.308,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4209,43 +3221,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 292 deg",
-        "driverName": "crank_angle",
-        "numericValue": 292.308,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4254,9 +3240,9 @@
     "frame": 312,
     "sec": 10.4,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 300,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4318,43 +3304,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 300 deg",
-        "driverName": "crank_angle",
-        "numericValue": 300,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4363,9 +3323,9 @@
     "frame": 320,
     "sec": 10.667,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 307.692,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4427,43 +3387,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 308 deg",
-        "driverName": "crank_angle",
-        "numericValue": 307.692,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4472,9 +3406,9 @@
     "frame": 328,
     "sec": 10.933,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 315.385,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4536,43 +3470,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 315 deg",
-        "driverName": "crank_angle",
-        "numericValue": 315.385,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4581,9 +3489,9 @@
     "frame": 336,
     "sec": 11.2,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 323.077,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4645,43 +3553,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 323 deg",
-        "driverName": "crank_angle",
-        "numericValue": 323.077,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4690,9 +3572,9 @@
     "frame": 344,
     "sec": 11.467,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 330.769,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4754,43 +3636,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 331 deg",
-        "driverName": "crank_angle",
-        "numericValue": 330.769,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4799,9 +3655,9 @@
     "frame": 352,
     "sec": 11.733,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 338.462,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4863,43 +3719,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 338 deg",
-        "driverName": "crank_angle",
-        "numericValue": 338.462,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -4908,9 +3738,9 @@
     "frame": 360,
     "sec": 12,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 346.154,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -4972,43 +3802,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 346 deg",
-        "driverName": "crank_angle",
-        "numericValue": 346.154,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]
@@ -5017,9 +3821,9 @@
     "frame": 368,
     "sec": 12.267,
     "drivers": {
-      "crank_angle": {
+      "crankAngleDeg": {
         "value": 353.846,
-        "unit": "deg"
+        "unit": "°"
       }
     },
     "entities": [
@@ -5081,43 +3885,17 @@
     ],
     "hud": [
       {
-        "id": "title_S2",
-        "component": "KineticTitle",
-        "zone": "title",
-        "bbox": {
-          "x": 48,
-          "y": 88,
-          "width": 624,
-          "height": 90.3
-        },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
-      },
-      {
-        "id": "c1",
+        "id": "S2_H2",
+        "hud_id": "S2_H2",
         "component": "Callout",
         "zone": "callout",
         "bbox": {
           "x": 48,
           "y": 860,
           "width": 624,
-          "height": 94
+          "height": 57
         },
-        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
-        "claimRef": "C2"
-      },
-      {
-        "id": "c2",
-        "component": "StatCounter",
-        "zone": "callout",
-        "bbox": {
-          "x": 48,
-          "y": 966,
-          "width": 624,
-          "height": 63
-        },
-        "text": "Sudut Engkol: 354 deg",
-        "driverName": "crank_angle",
-        "numericValue": 353.846,
+        "text": "Langkah Kompresi",
         "claimRef": "C3"
       }
     ]

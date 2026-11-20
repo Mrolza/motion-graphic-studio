@@ -1,79 +1,56 @@
 import React from 'react';
-import {
-  TelemetryProvider,
-  SceneTransition,
-  BlueprintStage,
-  CameraRig,
-  Ground,
-  CurvedRail,
-  WheelsetOnRail,
-  useDriver,
-  HudLayout,
-  HudZone,
-  KineticTitle,
-  MeasureReveal,
-  Callout
+import { 
+  BlueprintStage, 
+  CameraRig, 
+  Ground, 
+  CurvedRail, 
+  WheelsetOnRail, 
+  computeWheelsetLayout, 
+  Hud, 
+  HudLayout, 
+  HudZone, 
+  SceneTransition, 
+  TelemetryProvider, 
+  StoryboardHudProvider, 
+  useDriver, 
+  StoryboardHudDataItem 
 } from '../../../kit';
 
 export interface Scene_S4Props {
   telemetry?: boolean;
+  hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S4Inner: React.FC = () => {
+const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'distance',
-    from: -2,
-    to: 4,
-    unit: 'm',
-    startSec: 6.19,
-    durationSec: 3.27,
+    name: 'lateralShift',
+    from: 5,
+    to: 15,
+    unit: 'mm',
+    startSec: 0,
+    durationSec: 9.46,
     curve: 'linear'
+  });
+
+  const wl = computeWheelsetLayout({
+    distance: driver.value,
+    curveStartZ: 2,
+    curveRadius: 10
   });
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
       <BlueprintStage
         palette="blueprint-navy"
+        telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
-            <HudZone zone="title">
-              <KineticTitle
-                id="title_S4"
-                title="Diameter Efektif & Gandar"
-                subtitle="Perubahan geometri roda pada tikungan"
-                palette="blueprint-navy"
-              />
-            </HudZone>
-            <HudZone zone="callout">
-              <MeasureReveal
-                id="m_efektif"
-                label="Diameter Efektif"
-                valueText="Berubah Dinamis"
-                claimRef="C3"
-                palette="blueprint-navy"
-              />
-              <Callout
-                id="c_gandar"
-                label="Aksi Gandar Kaku"
-                detail="Roda luar menempuh jarak lebih jauh"
-                claimRef="C3"
-                palette="blueprint-navy"
-              />
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S4_H1" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          framing="portrait-lower"
-          focusBox={{
-            center: [0, 0.7, driver.value],
-            size: [1.9, 1.25, 1.6]
-          }}
-          padding={1.85}
-          elevationDeg={24}
-        />
-        <Ground size={60} divisions={60} y={0} />
         <CurvedRail
           startZ={-10}
           curveStartZ={2}
@@ -83,21 +60,31 @@ const Scene_S4Inner: React.FC = () => {
           highlighted
           palette="blueprint-navy"
         />
+        <Ground size={60} divisions={60} y={0} />
         <WheelsetOnRail
           entityId="wheelset"
           distance={driver.value}
           taperExaggeration={4.5}
+          curveStartZ={2}
+          curveRadius={10}
           highlightContact
-          showEffectiveDiameter
           palette="blueprint-navy"
+        />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
+          padding={1.85}
+          elevationDeg={24}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false }) => (
+export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
-    <Scene_S4Inner />
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S4Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
   </TelemetryProvider>
 );

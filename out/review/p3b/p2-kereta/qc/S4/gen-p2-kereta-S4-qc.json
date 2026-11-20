@@ -2,7 +2,7 @@
   "compositionId": "gen-p2-kereta-S4",
   "passed": true,
   "sampleCount": 36,
-  "renderMs": 9490,
+  "renderMs": 12106,
   "reports": {
     "mechanics": {
       "layer": "L5",
@@ -25,6 +25,10 @@
       "issues": []
     },
     "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "onscreenTruth": {
       "layer": "L5",
       "issues": []
     },

@@ -1,71 +1,66 @@
 import React from 'react';
 import {
-  TelemetryProvider,
+  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
-  WheelsetOnRail,
   CurvedRail,
+  WheelsetOnRail,
   HudLayout,
   HudZone,
-  KineticTitle,
-  Callout,
-  MeasureReveal,
-  useDriver
+  Hud,
+  DiagramOverlay,
+  computeWheelsetLayout,
+  TelemetryProvider,
+  StoryboardHudProvider,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S3Props {
   telemetry?: boolean;
+  hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S3Inner: React.FC<Scene_S3Props> = ({ telemetry = false }) => {
+const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'distance',
-    from: 0,
-    to: 5,
+    name: 'curveRadius',
+    from: 100,
+    to: 300,
     unit: 'm',
     startSec: 1.44,
     durationSec: 7.68,
-    curve: 'linear'
+    curve: 'linear',
   });
 
-  const hudContent = (
-    <HudLayout palette="blueprint-navy">
-      <HudZone zone="title">
-        <KineticTitle
-          id="title_S3"
-          title="Inersia & Geseran Roda"
-          subtitle="Kendaraan melaju lurus di tikungan"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-      <HudZone zone="callout">
-        <Callout
-          id="c1"
-          label="Inersia Tikungan"
-          detail="Kecenderungan melaju lurus ke arah rel luar"
-          claimRef="C2"
-          palette="blueprint-navy"
-        />
-        <MeasureReveal
-          id="m1"
-          label="Jarak Tempuh"
-          valueText="5,0 m"
-          claimRef="C2"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-    </HudLayout>
-  );
+  const wl = computeWheelsetLayout({
+    distance: driver.value,
+    curveStartZ: 2,
+    curveRadius: 10,
+  });
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
       <BlueprintStage
         palette="blueprint-navy"
         telemetry={telemetry}
-        hud={hudContent}
+        hud={
+          <HudLayout palette="blueprint-navy">
+            <DiagramOverlay curveArc inertiaArrow palette="blueprint-navy" />
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S3_H1" driver={driver} palette="blueprint-navy" />
+            </HudZone>
+          </HudLayout>
+        }
       >
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
+          padding={1.85}
+          elevationDeg={24}
+          durationSec={9.12}
+        />
+        <Ground size={60} divisions={60} y={0} />
         <CurvedRail
           startZ={-10}
           curveStartZ={2}
@@ -75,28 +70,24 @@ const Scene_S3Inner: React.FC<Scene_S3Props> = ({ telemetry = false }) => {
           highlighted
           palette="blueprint-navy"
         />
-        <Ground size={60} divisions={60} y={0} />
         <WheelsetOnRail
           entityId="wheelset"
           distance={driver.value}
           taperExaggeration={4.5}
+          curveStartZ={2}
+          curveRadius={10}
           highlightContact
           palette="blueprint-navy"
-        />
-        <CameraRig
-          mode="frameEntities"
-          framing="portrait-lower"
-          focusBox={{ center: [0, 0.7, driver.value], size: [1.9, 1.25, 1.6] }}
-          padding={1.85}
-          elevationDeg={24}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S3: React.FC<Scene_S3Props> = ({ telemetry = false }) => (
+export const Scene_S3: React.FC<Scene_S3Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
-    <Scene_S3Inner telemetry={telemetry} />
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S3Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
   </TelemetryProvider>
 );

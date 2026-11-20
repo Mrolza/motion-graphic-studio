@@ -1,0 +1,66 @@
+{
+  "compositionId": "DemoKereta",
+  "passed": false,
+  "sampleCount": 57,
+  "renderMs": 17097,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": []
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "HUD_FORMAT_NOT_ID: \"measure_taper\" memakai format ribuan non-Indonesia (1,435) pada \"Kemiringan Tapak Kerucut: 1,435 mm (1:20)\"",
+          "ref": "f0 (0.00s)"
+        }
+      ]
+    },
+    "onscreenTruth": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "L5_FACT_MISMATCH: angka 1,435 pada HUD \"measure_taper\" tidak cocok dengan klaim C1",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "L5_FACT_MISMATCH: angka 1 pada HUD \"measure_taper\" tidak cocok dengan klaim C1",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "L5_FACT_MISMATCH: angka 20 pada HUD \"measure_taper\" tidak cocok dengan klaim C1",
+          "ref": "f0 (0.00s)"
+        }
+      ]
+    },
+    "sync": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}

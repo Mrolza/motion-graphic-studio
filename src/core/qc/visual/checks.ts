@@ -1,6 +1,10 @@
 import type { QcIssue } from '@core/contracts/qc-report';
 import type { ScreenBox, TelemetrySample, VisualCheckSpec } from './types';
-export { checkBlankFrames, checkSyncFromTelemetry } from './media-checks';
+export {
+  checkBlankFrames,
+  checkOnscreenTruthFromTelemetry,
+  checkSyncFromTelemetry,
+} from './media-checks';
 
 function intersectionArea(a: ScreenBox, b: ScreenBox): number {
   const x1 = Math.max(a.x, b.x);
@@ -68,6 +72,23 @@ export function checkMechanicsFromTelemetry(
           issues.push({
             severity: 'error',
             message: `MECHANICS_KINEMATICS: wheel_angle_deg=${angleDeg} != expected=${expectedDeg.toFixed(2)}`,
+            ref,
+          });
+        }
+      }
+    }
+
+    // Check phase-bound HUD items (when.driver_between)
+    const firstDriver = Object.values(sample.drivers)[0];
+    if (firstDriver && spec.expectedHud) {
+      for (const exp of spec.expectedHud) {
+        if (!exp.when?.driver_between) continue;
+        const [a, b] = exp.when.driver_between;
+        const shown = sample.hud.some((h) => (h.hud_id ?? h.id) === exp.hud_id);
+        if (shown && (firstDriver.value < a - 0.5 || firstDriver.value > b + 0.5)) {
+          issues.push({
+            severity: 'error',
+            message: `MECHANICS_HUD_OUT_OF_PHASE: HUD "${exp.hud_id}" tampil pada driver=${firstDriver.value} di luar rentang [${a},${b}]`,
             ref,
           });
         }
@@ -217,6 +238,17 @@ export function checkHudFormatFromTelemetry(samples: TelemetrySample[]): QcIssue
           issues.push({
             severity: 'error',
             message: `HUD_FORMAT_NOT_ID: "${h.id}" memakai format ribuan non-Indonesia (${badMatches.join(', ')}) pada "${h.text}"`,
+            ref,
+          });
+        }
+      }
+      if (/\b\d+\s*deg\b/i.test(h.text)) {
+        const key = `${h.id}:deg`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          issues.push({
+            severity: 'error',
+            message: `HUD_UNNORMALIZED_UNIT: "${h.id}" menampilkan satuan "deg" (gunakan "°" tanpa spasi) pada "${h.text}"`,
             ref,
           });
         }

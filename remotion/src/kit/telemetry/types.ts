@@ -22,6 +22,7 @@ export interface TelemetryEntitySample {
 
 export interface TelemetryHudSample {
   id: string;
+  hud_id?: string;
   component: string;
   zone: 'title' | 'free' | 'callout' | 'caption';
   bbox: ScreenBox;

@@ -1,0 +1,30 @@
+{
+  "layer": "L4",
+  "issues": [
+    {
+      "severity": "error",
+      "message": "SB_LOW_SHOT_VARIETY: hanya 1 jenis shot_type berbeda (minimal 3 per video)",
+      "ref": "storyboard"
+    },
+    {
+      "severity": "error",
+      "message": "SB_CONSECUTIVE_DUPLICATE_SHOT: S1 dan S2 memakai shot_type (closeup) dan focus_entities (wheelset) yang sama berturut-turut",
+      "ref": "S2"
+    },
+    {
+      "severity": "error",
+      "message": "SB_CONSECUTIVE_DUPLICATE_SHOT: S2 dan S3 memakai shot_type (closeup) dan focus_entities (wheelset) yang sama berturut-turut",
+      "ref": "S3"
+    },
+    {
+      "severity": "error",
+      "message": "SB_CONSECUTIVE_DUPLICATE_SHOT: S3 dan S4 memakai shot_type (closeup) dan focus_entities (wheelset) yang sama berturut-turut",
+      "ref": "S4"
+    },
+    {
+      "severity": "error",
+      "message": "SB_CONSECUTIVE_DUPLICATE_SHOT: S4 dan S5 memakai shot_type (closeup) dan focus_entities (wheelset) yang sama berturut-turut",
+      "ref": "S5"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ export async function cmdStoryboard(args: string[]) {
   );
   if (errs.length > 0) {
     for (const e of errs) console.log(`  ERROR [${e.ref}]: ${e.message}`);
-    process.exit(1);
+    throw new Error(`Storyboard QC gagal (${errs.length} error) — pipeline dihentikan sebelum Scene Coder.`);
   }
 }
 

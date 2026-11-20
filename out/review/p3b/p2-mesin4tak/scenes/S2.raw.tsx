@@ -1,12 +1,7 @@
 import React from 'react';
 import {
-  AbsoluteFill,
-  useCurrentFrame,
-  useVideoConfig,
-} from 'remotion';
-import {
+  StoryboardHudProvider,
   TelemetryProvider,
-  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
@@ -14,79 +9,41 @@ import {
   PistonCrankAssembly,
   HudLayout,
   HudZone,
-  KineticTitle,
-  Callout,
-  StatCounter,
+  Hud,
+  useDriver,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S2Props {
   telemetry?: boolean;
+  hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S2Inner: React.FC<Scene_S2Props> = ({ telemetry = false }) => {
+const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'crank_angle',
+    name: 'crankAngleDeg',
     from: 0,
     to: 360,
-    unit: 'deg',
+    unit: '°',
     startSec: 0,
     durationSec: 12.48,
-    curve: 'linear',
+    curve: 'linear'
   });
 
-  const hudContent = (
-    <HudLayout palette="blueprint-navy">
-      <HudZone zone="title">
-        <KineticTitle
-          id="title_S2"
-          title="Langkah Hisap & Kompresi"
-          subtitle="Udara dan bahan bakar masuk serta dipadatkan"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-      <HudZone zone="callout">
-        <Callout
-          id="c1"
-          label="Langkah Hisap & Kompresi"
-          detail="Udara dan bahan bakar masuk"
-          claimRef="C2"
-          palette="blueprint-navy"
-        />
-        <StatCounter
-          id="c2"
-          label="Sudut Engkol"
-          decimals={0}
-          unit="derajat"
-          driver={driver}
-          bindToDriver
-          claimRef="C3"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-    </HudLayout>
-  );
-
   return (
-    <SceneTransition
-      variant="fade"
-      durationSec={0.25}
-      palette="blueprint-navy"
-    >
+    <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
       <BlueprintStage
         palette="blueprint-navy"
         telemetry={telemetry}
-        hud={hudContent}
+        hud={
+          <HudLayout palette="blueprint-navy">
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S2_H1" driver={driver} palette="blueprint-navy" />
+              <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />
+            </HudZone>
+          </HudLayout>
+        }
       >
-        <CameraRig
-          mode="frameEntities"
-          framing="portrait-lower"
-          focusBox={{
-            center: [0, 1.65, 0],
-            size: [1.5, 2.75, 1.5],
-          }}
-          padding={1.18}
-          elevationDeg={10}
-        />
         <Ground size={36} divisions={36} y={-0.55} />
         <PistonCrankAssembly
           entityId="piston_crank"
@@ -95,15 +52,21 @@ const Scene_S2Inner: React.FC<Scene_S2Props> = ({ telemetry = false }) => {
           cutaway
           palette="blueprint-navy"
         />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: [0, 1.65, 0], size: [1.5, 2.75, 1.5] }}
+          padding={1.18}
+          elevationDeg={10}
+        />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S2: React.FC<Scene_S2Props> = ({
-  telemetry = false,
-}) => (
+export const Scene_S2: React.FC<Scene_S2Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
-    <Scene_S2Inner telemetry={telemetry} />
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S2Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
   </TelemetryProvider>
 );

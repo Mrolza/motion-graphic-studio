@@ -1,6 +1,14 @@
+import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { StoryboardScene } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
-import type { GeometryRule, VisualCheckSpec, VisualInvariant, VisiblePartSpec } from '@core/qc/visual/types';
+import { extractNumericValuesFromText } from '@core/qc/l1-ledger';
+import type {
+  ExpectedHudSpec,
+  GeometryRule,
+  VisualCheckSpec,
+  VisualInvariant,
+  VisiblePartSpec,
+} from '@core/qc/visual/types';
 
 const ALLOWED_IMPORTS = new Set(['react', 'remotion', '../../../kit', '../../kit', '../kit']);
 
@@ -53,10 +61,26 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
   const hasTelemetryProvider = /\bTelemetryProvider\b/.test(code);
   const hasBlueprintStage = /\bBlueprintStage\b/.test(code);
   const hasEntityOrAssembly =
-    /\b(TelemetryEntity|WheelsetOnRail|PistonCrankAssembly|Suspension)\b/.test(code);
+    /\b(TelemetryEntity|WheelsetOnRail|PistonCrankAssembly|Suspension|TrainCar|RailCrossSection|EngineBlock)\b/.test(
+      code
+    );
   if (!hasTelemetryProvider || !hasBlueprintStage || !hasEntityOrAssembly) {
     errors.push(
-      'MISSING_TELEMETRY_WRAPPER: adegan wajib memakai TelemetryProvider, BlueprintStage, dan minimal satu TelemetryEntity/Rakitan (WheelsetOnRail/PistonCrankAssembly/Suspension)'
+      'MISSING_TELEMETRY_WRAPPER: adegan wajib memakai TelemetryProvider, BlueprintStage, dan minimal satu TelemetryEntity/Rakitan'
+    );
+  }
+
+  const directHudMatches = code.match(
+    /<\s*(KineticTitle|Callout|MeasureReveal|StatCounter|CompareCard|ListReveal|DimensionLine)\b/g
+  );
+  if (directHudMatches && directHudMatches.length > 0) {
+    errors.push(
+      `UNSANCTIONED_HUD_DIRECT_CALL: dilarang memanggil ${directHudMatches[0]} langsung; gunakan <Hud id="..." /> dengan StoryboardHudProvider`
+    );
+  }
+  if (!/\bStoryboardHudProvider\b/.test(code) || !/<\s*Hud\b/.test(code)) {
+    errors.push(
+      'MISSING_STORYBOARD_HUD: adegan wajib memakai StoryboardHudProvider dan <Hud id="..." />'
     );
   }
 
@@ -96,32 +120,46 @@ export function findTriggerTimeInScene(
 export function buildVisualSpecForScene(
   compositionId: string,
   sbScene: StoryboardScene,
-  triggerRelSec: number
+  triggerRelSec: number,
+  ledger?: FactLedger
 ): VisualCheckSpec {
   const invariants: VisualInvariant[] = [];
   const geometryRules: GeometryRule[] = [];
   const visibleParts: VisiblePartSpec[] = [];
 
-  if (sbScene.focus_entities.includes('wheelset')) {
-    invariants.push({
-      kind: 'wheel_angle_matches_distance',
-      entity: 'wheelset',
-      radius: 0.46,
-      toleranceDeg: 1.5,
-    });
+  if (sbScene.focus_entities.includes('wheelset') || sbScene.focus_entities.includes('rail_cross_section')) {
+    const entId = sbScene.focus_entities.includes('rail_cross_section') ? 'rail_cross_section' : 'wheelset';
+    if (entId === 'wheelset') {
+      invariants.push({
+        kind: 'wheel_angle_matches_distance',
+        entity: 'wheelset',
+        radius: 0.46,
+        toleranceDeg: 1.5,
+      });
+      geometryRules.push({ entity: entId, key: 'axle_perpendicular_dot', op: 'max_abs', threshold: 0.02 });
+    }
     geometryRules.push(
-      { entity: 'wheelset', key: 'left_contact_gap', op: 'max_abs', threshold: 0.01 },
-      { entity: 'wheelset', key: 'right_contact_gap', op: 'max_abs', threshold: 0.01 },
-      { entity: 'wheelset', key: 'axle_perpendicular_dot', op: 'max_abs', threshold: 0.02 },
-      { entity: 'wheelset', key: 'flanges_inside', op: 'equals', expected: true }
+      { entity: entId, key: 'left_contact_gap', op: 'max_abs', threshold: 0.01 },
+      { entity: entId, key: 'right_contact_gap', op: 'max_abs', threshold: 0.01 },
+      { entity: entId, key: 'flanges_inside', op: 'equals', expected: true }
     );
   }
 
-  if (sbScene.focus_entities.includes('piston_crank')) {
+  if (sbScene.focus_entities.includes('train_car')) {
     geometryRules.push(
-      { entity: 'piston_crank', key: 'rod_top_gap', op: 'max_abs', threshold: 0.01 },
-      { entity: 'piston_crank', key: 'rod_bottom_gap', op: 'max_abs', threshold: 0.01 },
-      { entity: 'piston_crank', key: 'piston_inside_cylinder', op: 'equals', expected: true }
+      { entity: 'train_car', key: 'left_contact_gap', op: 'max_abs', threshold: 0.01 },
+      { entity: 'train_car', key: 'right_contact_gap', op: 'max_abs', threshold: 0.01 },
+      { entity: 'train_car', key: 'axle_perpendicular_dot', op: 'max_abs', threshold: 0.02 },
+      { entity: 'train_car', key: 'flanges_inside', op: 'equals', expected: true }
+    );
+  }
+
+  if (sbScene.focus_entities.includes('piston_crank') || sbScene.focus_entities.includes('engine_block')) {
+    const entId = sbScene.focus_entities.includes('engine_block') ? 'engine_block' : 'piston_crank';
+    geometryRules.push(
+      { entity: entId, key: 'rod_top_gap', op: 'max_abs', threshold: 0.01 },
+      { entity: entId, key: 'rod_bottom_gap', op: 'max_abs', threshold: 0.01 },
+      { entity: entId, key: 'piston_inside_cylinder', op: 'equals', expected: true }
     );
   }
 
@@ -163,12 +201,41 @@ export function buildVisualSpecForScene(
     }
   }
 
+  const claimMap = new Map((ledger?.claims ?? []).map((c) => [c.id, c]));
+  const expectedHud: ExpectedHudSpec[] = sbScene.hud.map((h, idx) => {
+    const hid = h.hud_id ?? `${sbScene.id}_H${idx + 1}`;
+    const p = h.props ?? {};
+    const expectedText = [p.title, p.subtitle, p.label, p.detail, p.valueText, p.text]
+      .filter((x) => typeof x === 'string')
+      .join(' ');
+    const claim = h.claim_ref ? claimMap.get(h.claim_ref) : undefined;
+    const claimAllowedNumbers = claim
+      ? [
+          ...(claim.value !== undefined ? [claim.value] : []),
+          ...extractNumericValuesFromText(claim.text),
+          ...claim.sources.flatMap((s) => extractNumericValuesFromText(s.quote)),
+        ]
+      : undefined;
+    return {
+      hud_id: hid,
+      component: h.component,
+      expectedText,
+      claim_ref: h.claim_ref,
+      claimValue: claim?.value,
+      claimUnit: claim?.unit,
+      claimAllowedNumbers,
+      bind_to_driver: Boolean(h.bind_to_driver || p.bind_to_driver),
+      when: h.when,
+    };
+  });
+
   return {
     compositionId,
     focusEntities: sbScene.focus_entities,
     invariants,
     geometryRules,
     visibleParts,
+    expectedHud,
     maxActiveHudPanels: 2,
     syncTargetSec: sbScene.driver ? triggerRelSec : undefined,
     syncToleranceSec: 0.35,

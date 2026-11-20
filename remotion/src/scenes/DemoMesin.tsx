@@ -19,7 +19,7 @@ import {
 
 export interface DemoMesinProps {
   telemetry?: boolean;
-  mutation?: 'time-valve' | 'hud-easing' | 'detach-rod' | 'occlude-crank';
+  mutation?: 'time-valve' | 'hud-easing' | 'detach-rod' | 'occlude-crank' | 'deg-unit' | 'delay-sync';
 }
 
 const STROKE_LABELS = ['1. Hisap', '2. Kompresi', '3. Usaha', '4. Buang'];
@@ -65,11 +65,21 @@ const DemoMesinHud: React.FC<{
           bindToDriver={mutation !== 'hud-easing'}
           from={0}
           to={720}
-          unit="°"
+          unit={mutation === 'deg-unit' ? 'deg' : '°'}
           durationSec={16}
           palette="industrial-orange"
         />
       </HudZone>
+
+      {mutation === 'deg-unit' ? (
+        <Callout
+          id="callout_deg_mut"
+          label="Sudut Aktif"
+          detail="524 deg"
+          screenAnchor={[48, 760]}
+          palette="industrial-orange"
+        />
+      ) : null}
 
       {/* Occlusion mutation: deliberately place a Callout panel right over the crankshaft */}
       {mutation === 'occlude-crank' ? (
@@ -95,8 +105,8 @@ const DemoMesinInner: React.FC<DemoMesinProps> = ({
     from: 0,
     to: 720,
     unit: '°',
-    startSec: 0,
-    durationSec: 16,
+    startSec: mutation === 'delay-sync' ? 1.5 : 0,
+    durationSec: mutation === 'delay-sync' ? 14.5 : 16,
     curve: 'linear',
   });
 

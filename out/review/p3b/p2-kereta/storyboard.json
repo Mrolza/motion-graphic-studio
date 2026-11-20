@@ -3,17 +3,17 @@
     {
       "id": "S1",
       "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "dolly_in",
       "duration_sec": 4.512,
       "sentence_refs": [
         "S1.1"
       ],
       "focus_entities": [
-        "wheelset"
+        "train_car"
       ],
       "visible_parts": [
-        "wheel_left",
-        "wheel_right",
-        "flange"
+        "body"
       ],
       "driver": {
         "name": "distance",
@@ -21,83 +21,73 @@
         "from": -2,
         "to": 2
       },
-      "invariants": [
-        {
-          "entity": "wheelset",
-          "state": "on_rail=true",
-          "when": {
-            "driver_between": [
-              -2,
-              2
-            ]
-          }
-        }
-      ],
       "hud": [
         {
+          "hud_id": "S1_H1",
           "component": "KineticTitle",
           "props": {
-            "title": "Stabilitas Rel",
-            "subtitle": "Tanpa Setir"
-          }
+            "title": "Stabilitas Rel Kereta"
+          },
+          "illustrative": true
         }
       ],
       "trigger_words": [
+        "tanpa setir",
         "stabil"
       ]
     },
     {
       "id": "S2",
       "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
       "duration_sec": 10.08,
       "sentence_refs": [
         "S2.1",
         "S2.2"
       ],
       "focus_entities": [
-        "wheelset"
+        "rail_cross_section"
       ],
       "visible_parts": [
-        "wheel_left",
-        "wheel_right",
-        "flange"
+        "rail_left",
+        "rail_right"
       ],
       "driver": {
-        "name": "distance",
-        "unit": "m",
-        "from": -3,
-        "to": 3
+        "name": "lateralShift",
+        "unit": "mm",
+        "from": 0,
+        "to": 10
       },
-      "invariants": [
-        {
-          "entity": "wheelset",
-          "state": "tapered_profile=true",
-          "when": {
-            "driver_between": [
-              -3,
-              3
-            ]
-          }
-        }
-      ],
       "hud": [
         {
+          "hud_id": "S2_H1",
           "component": "MeasureReveal",
           "props": {
-            "label": "Kemiringan Roda",
-            "valueText": "1:20"
+            "label": "Kemiringan Kerucut",
+            "valueText": "1 banding 20"
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Mengikuti tikungan tanpa flens bergesekan"
           },
           "claim_ref": "C1"
         }
       ],
       "trigger_words": [
-        "kerucut",
-        "flens"
+        "bentuk kerucut",
+        "1 banding 20"
       ]
     },
     {
       "id": "S3",
       "lane": "code_3d",
+      "shot_type": "diagram_overlay",
+      "camera_move": "orbit_curve",
       "duration_sec": 9.12,
       "sentence_refs": [
         "S3.1",
@@ -112,41 +102,31 @@
         "flange"
       ],
       "driver": {
-        "name": "distance",
+        "name": "curveRadius",
         "unit": "m",
-        "from": 0,
-        "to": 5
+        "from": 100,
+        "to": 300
       },
-      "invariants": [
-        {
-          "entity": "wheelset",
-          "state": "inertia_drift=true",
-          "when": {
-            "driver_between": [
-              0,
-              5
-            ]
-          }
-        }
-      ],
       "hud": [
         {
+          "hud_id": "S3_H1",
           "component": "Callout",
           "props": {
-            "label": "Inersia Tikungan",
-            "detail": "Kecenderungan melaju lurus"
+            "text": "Inersia membuat roda melaju lurus"
           },
           "claim_ref": "C2"
         }
       ],
       "trigger_words": [
         "inersia",
-        "bergeser"
+        "lurus"
       ]
     },
     {
       "id": "S4",
       "lane": "code_3d",
+      "shot_type": "comparison",
+      "camera_move": "dolly_in",
       "duration_sec": 9.456,
       "sentence_refs": [
         "S4.1",
@@ -161,82 +141,60 @@
         "flange"
       ],
       "driver": {
-        "name": "distance",
-        "unit": "m",
-        "from": -2,
-        "to": 4
+        "name": "lateralShift",
+        "unit": "mm",
+        "from": 5,
+        "to": 15
       },
-      "invariants": [
-        {
-          "entity": "wheelset",
-          "state": "effective_radius_change=true",
-          "when": {
-            "driver_between": [
-              -2,
-              4
-            ]
-          }
-        }
-      ],
       "hud": [
         {
-          "component": "MeasureReveal",
+          "hud_id": "S4_H1",
+          "component": "StatCounter",
           "props": {
             "label": "Diameter Efektif",
-            "valueText": "Berubah Dinamis"
+            "bind_to_driver": true
           },
           "claim_ref": "C3"
         }
       ],
       "trigger_words": [
         "diameter efektif",
-        "gandar"
+        "sisi luar"
       ]
     },
     {
       "id": "S5",
       "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "static_cross_section",
       "duration_sec": 4.512,
       "sentence_refs": [
         "S5.1"
       ],
       "focus_entities": [
-        "wheelset"
+        "train_car"
       ],
       "visible_parts": [
-        "wheel_left",
-        "wheel_right",
-        "flange"
+        "body"
       ],
       "driver": {
         "name": "distance",
         "unit": "m",
-        "from": -1,
-        "to": 1
+        "from": 0,
+        "to": 5
       },
-      "invariants": [
-        {
-          "entity": "wheelset",
-          "state": "efficient_curve=true",
-          "when": {
-            "driver_between": [
-              -1,
-              1
-            ]
-          }
-        }
-      ],
       "hud": [
         {
-          "component": "Callout",
+          "hud_id": "S5_H1",
+          "component": "KineticTitle",
           "props": {
-            "label": "Mekanisme Fisika",
-            "detail": "Efisiensi kurva jalur"
+            "title": "Kurva Jalur Efisien"
           },
           "claim_ref": "C3"
         }
       ],
       "trigger_words": [
+        "Mekanisme fisika",
         "efisien"
       ]
     }

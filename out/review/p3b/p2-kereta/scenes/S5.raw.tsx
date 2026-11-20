@@ -1,72 +1,61 @@
 import React from 'react';
 import {
-  TelemetryProvider,
-  SceneTransition,
   BlueprintStage,
   CameraRig,
-  WheelsetOnRail,
-  CurvedRail,
   Ground,
+  CurvedRail,
+  TrainCar,
+  computeWheelsetLayout,
+  SceneTransition,
+  StoryboardHudProvider,
+  TelemetryProvider,
   HudLayout,
   HudZone,
-  KineticTitle,
-  Callout,
-  useDriver
+  Hud,
+  useDriver,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S5Props {
   telemetry?: boolean;
+  hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S5Inner: React.FC<Scene_S5Props> = ({ telemetry }) => {
+const Scene_S5Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'distance',
-    from: -1,
-    to: 1,
+    from: 0,
+    to: 5,
     unit: 'm',
     startSec: 3.61,
     durationSec: 0.9,
     curve: 'linear'
   });
 
-  const hudContent = (
-    <HudLayout palette="blueprint-navy">
-      <HudZone zone="title">
-        <KineticTitle
-          id="title_S5"
-          title="Efisiensi Kurva Jalur"
-          subtitle="Mekanisme fisika pergerakan roda"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-      <HudZone zone="callout">
-        <Callout
-          id="c3"
-          label="Mekanisme Fisika"
-          detail="Efisiensi kurva jalur"
-          claimRef="C3"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-    </HudLayout>
-  );
+  const wl = computeWheelsetLayout({
+    distance: driver.value,
+    curveStartZ: 2,
+    curveRadius: 10
+  });
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
       <BlueprintStage
         palette="blueprint-navy"
         telemetry={telemetry}
-        hud={hudContent}
+        hud={
+          <HudLayout palette="blueprint-navy">
+            <HudZone zone="title" palette="blueprint-navy">
+              <Hud id="S5_H1" driver={driver} palette="blueprint-navy" />
+            </HudZone>
+          </HudLayout>
+        }
       >
         <CameraRig
           mode="frameEntities"
-          framing="portrait-lower"
-          focusBox={{
-            center: [0, 0.7, driver.value],
-            size: [1.9, 1.25, 1.6]
-          }}
-          padding={1.85}
-          elevationDeg={24}
+          focusBox={{ center: wl.center, size: [2.4, 2.2, 5.8] }}
+          padding={1.5}
+          elevationDeg={15}
         />
         <Ground size={60} divisions={60} y={0} />
         <CurvedRail
@@ -78,11 +67,11 @@ const Scene_S5Inner: React.FC<Scene_S5Props> = ({ telemetry }) => {
           highlighted
           palette="blueprint-navy"
         />
-        <WheelsetOnRail
-          entityId="wheelset"
+        <TrainCar
+          entityId="train_car"
           distance={driver.value}
-          taperExaggeration={4.5}
-          highlightContact
+          curveStartZ={2}
+          curveRadius={10}
           palette="blueprint-navy"
         />
       </BlueprintStage>
@@ -90,8 +79,10 @@ const Scene_S5Inner: React.FC<Scene_S5Props> = ({ telemetry }) => {
   );
 };
 
-export const Scene_S5: React.FC<Scene_S5Props> = ({ telemetry = false }) => (
+export const Scene_S5: React.FC<Scene_S5Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
-    <Scene_S5Inner telemetry={telemetry} />
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S5Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
   </TelemetryProvider>
 );

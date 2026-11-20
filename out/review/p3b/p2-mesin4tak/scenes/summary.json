@@ -4,27 +4,27 @@
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 97
+    "lineCount": 77
   },
   {
     "sceneId": "S2",
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 109
+    "lineCount": 72
   },
   {
     "sceneId": "S3",
-    "fixes": 1,
+    "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 97
+    "lineCount": 72
   },
   {
     "sceneId": "S4",
     "fixes": 0,
     "passed": true,
     "errors": [],
-    "lineCount": 99
+    "lineCount": 70
   }
 ]

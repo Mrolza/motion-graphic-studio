@@ -1,99 +1,70 @@
 import React from 'react';
-import { useCurrentFrame } from 'remotion';
 import {
-  TelemetryProvider,
-  useDriver,
-  SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
-  PistonCrankAssembly,
+  EngineBlock,
   HudLayout,
   HudZone,
-  KineticTitle,
-  Callout,
-  StatCounter
+  Hud,
+  SceneTransition,
+  StoryboardHudProvider,
+  TelemetryProvider,
+  useDriver,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S4Props {
   telemetry?: boolean;
+  hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S4Inner: React.FC = () => {
+const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'crank_angle',
+    name: 'crankAngleDeg',
     from: 0,
     to: 720,
-    unit: 'deg',
+    unit: '°',
     startSec: 1.55,
     durationSec: 3.35,
     curve: 'linear',
   });
 
-  const hudContent = (
-    <HudLayout palette="blueprint-navy">
-      <HudZone zone="title">
-        <KineticTitle
-          id="title_S4"
-          title="Tenaga Mekanis"
-          subtitle="Siklus berulang terus-menerus"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-      <HudZone zone="callout">
-        <Callout
-          id="c4_callout"
-          label="Tenaga Mekanis"
-          detail="Siklus berulang terus-menerus"
-          claimRef="C4"
-          palette="blueprint-navy"
-        />
-        <StatCounter
-          id="c1_stat"
-          label="Total Sudut"
-          driver={driver}
-          bindToDriver
-          decimals={0}
-          unit="derajat"
-          claimRef="C1"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-    </HudLayout>
-  );
-
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
       <BlueprintStage
         palette="blueprint-navy"
-        telemetry={false}
-        hud={hudContent}
+        telemetry={telemetry}
+        hud={
+          <HudLayout palette="blueprint-navy">
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S4_H1" driver={driver} palette="blueprint-navy" />
+            </HudZone>
+          </HudLayout>
+        }
       >
+        <Ground size={36} divisions={36} y={-0.55} />
+        <EngineBlock
+          entityId="engine_block"
+          crankAngleDeg={driver.value}
+          cutawayProgress={driver.progress}
+          position={[0, 0.45, 0]}
+          palette="blueprint-navy"
+        />
         <CameraRig
           mode="frameEntities"
-          framing="portrait-lower"
-          focusBox={{
-            center: [0, 1.65, 0],
-            size: [1.5, 2.75, 1.5],
-          }}
-          padding={1.18}
-          elevationDeg={10}
-        />
-        <Ground size={36} divisions={36} y={-0.55} />
-        <PistonCrankAssembly
-          entityId="piston_crank"
-          crankAngleDeg={driver.value}
-          position={[0, 0.45, 0]}
-          cutaway
-          palette="blueprint-navy"
+          focusBox={{ center: [0, 1.65, 0], size: [1.9, 2.8, 1.9] }}
+          padding={1.25}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false }) => (
+export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
-    <Scene_S4Inner />
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S4Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
   </TelemetryProvider>
 );

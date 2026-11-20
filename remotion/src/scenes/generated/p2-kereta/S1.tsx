@@ -1,25 +1,26 @@
 import React from 'react';
 import {
+  StoryboardHudProvider,
   TelemetryProvider,
   useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
-  CurvedRail,
-  Ground,
-  WheelsetOnRail,
   HudLayout,
   HudZone,
-  KineticTitle,
-  Callout,
-  MeasureReveal
+  Hud,
+  CurvedRail,
+  Ground,
+  TrainCar,
+  computeWheelsetLayout
 } from '../../../kit';
 
 export interface Scene_S1Props {
   telemetry?: boolean;
+  hudData?: any[];
 }
 
-const Scene_S1Inner: React.FC = () => {
+const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'distance',
     from: -2,
@@ -30,38 +31,34 @@ const Scene_S1Inner: React.FC = () => {
     curve: 'linear',
   });
 
-  const hudContent = (
-    <HudLayout palette="blueprint-navy">
-      <HudZone zone="title">
-        <KineticTitle
-          id="title_S1"
-          title="Stabilitas Rel"
-          subtitle="Tanpa Setir"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-      <HudZone zone="callout">
-        <MeasureReveal
-          id="m1"
-            label="Lebar Spoor"
-            valueText="1.435 m"
-            claimRef="C1"
-            palette="blueprint-navy"
-        />
-        <Callout
-          id="c1"
-          label="Kontak Flensa"
-          detail="Mencegah anjlok tanpa mekanisme kemudi"
-          claimRef="C1"
-          palette="blueprint-navy"
-        />
-      </HudZone>
-    </HudLayout>
-  );
+  const wl = computeWheelsetLayout({
+    distance: driver.value,
+    curveStartZ: 2,
+    curveRadius: 10,
+  });
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
-      <BlueprintStage palette="blueprint-navy" hud={hudContent}>
+      <BlueprintStage
+        palette="blueprint-navy"
+        telemetry={telemetry}
+        hud={
+          <HudLayout palette="blueprint-navy">
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S1_H1" driver={driver} palette="blueprint-navy" />
+            </HudZone>
+          </HudLayout>
+        }
+      >
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [2.4, 2.2, 5.8] }}
+          padding={1.5}
+          elevationDeg={18}
+          startAngleDeg={-30}
+          endAngleDeg={10}
+          durationSec={4.512}
+        />
         <CurvedRail
           startZ={-10}
           curveStartZ={2}
@@ -72,30 +69,22 @@ const Scene_S1Inner: React.FC = () => {
           palette="blueprint-navy"
         />
         <Ground size={60} divisions={60} y={0} />
-        <WheelsetOnRail
-          entityId="wheelset"
+        <TrainCar
+          entityId="train_car"
           distance={driver.value}
-          taperExaggeration={4.5}
-          highlightContact
+          curveStartZ={2}
+          curveRadius={10}
           palette="blueprint-navy"
-        />
-        <CameraRig
-          mode="frameEntities"
-          framing="portrait-lower"
-          focusBox={{
-            center: [0, 0.7, driver.value],
-            size: [1.9, 1.25, 1.6],
-          }}
-          padding={1.85}
-          elevationDeg={24}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false }) => (
+export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
-    <Scene_S1Inner />
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S1Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
   </TelemetryProvider>
 );
