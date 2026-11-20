@@ -1,0 +1,417 @@
+{
+  "compositionId": "DemoKereta",
+  "passed": false,
+  "sampleCount": 57,
+  "renderMs": 14427,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": []
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"measure_taper\" bertumpuk dengan \"callout_flange\" (area=40796px²)",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"callout_inertia\" bertumpuk dengan \"callout_flange\" (area=38626px²)",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_BUDGET_EXCEEDED: 3 panel HUD aktif bersamaan di luar zona judul (maks 2)",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "HUD_OVERLAP: \"compare_diameter\" bertumpuk dengan \"callout_flange\" (area=40362px²)",
+          "ref": "f448 (14.93s)"
+        }
+      ]
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}

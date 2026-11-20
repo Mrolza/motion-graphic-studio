@@ -1,0 +1,1754 @@
+{
+  "compositionId": "DemoKereta",
+  "passed": false,
+  "sampleCount": 57,
+  "renderMs": 11861,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": []
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-52036.3,-8138.4,47998.4x17566.3] keluar area aman",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-38499.6,-8138.4,35634.5x17566.3] keluar area aman",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-149800.1,-28596.1,146036.3x58575.5] keluar area aman",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-31871.2,-4121.3,27581.4x9525.6] keluar area aman",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-23544.2,-4121.3,20494.3x9525.6] keluar area aman",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-48254.8,-7722.7,44238.5x16734.2] keluar area aman",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-41503,-6040.5,37367.2x13366.7] keluar area aman",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-30687.6,-6040.5,27750.7x13366.7] keluar area aman",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-81246.9,-14516,77385.1x30339.9] keluar area aman",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-42402.7,-6219.7,38277.3x13725.4] keluar area aman",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-31354.9,-6219.7,28425.6x13725.4] keluar area aman",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-85341.6,-15358.3,81490.3x32027.8] keluar area aman",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-31118.4,-3971.2,26812x9225.3] keluar area aman",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-22985.9,-3971.2,19923.8x9225.3] keluar area aman",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-46294.4,-7318.7,42261.3x15925.4] keluar area aman",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-52723.3,-8275.2,48690.4x17840.2] keluar area aman",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-39009.1,-8275.2,36147.7x17840.2] keluar area aman",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-156581.9,-29986.4,152823x61366.2] keluar area aman",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-23184.3,-2389.5,18624.1x6060.5] keluar area aman",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-17101.6,-2389.5,13853.4x6060.5] keluar area aman",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-29133.6,-3780.5,24844.3x8843.6] keluar area aman",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-56677.8,-9062.5,52670.8x19416.6] keluar area aman",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-41942,-9062.5,39099.5x19416.6] keluar area aman",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-205815.9,-40065.9,202082.8x81611.8] keluar area aman",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-24598.2,-2671.4,20097.4x6624.5] keluar area aman",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-18150.2,-2671.4,14945.6x6624.5] keluar area aman",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-31791.6,-4328.7,27562.5x9940.7] keluar area aman",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-50899.5,-7912,46853.2x17113.1] keluar area aman",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-37656.5,-7912,34785.3x17113.1] keluar area aman",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-139449,-26473.2,135676.7x54315.1] keluar area aman",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-33068.2,-4359.8,28803x10003] keluar area aman",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-24432,-4359.8,21400.2x10003] keluar area aman",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-51519,-8395.3,47527.5x18080.8] keluar area aman",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-40119.5,-5764.9,35966.6x12815] keluar area aman",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-29661.6,-5764.9,26712.1x12815] keluar area aman",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-75369.1,-13306.5,71490.2x27916.7] keluar area aman",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-43795.5,-6497.2,39685.5x14280.8] keluar area aman",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-32387.9,-6497.2,29469.8x14280.8] keluar area aman",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-92155.2,-16759.6,88319.1x34836] keluar area aman",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-29988,-3745.9,25654.7x8774.4] keluar area aman",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-22147.5,-3745.9,19065.8x8774.4] keluar area aman",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-43475,-6737.6,39415x14762.1] keluar area aman",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-53700.9,-8469.8,49674.7x18229.9] keluar area aman",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-39734.1,-8469.8,36877.7x18229.9] keluar area aman",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-167005.5,-32122.5,163253.4x65654.5] keluar area aman",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-22374.8,-2228.1,17776.5x5737.6] keluar area aman",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-16501.2,-2228.1,13225.2x5737.6] keluar area aman",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-27676.8,-3480,23348.8x8242.3] keluar area aman",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-56459.7,-9019,52451.3x19329.6] keluar area aman",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-41780.2,-9019,38936.7x19329.6] keluar area aman",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-202535,-39394.9,198800.6x80263.4] keluar area aman",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-25507.8,-2852.8,21041.1x6987.4] keluar area aman",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-18824.8,-2852.8,15645.3x6987.4] keluar area aman",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-33582.9,-4698.1,29388.3x10680] keluar area aman",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-49685.8,-7670.3,45630x16629.3] keluar area aman",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-36756.4,-7670.3,33878.1x16629.3] keluar area aman",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-129446.2,-24420.6,125664.5x50197.1] keluar area aman",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-34303.8,-4606.1,30062x10495.8] keluar area aman",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-25348.3,-4606.1,22333.7x10495.8] keluar area aman",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-55092.6,-9131.6,51124.5x19554.9] keluar area aman",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-38752,-5492.4,34580.9x12269.7] keluar area aman",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-28647.4,-5492.4,25684.5x12269.7] keluar area aman",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-70007.1,-12202.9,66110x25705.9] keluar area aman",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-45181.7,-6773.3,41085.8x14833.5] keluar area aman",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-33416,-6773.3,30508.3x14833.5] keluar area aman",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-99580.2,-18286.1,95758.4x37895.7] keluar area aman",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-28898.8,-3528.8,24537.5x8340] keluar area aman",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-21339.8,-3528.8,18237.5x8340] keluar area aman",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-40891.2,-6205,36802.9x13695.9] keluar area aman",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-54562.7,-8641.4,50542.3x18573.4] keluar area aman",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-40373.3,-8641.4,37521x18573.4] keluar area aman",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.9,579.4,531x121.5] keluar area aman",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4208.4,579.4,423.4x121.5] keluar area aman",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-177045.2,-34178.8,173298.8x69783.9] keluar area aman",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-21597.8,-2129.5,16971.5x5439.2] keluar area aman",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-15976.6,-2028.5,12677.1x5439.3] keluar area aman",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5793.8,564.1,533.1x123.6] keluar area aman",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4209.6,592.6,425.5x123.6] keluar area aman",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-26394.4,-3255.8,22038.6x7686.2] keluar area aman",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-56398.3,-9331.7,52426.6x19234.1] keluar area aman",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-41987.7,-8611.8,39168x19235.8] keluar area aman",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5794.8,536.9,536.7x127.4] keluar area aman",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4212.4,616.1,429.2x127.4] keluar area aman",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-198934.1,-39345,195238.8x77947.8] keluar area aman",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-26674,-3341.6,22297.6x7403.7] keluar area aman",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-19841.3,-2780.4,16725.8x7404.2] keluar area aman",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5794.9,509.8,540.1x131] keluar area aman",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4215.9,639.6,432.8x131] keluar area aman",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-35980.7,-5416.9,31880.4x11459.8] keluar area aman",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-49149.8,-8151.1,45172.8x16172.6] keluar area aman",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-36765,-6734.7,33948.5x16175.4] keluar area aman",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5794.2,482.8,543.3x136] keluar area aman",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4220.1,661.5,436.4x136] keluar area aman",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-122470.4,-23885,118772.6x46052.8] keluar area aman",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-36224.5,-5543.1,32116x11034] keluar area aman",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-27136.8,-4207.8,24224x11035.8] keluar area aman",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5792.6,456,546.3x141] keluar area aman",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4225.1,683.4,439.8x141] keluar area aman",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-60472.9,-10816.7,56644.7x20993.4] keluar area aman",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-38258.4,-6080.9,34205.5x11737.3] keluar area aman",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-28758.2,-4373,25887.2x11739.7] keluar area aman",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5790.1,429.4,549.1x145.8] keluar area aman",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4230.8,705.2,443.2x145.8] keluar area aman",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-67093.3,-12339.7,63322.1x23380.8] keluar area aman",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-47878.7,-8264.6,43964.1x15317.7] keluar area aman",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-36154.5,-5767.8,33386.6x15322.3] keluar area aman",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5786.7,403,551.7x150.4] keluar area aman",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4237.2,726.9,446.5x150.4] keluar area aman",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-111644.6,-22068.3,108012.9x40429.6] keluar area aman",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-28607,-4164.5,24397.6x7883.2] keluar area aman",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-21606.8,-2437.2,18614.6x7884.8] keluar area aman",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5782.5,376.8,554.2x154.9] keluar area aman",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4244.3,748.6,449.7x154.9] keluar area aman",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-39911.1,-6600.8,35984.2x12400.2] keluar area aman",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-57398.3,-10571.8,53609.1x18586.5] keluar area aman",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-43711.1,-6727.9,41033.5x18595.1] keluar area aman",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5777.4,350.9,556.4x159.3] keluar area aman",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4252.2,770.2,452.8x159.3] keluar area aman",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-195388.8,-40472.1,191884.5x71090.6] keluar area aman",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-21436.8,-2715.1,16974.7x5077] keluar area aman",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-16264.9,-1081.3,13070.8x5078] keluar area aman",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5771.5,325.3,558.4x163.4] keluar area aman",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4260.8,791.6,455.9x163.4] keluar area aman",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-26013.4,-3656.2,21831.4x6878.3] keluar area aman",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-58085.8,-10931,54355x18415.9] keluar area aman",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-44615.1,-6198.9,41973.2x18426.4] keluar area aman",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5764.7,300,560.3x167.4] keluar area aman",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4270,812.9,458.8x167.4] keluar area aman",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-200753.8,-41839,197309.6x71032.7] keluar area aman",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-28506.6,-4404.7,24389.9x7521.2] keluar area aman",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-21882,-1835.5,18937.1x7523.5] keluar area aman",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5757,275.1,561.9x171.3] keluar area aman",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4280,834,461.6x171.3] keluar area aman",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-39567.4,-6693.4,35736.4x11594.7] keluar area aman",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-49465.3,-9165.4,45723.5x14874.4] keluar area aman",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-38314.3,-4425.5,35650.3x14882.9] keluar area aman",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5748.5,250.6,563.3x174.9] keluar area aman",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4290.6,854.8,464.3x174.9] keluar area aman",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-118284.9,-23929.8,114831.3x39440.4] keluar area aman",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-38709,-6808.5,34866.3x10898.8] keluar area aman",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-30078.5,-2808.6,27327.2x10904.1] keluar area aman",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5739.2,226.4,564.5x178.4] keluar area aman",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4301.9,875.5,466.9x178.4] keluar area aman",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-67434.8,-12831.6,63880.5x20964.7] keluar area aman",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-37953,-6689.4,34125.2x10477] keluar area aman",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-29636.1,-2506.1,26885.9x10482.2] keluar area aman",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5729.1,202.7,565.5x181.7] keluar area aman",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4313.8,896,469.4x181.7] keluar area aman",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-64812.8,-12261.5,61273.9x19677.4] keluar area aman",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-50719.5,-9617,47072.2x14631.9] keluar area aman",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-39898,-3732.3,37277.9x14642.3] keluar area aman",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5718.1,179.4,566.3x184.8] keluar area aman",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4326.4,916.1,471.8x184.8] keluar area aman",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-125338.3,-25393.9,121980.9x39650.6] keluar area aman",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-28139.8,-4556.5,24140.3x6879.5] keluar area aman",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-22143.8,-1042.4,19232.9x6882.4] keluar area aman",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5706.4,156.6,566.9x187.7] keluar area aman",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4339.6,936,474.1x187.8] keluar area aman",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-38743.2,-6587.2,35031.5x10303.5] keluar area aman",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-59582.4,-11689,56058x17009.6] keluar area aman",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-47438.6,-4037.7,44890.4x17025.3] keluar area aman",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5693.9,134.3,567.2x190.5] keluar area aman",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4353.4,955.6,476.2x190.5] keluar area aman",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-211164.2,-43664.9,207930.2x65571.4] keluar area aman",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-22202.1,-3281.8,18003.9x4745.3] keluar area aman",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-17615.8,-183.1,14514x4747.1] keluar area aman",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5680.6,112.5,567.4x193] keluar area aman",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4367.8,974.9,478.3x193] keluar area aman",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-27390,-4139.5,23476.1x6279.5] keluar area aman",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-58694.5,-11521.7,55221.9x16064.6] keluar area aman",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-47278.5,-3260.7,44742.2x16080.5] keluar area aman",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5666.5,91.2,567.3x195.3] keluar area aman",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4382.8,993.8,480.2x195.4] keluar area aman",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-197609.1,-40344,194427.4x58355.3] keluar area aman",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-30040,-5096.2,26206.5x6966.8] keluar area aman",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-24213.7,-590.1,21368.3x6970.6] keluar area aman",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5651.8,70.5,567x197.5] keluar area aman",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4398.4,1012.3,482x197.5] keluar area aman",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-43016.5,-7447.8,39471.8x10663.2] keluar area aman",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-48883.7,-9324.5,45390.2x12438.4] keluar area aman",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-39816.5,-1832.8,37228.7x12449.6] keluar area aman",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5636.2,50.4,566.6x199.4] keluar area aman",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4414.6,1030.5,483.6x199.4] keluar area aman",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-112395.2,-21971,109192.4x30577.8] keluar area aman",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-40719.1,-7500.9,37157.2x9770.4] keluar area aman",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-33332.2,-988.8,30669.1x9778] keluar area aman",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5620,30.9,565.9x201.1] keluar area aman",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4431.2,1048.3,485.2x201.2] keluar area aman",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-74245.7,-13875.7,70974x18930.1] keluar area aman",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-37008.3,-6674.2,33415.2x8479.3] keluar area aman",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-30467.5,-524.6,27757.8x8485.5] keluar area aman",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5603.1,12,565x202.7] keluar area aman",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4448.4,1065.7,486.6x202.7] keluar area aman",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-61712.6,-11186,58409.1x14930.9] keluar area aman",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-52783.8,-10137,49411.5x12603] keluar area aman",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-43858.8,-1185.2,41310.6x12616.5] keluar area aman",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5585.5,-6.2,563.8x204] keluar area aman",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4466.1,1082.6,487.9x204] keluar area aman",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-138445.2,-26724.6,135363.1x34840.2] keluar area aman",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-27228.9,-4517.9,23447.1x5422.7] keluar area aman",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-22649.8,375.5,19736.3x5425.9] keluar area aman",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5567.2,-23.8,562.5x205.1] keluar area aman",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4484.3,1099.1,489x205.1] keluar area aman",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-37074.1,-6023.8,33578.6x7660.5] keluar area aman",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-60653.7,-11760,57395.2x13927] keluar area aman",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-51126.2,-886.3,48628.5x13945.2] keluar area aman",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5548.3,-40.7,561x206] keluar area aman",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4502.9,1115.1,490x206] keluar area aman",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-222263.8,-42785,219294.8x53227.7] keluar area aman",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-23005.7,-3602.1,19100.6x4200.6] keluar area aman",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-19367.4,681.8,16296.5x4202.8] keluar area aman",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5528.7,-56.9,559.2x206.7] keluar area aman",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4522,1130.6,490.9x206.7] keluar area aman",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-29065.6,-4345,25442.7x5218.8] keluar area aman",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-58149.9,-11080.7,54931.6x12437.3] keluar area aman",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-49692,-76.2,47179.9x12453.7] keluar area aman",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5508.6,-72.4,557.3x207.1] keluar area aman",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4541.6,1145.6,491.7x207.2] keluar area aman",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-189773.5,-35408.9,186843.6x41827.7] keluar area aman",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-31187,-5319.3,27638.1x5920.5] keluar area aman",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-26724.9,679.1,23902x5924.8] keluar area aman",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5487.9,-87.1,555.2x207.4] keluar area aman",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4561.5,1160.1,492.3x207.4] keluar area aman",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-46176.1,-7533.9,42912.5x8581.6] keluar area aman",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-47418.4,-8671.6,44165.2x9295.4] keluar area aman",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-41058.7,656.6,38463.5x9305.8] keluar area aman",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5466.6,-101.1,552.8x207.5] keluar area aman",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4581.8,1174.1,492.8x207.5] keluar area aman",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-105034.3,-18484.4,102067.7x20567.6] keluar area aman",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-42130.5,-7509.5,38842x8092.4] keluar area aman",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-36721.3,697.4,34067.1x8100.4] keluar area aman",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5444.8,-114.4,550.3x207.3] keluar area aman",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4602.5,1187.5,493.1x207.3] keluar area aman",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-80609.2,-13685.6,77606.1x14723.3] keluar area aman",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_left\" bbox=[-35466.1,-6088.7,32097.1x6623] keluar area aman",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.wheel_right\" bbox=[-31107.2,746,28352.6x6628.5] keluar area aman",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_left\" bbox=[-5422.4,-126.9,547.5x206.9] keluar area aman",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.contact_right\" bbox=[-4623.5,1200.3,493.3x207] keluar area aman",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "VISIBILITY_OUT_OF_BOUNDS: bagian \"wheelset.flange\" bbox=[-57885.8,-9341.6,54800.5x9956.5] keluar area aman",
+          "ref": "f448 (14.93s)"
+        }
+      ]
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-157386.3,-28596.1,154761.4x58575.5] keluar area aman [0..720, 60..1220]",
+          "ref": "f0 (0.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-50710.9,-7722.7,47903.2x16734.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-85369.8,-14516,82674x30339.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-89671.3,-15358.3,86983.1x32027.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-48651.4,-7318.7,45831.6x15925.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-164510.8,-29986.4,161889.4x61366.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-30623.6,-3780.5,27618.4x8843.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-216232,-40065.9,213629.4x81611.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-33416,-4328.7,30454.2x9940.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-146512.3,-26473.2,143881.2x54315.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-54140,-8395.3,51350.2x18080.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-79195,-13306.5,76486.7x27916.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-96829.1,-16759.6,94151.9x34836] keluar area aman [0..720, 60..1220]",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-45689.6,-6737.6,42850.3x14762.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-175461,-32122.5,172844.5x65654.5] keluar area aman [0..720, 60..1220]",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-29093.2,-3480,26060x8242.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-212785.4,-39394.9,210181.8x80263.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-35297.7,-4698.1,32361x10680] keluar area aman [0..720, 60..1220]",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-136004.1,-24420.6,133366.2x50197.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-57894.1,-9131.6,55121.3x19554.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-73562.1,-12202.9,70840.7x25705.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-104629.3,-18286.1,101962.4x37895.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-42975.2,-6205,40115.5x13695.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-186007.9,-34178.8,183395.6x69783.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-27679.1,-3255.8,24617.6x7793.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-207085.1,-39345,204481.4x80163] keluar area aman [0..720, 60..1220]",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-37353.8,-5416.9,34442.9x12118.5] keluar area aman [0..720, 60..1220]",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-126059.3,-23885,123415x49122.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-62192.4,-10816.7,59449x22929.5] keluar area aman [0..720, 60..1220]",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-68937.1,-12339.7,66234.8x25979.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-114587.1,-22068.3,111987.1x45479] keluar area aman [0..720, 60..1220]",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-40957,-6600.8,38130.3x14488.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-200173.4,-40472.1,197661.7x82428.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-26673.6,-3656.2,23640.6x8594.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-205284.9,-41839,202807x85175.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-40461.8,-6693.4,37679.5x14673.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-120710.8,-23929.8,118209.4x49212.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-68773.3,-12831.6,66184.1x26965.3] keluar area aman [0..720, 60..1220]",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-66037.3,-12261.5,63448.6x25823.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-127525.2,-25393.9,125065.7x52149.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-39435.2,-6612.8,36684.5x14512.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-214451.6,-43664.9,212062.4x88847] keluar area aman [0..720, 60..1220]",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-27858,-4263.5,24914.4x9810.1] keluar area aman [0..720, 60..1220]",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-200265.8,-40513.1,197887.7x82510.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-43599.7,-7650.1,40913.5x16588.8] keluar area aman [0..720, 60..1220]",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-113653.2,-22384.4,111223.5x46113] keluar area aman [0..720, 60..1220]",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-75020,-14280.7,72515.3x29868.5] keluar area aman [0..720, 60..1220]",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-62307.1,-11614.3,59755.8x24526.9] keluar area aman [0..720, 60..1220]",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-139551.7,-27658,137160.6x56692.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-37400.6,-6415.9,34646x14118.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-223654.3,-44678,221313.1x90884] keluar area aman [0..720, 60..1220]",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-29289.5,-4740.9,26377.4x10765.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-190518.3,-37450.7,188162.9x76356.6] keluar area aman [0..720, 60..1220]",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-46353.2,-8178,43689.7x17645.7] keluar area aman [0..720, 60..1220]",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-105194.9,-19892.6,102757.6x41116.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-80682.8,-14877.5,78188.6x31064.2] keluar area aman [0..720, 60..1220]",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "FRAMING_OUT_OF_BOUNDS: \"wheelset\" bbox=[-57925.1,-10289.4,55333.5x21873.4] keluar area aman [0..720, 60..1220]",
+          "ref": "f448 (14.93s)"
+        }
+      ]
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "BLANK_FRAME: frame kosong/datar (meanLuma=2.62, std=5.10)",
+          "ref": "D:\\motion-graphic-studio\\out\\review\\p3a\\mutations\\mut3-framing\\_qc_frames\\sample-001.png"
+        }
+      ]
+    }
+  }
+}

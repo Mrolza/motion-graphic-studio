@@ -211,3 +211,75 @@
 - Tidak ada **error** tersisa di `L0`, `L0b`, `L1`, `L2`, maupun `L3` pada ketiga topik.
 - Masih terdapat `1 WARNING` di `L2` pada `p2-history-0720` (`NAME_NOT_IN_CLAIM` pada `S1.2` karena kata `"Bulan"` muncul di naskah sementara klaim `C6` merujuk `Base Tranquillity`), serta `info` pada klaim `L1` yang tidak dipakai (`1I` di `p2-kereta`, `2I` di `p2-history-0720`).
 - Rata-rata panggilan LLM kumulatif pada `stats.md` adalah **14,00** panggilan/topik (karena `p2-kereta` & `p2-mesin4tak` membawa akumulasi panggilan dari run P2B + rewrite P2C; untuk run segar `p2-history-0720` tercatat **9** panggilan).
+
+---
+
+## Fase P3A — Scene Kit Blueprint + QC Visual Otomatis (`docs/P3A-SCENE-KIT.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p3a-scene-kit` (tag awal `p3a-start`, setelah merge P2 ke `main` dengan tag `p2-done`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Dikerjakan & Dibuat
+1. **Langkah 0 (`REVIEW-P2C.md` + Merge P2):**
+   - Menerapkan 4 tindak lanjut: `CLAIM_NAME_NOT_IN_QUOTE` (`l1-ledger.ts`), `hook_paid` & `main_event_named` (`l0b-quality.ts`, `format-packs.ts`, `scriptwriter.md`), serta `llm_calls_last_run` terpisah (`project.ts`, `store.ts`, `gate1.ts`, `script.ts`).
+   - Uji ulang S4 `p2-history-0720` lulus Gerbang 1 (**APPROVED**, 0 error setelah 1x rewrite; [`followup.md`](../out/review/p2/followup.md)).
+   - Merge `phase/p2-facts-script` ke `main` (`--no-ff`), tag `p2-done`, lalu buat `phase/p3a-scene-kit` (`p3a-start`).
+2. **Scene Kit (`remotion/src/kit/`):**
+   - `tokens/`: 3 palet (`blueprint-navy`, `industrial-orange`, `dark-mystery`), font OFL, ukuran minimum teks (`≥44px` judul, `≥32px` caption, `≥26px` callout).
+   - `primitives/`: `Box`, `Cylinder`, `Sphere`, `Torus`, `Cone`, `Group`, `Ground`/`Grid`, `Line3D`, `Arrow3D`, `Label3D`, dukungan `cutaway`/transparansi.
+   - `drivers/`: `useDriver` (single driver) + helper kinematika murni (`solveCrankSlider`, `gearRatioAngle`, `wheelAngleFromDistance`, `springOscillation`, `valveStateFromCrankAngle`, `formatIdNumber`).
+   - `camera/`: `CameraRig` dengan preset 9:16 dan mode `frameEntities`.
+   - `assemblies/`: `WheelsetOnRail` (menapak rel, tanpa z-fighting), `PistonCrankAssembly` (cutaway, piston/batang/engkol/katup/busi dari `crankAngleDeg`), `Suspension` (pegas tersambung ke rangka).
+   - `foreground/` & `transitions/`: `ParallaxForeground` (tiang lewat & garis kedalaman) dan `SceneTransition`.
+   - `hud/`: tata letak berbasis zona (`HudLayout`, `HudZone` untuk `title`, `free`, `callout`, `caption`), `KineticTitle`, `StatCounter` (`bindToDriver` tanpa easing sendiri), `MeasureReveal` (garis ukur + nilai tetap tanpa count-up), `DimensionLine`, `Callout`, `ListReveal`, `DateStamp`, `Timeline`, `CompareCard`, `Waveform`.
+   - `telemetry/`: `TelemetryProvider` (`inputProps.telemetry = true`), `TelemetryEntity` (proyeksi `Box3` ke bounding box layar 2D + `partStates`), `TelemetryHudBox` (bounding box DOM HUD), log `MGS_TELEMETRY {...}`.
+   - `KIT-API.md`: dihasilkan otomatis dari AST TypeScript & JSDoc via `scripts/generate-kit-api.ts` (66 item di 10 kategori).
+3. **QC Visual Otomatis (`src/core/qc/visual/`) & CLI:**
+   - 5 pemeriksaan: `mechanics`, `framing`, `hud-overlap`, `hud-format`, dan `blank` (luma mean/std via FFmpeg), dengan CLI `mgs qc-visual --composition <id>`.
+4. **Komposisi Demo & Uji Mutasi:**
+   - `DemoKereta` (12s, 360 frame) dan `DemoMesin` (16s, 480 frame), keduanya lulus semua QC visual.
+   - 5 mutasi perilaku (`mut1-time-valve`, `mut2-hud-easing`, `mut3-framing`, `mut4-hud-overlap`, `mut5-hud-format`) semuanya **FAIL** dengan error pada layer yang tepat.
+
+### Bukti (`out/review/p3a/`)
+- [`demo-kereta.mp4`](../out/review/p3a/demo-kereta.mp4) & [`demo-kereta-contact-sheet.png`](../out/review/p3a/demo-kereta-contact-sheet.png) (720×1280, 30 fps, 12s).
+- [`demo-mesin.mp4`](../out/review/p3a/demo-mesin.mp4) & [`demo-mesin-contact-sheet.png`](../out/review/p3a/demo-mesin-contact-sheet.png) (720×1280, 30 fps, 16s).
+- [`qc/`](../out/review/p3a/qc/): `DemoKereta-qc.json` (`passed: true`, 45 sampel, 0 error) & `DemoMesin-qc.json` (`passed: true`, 60 sampel, 0 error).
+- [`mutations/mutation-summary.md`](../out/review/p3a/mutations/mutation-summary.md): 5/5 mutasi tertangkap (`mechanics`: 29 & 59 error; `framing`: 45 error; `hudOverlap`: 45 error; `hudFormat`: 1 error).
+- [`perf.md`](../out/review/p3a/perf.md): `DemoKereta` normal `9794 ms` vs telemetri `11883 ms` (`+21.3%`); `DemoMesin` normal `13894 ms` vs telemetri `14171 ms` (`+2.0%`).
+- [`KIT-API.md`](../out/review/p3a/KIT-API.md), [`followup.md`](../out/review/p3a/followup.md), [`verify.txt`](../out/review/p3a/verify.txt).
+
+---
+
+## Fase P3A2 — Geometri yang Benar, Bagian Penting Terlihat, Demo yang Menjelaskan (`docs/P3A2-VISUAL-TRUTH.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p3a-scene-kit` (tindak lanjut `docs/REVIEW-P3A.md`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Diperbaiki & Dibuat
+1. **Tata letak geometri murni & QC `geometry` (`remotion/src/kit/drivers/geometry.ts`, `src/core/qc/visual/checks.ts`):**
+   - Fungsi murni teruji unit `computeWheelsetLayout` (jalur Z lurus & melengkung, `left/rightContactGap`, `axlePerpendicularDot`, `wheelSpacing`, `flangesInside`, `left/rightEffectiveRadius`) dan `computePistonCrankLayout` (`rodTopToPistonPinGap`, `rodBottomToCrankPinGap`, `pistonInsideCylinder`).
+   - Pemeriksaan baru **`geometry`** memeriksa seluruh batasan koordinat dunia dari telemetri di setiap frame sampel.
+2. **Perbaikan `WheelsetOnRail` + `CurvedRail` (`remotion/src/kit/assemblies/`):**
+   - Gandar tegak lurus rel (sumbu X) dengan roda berputar di sumbu X menapak flush di atas kepala rel (`y = 0,22`), flens di sisi dalam rel, dukungan `taperExaggeration`, `CurvedRail`, dan cincin diameter efektif.
+3. **Keterlihatan bagian penting (`visibility`) & `CameraRig` sadar zona HUD (`TelemetryEntity.tsx`, `CameraRig.tsx`, `checks.ts`):**
+   - Entitas mendeklarasikan `partRefs` (`wheel_left`, `wheel_right`, `contact_left`, `contact_right`, `flange` pada kereta; `piston`, `crank`, `intake_valve`, `exhaust_valve`, `spark_plug` pada mesin) yang proyeksi layar 2D-nya dilaporkan per frame.
+   - Pemeriksaan baru **`visibility`** menolak bagian yang keluar area aman atau tertutup HUD > 25%.
+   - `CameraRig` (`mode="frameEntities"`) menempatkan subjek fokus di zona bebas tengah layar agar tidak tertutup panel HUD.
+4. **Anggaran HUD (`hud-overlap`) & Callout berpenunjuk:**
+   - Maksimal **2 panel HUD** aktif bersamaan di luar zona judul (`HUD_BUDGET_EXCEEDED`), pencatatan `claimRef` di telemetri HUD, dan dukungan `pointerTo` pada `Callout`.
+5. **Demo Kereta dibuat ulang dari klaim P2 (`DemoKereta.tsx`, 15 detik, 450 frame) & Demo Mesin diperjelas (`DemoMesin.tsx`, 16 detik, 480 frame):**
+   - `DemoKereta`: Adegan A (kerucut 1:20 dilebihkan + flens, `C1`), Adegan B (tikungan + geser ke rel luar + panah inersia, `C2`), Adegan C (cincin diameter efektif roda luar vs dalam, `C3`); HUD "Jarak Tempuh" dihapus.
+   - `DemoMesin`: poros engkol terlihat penuh sepanjang video, katup & percikan busi diperbesar/disorot, warna ruang bakar berubah sesuai langkah dari penggerak `crank_angle`.
+6. **Perbaikan kecil P2 (`src/core/qc/l1-ledger.ts`, `tests/qcGate1.test.ts`):**
+   - `CLAIM_NAME_NOT_IN_QUOTE` mencocokkan nama belakang pada nama diri multi-kata (`"Neil Armstrong"` ↔ `"Armstrong"`).
+
+### Bukti (`out/review/p3a/`)
+- [`demo-kereta.mp4`](../out/review/p3a/demo-kereta.mp4) & [`demo-kereta-contact-sheet.png`](../out/review/p3a/demo-kereta-contact-sheet.png) (15s, 720×1280, 30 fps).
+- [`demo-mesin.mp4`](../out/review/p3a/demo-mesin.mp4) & [`demo-mesin-contact-sheet.png`](../out/review/p3a/demo-mesin-contact-sheet.png) (16s, 720×1280, 30 fps).
+- [`stills/`](../out/review/p3a/stills/): 9 still penuh `DemoKereta` (awal/tengah/akhir × 3 adegan) + 4 still penuh `DemoMesin` (hisap, kompresi, usaha+busi, buang).
+- [`qc/`](../out/review/p3a/qc/): `DemoKereta-qc.json` (**`passed: true`**, 57 sampel, 0 error di `mechanics`, `geometry`, `visibility`, `framing`, `hudOverlap`, `hudFormat`, `blank`) & `DemoMesin-qc.json` (**`passed: true`**, 60 sampel, 0 error di semua layer).
+- [`mutations/mutation-summary.md`](../out/review/p3a/mutations/mutation-summary.md): **10/10 mutasi** tertangkap dengan error yang tepat (`mut1`–`mut5` P3A + `mut6-lift-wheel` `114` error `geometry`, `mut7-rotate-axle` `57` error `geometry`, `mut8-detach-rod` `120` error `geometry`, `mut9-occlude-crank` `59` error `visibility`, `mut10-three-panels` `38` error `hudOverlap`).
+- [`perf.md`](../out/review/p3a/perf.md): `DemoKereta` normal `13572 ms` vs telemetri `14405 ms` (`+6.1%`); `DemoMesin` normal `13790 ms` vs telemetri `13531 ms` (`-1.9%`).
+- [`verify.txt`](../out/review/p3a/verify.txt) (UTF-8).

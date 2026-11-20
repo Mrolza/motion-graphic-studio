@@ -1,0 +1,5892 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "distance": {
+        "value": -5.5,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 102.5,
+          "y": 322.2,
+          "width": 495.4,
+          "height": 513.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 132,
+            "y": 407.8,
+            "width": 350.8,
+            "height": 396.3
+          },
+          "wheel_right": {
+            "x": 259,
+            "y": 346.5,
+            "width": 313,
+            "height": 347.8
+          },
+          "contact_left": {
+            "x": 292.1,
+            "y": 665.7,
+            "width": 27.5,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 395.9,
+            "y": 575.9,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 130.1,
+            "y": 381.5,
+            "width": 379.7,
+            "height": 430.3
+          }
+        },
+        "partStates": {
+          "distance": -5.5,
+          "wheel_angle_deg": -685.06,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999017,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "distance": {
+        "value": -5.18,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 124.8,
+          "y": 344.6,
+          "width": 450.4,
+          "height": 465.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151.7,
+            "y": 430.6,
+            "width": 309.2,
+            "height": 350.7
+          },
+          "wheel_right": {
+            "x": 276.2,
+            "y": 366.5,
+            "width": 275.8,
+            "height": 307.6
+          },
+          "contact_left": {
+            "x": 292.1,
+            "y": 665.7,
+            "width": 27.5,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 395.9,
+            "y": 575.9,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 151.8,
+            "y": 407.1,
+            "width": 332.8,
+            "height": 379.5
+          }
+        },
+        "partStates": {
+          "distance": -5.18,
+          "wheel_angle_deg": -645.2,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "distance": {
+        "value": -4.86,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 111.5,
+          "y": 331.2,
+          "width": 477.2,
+          "height": 494.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 139.9,
+            "y": 417,
+            "width": 334,
+            "height": 377.9
+          },
+          "wheel_right": {
+            "x": 265.9,
+            "y": 354.5,
+            "width": 298,
+            "height": 331.6
+          },
+          "contact_left": {
+            "x": 292.1,
+            "y": 665.7,
+            "width": 27.5,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 395.8,
+            "y": 575.9,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 138.8,
+            "y": 391.8,
+            "width": 360.8,
+            "height": 409.9
+          }
+        },
+        "partStates": {
+          "distance": -4.86,
+          "wheel_angle_deg": -605.34,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "distance": {
+        "value": -4.54,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 110.6,
+          "y": 330.3,
+          "width": 479.1,
+          "height": 496.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 139.1,
+            "y": 416.1,
+            "width": 335.9,
+            "height": 379.8
+          },
+          "wheel_right": {
+            "x": 265.1,
+            "y": 353.7,
+            "width": 299.6,
+            "height": 333.2
+          },
+          "contact_left": {
+            "x": 292.2,
+            "y": 665.7,
+            "width": 27.5,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 395.8,
+            "y": 575.9,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 137.9,
+            "y": 390.8,
+            "width": 362.8,
+            "height": 411.9
+          }
+        },
+        "partStates": {
+          "distance": -4.54,
+          "wheel_angle_deg": -565.48,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "distance": {
+        "value": -4.22,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 126.3,
+          "y": 346.1,
+          "width": 447.3,
+          "height": 462.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153,
+            "y": 432.1,
+            "width": 306.9,
+            "height": 347.7
+          },
+          "wheel_right": {
+            "x": 277,
+            "y": 367.8,
+            "width": 273.6,
+            "height": 304.9
+          },
+          "contact_left": {
+            "x": 292.3,
+            "y": 665.7,
+            "width": 27.5,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 395.7,
+            "y": 575.9,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 153.2,
+            "y": 408.8,
+            "width": 330.2,
+            "height": 376.2
+          }
+        },
+        "partStates": {
+          "distance": -4.22,
+          "wheel_angle_deg": -525.63,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "distance": {
+        "value": -3.9,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 102.2,
+          "y": 321.8,
+          "width": 495.9,
+          "height": 514.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 131.8,
+            "y": 407.5,
+            "width": 352.2,
+            "height": 396.9
+          },
+          "wheel_right": {
+            "x": 258.1,
+            "y": 346.1,
+            "width": 314,
+            "height": 348.3
+          },
+          "contact_left": {
+            "x": 292.5,
+            "y": 665.8,
+            "width": 27.4,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 395.5,
+            "y": 575.8,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 129.6,
+            "y": 381.2,
+            "width": 381.3,
+            "height": 431
+          }
+        },
+        "partStates": {
+          "distance": -3.9,
+          "wheel_angle_deg": -485.77,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "distance": {
+        "value": -3.58,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 146.6,
+          "y": 366.3,
+          "width": 406.6,
+          "height": 418.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 170.9,
+            "y": 452.8,
+            "width": 270.4,
+            "height": 306.4
+          },
+          "wheel_right": {
+            "x": 291.8,
+            "y": 385.9,
+            "width": 240.9,
+            "height": 268.6
+          },
+          "contact_left": {
+            "x": 292.9,
+            "y": 665.8,
+            "width": 27.4,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 395.2,
+            "y": 575.8,
+            "width": 23.7,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 172.8,
+            "y": 431.9,
+            "width": 289.2,
+            "height": 330.2
+          }
+        },
+        "partStates": {
+          "distance": -3.58,
+          "wheel_angle_deg": -445.91,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "distance": {
+        "value": -3.26,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 99.9,
+          "y": 319.5,
+          "width": 500.1,
+          "height": 519.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 129.8,
+            "y": 405.4,
+            "width": 357.6,
+            "height": 401.2
+          },
+          "wheel_right": {
+            "x": 255.2,
+            "y": 344.1,
+            "width": 318.6,
+            "height": 352
+          },
+          "contact_left": {
+            "x": 293.3,
+            "y": 665.9,
+            "width": 27.4,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 394.9,
+            "y": 575.7,
+            "width": 23.6,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 127.2,
+            "y": 378.8,
+            "width": 387.6,
+            "height": 435.8
+          }
+        },
+        "partStates": {
+          "distance": -3.26,
+          "wheel_angle_deg": -406.05,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "distance": {
+        "value": -2.94,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 142.6,
+          "y": 361.9,
+          "width": 414.1,
+          "height": 427.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 167.4,
+            "y": 448.6,
+            "width": 279.5,
+            "height": 314.9
+          },
+          "wheel_right": {
+            "x": 287.1,
+            "y": 382,
+            "width": 248.7,
+            "height": 276
+          },
+          "contact_left": {
+            "x": 293.9,
+            "y": 666,
+            "width": 27.3,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 394.4,
+            "y": 575.7,
+            "width": 23.6,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 168.6,
+            "y": 427.2,
+            "width": 299.7,
+            "height": 339.6
+          }
+        },
+        "partStates": {
+          "distance": -2.94,
+          "wheel_angle_deg": -366.19,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "distance": {
+        "value": -2.62,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 104.1,
+          "y": 323.4,
+          "width": 491,
+          "height": 510.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 133.6,
+            "y": 409.8,
+            "width": 352.2,
+            "height": 392.5
+          },
+          "wheel_right": {
+            "x": 256.3,
+            "y": 347.6,
+            "width": 313.1,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 294.6,
+            "y": 666.2,
+            "width": 27.3,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 393.8,
+            "y": 575.6,
+            "width": 23.5,
+            "height": 25.6
+          },
+          "flange": {
+            "x": 130.9,
+            "y": 383.6,
+            "width": 381.6,
+            "height": 426
+          }
+        },
+        "partStates": {
+          "distance": -2.62,
+          "wheel_angle_deg": -326.34,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "distance": {
+        "value": -2.3,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 124.3,
+          "y": 343.1,
+          "width": 450.2,
+          "height": 467.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151.4,
+            "y": 430,
+            "width": 316.4,
+            "height": 352.3
+          },
+          "wheel_right": {
+            "x": 270.3,
+            "y": 365.2,
+            "width": 281,
+            "height": 308.8
+          },
+          "contact_left": {
+            "x": 295.5,
+            "y": 666.3,
+            "width": 27.2,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 393,
+            "y": 575.5,
+            "width": 23.4,
+            "height": 25.5
+          },
+          "flange": {
+            "x": 150.2,
+            "y": 406.3,
+            "width": 341.5,
+            "height": 381.1
+          }
+        },
+        "partStates": {
+          "distance": -2.3,
+          "wheel_angle_deg": -286.48,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "distance": {
+        "value": -1.98,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 114.8,
+          "y": 333.6,
+          "width": 468.5,
+          "height": 488.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 143.1,
+            "y": 420.6,
+            "width": 335.9,
+            "height": 371.1
+          },
+          "wheel_right": {
+            "x": 261.3,
+            "y": 356.7,
+            "width": 297.9,
+            "height": 325.4
+          },
+          "contact_left": {
+            "x": 296.7,
+            "y": 666.6,
+            "width": 27.1,
+            "height": 29.8
+          },
+          "contact_right": {
+            "x": 392.1,
+            "y": 575.3,
+            "width": 23.3,
+            "height": 25.5
+          },
+          "flange": {
+            "x": 140.6,
+            "y": 395.7,
+            "width": 363.7,
+            "height": 402.1
+          }
+        },
+        "partStates": {
+          "distance": -1.98,
+          "wheel_angle_deg": -246.62,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "distance": {
+        "value": -1.66,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 111.5,
+          "y": 330,
+          "width": 474.7,
+          "height": 495.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 140.2,
+            "y": 417.3,
+            "width": 344.6,
+            "height": 377.7
+          },
+          "wheel_right": {
+            "x": 256.5,
+            "y": 353.5,
+            "width": 305.1,
+            "height": 331.1
+          },
+          "contact_left": {
+            "x": 298,
+            "y": 666.8,
+            "width": 27,
+            "height": 29.8
+          },
+          "contact_right": {
+            "x": 391,
+            "y": 575.2,
+            "width": 23.2,
+            "height": 25.4
+          },
+          "flange": {
+            "x": 136.9,
+            "y": 392,
+            "width": 373.7,
+            "height": 409.4
+          }
+        },
+        "partStates": {
+          "distance": -1.66,
+          "wheel_angle_deg": -206.76,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "distance": {
+        "value": -1.34,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 132.2,
+          "y": 349.5,
+          "width": 432.8,
+          "height": 453.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 158.6,
+            "y": 437.6,
+            "width": 309.3,
+            "height": 337.6
+          },
+          "wheel_right": {
+            "x": 269.8,
+            "y": 370.9,
+            "width": 273.3,
+            "height": 295.8
+          },
+          "contact_left": {
+            "x": 299.7,
+            "y": 667.1,
+            "width": 26.8,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 389.7,
+            "y": 575,
+            "width": 23.1,
+            "height": 25.4
+          },
+          "flange": {
+            "x": 156.6,
+            "y": 414.6,
+            "width": 334.3,
+            "height": 364.7
+          }
+        },
+        "partStates": {
+          "distance": -1.34,
+          "wheel_angle_deg": -166.91,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "distance": {
+        "value": -1.02,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 105,
+          "y": 322.9,
+          "width": 486.1,
+          "height": 509.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 134.7,
+            "y": 411.1,
+            "width": 362.8,
+            "height": 390.1
+          },
+          "wheel_right": {
+            "x": 245.9,
+            "y": 347.2,
+            "width": 320,
+            "height": 342
+          },
+          "contact_left": {
+            "x": 301.6,
+            "y": 667.4,
+            "width": 26.6,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 388.1,
+            "y": 574.8,
+            "width": 22.9,
+            "height": 25.3
+          },
+          "flange": {
+            "x": 129.4,
+            "y": 384.8,
+            "width": 395,
+            "height": 423.1
+          }
+        },
+        "partStates": {
+          "distance": -1.02,
+          "wheel_angle_deg": -127.05,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "distance": {
+        "value": -0.7,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 156.5,
+          "y": 370.6,
+          "width": 384.1,
+          "height": 407.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 180,
+            "y": 460.1,
+            "width": 272.7,
+            "height": 293.4
+          },
+          "wheel_right": {
+            "x": 281.5,
+            "y": 389.8,
+            "width": 240,
+            "height": 256.9
+          },
+          "contact_left": {
+            "x": 303.8,
+            "y": 667.8,
+            "width": 26.4,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 386.3,
+            "y": 574.6,
+            "width": 22.7,
+            "height": 25.2
+          },
+          "flange": {
+            "x": 178.7,
+            "y": 439.7,
+            "width": 294.1,
+            "height": 315.3
+          }
+        },
+        "partStates": {
+          "distance": -0.7,
+          "wheel_angle_deg": -87.19,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "distance": {
+        "value": -0.38,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 105.5,
+          "y": 322.3,
+          "width": 482.9,
+          "height": 509.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 135.4,
+            "y": 411.6,
+            "width": 370.2,
+            "height": 389.1
+          },
+          "wheel_right": {
+            "x": 238.6,
+            "y": 346.7,
+            "width": 325,
+            "height": 341.1
+          },
+          "contact_left": {
+            "x": 306.4,
+            "y": 668.2,
+            "width": 26.2,
+            "height": 29.5
+          },
+          "contact_right": {
+            "x": 384.2,
+            "y": 574.4,
+            "width": 22.5,
+            "height": 25.1
+          },
+          "flange": {
+            "x": 128.3,
+            "y": 385.1,
+            "width": 404.2,
+            "height": 421.8
+          }
+        },
+        "partStates": {
+          "distance": -0.38,
+          "wheel_angle_deg": -47.33,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "distance": {
+        "value": -0.06,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 149.8,
+          "y": 361.7,
+          "width": 395.6,
+          "height": 425.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 174.4,
+            "y": 452.3,
+            "width": 294.9,
+            "height": 309.3
+          },
+          "wheel_right": {
+            "x": 267.4,
+            "y": 381.9,
+            "width": 258.3,
+            "height": 270.8
+          },
+          "contact_left": {
+            "x": 309.4,
+            "y": 668.6,
+            "width": 25.9,
+            "height": 29.4
+          },
+          "contact_right": {
+            "x": 381.9,
+            "y": 574.2,
+            "width": 22.2,
+            "height": 25
+          },
+          "flange": {
+            "x": 170.3,
+            "y": 430.8,
+            "width": 320.2,
+            "height": 332.8
+          }
+        },
+        "partStates": {
+          "distance": -0.06,
+          "wheel_angle_deg": -7.47,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "distance": {
+        "value": 0.26,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 114,
+          "y": 328.1,
+          "width": 464,
+          "height": 495.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 143.1,
+            "y": 418.8,
+            "width": 365.7,
+            "height": 374.7
+          },
+          "wheel_right": {
+            "x": 234.9,
+            "y": 351.9,
+            "width": 319.4,
+            "height": 328.5
+          },
+          "contact_left": {
+            "x": 312.7,
+            "y": 669,
+            "width": 25.5,
+            "height": 29.3
+          },
+          "contact_right": {
+            "x": 379.2,
+            "y": 573.9,
+            "width": 21.9,
+            "height": 24.9
+          },
+          "flange": {
+            "x": 134.4,
+            "y": 393,
+            "width": 400.4,
+            "height": 405.6
+          }
+        },
+        "partStates": {
+          "distance": 0.26,
+          "wheel_angle_deg": 32.38,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 174.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan A: Bentuk kerucut 1:20 (skala dilebih-lebihkan)"
+      },
+      {
+        "id": "measure_taper",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 110
+        },
+        "text": "Kemiringan Tapak Kerucut: 1:20 (dilebihkan)",
+        "claimRef": "C1"
+      },
+      {
+        "id": "callout_flange",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 982,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Flens di Sisi Dalam — Mencegah roda keluar rel",
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "distance": {
+        "value": 0.58,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 134.9,
+          "y": 345.2,
+          "width": 422.3,
+          "height": 458.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 161.6,
+            "y": 436.9,
+            "width": 334.5,
+            "height": 339.3
+          },
+          "wheel_right": {
+            "x": 244.6,
+            "y": 367.2,
+            "width": 291.4,
+            "height": 297.5
+          },
+          "contact_left": {
+            "x": 316.5,
+            "y": 669.5,
+            "width": 25.1,
+            "height": 29.1
+          },
+          "contact_right": {
+            "x": 376.2,
+            "y": 573.7,
+            "width": 21.5,
+            "height": 24.7
+          },
+          "flange": {
+            "x": 153.4,
+            "y": 413.2,
+            "width": 366.1,
+            "height": 366.2
+          }
+        },
+        "partStates": {
+          "distance": 0.58,
+          "wheel_angle_deg": 72.24,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "distance": {
+        "value": 0.9,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.2,
+          "y": 340.2,
+          "width": 428,
+          "height": 467.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 158.6,
+            "y": 432.5,
+            "width": 348.5,
+            "height": 347.5
+          },
+          "wheel_right": {
+            "x": 234.9,
+            "y": 362.8,
+            "width": 302.8,
+            "height": 304.8
+          },
+          "contact_left": {
+            "x": 320.8,
+            "y": 670,
+            "width": 24.5,
+            "height": 28.9
+          },
+          "contact_right": {
+            "x": 372.9,
+            "y": 573.5,
+            "width": 21.1,
+            "height": 24.6
+          },
+          "flange": {
+            "x": 148.4,
+            "y": 408.2,
+            "width": 382.8,
+            "height": 375.2
+          }
+        },
+        "partStates": {
+          "distance": 0.9,
+          "wheel_angle_deg": 112.1,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "distance": {
+        "value": 1.22,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 127.3,
+          "y": 334.7,
+          "width": 434,
+          "height": 477.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 155.4,
+            "y": 427.8,
+            "width": 363.7,
+            "height": 356.1
+          },
+          "wheel_right": {
+            "x": 224.2,
+            "y": 358,
+            "width": 315.3,
+            "height": 312.7
+          },
+          "contact_left": {
+            "x": 325.6,
+            "y": 670.5,
+            "width": 23.9,
+            "height": 28.7
+          },
+          "contact_right": {
+            "x": 369.2,
+            "y": 573.3,
+            "width": 20.6,
+            "height": 24.4
+          },
+          "flange": {
+            "x": 142.9,
+            "y": 402.7,
+            "width": 400.9,
+            "height": 384.8
+          }
+        },
+        "partStates": {
+          "distance": 1.22,
+          "wheel_angle_deg": 151.96,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "distance": {
+        "value": 1.54,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 158.2,
+          "y": 358,
+          "width": 374.4,
+          "height": 428.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 182.6,
+            "y": 452.1,
+            "width": 318,
+            "height": 308.9
+          },
+          "wheel_right": {
+            "x": 238.7,
+            "y": 378.7,
+            "width": 275.3,
+            "height": 271.4
+          },
+          "contact_left": {
+            "x": 330.9,
+            "y": 670.9,
+            "width": 23.2,
+            "height": 28.4
+          },
+          "contact_right": {
+            "x": 365.2,
+            "y": 573.2,
+            "width": 20,
+            "height": 24.2
+          },
+          "flange": {
+            "x": 171,
+            "y": 430,
+            "width": 350.8,
+            "height": 332.2
+          }
+        },
+        "partStates": {
+          "distance": 1.54,
+          "wheel_angle_deg": 191.82,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "distance": {
+        "value": 1.86,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 128.7,
+          "y": 330.9,
+          "width": 434.4,
+          "height": 481.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 157.1,
+            "y": 425.4,
+            "width": 380.1,
+            "height": 358.8
+          },
+          "wheel_right": {
+            "x": 207.1,
+            "y": 354.7,
+            "width": 328.3,
+            "height": 316
+          },
+          "contact_left": {
+            "x": 336.7,
+            "y": 671.3,
+            "width": 22.4,
+            "height": 28.1
+          },
+          "contact_right": {
+            "x": 360.7,
+            "y": 573.1,
+            "width": 19.4,
+            "height": 23.9
+          },
+          "flange": {
+            "x": 140.3,
+            "y": 399.7,
+            "width": 421.7,
+            "height": 387.9
+          }
+        },
+        "partStates": {
+          "distance": 1.86,
+          "wheel_angle_deg": 231.67,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "distance": {
+        "value": 2.18,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 193.2,
+          "y": 380.8,
+          "width": 318.7,
+          "height": 379.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 212.8,
+            "y": 475.7,
+            "width": 275.8,
+            "height": 261.8
+          },
+          "wheel_right": {
+            "x": 248,
+            "y": 398.9,
+            "width": 238.7,
+            "height": 231.1
+          },
+          "contact_left": {
+            "x": 340.6,
+            "y": 671.5,
+            "width": 21.9,
+            "height": 27.9
+          },
+          "contact_right": {
+            "x": 357.8,
+            "y": 573.1,
+            "width": 19,
+            "height": 23.7
+          },
+          "flange": {
+            "x": 200.1,
+            "y": 456.4,
+            "width": 305.5,
+            "height": 280.9
+          }
+        },
+        "partStates": {
+          "distance": 2.18,
+          "wheel_angle_deg": 271.53,
+          "lateral_shift": 0.007,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "distance": {
+        "value": 2.5,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 135,
+          "y": 333.5,
+          "width": 451.2,
+          "height": 471.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 160.2,
+            "y": 426.5,
+            "width": 386.4,
+            "height": 354.3
+          },
+          "wheel_right": {
+            "x": 199,
+            "y": 355.9,
+            "width": 333.5,
+            "height": 313.1
+          },
+          "contact_left": {
+            "x": 343,
+            "y": 671.6,
+            "width": 21.7,
+            "height": 27.8
+          },
+          "contact_right": {
+            "x": 356,
+            "y": 573.1,
+            "width": 18.9,
+            "height": 23.7
+          },
+          "flange": {
+            "x": 140.4,
+            "y": 400.8,
+            "width": 428.1,
+            "height": 384.4
+          }
+        },
+        "partStates": {
+          "distance": 2.5,
+          "wheel_angle_deg": 311.39,
+          "lateral_shift": 0.02,
+          "left_effective_radius": 0.459,
+          "right_effective_radius": 0.461
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "distance": {
+        "value": 2.82,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 184.3,
+          "y": 365.8,
+          "width": 369.8,
+          "height": 410.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 202.2,
+            "y": 457.7,
+            "width": 310.2,
+            "height": 298
+          },
+          "wheel_right": {
+            "x": 230,
+            "y": 383.8,
+            "width": 267.9,
+            "height": 261.9
+          },
+          "contact_left": {
+            "x": 345,
+            "y": 671.3,
+            "width": 23.4,
+            "height": 28.6
+          },
+          "contact_right": {
+            "x": 352.8,
+            "y": 572.8,
+            "width": 20.4,
+            "height": 24.2
+          },
+          "flange": {
+            "x": 186,
+            "y": 436.2,
+            "width": 342.2,
+            "height": 321.4
+          }
+        },
+        "partStates": {
+          "distance": 2.82,
+          "wheel_angle_deg": 351.25,
+          "lateral_shift": 0.033,
+          "left_effective_radius": 0.458,
+          "right_effective_radius": 0.462
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "distance": {
+        "value": 3.14,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 152.9,
+          "y": 333.7,
+          "width": 449.1,
+          "height": 477.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 173.4,
+            "y": 422.6,
+            "width": 376.3,
+            "height": 368.3
+          },
+          "wheel_right": {
+            "x": 198.5,
+            "y": 353.5,
+            "width": 325.4,
+            "height": 322.5
+          },
+          "contact_left": {
+            "x": 347.4,
+            "y": 670.9,
+            "width": 25.2,
+            "height": 29.4
+          },
+          "contact_right": {
+            "x": 349.1,
+            "y": 572.5,
+            "width": 22,
+            "height": 24.8
+          },
+          "flange": {
+            "x": 153.2,
+            "y": 396.9,
+            "width": 414.3,
+            "height": 399.6
+          }
+        },
+        "partStates": {
+          "distance": 3.14,
+          "wheel_angle_deg": 391.11,
+          "lateral_shift": 0.046,
+          "left_effective_radius": 0.458,
+          "right_effective_radius": 0.462
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "distance": {
+        "value": 3.46,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 154.8,
+          "y": 343.9,
+          "width": 442.6,
+          "height": 460.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 189.8,
+            "y": 431.8,
+            "width": 350.6,
+            "height": 353.4
+          },
+          "wheel_right": {
+            "x": 205.5,
+            "y": 362.1,
+            "width": 303.3,
+            "height": 308
+          },
+          "contact_left": {
+            "x": 350.5,
+            "y": 670.5,
+            "width": 27.1,
+            "height": 30.2
+          },
+          "contact_right": {
+            "x": 344.9,
+            "y": 572.2,
+            "width": 23.5,
+            "height": 25.4
+          },
+          "flange": {
+            "x": 171.8,
+            "y": 407.5,
+            "width": 382.8,
+            "height": 382.7
+          }
+        },
+        "partStates": {
+          "distance": 3.46,
+          "wheel_angle_deg": 430.96,
+          "lateral_shift": 0.058,
+          "left_effective_radius": 0.457,
+          "right_effective_radius": 0.463
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "distance": {
+        "value": 3.78,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 140.3,
+          "y": 338.2,
+          "width": 470.8,
+          "height": 476.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 189.9,
+            "y": 425,
+            "width": 358.1,
+            "height": 369.8
+          },
+          "wheel_right": {
+            "x": 198.1,
+            "y": 356.8,
+            "width": 309.8,
+            "height": 321
+          },
+          "contact_left": {
+            "x": 353.6,
+            "y": 670.1,
+            "width": 28.9,
+            "height": 30.9
+          },
+          "contact_right": {
+            "x": 340.5,
+            "y": 572,
+            "width": 25.1,
+            "height": 26
+          },
+          "flange": {
+            "x": 171.9,
+            "y": 400.1,
+            "width": 388.6,
+            "height": 400.8
+          }
+        },
+        "partStates": {
+          "distance": 3.78,
+          "wheel_angle_deg": 470.82,
+          "lateral_shift": 0.071,
+          "left_effective_radius": 0.456,
+          "right_effective_radius": 0.464
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "distance": {
+        "value": 4.1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 119.4,
+          "y": 325.5,
+          "width": 512.3,
+          "height": 507.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 182.1,
+            "y": 411.1,
+            "width": 379.9,
+            "height": 400.6
+          },
+          "wheel_right": {
+            "x": 184.9,
+            "y": 345.2,
+            "width": 328.7,
+            "height": 346.7
+          },
+          "contact_left": {
+            "x": 356.3,
+            "y": 669.6,
+            "width": 30.5,
+            "height": 31.6
+          },
+          "contact_right": {
+            "x": 336.8,
+            "y": 571.8,
+            "width": 26.5,
+            "height": 26.6
+          },
+          "flange": {
+            "x": 163.3,
+            "y": 384.7,
+            "width": 410.6,
+            "height": 434.9
+          }
+        },
+        "partStates": {
+          "distance": 4.1,
+          "wheel_angle_deg": 510.68,
+          "lateral_shift": 0.084,
+          "left_effective_radius": 0.456,
+          "right_effective_radius": 0.464
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "distance": {
+        "value": 4.42,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 137,
+          "y": 350.1,
+          "width": 472.7,
+          "height": 457
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 211.4,
+            "y": 435.3,
+            "width": 327,
+            "height": 353.3
+          },
+          "wheel_right": {
+            "x": 204.9,
+            "y": 366.8,
+            "width": 283.4,
+            "height": 304.7
+          },
+          "contact_left": {
+            "x": 358.5,
+            "y": 669.2,
+            "width": 32,
+            "height": 32.2
+          },
+          "contact_right": {
+            "x": 333.6,
+            "y": 571.6,
+            "width": 27.7,
+            "height": 27
+          },
+          "flange": {
+            "x": 196.7,
+            "y": 412,
+            "width": 349.2,
+            "height": 382.2
+          }
+        },
+        "partStates": {
+          "distance": 4.42,
+          "wheel_angle_deg": 550.54,
+          "lateral_shift": 0.097,
+          "left_effective_radius": 0.455,
+          "right_effective_radius": 0.465
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "distance": {
+        "value": 4.74,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 93.7,
+          "y": 314.2,
+          "width": 559.9,
+          "height": 539.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 178.9,
+            "y": 397.6,
+            "width": 395.4,
+            "height": 433.5
+          },
+          "wheel_right": {
+            "x": 172.3,
+            "y": 334.5,
+            "width": 342.6,
+            "height": 373.3
+          },
+          "contact_left": {
+            "x": 360.2,
+            "y": 668.8,
+            "width": 33.3,
+            "height": 32.8
+          },
+          "contact_right": {
+            "x": 331,
+            "y": 571.5,
+            "width": 28.9,
+            "height": 27.5
+          },
+          "flange": {
+            "x": 160.2,
+            "y": 370.1,
+            "width": 424.1,
+            "height": 471.3
+          }
+        },
+        "partStates": {
+          "distance": 4.74,
+          "wheel_angle_deg": 590.4,
+          "lateral_shift": 0.11,
+          "left_effective_radius": 0.455,
+          "right_effective_radius": 0.465
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "distance": {
+        "value": 5.06,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 142.8,
+          "y": 369.2,
+          "width": 456.2,
+          "height": 418.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 236.3,
+            "y": 453.4,
+            "width": 285.3,
+            "height": 318.5
+          },
+          "wheel_right": {
+            "x": 218.8,
+            "y": 383.2,
+            "width": 247.7,
+            "height": 273.3
+          },
+          "contact_left": {
+            "x": 361.4,
+            "y": 668.5,
+            "width": 34.5,
+            "height": 33.3
+          },
+          "contact_right": {
+            "x": 328.9,
+            "y": 571.4,
+            "width": 29.9,
+            "height": 27.9
+          },
+          "flange": {
+            "x": 225.5,
+            "y": 432.5,
+            "width": 298.9,
+            "height": 343.3
+          }
+        },
+        "partStates": {
+          "distance": 5.06,
+          "wheel_angle_deg": 630.25,
+          "lateral_shift": 0.122,
+          "left_effective_radius": 0.454,
+          "right_effective_radius": 0.466
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "distance": {
+        "value": 5.38,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 78,
+          "y": 310.3,
+          "width": 586.3,
+          "height": 554.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 180.5,
+            "y": 392,
+            "width": 397.7,
+            "height": 449.7
+          },
+          "wheel_right": {
+            "x": 167.6,
+            "y": 330.4,
+            "width": 345.1,
+            "height": 385.7
+          },
+          "contact_left": {
+            "x": 362.2,
+            "y": 668.2,
+            "width": 35.5,
+            "height": 33.7
+          },
+          "contact_right": {
+            "x": 327.2,
+            "y": 571.3,
+            "width": 30.8,
+            "height": 28.2
+          },
+          "flange": {
+            "x": 162.7,
+            "y": 364.2,
+            "width": 423.5,
+            "height": 489.1
+          }
+        },
+        "partStates": {
+          "distance": 5.38,
+          "wheel_angle_deg": 670.11,
+          "lateral_shift": 0.135,
+          "left_effective_radius": 0.453,
+          "right_effective_radius": 0.467
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "distance": {
+        "value": 5.7,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 107.6,
+          "y": 344.5,
+          "width": 524,
+          "height": 477.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 215.8,
+            "y": 426.6,
+            "width": 329.7,
+            "height": 377.2
+          },
+          "wheel_right": {
+            "x": 196.8,
+            "y": 360.6,
+            "width": 286.4,
+            "height": 322.8
+          },
+          "contact_left": {
+            "x": 362.6,
+            "y": 667.9,
+            "width": 36.5,
+            "height": 34.1
+          },
+          "contact_right": {
+            "x": 326.1,
+            "y": 571.2,
+            "width": 31.7,
+            "height": 28.5
+          },
+          "flange": {
+            "x": 203.2,
+            "y": 402.9,
+            "width": 345.8,
+            "height": 408.5
+          }
+        },
+        "partStates": {
+          "distance": 5.7,
+          "wheel_angle_deg": 709.97,
+          "lateral_shift": 0.148,
+          "left_effective_radius": 0.453,
+          "right_effective_radius": 0.467
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 288,
+    "sec": 9.6,
+    "drivers": {
+      "distance": {
+        "value": 6.02,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 72.2,
+          "y": 313.8,
+          "width": 593.1,
+          "height": 550.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 186.6,
+            "y": 394.5,
+            "width": 387.5,
+            "height": 447.9
+          },
+          "wheel_right": {
+            "x": 170.6,
+            "y": 332.9,
+            "width": 336.5,
+            "height": 383
+          },
+          "contact_left": {
+            "x": 362.6,
+            "y": 667.7,
+            "width": 37.3,
+            "height": 34.5
+          },
+          "contact_right": {
+            "x": 325.4,
+            "y": 571.1,
+            "width": 32.4,
+            "height": 28.8
+          },
+          "flange": {
+            "x": 170.7,
+            "y": 367.2,
+            "width": 409.6,
+            "height": 487.1
+          }
+        },
+        "partStates": {
+          "distance": 6.02,
+          "wheel_angle_deg": 749.83,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 296,
+    "sec": 9.867,
+    "drivers": {
+      "distance": {
+        "value": 6.34,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 78.8,
+          "y": 324.2,
+          "width": 577.7,
+          "height": 527.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 197.3,
+            "y": 404.7,
+            "width": 366.5,
+            "height": 426.9
+          },
+          "wheel_right": {
+            "x": 179.9,
+            "y": 342,
+            "width": 318.4,
+            "height": 364.5
+          },
+          "contact_left": {
+            "x": 362.2,
+            "y": 667.6,
+            "width": 38,
+            "height": 34.8
+          },
+          "contact_right": {
+            "x": 325.1,
+            "y": 571,
+            "width": 33,
+            "height": 29
+          },
+          "flange": {
+            "x": 183.3,
+            "y": 378.7,
+            "width": 385,
+            "height": 463.6
+          }
+        },
+        "partStates": {
+          "distance": 6.34,
+          "wheel_angle_deg": 789.69,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan B: Inersia di tikungan menggeser ke rel luar"
+      },
+      {
+        "id": "callout_inertia",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Inersia Kendaraan (C2) — Roda cenderung lurus → bergeser ke rel luar",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 304,
+    "sec": 10.133,
+    "drivers": {
+      "distance": {
+        "value": 6.66,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 75.7,
+          "y": 324.5,
+          "width": 582.1,
+          "height": 528.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 197.3,
+            "y": 404.6,
+            "width": 365.4,
+            "height": 428.2
+          },
+          "wheel_right": {
+            "x": 180.8,
+            "y": 342,
+            "width": 317.4,
+            "height": 365.3
+          },
+          "contact_left": {
+            "x": 361.4,
+            "y": 667.5,
+            "width": 38.6,
+            "height": 35.1
+          },
+          "contact_right": {
+            "x": 325.2,
+            "y": 570.8,
+            "width": 33.6,
+            "height": 29.2
+          },
+          "flange": {
+            "x": 184,
+            "y": 378.6,
+            "width": 382.9,
+            "height": 465.1
+          }
+        },
+        "partStates": {
+          "distance": 6.66,
+          "wheel_angle_deg": 829.54,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 312,
+    "sec": 10.4,
+    "drivers": {
+      "distance": {
+        "value": 6.98,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 58.3,
+          "y": 310.4,
+          "width": 614.7,
+          "height": 562.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 182.7,
+            "y": 389.7,
+            "width": 392.4,
+            "height": 462.3
+          },
+          "wheel_right": {
+            "x": 169.8,
+            "y": 329.1,
+            "width": 340.6,
+            "height": 394
+          },
+          "contact_left": {
+            "x": 360.3,
+            "y": 667.4,
+            "width": 39.1,
+            "height": 35.3
+          },
+          "contact_right": {
+            "x": 325.7,
+            "y": 570.7,
+            "width": 34,
+            "height": 29.4
+          },
+          "flange": {
+            "x": 168.3,
+            "y": 362.1,
+            "width": 412.4,
+            "height": 502.9
+          }
+        },
+        "partStates": {
+          "distance": 6.98,
+          "wheel_angle_deg": 869.4,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 320,
+    "sec": 10.667,
+    "drivers": {
+      "distance": {
+        "value": 7.3,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.9,
+          "y": 341.9,
+          "width": 556.4,
+          "height": 488.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 212.1,
+            "y": 422.2,
+            "width": 332.2,
+            "height": 391.6
+          },
+          "wheel_right": {
+            "x": 197.6,
+            "y": 357.2,
+            "width": 288.5,
+            "height": 333.3
+          },
+          "contact_left": {
+            "x": 358.9,
+            "y": 667.4,
+            "width": 39.5,
+            "height": 35.5
+          },
+          "contact_right": {
+            "x": 326.6,
+            "y": 570.6,
+            "width": 34.4,
+            "height": 29.5
+          },
+          "flange": {
+            "x": 202.2,
+            "y": 398.1,
+            "width": 344.4,
+            "height": 424.3
+          }
+        },
+        "partStates": {
+          "distance": 7.3,
+          "wheel_angle_deg": 909.26,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 328,
+    "sec": 10.933,
+    "drivers": {
+      "distance": {
+        "value": 7.62,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 46.5,
+          "y": 303.4,
+          "width": 634.9,
+          "height": 581.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 172.9,
+            "y": 382,
+            "width": 406.3,
+            "height": 481.6
+          },
+          "wheel_right": {
+            "x": 166.6,
+            "y": 322.4,
+            "width": 352.3,
+            "height": 409.7
+          },
+          "contact_left": {
+            "x": 357.1,
+            "y": 667.4,
+            "width": 39.9,
+            "height": 35.7
+          },
+          "contact_right": {
+            "x": 327.8,
+            "y": 570.5,
+            "width": 34.8,
+            "height": 29.7
+          },
+          "flange": {
+            "x": 158.8,
+            "y": 353.6,
+            "width": 426.8,
+            "height": 524.3
+          }
+        },
+        "partStates": {
+          "distance": 7.62,
+          "wheel_angle_deg": 949.12,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 336,
+    "sec": 11.2,
+    "drivers": {
+      "distance": {
+        "value": 7.94,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 97.5,
+          "y": 359.7,
+          "width": 532.1,
+          "height": 448
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 225.6,
+            "y": 440.9,
+            "width": 298.7,
+            "height": 351.9
+          },
+          "wheel_right": {
+            "x": 215.9,
+            "y": 373.3,
+            "width": 259.3,
+            "height": 298.9
+          },
+          "contact_left": {
+            "x": 355,
+            "y": 667.4,
+            "width": 40.3,
+            "height": 35.8
+          },
+          "contact_right": {
+            "x": 329.3,
+            "y": 570.3,
+            "width": 35.1,
+            "height": 29.8
+          },
+          "flange": {
+            "x": 219.1,
+            "y": 418.9,
+            "width": 305.9,
+            "height": 380.1
+          }
+        },
+        "partStates": {
+          "distance": 7.94,
+          "wheel_angle_deg": 988.97,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 344,
+    "sec": 11.467,
+    "drivers": {
+      "distance": {
+        "value": 8.26,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 42.7,
+          "y": 303.3,
+          "width": 640,
+          "height": 583
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 168.4,
+            "y": 381.6,
+            "width": 407.4,
+            "height": 484.1
+          },
+          "wheel_right": {
+            "x": 170.5,
+            "y": 322,
+            "width": 352.8,
+            "height": 411.2
+          },
+          "contact_left": {
+            "x": 352.7,
+            "y": 667.5,
+            "width": 40.5,
+            "height": 35.9
+          },
+          "contact_right": {
+            "x": 331.1,
+            "y": 570.2,
+            "width": 35.3,
+            "height": 29.9
+          },
+          "flange": {
+            "x": 155.6,
+            "y": 353.2,
+            "width": 427.3,
+            "height": 527
+          }
+        },
+        "partStates": {
+          "distance": 8.26,
+          "wheel_angle_deg": 1028.83,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 352,
+    "sec": 11.733,
+    "drivers": {
+      "distance": {
+        "value": 8.58,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 71.7,
+          "y": 335.9,
+          "width": 581.3,
+          "height": 505.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 197.9,
+            "y": 415.9,
+            "width": 344.3,
+            "height": 407.9
+          },
+          "wheel_right": {
+            "x": 200.7,
+            "y": 351.6,
+            "width": 298.3,
+            "height": 346.2
+          },
+          "contact_left": {
+            "x": 350,
+            "y": 667.5,
+            "width": 40.7,
+            "height": 36
+          },
+          "contact_right": {
+            "x": 333.2,
+            "y": 570.1,
+            "width": 35.5,
+            "height": 29.9
+          },
+          "flange": {
+            "x": 189.8,
+            "y": 391.2,
+            "width": 356.3,
+            "height": 442.2
+          }
+        },
+        "partStates": {
+          "distance": 8.58,
+          "wheel_angle_deg": 1068.69,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 360,
+    "sec": 12,
+    "drivers": {
+      "distance": {
+        "value": 8.9,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 45.7,
+          "y": 309.8,
+          "width": 632.2,
+          "height": 568.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 169.6,
+            "y": 388.4,
+            "width": 395.3,
+            "height": 469.7
+          },
+          "wheel_right": {
+            "x": 181.3,
+            "y": 327.8,
+            "width": 342,
+            "height": 398.5
+          },
+          "contact_left": {
+            "x": 347.2,
+            "y": 667.6,
+            "width": 40.9,
+            "height": 36.1
+          },
+          "contact_right": {
+            "x": 335.5,
+            "y": 570,
+            "width": 35.7,
+            "height": 30
+          },
+          "flange": {
+            "x": 159,
+            "y": 360.8,
+            "width": 413.2,
+            "height": 510.9
+          }
+        },
+        "partStates": {
+          "distance": 8.9,
+          "wheel_angle_deg": 1108.55,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 368,
+    "sec": 12.267,
+    "drivers": {
+      "distance": {
+        "value": 9.22,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 52.4,
+          "y": 318,
+          "width": 618,
+          "height": 548.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 174.7,
+            "y": 397.1,
+            "width": 379.4,
+            "height": 450.5
+          },
+          "wheel_right": {
+            "x": 191.3,
+            "y": 335.3,
+            "width": 328.3,
+            "height": 382.1
+          },
+          "contact_left": {
+            "x": 344.1,
+            "y": 667.6,
+            "width": 41,
+            "height": 36.2
+          },
+          "contact_right": {
+            "x": 338.1,
+            "y": 570,
+            "width": 35.8,
+            "height": 30
+          },
+          "flange": {
+            "x": 165.8,
+            "y": 370.4,
+            "width": 395.3,
+            "height": 489.5
+          }
+        },
+        "partStates": {
+          "distance": 9.22,
+          "wheel_angle_deg": 1148.41,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 376,
+    "sec": 12.533,
+    "drivers": {
+      "distance": {
+        "value": 9.54,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 56.2,
+          "y": 322.9,
+          "width": 609.6,
+          "height": 537
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 176.3,
+            "y": 402.2,
+            "width": 370,
+            "height": 439.1
+          },
+          "wheel_right": {
+            "x": 198.7,
+            "y": 339.7,
+            "width": 320.1,
+            "height": 372.3
+          },
+          "contact_left": {
+            "x": 340.8,
+            "y": 667.6,
+            "width": 41.1,
+            "height": 36.2
+          },
+          "contact_right": {
+            "x": 340.9,
+            "y": 569.9,
+            "width": 35.8,
+            "height": 30
+          },
+          "flange": {
+            "x": 168.7,
+            "y": 376.1,
+            "width": 384.6,
+            "height": 476.8
+          }
+        },
+        "partStates": {
+          "distance": 9.54,
+          "wheel_angle_deg": 1188.26,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 384,
+    "sec": 12.8,
+    "drivers": {
+      "distance": {
+        "value": 9.86,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 40.4,
+          "y": 306.5,
+          "width": 641,
+          "height": 576.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 157,
+            "y": 384.9,
+            "width": 402.1,
+            "height": 478.2
+          },
+          "wheel_right": {
+            "x": 188.3,
+            "y": 324.8,
+            "width": 347.7,
+            "height": 405.5
+          },
+          "contact_left": {
+            "x": 337.3,
+            "y": 667.6,
+            "width": 41.1,
+            "height": 36.2
+          },
+          "contact_right": {
+            "x": 343.9,
+            "y": 569.9,
+            "width": 35.8,
+            "height": 30
+          },
+          "flange": {
+            "x": 148.2,
+            "y": 357,
+            "width": 420.6,
+            "height": 520.3
+          }
+        },
+        "partStates": {
+          "distance": 9.86,
+          "wheel_angle_deg": 1228.12,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 392,
+    "sec": 13.067,
+    "drivers": {
+      "distance": {
+        "value": 10.18,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 73.6,
+          "y": 342.3,
+          "width": 573.6,
+          "height": 490.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 188.3,
+            "y": 422.6,
+            "width": 332.4,
+            "height": 393.7
+          },
+          "wheel_right": {
+            "x": 221.7,
+            "y": 357.3,
+            "width": 287.9,
+            "height": 333.8
+          },
+          "contact_left": {
+            "x": 333.7,
+            "y": 667.6,
+            "width": 41.1,
+            "height": 36.2
+          },
+          "contact_right": {
+            "x": 347.1,
+            "y": 570,
+            "width": 35.8,
+            "height": 30
+          },
+          "flange": {
+            "x": 184.3,
+            "y": 398.7,
+            "width": 342.5,
+            "height": 426.4
+          }
+        },
+        "partStates": {
+          "distance": 10.18,
+          "wheel_angle_deg": 1267.98,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 400,
+    "sec": 13.333,
+    "drivers": {
+      "distance": {
+        "value": 10.5,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 36.1,
+          "y": 301.6,
+          "width": 649.3,
+          "height": 588.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 145.8,
+            "y": 379.6,
+            "width": 410.9,
+            "height": 489.8
+          },
+          "wheel_right": {
+            "x": 192,
+            "y": 320.3,
+            "width": 355.6,
+            "height": 415.6
+          },
+          "contact_left": {
+            "x": 330,
+            "y": 667.5,
+            "width": 41,
+            "height": 36.2
+          },
+          "contact_right": {
+            "x": 350.4,
+            "y": 570,
+            "width": 35.8,
+            "height": 30
+          },
+          "flange": {
+            "x": 138,
+            "y": 351.1,
+            "width": 430.5,
+            "height": 533.2
+          }
+        },
+        "partStates": {
+          "distance": 10.5,
+          "wheel_angle_deg": 1307.84,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 408,
+    "sec": 13.6,
+    "drivers": {
+      "distance": {
+        "value": 10.82,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.2,
+          "y": 355.7,
+          "width": 547.4,
+          "height": 458.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 193.9,
+            "y": 436.4,
+            "width": 306.1,
+            "height": 362.6
+          },
+          "wheel_right": {
+            "x": 240.3,
+            "y": 369.4,
+            "width": 265.6,
+            "height": 307.6
+          },
+          "contact_left": {
+            "x": 326.1,
+            "y": 667.4,
+            "width": 40.9,
+            "height": 36.1
+          },
+          "contact_right": {
+            "x": 353.9,
+            "y": 570.2,
+            "width": 35.7,
+            "height": 30
+          },
+          "flange": {
+            "x": 192.8,
+            "y": 414,
+            "width": 313.2,
+            "height": 391.9
+          }
+        },
+        "partStates": {
+          "distance": 10.82,
+          "wheel_angle_deg": 1347.7,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 416,
+    "sec": 13.867,
+    "drivers": {
+      "distance": {
+        "value": 11.14,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 39.5,
+          "y": 303.4,
+          "width": 642.5,
+          "height": 583.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 141.4,
+            "y": 381.3,
+            "width": 405.1,
+            "height": 485.1
+          },
+          "wheel_right": {
+            "x": 202.3,
+            "y": 322,
+            "width": 351.4,
+            "height": 412.1
+          },
+          "contact_left": {
+            "x": 322.2,
+            "y": 667.2,
+            "width": 40.8,
+            "height": 36
+          },
+          "contact_right": {
+            "x": 357.5,
+            "y": 570.3,
+            "width": 35.6,
+            "height": 30
+          },
+          "flange": {
+            "x": 135.4,
+            "y": 352.9,
+            "width": 424.3,
+            "height": 528.1
+          }
+        },
+        "partStates": {
+          "distance": 11.14,
+          "wheel_angle_deg": 1387.55,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 424,
+    "sec": 14.133,
+    "drivers": {
+      "distance": {
+        "value": 11.46,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 68.2,
+          "y": 333.7,
+          "width": 583.7,
+          "height": 510.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 166.7,
+            "y": 412.8,
+            "width": 345.3,
+            "height": 413.6
+          },
+          "wheel_right": {
+            "x": 231.2,
+            "y": 349.5,
+            "width": 300.3,
+            "height": 351.6
+          },
+          "contact_left": {
+            "x": 318.2,
+            "y": 667,
+            "width": 40.6,
+            "height": 35.9
+          },
+          "contact_right": {
+            "x": 361.1,
+            "y": 570.6,
+            "width": 35.4,
+            "height": 29.9
+          },
+          "flange": {
+            "x": 164.9,
+            "y": 387.9,
+            "width": 357.5,
+            "height": 448.7
+          }
+        },
+        "partStates": {
+          "distance": 11.46,
+          "wheel_angle_deg": 1427.41,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 432,
+    "sec": 14.4,
+    "drivers": {
+      "distance": {
+        "value": 11.78,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 50.1,
+          "y": 311.9,
+          "width": 621.1,
+          "height": 561.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 143.6,
+            "y": 389.7,
+            "width": 384.9,
+            "height": 464.3
+          },
+          "wheel_right": {
+            "x": 218.5,
+            "y": 329.9,
+            "width": 335.3,
+            "height": 395.2
+          },
+          "contact_left": {
+            "x": 314.2,
+            "y": 666.7,
+            "width": 40.3,
+            "height": 35.8
+          },
+          "contact_right": {
+            "x": 364.8,
+            "y": 570.8,
+            "width": 35.3,
+            "height": 29.8
+          },
+          "flange": {
+            "x": 140.2,
+            "y": 362.3,
+            "width": 402.2,
+            "height": 505.2
+          }
+        },
+        "partStates": {
+          "distance": 11.78,
+          "wheel_angle_deg": 1467.27,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 440,
+    "sec": 14.667,
+    "drivers": {
+      "distance": {
+        "value": 12.1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 56.9,
+          "y": 317.6,
+          "width": 607.6,
+          "height": 547.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 146.1,
+            "y": 395.4,
+            "width": 371.8,
+            "height": 450.6
+          },
+          "wheel_right": {
+            "x": 227.9,
+            "y": 335.1,
+            "width": 324.7,
+            "height": 384
+          },
+          "contact_left": {
+            "x": 310.2,
+            "y": 666.4,
+            "width": 40.1,
+            "height": 35.7
+          },
+          "contact_right": {
+            "x": 368.5,
+            "y": 571.2,
+            "width": 35,
+            "height": 29.8
+          },
+          "flange": {
+            "x": 144.1,
+            "y": 368.6,
+            "width": 387.7,
+            "height": 490.1
+          }
+        },
+        "partStates": {
+          "distance": 12.1,
+          "wheel_angle_deg": 1507.13,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 448,
+    "sec": 14.933,
+    "drivers": {
+      "distance": {
+        "value": 12.42,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 66.8,
+          "y": 326.9,
+          "width": 587.3,
+          "height": 524.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151.8,
+            "y": 404.7,
+            "width": 351.7,
+            "height": 428.5
+          },
+          "wheel_right": {
+            "x": 240,
+            "y": 343.6,
+            "width": 308.2,
+            "height": 365.7
+          },
+          "contact_left": {
+            "x": 306.2,
+            "y": 666.1,
+            "width": 39.7,
+            "height": 35.5
+          },
+          "contact_right": {
+            "x": 372.3,
+            "y": 571.5,
+            "width": 34.8,
+            "height": 29.7
+          },
+          "flange": {
+            "x": 151.6,
+            "y": 379.1,
+            "width": 365.5,
+            "height": 465.7
+          }
+        },
+        "partStates": {
+          "distance": 12.42,
+          "wheel_angle_deg": 1546.99,
+          "lateral_shift": 0.16,
+          "left_effective_radius": 0.452,
+          "right_effective_radius": 0.468
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 1,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_kereta",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 139.5
+        },
+        "text": "Mengapa Kereta Bisa Berbelok? — Adegan C: Diameter efektif roda luar lebih besar"
+      },
+      {
+        "id": "compare_diameter",
+        "component": "CompareCard",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 98
+        },
+        "text": "Roda Dalam: Diameter lebih kecil vs Roda Luar: Diameter lebih besar"
+      },
+      {
+        "id": "callout_effective",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 970,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Gandar Kaku (C3) — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  }
+]

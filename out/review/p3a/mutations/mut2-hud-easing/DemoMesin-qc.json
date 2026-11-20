@@ -1,0 +1,332 @@
+{
+  "compositionId": "DemoMesin",
+  "passed": false,
+  "sampleCount": 60,
+  "renderMs": 13474,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=35.403 != driver \"crank_angle\"=12",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=69.627 != driver \"crank_angle\"=24",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=102.69 != driver \"crank_angle\"=36",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=134.613 != driver \"crank_angle\"=48",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=165.417 != driver \"crank_angle\"=60",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=195.12 != driver \"crank_angle\"=72",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=223.743 != driver \"crank_angle\"=84",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=251.307 != driver \"crank_angle\"=96",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=277.83 != driver \"crank_angle\"=108",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=303.333 != driver \"crank_angle\"=120",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=327.837 != driver \"crank_angle\"=132",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=351.36 != driver \"crank_angle\"=144",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=373.923 != driver \"crank_angle\"=156",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=395.547 != driver \"crank_angle\"=168",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=416.25 != driver \"crank_angle\"=180",
+          "ref": "f120 (4.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=436.053 != driver \"crank_angle\"=192",
+          "ref": "f128 (4.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=454.977 != driver \"crank_angle\"=204",
+          "ref": "f136 (4.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=473.04 != driver \"crank_angle\"=216",
+          "ref": "f144 (4.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=490.263 != driver \"crank_angle\"=228",
+          "ref": "f152 (5.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=506.667 != driver \"crank_angle\"=240",
+          "ref": "f160 (5.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=522.27 != driver \"crank_angle\"=252",
+          "ref": "f168 (5.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=537.093 != driver \"crank_angle\"=264",
+          "ref": "f176 (5.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=551.157 != driver \"crank_angle\"=276",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=564.48 != driver \"crank_angle\"=288",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=577.083 != driver \"crank_angle\"=300",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=588.987 != driver \"crank_angle\"=312",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=600.21 != driver \"crank_angle\"=324",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=610.773 != driver \"crank_angle\"=336",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=620.697 != driver \"crank_angle\"=348",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=630 != driver \"crank_angle\"=360",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=638.703 != driver \"crank_angle\"=372",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=646.827 != driver \"crank_angle\"=384",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=654.39 != driver \"crank_angle\"=396",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=661.413 != driver \"crank_angle\"=408",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=667.917 != driver \"crank_angle\"=420",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=673.92 != driver \"crank_angle\"=432",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=679.443 != driver \"crank_angle\"=444",
+          "ref": "f296 (9.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=684.507 != driver \"crank_angle\"=456",
+          "ref": "f304 (10.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=689.13 != driver \"crank_angle\"=468",
+          "ref": "f312 (10.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=693.333 != driver \"crank_angle\"=480",
+          "ref": "f320 (10.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=697.137 != driver \"crank_angle\"=492",
+          "ref": "f328 (10.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=700.56 != driver \"crank_angle\"=504",
+          "ref": "f336 (11.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=703.623 != driver \"crank_angle\"=516",
+          "ref": "f344 (11.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=706.347 != driver \"crank_angle\"=528",
+          "ref": "f352 (11.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=708.75 != driver \"crank_angle\"=540",
+          "ref": "f360 (12.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=710.853 != driver \"crank_angle\"=552",
+          "ref": "f368 (12.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=712.677 != driver \"crank_angle\"=564",
+          "ref": "f376 (12.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=714.24 != driver \"crank_angle\"=576",
+          "ref": "f384 (12.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=715.563 != driver \"crank_angle\"=588",
+          "ref": "f392 (13.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=716.667 != driver \"crank_angle\"=600",
+          "ref": "f400 (13.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=717.57 != driver \"crank_angle\"=612",
+          "ref": "f408 (13.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=718.293 != driver \"crank_angle\"=624",
+          "ref": "f416 (13.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=718.857 != driver \"crank_angle\"=636",
+          "ref": "f424 (14.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=719.28 != driver \"crank_angle\"=648",
+          "ref": "f432 (14.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=719.583 != driver \"crank_angle\"=660",
+          "ref": "f440 (14.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=719.787 != driver \"crank_angle\"=672",
+          "ref": "f448 (14.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=719.91 != driver \"crank_angle\"=684",
+          "ref": "f456 (15.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=719.973 != driver \"crank_angle\"=696",
+          "ref": "f464 (15.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_HUD_MISMATCH: HUD \"stat_crank_angle\"=719.997 != driver \"crank_angle\"=708",
+          "ref": "f472 (15.73s)"
+        }
+      ]
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}

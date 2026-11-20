@@ -16,6 +16,8 @@ import {
   setDeviceProfileOverride,
 } from '@core/device/profile';
 import { createProject, loadProject } from '@core/project/store';
+import { runVisualQc } from '@core/qc/visual/runner';
+import { getVisualCheckSpec } from '@core/qc/visual/specs';
 import {
   cmdApprove,
   cmdIdeate,
@@ -137,6 +139,28 @@ async function runProfile(args: string[]) {
   console.log(`Device profile overridden to "${updated.profile}" (saved to .mgs/device-profile.json).`);
 }
 
+async function runQcVisual(args: string[]) {
+  const compositionId = parseFlag(args, '--composition');
+  if (!compositionId) {
+    throw new Error('Usage: mgs qc-visual --composition <id> [--out <dir>]');
+  }
+  const spec = getVisualCheckSpec(compositionId);
+  if (!spec) {
+    throw new Error(`Unknown composition "${compositionId}". Available: DemoKereta, DemoMesin`);
+  }
+  const outDir = parseFlag(args, '--out') ?? path.join(process.cwd(), 'out', 'qc-visual', compositionId);
+  const res = await runVisualQc({ spec, outputDir: outDir });
+  console.log(
+    `QC Visual (${compositionId}): ${res.passed ? 'PASS' : 'FAIL'} | samples=${res.sampleCount} | render=${res.renderMs}ms`
+  );
+  for (const [k, rep] of Object.entries(res.reports)) {
+    const errs = rep.issues.filter((i) => i.severity === 'error');
+    console.log(`  ${k}: ${errs.length} error(s)`);
+    for (const e of errs.slice(0, 5)) console.log(`    - [${e.ref}] ${e.message}`);
+  }
+  if (!res.passed) process.exit(1);
+}
+
 async function main() {
   const [cmd, ...rest] = process.argv.slice(2);
   if (cmd === 'doctor') {
@@ -161,9 +185,11 @@ async function main() {
     await cmdReview(rest);
   } else if (cmd === 'approve') {
     await cmdApprove(rest);
+  } else if (cmd === 'qc-visual') {
+    await runQcVisual(rest);
   } else {
     console.log(
-      'Usage: npm run mgs -- <doctor|new|status|profile|ideate|research|script|qc|run|review|approve> [options]'
+      'Usage: npm run mgs -- <doctor|new|status|profile|ideate|research|script|qc|qc-visual|run|review|approve> [options]'
     );
     process.exit(cmd ? 1 : 0);
   }

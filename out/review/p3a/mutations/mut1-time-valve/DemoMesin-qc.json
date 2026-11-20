@@ -1,0 +1,182 @@
+{
+  "compositionId": "DemoMesin",
+  "passed": false,
+  "sampleCount": 60,
+  "renderMs": 13924,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=12)",
+          "ref": "f8 (0.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=24)",
+          "ref": "f16 (0.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=36)",
+          "ref": "f24 (0.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=48)",
+          "ref": "f32 (1.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=60)",
+          "ref": "f40 (1.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=72)",
+          "ref": "f48 (1.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=84)",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=96)",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=108)",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=120)",
+          "ref": "f80 (2.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=132)",
+          "ref": "f88 (2.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=144)",
+          "ref": "f96 (3.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=156)",
+          "ref": "f104 (3.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=closed (harus open saat driver=168)",
+          "ref": "f112 (3.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=276)",
+          "ref": "f184 (6.13s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=288)",
+          "ref": "f192 (6.40s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=300)",
+          "ref": "f200 (6.67s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=312)",
+          "ref": "f208 (6.93s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=324)",
+          "ref": "f216 (7.20s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=336)",
+          "ref": "f224 (7.47s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=348)",
+          "ref": "f232 (7.73s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=360)",
+          "ref": "f240 (8.00s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=372)",
+          "ref": "f248 (8.27s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=384)",
+          "ref": "f256 (8.53s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=396)",
+          "ref": "f264 (8.80s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=408)",
+          "ref": "f272 (9.07s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=420)",
+          "ref": "f280 (9.33s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=432)",
+          "ref": "f288 (9.60s)"
+        },
+        {
+          "severity": "error",
+          "message": "MECHANICS_INVARIANT: piston_crank.intake_valve=open (harus closed saat driver=444)",
+          "ref": "f296 (9.87s)"
+        }
+      ]
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}
