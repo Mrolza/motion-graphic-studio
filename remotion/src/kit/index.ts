@@ -17,6 +17,7 @@ export {
   type EasingMode,
 } from './motion';
 export { useDriver, type DriverConfig, type DriverValue } from './drivers/useDriver';
+export { TriggerProvider, useTrigger, type TriggerMap } from './drivers/useTrigger';
 export {
   solveCrankSlider,
   crankAngleFromTime,
@@ -129,3 +130,9 @@ export {
   type WaveformProps,
 } from './hud/HudExtras';
 export { TitleCard, CaptionBar, formatNumberId, type TitleCardProps, type CaptionBarProps } from './Hud2D';
+export {
+  KineticCaptions,
+  type KineticCaptionsProps,
+  type KineticCaptionItem,
+  type KineticCaptionWord,
+} from './hud/KineticCaptions';

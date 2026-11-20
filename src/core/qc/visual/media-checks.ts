@@ -68,7 +68,7 @@ export function checkOnscreenTruthFromTelemetry(
     const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
     for (const h of sample.hud) {
       const hid = h.hud_id ?? h.id;
-      if (hid === '__kit_exaggeration_badge') continue;
+      if (hid === '__kit_exaggeration_badge' || hid === '__kit_captions') continue;
       const exp = expectedMap.get(hid);
       if (!exp) {
         const key = `unsanctioned:${hid}`;

@@ -30,6 +30,7 @@ const FORBIDDEN_PATTERNS: Array<{ name: string; re: RegExp }> = [
 export interface SafetyValidationResult {
   ok: boolean;
   errors: string[];
+  warnings?: string[];
   lineCount: number;
 }
 
@@ -89,7 +90,16 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
     );
   }
 
-  return { ok: errors.length === 0, errors, lineCount: lines.length };
+  const warnings: string[] = [];
+  const literalFrameMatches = code.match(/\bframe\s*(?:>=|>|<=|<|===)\s*(\d+)\b/g) ?? [];
+  for (const m of literalFrameMatches) {
+    const n = Number(m.replace(/\D+/g, ''));
+    if (Number.isFinite(n) && n > 6) {
+      warnings.push(`SC_LITERAL_TIMING: ambang frame literal (${m}) sebaiknya memakai useTrigger(...)`);
+    }
+  }
+
+  return { ok: errors.length === 0, errors, warnings, lineCount: lines.length };
 }
 
 /**

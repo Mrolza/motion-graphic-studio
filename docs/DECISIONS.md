@@ -20,3 +20,7 @@ Catatan keputusan teknis kecil yang diambil selama implementasi per fase dan usu
 ## P3B — Suara, Storyboard, & Scene Coder
 1. **Field opsional `spoken_text` di `ScriptSentenceSchema`:** Ditambahkan untuk menyimpan teks ucapan ramah-TTS Indonesia (mis. `"1:20"` → `"satu banding dua puluh"`, `"3,5"` → `"tiga koma lima"`, `"720°"` → `"720 derajat"`) tanpa mengubah teks tampilan (`text`).
 2. **Field opsional `visible_parts` di `StoryboardSceneSchema`:** Ditambahkan untuk mendeklarasikan sub-bagian fokus yang wajib terlihat pada QC `visibility`.
+
+## P4 — Akurasi Teks di Layar, Audio, & Video Final
+1. **Zona Tata Letak 9:16 (`src/core/render/layout-zones.ts` & `HudZones.tsx`):** Untuk menghindari UI Shorts/Reels/TikTok (bawah 20% `y >= 1024` dan kanan 15% `x >= 612`), seluruh zona memakai `left: 48`, `right: 112` (`maxWidth: 560`). Zona vertikal: `title` (`top: 72, maxHeight: 160`), `free` (`top: 240, maxHeight: 540`), `callout` (`top: 790, maxHeight: 140`), dan `caption` (`top: 942, maxHeight: 78`).
+2. **Encoder Final (`final-render.ts`):** Chunk video dirender dengan encoder default Remotion (`libx264` yuv420p, 30 fps) dan dimux satu kali dengan `audio/mix.wav` (AAC 48 kHz) agar tidak ada celah audio di batas chunk.

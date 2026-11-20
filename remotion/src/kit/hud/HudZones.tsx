@@ -5,10 +5,10 @@ import { getThemeTokens, type PaletteId } from '../tokens/index';
 export type HudZoneId = 'title' | 'free' | 'callout' | 'caption';
 
 const ZONE_RECTS: Record<HudZoneId, { top: number; maxHeight: number }> = {
-  title: { top: 88, maxHeight: 190 },
-  free: { top: 290, maxHeight: 560 },
-  callout: { top: 860, maxHeight: 200 },
-  caption: { top: 1080, maxHeight: 140 },
+  title: { top: 72, maxHeight: 160 },
+  free: { top: 240, maxHeight: 540 },
+  callout: { top: 790, maxHeight: 140 },
+  caption: { top: 942, maxHeight: 78 },
 };
 
 export interface HudLayoutProps {
@@ -68,7 +68,7 @@ export const HudZone: React.FC<HudZoneProps> = ({
         position: 'absolute',
         top: rect.top,
         left: tokens.safeZone.left,
-        right: tokens.safeZone.right,
+        right: 112,
         maxHeight: rect.maxHeight,
         display: 'flex',
         flexDirection: 'column',
