@@ -11,7 +11,9 @@ export interface TelemetryEntitySample {
   id: string;
   role: 'focus' | 'prop';
   bbox?: ScreenBox;
+  parts?: Record<string, ScreenBox>;
   partStates?: Record<string, string | number | boolean>;
+  geometry?: Record<string, number | boolean>;
 }
 
 export interface TelemetryHudSample {
@@ -22,6 +24,7 @@ export interface TelemetryHudSample {
   text: string;
   driverName?: string;
   numericValue?: number;
+  claimRef?: string;
 }
 
 export interface TelemetrySample {
@@ -57,10 +60,31 @@ export type VisualInvariant =
       toleranceDeg?: number;
     };
 
+export interface VisiblePartSpec {
+  entity: string;
+  part: string;
+  /** Optional driver range [min, max] when this part must be visible. */
+  whenDriverBetween?: [number, number];
+  driverName?: string;
+  maxHudCoverRatio?: number;
+}
+
+export interface GeometryRule {
+  entity: string;
+  key: string;
+  /** 'max_abs' checks <= threshold; 'equals' checks === expected. */
+  op: 'max_abs' | 'equals';
+  threshold?: number;
+  expected?: boolean | number;
+}
+
 export interface VisualCheckSpec {
   compositionId: string;
   focusEntities: string[];
   invariants: VisualInvariant[];
+  visibleParts?: VisiblePartSpec[];
+  geometryRules?: GeometryRule[];
+  maxActiveHudPanels?: number;
   safeBounds?: { minX: number; maxX: number; minY: number; maxY: number };
   maxHudOverlapRatio?: number;
 }
@@ -72,6 +96,8 @@ export interface VisualQcResult {
   renderMs: number;
   reports: {
     mechanics: QcReport;
+    geometry: QcReport;
+    visibility: QcReport;
     framing: QcReport;
     hudOverlap: QcReport;
     hudFormat: QcReport;

@@ -248,3 +248,38 @@
 - [`mutations/mutation-summary.md`](../out/review/p3a/mutations/mutation-summary.md): 5/5 mutasi tertangkap (`mechanics`: 29 & 59 error; `framing`: 45 error; `hudOverlap`: 45 error; `hudFormat`: 1 error).
 - [`perf.md`](../out/review/p3a/perf.md): `DemoKereta` normal `9794 ms` vs telemetri `11883 ms` (`+21.3%`); `DemoMesin` normal `13894 ms` vs telemetri `14171 ms` (`+2.0%`).
 - [`KIT-API.md`](../out/review/p3a/KIT-API.md), [`followup.md`](../out/review/p3a/followup.md), [`verify.txt`](../out/review/p3a/verify.txt).
+
+---
+
+## Fase P3A2 — Geometri yang Benar, Bagian Penting Terlihat, Demo yang Menjelaskan (`docs/P3A2-VISUAL-TRUTH.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p3a-scene-kit` (tindak lanjut `docs/REVIEW-P3A.md`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Diperbaiki & Dibuat
+1. **Tata letak geometri murni & QC `geometry` (`remotion/src/kit/drivers/geometry.ts`, `src/core/qc/visual/checks.ts`):**
+   - Fungsi murni teruji unit `computeWheelsetLayout` (jalur Z lurus & melengkung, `left/rightContactGap`, `axlePerpendicularDot`, `wheelSpacing`, `flangesInside`, `left/rightEffectiveRadius`) dan `computePistonCrankLayout` (`rodTopToPistonPinGap`, `rodBottomToCrankPinGap`, `pistonInsideCylinder`).
+   - Pemeriksaan baru **`geometry`** memeriksa seluruh batasan koordinat dunia dari telemetri di setiap frame sampel.
+2. **Perbaikan `WheelsetOnRail` + `CurvedRail` (`remotion/src/kit/assemblies/`):**
+   - Gandar tegak lurus rel (sumbu X) dengan roda berputar di sumbu X menapak flush di atas kepala rel (`y = 0,22`), flens di sisi dalam rel, dukungan `taperExaggeration`, `CurvedRail`, dan cincin diameter efektif.
+3. **Keterlihatan bagian penting (`visibility`) & `CameraRig` sadar zona HUD (`TelemetryEntity.tsx`, `CameraRig.tsx`, `checks.ts`):**
+   - Entitas mendeklarasikan `partRefs` (`wheel_left`, `wheel_right`, `contact_left`, `contact_right`, `flange` pada kereta; `piston`, `crank`, `intake_valve`, `exhaust_valve`, `spark_plug` pada mesin) yang proyeksi layar 2D-nya dilaporkan per frame.
+   - Pemeriksaan baru **`visibility`** menolak bagian yang keluar area aman atau tertutup HUD > 25%.
+   - `CameraRig` (`mode="frameEntities"`) menempatkan subjek fokus di zona bebas tengah layar agar tidak tertutup panel HUD.
+4. **Anggaran HUD (`hud-overlap`) & Callout berpenunjuk:**
+   - Maksimal **2 panel HUD** aktif bersamaan di luar zona judul (`HUD_BUDGET_EXCEEDED`), pencatatan `claimRef` di telemetri HUD, dan dukungan `pointerTo` pada `Callout`.
+5. **Demo Kereta dibuat ulang dari klaim P2 (`DemoKereta.tsx`, 15 detik, 450 frame) & Demo Mesin diperjelas (`DemoMesin.tsx`, 16 detik, 480 frame):**
+   - `DemoKereta`: Adegan A (kerucut 1:20 dilebihkan + flens, `C1`), Adegan B (tikungan + geser ke rel luar + panah inersia, `C2`), Adegan C (cincin diameter efektif roda luar vs dalam, `C3`); HUD "Jarak Tempuh" dihapus.
+   - `DemoMesin`: poros engkol terlihat penuh sepanjang video, katup & percikan busi diperbesar/disorot, warna ruang bakar berubah sesuai langkah dari penggerak `crank_angle`.
+6. **Perbaikan kecil P2 (`src/core/qc/l1-ledger.ts`, `tests/qcGate1.test.ts`):**
+   - `CLAIM_NAME_NOT_IN_QUOTE` mencocokkan nama belakang pada nama diri multi-kata (`"Neil Armstrong"` ↔ `"Armstrong"`).
+
+### Bukti (`out/review/p3a/`)
+- [`demo-kereta.mp4`](../out/review/p3a/demo-kereta.mp4) & [`demo-kereta-contact-sheet.png`](../out/review/p3a/demo-kereta-contact-sheet.png) (15s, 720×1280, 30 fps).
+- [`demo-mesin.mp4`](../out/review/p3a/demo-mesin.mp4) & [`demo-mesin-contact-sheet.png`](../out/review/p3a/demo-mesin-contact-sheet.png) (16s, 720×1280, 30 fps).
+- [`stills/`](../out/review/p3a/stills/): 9 still penuh `DemoKereta` (awal/tengah/akhir × 3 adegan) + 4 still penuh `DemoMesin` (hisap, kompresi, usaha+busi, buang).
+- [`qc/`](../out/review/p3a/qc/): `DemoKereta-qc.json` (**`passed: true`**, 57 sampel, 0 error di `mechanics`, `geometry`, `visibility`, `framing`, `hudOverlap`, `hudFormat`, `blank`) & `DemoMesin-qc.json` (**`passed: true`**, 60 sampel, 0 error di semua layer).
+- [`mutations/mutation-summary.md`](../out/review/p3a/mutations/mutation-summary.md): **10/10 mutasi** tertangkap dengan error yang tepat (`mut1`–`mut5` P3A + `mut6-lift-wheel` `114` error `geometry`, `mut7-rotate-axle` `57` error `geometry`, `mut8-detach-rod` `120` error `geometry`, `mut9-occlude-crank` `59` error `visibility`, `mut10-three-panels` `38` error `hudOverlap`).
+- [`perf.md`](../out/review/p3a/perf.md): `DemoKereta` normal `13572 ms` vs telemetri `14405 ms` (`+6.1%`); `DemoMesin` normal `13790 ms` vs telemetri `13531 ms` (`-1.9%`).
+- [`verify.txt`](../out/review/p3a/verify.txt) (UTF-8).

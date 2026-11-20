@@ -41,6 +41,15 @@ export {
 } from './CameraRig';
 export * from './primitives/index';
 export { TrainCar, type TrainCarProps } from './TrainCar';
+export {
+  computeWheelsetLayout,
+  computePistonCrankLayout,
+  type WheelsetLayout,
+  type WheelsetLayoutInput,
+  type WheelsetGeometryConstraints,
+  type PistonCrankLayout,
+} from './drivers/geometry';
+export { CurvedRail, type CurvedRailProps } from './assemblies/CurvedRail';
 export { WheelsetOnRail, type WheelsetOnRailProps } from './assemblies/WheelsetOnRail';
 export {
   PistonCrankAssembly,

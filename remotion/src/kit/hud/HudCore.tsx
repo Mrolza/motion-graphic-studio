@@ -80,6 +80,7 @@ export interface StatCounterProps {
   decimals?: number;
   startSec?: number;
   durationSec?: number;
+  claimRef?: string;
   zone?: HudZoneId;
   palette?: PaletteId;
 }
@@ -98,6 +99,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   decimals = 0,
   startSec = 0,
   durationSec = 2,
+  claimRef,
   zone = 'callout',
   palette = 'blueprint-navy',
 }) => {
@@ -117,6 +119,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
       text={displayText}
       driverName={bindToDriver && driver ? driver.name : undefined}
       numericValue={Math.round(rawVal * 1000) / 1000}
+      claimRef={claimRef}
       style={{
         backgroundColor: tokens.colors.panelBg,
         border: `1.5px solid ${tokens.colors.panelBorder}`,
@@ -150,6 +153,7 @@ export interface MeasureRevealProps {
   valueText: string;
   startSec?: number;
   durationSec?: number;
+  claimRef?: string;
   zone?: HudZoneId;
   palette?: PaletteId;
 }
@@ -164,6 +168,7 @@ export const MeasureReveal: React.FC<MeasureRevealProps> = ({
   valueText,
   startSec = 0,
   durationSec = 0.75,
+  claimRef,
   zone = 'callout',
   palette = 'blueprint-navy',
 }) => {
@@ -178,6 +183,7 @@ export const MeasureReveal: React.FC<MeasureRevealProps> = ({
       component="MeasureReveal"
       zone={zone}
       text={`${label}: ${valueText}`}
+      claimRef={claimRef}
       style={{
         backgroundColor: tokens.colors.panelBg,
         border: `1.5px solid ${tokens.colors.panelBorder}`,
@@ -267,18 +273,23 @@ export interface CalloutProps {
   detail?: string;
   /** Optional explicit screen position [x, y] (e.g. anchored to entity screen point). */
   screenAnchor?: [number, number];
+  /** Optional target screen point [x, y] to draw a leader line from badge to part. */
+  pointerTo?: [number, number];
+  claimRef?: string;
   zone?: HudZoneId;
   palette?: PaletteId;
 }
 
 /**
- * Technical callout badge (>= 26px), placed in zone or anchored to a screen point.
+ * Technical callout badge (>= 26px), placed in zone or anchored to a screen point with optional leader line.
  */
 export const Callout: React.FC<CalloutProps> = ({
   id = 'callout',
   label,
   detail,
   screenAnchor,
+  pointerTo,
+  claimRef,
   zone = 'callout',
   palette = 'blueprint-navy',
 }) => {
@@ -292,24 +303,49 @@ export const Callout: React.FC<CalloutProps> = ({
       }
     : {};
 
+  const badgeCenter: [number, number] = screenAnchor
+    ? [screenAnchor[0] + 150, screenAnchor[1]]
+    : [360, 860];
+
   return (
-    <TelemetryHudBox
-      id={id}
-      component="Callout"
-      zone={zone}
-      text={text}
-      style={{
-        ...anchorStyle,
-        backgroundColor: tokens.colors.panelBg,
-        border: `1.5px solid ${tokens.colors.accent}`,
-        borderRadius: 10,
-        padding: '10px 16px',
-      }}
-    >
-      <div style={{ fontSize: 26, fontWeight: 700, color: tokens.colors.accent }}>{label}</div>
-      {detail ? (
-        <div style={{ fontSize: 26, color: tokens.colors.white, marginTop: 2 }}>{detail}</div>
+    <>
+      {pointerTo ? (
+        <svg
+          width={tokens.viewport.width}
+          height={tokens.viewport.height}
+          style={{ position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}
+        >
+          <line
+            x1={badgeCenter[0]}
+            y1={badgeCenter[1]}
+            x2={pointerTo[0]}
+            y2={pointerTo[1]}
+            stroke={tokens.colors.accent}
+            strokeWidth={2.5}
+            strokeDasharray="6 4"
+          />
+          <circle cx={pointerTo[0]} cy={pointerTo[1]} r={6} fill={tokens.colors.accent} />
+        </svg>
       ) : null}
-    </TelemetryHudBox>
+      <TelemetryHudBox
+        id={id}
+        component="Callout"
+        zone={zone}
+        text={text}
+        claimRef={claimRef}
+        style={{
+          ...anchorStyle,
+          backgroundColor: tokens.colors.panelBg,
+          border: `1.5px solid ${tokens.colors.accent}`,
+          borderRadius: 10,
+          padding: '10px 16px',
+        }}
+      >
+        <div style={{ fontSize: 26, fontWeight: 700, color: tokens.colors.accent }}>{label}</div>
+        {detail ? (
+          <div style={{ fontSize: 26, color: tokens.colors.white, marginTop: 2 }}>{detail}</div>
+        ) : null}
+      </TelemetryHudBox>
+    </>
   );
 };

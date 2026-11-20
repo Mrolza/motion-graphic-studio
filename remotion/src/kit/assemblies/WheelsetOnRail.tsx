@@ -1,5 +1,6 @@
-import React from 'react';
-import { wheelAngleDegFromDistance, wheelAngleFromDistance } from '../drivers/kinematics';
+import React, { useRef } from 'react';
+import * as THREE from 'three';
+import { computeWheelsetLayout } from '../drivers/geometry';
 import { TelemetryEntity } from '../telemetry/TelemetryEntity';
 import { getThemeTokens, type PaletteId } from '../tokens/index';
 
@@ -8,9 +9,9 @@ export interface WheelsetOnRailProps {
   entityId?: string;
   /** Role in framing QC. Defaults to "focus". */
   role?: 'focus' | 'prop';
-  /** Linear travel distance along the X-axis track (driven by useDriver). */
+  /** Linear travel distance along the Z-axis track (driven by useDriver). */
   distance?: number;
-  /** Lateral shift across the track (Z-axis) to demonstrate self-centering. */
+  /** Lateral shift across the track (X-axis, > 0 shifts toward outer right rail). */
   lateralShift?: number;
   /** Wheel tread radius in scene units. Defaults to 0.46. */
   wheelRadius?: number;
@@ -18,17 +19,28 @@ export interface WheelsetOnRailProps {
   gauge?: number;
   /** Conical taper ratio (e.g. 0.05 for 1:20). */
   coneRatio?: number;
+  /** Multiplier to exaggerate conical slope visually (e.g. 5). */
+  taperExaggeration?: number;
+  /** Optional curve start Z and curve radius (>0 curves toward +X). */
+  curveStartZ?: number;
+  curveRadius?: number;
   /** Highlight contact patches between wheel tread and rail head. */
   highlightContact?: boolean;
+  /** Show effective diameter rings on outer vs inner wheel. */
+  showEffectiveDiameter?: boolean;
   /** Optional cutaway transparency on wheelset. */
   cutaway?: boolean;
+  /** Optional vertical lift (ONLY for geometry mutation testing). */
+  liftY?: number;
+  /** Optional yaw offset in radians (ONLY for geometry mutation testing). */
+  yawOffsetRad?: number;
   /** Palette token ID. */
   palette?: PaletteId;
 }
 
 /**
- * Conical wheelset seated flush on twin rail heads, with rotation strictly
- * derived from linear travel distance (`angle = distance / wheelRadius`).
+ * Conical wheelset seated flush on twin Z-axis rail heads, with axle perpendicular
+ * to the track, inner flanges, and rotation derived strictly from distance.
  */
 export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
   entityId = 'wheelset',
@@ -38,81 +50,130 @@ export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
   wheelRadius = 0.46,
   gauge = 1.435,
   coneRatio = 0.05,
+  taperExaggeration = 1,
+  curveStartZ = 2,
+  curveRadius,
   highlightContact = false,
+  showEffectiveDiameter = false,
   cutaway = false,
+  liftY = 0,
+  yawOffsetRad = 0,
   palette = 'blueprint-navy',
 }) => {
   const tokens = getThemeTokens(palette);
-  const railHeadTopY = 0.14;
-  const wheelCenterY = railHeadTopY + wheelRadius;
-  const halfGauge = gauge / 2;
-  const spinRad = -wheelAngleFromDistance(distance, wheelRadius);
-  const wheelAngleDeg = Math.round(wheelAngleDegFromDistance(distance, wheelRadius) * 100) / 100;
+  const wheelLeftRef = useRef<THREE.Group>(null);
+  const wheelRightRef = useRef<THREE.Group>(null);
+  const contactLeftRef = useRef<THREE.Mesh>(null);
+  const contactRightRef = useRef<THREE.Mesh>(null);
+  const flangeRef = useRef<THREE.Mesh>(null);
 
-  const outerRadius = wheelRadius - 0.04 * coneRatio;
-  const innerRadius = wheelRadius + 0.04 * coneRatio;
-  const flangeRadius = wheelRadius + 0.075;
+  const layout = computeWheelsetLayout({
+    distance,
+    lateralShift,
+    wheelRadius,
+    gauge,
+    coneRatio,
+    railHeadTopY: 0.22,
+    curveStartZ,
+    curveRadius,
+    liftY,
+    yawOffsetRad,
+  });
+
+  const effectiveTaper = coneRatio * taperExaggeration;
+  const outerR = Math.max(0.2, wheelRadius - 0.08 * effectiveTaper * 12);
+  const innerR = wheelRadius + 0.08 * effectiveTaper * 12;
+  const flangeRadius = innerR + 0.085;
+  const wheelAngleDeg = Math.round(((layout.spinRad * 180) / Math.PI) * 100) / 100;
 
   return (
     <TelemetryEntity
       id={entityId}
       role={role}
+      partRefs={{
+        wheel_left: wheelLeftRef,
+        wheel_right: wheelRightRef,
+        contact_left: contactLeftRef,
+        contact_right: contactRightRef,
+        flange: flangeRef,
+      }}
       partStates={{
         distance: Math.round(distance * 1000) / 1000,
         wheel_angle_deg: wheelAngleDeg,
         lateral_shift: Math.round(lateralShift * 1000) / 1000,
-        on_rail: true,
+        left_effective_radius: Math.round(layout.leftEffectiveRadius * 1000) / 1000,
+        right_effective_radius: Math.round(layout.rightEffectiveRadius * 1000) / 1000,
+      }}
+      geometry={{
+        left_contact_gap: Math.round(layout.constraints.leftContactGap * 10000) / 10000,
+        right_contact_gap: Math.round(layout.constraints.rightContactGap * 10000) / 10000,
+        axle_perpendicular_dot: Math.round(layout.constraints.axlePerpendicularDot * 10000) / 10000,
+        wheel_spacing_err:
+          Math.round(Math.abs(layout.constraints.wheelSpacing - layout.constraints.expectedGauge) * 10000) /
+          10000,
+        flanges_inside: layout.constraints.flangesInside,
       }}
     >
-      <group position={[distance, wheelCenterY, lateralShift]}>
-        {/* Rigid steel axle */}
-        <mesh rotation={[Math.PI / 2, 0, spinRad]}>
-          <cylinderGeometry args={[0.075, 0.075, gauge + 0.32, 24]} />
+      <group position={layout.center} rotation={[0, layout.yawRad, 0]}>
+        {/* Rigid steel axle along local X */}
+        <mesh rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.065, 0.065, gauge + 0.36, 24]} />
           <meshStandardMaterial
             color={tokens.colors.steelDark}
             metalness={0.75}
             roughness={0.35}
             transparent={cutaway}
-            opacity={cutaway ? 0.4 : 1}
+            opacity={cutaway ? 0.45 : 1}
           />
         </mesh>
 
         {([-1, 1] as const).map((side) => {
-          const zWheel = side * halfGauge;
-          const zFlange = side * (halfGauge - 0.095);
-          const treadRotX = side > 0 ? Math.PI / 2 : -Math.PI / 2;
+          const isRight = side > 0;
+          const xWheel = isRight ? layout.rightWheelLocalX : layout.leftWheelLocalX;
+          const xFlange = isRight ? layout.rightFlangeLocalX : layout.leftFlangeLocalX;
+          const effR = isRight ? layout.rightEffectiveRadius : layout.leftEffectiveRadius;
+          const treadRotZ = isRight ? Math.PI / 2 : -Math.PI / 2;
+
           return (
             <group key={side}>
-              {/* Conical wheel tread */}
-              <group position={[0, 0, zWheel]} rotation={[0, 0, spinRad]}>
-                <mesh rotation={[treadRotX, 0, 0]}>
-                  <cylinderGeometry args={[outerRadius, innerRadius, 0.13, 32]} />
+              {/* Conical wheel tread (rotates around X to roll along Z) */}
+              <group
+                ref={isRight ? wheelRightRef : wheelLeftRef}
+                position={[xWheel, 0, 0]}
+                rotation={[layout.spinRad, 0, 0]}
+              >
+                <mesh rotation={[0, 0, treadRotZ]}>
+                  <cylinderGeometry args={[outerR, innerR, 0.16, 32]} />
                   <meshStandardMaterial
                     color={tokens.colors.steelLight}
                     metalness={0.65}
                     roughness={0.3}
                     transparent={cutaway}
-                    opacity={cutaway ? 0.35 : 1}
+                    opacity={cutaway ? 0.4 : 1}
                   />
                 </mesh>
-                {/* Radial spoke marker to make rotation visually unmistakable */}
-                <mesh position={[0, wheelRadius * 0.45, side * 0.072]}>
-                  <boxGeometry args={[0.045, wheelRadius * 0.72, 0.014]} />
+                {/* Radial spoke marker */}
+                <mesh position={[side * 0.088, wheelRadius * 0.42, 0]}>
+                  <boxGeometry args={[0.014, wheelRadius * 0.68, 0.05]} />
                   <meshStandardMaterial
                     color={tokens.colors.primary}
                     emissive={tokens.colors.primary}
-                    emissiveIntensity={0.65}
+                    emissiveIntensity={0.75}
                   />
                 </mesh>
               </group>
 
-              {/* Inner flange (offset laterally to avoid z-fighting with tread) */}
-              <mesh position={[0, 0, zFlange]} rotation={[Math.PI / 2, 0, spinRad]}>
+              {/* Inner flange */}
+              <mesh
+                ref={isRight ? undefined : flangeRef}
+                position={[xFlange, 0, 0]}
+                rotation={[layout.spinRad, 0, Math.PI / 2]}
+              >
                 <cylinderGeometry args={[flangeRadius, flangeRadius, 0.032, 32]} />
                 <meshStandardMaterial
                   color={tokens.colors.accent}
                   emissive={tokens.colors.accent}
-                  emissiveIntensity={0.2}
+                  emissiveIntensity={0.25}
                   metalness={0.5}
                   roughness={0.35}
                   polygonOffset
@@ -120,13 +181,26 @@ export const WheelsetOnRail: React.FC<WheelsetOnRailProps> = ({
                 />
               </mesh>
 
-              {/* Contact patch ring at rail head */}
-              {highlightContact ? (
-                <mesh position={[0, -wheelRadius + 0.015, zWheel]}>
-                  <sphereGeometry args={[0.048, 16, 16]} />
+              {/* Contact patch marker at rail head */}
+              <mesh
+                ref={isRight ? contactRightRef : contactLeftRef}
+                position={[xWheel, -wheelRadius + 0.015, 0]}
+              >
+                <sphereGeometry args={[highlightContact ? 0.055 : 0.025, 16, 16]} />
+                <meshStandardMaterial
+                  color={tokens.colors.accentWarm}
+                  emissive={tokens.colors.accent}
+                  emissiveIntensity={highlightContact ? 1.2 : 0.2}
+                />
+              </mesh>
+
+              {/* Effective diameter comparison ring */}
+              {showEffectiveDiameter ? (
+                <mesh position={[xWheel, 0, 0]} rotation={[0, Math.PI / 2, 0]}>
+                  <torusGeometry args={[effR, isRight ? 0.028 : 0.018, 12, 36]} />
                   <meshStandardMaterial
-                    color={tokens.colors.accentWarm}
-                    emissive={tokens.colors.accent}
+                    color={isRight ? tokens.colors.accentWarm : tokens.colors.primaryGlow}
+                    emissive={isRight ? tokens.colors.accent : tokens.colors.primary}
                     emissiveIntensity={1.1}
                   />
                 </mesh>

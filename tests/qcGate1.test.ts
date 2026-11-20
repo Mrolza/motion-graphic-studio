@@ -203,7 +203,7 @@ describe('P2C Gate 1 Blocking Rules, L0 Strict Core Claims, and L1 Claim-Quote S
         url: 'https://en.wikipedia.org/wiki/Apollo_11',
         title: 'Apollo 11',
         lang: 'en',
-        text: 'Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and lunar module pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969.',
+        text: 'Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and lunar module pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969. Armstrong landed the Lunar Module Eagle on July 20, 1969.',
         retrieved_at: '2026-11-20T00:00:00.000Z',
       },
     ];
@@ -253,6 +253,44 @@ describe('P2C Gate 1 Blocking Rules, L0 Strict Core Claims, and L1 Claim-Quote S
       { C2: 'S1' }
     );
     expect(okNameRes.ledger.claims[0]!.status).toBe('verified');
+
+    const lastNameOnlyRes = verifyLedgerL1(
+      [
+        {
+          id: 'C3',
+          text: 'Astronot Neil Armstrong mendarat di Bulan pada 20 Juli 1969.',
+          kind: 'fact',
+          status: 'unverified',
+          sources: [
+            {
+              url: sources[0]!.url,
+              title: 'Apollo 11',
+              quote: 'Armstrong landed the Lunar Module Eagle on July 20, 1969.',
+              retrieved_at: '2026-11-20T00:00:00.000Z',
+            },
+          ],
+        },
+        {
+          id: 'C4',
+          text: 'Astronot Neil Armstrong mendarat bersama Buzz Aldrin pada 20 Juli 1969.',
+          kind: 'fact',
+          status: 'unverified',
+          sources: [
+            {
+              url: sources[0]!.url,
+              title: 'Apollo 11',
+              quote: 'Armstrong landed the Lunar Module Eagle on July 20, 1969.',
+              retrieved_at: '2026-11-20T00:00:00.000Z',
+            },
+          ],
+        },
+      ],
+      sources,
+      { C3: 'S1', C4: 'S1' }
+    );
+    expect(lastNameOnlyRes.ledger.claims[0]!.status).toBe('verified');
+    expect(lastNameOnlyRes.ledger.claims[1]!.status).toBe('unverified');
+    expect(lastNameOnlyRes.report.issues[0]?.message).toContain('Buzz Aldrin');
   });
 
   it('tracks llm_calls_last_run separately from cumulative llm_calls and validates L0b hook_paid/main_event_named', async () => {

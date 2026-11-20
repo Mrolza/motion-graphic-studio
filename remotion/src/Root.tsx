@@ -19,7 +19,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="DemoKereta"
         component={DemoKereta}
-        durationInFrames={360}
+        durationInFrames={450}
         fps={BLUEPRINT_TOKENS.viewport.fps}
         width={BLUEPRINT_TOKENS.viewport.width}
         height={BLUEPRINT_TOKENS.viewport.height}

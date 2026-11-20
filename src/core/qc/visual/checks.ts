@@ -132,10 +132,20 @@ export function checkHudOverlapFromTelemetry(
 ): QcIssue[] {
   const issues: QcIssue[] = [];
   const maxCover = spec.maxHudOverlapRatio ?? 0.35;
+  const maxPanels = spec.maxActiveHudPanels ?? 2;
 
   for (const sample of samples) {
     const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
     const huds = sample.hud;
+
+    const nonTitleHuds = huds.filter((h) => h.zone !== 'title');
+    if (nonTitleHuds.length > maxPanels) {
+      issues.push({
+        severity: 'error',
+        message: `HUD_BUDGET_EXCEEDED: ${nonTitleHuds.length} panel HUD aktif bersamaan di luar zona judul (maks ${maxPanels})`,
+        ref,
+      });
+    }
 
     for (let i = 0; i < huds.length; i++) {
       for (let j = i + 1; j < huds.length; j++) {
@@ -189,6 +199,122 @@ export function checkHudFormatFromTelemetry(samples: TelemetrySample[]): QcIssue
           issues.push({
             severity: 'error',
             message: `HUD_FORMAT_NOT_ID: "${h.id}" memakai format ribuan non-Indonesia (${badMatches.join(', ')}) pada "${h.text}"`,
+            ref,
+          });
+        }
+      }
+    }
+  }
+  return issues;
+}
+
+/**
+ * Checks declared assembly geometry constraints in world coordinates across sample frames.
+ */
+export function checkGeometryFromTelemetry(
+  samples: TelemetrySample[],
+  spec: VisualCheckSpec
+): QcIssue[] {
+  const issues: QcIssue[] = [];
+  const rules = spec.geometryRules ?? [];
+  if (rules.length === 0) return issues;
+
+  for (const sample of samples) {
+    const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
+    for (const rule of rules) {
+      const ent = sample.entities.find((e) => e.id === rule.entity);
+      const val = ent?.geometry?.[rule.key];
+      if (val === undefined) {
+        issues.push({
+          severity: 'error',
+          message: `GEOMETRY_MISSING: ${rule.entity}.geometry.${rule.key} tidak dilaporkan`,
+          ref,
+        });
+        continue;
+      }
+      if (rule.op === 'max_abs') {
+        const threshold = rule.threshold ?? 0.02;
+        if (typeof val !== 'number' || Math.abs(val) > threshold) {
+          issues.push({
+            severity: 'error',
+            message: `GEOMETRY_VIOLATION: ${rule.entity}.${rule.key}=${String(val)} melebihi toleransi ${threshold}`,
+            ref,
+          });
+        }
+      } else if (rule.op === 'equals') {
+        if (val !== rule.expected) {
+          issues.push({
+            severity: 'error',
+            message: `GEOMETRY_VIOLATION: ${rule.entity}.${rule.key}=${String(val)} (harus ${String(rule.expected)})`,
+            ref,
+          });
+        }
+      }
+    }
+  }
+  return issues;
+}
+
+/**
+ * Checks that declared important 3D sub-parts remain inside safe bounds and are not
+ * occluded by HUD panels by more than 25% during their active driver range.
+ */
+export function checkVisibilityFromTelemetry(
+  samples: TelemetrySample[],
+  spec: VisualCheckSpec
+): QcIssue[] {
+  const issues: QcIssue[] = [];
+  const parts = spec.visibleParts ?? [];
+  if (parts.length === 0) return issues;
+  const safe = spec.safeBounds ?? { minX: 0, maxX: 720, minY: 60, maxY: 1220 };
+
+  for (const sample of samples) {
+    const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
+    for (const vp of parts) {
+      if (vp.whenDriverBetween) {
+        const drv = vp.driverName
+          ? sample.drivers[vp.driverName]
+          : Object.values(sample.drivers)[0];
+        if (!drv) continue;
+        const [minV, maxV] = vp.whenDriverBetween;
+        if (drv.value < minV || drv.value > maxV) continue;
+      }
+
+      const ent = sample.entities.find((e) => e.id === vp.entity);
+      const pBox = ent?.parts?.[vp.part];
+      if (!pBox) {
+        issues.push({
+          severity: 'error',
+          message: `VISIBILITY_MISSING_PART: bagian "${vp.entity}.${vp.part}" tidak dilaporkan di telemetri`,
+          ref,
+        });
+        continue;
+      }
+
+      if (
+        pBox.width <= 0 ||
+        pBox.height <= 0 ||
+        pBox.x < safe.minX ||
+        pBox.x + pBox.width > safe.maxX ||
+        pBox.y < safe.minY ||
+        pBox.y + pBox.height > safe.maxY
+      ) {
+        issues.push({
+          severity: 'error',
+          message: `VISIBILITY_OUT_OF_BOUNDS: bagian "${vp.entity}.${vp.part}" bbox=[${pBox.x},${pBox.y},${pBox.width}x${pBox.height}] keluar area aman`,
+          ref,
+        });
+        continue;
+      }
+
+      const partArea = Math.max(1, pBox.width * pBox.height);
+      const maxCover = vp.maxHudCoverRatio ?? 0.25;
+      for (const h of sample.hud) {
+        const cover = intersectionArea(pBox, h.bbox);
+        if (cover / partArea > maxCover) {
+          issues.push({
+            severity: 'error',
+            message: `VISIBILITY_OCCLUDED_BY_HUD: "${vp.entity}.${vp.part}" tertutup HUD "${h.id}" sebesar ${Math.round((cover / partArea) * 100)}% (> ${Math.round(maxCover * 100)}%)`,
             ref,
           });
         }

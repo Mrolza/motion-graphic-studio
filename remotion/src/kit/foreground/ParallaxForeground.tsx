@@ -32,9 +32,9 @@ export const ParallaxForeground: React.FC<ParallaxForegroundProps> = ({
   return (
     <group>
       {indices.map((idx) => {
-        const x = idx * poleSpacing;
+        const z = idx * poleSpacing;
         return (
-          <group key={idx} position={[x, 0, zOffset]}>
+          <group key={idx} position={[zOffset, 0, z]}>
             {/* Vertical foreground gantry pole */}
             <mesh position={[0, 1.3, 0]}>
               <cylinderGeometry args={[0.035, 0.045, 2.6, 12]} />
@@ -58,12 +58,6 @@ export const ParallaxForeground: React.FC<ParallaxForegroundProps> = ({
           </group>
         );
       })}
-
-      {/* Depth reference guide rails */}
-      <mesh position={[distance, 0.02, -zOffset]}>
-        <boxGeometry args={[28, 0.02, 0.03]} />
-        <meshStandardMaterial color={tokens.colors.gridPrimary} transparent opacity={0.45} />
-      </mesh>
     </group>
   );
 };

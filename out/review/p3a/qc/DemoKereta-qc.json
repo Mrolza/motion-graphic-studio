@@ -1,10 +1,18 @@
 {
   "compositionId": "DemoKereta",
   "passed": true,
-  "sampleCount": 45,
-  "renderMs": 11883,
+  "sampleCount": 57,
+  "renderMs": 14405,
   "reports": {
     "mechanics": {
+      "layer": "L5",
+      "issues": []
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
       "layer": "L5",
       "issues": []
     },

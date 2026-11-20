@@ -18,8 +18,20 @@ const crank = useDriver({ name: "crank_angle", from: 0, to: 720, unit: "°", dur
 
 ## 3D Assemblies
 
+### `CurvedRail`
+Twin steel rails with sleepers supporting a straight entry seamlessly into a curved arc. Rail head top sits at world Y = 0.22 to match WheelsetOnRail contact geometry.
+- **Signature:** `<CurvedRail ...CurvedRailProps />`
+- **Props:**
+  - `startZ?: number` — Straight approach start Z. Defaults to -10.
+  - `curveStartZ?: number` — Z coordinate where the curve begins. Defaults to 2.
+  - `curveRadius?: number` — Curve radius in scene units (> 0 curves toward +X). Defaults to 10.
+  - `curveLength?: number` — Curve arc length. Defaults to 14.
+  - `gauge?: number` — Track gauge (center-to-center of left and right rails). Defaults to 1.435.
+  - `highlighted?: boolean` — Highlight rails.
+  - `palette?: PaletteId` — Palette token ID.
+
 ### `PistonCrankAssembly`
-4-stroke piston, connecting rod, crankshaft, intake/exhaust valves, and spark plug. All moving parts and valve states derive strictly from `crankAngleDeg`.
+4-stroke piston, connecting rod, crankshaft, enlarged intake/exhaust valves, spark plug, and driver-linked combustion chamber tint.
 - **Signature:** `<PistonCrankAssembly ...PistonCrankAssemblyProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "piston_crank".
@@ -27,9 +39,10 @@ const crank = useDriver({ name: "crank_angle", from: 0, to: 720, unit: "°", dur
   - `crankAngleDeg: number` — Crankshaft angle in degrees (0-720 for full 4-stroke cycle), from useDriver.
   - `crankRadius?: number` — Crank throw radius. Defaults to 0.55.
   - `rodLength?: number` — Connecting rod length. Defaults to 1.45.
-  - `position?: [number, number, number]` — World-space position of crankshaft center. Defaults to [0, 0.2, 0].
+  - `position?: [number, number, number]` — World-space position of crankshaft center. Defaults to [0, 0.25, 0].
   - `cutaway?: boolean` — Render cylinder sleeve as cutaway transparent glass. Defaults to true.
   - `overrideIntakeOpen?: boolean` — Optional override ONLY for mutation testing (simulates buggy time-driven valve).
+  - `detachRodOffset?: [number, number, number]` — Optional rod offset ONLY for geometry mutation testing (detaches rod from crank pin).
   - `palette?: PaletteId` — Palette token ID.
 
 ### `Suspension`
@@ -45,18 +58,24 @@ Coil spring + telescopic damper anchored flush between an axle mount and an uppe
   - `palette?: PaletteId` — Palette token ID.
 
 ### `WheelsetOnRail`
-Conical wheelset seated flush on twin rail heads, with rotation strictly derived from linear travel distance (`angle = distance / wheelRadius`).
+Conical wheelset seated flush on twin Z-axis rail heads, with axle perpendicular to the track, inner flanges, and rotation derived strictly from distance.
 - **Signature:** `<WheelsetOnRail ...WheelsetOnRailProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "wheelset".
   - `role?: 'focus' | 'prop'` — Role in framing QC. Defaults to "focus".
-  - `distance?: number` — Linear travel distance along the X-axis track (driven by useDriver).
-  - `lateralShift?: number` — Lateral shift across the track (Z-axis) to demonstrate self-centering.
+  - `distance?: number` — Linear travel distance along the Z-axis track (driven by useDriver).
+  - `lateralShift?: number` — Lateral shift across the track (X-axis, > 0 shifts toward outer right rail).
   - `wheelRadius?: number` — Wheel tread radius in scene units. Defaults to 0.46.
   - `gauge?: number` — Track gauge (distance between left and right rail centers). Defaults to 1.435.
   - `coneRatio?: number` — Conical taper ratio (e.g. 0.05 for 1:20).
+  - `taperExaggeration?: number` — Multiplier to exaggerate conical slope visually (e.g. 5).
+  - `curveStartZ?: number` — Optional curve start Z and curve radius (>0 curves toward +X).
+  - `curveRadius?: number`
   - `highlightContact?: boolean` — Highlight contact patches between wheel tread and rail head.
+  - `showEffectiveDiameter?: boolean` — Show effective diameter rings on outer vs inner wheel.
   - `cutaway?: boolean` — Optional cutaway transparency on wheelset.
+  - `liftY?: number` — Optional vertical lift (ONLY for geometry mutation testing).
+  - `yawOffsetRad?: number` — Optional yaw offset in radians (ONLY for geometry mutation testing).
   - `palette?: PaletteId` — Palette token ID.
 
 ## Stage
@@ -96,6 +115,14 @@ Conical wheelset seated flush on twin rail heads, with rotation strictly derived
   - `elevationDeg?: number` — Elevation angle in degrees for frameEntities. Defaults to 18.
 
 ## Drivers & Kinematics
+
+### `computeWheelsetLayout`
+Pure kinematic & geometric layout for WheelsetOnRail along a Z-axis straight or curved track. Computes world-space rail contact points, effective radii, and geometry constraints.
+- **Signature:** `({ distance, lateralShift, wheelRadius, gauge, coneRatio, railHeadTopY, curveStartZ, curveRadius, liftY, yawOffsetRad, }: WheelsetLayoutInput) => WheelsetLayout`
+
+### `computePistonCrankLayout`
+Pure kinematic & geometric layout for PistonCrankAssembly.
+- **Signature:** `(params: { crankAngleDeg: number; crankRadius?: number | undefined; rodLength?: number | undefined; position?: [number, number, number] | undefined; detachRodOffset?: [number, number, number] | undefined; }) => PistonCrankLayout`
 
 ### `gearRatioAngle`
 Computes output gear angle in radians from input angle and tooth counts. Opposite sign represents meshing direction reversal.
@@ -319,6 +346,7 @@ Dynamic counter ONLY for changing quantities. Bound to driver when `driver` is p
   - `decimals?: number`
   - `startSec?: number`
   - `durationSec?: number`
+  - `claimRef?: string`
   - `zone?: HudZoneId`
   - `palette?: PaletteId`
 
@@ -331,6 +359,7 @@ Reveals a fixed dimension or engineering standard by extending a measure bar, th
   - `valueText: string` — Fixed dimension/standard string (e.g. "1:20" or "1.435 mm"). No count-up.
   - `startSec?: number`
   - `durationSec?: number`
+  - `claimRef?: string`
   - `zone?: HudZoneId`
   - `palette?: PaletteId`
 
@@ -348,13 +377,15 @@ Technical dimension bar with end ticks and id-ID formatted value.
   - `palette?: PaletteId`
 
 ### `Callout`
-Technical callout badge (>= 26px), placed in zone or anchored to a screen point.
+Technical callout badge (>= 26px), placed in zone or anchored to a screen point with optional leader line.
 - **Signature:** `<Callout ...CalloutProps />`
 - **Props:**
   - `id?: string`
   - `label: string`
   - `detail?: string`
   - `screenAnchor?: [number, number]` — Optional explicit screen position [x, y] (e.g. anchored to entity screen point).
+  - `pointerTo?: [number, number]` — Optional target screen point [x, y] to draw a leader line from badge to part.
+  - `claimRef?: string`
   - `zone?: HudZoneId`
   - `palette?: PaletteId`
 
@@ -431,6 +462,7 @@ Measures the rendered DOM bounding box of a HUD element and reports it to teleme
   - `text: string`
   - `driverName?: string`
   - `numericValue?: number`
+  - `claimRef?: string`
   - `style?: React.CSSProperties`
   - `children: React.ReactNode`
 
@@ -564,12 +596,14 @@ Provides per-frame telemetry collection when `enabled` is true. Zero-overhead no
 - **Signature:** `() => TelemetryCollector`
 
 ### `TelemetryEntity`
-Wraps a 3D assembly or focus object and reports its projected 2D screen bounding box and part states when telemetry mode is enabled.
+Wraps a 3D assembly or focus object and reports its projected 2D screen bounding box, sub-part bounding boxes, geometry constraints, and part states when telemetry mode is enabled.
 - **Signature:** `<TelemetryEntity ...TelemetryEntityProps />`
 - **Props:**
   - `id: string` — Unique entity identifier (e.g. "wheelset", "piston_crank").
   - `role?: 'focus' | 'prop'` — Role in scene framing QC. Focus entities must stay inside 9:16 safe bounds.
   - `partStates?: Record<string, string | number | boolean>` — Current mechanical/visual part states reported per frame.
+  - `partRefs?: Record<string, React.RefObject<THREE.Object3D | null>>` — Named 3D sub-part refs whose projected screen bounding boxes are reported.
+  - `geometry?: Record<string, number | boolean>` — Pure geometry constraint measurements reported per frame.
   - `children: React.ReactNode`
 
 ## Transitions

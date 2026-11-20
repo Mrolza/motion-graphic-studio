@@ -140,21 +140,46 @@ export function doClaimNamesAppearInQuote(claimText: string, quote: string): str
   const lowerQuote = quote.toLowerCase();
   const missing: string[] = [];
 
+  // Group consecutive capitalized proper-name tokens (e.g. "Neil Armstrong") so last-name match succeeds
+  const groups: string[][] = [];
+  let currentGroup: string[] = [];
+
   for (let i = 1; i < rawWords.length; i++) {
     const raw = rawWords[i]!;
-    // Skip words that open a quoted phrase (e.g. 'Satu langkah kecil...)
-    if (/^["""'(]/.test(raw)) continue;
+    if (/^["""'(]/.test(raw)) {
+      if (currentGroup.length > 0) {
+        groups.push(currentGroup);
+        currentGroup = [];
+      }
+      continue;
+    }
     const w = raw.replace(/^["""'(]+|[.,!?;:"""')]+$/g, '');
-    if (!/^[A-Z][a-z]{2,}$/.test(w)) continue;
     const prev = rawWords[i - 1] ?? '';
-    if (/[.!?]$/.test(prev)) continue;
+    const isSentenceStart = /[.!?]$/.test(prev);
+    const isNameToken = !isSentenceStart && (/^[A-Z][a-z]{2,}$/.test(w) || /^[A-Z]\.$/.test(raw));
 
-    const lower = w.toLowerCase();
-    if (NON_PROPER_CAPITAL_WORDS.has(lower)) continue;
+    if (isNameToken) {
+      const lower = w.toLowerCase();
+      if (!NON_PROPER_CAPITAL_WORDS.has(lower)) {
+        currentGroup.push(w);
+        continue;
+      }
+    }
+    if (currentGroup.length > 0) {
+      groups.push(currentGroup);
+      currentGroup = [];
+    }
+  }
+  if (currentGroup.length > 0) groups.push(currentGroup);
 
-    const candidates = [lower, ...(NAME_EQUIVALENTS[lower] ?? [])];
-    if (!candidates.some((c) => lowerQuote.includes(c))) {
-      missing.push(w);
+  for (const grp of groups) {
+    const tokens = grp.filter((t) => /^[A-Z][a-z]{2,}$/.test(t));
+    if (tokens.length === 0) continue;
+    const lastToken = tokens[tokens.length - 1]!.toLowerCase();
+    const candidates = [lastToken, ...(NAME_EQUIVALENTS[lastToken] ?? [])];
+    const matchedLast = candidates.some((c) => lowerQuote.includes(c));
+    if (!matchedLast) {
+      missing.push(tokens.join(' '));
     }
   }
   return missing;

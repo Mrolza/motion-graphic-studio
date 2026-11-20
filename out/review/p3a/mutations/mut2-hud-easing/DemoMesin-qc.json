@@ -2,7 +2,7 @@
   "compositionId": "DemoMesin",
   "passed": false,
   "sampleCount": 60,
-  "renderMs": 13528,
+  "renderMs": 13474,
   "reports": {
     "mechanics": {
       "layer": "L5",
@@ -303,6 +303,14 @@
           "ref": "f472 (15.73s)"
         }
       ]
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
     },
     "framing": {
       "layer": "L5",

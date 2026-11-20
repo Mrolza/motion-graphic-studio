@@ -9,10 +9,16 @@ import {
   wheelAngleFromDistance,
 } from '../remotion/src/kit/drivers/kinematics';
 import {
+  computePistonCrankLayout,
+  computeWheelsetLayout,
+} from '../remotion/src/kit/drivers/geometry';
+import {
   checkFramingFromTelemetry,
+  checkGeometryFromTelemetry,
   checkHudFormatFromTelemetry,
   checkHudOverlapFromTelemetry,
   checkMechanicsFromTelemetry,
+  checkVisibilityFromTelemetry,
 } from '@core/qc/visual/checks';
 import type { TelemetrySample, VisualCheckSpec } from '@core/qc/visual/types';
 
@@ -152,5 +158,64 @@ describe('Visual QC pure telemetry checks', () => {
     expect(checkFramingFromTelemetry([badSample], spec)).toHaveLength(1);
     expect(checkHudOverlapFromTelemetry([badSample], spec)).toHaveLength(1);
     expect(checkHudFormatFromTelemetry([badSample])).toHaveLength(1);
+  });
+
+  it('computes pure Wheelset & PistonCrank geometry layouts and catches geometry/visibility/budget violations', () => {
+    const wl = computeWheelsetLayout({
+      distance: 6,
+      lateralShift: 0.14,
+      wheelRadius: 0.46,
+      gauge: 1.435,
+      coneRatio: 0.05,
+      curveStartZ: 2,
+      curveRadius: 10,
+    });
+    expect(wl.constraints.leftContactGap).toBeCloseTo(0, 6);
+    expect(wl.constraints.rightContactGap).toBeCloseTo(0, 6);
+    expect(wl.constraints.axlePerpendicularDot).toBeCloseTo(0, 6);
+    expect(wl.constraints.wheelSpacing).toBeCloseTo(1.435, 6);
+    expect(wl.constraints.flangesInside).toBe(true);
+    expect(wl.rightEffectiveRadius).toBeGreaterThan(wl.leftEffectiveRadius);
+
+    const pc = computePistonCrankLayout({ crankAngleDeg: 120 });
+    expect(pc.constraints.rodTopToPistonPinGap).toBeCloseTo(0, 6);
+    expect(pc.constraints.rodBottomToCrankPinGap).toBeCloseTo(0, 6);
+    expect(pc.constraints.pistonInsideCylinder).toBe(true);
+
+    const geoSpec: VisualCheckSpec = {
+      compositionId: 'DemoKereta',
+      focusEntities: ['wheelset'],
+      maxActiveHudPanels: 2,
+      invariants: [],
+      geometryRules: [
+        { entity: 'wheelset', key: 'left_contact_gap', op: 'max_abs', threshold: 0.01 },
+        { entity: 'wheelset', key: 'axle_perpendicular_dot', op: 'max_abs', threshold: 0.02 },
+      ],
+      visibleParts: [{ entity: 'wheelset', part: 'wheel_left', maxHudCoverRatio: 0.25 }],
+    };
+
+    const badSample: TelemetrySample = {
+      frame: 15,
+      sec: 0.5,
+      drivers: { distance: { value: 0, unit: 'm' } },
+      entities: [
+        {
+          id: 'wheelset',
+          role: 'focus',
+          bbox: { x: 150, y: 350, width: 400, height: 300 },
+          parts: { wheel_left: { x: 200, y: 500, width: 120, height: 120 } },
+          geometry: { left_contact_gap: 0.05, axle_perpendicular_dot: 1.0 },
+        },
+      ],
+      hud: [
+        { id: 'h1', component: 'Callout', zone: 'callout', bbox: { x: 180, y: 480, width: 200, height: 150 }, text: 'A' },
+        { id: 'h2', component: 'Callout', zone: 'callout', bbox: { x: 40, y: 900, width: 200, height: 60 }, text: 'B' },
+        { id: 'h3', component: 'Callout', zone: 'callout', bbox: { x: 300, y: 900, width: 200, height: 60 }, text: 'C' },
+      ],
+    };
+
+    expect(checkGeometryFromTelemetry([badSample], geoSpec)).toHaveLength(2);
+    expect(checkVisibilityFromTelemetry([badSample], geoSpec)[0]?.message).toContain('VISIBILITY_OCCLUDED_BY_HUD');
+    expect(checkHudOverlapFromTelemetry([badSample], geoSpec)[0]?.message).toContain('HUD_BUDGET_EXCEEDED');
   });
 });

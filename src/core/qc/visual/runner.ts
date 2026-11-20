@@ -9,9 +9,11 @@ import type { DeviceProfileName } from '@core/contracts/project';
 import {
   checkBlankFrames,
   checkFramingFromTelemetry,
+  checkGeometryFromTelemetry,
   checkHudFormatFromTelemetry,
   checkHudOverlapFromTelemetry,
   checkMechanicsFromTelemetry,
+  checkVisibilityFromTelemetry,
 } from './checks';
 import type { TelemetrySample, VisualCheckSpec, VisualQcResult } from './types';
 
@@ -115,6 +117,8 @@ export async function runVisualQc(params: {
     .map((f) => path.join(framesDir, f));
 
   const mechanicsIssues = checkMechanicsFromTelemetry(sampledFrames, spec);
+  const geometryIssues = checkGeometryFromTelemetry(sampledFrames, spec);
+  const visibilityIssues = checkVisibilityFromTelemetry(sampledFrames, spec);
   const framingIssues = checkFramingFromTelemetry(sampledFrames, spec);
   const hudOverlapIssues = checkHudOverlapFromTelemetry(sampledFrames, spec);
   const hudFormatIssues = checkHudFormatFromTelemetry(sampledFrames);
@@ -124,6 +128,8 @@ export async function runVisualQc(params: {
 
   const reports = {
     mechanics: { layer: 'L5' as const, issues: mechanicsIssues },
+    geometry: { layer: 'L5' as const, issues: geometryIssues },
+    visibility: { layer: 'L5' as const, issues: visibilityIssues },
     framing: { layer: 'L5' as const, issues: framingIssues },
     hudOverlap: { layer: 'L5' as const, issues: hudOverlapIssues },
     hudFormat: { layer: 'L5' as const, issues: hudFormatIssues },
@@ -132,6 +138,8 @@ export async function runVisualQc(params: {
 
   const allIssues = [
     ...mechanicsIssues,
+    ...geometryIssues,
+    ...visibilityIssues,
     ...framingIssues,
     ...hudOverlapIssues,
     ...hudFormatIssues,

@@ -5,10 +5,10 @@ import { getThemeTokens, type PaletteId } from '../tokens/index';
 export type HudZoneId = 'title' | 'free' | 'callout' | 'caption';
 
 const ZONE_RECTS: Record<HudZoneId, { top: number; maxHeight: number }> = {
-  title: { top: 96, maxHeight: 200 },
-  free: { top: 310, maxHeight: 490 },
-  callout: { top: 820, maxHeight: 230 },
-  caption: { top: 1070, maxHeight: 150 },
+  title: { top: 88, maxHeight: 190 },
+  free: { top: 290, maxHeight: 560 },
+  callout: { top: 860, maxHeight: 200 },
+  caption: { top: 1080, maxHeight: 140 },
 };
 
 export interface HudLayoutProps {
@@ -88,6 +88,7 @@ export interface TelemetryHudBoxProps {
   text: string;
   driverName?: string;
   numericValue?: number;
+  claimRef?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
 }
@@ -102,6 +103,7 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
   text,
   driverName,
   numericValue,
+  claimRef,
   style,
   children,
 }) => {
@@ -127,6 +129,7 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
       text,
       driverName,
       numericValue,
+      claimRef,
     });
   });
 

@@ -19,7 +19,7 @@ import {
 
 export interface DemoMesinProps {
   telemetry?: boolean;
-  mutation?: 'time-valve' | 'hud-easing';
+  mutation?: 'time-valve' | 'hud-easing' | 'detach-rod' | 'occlude-crank';
 }
 
 const STROKE_LABELS = ['1. Hisap', '2. Kompresi', '3. Usaha', '4. Buang'];
@@ -36,9 +36,9 @@ const DemoMesinHud: React.FC<{
 }> = ({ crank, mutation }) => {
   const valves = valveStateFromCrankAngle(crank.value);
   const activeIdx = STROKE_INDEX[valves.strokePhase];
-  const valveSummary = `Hisap: ${valves.intakeOpen ? 'BUKA' : 'TUTUP'} | Buang: ${
+  const valveSummary = `Hisap: ${valves.intakeOpen ? 'BUKA' : 'TUTUP'} · Buang: ${
     valves.exhaustOpen ? 'BUKA' : 'TUTUP'
-  }${valves.sparkOn ? ' | BUSI MENYALA' : ''}`;
+  }${valves.sparkOn ? ' · BUSI MENYALA' : ''}`;
 
   return (
     <HudLayout palette="industrial-orange">
@@ -46,7 +46,7 @@ const DemoMesinHud: React.FC<{
         <KineticTitle
           id="title_mesin"
           title="Siklus Mesin 4 Tak"
-          subtitle="Dua putaran poros engkol penuh (720°)"
+          subtitle={valveSummary}
           palette="industrial-orange"
         />
       </HudZone>
@@ -69,13 +69,18 @@ const DemoMesinHud: React.FC<{
           durationSec={16}
           palette="industrial-orange"
         />
+      </HudZone>
+
+      {/* Occlusion mutation: deliberately place a Callout panel right over the crankshaft */}
+      {mutation === 'occlude-crank' ? (
         <Callout
-          id="callout_valves"
-          label={`Langkah ${valves.strokePhase.toUpperCase()}`}
-          detail={valveSummary}
+          id="callout_occlude_crank"
+          label="Panel Menutupi Poros Engkol"
+          detail="Simulasi pelanggaran visibilitas"
+          screenAnchor={[160, 620]}
           palette="industrial-orange"
         />
-      </HudZone>
+      ) : null}
     </HudLayout>
   );
 };
@@ -95,7 +100,6 @@ const DemoMesinInner: React.FC<DemoMesinProps> = ({
     curve: 'linear',
   });
 
-  // Buggy time-driven valve ONLY when testing time-valve mutation
   const buggyTimeIntake = mutation === 'time-valve' ? sec >= 6 && sec <= 10 : undefined;
   const hud = <DemoMesinHud crank={crank} mutation={mutation} />;
 
@@ -105,22 +109,23 @@ const DemoMesinInner: React.FC<DemoMesinProps> = ({
         <CameraRig
           mode="frameEntities"
           framing="portrait-lower"
-          focusBox={{ center: [0, 1.45, 0], size: [1.7, 3.1, 1.7] }}
-          padding={1.55}
-          startAngleDeg={-18}
-          endAngleDeg={18}
+          focusBox={{ center: [0, 1.55, 0], size: [1.8, 3.2, 1.8] }}
+          padding={1.22}
+          startAngleDeg={-16}
+          endAngleDeg={16}
           durationSec={16}
-          elevationDeg={12}
+          elevationDeg={10}
           fov={42}
         />
-        <Ground size={36} divisions={36} y={-0.65} />
+        <Ground size={36} divisions={36} y={-0.55} />
         <PistonCrankAssembly
           entityId="piston_crank"
           role="focus"
           crankAngleDeg={crank.value}
-          position={[0, 0.25, 0]}
+          position={[0, 0.45, 0]}
           cutaway
           overrideIntakeOpen={buggyTimeIntake}
+          detachRodOffset={mutation === 'detach-rod' ? [0.45, 0.35, 0] : undefined}
           palette="industrial-orange"
         />
       </BlueprintStage>

@@ -15,7 +15,9 @@ export interface TelemetryEntitySample {
   id: string;
   role: 'focus' | 'prop';
   bbox?: ScreenBox;
+  parts?: Record<string, ScreenBox>;
   partStates?: Record<string, string | number | boolean>;
+  geometry?: Record<string, number | boolean>;
 }
 
 export interface TelemetryHudSample {
@@ -26,6 +28,7 @@ export interface TelemetryHudSample {
   text: string;
   driverName?: string;
   numericValue?: number;
+  claimRef?: string;
 }
 
 export interface TelemetryFramePayload {

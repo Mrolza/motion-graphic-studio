@@ -3,6 +3,7 @@ import type { VisualCheckSpec } from './types';
 export const DEMO_KERETA_SPEC: VisualCheckSpec = {
   compositionId: 'DemoKereta',
   focusEntities: ['wheelset'],
+  maxActiveHudPanels: 2,
   invariants: [
     {
       kind: 'wheel_angle_matches_distance',
@@ -10,18 +11,27 @@ export const DEMO_KERETA_SPEC: VisualCheckSpec = {
       radius: 0.46,
       toleranceDeg: 1.5,
     },
-    {
-      kind: 'hud_matches_driver',
-      hudId: 'stat_distance',
-      driverName: 'distance',
-      tolerance: 0.5,
-    },
+  ],
+  geometryRules: [
+    { entity: 'wheelset', key: 'left_contact_gap', op: 'max_abs', threshold: 0.01 },
+    { entity: 'wheelset', key: 'right_contact_gap', op: 'max_abs', threshold: 0.01 },
+    { entity: 'wheelset', key: 'axle_perpendicular_dot', op: 'max_abs', threshold: 0.02 },
+    { entity: 'wheelset', key: 'wheel_spacing_err', op: 'max_abs', threshold: 0.01 },
+    { entity: 'wheelset', key: 'flanges_inside', op: 'equals', expected: true },
+  ],
+  visibleParts: [
+    { entity: 'wheelset', part: 'wheel_left', maxHudCoverRatio: 0.25 },
+    { entity: 'wheelset', part: 'wheel_right', maxHudCoverRatio: 0.25 },
+    { entity: 'wheelset', part: 'contact_left', maxHudCoverRatio: 0.25 },
+    { entity: 'wheelset', part: 'contact_right', maxHudCoverRatio: 0.25 },
+    { entity: 'wheelset', part: 'flange', maxHudCoverRatio: 0.25 },
   ],
 };
 
 export const DEMO_MESIN_SPEC: VisualCheckSpec = {
   compositionId: 'DemoMesin',
   focusEntities: ['piston_crank'],
+  maxActiveHudPanels: 2,
   invariants: [
     {
       kind: 'driver_state',
@@ -73,6 +83,36 @@ export const DEMO_MESIN_SPEC: VisualCheckSpec = {
       hudId: 'stat_crank_angle',
       driverName: 'crank_angle',
       tolerance: 1.5,
+    },
+  ],
+  geometryRules: [
+    { entity: 'piston_crank', key: 'rod_top_gap', op: 'max_abs', threshold: 0.01 },
+    { entity: 'piston_crank', key: 'rod_bottom_gap', op: 'max_abs', threshold: 0.01 },
+    { entity: 'piston_crank', key: 'piston_inside_cylinder', op: 'equals', expected: true },
+  ],
+  visibleParts: [
+    { entity: 'piston_crank', part: 'piston', maxHudCoverRatio: 0.25 },
+    { entity: 'piston_crank', part: 'crank', maxHudCoverRatio: 0.25 },
+    {
+      entity: 'piston_crank',
+      part: 'intake_valve',
+      whenDriverBetween: [0, 180],
+      driverName: 'crank_angle',
+      maxHudCoverRatio: 0.25,
+    },
+    {
+      entity: 'piston_crank',
+      part: 'exhaust_valve',
+      whenDriverBetween: [540, 720],
+      driverName: 'crank_angle',
+      maxHudCoverRatio: 0.25,
+    },
+    {
+      entity: 'piston_crank',
+      part: 'spark_plug',
+      whenDriverBetween: [340, 390],
+      driverName: 'crank_angle',
+      maxHudCoverRatio: 0.25,
     },
   ],
 };
