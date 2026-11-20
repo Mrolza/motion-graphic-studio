@@ -136,3 +136,9 @@ export {
   type KineticCaptionItem,
   type KineticCaptionWord,
 } from './hud/KineticCaptions';
+export {
+  EffectiveDiameterCompare,
+  computeEffectiveCompareRadii,
+  type EffectiveDiameterCompareProps,
+  type CompareRadiiResult,
+} from './hud/EffectiveDiameterCompare';

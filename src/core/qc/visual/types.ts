@@ -104,6 +104,7 @@ export interface VisualCheckSpec {
   syncTargetSec?: number;
   syncToleranceSec?: number;
   shotType?: string;
+  usesFrameEntities?: boolean;
   minSubjectFillRatio?: number;
   requireFillError?: boolean;
   safeBounds?: { minX: number; maxX: number; minY: number; maxY: number };

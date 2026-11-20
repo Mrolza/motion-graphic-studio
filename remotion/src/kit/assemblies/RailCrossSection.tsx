@@ -14,15 +14,15 @@ export interface RailCrossSectionProps {
 }
 
 /**
- * True engineering cross-section profile of twin rail heads + conical wheel tread slices,
- * inner flanges, axle, rail contact points, and effective radius lines.
+ * RailCrossSection v3: Portrait-ready Blueprint engineering cross-section of twin rail heads,
+ * exaggerated conical wheel treads (>= 10x), inner flanges, axle, and shifting contact points.
  */
 export const RailCrossSection: React.FC<RailCrossSectionProps> = ({
   entityId = 'rail_cross_section',
   view = 'section',
   lateralShift = 0,
   gauge = 1.435,
-  taperExaggeration = 5,
+  taperExaggeration = 12,
   palette = 'blueprint-navy',
 }) => {
   const tokens = getThemeTokens(palette);
@@ -36,6 +36,7 @@ export const RailCrossSection: React.FC<RailCrossSectionProps> = ({
   const coneRatio = 0.05;
   const wheelRadius = 0.46;
   const railHeadTopY = 0.22;
+  const effectiveExag = Math.max(10, taperExaggeration);
 
   const layout = computeWheelsetLayout({
     distance: 0,
@@ -47,23 +48,19 @@ export const RailCrossSection: React.FC<RailCrossSectionProps> = ({
   });
 
   const axleY = layout.center[1];
-  const treadHalfW = 0.095;
-  const visualSlope = coneRatio * taperExaggeration;
+  const treadHalfW = 0.11;
+  const visualSlope = coneRatio * effectiveExag;
 
-  // Build left and right wheel cross-section slice geometries (X-Y plane, thin Z=0.08)
   const { leftGeo, rightGeo } = useMemo(() => {
     const makeWheelSlice = (side: -1 | 1) => {
-      // side = -1 (left wheel, inner edge at +treadHalfW, outer edge at -treadHalfW)
-      // side = +1 (right wheel, inner edge at -treadHalfW, outer edge at +treadHalfW)
       const innerX = side === -1 ? treadHalfW : -treadHalfW;
       const outerX = side === -1 ? -treadHalfW : treadHalfW;
       const rInner = wheelRadius + visualSlope * treadHalfW;
-      const rOuter = Math.max(0.28, wheelRadius - visualSlope * treadHalfW);
-      const flangeTipR = rInner + 0.065;
-      const flangeInnerX = innerX + (side === -1 ? 0.025 : -0.025);
+      const rOuter = Math.max(0.24, wheelRadius - visualSlope * treadHalfW);
+      const flangeTipR = rInner + 0.075;
+      const flangeInnerX = innerX + (side === -1 ? 0.03 : -0.03);
 
       const shape = new THREE.Shape();
-      // Top-half + bottom-half wheel profile slice centered at (0, 0)
       shape.moveTo(outerX, rOuter);
       shape.lineTo(innerX, rInner);
       shape.lineTo(innerX, flangeTipR);
@@ -74,15 +71,16 @@ export const RailCrossSection: React.FC<RailCrossSectionProps> = ({
       shape.lineTo(outerX, -rOuter);
       shape.closePath();
 
-      const g = new THREE.ExtrudeGeometry(shape, { depth: 0.06, bevelEnabled: false });
-      g.translate(0, 0, -0.03);
+      const g = new THREE.ExtrudeGeometry(shape, { depth: 0.05, bevelEnabled: false });
+      g.translate(0, 0, -0.025);
       return g;
     };
     return { leftGeo: makeWheelSlice(-1), rightGeo: makeWheelSlice(1) };
   }, [visualSlope]);
 
-  const leftAxleWorldX = layout.center[0] + layout.leftWheelLocalX;
-  const rightAxleWorldX = layout.center[0] + layout.rightWheelLocalX;
+  // Visual contact point shifts across wheel tread relative to flange as lateralShift changes
+  const leftContactX = -halfGauge + lateralShift * 1.4;
+  const rightContactX = halfGauge + lateralShift * 1.4;
 
   return (
     <TelemetryEntity
@@ -98,7 +96,7 @@ export const RailCrossSection: React.FC<RailCrossSectionProps> = ({
       partStates={{
         view,
         lateral_shift: Math.round(lateralShift * 1000) / 1000,
-        taper_exaggeration: taperExaggeration,
+        taper_exaggeration: effectiveExag,
         left_effective_radius: Math.round(layout.leftEffectiveRadius * 10000) / 10000,
         right_effective_radius: Math.round(layout.rightEffectiveRadius * 10000) / 10000,
       }}
@@ -109,97 +107,63 @@ export const RailCrossSection: React.FC<RailCrossSectionProps> = ({
       }}
     >
       <group>
-        {/* Sleeper cross-section */}
+        {/* Blueprint sleeper cross-section */}
         <mesh position={[0, 0.025, 0]}>
-          <boxGeometry args={[gauge + 0.9, 0.05, 0.14]} />
-          <meshStandardMaterial color={tokens.colors.gridSecondary} />
+          <boxGeometry args={[gauge + 0.55, 0.05, 0.12]} />
+          <meshBasicMaterial color={tokens.colors.gridSecondary} />
         </mesh>
 
-        {/* Twin I-beam rail cross-sections */}
+        {/* Twin I-beam rail cross-sections (Blueprint flat fill + outline) */}
         {([-halfGauge, halfGauge] as const).map((x, idx) => (
           <group key={idx} position={[x, 0.05, 0]}>
             <mesh position={[0, 0.015, 0]}>
-              <boxGeometry args={[0.14, 0.03, 0.12]} />
-              <meshStandardMaterial color={tokens.colors.steel} metalness={0.65} roughness={0.35} />
+              <boxGeometry args={[0.14, 0.03, 0.1]} />
+              <meshBasicMaterial color={tokens.colors.steel} />
             </mesh>
             <mesh position={[0, 0.08, 0]}>
-              <boxGeometry args={[0.036, 0.11, 0.12]} />
-              <meshStandardMaterial color={tokens.colors.steel} metalness={0.65} roughness={0.35} />
+              <boxGeometry args={[0.038, 0.11, 0.1]} />
+              <meshBasicMaterial color={tokens.colors.steel} />
             </mesh>
             <mesh position={[0, 0.145, 0]}>
-              <boxGeometry args={[0.09, 0.05, 0.12]} />
-              <meshStandardMaterial
-                color={tokens.colors.accent}
-                emissive={tokens.colors.accent}
-                emissiveIntensity={0.35}
-              />
+              <boxGeometry args={[0.11, 0.05, 0.1]} />
+              <meshBasicMaterial color={tokens.colors.accent} />
             </mesh>
           </group>
         ))}
 
         {/* Wheelset cross-section */}
         <group position={[layout.center[0], axleY, 0]}>
-          {/* Solid axle */}
           <mesh rotation={[0, 0, Math.PI / 2]}>
-            <cylinderGeometry args={[0.055, 0.055, gauge + 0.14, 24]} />
-            <meshStandardMaterial color={tokens.colors.steelLight} metalness={0.7} roughness={0.28} />
+            <cylinderGeometry args={[0.052, 0.052, gauge + 0.1, 20]} />
+            <meshBasicMaterial color={tokens.colors.steelLight} />
           </mesh>
 
-          {/* Left wheel cross-section slice */}
           <mesh ref={wheelLeftRef} geometry={leftGeo} position={[layout.leftWheelLocalX, 0, 0]}>
-            <meshStandardMaterial color={tokens.colors.steel} metalness={0.6} roughness={0.32} />
+            <meshBasicMaterial color={tokens.colors.primary} />
           </mesh>
-
-          {/* Right wheel cross-section slice */}
           <mesh ref={wheelRightRef} geometry={rightGeo} position={[layout.rightWheelLocalX, 0, 0]}>
-            <meshStandardMaterial color={tokens.colors.steel} metalness={0.6} roughness={0.32} />
+            <meshBasicMaterial color={tokens.colors.primary} />
           </mesh>
 
-          {/* Highlighted inner flange indicator */}
-          <mesh ref={flangeRef} position={[layout.leftFlangeLocalX, -wheelRadius * 0.65, 0.045]}>
-            <boxGeometry args={[0.035, 0.18, 0.03]} />
-            <meshStandardMaterial
-              color={tokens.colors.accentWarm}
-              emissive={tokens.colors.accentWarm}
-              emissiveIntensity={0.7}
-            />
+          {/* Inner flange highlights */}
+          <mesh ref={flangeRef} position={[layout.leftFlangeLocalX, -wheelRadius * 0.65, 0.04]}>
+            <boxGeometry args={[0.035, 0.18, 0.02]} />
+            <meshBasicMaterial color={tokens.colors.accentWarm} />
+          </mesh>
+          <mesh position={[layout.rightFlangeLocalX, -wheelRadius * 0.65, 0.04]}>
+            <boxGeometry args={[0.035, 0.18, 0.02]} />
+            <meshBasicMaterial color={tokens.colors.accentWarm} />
           </mesh>
         </group>
 
-        {/* Contact point markers from computeWheelsetLayout */}
-        <mesh ref={contactLeftRef} position={[layout.leftContactWorld[0], railHeadTopY + 0.015, 0.05]}>
-          <sphereGeometry args={[0.038, 16, 16]} />
-          <meshStandardMaterial
-            color={tokens.colors.accentWarm}
-            emissive={tokens.colors.accentWarm}
-            emissiveIntensity={0.8}
-          />
+        {/* Shifting contact point markers */}
+        <mesh ref={contactLeftRef} position={[leftContactX, railHeadTopY + 0.015, 0.06]}>
+          <sphereGeometry args={[0.042, 16, 16]} />
+          <meshBasicMaterial color={tokens.colors.accentWarm} />
         </mesh>
-        <mesh ref={contactRightRef} position={[layout.rightContactWorld[0], railHeadTopY + 0.015, 0.05]}>
-          <sphereGeometry args={[0.038, 16, 16]} />
-          <meshStandardMaterial
-            color={tokens.colors.accentWarm}
-            emissive={tokens.colors.accentWarm}
-            emissiveIntensity={0.8}
-          />
-        </mesh>
-
-        {/* Effective radius lines computed directly from layout.leftEffectiveRadius & layout.rightEffectiveRadius */}
-        <mesh position={[leftAxleWorldX, axleY - layout.leftEffectiveRadius / 2, 0.06]}>
-          <boxGeometry args={[0.022, layout.leftEffectiveRadius, 0.022]} />
-          <meshStandardMaterial
-            color={tokens.colors.accent}
-            emissive={tokens.colors.accent}
-            emissiveIntensity={0.7}
-          />
-        </mesh>
-        <mesh position={[rightAxleWorldX, axleY - layout.rightEffectiveRadius / 2, 0.06]}>
-          <boxGeometry args={[0.022, layout.rightEffectiveRadius, 0.022]} />
-          <meshStandardMaterial
-            color={tokens.colors.accentWarm}
-            emissive={tokens.colors.accentWarm}
-            emissiveIntensity={0.7}
-          />
+        <mesh ref={contactRightRef} position={[rightContactX, railHeadTopY + 0.015, 0.06]}>
+          <sphereGeometry args={[0.042, 16, 16]} />
+          <meshBasicMaterial color={tokens.colors.accentWarm} />
         </mesh>
       </group>
     </TelemetryEntity>

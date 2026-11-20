@@ -94,7 +94,7 @@ export async function runStoryboardQcStage(
         StoryboardSchema,
         `Perbaiki storyboard berikut agar lolos semua pemeriksaan (0 error):\n${errors
           .map((e) => `- [${e.ref}] ${e.message}`)
-          .join('\n')}\n\nATURAN PERBAIKAN: Setiap item di hud[] yang menyebut angka apa pun WAJIB memiliki "claim_ref": "<ID klaim verified>" atau "bind_to_driver": true (wajib quantity + display) atau "illustrative": true. Jangan melebih-lebihkan kutipan (hindari "tanpa"/"Kontinu"/"selalu" jika sumber lunak).\n\nStoryboard lama:\n${JSON.stringify(storyboard, null, 2)}\n\nTimeline:\n${JSON.stringify(
+          .join('\n')}\n\nATURAN PERBAIKAN: Setiap item di hud[] yang menyebut angka apa pun WAJIB memiliki "claim_ref": "<ID klaim verified>" atau "bind_to_driver": true atau "illustrative": true. Untuk StatCounter / bind_to_driver: true, WAJIB sertakan di level item hud (bukan hanya di props): "quantity": "crank_angle"|"lateral_shift"|"effective_diameter"|"progress" dan "display": "value"|"qualitative", serta props.label menyebut nama besaran ("Sudut Poros Engkol", "Geser Lateral", atau "Diameter Efektif"). Jangan melebih-lebihkan kutipan (hindari "tanpa"/"Kontinu"/"selalu" jika sumber lunak).\n\nStoryboard lama:\n${JSON.stringify(storyboard, null, 2)}\n\nTimeline:\n${JSON.stringify(
           timeline.scenes,
           null,
           2

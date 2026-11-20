@@ -8,6 +8,7 @@ import type { Script } from '@core/contracts/script';
 import { StoryboardSchema, type Storyboard, type StoryboardScene } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
+import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
 import { clearRemotionBundleCache, runVisualQc } from '@core/qc/visual/runner';
 import type { VisualQcResult } from '@core/qc/visual/types';
@@ -20,24 +21,35 @@ const SceneCodeOutputSchema = z.object({
   tsx: z.string().min(40),
 });
 
+export class KitFaultError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'KitFaultError';
+  }
+}
+
 export interface SceneGenRecord {
   sceneId: string;
   fixes: number;
   passed: boolean;
+  kitFault?: boolean;
+  cached?: boolean;
   errors: string[];
   lineCount: number;
 }
 
-function collectQcErrors(qc: VisualQcResult): string[] {
+function collectQcErrors(qc: VisualQcResult): { errors: string[]; hasKitError: boolean } {
   const out: string[] = [];
+  let hasKitError = false;
   for (const [layer, rep] of Object.entries(qc.reports)) {
     for (const iss of rep.issues) {
       if (iss.severity === 'error') {
-        out.push(`[${layer}] ${iss.ref ?? ''}: ${iss.message}`);
+        if (iss.owner === 'kit') hasKitError = true;
+        out.push(`[${layer}${iss.owner ? `:${iss.owner}` : ''}] ${iss.ref ?? ''}: ${iss.message}`);
       }
     }
   }
-  return out;
+  return { errors: out, hasKitError };
 }
 
 async function runRemotionTscForFile(
@@ -103,7 +115,7 @@ ATURAN MUTLAK:
   }', startSec: ${triggerRelSec}, durationSec: ${driverDur}, curve: 'linear' }).
 4. Bungkus 3D + HUD dalam <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy"><BlueprintStage palette="blueprint-navy" telemetry={telemetry} hud={...}>...</BlueprintStage></SceneTransition>.
 5. Pilih rakitan sesuai shot_type/focus_entities (CameraRig HANYA mendukung mode="frameEntities", DILARANG mode="follow" dan DILARANG menyetel from/to/radius/height manual! Jika memakai curveRadius, hitung const wl = computeWheelsetLayout({ distance: driver.value, curveStartZ: 2, curveRadius: 10 }); agar focusBox mengikuti tikungan):
-   - "train_car" (establishing/summary): <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <TrainCar entityId="train_car" distance={driver.value} curveStartZ={2} curveRadius={10} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }} padding={1.08}.
+   - "train_car" (establishing/summary): <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <TrainCar entityId="train_car" distance={driver.value} curveStartZ={2} curveRadius={10} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }} padding={1.12} startAngleDeg={-25} endAngleDeg={25}.
    - "rail_cross_section" (cross_section): <Ground size={40} divisions={40} y={0} /> + <RailCrossSection entityId="rail_cross_section" view="section" lateralShift={driver.name.toLowerCase().includes('lateral') || driver.name.toLowerCase().includes('shift') ? driver.value : 0.025 * Math.sin(driver.progress * Math.PI)} taperExaggeration={5} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 0.55, 0], size: [1.85, 1.05, 0.4] }} padding={1.15} startAngleDeg={0} endAngleDeg={0} elevationDeg={2}. WAJIB sertakan <ExaggerationBadge factor={5} palette="blueprint-navy" /> di dalam <HudLayout>!
    - "wheelset": <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <WheelsetOnRail entityId="wheelset" distance={driver.value} taperExaggeration={4.5} curveStartZ={2} curveRadius={10} highlightContact palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }} padding={1.55} elevationDeg={24}. (Jika taperExaggeration > 1, sertakan <ExaggerationBadge factor={4.5} palette="blueprint-navy" /> di dalam <HudLayout>!)
    - "engine_block" (establishing/summary/cutaway): <Ground size={36} divisions={36} y={-0.55} /> + <EngineBlock entityId="engine_block" crankAngleDeg={driver.value} cutawayProgress={driver.progress} position={[0, 0.45, 0]} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 1.65, 0], size: [1.85, 2.5, 1.85] }} padding={1.08}.
@@ -120,8 +132,16 @@ Kembalikan JSON { "tsx": "..." }.`;
 
 export async function runScenesStage(
   projectId: string,
-  repoRoot = process.cwd()
+  repoRoot = process.cwd(),
+  options?: {
+    tracker?: RunLlmTracker;
+    generateJsonFn?: typeof generateJson;
+    runVisualQcFn?: typeof runVisualQc;
+    skipTscAndRegistry?: boolean;
+  }
 ): Promise<SceneGenRecord[]> {
+  const llm = options?.generateJsonFn ?? generateJson;
+  const runQc = options?.runVisualQcFn ?? runVisualQc;
   const projectDir = getProjectDir(projectId, repoRoot);
   const project = await loadProject(projectId, repoRoot);
   if (project.stages.S7 !== 'done') {
@@ -151,6 +171,11 @@ export async function runScenesStage(
   const scriptMap = new Map(script.scenes.map((s) => [s.id, s]));
   const metas: GeneratedCompMeta[] = [];
   const records: SceneGenRecord[] = [];
+  const kitApi = await readFile(path.join(repoRoot, 'remotion', 'src', 'kit', 'KIT-API.md'), 'utf-8').catch(() => '');
+  const cachePath = path.join(projScenesDir, 'cache.json');
+  const sceneCache: Record<string, { hash: string; passed: boolean }> = JSON.parse(
+    await readFile(cachePath, 'utf-8').catch(() => '{}')
+  );
   let s8Calls = 0;
   let s9Calls = 0;
 
@@ -162,6 +187,24 @@ export async function runScenesStage(
       const scScene = scriptMap.get(sbScene.id);
       const narrationText = scScene?.sentences.map((s) => s.text).join(' ') ?? '';
       const triggerRelSec = findTriggerTimeInScene(sbScene.id, sbScene.trigger_words, timeline);
+      const sceneHash = computeStableHash({ sbScene, kitApi, promptVersion: 'p4b-v1' });
+      const tsxPath = path.join(genDir, `${sbScene.id}.tsx`);
+
+      if (sceneCache[sbScene.id]?.hash === sceneHash && sceneCache[sbScene.id]?.passed === true) {
+        const existingCode = await readFile(tsxPath, 'utf-8').catch(() => '');
+        if (existingCode) {
+          metas.push({ id: compId, importPath: `./${sbScene.id}`, exportName, durationInFrames: frames });
+          records.push({
+            sceneId: sbScene.id,
+            fixes: 0,
+            passed: true,
+            cached: true,
+            errors: [],
+            lineCount: existingCode.split(/\r?\n/).length,
+          });
+          continue;
+        }
+      }
 
       const basePrompt = buildScenePrompt({
         projectId: safeSlug,
@@ -171,8 +214,11 @@ export async function runScenesStage(
         exportName,
       });
 
-      const genRes = await generateJson(SceneCodeOutputSchema, basePrompt, {
+      const genRes = await llm(SceneCodeOutputSchema, basePrompt, {
         stage: 'S8',
+        purpose: 'scene_gen',
+        sceneId: sbScene.id,
+        tracker: options?.tracker,
         onCallRecord: () => {
           s8Calls++;
         },
@@ -181,7 +227,6 @@ export async function runScenesStage(
       let code = genRes.data.tsx.trim();
       await writeFile(path.join(projScenesDir, `${sbScene.id}.raw.tsx`), code, 'utf-8');
 
-      const tsxPath = path.join(genDir, `${sbScene.id}.tsx`);
       metas.push({
         id: compId,
         importPath: `./${sbScene.id}`,
@@ -192,18 +237,23 @@ export async function runScenesStage(
       let fixes = 0;
       let lastErrors: string[] = [];
       let passed = false;
+      let kitFault = false;
 
       for (let attempt = 0; attempt <= 2; attempt++) {
         await writeFile(tsxPath, code, 'utf-8');
         await writeFile(path.join(genDir, 'meta.json'), JSON.stringify(metas, null, 2), 'utf-8');
-        await syncGeneratedRegistry(repoRoot);
-        clearRemotionBundleCache();
+        if (!options?.skipTscAndRegistry) {
+          await syncGeneratedRegistry(repoRoot);
+          clearRemotionBundleCache();
+        }
 
         const safety = validateSceneCodeSafety(code);
         if (!safety.ok) {
           lastErrors = safety.errors;
         } else {
-          const tsc = await runRemotionTscForFile(repoRoot, `${safeSlug}/${sbScene.id}.tsx`);
+          const tsc = options?.skipTscAndRegistry
+            ? { ok: true, errorText: '' }
+            : await runRemotionTscForFile(repoRoot, `${safeSlug}/${sbScene.id}.tsx`);
           if (!tsc.ok) {
             lastErrors = [`TSC_ERROR: ${tsc.errorText.slice(0, 600)}`];
           } else {
@@ -212,7 +262,7 @@ export async function runScenesStage(
               ...h,
               hud_id: h.hud_id ?? `${sbScene.id}_H${idx + 1}`,
             }));
-            const qc = await runVisualQc({
+            const qc = await runQc({
               spec,
               outputDir: path.join(projQcDir, sbScene.id),
               videoOutPath: path.join(projQcDir, sbScene.id, `_tmp_${sbScene.id}.mp4`),
@@ -220,9 +270,14 @@ export async function runScenesStage(
               deviceProfile: project.device_profile,
               repoRoot,
             });
-            lastErrors = collectQcErrors(qc);
+            const collected = collectQcErrors(qc);
+            lastErrors = collected.errors;
             if (qc.passed) {
               passed = true;
+              break;
+            }
+            if (collected.hasKitError) {
+              kitFault = true;
               break;
             }
           }
@@ -230,13 +285,16 @@ export async function runScenesStage(
 
         if (attempt < 2) {
           fixes++;
-          const fixRes = await generateJson(
+          const fixRes = await llm(
             SceneCodeOutputSchema,
             `Perbaiki kode TSX adegan "${sbScene.id}" berikut karena gagal validasi:\n${lastErrors
               .map((e) => `- ${e}`)
               .join('\n')}\n\nKode saat ini:\n${code}\n\nPastikan mematuhi semua aturan Scene Kit dan batas <= 300 baris. Kembalikan JSON { "tsx": "..." }.`,
             {
               stage: 'S9',
+              purpose: 'scene_fix',
+              sceneId: sbScene.id,
+              tracker: options?.tracker,
               onCallRecord: () => {
                 s9Calls++;
               },
@@ -247,13 +305,21 @@ export async function runScenesStage(
       }
 
       await writeFile(path.join(projScenesDir, `${sbScene.id}.final.tsx`), code, 'utf-8');
+      sceneCache[sbScene.id] = { hash: sceneHash, passed };
+      await writeFile(cachePath, JSON.stringify(sceneCache, null, 2), 'utf-8');
       records.push({
         sceneId: sbScene.id,
         fixes,
         passed,
+        kitFault,
         errors: lastErrors,
         lineCount: code.split(/\r?\n/).length,
       });
+
+      if (kitFault) {
+        await writeFile(path.join(projScenesDir, 'summary.json'), JSON.stringify(records, null, 2), 'utf-8');
+        throw new KitFaultError(`KIT_FAULT: ${sbScene.id} gagal karena kesalahan milik kit (${lastErrors[0]})`);
+      }
     }
 
     await writeFile(path.join(projScenesDir, 'summary.json'), JSON.stringify(records, null, 2), 'utf-8');

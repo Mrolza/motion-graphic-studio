@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import { renderMedia, selectComposition } from '@remotion/renderer';
@@ -155,8 +155,9 @@ export async function runFinalRenderStage(
       })
       .join('\n');
 
+    const remotionPkg = 'remotion';
     const assembledTsx = `import React from 'react';
-import { AbsoluteFill, Series } from 'remotion';
+import { AbsoluteFill, Series } from '${remotionPkg}';
 import { KineticCaptions, TelemetryProvider } from '../../../kit';
 ${imports}
 
@@ -173,7 +174,10 @@ ${seriesItems}
   </TelemetryProvider>
 );
 `;
-    await writeFile(path.join(genDir, 'Assembled.tsx'), assembledTsx, 'utf-8');
+    const assembledPath = path.join(genDir, 'Assembled.tsx');
+    const prevAssembled = await readFile(assembledPath, 'utf-8').catch(() => '');
+    const assembledChanged = prevAssembled !== assembledTsx;
+    await writeFile(assembledPath, assembledTsx, 'utf-8');
 
     const assembledId = `gen-${safeSlug}-assembled`;
     const metaPath = path.join(genDir, 'meta.json');
@@ -198,6 +202,9 @@ ${seriesItems}
       inputProps: { telemetry: false },
     });
     const chunksDir = path.join(projectDir, 'chunks');
+    if (assembledChanged) {
+      await rm(chunksDir, { recursive: true, force: true });
+    }
     await mkdir(chunksDir, { recursive: true });
 
     const chunkPaths: string[] = [];

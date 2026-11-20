@@ -142,6 +142,22 @@ export function verifyStoryboardCode(
       }
 
       const propText = collectTextValues(h.props);
+      if (h.component === 'Callout') {
+        const wordCount = propText.trim().split(/\s+/).filter(Boolean).length;
+        if (wordCount > 12) {
+          issues.push({
+            severity: 'error',
+            message: `HUD_TOO_LONG: Callout "${h.hud_id ?? h.component}" berisi ${wordCount} kata (maks 8 kata, error > 12 kata)`,
+            ref,
+          });
+        } else if (wordCount > 8) {
+          issues.push({
+            severity: 'warning',
+            message: `HUD_TOO_LONG_WARN: Callout "${h.hud_id ?? h.component}" berisi ${wordCount} kata (disarankan <= 8 kata)`,
+            ref,
+          });
+        }
+      }
       if (/\(C\d+\)/.test(propText)) {
         issues.push({
           severity: 'error',

@@ -260,6 +260,7 @@ export function buildVisualSpecForScene(
     expectedHud,
     maxActiveHudPanels: 2,
     shotType: sbScene.shot_type,
+    usesFrameEntities: true,
     minSubjectFillRatio: isEstablishingOrSummary ? 0.3 : 0.2,
     requireFillError: isEstablishingOrSummary,
     syncTargetSec: sbScene.driver ? triggerRelSec : undefined,

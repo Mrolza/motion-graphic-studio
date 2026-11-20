@@ -389,3 +389,33 @@
 - S8–S12 `p2-kereta` (profil `standar`) & S6–S12 `p2-mesin4tak` (profil `hemat`) untuk menghasilkan `final.mp4`, `final-qc.json`, `loudness.txt`, `captions.srt`, `onscreen-text.md`, `publish.md`, contact sheet, still per adegan, dan `stats.md`.
 - Eksekusi 12 mutasi end-to-end pada `final.mp4` sungguhan (`out/review/p4/mutations/mutation-summary.md`).
 - Setelah kuota Gemini pulih, cukup jalankan `node --env-file=.env.local --import tsx scripts/run-p4-e2e.ts`.
+
+---
+
+## Fase P4B — Hemat Kuota, Kamera Pas, & Penampang yang Menjelaskan (`docs/P4B-BUDGET-FIT.md`)
+
+- **Status:** **PARTIAL — menunggu kuota** (Bagian A, Bagian B, seluruh test mock, matriks framing kit, `DemoCrossSection`, & mutasi non-LLM selesai penuh dengan **0 panggilan Gemini sungguhan**; Bagian C menunggu pemulihan kuota harian Gemini pukul 00.00 Pacific / 15.00 WIB saat PST)
+- **Branch:** `phase/p4-audio-final`
+- **Tanggal:** 2026-11-20
+- **Panggilan Gemini sungguhan pada fase P4B ini:** **0**
+
+### Apa yang Dikerjakan & Dibuat (P4B Bagian A & B)
+1. **Bagian A — Hemat Kuota (`src/core/llm/budget.ts`, `client.ts`, `storyboard.ts`, `scene-coder.ts`, `checks.ts`, `.env.example`):**
+   - **A1:** Pencatatan panggilan logis ke `projects/<id>/llm-calls.jsonl` (`{ts, run_id, stage, purpose, scene_id, attempt, http_retries, ok}`), memisahkan `http_retries` dari hitungan panggilan logis.
+   - **A2:** Batas `MGS_LLM_BUDGET_PER_RUN` (default `20`, ditulis di `.env.example`) lewat `RunLlmTracker` yang melempar `LlmBudgetExceededError` sebelum panggilan ke-(limit+1).
+   - **A3:** Pemakaian ulang storyboard (`storyboard.meta.json` hash naskah + timeline + ledger + `KIT-API.md`) dan kode adegan per adegan (`scenes/cache.json` hash adegan + kit + versi prompt; hanya adegan gagal/berubah yang dibuat ulang).
+   - **A4:** Cek pra-run `checkQuotaBeforeRun` terhadap `.mgs/quota.json` dan `GEMINI_RPD_LIMIT`; error 429 kuota harian berhenti seketika dengan pesan waktu pulih 00.00 Pacific (15.00 WIB saat PST).
+   - **A5:** Kepemilikan error QC (`owner: "scene" | "kit"` pada `QcIssue`): error milik kit (`FRAMING_OUT_OF_BOUNDS` / `VISIBILITY_OUT_OF_BOUNDS` saat `frameEntities` + `GEOMETRY_*`) memicu `KitFaultError` (`KIT_FAULT`) dengan **0 panggilan perbaikan S9**.
+2. **Bagian B — Kamera, Penampang v3, & Perbandingan Efektif:**
+   - **B1 (`CameraRig.tsx`, `KitFramingHarness.tsx`):** Proyeksi sumbu kamera 9:16 pada `frameEntities` (FOV vertikal & horizontal + `projFrontD`) dan matriks framing 6 rakitan × 3 nilai penggerak = **18/18 PASS** ([`kit-framing/framing-matrix.md`](../out/review/p4/kit-framing/framing-matrix.md), [`kit-framing/contact-sheet.png`](../out/review/p4/kit-framing/contact-sheet.png)).
+   - **B2 (`RailCrossSection.tsx` v3):** Penampang Blueprint datar dengan kemiringan tapak **12×** (`>= 10×`), badge `<ExaggerationBadge>`, flens dalam, rel I-beam, gandar, dan titik kontak bergeser **44 px** kiri↔kanan (**22 px** dari tengah ke maksimum).
+   - **B3 (`EffectiveDiameterCompare.tsx`):** Perbandingan dua roda ("Roda luar" vs "Roda dalam"), lingkaran efektif roda luar lebih besar (`50px` vs `34px`, > 10% di geser maksimum, sama di tengah, tanda ikut arah geser), batang jarak tempuh, dan badge `"Ilustrasi — skala dilebihkan"` tanpa angka.
+   - **B4 (`storyboard-code.ts`, `storyboard.ts`):** Callout ringkas maks 8 kata (`> 8` peringatan, `> 12` error `HUD_TOO_LONG`).
+   - **B5 (`DemoCrossSection.tsx`):** Still & tabel [`cross-section/`](../out/review/p4/cross-section/) dirender langsung dari **`DemoCrossSection`** dengan angka layar (px) dari telemetri render (`passed: true`, pergeseran kontak kiri `138 px → 160 px → 182 px`).
+
+### Bukti & Verifikasi (Tanpa Gemini)
+- **`npm run verify`** ([`verify.txt`](../out/review/p4/verify.txt)): `tsc` lolos, **20 test files / 75 tests passed** (termasuk [`tests/p4bBudgetAndKit.test.ts`](../tests/p4bBudgetAndKit.test.ts) dengan klien LLM tiruan), `check:size OK` (129 berkas sumber).
+- **Mutasi Non-LLM ([`mutations/mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md)):** Mutasi 1–7, 12, dan 13–16 (`LLM_BUDGET_EXCEEDED`, `scene cache reuse`, `KIT_FAULT`, `HUD_TOO_LONG`) semuanya tertangkap.
+
+### Yang Menunggu Pemulihan Kuota (Bagian C)
+- Menjalankan Bagian C (`p2-kereta` profil Standar & `p2-mesin4tak` profil Hemat, batas ≤ 20 panggilan/run) untuk menghasilkan `final.mp4`, `final-qc.json`, `captions.srt`, `publish.md`, `llm-calls.jsonl`, `stats.md`, serta mutasi real-render 8–11.

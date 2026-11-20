@@ -123,3 +123,42 @@ export function formatValueWithUnit(value: number, unit?: string, decimals = 0):
   if (u === '°' || u === '%') return `${num}${u}`;
   return `${num} ${u}`;
 }
+
+export interface CompareRadiiResult {
+  leftRadiusPx: number;
+  rightRadiusPx: number;
+  outerSide: 'left' | 'right' | 'equal';
+  outerRadiusPx: number;
+  innerRadiusPx: number;
+}
+
+/**
+ * Computes exaggerated effective rolling radii (px) for side-by-side comparison.
+ */
+export function computeEffectiveCompareRadii(
+  lateralShift: number,
+  maxShift = 0.06
+): CompareRadiiResult {
+  const base = 42;
+  const norm = Math.max(-1, Math.min(1, lateralShift / Math.max(1e-4, maxShift)));
+  const delta = Math.abs(norm) * 8;
+  if (Math.abs(norm) < 0.05) {
+    return {
+      leftRadiusPx: base,
+      rightRadiusPx: base,
+      outerSide: 'equal',
+      outerRadiusPx: base,
+      innerRadiusPx: base,
+    };
+  }
+  const rightIsOuter = norm > 0;
+  const leftRadiusPx = Math.round(rightIsOuter ? base - delta : base + delta);
+  const rightRadiusPx = Math.round(rightIsOuter ? base + delta : base - delta);
+  return {
+    leftRadiusPx,
+    rightRadiusPx,
+    outerSide: rightIsOuter ? 'right' : 'left',
+    outerRadiusPx: Math.max(leftRadiusPx, rightRadiusPx),
+    innerRadiusPx: Math.min(leftRadiusPx, rightRadiusPx),
+  };
+}

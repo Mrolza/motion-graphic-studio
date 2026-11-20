@@ -2,6 +2,7 @@ import React, { createContext, useContext } from 'react';
 import type { DriverValue } from '../drivers/useDriver';
 import type { PaletteId } from '../tokens/index';
 import { Callout, DimensionLine, KineticTitle, MeasureReveal, StatCounter } from './HudCore';
+import { EffectiveDiameterCompare } from './EffectiveDiameterCompare';
 import { CompareCard, DateStamp, ListReveal, Timeline } from './HudExtras';
 
 export interface StoryboardHudDataItem {
@@ -151,6 +152,14 @@ export const Hud: React.FC<HudProps> = ({
           id={id}
           steps={Array.isArray(p.steps) ? p.steps.map(String) : []}
           progress={driver?.progress ?? num('progress', 0)}
+          palette={palette}
+        />
+      );
+    case 'EffectiveDiameterCompare':
+      return (
+        <EffectiveDiameterCompare
+          id={id}
+          lateralShift={driver ? driver.value : num('lateralShift', 0)}
           palette={palette}
         />
       );

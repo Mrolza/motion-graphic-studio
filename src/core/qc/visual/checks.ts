@@ -1,18 +1,11 @@
 import type { QcIssue } from '@core/contracts/qc-report';
 import type { ScreenBox, TelemetrySample, VisualCheckSpec } from './types';
-export {
-  checkBlankFrames,
-  checkOnscreenTruthFromTelemetry,
-  checkSyncFromTelemetry,
-} from './media-checks';
+export { checkBlankFrames, checkOnscreenTruthFromTelemetry, checkSyncFromTelemetry } from './media-checks';
 
 function intersectionArea(a: ScreenBox, b: ScreenBox): number {
-  const x1 = Math.max(a.x, b.x);
-  const y1 = Math.max(a.y, b.y);
-  const x2 = Math.min(a.x + a.width, b.x + b.width);
-  const y2 = Math.min(a.y + a.height, b.y + b.height);
-  if (x2 <= x1 || y2 <= y1) return 0;
-  return (x2 - x1) * (y2 - y1);
+  const x1 = Math.max(a.x, b.x), y1 = Math.max(a.y, b.y);
+  const x2 = Math.min(a.x + a.width, b.x + b.width), y2 = Math.min(a.y + a.height, b.y + b.height);
+  return x2 <= x1 || y2 <= y1 ? 0 : (x2 - x1) * (y2 - y1);
 }
 
 /**
@@ -133,6 +126,7 @@ export function checkFramingFromTelemetry(
           severity: 'error',
           message: `FRAMING_OUT_OF_BOUNDS: "${focusId}" bbox=[${b.x},${b.y},${b.width}x${b.height}] keluar area aman [${safe.minX}..${safe.maxX}, ${safe.minY}..${safe.maxY}]`,
           ref,
+          owner: spec.usesFrameEntities ? 'kit' : 'scene',
         });
       } else {
         const freeZoneArea = 720 * 560;
@@ -280,6 +274,7 @@ export function checkGeometryFromTelemetry(
           severity: 'error',
           message: `GEOMETRY_MISSING: ${rule.entity}.geometry.${rule.key} tidak dilaporkan`,
           ref,
+          owner: 'kit',
         });
         continue;
       }
@@ -290,6 +285,7 @@ export function checkGeometryFromTelemetry(
             severity: 'error',
             message: `GEOMETRY_VIOLATION: ${rule.entity}.${rule.key}=${String(val)} melebihi toleransi ${threshold}`,
             ref,
+            owner: 'kit',
           });
         }
       } else if (rule.op === 'equals') {
@@ -298,6 +294,7 @@ export function checkGeometryFromTelemetry(
             severity: 'error',
             message: `GEOMETRY_VIOLATION: ${rule.entity}.${rule.key}=${String(val)} (harus ${String(rule.expected)})`,
             ref,
+            owner: 'kit',
           });
         }
       }
@@ -375,6 +372,7 @@ export function checkVisibilityFromTelemetry(
           severity: 'error',
           message: `VISIBILITY_OUT_OF_BOUNDS: bagian "${vp.entity}.${vp.part}" bbox=[${pBox.x},${pBox.y},${pBox.width}x${pBox.height}] keluar area aman`,
           ref,
+          owner: spec.usesFrameEntities ? 'kit' : 'scene',
         });
         continue;
       }

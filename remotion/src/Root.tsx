@@ -1,8 +1,10 @@
 import React from 'react';
 import { Composition } from 'remotion';
 import { BLUEPRINT_TOKENS } from './kit';
+import { DemoCrossSection } from './scenes/DemoCrossSection';
 import { DemoKereta } from './scenes/DemoKereta';
 import { DemoMesin } from './scenes/DemoMesin';
+import { KitFramingHarness } from './scenes/KitFramingHarness';
 import { KitSample } from './scenes/KitSample';
 import { GeneratedCompositions } from './scenes/generated/registry';
 
@@ -35,6 +37,24 @@ export const RemotionRoot: React.FC = () => {
         width={BLUEPRINT_TOKENS.viewport.width}
         height={BLUEPRINT_TOKENS.viewport.height}
         defaultProps={{ telemetry: false }}
+      />
+      <Composition
+        id="DemoCrossSection"
+        component={DemoCrossSection}
+        durationInFrames={90}
+        fps={BLUEPRINT_TOKENS.viewport.fps}
+        width={BLUEPRINT_TOKENS.viewport.width}
+        height={BLUEPRINT_TOKENS.viewport.height}
+        defaultProps={{ telemetry: false }}
+      />
+      <Composition
+        id="KitFramingHarness"
+        component={KitFramingHarness}
+        durationInFrames={30}
+        fps={BLUEPRINT_TOKENS.viewport.fps}
+        width={BLUEPRINT_TOKENS.viewport.width}
+        height={BLUEPRINT_TOKENS.viewport.height}
+        defaultProps={{ telemetry: false, assembly: 'TrainCar' as const, driverValue: 0 }}
       />
     </>
   );
