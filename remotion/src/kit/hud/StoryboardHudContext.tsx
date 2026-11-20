@@ -10,6 +10,8 @@ export interface StoryboardHudDataItem {
   props: Record<string, unknown>;
   claim_ref?: string;
   bind_to_driver?: boolean;
+  quantity?: string;
+  display?: 'value' | 'qualitative';
   illustrative?: boolean;
   when?: { driver_between: [number, number] };
 }
@@ -101,6 +103,7 @@ export const Hud: React.FC<HudProps> = ({
           label={str('label')}
           driver={driver}
           bindToDriver={Boolean(driver) && Boolean(item.bind_to_driver ?? p.bind_to_driver ?? true)}
+          display={item.display ?? (p.display === 'qualitative' ? 'qualitative' : 'value')}
           from={num('from', 0)}
           to={num('to', 100)}
           unit={str('unit', driver?.unit ?? '')}

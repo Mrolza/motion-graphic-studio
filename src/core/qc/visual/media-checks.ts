@@ -2,6 +2,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
 import type { QcIssue } from '@core/contracts/qc-report';
+import { QUANTITY_LABELS } from '@core/qc/l5-semantic';
 import type { TelemetrySample, VisualCheckSpec } from './types';
 
 const execFileAsync = promisify(execFile);
@@ -67,6 +68,7 @@ export function checkOnscreenTruthFromTelemetry(
     const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
     for (const h of sample.hud) {
       const hid = h.hud_id ?? h.id;
+      if (hid === '__kit_exaggeration_badge') continue;
       const exp = expectedMap.get(hid);
       if (!exp) {
         const key = `unsanctioned:${hid}`;
@@ -79,6 +81,43 @@ export function checkOnscreenTruthFromTelemetry(
           });
         }
         continue;
+      }
+
+      if (exp.bind_to_driver) {
+        const expectedLabel = exp.quantity ? QUANTITY_LABELS[exp.quantity] : undefined;
+        if (expectedLabel && !h.text.toLowerCase().includes(expectedLabel.toLowerCase())) {
+          const key = `drvlabel:${hid}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            issues.push({
+              severity: 'error',
+              message: `L5_DRIVER_LABEL_MISMATCH: HUD "${hid}" ("${h.text}") tidak menyebut besaran "${expectedLabel}"`,
+              ref,
+            });
+          }
+        }
+        if (exp.display === 'value' && !exp.claim_ref) {
+          const key = `drvunsourced:${hid}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            issues.push({
+              severity: 'error',
+              message: `L5_UNSOURCED_DRIVER_VALUE: HUD "${hid}" menampilkan angka penggerak tanpa claim_ref pendukung`,
+              ref,
+            });
+          }
+        }
+        if (exp.display === 'qualitative' && h.numericValue !== undefined) {
+          const key = `drvqual:${hid}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            issues.push({
+              severity: 'error',
+              message: `L5_UNSOURCED_DRIVER_VALUE: HUD "${hid}" bertipe qualitative tetapi menampilkan angka (${h.numericValue})`,
+              ref,
+            });
+          }
+        }
       }
 
       if (!exp.bind_to_driver && exp.claim_ref) {

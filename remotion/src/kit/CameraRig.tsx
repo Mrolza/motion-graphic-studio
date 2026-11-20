@@ -90,7 +90,7 @@ export const CameraRig: React.FC<CameraRigProps> = ({
       const freeZoneHeightRatio = 0.45;
       const distV = halfH / (Math.tan(vFovRad / 2) * freeZoneHeightRatio);
       const distH = Math.max(halfW, halfD) / Math.tan(hFovRad / 2);
-      const dist = Math.max(distV, distH) + halfD;
+      const dist = Math.max(distV, distH) + halfD * 0.35;
       // Shift lookAt slightly DOWN so the 3D subject projects into the upper-middle free zone (y ~ 280..840)
       const freeZoneCenterShift = -dist * Math.tan(vFovRad / 2) * 0.14;
       const azimRad = ((startAngleDeg + (endAngleDeg - startAngleDeg) * p) * Math.PI) / 180;

@@ -108,11 +108,13 @@ export {
   MeasureReveal,
   DimensionLine,
   Callout,
+  ExaggerationBadge,
   type KineticTitleProps,
   type StatCounterProps,
   type MeasureRevealProps,
   type DimensionLineProps,
   type CalloutProps,
+  type ExaggerationBadgeProps,
 } from './hud/HudCore';
 export {
   ListReveal,

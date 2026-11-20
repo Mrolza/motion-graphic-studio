@@ -57,12 +57,16 @@ ATURAN WAJIB:
    - Adegan 1 sebaiknya "establishing" (mis. TrainCar atau EngineBlock).
    - Minimal 3 jenis shot_type berbeda dalam satu video; dua adegan berurutan TIDAK BOLEH memakai shot_type dan focus_entities yang sama!
 3. "sentence_refs" berisi ID kalimat adegan itu (mis. ["S1.1", "S1.2"]).
-4. "focus_entities" dan "visible_parts" WAJIB tidak kosong (train_car: ["body"]; rail_cross_section: ["rail_left","rail_right"]; engine_block: ["block"]; wheelset: ["wheel_left","wheel_right","flange"]; piston_crank: ["piston","crank","intake_valve","exhaust_valve","spark_plug"]).
+4. "focus_entities" dan "visible_parts" WAJIB tidak kosong (train_car: ["body"]; rail_cross_section: ["wheel_left","wheel_right","flange"]; engine_block: ["block"]; wheelset: ["wheel_left","wheel_right","flange"]; piston_crank: ["piston","crank","intake_valve","exhaust_valve","spark_plug"]).
+   - shot_type="establishing" WAJIB memakai "train_car" atau "engine_block".
+   - shot_type="cross_section" WAJIB memakai "rail_cross_section" dan "view": "section".
 5. "driver": tentukan satu penggerak fisik utama per adegan (untuk sudut gunakan unit "°", bukan "deg").
 6. "invariants": jika ada mekanisme berstatus (intake_valve, exhaust_valve, spark), deklarasikan invarian dengan rentang "driver_between" DI DALAM [from, to] driver adegan itu.
 7. "hud": MAKSIMAL 2 item HUD per adegan (di luar judul). Setiap item WAJIB memiliki "hud_id" unik (mis. "S1_H1", "S1_H2").
    - Untuk penjelasan langkah mesin (hisap/kompresi/usaha/buang), WAJIB sertakan "when": { "driver_between": [a, b] } agar teks hanya muncul pada rentang sudut langkahnya!
    - Setiap item HUD (termasuk KineticTitle/Callout) yang memuat angka atau fakta WAJIB mengisi "claim_ref" ke salah satu ID klaim verified (atau "bind_to_driver": true untuk StatCounter, atau "illustrative": true).
+   - Jika "bind_to_driver": true (atau StatCounter): WAJIB isi "quantity" (salah satu dari "crank_angle", "lateral_shift", "distance", "effective_diameter", "progress") dan "display" ("value" | "qualitative"). Label WAJIB menyebut istilah besaran (mis. "Sudut Poros Engkol" untuk crank_angle, "Geser Lateral" untuk lateral_shift, "Diameter Efektif" untuk effective_diameter). Gunakan display="value" HANYA jika rentang angkanya didukung claim_ref; jika tidak ada dukungan angka di klaim, WAJIB display="qualitative" tanpa angka!
+   - KEBENARAN MAKNA (L5 semantik): JANGAN melebih-lebihkan klaim ("less chance" jangan ditulis "tanpa", jangan tambah kata "Kontinu"/"selalu"/"semua" jika tidak ada di kutipan), dan JANGAN hilangkan syarat ("tanpa bentuk kerucut", "cenderung"). Judul ilustratif harus persis menjawab topik "${project.topic}".
    - Setiap angka pada teks HUD WAJIB cocok dengan klaim rujukan dan berformat id-ID (jangan bocorkan "(C1)"/"(C2)" di teks HUD, jangan pakai "deg" — gunakan "°").
 8. "trigger_words": pilih 1-2 kata KUNCI yang BENAR-BENAR ADA persis di kalimat narasi adegan itu untuk memicu gerak utama.
 
