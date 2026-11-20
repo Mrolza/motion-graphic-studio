@@ -1,10 +1,6 @@
-import { execFile } from 'node:child_process';
-import { promisify } from 'node:util';
-import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
 import type { QcIssue } from '@core/contracts/qc-report';
 import type { ScreenBox, TelemetrySample, VisualCheckSpec } from './types';
-
-const execFileAsync = promisify(execFile);
+export { checkBlankFrames, checkSyncFromTelemetry } from './media-checks';
 
 function intersectionArea(a: ScreenBox, b: ScreenBox): number {
   const x1 = Math.max(a.x, b.x);
@@ -341,46 +337,6 @@ export function checkVisibilityFromTelemetry(
           });
         }
       }
-    }
-  }
-  return issues;
-}
-
-/**
- * Checks sampled PNG frames using FFmpeg rawvideo luminance mean and standard deviation.
- */
-export async function checkBlankFrames(framePngPaths: string[]): Promise<QcIssue[]> {
-  const issues: QcIssue[] = [];
-  const ffmpegBin = ffmpegInstaller.path;
-
-  for (const pngPath of framePngPaths) {
-    const { stdout } = await execFileAsync(
-      ffmpegBin,
-      ['-v', 'error', '-i', pngPath, '-vf', 'scale=90:160', '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1'],
-      { encoding: 'buffer', maxBuffer: 1024 * 1024 }
-    );
-    const buf = stdout as unknown as Buffer;
-    const pixelCount = Math.floor(buf.length / 3);
-    if (pixelCount === 0) {
-      issues.push({ severity: 'error', message: 'BLANK_FRAME: gagal membaca piksel frame', ref: pngPath });
-      continue;
-    }
-    let sum = 0;
-    let sumSq = 0;
-    for (let i = 0; i < pixelCount * 3; i += 3) {
-      const luma = 0.2126 * buf[i]! + 0.7152 * buf[i + 1]! + 0.0722 * buf[i + 2]!;
-      sum += luma;
-      sumSq += luma * luma;
-    }
-    const mean = sum / pixelCount;
-    const variance = Math.max(0, sumSq / pixelCount - mean * mean);
-    const std = Math.sqrt(variance);
-    if (mean < 4 || std < 2) {
-      issues.push({
-        severity: 'error',
-        message: `BLANK_FRAME: frame kosong/datar (meanLuma=${mean.toFixed(2)}, std=${std.toFixed(2)})`,
-        ref: pngPath,
-      });
     }
   }
   return issues;

@@ -1,0 +1,2073 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 192.7,
+          "y": 181.6,
+          "width": 340.6,
+          "height": 646.9
+        },
+        "parts": {
+          "piston": {
+            "x": 227.7,
+            "y": 360.5,
+            "width": 268.4,
+            "height": 82.7
+          },
+          "crank": {
+            "x": 306,
+            "y": 630.1,
+            "width": 108.2,
+            "height": 166.4
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 190.9,
+            "width": 100.6,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.2,
+            "y": 196.3,
+            "width": 98.1,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33.1,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999033,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 192.7,
+          "y": 181.6,
+          "width": 340.6,
+          "height": 646.8
+        },
+        "parts": {
+          "piston": {
+            "x": 227.7,
+            "y": 360.5,
+            "width": 268.4,
+            "height": 82.7
+          },
+          "crank": {
+            "x": 306,
+            "y": 630.1,
+            "width": 108.2,
+            "height": 166.4
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 190.9,
+            "width": 100.6,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.3,
+            "y": 196.3,
+            "width": 98,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33.1,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193,
+          "y": 181.6,
+          "width": 340.2,
+          "height": 646.8
+        },
+        "parts": {
+          "piston": {
+            "x": 227.9,
+            "y": 360.5,
+            "width": 268.1,
+            "height": 82.7
+          },
+          "crank": {
+            "x": 306.1,
+            "y": 630.1,
+            "width": 108.1,
+            "height": 166.3
+          },
+          "intake_valve": {
+            "x": 267.4,
+            "y": 191,
+            "width": 100.5,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.5,
+            "y": 196.3,
+            "width": 98,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33.1,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.8,
+          "y": 181.7,
+          "width": 339.2,
+          "height": 646.6
+        },
+        "parts": {
+          "piston": {
+            "x": 228.5,
+            "y": 360.5,
+            "width": 267.3,
+            "height": 82.7
+          },
+          "crank": {
+            "x": 306.2,
+            "y": 630.1,
+            "width": 108,
+            "height": 166.2
+          },
+          "intake_valve": {
+            "x": 267.2,
+            "y": 191,
+            "width": 100.1,
+            "height": 104.8
+          },
+          "exhaust_valve": {
+            "x": 353.1,
+            "y": 196.3,
+            "width": 97.8,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 195.4,
+          "y": 181.8,
+          "width": 337,
+          "height": 646.1
+        },
+        "parts": {
+          "piston": {
+            "x": 229.7,
+            "y": 360.5,
+            "width": 265.5,
+            "height": 82.6
+          },
+          "crank": {
+            "x": 306.4,
+            "y": 630.2,
+            "width": 107.6,
+            "height": 166
+          },
+          "intake_valve": {
+            "x": 266.8,
+            "y": 191.2,
+            "width": 99.2,
+            "height": 104.7
+          },
+          "exhaust_valve": {
+            "x": 354.3,
+            "y": 196.2,
+            "width": 97.3,
+            "height": 101.2
+          },
+          "spark_plug": {
+            "x": 343.7,
+            "y": 196.7,
+            "width": 32.7,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 198.4,
+          "y": 182.1,
+          "width": 332.5,
+          "height": 645.2
+        },
+        "parts": {
+          "piston": {
+            "x": 231.9,
+            "y": 360.6,
+            "width": 262,
+            "height": 82.5
+          },
+          "crank": {
+            "x": 306.9,
+            "y": 630.4,
+            "width": 106.8,
+            "height": 165.6
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 191.5,
+            "width": 97.6,
+            "height": 104.4
+          },
+          "exhaust_valve": {
+            "x": 356.2,
+            "y": 196,
+            "width": 96.2,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 343.9,
+            "y": 196.7,
+            "width": 32.3,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 10.746,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 203.6,
+          "y": 182.5,
+          "width": 324.3,
+          "height": 651
+        },
+        "parts": {
+          "piston": {
+            "x": 235.9,
+            "y": 362.7,
+            "width": 255.4,
+            "height": 82.6
+          },
+          "crank": {
+            "x": 301.4,
+            "y": 628.9,
+            "width": 118,
+            "height": 174.4
+          },
+          "intake_valve": {
+            "x": 266.3,
+            "y": 201.4,
+            "width": 94.6,
+            "height": 103.3
+          },
+          "exhaust_valve": {
+            "x": 359.1,
+            "y": 195.8,
+            "width": 94.3,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 344.3,
+            "y": 196.8,
+            "width": 31.5,
+            "height": 93.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 10.75,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.437
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 11 deg",
+        "driverName": "crank_angle",
+        "numericValue": 10.746,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 68.06,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 212.2,
+          "y": 183.3,
+          "width": 309.7,
+          "height": 653.8
+        },
+        "parts": {
+          "piston": {
+            "x": 243.3,
+            "y": 429.2,
+            "width": 242.1,
+            "height": 91.1
+          },
+          "crank": {
+            "x": 298.1,
+            "y": 675.9,
+            "width": 171.6,
+            "height": 132.4
+          },
+          "intake_valve": {
+            "x": 267.4,
+            "y": 239.6,
+            "width": 89.3,
+            "height": 100.1
+          },
+          "exhaust_valve": {
+            "x": 363.2,
+            "y": 195.6,
+            "width": 90.6,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345,
+            "y": 196.8,
+            "width": 30,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 68.06,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.013
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 68 deg",
+        "driverName": "crank_angle",
+        "numericValue": 68.06,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 125.373,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 225.9,
+          "y": 184.6,
+          "width": 284.7,
+          "height": 669.8
+        },
+        "parts": {
+          "piston": {
+            "x": 254.7,
+            "y": 507.7,
+            "width": 220.5,
+            "height": 98.9
+          },
+          "crank": {
+            "x": 297.3,
+            "y": 675.5,
+            "width": 164.2,
+            "height": 151.1
+          },
+          "intake_valve": {
+            "x": 269.9,
+            "y": 234.7,
+            "width": 81.3,
+            "height": 99.8
+          },
+          "exhaust_valve": {
+            "x": 368.5,
+            "y": 195.3,
+            "width": 84.1,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.3,
+            "y": 196.9,
+            "width": 27.6,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 125.37,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.511
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 125 deg",
+        "driverName": "crank_angle",
+        "numericValue": 125.373,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 182.687,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 227.4,
+          "y": 186.6,
+          "width": 263.5,
+          "height": 694
+        },
+        "parts": {
+          "piston": {
+            "x": 259.2,
+            "y": 533.8,
+            "width": 200.3,
+            "height": 97.7
+          },
+          "crank": {
+            "x": 315.1,
+            "y": 692.7,
+            "width": 89.4,
+            "height": 161.7
+          },
+          "intake_valve": {
+            "x": 271.3,
+            "y": 195,
+            "width": 74.1,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 375.1,
+            "y": 194.9,
+            "width": 73.2,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 347.9,
+            "y": 197.1,
+            "width": 23.9,
+            "height": 93.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 182.69,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.35
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 183 deg",
+        "driverName": "crank_angle",
+        "numericValue": 182.687,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 240,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 205.7,
+          "y": 184.2,
+          "width": 292.4,
+          "height": 663.6
+        },
+        "parts": {
+          "piston": {
+            "x": 241.8,
+            "y": 502.2,
+            "width": 226.6,
+            "height": 99
+          },
+          "crank": {
+            "x": 254.3,
+            "y": 675.8,
+            "width": 168.3,
+            "height": 144
+          },
+          "intake_valve": {
+            "x": 266.9,
+            "y": 195.3,
+            "width": 86.2,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 367.3,
+            "y": 193.3,
+            "width": 84.1,
+            "height": 102.8
+          },
+          "spark_plug": {
+            "x": 345.8,
+            "y": 196.9,
+            "width": 28.3,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 240,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.545
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 240 deg",
+        "driverName": "crank_angle",
+        "numericValue": 240,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 297.313,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.9,
+          "y": 182.8,
+          "width": 319.7,
+          "height": 657.8
+        },
+        "parts": {
+          "piston": {
+            "x": 231.1,
+            "y": 420.5,
+            "width": 250.2,
+            "height": 90.5
+          },
+          "crank": {
+            "x": 253.4,
+            "y": 667.1,
+            "width": 171.4,
+            "height": 144.1
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.7,
+            "width": 93.1,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 360.5,
+            "y": 192.2,
+            "width": 93.1,
+            "height": 103.8
+          },
+          "spark_plug": {
+            "x": 344.4,
+            "y": 196.8,
+            "width": 31,
+            "height": 93.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 297.31,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.068
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 297 deg",
+        "driverName": "crank_angle",
+        "numericValue": 297.313,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 354.627,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 188.4,
+          "y": 182,
+          "width": 334.3,
+          "height": 649.5
+        },
+        "parts": {
+          "piston": {
+            "x": 225.6,
+            "y": 361.1,
+            "width": 263.4,
+            "height": 82.6
+          },
+          "crank": {
+            "x": 302.9,
+            "y": 628.9,
+            "width": 113.7,
+            "height": 171.3
+          },
+          "intake_valve": {
+            "x": 267.9,
+            "y": 196.1,
+            "width": 96.7,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 355.3,
+            "y": 191.4,
+            "width": 98.3,
+            "height": 104.5
+          },
+          "spark_plug": {
+            "x": 315.6,
+            "y": 194.2,
+            "width": 88.2,
+            "height": 119
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 354.63,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.447
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 355 deg",
+        "driverName": "crank_angle",
+        "numericValue": 354.627,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 411.94,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.5,
+          "y": 181.6,
+          "width": 341.4,
+          "height": 664.9
+        },
+        "parts": {
+          "piston": {
+            "x": 224.4,
+            "y": 403.8,
+            "width": 267.8,
+            "height": 89.3
+          },
+          "crank": {
+            "x": 292.5,
+            "y": 654.4,
+            "width": 165.1,
+            "height": 167.5
+          },
+          "intake_valve": {
+            "x": 270,
+            "y": 196.4,
+            "width": 98.2,
+            "height": 101.1
+          },
+          "exhaust_valve": {
+            "x": 351.4,
+            "y": 190.9,
+            "width": 100.9,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 343.4,
+            "y": 196.7,
+            "width": 33.2,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 411.94,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.173
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 412 deg",
+        "driverName": "crank_angle",
+        "numericValue": 411.94,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 469.254,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.2,
+          "y": 181.4,
+          "width": 344.4,
+          "height": 659.8
+        },
+        "parts": {
+          "piston": {
+            "x": 225.2,
+            "y": 488.5,
+            "width": 267.6,
+            "height": 102.3
+          },
+          "crank": {
+            "x": 297.6,
+            "y": 678.5,
+            "width": 167.7,
+            "height": 141.2
+          },
+          "intake_valve": {
+            "x": 272.1,
+            "y": 196.6,
+            "width": 98.7,
+            "height": 101
+          },
+          "exhaust_valve": {
+            "x": 348.7,
+            "y": 190.5,
+            "width": 102.2,
+            "height": 105.2
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.5,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 469.25,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.622
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 469 deg",
+        "driverName": "crank_angle",
+        "numericValue": 469.254,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "crank_angle": {
+        "value": 526.567,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.5,
+          "y": 181.3,
+          "width": 345.5,
+          "height": 715.8
+        },
+        "parts": {
+          "piston": {
+            "x": 225.9,
+            "y": 528.5,
+            "width": 267.2,
+            "height": 108.4
+          },
+          "crank": {
+            "x": 300.2,
+            "y": 681.4,
+            "width": 120.3,
+            "height": 180.9
+          },
+          "intake_valve": {
+            "x": 273.7,
+            "y": 196.7,
+            "width": 98.8,
+            "height": 100.9
+          },
+          "exhaust_valve": {
+            "x": 346.9,
+            "y": 190.4,
+            "width": 102.7,
+            "height": 105.3
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 526.57,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.359
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 527 deg",
+        "driverName": "crank_angle",
+        "numericValue": 526.567,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 583.881,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.8,
+          "y": 181.3,
+          "width": 345.7,
+          "height": 696.3
+        },
+        "parts": {
+          "piston": {
+            "x": 225.9,
+            "y": 514.4,
+            "width": 267.8,
+            "height": 106.3
+          },
+          "crank": {
+            "x": 276.6,
+            "y": 668.6,
+            "width": 150.3,
+            "height": 177.3
+          },
+          "intake_valve": {
+            "x": 274.7,
+            "y": 196.8,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 346,
+            "y": 225.9,
+            "width": 102.6,
+            "height": 102.6
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 583.88,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.453
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 584 deg",
+        "driverName": "crank_angle",
+        "numericValue": 583.881,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 641.194,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 655.7
+        },
+        "parts": {
+          "piston": {
+            "x": 225,
+            "y": 445.5,
+            "width": 270,
+            "height": 95.9
+          },
+          "crank": {
+            "x": 263.1,
+            "y": 675,
+            "width": 156.1,
+            "height": 130.6
+          },
+          "intake_valve": {
+            "x": 275.2,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.5,
+            "y": 240.6,
+            "width": 102.5,
+            "height": 101.5
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 641.19,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.903
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 641 deg",
+        "driverName": "crank_angle",
+        "numericValue": 641.194,
+        "claimRef": "C1"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 698.507,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 661.1
+        },
+        "parts": {
+          "piston": {
+            "x": 223.9,
+            "y": 368.7,
+            "width": 272.3,
+            "height": 84.1
+          },
+          "crank": {
+            "x": 297.7,
+            "y": 629.4,
+            "width": 125.6,
+            "height": 182.3
+          },
+          "intake_valve": {
+            "x": 275.3,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 209.1,
+            "width": 102.9,
+            "height": 104
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 698.51,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.398
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus"
+      },
+      {
+        "id": "c4_callout",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Tenaga Mekanis — Siklus berulang terus-menerus",
+        "claimRef": "C4"
+      },
+      {
+        "id": "c1_stat",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Total Sudut: 699 deg",
+        "driverName": "crank_angle",
+        "numericValue": 698.507,
+        "claimRef": "C1"
+      }
+    ]
+  }
+]

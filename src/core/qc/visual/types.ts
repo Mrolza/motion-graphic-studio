@@ -85,6 +85,8 @@ export interface VisualCheckSpec {
   visibleParts?: VisiblePartSpec[];
   geometryRules?: GeometryRule[];
   maxActiveHudPanels?: number;
+  syncTargetSec?: number;
+  syncToleranceSec?: number;
   safeBounds?: { minX: number; maxX: number; minY: number; maxY: number };
   maxHudOverlapRatio?: number;
 }
@@ -101,6 +103,7 @@ export interface VisualQcResult {
     framing: QcReport;
     hudOverlap: QcReport;
     hudFormat: QcReport;
+    sync: QcReport;
     blank: QcReport;
   };
 }

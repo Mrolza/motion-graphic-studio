@@ -1,0 +1,1617 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 342.5,
+          "width": 467.9,
+          "height": 473.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 148,
+            "y": 407,
+            "width": 208.9,
+            "height": 375.6
+          },
+          "wheel_right": {
+            "x": 362.6,
+            "y": 368.8,
+            "width": 216,
+            "height": 342.5
+          },
+          "contact_left": {
+            "x": 239.8,
+            "y": 646.9,
+            "width": 27.9,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 445.1,
+            "y": 590.7,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 174.1,
+            "y": 379.2,
+            "width": 196.9,
+            "height": 422.5
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 342.5,
+          "width": 467.8,
+          "height": 473.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 148,
+            "y": 406.9,
+            "width": 208.7,
+            "height": 375.6
+          },
+          "wheel_right": {
+            "x": 362.7,
+            "y": 368.8,
+            "width": 215.8,
+            "height": 342.6
+          },
+          "contact_left": {
+            "x": 239.7,
+            "y": 646.9,
+            "width": 27.9,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 445.2,
+            "y": 590.7,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 174.2,
+            "y": 379.1,
+            "width": 196.7,
+            "height": 422.5
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 132.4,
+          "y": 342.6,
+          "width": 467.3,
+          "height": 473.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 148.3,
+            "y": 406.7,
+            "width": 207.3,
+            "height": 375.8
+          },
+          "wheel_right": {
+            "x": 363.6,
+            "y": 368.8,
+            "width": 214.9,
+            "height": 342.9
+          },
+          "contact_left": {
+            "x": 239.3,
+            "y": 646.6,
+            "width": 27.9,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 445.6,
+            "y": 591,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 174.7,
+            "y": 378.9,
+            "width": 194.8,
+            "height": 422.8
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 133.6,
+          "y": 342.7,
+          "width": 465.8,
+          "height": 473.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 149.2,
+            "y": 405.9,
+            "width": 203.5,
+            "height": 376.1
+          },
+          "wheel_right": {
+            "x": 366.1,
+            "y": 369,
+            "width": 212.3,
+            "height": 343.9
+          },
+          "contact_left": {
+            "x": 238.3,
+            "y": 646,
+            "width": 27.7,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 446.8,
+            "y": 591.6,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 176.2,
+            "y": 378.1,
+            "width": 189.6,
+            "height": 423.6
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 136.1,
+          "y": 343,
+          "width": 462.5,
+          "height": 472.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151.1,
+            "y": 404.5,
+            "width": 195.8,
+            "height": 376.6
+          },
+          "wheel_right": {
+            "x": 370.9,
+            "y": 369.4,
+            "width": 207.2,
+            "height": 345.8
+          },
+          "contact_left": {
+            "x": 236.5,
+            "y": 644.6,
+            "width": 27.5,
+            "height": 29.4
+          },
+          "contact_right": {
+            "x": 449.1,
+            "y": 592.8,
+            "width": 26.2,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 179.2,
+            "y": 376.7,
+            "width": 179.6,
+            "height": 424.9
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 140.7,
+          "y": 343.7,
+          "width": 456.1,
+          "height": 469.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 154.5,
+            "y": 402.2,
+            "width": 182.8,
+            "height": 377.2
+          },
+          "wheel_right": {
+            "x": 378.9,
+            "y": 370.2,
+            "width": 198.2,
+            "height": 348.7
+          },
+          "contact_left": {
+            "x": 233.7,
+            "y": 642.3,
+            "width": 26.9,
+            "height": 29.1
+          },
+          "contact_right": {
+            "x": 452.6,
+            "y": 594.9,
+            "width": 26,
+            "height": 26.8
+          },
+          "flange": {
+            "x": 184.5,
+            "y": 374.3,
+            "width": 163.6,
+            "height": 426.9
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 148.4,
+          "y": 344.9,
+          "width": 444.3,
+          "height": 465.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 160.6,
+            "y": 399,
+            "width": 162.7,
+            "height": 377.4
+          },
+          "wheel_right": {
+            "x": 390.6,
+            "y": 371.6,
+            "width": 183.8,
+            "height": 352.8
+          },
+          "contact_left": {
+            "x": 230.3,
+            "y": 638.9,
+            "width": 26,
+            "height": 28.7
+          },
+          "contact_right": {
+            "x": 457.5,
+            "y": 598.2,
+            "width": 25.7,
+            "height": 26.7
+          },
+          "flange": {
+            "x": 193.1,
+            "y": 371.1,
+            "width": 139.1,
+            "height": 429.1
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 161,
+          "y": 347,
+          "width": 423.6,
+          "height": 458.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 170.8,
+            "y": 394.7,
+            "width": 133.4,
+            "height": 376.6
+          },
+          "wheel_right": {
+            "x": 406.8,
+            "y": 374,
+            "width": 161.6,
+            "height": 357.6
+          },
+          "contact_left": {
+            "x": 226.9,
+            "y": 634,
+            "width": 24.4,
+            "height": 27.9
+          },
+          "contact_right": {
+            "x": 463.4,
+            "y": 603.1,
+            "width": 24.9,
+            "height": 26.5
+          },
+          "flange": {
+            "x": 206.4,
+            "y": 366.8,
+            "width": 103.9,
+            "height": 430.9
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 180.6,
+          "y": 350.8,
+          "width": 388.5,
+          "height": 446.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 187.2,
+            "y": 389.7,
+            "width": 92.9,
+            "height": 373.2
+          },
+          "wheel_right": {
+            "x": 427.7,
+            "y": 378.1,
+            "width": 128.5,
+            "height": 362.6
+          },
+          "contact_left": {
+            "x": 224.9,
+            "y": 627.3,
+            "width": 22,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 469.6,
+            "y": 610.1,
+            "width": 23.5,
+            "height": 26
+          },
+          "flange": {
+            "x": 226.3,
+            "y": 361.8,
+            "width": 56.1,
+            "height": 430.8
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 176.2,
+          "y": 356.5,
+          "width": 365.3,
+          "height": 427.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 184.6,
+            "y": 384.2,
+            "width": 84.4,
+            "height": 365.9
+          },
+          "wheel_right": {
+            "x": 452.9,
+            "y": 384.6,
+            "width": 80.6,
+            "height": 366.3
+          },
+          "contact_left": {
+            "x": 224.8,
+            "y": 618.8,
+            "width": 21.1,
+            "height": 25.2
+          },
+          "contact_right": {
+            "x": 474.3,
+            "y": 619.5,
+            "width": 20.9,
+            "height": 25.2
+          },
+          "flange": {
+            "x": 230.6,
+            "y": 356.6,
+            "width": 38.8,
+            "height": 426.8
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 146,
+          "y": 349.6,
+          "width": 399.3,
+          "height": 450
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 159.9,
+            "y": 376.9,
+            "width": 138.3,
+            "height": 361.4
+          },
+          "wheel_right": {
+            "x": 433.3,
+            "y": 391.1,
+            "width": 104.5,
+            "height": 374.4
+          },
+          "contact_left": {
+            "x": 228,
+            "y": 608,
+            "width": 23.9,
+            "height": 26.2
+          },
+          "contact_right": {
+            "x": 472.1,
+            "y": 629.2,
+            "width": 22.7,
+            "height": 27.1
+          },
+          "flange": {
+            "x": 196.9,
+            "y": 352,
+            "width": 105.6,
+            "height": 418.6
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 129.7,
+          "y": 345.5,
+          "width": 437.8,
+          "height": 463.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 147.4,
+            "y": 372.4,
+            "width": 176.4,
+            "height": 354.5
+          },
+          "wheel_right": {
+            "x": 403.3,
+            "y": 397.5,
+            "width": 152.8,
+            "height": 377.3
+          },
+          "contact_left": {
+            "x": 234.9,
+            "y": 599.9,
+            "width": 25.4,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 465.6,
+            "y": 637.2,
+            "width": 25.5,
+            "height": 28.4
+          },
+          "flange": {
+            "x": 175.8,
+            "y": 349.7,
+            "width": 155.3,
+            "height": 408.4
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 122.5,
+          "y": 343.4,
+          "width": 458.7,
+          "height": 470.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 142.5,
+            "y": 369.9,
+            "width": 201.7,
+            "height": 347.6
+          },
+          "wheel_right": {
+            "x": 379,
+            "y": 403.1,
+            "width": 187.9,
+            "height": 377
+          },
+          "contact_left": {
+            "x": 242.6,
+            "y": 594.1,
+            "width": 26.1,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 458.1,
+            "y": 643.2,
+            "width": 27.1,
+            "height": 29.2
+          },
+          "flange": {
+            "x": 164,
+            "y": 348.8,
+            "width": 189.7,
+            "height": 398.7
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "distance": {
+        "value": -1,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 120.1,
+          "y": 342.4,
+          "width": 469,
+          "height": 474.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 141.5,
+            "y": 368.6,
+            "width": 218,
+            "height": 341.7
+          },
+          "wheel_right": {
+            "x": 360.6,
+            "y": 407.6,
+            "width": 212.1,
+            "height": 375.3
+          },
+          "contact_left": {
+            "x": 249.6,
+            "y": 590.2,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "contact_right": {
+            "x": 451.3,
+            "y": 647.5,
+            "width": 28,
+            "height": 29.7
+          },
+          "flange": {
+            "x": 157.8,
+            "y": 348.7,
+            "width": 213.5,
+            "height": 390.6
+          }
+        },
+        "partStates": {
+          "distance": -1,
+          "wheel_angle_deg": -124.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "distance": {
+        "value": -0.726,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 157,
+          "y": 391.4,
+          "width": 408.4,
+          "height": 364.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 173,
+            "y": 410.7,
+            "width": 175,
+            "height": 247.2
+          },
+          "wheel_right": {
+            "x": 374,
+            "y": 457.8,
+            "width": 177.4,
+            "height": 274
+          },
+          "contact_left": {
+            "x": 255.1,
+            "y": 587.7,
+            "width": 26.3,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 445.9,
+            "y": 650.4,
+            "width": 28.5,
+            "height": 30
+          },
+          "flange": {
+            "x": 191.4,
+            "y": 399.1,
+            "width": 165.6,
+            "height": 278.9
+          }
+        },
+        "partStates": {
+          "distance": -0.726,
+          "wheel_angle_deg": -90.42,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "distance": {
+        "value": -0.133,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 135.3,
+          "y": 360.6,
+          "width": 449.1,
+          "height": 433.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 155.5,
+            "y": 383.9,
+            "width": 213.6,
+            "height": 299.9
+          },
+          "wheel_right": {
+            "x": 349.1,
+            "y": 431,
+            "width": 218.1,
+            "height": 333.9
+          },
+          "contact_left": {
+            "x": 258.9,
+            "y": 586.1,
+            "width": 26.3,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 442.1,
+            "y": 652.2,
+            "width": 28.7,
+            "height": 30.1
+          },
+          "flange": {
+            "x": 168.1,
+            "y": 368.2,
+            "width": 213.4,
+            "height": 340.4
+          }
+        },
+        "partStates": {
+          "distance": -0.133,
+          "wheel_angle_deg": -16.61,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "distance": {
+        "value": 0.459,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 121.8,
+          "y": 343,
+          "width": 474.5,
+          "height": 473.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 144.6,
+            "y": 368.6,
+            "width": 237.8,
+            "height": 330.1
+          },
+          "wheel_right": {
+            "x": 332.8,
+            "y": 415.5,
+            "width": 244.3,
+            "height": 368.4
+          },
+          "contact_left": {
+            "x": 261.3,
+            "y": 585.2,
+            "width": 26.2,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 439.8,
+            "y": 653.3,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 153.5,
+            "y": 350.5,
+            "width": 243.1,
+            "height": 375.6
+          }
+        },
+        "partStates": {
+          "distance": 0.459,
+          "wheel_angle_deg": 57.2,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S5",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Efisiensi Kurva Jalur — Mekanisme fisika pergerakan roda"
+      },
+      {
+        "id": "c3",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Mekanisme Fisika — Efisiensi kurva jalur",
+        "claimRef": "C3"
+      }
+    ]
+  }
+]

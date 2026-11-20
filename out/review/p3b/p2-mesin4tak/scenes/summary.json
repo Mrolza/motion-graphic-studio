@@ -1,0 +1,30 @@
+[
+  {
+    "sceneId": "S1",
+    "fixes": 0,
+    "passed": true,
+    "errors": [],
+    "lineCount": 97
+  },
+  {
+    "sceneId": "S2",
+    "fixes": 0,
+    "passed": true,
+    "errors": [],
+    "lineCount": 109
+  },
+  {
+    "sceneId": "S3",
+    "fixes": 1,
+    "passed": true,
+    "errors": [],
+    "lineCount": 97
+  },
+  {
+    "sceneId": "S4",
+    "fixes": 0,
+    "passed": true,
+    "errors": [],
+    "lineCount": 99
+  }
+]

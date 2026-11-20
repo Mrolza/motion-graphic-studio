@@ -1,0 +1,10 @@
+{
+  "layer": "L4",
+  "issues": [
+    {
+      "severity": "error",
+      "message": "SB_HUD_NUMBER_NOT_IN_CLAIM: angka 9876 di HUD \"Angka Palsu 9876 mm\" tidak ada di klaim C1",
+      "ref": "S1"
+    }
+  ]
+}

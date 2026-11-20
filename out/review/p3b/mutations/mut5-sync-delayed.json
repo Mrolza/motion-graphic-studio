@@ -1,0 +1,9 @@
+{
+  "issues": [
+    {
+      "severity": "error",
+      "message": "SYNC_OUT_OF_WINDOW: gerak utama \"distance\" mulai pada 2.50s (target 1.00s ±0.35s)",
+      "ref": "gen-p2-kereta-S1"
+    }
+  ]
+}

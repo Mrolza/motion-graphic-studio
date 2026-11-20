@@ -1,0 +1,10 @@
+{
+  "layer": "L4",
+  "issues": [
+    {
+      "severity": "error",
+      "message": "SB_UNVERIFIED_CLAIM: claim_ref \"C4\" tidak ditemukan atau belum verified",
+      "ref": "S1"
+    }
+  ]
+}

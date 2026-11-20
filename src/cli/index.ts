@@ -27,6 +27,13 @@ import {
   cmdRun,
   cmdScript,
 } from './gate1';
+import {
+  cmdRender,
+  cmdRunVoiceToPreview,
+  cmdScenes,
+  cmdStoryboard,
+  cmdVoice,
+} from './p3b';
 
 const execFileAsync = promisify(execFile);
 
@@ -180,7 +187,21 @@ async function main() {
   } else if (cmd === 'qc') {
     await cmdQc(rest);
   } else if (cmd === 'run') {
-    await cmdRun(rest);
+    if (parseFlag(rest, '--from') === 'voice' && parseFlag(rest, '--until') === 'preview') {
+      const id = rest[0];
+      if (!id) throw new Error('Usage: mgs run <id> --from voice --until preview');
+      await cmdRunVoiceToPreview(id);
+    } else {
+      await cmdRun(rest);
+    }
+  } else if (cmd === 'voice') {
+    await cmdVoice(rest);
+  } else if (cmd === 'storyboard') {
+    await cmdStoryboard(rest);
+  } else if (cmd === 'scenes') {
+    await cmdScenes(rest);
+  } else if (cmd === 'render') {
+    await cmdRender(rest);
   } else if (cmd === 'review') {
     await cmdReview(rest);
   } else if (cmd === 'approve') {

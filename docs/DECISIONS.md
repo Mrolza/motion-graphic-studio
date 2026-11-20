@@ -16,3 +16,7 @@ Catatan keputusan teknis kecil yang diambil selama implementasi per fase dan usu
 2. **Pemutusan ketergantungan `script-v2.ts` & `executor.ts`:** `wikimedia.ts` memakai interface lokal `WikimediaResearchPackage` (menggantikan impor `ScriptV2ResearchPackage` dari `script-v2.ts`), dan blok test `expandScenesToBeats` di `beats.test.ts` dihapus karena mengimpor `executor.ts`.
 3. **Lokasi aset SFX di `audio-mix.ts`:** `resolveExistingSfxPath` mengecek `remotion/public/sfx/` terlebih dahulu (lalu fallback ke `public/sfx/`) karena aset SFX dan font dipindahkan ke `remotion/public/`.
 4. **Lokasi state kuota di `quota.ts`:** Dipindahkan dari `data/quota.json` ke `.mgs/quota.json` agar semua state lokal berada di `.mgs/` (yang sudah di-gitignore), dan `data/` ditambahkan ke `.gitignore`.
+
+## P3B — Suara, Storyboard, & Scene Coder
+1. **Field opsional `spoken_text` di `ScriptSentenceSchema`:** Ditambahkan untuk menyimpan teks ucapan ramah-TTS Indonesia (mis. `"1:20"` → `"satu banding dua puluh"`, `"3,5"` → `"tiga koma lima"`, `"720°"` → `"720 derajat"`) tanpa mengubah teks tampilan (`text`).
+2. **Field opsional `visible_parts` di `StoryboardSceneSchema`:** Ditambahkan untuk mendeklarasikan sub-bagian fokus yang wajib terlihat pada QC `visibility`.

@@ -1,0 +1,5125 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "crank_angle": {
+        "value": 0,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 192.7,
+          "y": 181.6,
+          "width": 340.6,
+          "height": 646.9
+        },
+        "parts": {
+          "piston": {
+            "x": 227.7,
+            "y": 360.5,
+            "width": 268.4,
+            "height": 82.7
+          },
+          "crank": {
+            "x": 306,
+            "y": 630.1,
+            "width": 108.2,
+            "height": 166.4
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 190.9,
+            "width": 100.6,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.2,
+            "y": 196.3,
+            "width": 98.1,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33.1,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999033,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 0 deg",
+        "driverName": "crank_angle",
+        "numericValue": 0,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 7.692,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 192.7,
+          "y": 181.6,
+          "width": 340.6,
+          "height": 652.4
+        },
+        "parts": {
+          "piston": {
+            "x": 227.7,
+            "y": 361.6,
+            "width": 268.4,
+            "height": 82.9
+          },
+          "crank": {
+            "x": 301.6,
+            "y": 628.3,
+            "width": 116.8,
+            "height": 174.1
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 197.8,
+            "width": 100.5,
+            "height": 104.4
+          },
+          "exhaust_valve": {
+            "x": 352.3,
+            "y": 196.3,
+            "width": 98,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33.1,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 7.69,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.443
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 8 deg",
+        "driverName": "crank_angle",
+        "numericValue": 7.692,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 15.385,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193,
+          "y": 181.6,
+          "width": 340.2,
+          "height": 656.9
+        },
+        "parts": {
+          "piston": {
+            "x": 227.9,
+            "y": 364.8,
+            "width": 268,
+            "height": 83.4
+          },
+          "crank": {
+            "x": 297.9,
+            "y": 628.5,
+            "width": 124.1,
+            "height": 178.9
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 204.6,
+            "width": 100.3,
+            "height": 103.8
+          },
+          "exhaust_valve": {
+            "x": 352.5,
+            "y": 196.3,
+            "width": 98,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33.1,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 15.38,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.423
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 15 deg",
+        "driverName": "crank_angle",
+        "numericValue": 15.385,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 23.077,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.8,
+          "y": 181.7,
+          "width": 339.2,
+          "height": 660.3
+        },
+        "parts": {
+          "piston": {
+            "x": 228.6,
+            "y": 370,
+            "width": 267,
+            "height": 84.1
+          },
+          "crank": {
+            "x": 295,
+            "y": 630.5,
+            "width": 131.5,
+            "height": 180.8
+          },
+          "intake_valve": {
+            "x": 267.3,
+            "y": 211.1,
+            "width": 99.9,
+            "height": 103.3
+          },
+          "exhaust_valve": {
+            "x": 353.1,
+            "y": 196.3,
+            "width": 97.8,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 23.08,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.39
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 23 deg",
+        "driverName": "crank_angle",
+        "numericValue": 23.077,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 30.769,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 195.4,
+          "y": 181.8,
+          "width": 337,
+          "height": 662.5
+        },
+        "parts": {
+          "piston": {
+            "x": 229.9,
+            "y": 377,
+            "width": 265,
+            "height": 85.1
+          },
+          "crank": {
+            "x": 292.9,
+            "y": 633.9,
+            "width": 143.3,
+            "height": 180
+          },
+          "intake_valve": {
+            "x": 267,
+            "y": 217.4,
+            "width": 99,
+            "height": 102.7
+          },
+          "exhaust_valve": {
+            "x": 354.3,
+            "y": 196.2,
+            "width": 97.3,
+            "height": 101.2
+          },
+          "spark_plug": {
+            "x": 343.7,
+            "y": 196.7,
+            "width": 32.7,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 30.77,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.345
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 31 deg",
+        "driverName": "crank_angle",
+        "numericValue": 30.769,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 38.462,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 198.4,
+          "y": 182.1,
+          "width": 332.5,
+          "height": 663.1
+        },
+        "parts": {
+          "piston": {
+            "x": 232.3,
+            "y": 385.7,
+            "width": 261.3,
+            "height": 86.2
+          },
+          "crank": {
+            "x": 291.8,
+            "y": 639.3,
+            "width": 153.7,
+            "height": 175.8
+          },
+          "intake_valve": {
+            "x": 266.7,
+            "y": 223.3,
+            "width": 97.3,
+            "height": 102
+          },
+          "exhaust_valve": {
+            "x": 356.2,
+            "y": 196,
+            "width": 96.2,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 343.9,
+            "y": 196.7,
+            "width": 32.3,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 38.46,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.29
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 38 deg",
+        "driverName": "crank_angle",
+        "numericValue": 38.462,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 46.154,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 203.6,
+          "y": 182.5,
+          "width": 324.3,
+          "height": 661.7
+        },
+        "parts": {
+          "piston": {
+            "x": 236.3,
+            "y": 395.8,
+            "width": 254.5,
+            "height": 87.3
+          },
+          "crank": {
+            "x": 292,
+            "y": 646.8,
+            "width": 162.1,
+            "height": 167.8
+          },
+          "intake_valve": {
+            "x": 266.6,
+            "y": 228.6,
+            "width": 94.4,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 359.1,
+            "y": 195.8,
+            "width": 94.3,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 344.3,
+            "y": 196.8,
+            "width": 31.5,
+            "height": 93.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 46.15,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.226
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 46 deg",
+        "driverName": "crank_angle",
+        "numericValue": 46.154,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 53.846,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 212.2,
+          "y": 183.3,
+          "width": 309.7,
+          "height": 658
+        },
+        "parts": {
+          "piston": {
+            "x": 243,
+            "y": 407,
+            "width": 242.6,
+            "height": 88.1
+          },
+          "crank": {
+            "x": 294.1,
+            "y": 656.7,
+            "width": 167.5,
+            "height": 155.9
+          },
+          "intake_valve": {
+            "x": 267.3,
+            "y": 233.5,
+            "width": 89.4,
+            "height": 100.5
+          },
+          "exhaust_valve": {
+            "x": 363.2,
+            "y": 195.6,
+            "width": 90.6,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345,
+            "y": 196.8,
+            "width": 30,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 53.85,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.155
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 54 deg",
+        "driverName": "crank_angle",
+        "numericValue": 53.846,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 61.538,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 225.9,
+          "y": 184.6,
+          "width": 284.7,
+          "height": 651.1
+        },
+        "parts": {
+          "piston": {
+            "x": 253.8,
+            "y": 419.3,
+            "width": 222.7,
+            "height": 88.3
+          },
+          "crank": {
+            "x": 298.8,
+            "y": 668.9,
+            "width": 167.7,
+            "height": 139.9
+          },
+          "intake_valve": {
+            "x": 269.9,
+            "y": 237.8,
+            "width": 81.2,
+            "height": 99.6
+          },
+          "exhaust_valve": {
+            "x": 368.5,
+            "y": 195.3,
+            "width": 84.1,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.3,
+            "y": 196.9,
+            "width": 27.6,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 61.54,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.079
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 62 deg",
+        "driverName": "crank_angle",
+        "numericValue": 61.538,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 69.231,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 227.4,
+          "y": 186.6,
+          "width": 263.5,
+          "height": 640.8
+        },
+        "parts": {
+          "piston": {
+            "x": 258,
+            "y": 432.2,
+            "width": 202.7,
+            "height": 87.5
+          },
+          "crank": {
+            "x": 304.6,
+            "y": 682.8,
+            "width": 162.2,
+            "height": 120.9
+          },
+          "intake_valve": {
+            "x": 271.7,
+            "y": 241.6,
+            "width": 73.7,
+            "height": 98.5
+          },
+          "exhaust_valve": {
+            "x": 375.1,
+            "y": 194.9,
+            "width": 73.2,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 347.9,
+            "y": 197.1,
+            "width": 23.9,
+            "height": 93.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 69.23,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.001
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 69 deg",
+        "driverName": "crank_angle",
+        "numericValue": 69.231,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 76.923,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 205.7,
+          "y": 184.2,
+          "width": 292.4,
+          "height": 645.8
+        },
+        "parts": {
+          "piston": {
+            "x": 241,
+            "y": 443.7,
+            "width": 228.1,
+            "height": 91.8
+          },
+          "crank": {
+            "x": 302.8,
+            "y": 684.5,
+            "width": 168.1,
+            "height": 121.5
+          },
+          "intake_valve": {
+            "x": 267.3,
+            "y": 243.8,
+            "width": 85.7,
+            "height": 98.2
+          },
+          "exhaust_valve": {
+            "x": 367.3,
+            "y": 193.3,
+            "width": 84.1,
+            "height": 102.8
+          },
+          "spark_plug": {
+            "x": 345.8,
+            "y": 196.9,
+            "width": 28.3,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 76.92,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.922
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 77 deg",
+        "driverName": "crank_angle",
+        "numericValue": 76.923,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 84.615,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.9,
+          "y": 182.8,
+          "width": 319.7,
+          "height": 646.5
+        },
+        "parts": {
+          "piston": {
+            "x": 231.6,
+            "y": 455.1,
+            "width": 249.2,
+            "height": 95.3
+          },
+          "crank": {
+            "x": 304.4,
+            "y": 688,
+            "width": 167.8,
+            "height": 117.8
+          },
+          "intake_valve": {
+            "x": 266.8,
+            "y": 245.1,
+            "width": 92.7,
+            "height": 97.8
+          },
+          "exhaust_valve": {
+            "x": 360.5,
+            "y": 192.2,
+            "width": 93.1,
+            "height": 103.8
+          },
+          "spark_plug": {
+            "x": 344.4,
+            "y": 196.8,
+            "width": 31,
+            "height": 93.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 84.62,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.844
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 85 deg",
+        "driverName": "crank_angle",
+        "numericValue": 84.615,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 92.308,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 188.4,
+          "y": 182,
+          "width": 334.3,
+          "height": 647.3
+        },
+        "parts": {
+          "piston": {
+            "x": 227.1,
+            "y": 466.3,
+            "width": 260.4,
+            "height": 98.1
+          },
+          "crank": {
+            "x": 305.1,
+            "y": 689.5,
+            "width": 165.3,
+            "height": 117.1
+          },
+          "intake_valve": {
+            "x": 268.3,
+            "y": 245.5,
+            "width": 96.2,
+            "height": 97.6
+          },
+          "exhaust_valve": {
+            "x": 355.3,
+            "y": 191.4,
+            "width": 98.3,
+            "height": 104.5
+          },
+          "spark_plug": {
+            "x": 343.7,
+            "y": 196.7,
+            "width": 32.5,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 92.31,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.77
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 92 deg",
+        "driverName": "crank_angle",
+        "numericValue": 92.308,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 100,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.5,
+          "y": 181.6,
+          "width": 341.4,
+          "height": 654
+        },
+        "parts": {
+          "piston": {
+            "x": 225.5,
+            "y": 476.8,
+            "width": 265.6,
+            "height": 100.3
+          },
+          "crank": {
+            "x": 300.8,
+            "y": 683.9,
+            "width": 168,
+            "height": 129.9
+          },
+          "intake_valve": {
+            "x": 270.5,
+            "y": 245,
+            "width": 97.7,
+            "height": 97.5
+          },
+          "exhaust_valve": {
+            "x": 351.4,
+            "y": 190.9,
+            "width": 100.9,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 343.4,
+            "y": 196.7,
+            "width": 33.2,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 100,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.7
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 100 deg",
+        "driverName": "crank_angle",
+        "numericValue": 100,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 107.692,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.2,
+          "y": 181.4,
+          "width": 344.4,
+          "height": 659
+        },
+        "parts": {
+          "piston": {
+            "x": 225.2,
+            "y": 486.6,
+            "width": 267.6,
+            "height": 102
+          },
+          "crank": {
+            "x": 298.1,
+            "y": 679.2,
+            "width": 167.5,
+            "height": 139.8
+          },
+          "intake_valve": {
+            "x": 272.5,
+            "y": 243.6,
+            "width": 98.3,
+            "height": 97.5
+          },
+          "exhaust_valve": {
+            "x": 348.7,
+            "y": 190.5,
+            "width": 102.2,
+            "height": 105.2
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.5,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 107.69,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.635
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 108 deg",
+        "driverName": "crank_angle",
+        "numericValue": 107.692,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "crank_angle": {
+        "value": 115.385,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.5,
+          "y": 181.3,
+          "width": 345.5,
+          "height": 667.5
+        },
+        "parts": {
+          "piston": {
+            "x": 225.4,
+            "y": 495.5,
+            "width": 268.2,
+            "height": 103.5
+          },
+          "crank": {
+            "x": 296.4,
+            "y": 675.7,
+            "width": 165,
+            "height": 151.5
+          },
+          "intake_valve": {
+            "x": 274,
+            "y": 241.2,
+            "width": 98.4,
+            "height": 97.5
+          },
+          "exhaust_valve": {
+            "x": 346.9,
+            "y": 190.4,
+            "width": 102.7,
+            "height": 105.3
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 115.38,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.576
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 115 deg",
+        "driverName": "crank_angle",
+        "numericValue": 115.385,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 123.077,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.8,
+          "y": 181.3,
+          "width": 345.7,
+          "height": 679.4
+        },
+        "parts": {
+          "piston": {
+            "x": 225.7,
+            "y": 503.4,
+            "width": 268.2,
+            "height": 104.7
+          },
+          "crank": {
+            "x": 295.3,
+            "y": 673.3,
+            "width": 161.1,
+            "height": 164.7
+          },
+          "intake_valve": {
+            "x": 275,
+            "y": 238.1,
+            "width": 98.4,
+            "height": 97.7
+          },
+          "exhaust_valve": {
+            "x": 345.9,
+            "y": 190.3,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 123.08,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.525
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 123 deg",
+        "driverName": "crank_angle",
+        "numericValue": 123.077,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 130.769,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 689.9
+        },
+        "parts": {
+          "piston": {
+            "x": 225.9,
+            "y": 510.2,
+            "width": 268,
+            "height": 105.7
+          },
+          "crank": {
+            "x": 294.8,
+            "y": 672,
+            "width": 156,
+            "height": 174.7
+          },
+          "intake_valve": {
+            "x": 275.5,
+            "y": 234.2,
+            "width": 98.4,
+            "height": 98
+          },
+          "exhaust_valve": {
+            "x": 345.4,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 130.77,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.48
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 131 deg",
+        "driverName": "crank_angle",
+        "numericValue": 130.769,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 138.462,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 698.8
+        },
+        "parts": {
+          "piston": {
+            "x": 226.1,
+            "y": 516,
+            "width": 267.8,
+            "height": 106.6
+          },
+          "crank": {
+            "x": 294.8,
+            "y": 671.9,
+            "width": 149.5,
+            "height": 181.5
+          },
+          "intake_valve": {
+            "x": 275.6,
+            "y": 229.6,
+            "width": 98.4,
+            "height": 98.3
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 138.46,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.442
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 138 deg",
+        "driverName": "crank_angle",
+        "numericValue": 138.462,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 146.154,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 706
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 520.7,
+            "width": 267.7,
+            "height": 107.3
+          },
+          "crank": {
+            "x": 295.5,
+            "y": 673,
+            "width": 141.3,
+            "height": 185
+          },
+          "intake_valve": {
+            "x": 275.6,
+            "y": 224.3,
+            "width": 98.5,
+            "height": 98.7
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 146.15,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.41
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 146 deg",
+        "driverName": "crank_angle",
+        "numericValue": 146.154,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 153.846,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 711.3
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 524.5,
+            "width": 267.6,
+            "height": 107.8
+          },
+          "crank": {
+            "x": 296.9,
+            "y": 675.2,
+            "width": 131.6,
+            "height": 185.4
+          },
+          "intake_valve": {
+            "x": 275.5,
+            "y": 218.6,
+            "width": 98.5,
+            "height": 99.1
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 153.85,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.386
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 154 deg",
+        "driverName": "crank_angle",
+        "numericValue": 153.846,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 161.538,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 714.7
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 527.2,
+            "width": 267.5,
+            "height": 108.2
+          },
+          "crank": {
+            "x": 299,
+            "y": 678.6,
+            "width": 123,
+            "height": 183.4
+          },
+          "intake_valve": {
+            "x": 275.5,
+            "y": 212.5,
+            "width": 98.6,
+            "height": 99.6
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 161.54,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.368
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 162 deg",
+        "driverName": "crank_angle",
+        "numericValue": 161.538,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 169.231,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 716.2
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 529,
+            "width": 267.4,
+            "height": 108.5
+          },
+          "crank": {
+            "x": 301.7,
+            "y": 682.9,
+            "width": 117.2,
+            "height": 179.5
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 206.1,
+            "width": 98.7,
+            "height": 100.1
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 169.23,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.356
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 169 deg",
+        "driverName": "crank_angle",
+        "numericValue": 169.231,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 176.923,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 715.6
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 529.8,
+            "width": 267.4,
+            "height": 108.6
+          },
+          "crank": {
+            "x": 305.1,
+            "y": 688.2,
+            "width": 110.2,
+            "height": 172.6
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 199.5,
+            "width": 98.7,
+            "height": 100.6
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 176.92,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.35
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 177 deg",
+        "driverName": "crank_angle",
+        "numericValue": 176.923,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 184.615,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 715.9
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 529.7,
+            "width": 267.4,
+            "height": 108.6
+          },
+          "crank": {
+            "x": 304.4,
+            "y": 687.1,
+            "width": 111.7,
+            "height": 174.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 184.62,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.351
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 185 deg",
+        "driverName": "crank_angle",
+        "numericValue": 184.615,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 192.308,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 716
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 528.7,
+            "width": 267.5,
+            "height": 108.5
+          },
+          "crank": {
+            "x": 301.1,
+            "y": 682,
+            "width": 118.5,
+            "height": 180.6
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 192.31,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.358
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 192 deg",
+        "driverName": "crank_angle",
+        "numericValue": 192.308,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 200,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 714.2
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 526.7,
+            "width": 267.5,
+            "height": 108.2
+          },
+          "crank": {
+            "x": 298.5,
+            "y": 677.8,
+            "width": 124,
+            "height": 183.8
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 200,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.371
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 200 deg",
+        "driverName": "crank_angle",
+        "numericValue": 200,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 207.692,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 710.4
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 523.8,
+            "width": 267.6,
+            "height": 107.7
+          },
+          "crank": {
+            "x": 291.5,
+            "y": 673.7,
+            "width": 133.1,
+            "height": 185
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 207.69,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.39
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 208 deg",
+        "driverName": "crank_angle",
+        "numericValue": 207.692,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 215.385,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 704.7
+        },
+        "parts": {
+          "piston": {
+            "x": 226.1,
+            "y": 519.9,
+            "width": 267.7,
+            "height": 107.1
+          },
+          "crank": {
+            "x": 284.3,
+            "y": 670.6,
+            "width": 141.8,
+            "height": 183.1
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 215.38,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.416
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 215 deg",
+        "driverName": "crank_angle",
+        "numericValue": 215.385,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 223.077,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 697.2
+        },
+        "parts": {
+          "piston": {
+            "x": 226.1,
+            "y": 514.9,
+            "width": 267.9,
+            "height": 106.4
+          },
+          "crank": {
+            "x": 277.9,
+            "y": 668.6,
+            "width": 148.7,
+            "height": 178.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 223.08,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.449
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 223 deg",
+        "driverName": "crank_angle",
+        "numericValue": 223.077,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "crank_angle": {
+        "value": 230.769,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 687.9
+        },
+        "parts": {
+          "piston": {
+            "x": 226,
+            "y": 508.9,
+            "width": 268.1,
+            "height": 105.5
+          },
+          "crank": {
+            "x": 272.7,
+            "y": 667.8,
+            "width": 153.8,
+            "height": 170.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 230.77,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.488
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 231 deg",
+        "driverName": "crank_angle",
+        "numericValue": 230.769,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 238.462,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 677.2
+        },
+        "parts": {
+          "piston": {
+            "x": 225.9,
+            "y": 501.9,
+            "width": 268.3,
+            "height": 104.5
+          },
+          "crank": {
+            "x": 268.5,
+            "y": 668.2,
+            "width": 156.9,
+            "height": 159.4
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 238.46,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.534
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 238 deg",
+        "driverName": "crank_angle",
+        "numericValue": 238.462,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "crank_angle": {
+        "value": 246.154,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 665.1
+        },
+        "parts": {
+          "piston": {
+            "x": 225.7,
+            "y": 493.8,
+            "width": 268.5,
+            "height": 103.2
+          },
+          "crank": {
+            "x": 265.6,
+            "y": 669.8,
+            "width": 158.1,
+            "height": 145.9
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 246.15,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.588
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 246 deg",
+        "driverName": "crank_angle",
+        "numericValue": 246.154,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "crank_angle": {
+        "value": 253.846,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 658.5
+        },
+        "parts": {
+          "piston": {
+            "x": 225.6,
+            "y": 484.7,
+            "width": 268.8,
+            "height": 101.9
+          },
+          "crank": {
+            "x": 263.8,
+            "y": 672.6,
+            "width": 157.3,
+            "height": 136.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 253.85,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.647
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 254 deg",
+        "driverName": "crank_angle",
+        "numericValue": 253.846,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "crank_angle": {
+        "value": 261.538,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 654
+        },
+        "parts": {
+          "piston": {
+            "x": 225.5,
+            "y": 474.6,
+            "width": 269.1,
+            "height": 100.4
+          },
+          "crank": {
+            "x": 263.4,
+            "y": 676.5,
+            "width": 154.6,
+            "height": 127.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 261.54,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.713
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 262 deg",
+        "driverName": "crank_angle",
+        "numericValue": 261.538,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "crank_angle": {
+        "value": 269.231,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 648.5
+        },
+        "parts": {
+          "piston": {
+            "x": 225.3,
+            "y": 463.7,
+            "width": 269.4,
+            "height": 98.7
+          },
+          "crank": {
+            "x": 264.1,
+            "y": 681.4,
+            "width": 150,
+            "height": 116.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 269.23,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.784
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 269 deg",
+        "driverName": "crank_angle",
+        "numericValue": 269.231,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 288,
+    "sec": 9.6,
+    "drivers": {
+      "crank_angle": {
+        "value": 276.923,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 652.9
+        },
+        "parts": {
+          "piston": {
+            "x": 225.1,
+            "y": 452.2,
+            "width": 269.8,
+            "height": 97
+          },
+          "crank": {
+            "x": 263.4,
+            "y": 677.4,
+            "width": 153.8,
+            "height": 125.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 276.92,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.86
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 277 deg",
+        "driverName": "crank_angle",
+        "numericValue": 276.923,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 296,
+    "sec": 9.867,
+    "drivers": {
+      "crank_angle": {
+        "value": 284.615,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 657.7
+        },
+        "parts": {
+          "piston": {
+            "x": 224.9,
+            "y": 440.2,
+            "width": 270.1,
+            "height": 95.1
+          },
+          "crank": {
+            "x": 263.6,
+            "y": 673.3,
+            "width": 156.9,
+            "height": 134.6
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 284.62,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.938
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 285 deg",
+        "driverName": "crank_angle",
+        "numericValue": 284.615,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 304,
+    "sec": 10.133,
+    "drivers": {
+      "crank_angle": {
+        "value": 292.308,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 661.4
+        },
+        "parts": {
+          "piston": {
+            "x": 224.8,
+            "y": 428,
+            "width": 270.5,
+            "height": 93.3
+          },
+          "crank": {
+            "x": 265.1,
+            "y": 669.3,
+            "width": 158.1,
+            "height": 142.8
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 292.31,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.017
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 292 deg",
+        "driverName": "crank_angle",
+        "numericValue": 292.308,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 312,
+    "sec": 10.4,
+    "drivers": {
+      "crank_angle": {
+        "value": 300,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 664.1
+        },
+        "parts": {
+          "piston": {
+            "x": 224.6,
+            "y": 415.9,
+            "width": 270.9,
+            "height": 91.4
+          },
+          "crank": {
+            "x": 267.7,
+            "y": 659,
+            "width": 157.5,
+            "height": 156.3
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 300,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.095
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 300 deg",
+        "driverName": "crank_angle",
+        "numericValue": 300,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 320,
+    "sec": 10.667,
+    "drivers": {
+      "crank_angle": {
+        "value": 307.692,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 665.7
+        },
+        "parts": {
+          "piston": {
+            "x": 224.4,
+            "y": 404.3,
+            "width": 271.2,
+            "height": 89.6
+          },
+          "crank": {
+            "x": 271.6,
+            "y": 649.9,
+            "width": 154.9,
+            "height": 167.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 307.69,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.169
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 308 deg",
+        "driverName": "crank_angle",
+        "numericValue": 307.692,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 328,
+    "sec": 10.933,
+    "drivers": {
+      "crank_angle": {
+        "value": 315.385,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 666.3
+        },
+        "parts": {
+          "piston": {
+            "x": 224.2,
+            "y": 393.5,
+            "width": 271.5,
+            "height": 88
+          },
+          "crank": {
+            "x": 276.6,
+            "y": 642.2,
+            "width": 150.3,
+            "height": 175.4
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 315.38,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.239
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 315 deg",
+        "driverName": "crank_angle",
+        "numericValue": 315.385,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 336,
+    "sec": 11.2,
+    "drivers": {
+      "crank_angle": {
+        "value": 323.077,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 665.6
+        },
+        "parts": {
+          "piston": {
+            "x": 224.1,
+            "y": 383.7,
+            "width": 271.8,
+            "height": 86.5
+          },
+          "crank": {
+            "x": 282.6,
+            "y": 636.2,
+            "width": 143.8,
+            "height": 180.7
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 323.08,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.302
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 323 deg",
+        "driverName": "crank_angle",
+        "numericValue": 323.077,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 344,
+    "sec": 11.467,
+    "drivers": {
+      "crank_angle": {
+        "value": 330.769,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 663.9
+        },
+        "parts": {
+          "piston": {
+            "x": 224,
+            "y": 375.4,
+            "width": 272.1,
+            "height": 85.2
+          },
+          "crank": {
+            "x": 289.7,
+            "y": 631.9,
+            "width": 135.6,
+            "height": 183
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 330.77,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.355
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 331 deg",
+        "driverName": "crank_angle",
+        "numericValue": 330.769,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 352,
+    "sec": 11.733,
+    "drivers": {
+      "crank_angle": {
+        "value": 338.462,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 661.1
+        },
+        "parts": {
+          "piston": {
+            "x": 223.9,
+            "y": 368.7,
+            "width": 272.3,
+            "height": 84.1
+          },
+          "crank": {
+            "x": 297.7,
+            "y": 629.4,
+            "width": 125.7,
+            "height": 182.3
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 338.46,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.397
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 338 deg",
+        "driverName": "crank_angle",
+        "numericValue": 338.462,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 360,
+    "sec": 12,
+    "drivers": {
+      "crank_angle": {
+        "value": 346.154,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 657.2
+        },
+        "parts": {
+          "piston": {
+            "x": 223.8,
+            "y": 364,
+            "width": 272.4,
+            "height": 83.4
+          },
+          "crank": {
+            "x": 300.2,
+            "y": 627.8,
+            "width": 120.4,
+            "height": 179.6
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 346.15,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.428
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 346 deg",
+        "driverName": "crank_angle",
+        "numericValue": 346.154,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 368,
+    "sec": 12.267,
+    "drivers": {
+      "crank_angle": {
+        "value": 353.846,
+        "unit": "deg"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 652.4
+        },
+        "parts": {
+          "piston": {
+            "x": 223.7,
+            "y": 361.2,
+            "width": 272.5,
+            "height": 83
+          },
+          "crank": {
+            "x": 303.3,
+            "y": 628.1,
+            "width": 113.9,
+            "height": 173.9
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 314.4,
+            "y": 194.1,
+            "width": 91.3,
+            "height": 119.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 353.85,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.446
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S2",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk serta dipadatkan"
+      },
+      {
+        "id": "c1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Langkah Hisap & Kompresi — Udara dan bahan bakar masuk",
+        "claimRef": "C2"
+      },
+      {
+        "id": "c2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 966,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Sudut Engkol: 354 deg",
+        "driverName": "crank_angle",
+        "numericValue": 353.846,
+        "claimRef": "C3"
+      }
+    ]
+  }
+]

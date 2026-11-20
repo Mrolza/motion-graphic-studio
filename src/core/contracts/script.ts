@@ -3,6 +3,7 @@ import { z } from 'zod';
 export const ScriptSentenceSchema = z
   .object({
     text: z.string().min(1),
+    spoken_text: z.string().min(1).optional(),
     claim_refs: z.array(z.string().min(1)),
     emphasis_words: z.array(z.string().min(1)),
     non_factual: z.boolean().optional(),

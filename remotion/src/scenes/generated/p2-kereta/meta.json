@@ -1,0 +1,38 @@
+[
+  {
+    "id": "gen-p2-kereta-S1",
+    "importPath": "./S1",
+    "exportName": "Scene_S1",
+    "durationInFrames": 135
+  },
+  {
+    "id": "gen-p2-kereta-S2",
+    "importPath": "./S2",
+    "exportName": "Scene_S2",
+    "durationInFrames": 302
+  },
+  {
+    "id": "gen-p2-kereta-S3",
+    "importPath": "./S3",
+    "exportName": "Scene_S3",
+    "durationInFrames": 274
+  },
+  {
+    "id": "gen-p2-kereta-S4",
+    "importPath": "./S4",
+    "exportName": "Scene_S4",
+    "durationInFrames": 284
+  },
+  {
+    "id": "gen-p2-kereta-S5",
+    "importPath": "./S5",
+    "exportName": "Scene_S5",
+    "durationInFrames": 135
+  },
+  {
+    "id": "gen-p2-kereta-full",
+    "importPath": "./Assembled",
+    "exportName": "AssembledVideo",
+    "durationInFrames": 1160
+  }
+]

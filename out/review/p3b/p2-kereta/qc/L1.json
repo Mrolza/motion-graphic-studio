@@ -1,0 +1,10 @@
+{
+  "layer": "L1",
+  "issues": [
+    {
+      "severity": "info",
+      "message": "klaim dibuang: SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan",
+      "ref": "C4"
+    }
+  ]
+}

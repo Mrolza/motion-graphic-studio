@@ -1,0 +1,255 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "duration_sec": 8.52,
+      "sentence_refs": [
+        "S1.1",
+        "S1.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "deg",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "assembly_intact=true",
+          "when": {
+            "driver_between": [
+              0,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "KineticTitle",
+          "props": {
+            "title": "Mesin 4 Tak",
+            "subtitle": "Prinsip Kerja Siklus",
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "component": "StatCounter",
+          "props": {
+            "label": "Putaran Poros",
+            "decimals": 0,
+            "unit": "putaran",
+            "bindToDriver": true,
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C6"
+        }
+      ],
+      "trigger_words": [
+        "cara kerja",
+        "empat langkah"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "duration_sec": 12.48,
+      "sentence_refs": [
+        "S2.1",
+        "S2.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "deg",
+        "from": 0,
+        "to": 360
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "intake_open=true",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "Callout",
+          "props": {
+            "label": "Langkah Hisap & Kompresi",
+            "detail": "Udara dan bahan bakar masuk",
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C2"
+        },
+        {
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Engkol",
+            "decimals": 0,
+            "unit": "derajat",
+            "bindToDriver": true,
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C3"
+        }
+      ],
+      "trigger_words": [
+        "Langkah hisap",
+        "Langkah kompresi"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "duration_sec": 10.968,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "deg",
+        "from": 360,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "exhaust_open=true",
+          "when": {
+            "driver_between": [
+              540,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "Callout",
+          "props": {
+            "label": "Langkah Tenaga & Buang",
+            "detail": "Ekspansi gas dan pembuangan sisa",
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C9"
+        },
+        {
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Engkol",
+            "decimals": 0,
+            "unit": "derajat",
+            "bindToDriver": true,
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C5"
+        }
+      ],
+      "trigger_words": [
+        "Langkah tenaga",
+        "Langkah buang"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "duration_sec": 4.896,
+      "sentence_refs": [
+        "S4.1"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "deg",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "continuous_cycle=true",
+          "when": {
+            "driver_between": [
+              0,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "Callout",
+          "props": {
+            "label": "Tenaga Mekanis",
+            "detail": "Siklus berulang terus-menerus",
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C4"
+        },
+        {
+          "component": "StatCounter",
+          "props": {
+            "label": "Total Sudut",
+            "decimals": 0,
+            "unit": "derajat",
+            "bindToDriver": true,
+            "palette": "blueprint-navy"
+          },
+          "claim_ref": "C1"
+        }
+      ],
+      "trigger_words": [
+        "berulang",
+        "tenaga mekanis"
+      ]
+    }
+  ]
+}

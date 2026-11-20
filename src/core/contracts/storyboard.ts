@@ -47,6 +47,7 @@ export const StoryboardSceneSchema = z.object({
   duration_sec: z.number().positive(),
   sentence_refs: z.array(z.string().min(1)),
   focus_entities: z.array(z.string().min(1)).min(1),
+  visible_parts: z.array(z.string().min(1)).optional(),
   driver: StoryboardDriverSchema.optional(),
   invariants: z.array(StoryboardInvariantSchema).optional(),
   hud: z.array(StoryboardHudItemSchema),

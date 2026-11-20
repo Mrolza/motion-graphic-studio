@@ -1,0 +1,244 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "duration_sec": 4.512,
+      "sentence_refs": [
+        "S1.1"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": -2,
+        "to": 2
+      },
+      "invariants": [
+        {
+          "entity": "wheelset",
+          "state": "on_rail=true",
+          "when": {
+            "driver_between": [
+              -2,
+              2
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "KineticTitle",
+          "props": {
+            "title": "Stabilitas Rel",
+            "subtitle": "Tanpa Setir"
+          }
+        }
+      ],
+      "trigger_words": [
+        "stabil"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "duration_sec": 10.08,
+      "sentence_refs": [
+        "S2.1",
+        "S2.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": -3,
+        "to": 3
+      },
+      "invariants": [
+        {
+          "entity": "wheelset",
+          "state": "tapered_profile=true",
+          "when": {
+            "driver_between": [
+              -3,
+              3
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "MeasureReveal",
+          "props": {
+            "label": "Kemiringan Roda",
+            "valueText": "1:20"
+          },
+          "claim_ref": "C1"
+        }
+      ],
+      "trigger_words": [
+        "kerucut",
+        "flens"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "duration_sec": 9.12,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": 0,
+        "to": 5
+      },
+      "invariants": [
+        {
+          "entity": "wheelset",
+          "state": "inertia_drift=true",
+          "when": {
+            "driver_between": [
+              0,
+              5
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "Callout",
+          "props": {
+            "label": "Inersia Tikungan",
+            "detail": "Kecenderungan melaju lurus"
+          },
+          "claim_ref": "C2"
+        }
+      ],
+      "trigger_words": [
+        "inersia",
+        "bergeser"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "duration_sec": 9.456,
+      "sentence_refs": [
+        "S4.1",
+        "S4.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": -2,
+        "to": 4
+      },
+      "invariants": [
+        {
+          "entity": "wheelset",
+          "state": "effective_radius_change=true",
+          "when": {
+            "driver_between": [
+              -2,
+              4
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "MeasureReveal",
+          "props": {
+            "label": "Diameter Efektif",
+            "valueText": "Berubah Dinamis"
+          },
+          "claim_ref": "C3"
+        }
+      ],
+      "trigger_words": [
+        "diameter efektif",
+        "gandar"
+      ]
+    },
+    {
+      "id": "S5",
+      "lane": "code_3d",
+      "duration_sec": 4.512,
+      "sentence_refs": [
+        "S5.1"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": -1,
+        "to": 1
+      },
+      "invariants": [
+        {
+          "entity": "wheelset",
+          "state": "efficient_curve=true",
+          "when": {
+            "driver_between": [
+              -1,
+              1
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "component": "Callout",
+          "props": {
+            "label": "Mekanisme Fisika",
+            "detail": "Efisiensi kurva jalur"
+          },
+          "claim_ref": "C3"
+        }
+      ],
+      "trigger_words": [
+        "efisien"
+      ]
+    }
+  ]
+}

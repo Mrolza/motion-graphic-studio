@@ -1,0 +1,3890 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 138.2,
+          "y": 355.5,
+          "width": 452.3,
+          "height": 444.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.5,
+            "y": 419.2,
+            "width": 197.3,
+            "height": 349.4
+          },
+          "wheel_right": {
+            "x": 367.8,
+            "y": 380,
+            "width": 203.1,
+            "height": 318.6
+          },
+          "contact_left": {
+            "x": 239.8,
+            "y": 646.9,
+            "width": 27.9,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 445.1,
+            "y": 590.7,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 180.5,
+            "y": 393.3,
+            "width": 182.6,
+            "height": 392.2
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999053,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 138.3,
+          "y": 355.5,
+          "width": 452.2,
+          "height": 444.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.5,
+            "y": 419.1,
+            "width": 197.1,
+            "height": 349.4
+          },
+          "wheel_right": {
+            "x": 367.9,
+            "y": 380,
+            "width": 203,
+            "height": 318.6
+          },
+          "contact_left": {
+            "x": 239.7,
+            "y": 646.9,
+            "width": 27.9,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 445.2,
+            "y": 590.7,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 180.5,
+            "y": 393.2,
+            "width": 182.4,
+            "height": 392.2
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 138.6,
+          "y": 355.5,
+          "width": 451.8,
+          "height": 444.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.8,
+            "y": 418.9,
+            "width": 195.8,
+            "height": 349.5
+          },
+          "wheel_right": {
+            "x": 368.8,
+            "y": 380.1,
+            "width": 202.1,
+            "height": 319
+          },
+          "contact_left": {
+            "x": 239.3,
+            "y": 646.6,
+            "width": 27.9,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 445.6,
+            "y": 591,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 181,
+            "y": 393,
+            "width": 180.6,
+            "height": 392.5
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 139.7,
+          "y": 355.7,
+          "width": 450.6,
+          "height": 443.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 154.5,
+            "y": 418.2,
+            "width": 192.2,
+            "height": 349.8
+          },
+          "wheel_right": {
+            "x": 371.1,
+            "y": 380.3,
+            "width": 199.8,
+            "height": 319.9
+          },
+          "contact_left": {
+            "x": 238.3,
+            "y": 646,
+            "width": 27.7,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 446.8,
+            "y": 591.6,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 182.3,
+            "y": 392.2,
+            "width": 176,
+            "height": 393.2
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 141.8,
+          "y": 356.1,
+          "width": 448,
+          "height": 442.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 156,
+            "y": 416.7,
+            "width": 185.2,
+            "height": 350.3
+          },
+          "wheel_right": {
+            "x": 375.8,
+            "y": 380.8,
+            "width": 195.1,
+            "height": 321.6
+          },
+          "contact_left": {
+            "x": 236.5,
+            "y": 644.6,
+            "width": 27.5,
+            "height": 29.4
+          },
+          "contact_right": {
+            "x": 449.1,
+            "y": 592.8,
+            "width": 26.2,
+            "height": 26.9
+          },
+          "flange": {
+            "x": 185,
+            "y": 390.8,
+            "width": 167.2,
+            "height": 394.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 145.8,
+          "y": 356.8,
+          "width": 442.6,
+          "height": 440
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 159,
+            "y": 414.5,
+            "width": 173.2,
+            "height": 350.7
+          },
+          "wheel_right": {
+            "x": 383.3,
+            "y": 381.6,
+            "width": 186.9,
+            "height": 324.2
+          },
+          "contact_left": {
+            "x": 233.7,
+            "y": 642.3,
+            "width": 26.9,
+            "height": 29.1
+          },
+          "contact_right": {
+            "x": 452.6,
+            "y": 594.9,
+            "width": 26,
+            "height": 26.8
+          },
+          "flange": {
+            "x": 189.7,
+            "y": 388.5,
+            "width": 152.3,
+            "height": 396.2
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 152.7,
+          "y": 358.1,
+          "width": 432.5,
+          "height": 435.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 164.3,
+            "y": 411.2,
+            "width": 154.6,
+            "height": 350.8
+          },
+          "wheel_right": {
+            "x": 394.6,
+            "y": 383.1,
+            "width": 173.6,
+            "height": 327.9
+          },
+          "contact_left": {
+            "x": 230.3,
+            "y": 638.9,
+            "width": 26,
+            "height": 28.7
+          },
+          "contact_right": {
+            "x": 457.5,
+            "y": 598.2,
+            "width": 25.7,
+            "height": 26.7
+          },
+          "flange": {
+            "x": 197.4,
+            "y": 385.2,
+            "width": 129.6,
+            "height": 398.3
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 164,
+          "y": 360.5,
+          "width": 414.3,
+          "height": 428.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 173.4,
+            "y": 407,
+            "width": 127.5,
+            "height": 349.9
+          },
+          "wheel_right": {
+            "x": 410,
+            "y": 385.7,
+            "width": 153.2,
+            "height": 332.3
+          },
+          "contact_left": {
+            "x": 226.9,
+            "y": 634,
+            "width": 24.4,
+            "height": 27.9
+          },
+          "contact_right": {
+            "x": 463.4,
+            "y": 603.1,
+            "width": 24.9,
+            "height": 26.5
+          },
+          "flange": {
+            "x": 209.6,
+            "y": 380.9,
+            "width": 97,
+            "height": 399.9
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 182,
+          "y": 364.5,
+          "width": 382.6,
+          "height": 415.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 188.4,
+            "y": 401.9,
+            "width": 90,
+            "height": 346.5
+          },
+          "wheel_right": {
+            "x": 429.8,
+            "y": 390,
+            "width": 122.7,
+            "height": 336.7
+          },
+          "contact_left": {
+            "x": 224.9,
+            "y": 627.3,
+            "width": 22,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 469.6,
+            "y": 610.1,
+            "width": 23.5,
+            "height": 26
+          },
+          "flange": {
+            "x": 227.9,
+            "y": 375.9,
+            "width": 52.7,
+            "height": 399.7
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 178.2,
+          "y": 370.4,
+          "width": 361.4,
+          "height": 397
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 186.2,
+            "y": 396.3,
+            "width": 82,
+            "height": 339.6
+          },
+          "wheel_right": {
+            "x": 453.5,
+            "y": 396.8,
+            "width": 78.5,
+            "height": 339.9
+          },
+          "contact_left": {
+            "x": 224.8,
+            "y": 618.8,
+            "width": 21.1,
+            "height": 25.2
+          },
+          "contact_right": {
+            "x": 474.3,
+            "y": 619.5,
+            "width": 20.9,
+            "height": 25.2
+          },
+          "flange": {
+            "x": 232,
+            "y": 370.5,
+            "width": 36.5,
+            "height": 396
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 151,
+          "y": 363.2,
+          "width": 392.4,
+          "height": 419.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 164,
+            "y": 388.7,
+            "width": 131.8,
+            "height": 335.6
+          },
+          "wheel_right": {
+            "x": 435.3,
+            "y": 403.3,
+            "width": 100.8,
+            "height": 347.7
+          },
+          "contact_left": {
+            "x": 228,
+            "y": 608,
+            "width": 23.9,
+            "height": 26.2
+          },
+          "contact_right": {
+            "x": 472.1,
+            "y": 629.2,
+            "width": 22.7,
+            "height": 27.1
+          },
+          "flange": {
+            "x": 201.4,
+            "y": 365.7,
+            "width": 98.4,
+            "height": 388.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 136.8,
+          "y": 358.9,
+          "width": 426.8,
+          "height": 433.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 384,
+            "width": 166.9,
+            "height": 329.5
+          },
+          "wheel_right": {
+            "x": 407.3,
+            "y": 409.7,
+            "width": 145.5,
+            "height": 350.7
+          },
+          "contact_left": {
+            "x": 234.9,
+            "y": 599.9,
+            "width": 25.4,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 465.6,
+            "y": 637.2,
+            "width": 25.5,
+            "height": 28.4
+          },
+          "flange": {
+            "x": 182.6,
+            "y": 363.2,
+            "width": 144.3,
+            "height": 379
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131,
+          "y": 356.5,
+          "width": 444.8,
+          "height": 440.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 149.5,
+            "y": 381.3,
+            "width": 190.1,
+            "height": 323.2
+          },
+          "wheel_right": {
+            "x": 384.3,
+            "y": 415.3,
+            "width": 177.9,
+            "height": 350.6
+          },
+          "contact_left": {
+            "x": 242.6,
+            "y": 594.1,
+            "width": 26.1,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 458.1,
+            "y": 643.2,
+            "width": 27.1,
+            "height": 29.2
+          },
+          "flange": {
+            "x": 172.2,
+            "y": 362.1,
+            "width": 176.2,
+            "height": 370.1
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 129.4,
+          "y": 355.3,
+          "width": 453.2,
+          "height": 444.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 149.2,
+            "y": 379.8,
+            "width": 205,
+            "height": 317.8
+          },
+          "wheel_right": {
+            "x": 366.9,
+            "y": 419.8,
+            "width": 200.2,
+            "height": 349.2
+          },
+          "contact_left": {
+            "x": 249.6,
+            "y": 590.2,
+            "width": 26.3,
+            "height": 26.9
+          },
+          "contact_right": {
+            "x": 451.3,
+            "y": 647.5,
+            "width": 28,
+            "height": 29.7
+          },
+          "flange": {
+            "x": 167,
+            "y": 361.9,
+            "width": 197.9,
+            "height": 362.6
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 129.8,
+          "y": 354.8,
+          "width": 456.5,
+          "height": 446.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 150.3,
+            "y": 379.1,
+            "width": 214.6,
+            "height": 313.7
+          },
+          "wheel_right": {
+            "x": 354.1,
+            "y": 423.1,
+            "width": 215.3,
+            "height": 347.4
+          },
+          "contact_left": {
+            "x": 255.1,
+            "y": 587.7,
+            "width": 26.3,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 445.9,
+            "y": 650.4,
+            "width": 28.5,
+            "height": 30
+          },
+          "flange": {
+            "x": 164.5,
+            "y": 361.9,
+            "width": 212.5,
+            "height": 357
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 130.6,
+          "y": 354.6,
+          "width": 457.4,
+          "height": 447.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151.6,
+            "y": 378.7,
+            "width": 220.5,
+            "height": 310.8
+          },
+          "wheel_right": {
+            "x": 345.4,
+            "y": 425.3,
+            "width": 224.9,
+            "height": 346
+          },
+          "contact_left": {
+            "x": 258.9,
+            "y": 586.1,
+            "width": 26.3,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 442.1,
+            "y": 652.2,
+            "width": 28.7,
+            "height": 30.1
+          },
+          "flange": {
+            "x": 163.4,
+            "y": 362.1,
+            "width": 221.5,
+            "height": 353.2
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.3,
+          "y": 354.5,
+          "width": 457.6,
+          "height": 447.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 152.5,
+            "y": 378.6,
+            "width": 223.8,
+            "height": 309
+          },
+          "wheel_right": {
+            "x": 340.3,
+            "y": 426.6,
+            "width": 230.4,
+            "height": 345
+          },
+          "contact_left": {
+            "x": 261.3,
+            "y": 585.2,
+            "width": 26.2,
+            "height": 26.8
+          },
+          "contact_right": {
+            "x": 439.8,
+            "y": 653.3,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 163,
+            "y": 362.3,
+            "width": 226.6,
+            "height": 350.9
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.7,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153,
+            "y": 378.5,
+            "width": 225.4,
+            "height": 308.2
+          },
+          "wheel_right": {
+            "x": 337.8,
+            "y": 427.2,
+            "width": 233,
+            "height": 344.5
+          },
+          "contact_left": {
+            "x": 262.4,
+            "y": 584.8,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.6,
+            "y": 653.8,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229,
+            "height": 349.8
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.8,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 378.5,
+            "width": 225.8,
+            "height": 307.9
+          },
+          "wheel_right": {
+            "x": 337,
+            "y": 427.4,
+            "width": 233.8,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.7,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229.7,
+            "height": 349.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 378.5,
+            "width": 225.9,
+            "height": 307.9
+          },
+          "wheel_right": {
+            "x": 337,
+            "y": 427.4,
+            "width": 233.8,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229.8,
+            "height": 349.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 378.5,
+            "width": 225.9,
+            "height": 307.9
+          },
+          "wheel_right": {
+            "x": 337,
+            "y": 427.4,
+            "width": 233.8,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229.8,
+            "height": 349.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 378.5,
+            "width": 225.9,
+            "height": 307.9
+          },
+          "wheel_right": {
+            "x": 337,
+            "y": 427.4,
+            "width": 233.8,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229.8,
+            "height": 349.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 378.5,
+            "width": 225.9,
+            "height": 307.9
+          },
+          "wheel_right": {
+            "x": 337,
+            "y": 427.4,
+            "width": 233.8,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229.8,
+            "height": 349.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.9,
+          "y": 354.5,
+          "width": 457.5,
+          "height": 447.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.2,
+            "y": 378.5,
+            "width": 225.9,
+            "height": 307.9
+          },
+          "wheel_right": {
+            "x": 337,
+            "y": 427.4,
+            "width": 233.8,
+            "height": 344.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.8,
+            "y": 362.4,
+            "width": 229.8,
+            "height": 349.4
+          }
+        },
+        "partStates": {
+          "distance": -2,
+          "wheel_angle_deg": -249.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "distance": {
+        "value": -1.615,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 131.6,
+          "y": 354.2,
+          "width": 457.9,
+          "height": 448.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153,
+            "y": 378.3,
+            "width": 226.2,
+            "height": 308.4
+          },
+          "wheel_right": {
+            "x": 336.8,
+            "y": 427.2,
+            "width": 234.2,
+            "height": 344.9
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 162.6,
+            "y": 362.1,
+            "width": 230.2,
+            "height": 350
+          }
+        },
+        "partStates": {
+          "distance": -1.615,
+          "wheel_angle_deg": -201.12,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "distance": {
+        "value": -1.125,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 119.5,
+          "y": 339.7,
+          "width": 479.6,
+          "height": 481
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 142.9,
+            "y": 365.7,
+            "width": 244.1,
+            "height": 334.9
+          },
+          "wheel_right": {
+            "x": 327.1,
+            "y": 413.2,
+            "width": 252.1,
+            "height": 374.3
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 150.5,
+            "y": 347.3,
+            "width": 251.3,
+            "height": 381.1
+          }
+        },
+        "partStates": {
+          "distance": -1.125,
+          "wheel_angle_deg": -140.17,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "distance": {
+        "value": -0.636,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 144.4,
+          "y": 369.9,
+          "width": 434.8,
+          "height": 413
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 163.7,
+            "y": 391.8,
+            "width": 207.2,
+            "height": 280
+          },
+          "wheel_right": {
+            "x": 347,
+            "y": 442.2,
+            "width": 215.1,
+            "height": 313.2
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 175.3,
+            "y": 378.1,
+            "width": 207.8,
+            "height": 316.6
+          }
+        },
+        "partStates": {
+          "distance": -0.636,
+          "wheel_angle_deg": -79.23,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "distance": {
+        "value": -0.147,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 134.7,
+          "y": 358,
+          "width": 452.3,
+          "height": 439.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 155.6,
+            "y": 381.5,
+            "width": 221.6,
+            "height": 301.6
+          },
+          "wheel_right": {
+            "x": 339.3,
+            "y": 430.8,
+            "width": 229.6,
+            "height": 337.2
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 165.7,
+            "y": 365.9,
+            "width": 224.8,
+            "height": 341.9
+          }
+        },
+        "partStates": {
+          "distance": -0.147,
+          "wheel_angle_deg": -18.28,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "distance": {
+        "value": 0.343,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 119,
+          "y": 339.1,
+          "width": 480.4,
+          "height": 482.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 142.5,
+            "y": 365.2,
+            "width": 244.8,
+            "height": 335.9
+          },
+          "wheel_right": {
+            "x": 326.7,
+            "y": 412.7,
+            "width": 252.9,
+            "height": 375.5
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 150,
+            "y": 346.7,
+            "width": 252.2,
+            "height": 382.3
+          }
+        },
+        "partStates": {
+          "distance": 0.343,
+          "wheel_angle_deg": 42.66,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "distance": {
+        "value": 0.832,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 140.5,
+          "y": 365.1,
+          "width": 441.9,
+          "height": 423.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 160.4,
+            "y": 387.7,
+            "width": 213,
+            "height": 288.7
+          },
+          "wheel_right": {
+            "x": 343.9,
+            "y": 437.6,
+            "width": 220.9,
+            "height": 322.9
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 171.4,
+            "y": 373.2,
+            "width": 214.6,
+            "height": 326.8
+          }
+        },
+        "partStates": {
+          "distance": 0.832,
+          "wheel_angle_deg": 103.61,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "distance": {
+        "value": 1.321,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 138.1,
+          "y": 362.2,
+          "width": 446.2,
+          "height": 430.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 158.5,
+            "y": 385.1,
+            "width": 216.5,
+            "height": 294
+          },
+          "wheel_right": {
+            "x": 342,
+            "y": 434.8,
+            "width": 224.5,
+            "height": 328.8
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 169.1,
+            "y": 370.2,
+            "width": 218.8,
+            "height": 333
+          }
+        },
+        "partStates": {
+          "distance": 1.321,
+          "wheel_angle_deg": 164.55,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "distance": {
+        "value": 1.81,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 118.9,
+          "y": 338.9,
+          "width": 480.7,
+          "height": 482.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 142.4,
+            "y": 365,
+            "width": 245,
+            "height": 336.2
+          },
+          "wheel_right": {
+            "x": 326.6,
+            "y": 412.5,
+            "width": 253,
+            "height": 375.8
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 149.9,
+            "y": 346.5,
+            "width": 252.4,
+            "height": 382.6
+          }
+        },
+        "partStates": {
+          "distance": 1.81,
+          "wheel_angle_deg": 225.5,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "distance": {
+        "value": 2.3,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 136.9,
+          "y": 360.7,
+          "width": 448.4,
+          "height": 433.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 157.4,
+            "y": 383.8,
+            "width": 218.4,
+            "height": 296.7
+          },
+          "wheel_right": {
+            "x": 341,
+            "y": 433.4,
+            "width": 226.3,
+            "height": 331.9
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 167.8,
+            "y": 368.7,
+            "width": 221,
+            "height": 336.2
+          }
+        },
+        "partStates": {
+          "distance": 2.3,
+          "wheel_angle_deg": 286.44,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "distance": {
+        "value": 2.789,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 141.8,
+          "y": 366.8,
+          "width": 439.5,
+          "height": 420.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 161.6,
+            "y": 389.1,
+            "width": 211,
+            "height": 285.8
+          },
+          "wheel_right": {
+            "x": 345,
+            "y": 439.2,
+            "width": 218.9,
+            "height": 319.6
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 172.7,
+            "y": 374.9,
+            "width": 212.3,
+            "height": 323.3
+          }
+        },
+        "partStates": {
+          "distance": 2.789,
+          "wheel_angle_deg": 347.39,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "distance": {
+        "value": 3.278,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 119.1,
+          "y": 339.2,
+          "width": 480.2,
+          "height": 482
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 142.6,
+            "y": 365.3,
+            "width": 244.6,
+            "height": 335.6
+          },
+          "wheel_right": {
+            "x": 326.8,
+            "y": 412.8,
+            "width": 252.7,
+            "height": 375.2
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 150.1,
+            "y": 346.8,
+            "width": 251.9,
+            "height": 382
+          }
+        },
+        "partStates": {
+          "distance": 3.278,
+          "wheel_angle_deg": 408.33,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "distance": {
+        "value": 3.768,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 133.6,
+          "y": 356.6,
+          "width": 454.3,
+          "height": 442.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 154.7,
+            "y": 380.3,
+            "width": 223.3,
+            "height": 304
+          },
+          "wheel_right": {
+            "x": 338.4,
+            "y": 429.5,
+            "width": 231.3,
+            "height": 340
+          },
+          "contact_left": {
+            "x": 262.8,
+            "y": 584.6,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "contact_right": {
+            "x": 438.2,
+            "y": 654,
+            "width": 28.8,
+            "height": 30.2
+          },
+          "flange": {
+            "x": 164.5,
+            "y": 364.6,
+            "width": 226.8,
+            "height": 344.8
+          }
+        },
+        "partStates": {
+          "distance": 3.768,
+          "wheel_angle_deg": 469.28,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "title_S4",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 90.3
+        },
+        "text": "Diameter Efektif & Gandar — Perubahan geometri roda pada tikungan"
+      },
+      {
+        "id": "m_efektif",
+        "component": "MeasureReveal",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 74
+        },
+        "text": "Diameter Efektif: Berubah Dinamis",
+        "claimRef": "C3"
+      },
+      {
+        "id": "c_gandar",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 946,
+          "width": 624,
+          "height": 94
+        },
+        "text": "Aksi Gandar Kaku — Roda luar menempuh jarak lebih jauh",
+        "claimRef": "C3"
+      }
+    ]
+  }
+]
