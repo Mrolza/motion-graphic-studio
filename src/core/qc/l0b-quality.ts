@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import type { FactLedger } from '@core/contracts/fact-ledger';
+import type { VideoFormat } from '@core/contracts/project';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
 import { generateJson } from '@core/llm/client';
@@ -14,13 +15,15 @@ export const L0bScoresSchema = z.object({
 
 export const L3SentenceEvalSchema = z.object({
   ref: z.string().min(1),
-  verdict: z.enum(['supported', 'overstated', 'unsupported']),
+  verdict: z.enum(['supported', 'overstated', 'unsupported', 'non_factual_assertion']),
   reason: z.string().min(1),
 });
 
 export const CombinedVerifierOutputSchema = z.object({
   l0b: z.object({
     answers_question: z.boolean(),
+    has_off_topic_scene: z.boolean(),
+    main_event_dated: z.boolean().optional(),
     scores: L0bScoresSchema,
     issues: z.array(z.string()),
   }),
@@ -32,6 +35,7 @@ export const CombinedVerifierOutputSchema = z.object({
 
 export interface L0bResult {
   answers_question: boolean;
+  has_off_topic_scene: boolean;
   scores: z.infer<typeof L0bScoresSchema>;
   report: QcReport;
 }
@@ -43,35 +47,41 @@ export interface CombinedQcResult {
 
 export async function verifyScriptL0bAndL3(params: {
   topic: string;
+  format?: VideoFormat;
   concept?: Concept;
   script: Script;
   ledger: FactLedger;
   onCall?: (model: string) => void;
 }): Promise<CombinedQcResult> {
-  const { topic, concept, script, ledger, onCall } = params;
+  const { topic, format, concept, script, ledger, onCall } = params;
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
 
   const items: Array<{
     ref: string;
+    non_factual: boolean;
     text: string;
-    claims: Array<{ id: string; text: string; quote: string }>;
+    claims: Array<{ id: string; claim_text: string; quote: string }>;
   }> = [];
 
   for (const scene of script.scenes) {
     scene.sentences.forEach((sent, idx) => {
-      if (sent.non_factual) return;
       const ref = `${scene.id}.${idx + 1}`;
       const claims = sent.claim_refs
         .map((cid) => claimMap.get(cid))
         .filter((c): c is NonNullable<typeof c> => Boolean(c))
         .map((c) => ({
           id: c.id,
-          text: c.text,
+          claim_text: c.text,
           quote: c.sources[0]?.quote ?? '',
         }));
-      items.push({ ref, text: sent.text, claims });
+      items.push({ ref, non_factual: Boolean(sent.non_factual), text: sent.text, claims });
     });
   }
+
+  const historyRule =
+    format === 'today_in_history'
+      ? `\n5. KHUSUS today_in_history: isi "main_event_dated": true HANYA jika adegan 1–2 menyebut kejadian utama lengkap dengan tanggal dan tahunnya (misalnya "20 Juli 1969, Apollo 11 mendarat di Bulan").`
+      : '';
 
   const systemInstruction = `Anda adalah auditor kualitas & fakta adversarial (L0b + L3).
 Lakukan DUA pemeriksaan dalam satu JSON:
@@ -80,28 +90,30 @@ BAGIAN 1 — L0b (Relevansi & Kualitas Naskah):
 1. answers_direct (1-5): Apakah naskah menjawab pertanyaan topik secara langsung, dan jawaban inti muncul cepat (±10 detik pertama setelah hook)?
 2. coverage (1-5): Apakah core_claims konsep terpilih tersampaikan?
 3. structure (1-5): Apakah alurnya jelas (hook -> sebab/mekanisme -> akibat -> payoff) dan hook dibayar?
-4. on_topic (1-5): Apakah seluruh bagian tetap relevan pada topik (tidak menyimpang membahas satu kasus/objek lain yang tidak menjawab pertanyaan)?
+4. on_topic (1-5): Apakah seluruh adegan tetap relevan pada topik? Set "has_off_topic_scene": true jika ada adegan yang menyimpang/tidak relevan (misalnya membahas topik lain).${historyRule}
 Set "answers_question": true hanya jika naskah benar-benar menjawab pertanyaan topik.
 
 BAGIAN 2 — L3 (Verifier Fakta Ketat):
-Bandingkan setiap kalimat faktual dengan KUTIPAN ASLI ("quote") klaim yang dirujuk:
-- "supported": didukung langsung oleh kutipan tanpa melebih-lebihkan.
-- "overstated": menggeneralisasi berlebihan (ATURAN KHUSUS: generalisasi dari satu model/produk/kejadian spesifik ke kelas umum, misalnya "bogie CL243 pakai suspensi udara" -> "semua kereta memakai suspensi udara", WAJIB dinilai "overstated"), atau menambah sebab-akibat/angka yang tidak ada di kutipan.
-- "unsupported": bertentangan atau tidak didukung oleh kutipan sumber.
+Periksa SEMUA kalimat (termasuk yang non_factual: true):
+- Jika "non_factual": true — hanya boleh pertanyaan retoris murni, transisi, atau ajakan (kalimat tanya retoris murni seperti "Tahukah kamu bagaimana X bekerja?" adalah SAH dan diberi verdict "supported"). Jika berisi kalimat pernyataan faktual atau penilaian tentang subjek (misalnya "efisien", "andal", "tercanggih", "desain terbaik") → verdict WAJIB "non_factual_assertion".
+- Jika kalimat faktual — bandingkan kalimat DAN "claim_text" klaim rujukan terhadap "quote":
+  - "supported": kalimat & claim_text didukung langsung oleh kutipan tanpa mengubah makna.
+  - "overstated": menggeneralisasi berlebihan (satu model/produk -> semua kereta/mesin), ATAU **menghilangkan/mengubah kuantitas/subjek/cakupan sehingga maknanya berubah** (misalnya "dua putaran" menjadi "putaran penuh", "sebagian besar" menjadi "semua", "wheelset" menjadi "lokomotif"), ATAU menambah sebab-akibat yang tidak ada di kutipan.
+  - "unsupported": bertentangan atau tidak didukung kutipan, atau claim_text tidak didukung oleh quote-nya.
 
 Kembalikan JSON sesuai skema:
 {
-  "l0b": { "answers_question": true|false, "scores": { "answers_direct": 1..5, "coverage": 1..5, "structure": 1..5, "on_topic": 1..5 }, "issues": ["..."] },
-  "l3": { "evaluations": [{ "ref": "S1.1", "verdict": "supported|overstated|unsupported", "reason": "..." }], "extra_findings": [] }
+  "l0b": { "answers_question": true|false, "has_off_topic_scene": true|false, "main_event_dated": true|false, "scores": { "answers_direct": 1..5, "coverage": 1..5, "structure": 1..5, "on_topic": 1..5 }, "issues": ["..."] },
+  "l3": { "evaluations": [{ "ref": "S1.1", "verdict": "supported|overstated|unsupported|non_factual_assertion", "reason": "..." }], "extra_findings": [] }
 }`;
 
-  const prompt = `Topik: "${topic}"
+  const prompt = `Topik: "${topic}"${format ? ` (Format: ${format})` : ''}
 ${concept ? `Konsep terpilih: "${concept.title}"\nCore claims:\n${concept.core_claims.map((c, i) => `- [${i}] ${c}`).join('\n')}` : ''}
 
 Naskah lengkap:
 ${JSON.stringify(script, null, 2)}
 
-Pasangan kalimat faktual & kutipan sumber untuk L3:
+Pasangan kalimat, claim_text, & kutipan sumber untuk L3:
 ${JSON.stringify(items, null, 2)}`;
 
   const res = await generateJson(CombinedVerifierOutputSchema, prompt, {
@@ -114,12 +126,28 @@ ${JSON.stringify(items, null, 2)}`;
   });
 
   const l0bIssues: QcIssue[] = [];
-  const { answers_question, scores, issues: rawL0bIssues } = res.data.l0b;
+  const { answers_question, has_off_topic_scene, main_event_dated, scores, issues: rawL0bIssues } =
+    res.data.l0b;
+
   if (!answers_question) {
     l0bIssues.push({
       severity: 'error',
       message: 'L0B_NOT_ANSWERING: naskah tidak menjawab pertanyaan topik',
       ref: 'script',
+    });
+  }
+  if (has_off_topic_scene) {
+    l0bIssues.push({
+      severity: 'error',
+      message: 'L0B_OFF_TOPIC: terdapat adegan yang menyimpang / tidak relevan dengan topik',
+      ref: 'script',
+    });
+  }
+  if (format === 'today_in_history' && main_event_dated === false) {
+    l0bIssues.push({
+      severity: 'error',
+      message: 'L0B_MISSING_MAIN_EVENT: adegan 1–2 wajib menyebut kejadian utama lengkap dengan tanggal dan tahunnya',
+      ref: 'S1',
     });
   }
   for (const [k, v] of Object.entries(scores)) {
@@ -134,7 +162,7 @@ ${JSON.stringify(items, null, 2)}`;
   for (const msg of rawL0bIssues) {
     if (msg.trim()) {
       l0bIssues.push({
-        severity: !answers_question ? 'error' : 'warning',
+        severity: !answers_question || has_off_topic_scene ? 'error' : 'warning',
         message: `L0B_NOTE: ${msg.trim()}`,
         ref: 'script',
       });
@@ -143,7 +171,13 @@ ${JSON.stringify(items, null, 2)}`;
 
   const l3Issues: QcIssue[] = [];
   for (const ev of res.data.l3.evaluations) {
-    if (ev.verdict === 'unsupported' || ev.verdict === 'overstated') {
+    if (ev.verdict === 'non_factual_assertion') {
+      l3Issues.push({
+        severity: 'error',
+        message: `NON_FACTUAL_ASSERTION: ${ev.reason}`,
+        ref: ev.ref,
+      });
+    } else if (ev.verdict === 'unsupported' || ev.verdict === 'overstated') {
       l3Issues.push({
         severity: 'error',
         message: `L3_${ev.verdict.toUpperCase()}: ${ev.reason}`,
@@ -164,6 +198,7 @@ ${JSON.stringify(items, null, 2)}`;
   return {
     l0b: {
       answers_question,
+      has_off_topic_scene,
       scores,
       report: { layer: 'L0b', issues: l0bIssues },
     },

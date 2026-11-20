@@ -2,113 +2,113 @@
   "claims": [
     {
       "id": "C1",
-      "text": "Peluncuran misi Soyuz MS-13 terjadi pada tanggal 20 Juli 2019 yang menandai peringatan 50 tahun pendaratan pertama di Bulan.",
+      "text": "Pada 20 Juli 1969, modul pendarat Apollo 11 bernama Eagle berhasil mendarat di permukaan Bulan.",
       "kind": "fact",
-      "status": "verified",
+      "status": "unverified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
-          "title": "Soyuz MS-13",
-          "quote": "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019 – the 50th anniversary of the first Moon landing",
-          "retrieved_at": "2026-11-19T12:58:58.413Z"
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "After a three-day transit, Armstrong and Aldrin descended to the surface aboard the LM Eagle, landing in the Sea of Tranquility (Mare Tranquillitatis) on July 20 at 20:17 UTC while Collins remained in lunar orbit aboard the CM Columbia.",
+          "retrieved_at": "2026-11-20T10:55:27.873Z"
         }
       ]
     },
     {
       "id": "C2",
-      "text": "Tanggal 20 Juli dikaitkan dengan peringatan pendaratan pertama manusia di Bulan.",
+      "text": "Neil Armstrong dan Buzz Aldrin menjadi dua manusia pertama yang menginjakkan kaki di permukaan Bulan.",
       "kind": "fact",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
-          "title": "Soyuz MS-13",
-          "quote": "the 50th anniversary of the first Moon landing",
-          "retrieved_at": "2026-11-19T12:58:58.413Z"
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "Apollo 11 (July 16–24, 1969) was the American spaceflight that first landed humans on the Moon, and the fifth crewed mission of NASA's Apollo program.",
+          "retrieved_at": "2026-11-20T10:55:27.873Z"
         }
       ]
     },
     {
       "id": "C3",
-      "text": "Misi berawak Soyuz MS-13 diluncurkan pada tanggal 20 Juli.",
+      "text": "Misi ini dipimpin oleh komandan Neil Armstrong yang mengucapkan kalimat ikonik 'Satu langkah kecil bagi manusia, satu lompatan raksasa bagi umat manusia'.",
       "kind": "fact",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
-          "title": "Soyuz MS-13",
-          "quote": "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019",
-          "retrieved_at": "2026-11-19T12:58:58.413Z"
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "Stepping onto the lunar surface, Armstrong declared: \"That's one small step for [a] man, one giant leap for mankind.\"",
+          "retrieved_at": "2026-11-20T10:55:27.873Z"
         }
       ]
     },
     {
       "id": "C4",
-      "text": "Pendaratan pertama di Bulan terjadi beberapa dekade sebelum tahun 2019.",
-      "kind": "fact",
+      "text": "Kejadian bersejarah ini disaksikan oleh sekitar 600 juta penonton televisi di seluruh dunia.",
+      "kind": "estimate",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Soyuz_MS-13",
-          "title": "Soyuz MS-13",
-          "quote": "50th anniversary of the first Moon landing",
-          "retrieved_at": "2026-11-19T12:58:58.413Z"
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "Armstrong's moonwalk was broadcast live to an estimated 600 million viewers, roughly one-fifth of the world's population, making it among the most-watched television events in history.",
+          "retrieved_at": "2026-11-20T10:55:27.873Z"
         }
       ]
     },
     {
       "id": "C5",
-      "text": "Apollo 11 adalah penerbangan luar angkasa berawak pertama yang mendarat di Bulan.",
+      "text": "Pada tanggal 20 Juli 1969, astronaut Neil Armstrong dan Buzz Aldrin menerbangkan modul pendarat Eagle ke Bulan.",
       "kind": "fact",
-      "status": "verified",
+      "status": "unverified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
-          "title": "Apollo 11 anniversaries",
-          "quote": "Apollo 11 was the first human spaceflight to land on the Moon.",
-          "retrieved_at": "2026-11-19T12:58:59.840Z"
+          "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
+          "title": "Lunar Module Eagle",
+          "quote": "It was flown to the Moon on July 20, 1969, by astronaut Neil Armstrong with navigational assistance from Buzz Aldrin.",
+          "retrieved_at": "2026-11-20T10:55:28.222Z"
         }
       ]
     },
     {
       "id": "C6",
-      "text": "Awak Apollo 11 yaitu Buzz Aldrin, Neil Armstrong, dan Michael Collins berpartisipasi dalam upacara di Washington, D.C. pada 20 Juli 1979.",
+      "text": "Modul Eagle mendarat di Base Tranquillity pada pukul 20:17:40 UTC tanggal 20 Juli 1969.",
       "kind": "fact",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
-          "title": "Apollo 11 anniversaries",
-          "quote": "The Apollo 11 crew, Buzz Aldrin, Neil Armstrong, and Michael Collins, who had not appeared publicly since the 5th anniversary, participated in ceremonies in Washington, D.C., on July 20, 1979.",
-          "retrieved_at": "2026-11-19T12:58:59.840Z"
+          "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
+          "title": "Lunar Module Eagle",
+          "quote": "Eagle was landed at Tranquility Base at 20:17:40 UTC on July 20, 1969, with 216 pounds (98 kg) of usable fuel remaining.",
+          "retrieved_at": "2026-11-20T10:55:28.222Z"
         }
       ]
     },
     {
       "id": "C7",
-      "text": "Pada tanggal 20 Juli 2009, Armstrong, Aldrin, dan Collins bertemu dengan Presiden AS Barack Obama di Gedung Putih.",
+      "text": "Mare Tranquillitatis menjadi lokasi pendaratan berawak pertama di Bulan pada tanggal 20 Juli 1969.",
       "kind": "fact",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
-          "title": "Apollo 11 anniversaries",
-          "quote": "On July 20, 2009, Armstrong, Aldrin, and Collins met with U.S. President Barack Obama at the White House.",
-          "retrieved_at": "2026-11-19T12:58:59.840Z"
+          "url": "https://en.wikipedia.org/wiki/Mare_Tranquillitatis",
+          "title": "Mare Tranquillitatis",
+          "quote": "Mare Tranquillitatis was the landing site for the first crewed landing on the Moon on July 20, 1969, at 20:18 UTC.",
+          "retrieved_at": "2026-11-20T10:55:28.502Z"
         }
       ]
     },
     {
       "id": "C8",
-      "text": "Festival luar ruangan selama tiga hari dari tanggal 18 hingga 20 Juli 2019 menampilkan pameran interaktif dan pembicara seperti ilmuwan NASA.",
+      "text": "Setelah pendaratan modul Eagle, Neil Armstrong menyampaikan kalimat 'The Eagle has landed' kepada pengendali penerbangan di Bumi.",
       "kind": "fact",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Apollo_11_anniversaries",
-          "title": "Apollo 11 anniversaries",
-          "quote": "The three day (July 18 to 20, 2019) outdoor festival featured hands-on exhibits and activities, live performances, and speakers such as Adam Savage and NASA scientists.",
-          "retrieved_at": "2026-11-19T12:58:59.840Z"
+          "url": "https://en.wikipedia.org/wiki/Mare_Tranquillitatis",
+          "title": "Mare Tranquillitatis",
+          "quote": "After astronauts Neil Armstrong and Buzz Aldrin made a soft landing in the Apollo 11 Lunar Module Eagle, Armstrong told flight controllers on Earth, \"Houston, Tranquility Base here. The Eagle has landed.\"",
+          "retrieved_at": "2026-11-20T10:55:28.502Z"
         }
       ]
     }

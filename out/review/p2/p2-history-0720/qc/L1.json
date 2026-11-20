@@ -1,4 +1,15 @@
 {
   "layer": "L1",
-  "issues": []
+  "issues": [
+    {
+      "severity": "info",
+      "message": "klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan",
+      "ref": "C1"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber",
+      "ref": "C5"
+    }
+  ]
 }

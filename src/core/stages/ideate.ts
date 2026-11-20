@@ -45,6 +45,7 @@ Aturan ketat:
 - Hindari mitos populer dan klaim yang tidak bisa diverifikasi di Wikipedia.
 - Setiap konsep wajib memiliki 3-5 core_claims faktual yang konkret dan dapat diverifikasi.
 - Untuk format what_if, premis boleh hipotetis tetapi core_claims HARUS fakta ilmiah nyata yang mendasari skenario tersebut.
+- Untuk format today_in_history, fokuskan core_claims (3-4 klaim) pada fakta utama kejadian (tanggal, tahun, tokoh kunci, peristiwa inti, dan hasilnya) yang ada di bagian awal/ringkasan artikel utama Wikipedia kejadian tersebut.
 - wiki_titles wajib berisi judul artikel Wikipedia berbahasa Inggris ("en", 2-5 judul) dan Indonesia ("id", 1-3 judul) yang paling tepat menjawab pertanyaan topik (misalnya untuk kereta: "Wheelset (rail transport)", "Flange", "Track gauge", "Hunting oscillation", "Derailment").
 - search_queries wajib berisi kata kunci pencarian Wikipedia cadangan (2-6 query).
 - Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "core_claims": ["..."], "wiki_titles": { "en": ["..."], "id": ["..."] }, "search_queries": ["..."] }] }.`;

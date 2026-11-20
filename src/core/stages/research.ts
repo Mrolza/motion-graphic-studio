@@ -36,16 +36,18 @@ const SourceEvalSchema = z.object({
 });
 
 const ExtractionResponseSchema = z.object({
-  source_evaluations: z.array(SourceEvalSchema).optional(),
+  source_evaluations: z.any().optional(),
   claims: z.array(ExtractedClaimSchema).min(1),
 });
 
 const FollowUpQuerySchema = z.object({
-  wiki_titles: z.object({
-    en: z.array(z.string().min(1)).max(4),
-    id: z.array(z.string().min(1)).max(3),
-  }),
-  search_queries: z.array(z.string().min(1)).max(4),
+  wiki_titles: z
+    .object({
+      en: z.array(z.string().min(1)).max(4).optional().default([]),
+      id: z.array(z.string().min(1)).max(3).optional().default([]),
+    })
+    .optional(),
+  search_queries: z.array(z.string().min(1)).max(4).optional().default([]),
 });
 
 export interface SourceReportEntry {
@@ -85,19 +87,20 @@ async function extractClaimsFromSources(params: {
   const systemInstruction = `Anda adalah ekstraktor fakta ketat. Tugas Anda menilai relevansi tiap sumber terhadap pertanyaan topik dan mengekstrak klaim faktual.
 ATURAN MUTLAK:
 1. Nilai setiap sumber di "source_evaluations": "relevant" (menjawab langsung), "partial" (terkait sebagian), atau "irrelevant" (menyimpang/tidak menjawab topik, misalnya membahas satu kereta tertentu padahal topik menanyakan mekanisme umum).
-2. "quote" HARUS disalin KARAKTER-DEMI-KARAKTER (verbatim substring) dari teks sumber dengan "source_id" yang sesuai. JANGAN memparafrasekan atau mengubah angka di "quote".
+2. "quote" HARUS berupa KALIMAT UTUH (diawali huruf kapital/awal kalimat dan diakhiri tanda baca titik/tanda tanya/seru) yang disalin KARAKTER-DEMI-KARAKTER dari teks sumber dengan "source_id" yang sesuai. JANGAN memotong frasa di tengah kalimat, dan setiap angka/tahun/tanggal di "text" WAJIB muncul di "quote".
 3. "text" ditulis dalam bahasa Indonesia yang jelas.
 4. "kind" WAJIB salah satu dari: "fact", "estimate", "hypothetical", "interpretation".
 5. Jika klaim menyebut angka penting, isi "value" (angka murni) dan "unit". Jika tidak ada, hilangkan (jangan null).
 6. Isi "supports_core_claim_indices" (array indeks 0-based core_claims yang didukung klaim ini).
-7. Selalu ekstrak minimal 4 klaim faktual penting dari sumber yang diberikan (jangan pernah mengembalikan array claims kosong).`;
+7. Selalu ekstrak minimal 4 klaim faktual penting dengan format PERSIS: { "source_evaluations": [{ "source_id": "S1", "relevance": "relevant", "reason": "..." }], "claims": [{ "text": "...", "kind": "fact", "source_id": "S1", "quote": "Kalimat utuh persis dari sumber.", "supports_core_claim_indices": [0] }] }.`;
 
   const rawClaims: Array<z.infer<typeof ExtractedClaimSchema>> = [];
   const sourceEvals = new Map<string, z.infer<typeof SourceEvalSchema>>();
 
   for (const batch of batches) {
+    const perSourceBudget = batch.length <= 2 ? 24_000 : 14_000;
     const sourceBlock = batch
-      .map((s) => `=== SOURCE ${s.source_id} (${s.lang}: ${s.title}) ===\n${s.text.slice(0, 16_000)}`)
+      .map((s) => `=== SOURCE ${s.source_id} (${s.lang}: ${s.title}) ===\n${s.text.slice(0, perSourceBudget)}`)
       .join('\n\n');
 
     const targetList = (params.coreIndices ?? concept.core_claims.map((_, i) => i))
@@ -119,8 +122,19 @@ Kembalikan JSON { "source_evaluations": [...], "claims": [...] }.`;
       systemInstruction,
       onCallRecord: onCall,
     });
-    for (const ev of res.data.source_evaluations ?? []) {
-      sourceEvals.set(ev.source_id, ev);
+    const rawEvals = res.data.source_evaluations;
+    if (Array.isArray(rawEvals)) {
+      for (const ev of rawEvals) {
+        sourceEvals.set(ev.source_id, ev);
+      }
+    } else if (rawEvals && typeof rawEvals === 'object') {
+      for (const [sid, ev] of Object.entries(
+        rawEvals as Record<string, { relevance?: string; reason?: string }>
+      )) {
+        const rel =
+          ev.relevance === 'irrelevant' || ev.relevance === 'partial' ? ev.relevance : 'relevant';
+        sourceEvals.set(sid, { source_id: sid, relevance: rel, reason: ev.reason });
+      }
     }
     rawClaims.push(...res.data.claims);
   }
@@ -155,6 +169,20 @@ export async function runResearchStage(
       const mmDdMatch = project.topic.match(/\b(\d{2}-\d{2})\b/);
       const hist = await fetchTodayInHistorySources(mmDdMatch?.[1] ?? '07-20', 4, concept.title);
       sources = hist.sources;
+      // Ensure primary Wikipedia article for the concept (e.g. "Apollo 11") is also included first if not already present
+      if (concept.wiki_titles) {
+        const extraPrimary = await fetchWikipediaSourcesForConcept({
+          wikiTitles: concept.wiki_titles,
+          queries: [],
+          keywords: concept.search_queries,
+          preferEnglishFirst: true,
+          maxPages: 2,
+          startIndex: sources.length,
+        });
+        const existingUrls = new Set(sources.map((s) => s.url));
+        const merged = [...extraPrimary.filter((s) => !existingUrls.has(s.url)), ...sources];
+        sources = merged.slice(0, 4).map((s, idx) => ({ ...s, source_id: `S${idx + 1}` }));
+      }
     } else {
       const keywords = [
         ...concept.search_queries,
@@ -234,7 +262,7 @@ export async function runResearchStage(
     let { l1, l0 } = buildLedgerAndL0(sources, allRawClaims);
 
     // Fixed L0 logic: if any core_claims are unsupported, run ONE targeted follow-up research round
-    if (!l0.passed && project.format !== 'today_in_history') {
+    if (!l0.passed) {
       const missingClaims = l0.report.issues.map((iss) => iss.message);
       const followUpRes = await generateJson(
         FollowUpQuerySchema,
@@ -244,10 +272,11 @@ export async function runResearchStage(
         { stage: 'S2', onCallRecord: trackCall }
       );
 
+      const followUpQueries = followUpRes.data.search_queries ?? [];
       const extraSources = await fetchWikipediaSourcesForConcept({
         wikiTitles: followUpRes.data.wiki_titles,
-        queries: followUpRes.data.search_queries,
-        keywords: followUpRes.data.search_queries,
+        queries: followUpQueries,
+        keywords: followUpQueries,
         preferEnglishFirst: true,
         maxPages: 3,
         startIndex: sources.length,
@@ -255,18 +284,30 @@ export async function runResearchStage(
 
       const existingUrls = new Set(sources.map((s) => s.url));
       const newSources = extraSources.filter((s) => !existingUrls.has(s.url));
+      for (const s of newSources) {
+        await writeFile(path.join(sourcesDir, `${s.source_id}.json`), JSON.stringify(s, null, 2), 'utf-8');
+      }
       if (newSources.length > 0) {
-        for (const s of newSources) {
-          await writeFile(path.join(sourcesDir, `${s.source_id}.json`), JSON.stringify(s, null, 2), 'utf-8');
-        }
         sources = [...sources, ...newSources];
+      }
+      const missingIndices = l0.report.issues
+        .map((iss) => {
+          const m = iss.ref?.match(/^core_claim_(\d+)$/);
+          return m ? Number(m[1]) - 1 : -1;
+        })
+        .filter((idx) => idx >= 0);
+      const retrySources = newSources.length > 0 ? [...newSources, ...sources.slice(0, 1)] : sources.slice(0, 2);
+      if (retrySources.length > 0) {
         const secondPass = await extractClaimsFromSources({
           topic: project.topic,
           concept,
-          sources: newSources,
+          sources: retrySources,
+          coreIndices: missingIndices.length > 0 ? missingIndices : undefined,
           onCall: trackCall,
         });
-        for (const [k, v] of secondPass.sourceEvals) allEvals.set(k, v);
+        for (const [k, v] of secondPass.sourceEvals) {
+          if (!allEvals.has(k)) allEvals.set(k, v);
+        }
         allRawClaims.push(...secondPass.rawClaims);
         ({ l1, l0 } = buildLedgerAndL0(sources, allRawClaims));
       }

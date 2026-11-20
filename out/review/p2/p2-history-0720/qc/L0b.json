@@ -3,20 +3,9 @@
   "answers_question": true,
   "scores": {
     "answers_direct": 5,
-    "coverage": 2,
-    "structure": 4,
+    "coverage": 5,
+    "structure": 5,
     "on_topic": 5
   },
-  "issues": [
-    {
-      "severity": "error",
-      "message": "L0B_LOW_SCORE: skor coverage = 2/5 (< 3)",
-      "ref": "script"
-    },
-    {
-      "severity": "warning",
-      "message": "L0B_NOTE: Naskah melenceng dari core_claims yang diminta (fokus pada modul Eagle, durasi berjalan di Bulan, RAM komputer, dan jumlah pekerja 400.000), malah membahas upacara peringatan dan peluncuran Soyuz.",
-      "ref": "script"
-    }
-  ]
+  "issues": []
 }

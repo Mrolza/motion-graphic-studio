@@ -74,6 +74,7 @@ export async function runQcOnly(
     const l2 = verifyScriptL2(script, ledger, project.target_duration_sec);
     const combined = await verifyScriptL0bAndL3({
       topic: project.topic,
+      format: project.format,
       concept,
       script,
       ledger,
@@ -185,6 +186,7 @@ Target durasi: ${project.target_duration_sec} detik (target jumlah kata: ~${idea
     const l2Before = verifyScriptL2(script, ledger, project.target_duration_sec);
     const combinedBefore = await verifyScriptL0bAndL3({
       topic: project.topic,
+      format: project.format,
       concept: selectedRaw.concept,
       script,
       ledger,
@@ -236,6 +238,7 @@ Tulis ulang naskah dengan memperbaiki seluruh isu di atas: jawab pertanyaan topi
       l2Final = verifyScriptL2(script, ledger, project.target_duration_sec);
       const combinedAfter = await verifyScriptL0bAndL3({
         topic: project.topic,
+        format: project.format,
         concept: selectedRaw.concept,
         script,
         ledger,

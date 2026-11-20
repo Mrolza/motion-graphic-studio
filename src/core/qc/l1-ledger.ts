@@ -2,6 +2,21 @@ import type { FactClaim, FactLedger } from '@core/contracts/fact-ledger';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { WikipediaSource } from '@core/research/wikipedia';
 
+const MONTH_PAIRS: Array<[string, string]> = [
+  ['januari', 'january'],
+  ['februari', 'february'],
+  ['maret', 'march'],
+  ['april', 'april'],
+  ['mei', 'may'],
+  ['juni', 'june'],
+  ['juli', 'july'],
+  ['agustus', 'august'],
+  ['september', 'september'],
+  ['oktober', 'october'],
+  ['november', 'november'],
+  ['desember', 'december'],
+];
+
 export function normalizeTextForMatch(input: string): string {
   return input
     .replace(/[\u00A0\u200B\u2009]/g, ' ')
@@ -17,7 +32,6 @@ export function extractNumericValuesFromText(text: string): number[] {
   const values: number[] = [];
 
   for (const raw of matches) {
-    // 1,435 or 1.435 (3-digit thousands group) -> integer 1435
     if (/^\d{1,3}(?:,\d{3})+$/.test(raw)) {
       values.push(Number(raw.replace(/,/g, '')));
     } else if (/^\d{1,3}(?:\.\d{3})+$/.test(raw)) {
@@ -35,6 +49,42 @@ export function extractNumericValuesFromText(text: string): number[] {
 export function doesValueAppearInQuote(value: number, quote: string): boolean {
   const nums = extractNumericValuesFromText(quote);
   return nums.some((n) => Math.abs(n - value) < 1e-6);
+}
+
+export function isCompleteSentenceQuote(normQuote: string, normSource: string): boolean {
+  if (!normQuote) return false;
+  const startsUpperOrDigit = /^[A-Z0-9"'(]/.test(normQuote);
+  const endsWithPunct = /[.!?]["')]*$/.test(normQuote);
+  if (!startsUpperOrDigit || !endsWithPunct) return false;
+
+  const idx = normSource.indexOf(normQuote);
+  if (idx === -1) return false;
+  if (idx === 0) return true;
+  // Must start at a sentence/section/line boundary in source (after ., !, ?, :, =, or opening quote)
+  const before = normSource.slice(Math.max(0, idx - 3), idx);
+  return /[.!?:=]\s+$/.test(before) || /^[\s"'(]+$/.test(before);
+}
+
+export function doClaimFactsAppearInQuote(claimText: string, quote: string): boolean {
+  const claimNums = extractNumericValuesFromText(claimText);
+  const quoteNums = extractNumericValuesFromText(quote);
+  for (const n of claimNums) {
+    if (!quoteNums.some((qn) => Math.abs(qn - n) < 1e-6)) {
+      return false;
+    }
+  }
+
+  const lowerClaim = claimText.toLowerCase();
+  const lowerQuote = quote.toLowerCase();
+  for (const [idMonth, enMonth] of MONTH_PAIRS) {
+    if (new RegExp(`\\b${idMonth}\\b`).test(lowerClaim)) {
+      const hasMonth =
+        new RegExp(`\\b${idMonth}\\b`).test(lowerQuote) ||
+        new RegExp(`\\b${enMonth}\\b`).test(lowerQuote);
+      if (!hasMonth) return false;
+    }
+  }
+  return true;
 }
 
 export interface L1Result {
@@ -82,10 +132,28 @@ export function verifyLedgerL1(
       return { ...claim, status: 'unverified' };
     }
 
+    if (!isCompleteSentenceQuote(normQuote, normSource)) {
+      issues.push({
+        severity: 'error',
+        message: 'QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa',
+        ref: claim.id,
+      });
+      return { ...claim, status: 'unverified' };
+    }
+
     if (claim.value !== undefined && !doesValueAppearInQuote(claim.value, primarySrc.quote)) {
       issues.push({
         severity: 'error',
         message: `VALUE_NOT_IN_QUOTE: angka ${claim.value} tidak ditemukan pada kutipan`,
+        ref: claim.id,
+      });
+      return { ...claim, status: 'unverified' };
+    }
+
+    if (!doClaimFactsAppearInQuote(claim.text, primarySrc.quote)) {
+      issues.push({
+        severity: 'error',
+        message: 'CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan',
         ref: claim.id,
       });
       return { ...claim, status: 'unverified' };
@@ -124,8 +192,17 @@ export function evaluateL0(
 
   for (let i = 0; i < coreClaims.length; i++) {
     const core = coreClaims[i]!;
-    const mappedIds = (coreClaimMapping?.[i] ?? []).filter((id) => verifiedSet.has(id));
-    if (mappedIds.length > 0) continue;
+    if (coreClaimMapping) {
+      const mappedIds = (coreClaimMapping[i] ?? []).filter((id) => verifiedSet.has(id));
+      if (mappedIds.length === 0) {
+        issues.push({
+          severity: 'error',
+          message: `concept_unverifiable: core claim #${i + 1} ("${core.slice(0, 80)}") tidak didukung klaim verified`,
+          ref: `core_claim_${i + 1}`,
+        });
+      }
+      continue;
+    }
 
     const coreTokens = new Set(tokenizeKeywords(core));
     const coreNums = extractNumericValuesFromText(core);

@@ -189,8 +189,11 @@ export async function fetchTodayInHistorySources(
   if (kwWords.length > 0 && candidates.length > 0) {
     let bestScore = -1;
     for (const c of [...(feed.selected ?? []), ...(feed.events ?? [])]) {
-      const hay = `${c.year} ${c.text} ${(c.pages ?? []).map((p) => p.title).join(' ')}`.toLowerCase();
-      const hits = kwWords.reduce((acc, w) => acc + (hay.includes(w) ? 1 : 0), 0);
+      const titles = (c.pages ?? []).map((p) => p.title).join(' ');
+      const hay = `${c.year} ${c.text} ${titles}`.toLowerCase();
+      let hits = kwWords.reduce((acc, w) => acc + (hay.includes(w) ? 1 : 0), 0);
+      // Slightly prefer primary event over anniversary/commemoration, but never below unrelated 0-hit events
+      if (hits > 0 && /anniversar|peringatan|memorial/i.test(hay)) hits -= 0.25;
       if (hits > bestScore && (c.pages?.length ?? 0) > 0) {
         bestScore = hits;
         top = c;

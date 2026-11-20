@@ -4,13 +4,22 @@
       "id": "S1",
       "sentences": [
         {
-          "text": "Tahukah kamu bahwa tanggal 20 Juli selalu dikenang sebagai peringatan pendaratan pertama manusia di Bulan?",
+          "text": "Pernahkah kamu bayangkan komputer pesawat ruang angkasa masa lalu memiliki memori jauh lebih kecil dari ponselmu hari ini?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "komputer",
+            "memori"
+          ],
+          "non_factual": true
+        },
+        {
+          "text": "Tepat pada 20 Juli 1969, modul Eagle sukses mendarat di permukaan Bulan.",
           "claim_refs": [
-            "C2"
+            "C6"
           ],
           "emphasis_words": [
-            "20 Juli",
-            "Bulan"
+            "20 Juli 1969",
+            "modul Eagle"
           ],
           "non_factual": false
         }
@@ -20,13 +29,23 @@
       "id": "S2",
       "sentences": [
         {
-          "text": "Apollo 11 mencatatkan sejarah sebagai penerbangan luar angkasa berawak pertama yang mendarat di Bulan.",
+          "text": "Pendaratan bersejarah itu terjadi di lokasi khusus bernama Mare Tranquillitatis.",
           "claim_refs": [
-            "C5"
+            "C7"
           ],
           "emphasis_words": [
-            "Apollo 11",
-            "berawak"
+            "Mare Tranquillitatis"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Usai mendarat, Neil Armstrong segera mengabarkan ke pengendali di Bumi bahwa Eagle telah tiba.",
+          "claim_refs": [
+            "C8"
+          ],
+          "emphasis_words": [
+            "Neil Armstrong",
+            "Eagle"
           ],
           "non_factual": false
         }
@@ -36,24 +55,24 @@
       "id": "S3",
       "sentences": [
         {
-          "text": "Para awak misi yang terdiri dari Buzz Aldrin, Neil Armstrong, dan Michael Collins hadir dalam upacara di Washington, D.C. pada 20 Juli 1979.",
+          "text": "Neil Armstrong dan Buzz Aldrin kemudian tercatat sebagai dua manusia pertama yang menginjakkan kaki di Bulan.",
           "claim_refs": [
-            "C6"
+            "C2"
           ],
           "emphasis_words": [
-            "Buzz Aldrin",
-            "Neil Armstrong"
+            "manusia pertama",
+            "Bulan"
           ],
           "non_factual": false
         },
         {
-          "text": "Mereka juga sempat bertemu dengan Presiden Amerika Serikat Barack Obama di Gedung Putih pada 20 Juli 2009.",
+          "text": "Sang komandan juga mengucapkan kalimat ikonik tentang satu langkah kecil bagi umat manusia.",
           "claim_refs": [
-            "C7"
+            "C3"
           ],
           "emphasis_words": [
-            "Barack Obama",
-            "Gedung Putih"
+            "komandan",
+            "langkah kecil"
           ],
           "non_factual": false
         }
@@ -63,24 +82,13 @@
       "id": "S4",
       "sentences": [
         {
-          "text": "Pada tanggal 20 Juli 2019, misi berawak Soyuz MS-13 diluncurkan untuk memperingati lima puluh tahun pendaratan tersebut.",
+          "text": "Peristiwa luar biasa tersebut disaksikan langsung oleh sekitar 600 juta penonton televisi di seluruh penjuru dunia.",
           "claim_refs": [
-            "C1"
+            "C4"
           ],
           "emphasis_words": [
-            "Soyuz MS-13",
-            "20 Juli 2019"
-          ],
-          "non_factual": false
-        },
-        {
-          "text": "Perayaan ini dimeriahkan dengan pameran interaktif bersama para ilmuwan NASA dalam festival luar ruangan.",
-          "claim_refs": [
-            "C8"
-          ],
-          "emphasis_words": [
-            "ilmuwan",
-            "NASA"
+            "600 juta",
+            "televisi"
           ],
           "non_factual": false
         }

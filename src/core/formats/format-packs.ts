@@ -88,8 +88,8 @@ export const FORMAT_PACKS: FormatPack[] = [
     name: 'Today in History (Hari Ini dalam Sejarah)',
     requires_research: true,
     structure: [
-      '1. Hook (0-3s): Tanggal/tahun spesifik + momen krisis nyata.',
-      '2. Konteks & Tokoh (3-15s): Latar situasi nyata sebelum kejadian.',
+      '1. Hook (0-3s): Tanggal & tahun spesifik + kejadian utama nyata (wajib dari artikel utama kejadian).',
+      '2. Kejadian Utama & Konteks (3-15s): Uraikan kejadian utama lengkap dengan tanggal dan tahunnya + tokoh/situasi.',
       '3. Titik Balik Sejarah (15-32s): Peristiwa kunci yang terjadi.',
       '4. Dampak Hingga Kini (32-45s): Relevansi peristiwa hingga hari ini.',
     ],
@@ -98,6 +98,7 @@ export const FORMAT_PACKS: FormatPack[] = [
     ],
     fact_rules: [
       'Hanya gunakan fakta dari Fact Ledger hasil riset Wikimedia/Wikipedia.',
+      'Adegan 1–2 wajib menyebut kejadian utama lengkap dengan tanggal dan tahunnya, bersumber dari artikel utama.',
       'Tanggal, tahun, nama tokoh, dan tempat wajib sama persis dengan sumber.',
     ],
   },

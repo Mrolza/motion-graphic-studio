@@ -4,13 +4,23 @@
       "id": "S1",
       "sentences": [
         {
-          "text": "Tahukah kamu bagaimana mesin motor andalanmu menghasilkan tenaga dari gerakan piston?",
+          "text": "Tahukah kamu bagaimana cara kerja mesin kendaraan bermotor?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "cara kerja",
+            "mesin"
+          ],
+          "non_factual": true
+        },
+        {
+          "text": "Siklus 4 tak terdiri dari empat langkah terpisah yang memerlukan dua putaran poros engkol penuh.",
           "claim_refs": [
-            "C1"
+            "C1",
+            "C6"
           ],
           "emphasis_words": [
-            "tenaga",
-            "piston"
+            "empat langkah",
+            "dua putaran"
           ],
           "non_factual": false
         }
@@ -20,24 +30,7 @@
       "id": "S2",
       "sentences": [
         {
-          "text": "Siklus empat tak terdiri dari empat langkah terpisah yang memerlukan putaran poros engkol penuh.",
-          "claim_refs": [
-            "C1",
-            "C6"
-          ],
-          "emphasis_words": [
-            "empat langkah",
-            "poros engkol"
-          ],
-          "non_factual": false
-        }
-      ]
-    },
-    {
-      "id": "S3",
-      "sentences": [
-        {
-          "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar melalui katup masuk.",
+          "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk.",
           "claim_refs": [
             "C2"
           ],
@@ -48,16 +41,22 @@
           "non_factual": false
         },
         {
-          "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran tersebut dengan kedua katup tertutup.",
+          "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran tersebut, meningkatkan suhu dan tekanan sebelum percikan busi.",
           "claim_refs": [
-            "C3"
+            "C3",
+            "C8"
           ],
           "emphasis_words": [
             "Langkah kompresi",
             "memadatkan"
           ],
           "non_factual": false
-        },
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
         {
           "text": "Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
           "claim_refs": [
@@ -70,7 +69,7 @@
           "non_factual": false
         },
         {
-          "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang.",
+          "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang saat piston bergerak kembali ke atas.",
           "claim_refs": [
             "C5"
           ],
@@ -86,13 +85,15 @@
       "id": "S4",
       "sentences": [
         {
-          "text": "Desain mekanis yang teratur ini membuat mesin empat langkah sangat efisien dan andal.",
-          "claim_refs": [],
-          "emphasis_words": [
-            "efisien",
-            "andal"
+          "text": "Seluruh rangkaian gerakan tersebut berulang secara terus-menerus untuk menghasilkan tenaga mekanis.",
+          "claim_refs": [
+            "C4"
           ],
-          "non_factual": true
+          "emphasis_words": [
+            "berulang",
+            "tenaga mekanis"
+          ],
+          "non_factual": false
         }
       ]
     }

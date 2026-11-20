@@ -5,10 +5,11 @@
         "id": "S1",
         "sentences": [
           {
-            "text": "Pernahkah kamu mikir, gimana caranya kereta yang gak punya setir bisa tetep belok dan gak keluar jalur?",
+            "text": "Bagaimana kereta yang berjalan tanpa setir bisa tetap stabil di jalur rel tanpa tergelincir?",
             "claim_refs": [],
             "emphasis_words": [
-              "gak punya setir"
+              "tanpa setir",
+              "stabil"
             ],
             "non_factual": true
           }
@@ -29,12 +30,13 @@
             "non_factual": false
           },
           {
-            "text": "Bentuk ini membuat roda dapat mengikuti tikungan secara pas.",
+            "text": "Desain ini membuat roda dapat mengikuti tikungan tanpa flens bergesekan dengan sisi rel.",
             "claim_refs": [
               "C1"
             ],
             "emphasis_words": [
-              "mengikuti tikungan"
+              "mengikuti tikungan",
+              "flens"
             ],
             "non_factual": false
           }
@@ -44,7 +46,7 @@
         "id": "S3",
         "sentences": [
           {
-            "text": "Tanpa bentuk kerucut, inersia kendaraan akan membuat roda terus melaju lurus di tikungan.",
+            "text": "Tanpa bentuk kerucut, inersia kendaraan membuat roda terus melaju lurus di tikungan.",
             "claim_refs": [
               "C2"
             ],
@@ -55,11 +57,12 @@
             "non_factual": false
           },
           {
-            "text": "Akibatnya, roda akan bergeser ke arah rel luar saat melewati tikungan.",
+            "text": "Akibatnya, roda akan bergeser langsung ke arah rel bagian luar.",
             "claim_refs": [
               "C2"
             ],
             "emphasis_words": [
+              "bergeser",
               "rel luar"
             ],
             "non_factual": false
@@ -75,12 +78,13 @@
               "C3"
             ],
             "emphasis_words": [
-              "diameter efektif"
+              "diameter efektif",
+              "sisi luar"
             ],
             "non_factual": false
           },
           {
-            "text": "Karena roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh.",
+            "text": "Karena terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh.",
             "claim_refs": [
               "C3"
             ],
@@ -96,11 +100,12 @@
         "id": "S5",
         "sentences": [
           {
-            "text": "Proses cerdas ini membantu lokomotif mengikuti tikungan secara efisien tanpa setir mekanis.",
+            "text": "Mekanisme fisika ini membantu rangkaian kereta mengikuti kurva jalur secara efisien.",
             "claim_refs": [
               "C3"
             ],
             "emphasis_words": [
+              "Mekanisme fisika",
               "efisien"
             ],
             "non_factual": false
@@ -114,37 +119,17 @@
     "issues": []
   },
   "l0b": {
-    "answers_question": false,
+    "answers_question": true,
+    "has_off_topic_scene": false,
     "scores": {
-      "answers_direct": 2,
-      "coverage": 3,
-      "structure": 3,
-      "on_topic": 4
+      "answers_direct": 5,
+      "coverage": 5,
+      "structure": 5,
+      "on_topic": 5
     },
     "report": {
       "layer": "L0b",
-      "issues": [
-        {
-          "severity": "error",
-          "message": "L0B_NOT_ANSWERING: naskah tidak menjawab pertanyaan topik",
-          "ref": "script"
-        },
-        {
-          "severity": "error",
-          "message": "L0B_LOW_SCORE: skor answers_direct = 2/5 (< 3)",
-          "ref": "script"
-        },
-        {
-          "severity": "error",
-          "message": "L0B_NOTE: Pertanyaan di awal membahas mengapa kereta tidak tergelincir, tetapi isi naskah secara spesifik membahas bagaimana roda kereta melewati tikungan (mengapa tidak keluar jalur pada tikungan). Hal ini kurang presisi menjawab 'mengapa kereta tidak tergelincir' secara umum.",
-          "ref": "script"
-        },
-        {
-          "severity": "error",
-          "message": "L0B_NOTE: Kalimat pertama S2 menggunakan generalisasi mutlak 'seluruh dunia memakai desain identik ini tanpa pengecualian sedikit pun' yang terlalu berlebihan dibanding kutipan aslinya 'Most train wheels'.",
-          "ref": "script"
-        }
-      ]
+      "issues": []
     }
   },
   "l3": {
@@ -152,7 +137,7 @@
     "issues": [
       {
         "severity": "error",
-        "message": "L3_OVERSTATED: Sumber menyatakan 'Most train wheels' (sebagian besar roda kereta), sedangkan naskah menggeneralisasi menjadi 'Semua kereta api modern di seluruh dunia memakai desain identik ini tanpa pengecualian sedikit pun'.",
+        "message": "L3_OVERSTATED: Kutipan asli menyatakan 'Most train wheels' (sebagian besar roda kereta), namun kalimat diubah menjadi 'Semua kereta api modern di seluruh dunia... tanpa pengecualian sedikit pun', sehingga mengubah cakupan secara berlebihan.",
         "ref": "S2.1"
       }
     ]

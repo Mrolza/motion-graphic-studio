@@ -13,7 +13,7 @@ export const QcLayerSchema = z.enum([
   'technical',
 ]);
 
-export const QcSeveritySchema = z.enum(['error', 'warning']);
+export const QcSeveritySchema = z.enum(['error', 'warning', 'info']);
 
 export const QcIssueSchema = z.object({
   severity: QcSeveritySchema,

@@ -2,44 +2,45 @@
 Topik: Peristiwa bersejarah tanggal 07-20 | Format: today_in_history
 
 [Scene S1]
-  S1.1: Tahukah kamu bahwa tanggal 20 Juli selalu dikenang sebagai peringatan pendaratan pertama manusia di Bulan?
-    -> [C2 | verified] Tanggal 20 Juli dikaitkan dengan peringatan pendaratan pertama manusia di Bulan.
-       Kutipan: "the 50th anniversary of the first Moon landing"
-       Sumber:  https://en.wikipedia.org/wiki/Soyuz_MS-13
+  S1.1: Pernahkah kamu bayangkan komputer pesawat ruang angkasa masa lalu memiliki memori jauh lebih kecil dari ponselmu hari ini?
+    -> (non_factual: true)
+  S1.2: Tepat pada 20 Juli 1969, modul Eagle sukses mendarat di permukaan Bulan.
+    -> [C6 | verified] Modul Eagle mendarat di Base Tranquillity pada pukul 20:17:40 UTC tanggal 20 Juli 1969.
+       Kutipan: "Eagle was landed at Tranquility Base at 20:17:40 UTC on July 20, 1969, with 216 pounds (98 kg) of usable fuel remaining."
+       Sumber:  https://en.wikipedia.org/wiki/Lunar_Module_Eagle
 
 [Scene S2]
-  S2.1: Apollo 11 mencatatkan sejarah sebagai penerbangan luar angkasa berawak pertama yang mendarat di Bulan.
-    -> [C5 | verified] Apollo 11 adalah penerbangan luar angkasa berawak pertama yang mendarat di Bulan.
-       Kutipan: "Apollo 11 was the first human spaceflight to land on the Moon."
-       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+  S2.1: Pendaratan bersejarah itu terjadi di lokasi khusus bernama Mare Tranquillitatis.
+    -> [C7 | verified] Mare Tranquillitatis menjadi lokasi pendaratan berawak pertama di Bulan pada tanggal 20 Juli 1969.
+       Kutipan: "Mare Tranquillitatis was the landing site for the first crewed landing on the Moon on July 20, 1969, at 20:18 UTC."
+       Sumber:  https://en.wikipedia.org/wiki/Mare_Tranquillitatis
+  S2.2: Usai mendarat, Neil Armstrong segera mengabarkan ke pengendali di Bumi bahwa Eagle telah tiba.
+    -> [C8 | verified] Setelah pendaratan modul Eagle, Neil Armstrong menyampaikan kalimat 'The Eagle has landed' kepada pengendali penerbangan di Bumi.
+       Kutipan: "After astronauts Neil Armstrong and Buzz Aldrin made a soft landing in the Apollo 11 Lunar Module Eagle, Armstrong told flight controllers on Earth, "Houston, Tranquility Base here. The Eagle has landed.""
+       Sumber:  https://en.wikipedia.org/wiki/Mare_Tranquillitatis
 
 [Scene S3]
-  S3.1: Para awak misi yang terdiri dari Buzz Aldrin, Neil Armstrong, dan Michael Collins hadir dalam upacara di Washington, D.C. pada 20 Juli 1979.
-    -> [C6 | verified] Awak Apollo 11 yaitu Buzz Aldrin, Neil Armstrong, dan Michael Collins berpartisipasi dalam upacara di Washington, D.C. pada 20 Juli 1979.
-       Kutipan: "The Apollo 11 crew, Buzz Aldrin, Neil Armstrong, and Michael Collins, who had not appeared publicly since the 5th anniversary, participated in ceremonies in Washington, D.C., on July 20, 1979."
-       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
-  S3.2: Mereka juga sempat bertemu dengan Presiden Amerika Serikat Barack Obama di Gedung Putih pada 20 Juli 2009.
-    -> [C7 | verified] Pada tanggal 20 Juli 2009, Armstrong, Aldrin, dan Collins bertemu dengan Presiden AS Barack Obama di Gedung Putih.
-       Kutipan: "On July 20, 2009, Armstrong, Aldrin, and Collins met with U.S. President Barack Obama at the White House."
-       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+  S3.1: Neil Armstrong dan Buzz Aldrin kemudian tercatat sebagai dua manusia pertama yang menginjakkan kaki di Bulan.
+    -> [C2 | verified] Neil Armstrong dan Buzz Aldrin menjadi dua manusia pertama yang menginjakkan kaki di permukaan Bulan.
+       Kutipan: "Apollo 11 (July 16–24, 1969) was the American spaceflight that first landed humans on the Moon, and the fifth crewed mission of NASA's Apollo program."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11
+  S3.2: Sang komandan juga mengucapkan kalimat ikonik tentang satu langkah kecil bagi umat manusia.
+    -> [C3 | verified] Misi ini dipimpin oleh komandan Neil Armstrong yang mengucapkan kalimat ikonik 'Satu langkah kecil bagi manusia, satu lompatan raksasa bagi umat manusia'.
+       Kutipan: "Stepping onto the lunar surface, Armstrong declared: "That's one small step for [a] man, one giant leap for mankind.""
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11
 
 [Scene S4]
-  S4.1: Pada tanggal 20 Juli 2019, misi berawak Soyuz MS-13 diluncurkan untuk memperingati lima puluh tahun pendaratan tersebut.
-    -> [C1 | verified] Peluncuran misi Soyuz MS-13 terjadi pada tanggal 20 Juli 2019 yang menandai peringatan 50 tahun pendaratan pertama di Bulan.
-       Kutipan: "Soyuz MS-13, also designated ISS flight 59S, was a crewed Soyuz mission launched on 20 July 2019 – the 50th anniversary of the first Moon landing"
-       Sumber:  https://en.wikipedia.org/wiki/Soyuz_MS-13
-  S4.2: Perayaan ini dimeriahkan dengan pameran interaktif bersama para ilmuwan NASA dalam festival luar ruangan.
-    -> [C8 | verified] Festival luar ruangan selama tiga hari dari tanggal 18 hingga 20 Juli 2019 menampilkan pameran interaktif dan pembicara seperti ilmuwan NASA.
-       Kutipan: "The three day (July 18 to 20, 2019) outdoor festival featured hands-on exhibits and activities, live performances, and speakers such as Adam Savage and NASA scientists."
-       Sumber:  https://en.wikipedia.org/wiki/Apollo_11_anniversaries
+  S4.1: Peristiwa luar biasa tersebut disaksikan langsung oleh sekitar 600 juta penonton televisi di seluruh penjuru dunia.
+    -> [C4 | verified] Kejadian bersejarah ini disaksikan oleh sekitar 600 juta penonton televisi di seluruh dunia.
+       Kutipan: "Armstrong's moonwalk was broadcast live to an estimated 600 million viewers, roughly one-fifth of the world's population, making it among the most-watched television events in history."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11
 
 === LAPORAN QC (L0-L3) ===
 [L0] 0 isu
-[L0b] 2 isu
-  ERROR (script): L0B_LOW_SCORE: skor coverage = 2/5 (< 3)
-  WARNING (script): L0B_NOTE: Naskah melenceng dari core_claims yang diminta (fokus pada modul Eagle, durasi berjalan di Bulan, RAM komputer, dan jumlah pekerja 400.000), malah membahas upacara peringatan dan peluncuran Soyuz.
-[L1] 0 isu
-[L2] 2 isu
-  WARNING (S3.2): NAME_NOT_IN_CLAIM: nama "Amerika" tidak ditemukan di klaim rujukan (C7)
-  WARNING (S3.2): NAME_NOT_IN_CLAIM: nama "Serikat" tidak ditemukan di klaim rujukan (C7)
+[L0b] 0 isu
+[L1] 2 isu
+  INFO (C1): klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan
+  INFO (C5): klaim dibuang: QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber
+[L2] 1 isu
+  WARNING (S1.2): NAME_NOT_IN_CLAIM: nama "Bulan" tidak ditemukan di klaim rujukan (C6)
 [L3] 0 isu

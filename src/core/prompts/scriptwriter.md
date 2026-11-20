@@ -60,7 +60,7 @@ Voice-over akan dibacakan oleh mesin TTS (`msedge-tts` Indonesia), bukan manusia
 2. **Jangan menggeneralisasi secara berlebihan:** jika sumber menyebut fakta tentang **satu model, satu produk, atau satu kejadian spesifik** (misalnya "Kereta api Argo Bromo Anggrek memakai bogie CL243"), **dilarang** menulisnya seolah-olah berlaku untuk "semua kereta api".
 3. **Setiap kalimat faktual** wajib mengisi `claim_refs` dengan ID klaim (`"C1"`, `"C2"`, ...) yang benar-benar mendukung seluruh isi kalimat tersebut.
 4. **Semua angka, tahun, dan satuan** di `text` wajib sama persis dengan klaim yang dirujuk di `claim_refs`.
-5. **Kalimat non-faktual** (hanya hook retoris atau kalimat transisi tanpa klaim fakta) wajib diberi `"non_factual": true` dan `"claim_refs": []`. **Dilarang** memasukkan angka, tahun, atau nama diri di kalimat `non_factual`.
+5. **Kalimat non-faktual** (`"non_factual": true`, `"claim_refs": []`) **HANYA** boleh dipakai untuk pertanyaan retoris, transisi, atau ajakan. Pernyataan tentang subjek — termasuk kalimat penilaian seperti "efisien", "andal", "tercanggih", atau kesimpulan kualitas — **BUKAN** `non_factual` dan wajib merujuk klaim `verified`. **Dilarang** memasukkan angka, tahun, atau nama diri di kalimat `non_factual`.
 6. **Klaim `kind: "interpretation"`** boleh dipakai, tetapi kalimatnya harus terbaca sebagai penafsiran ("hal ini menunjukkan...", "artinya...").
 7. **Format `what_if`**: bagian skenario hipotetis wajib memakai bahasa pengandaian ("jika", "diperkirakan", "kemungkinan", "akan"), sedangkan angka nyata tetap merujuk klaim `verified`.
 8. **Format `today_in_history`**: tanggal, tahun, nama tokoh, dan tempat wajib persis sesuai klaim sumber.

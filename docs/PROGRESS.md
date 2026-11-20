@@ -176,3 +176,38 @@
 - [`p2-history-0720/`](../out/review/p2/p2-history-0720/): (**7 panggilan**, `answers_question = ya (5/2/4/5)`, `100` kata, `0` error L2/L3; catatan: skor `coverage = 2/5` karena feed OnThisDay 07-20 menautkan artikel peringatan Apollo 11).
 - [`mutation-test/`](../out/review/p2/mutation-test/): 4 mutasi halus (`mut1-similar-number`, `mut2-generalization`, `mut3-cause-effect`, `mut4-off-topic`) — **4/4 TERTANGKAP** oleh L2, L3, atau L0b (`mutation-summary.md`).
 - [`stats.md`](../out/review/p2/stats.md) (rata-rata **8,00 panggilan/topik**, target ≤ 8) & [`verify.txt`](../out/review/p2/verify.txt).
+
+---
+
+## Fase P2C — Menutup Celah QC & Gerbang 1 (`docs/P2C-GATES.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p2-facts-script` (lanjutan P2 sesuai `P2C-GATES.md` & `REVIEW-P2B.md`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Diperbaiki & Dibuat
+1. **Gerbang 1 memblokir semua error di L0, L0b, L1, L2, L3 (`src/core/qc/gate1-check.ts`, `src/cli/gate1.ts`):**
+   - `validateGate1Approval` menolak approval jika ada error di `L0`, `L0b`, `L2`, `L3`, `L0b.answers_question === false`, atau `claim_refs` merujuk klaim yang tidak `verified`.
+   - Error `L1` pada klaim yang **tidak dipakai** di naskah diturunkan menjadi `info` (`"klaim dibuang: ..."`); error `L1` pada klaim yang dipakai tetap memblokir.
+2. **Pengetatan L0, L1, L0b, L3 (`l1-ledger.ts`, `l0b-quality.ts`, `qc-report.ts`):**
+   - **L0:** memakai `coreClaimMapping` (`supports_core_claim_indices`) secara ketat, bukan sekadar kecocokan 2 kata.
+   - **L1:** menolak kutipan potongan frasa (`QUOTE_FRAGMENT`, dengan pengenalan batas kalimat termasuk setelah judul bagian Wikipedia `== ... ==`) dan menolak klaim dengan angka/tahun/bulan yang tidak ada di kutipan (`CLAIM_FACT_NOT_IN_QUOTE`, mendukung padanan bulan ID/EN).
+   - **L0b:** menolak adegan keluar topik (`has_off_topic_scene` -> error `L0B_OFF_TOPIC`) dan untuk `today_in_history` mewajibkan kejadian utama bertanggal lengkap di awal naskah (`main_event_dated === false` -> error `L0B_MISSING_MAIN_EVENT`).
+   - **L3:** memeriksa **semua** kalimat termasuk yang bertanda `non_factual: true` (pertanyaan retoris murni diizinkan sebagai `supported`; opini/klaim evaluatif dengan `non_factual: true` ditolak sebagai error `NON_FACTUAL_ASSERTION`), membandingkan `claim_text` vs `quote`, serta menolak perubahan kuantitas/cakupan parafrase (`overstated`).
+3. **Perbaikan riset sejarah & prompt (`wikipedia.ts`, `ideate.ts`, `research.ts`, `format-packs.ts`, `scriptwriter.md`, `script.ts`):**
+   - `fetchTodayInHistorySources` mengambil artikel utama `Apollo 11` (bukan halaman peringatan tahunan), `ideate.ts` & `research.ts` menyertakan artikel utama `wiki_titles` terlebih dahulu serta memperbaiki putaran riset tambahan agar menargetkan `coreIndices` yang hilang.
+   - `format-packs.ts` & `scriptwriter.md` mewajibkan scene 1–2 `today_in_history` menyebut peristiwa utama + tanggal & tahun, dan melarang klaim evaluatif memakai `non_factual: true`.
+4. **Tes baru (`tests/qcGate1.test.ts`):**
+   - 4 unit test baru untuk Gate 1 blocking/downgrade, L0 ketat, `QUOTE_FRAGMENT`, dan `CLAIM_FACT_NOT_IN_QUOTE` (termasuk `20 Juli` <-> `July 20`).
+
+### Bukti (`out/review/p2/`, semua UTF-8)
+- [`p2-kereta/`](../out/review/p2/p2-kereta/): Gate 1 **APPROVED** — `L0:0 isu`, `L0b:0 isu (ya, 5/5/5/5)`, `L1:0E / 0W / 1I` (1 klaim dibuang sebagai `info`), `L2:0 isu`, `L3:0 isu`, `97/~103` kata (15 panggilan kumulatif termasuk rewrite P2C).
+- [`p2-mesin4tak/`](../out/review/p2/p2-mesin4tak/): Gate 1 **APPROVED** — `L0:0 isu`, `L0b:0 isu (ya, 5/5/5/5)`, `L1:0 isu`, `L2:0 isu`, `L3:0 isu`, `95/~103` kata (18 panggilan kumulatif termasuk rewrite P2C).
+- [`p2-history-0720/`](../out/review/p2/p2-history-0720/): Gate 1 **APPROVED** — `L0:0 isu`, `L0b:0 isu (ya, 5/5/5/5)`, `L1:0E / 0W / 2I` (2 klaim dibuang sebagai `info`), `L2:0E / 1W / 0I` (`WARNING` pada `S1.2`: `NAME_NOT_IN_CLAIM` untuk kata `"Bulan"`), `L3:0 isu`, `99/~103` kata, `9` panggilan LLM; menyebut `"20 Juli 1969"` dan pendaratan Apollo 11 bersumber dari artikel `Apollo 11` (serta `Lunar Module Eagle` & `Mare Tranquillitatis`).
+- [`mutation-test/mutation-summary.md`](../out/review/p2/mutation-test/mutation-summary.md): **8/8 mutasi** (`mut1`–`mut8`) tertangkap sebagai **ERROR** (termasuk `mut7` L1 tanggal salah & `mut4/8` off-topic).
+- [`stats.md`](../out/review/p2/stats.md) & [`verify.txt`](../out/review/p2/verify.txt).
+
+### Catatan Kejujuran Isu Tersisa
+- Tidak ada **error** tersisa di `L0`, `L0b`, `L1`, `L2`, maupun `L3` pada ketiga topik.
+- Masih terdapat `1 WARNING` di `L2` pada `p2-history-0720` (`NAME_NOT_IN_CLAIM` pada `S1.2` karena kata `"Bulan"` muncul di naskah sementara klaim `C6` merujuk `Base Tranquillity`), serta `info` pada klaim `L1` yang tidak dipakai (`1I` di `p2-kereta`, `2I` di `p2-history-0720`).
+- Rata-rata panggilan LLM kumulatif pada `stats.md` adalah **14,00** panggilan/topik (karena `p2-kereta` & `p2-mesin4tak` membawa akumulasi panggilan dari run P2B + rewrite P2C; untuk run segar `p2-history-0720` tercatat **9** panggilan).

@@ -4,6 +4,7 @@ import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
+import { validateGate1Approval } from '@core/qc/gate1-check';
 import { runIdeateStage, type ConceptsOutput } from '@core/stages/ideate';
 import { runResearchStage } from '@core/stages/research';
 import { runQcOnly, runScriptAndQcStage } from '@core/stages/script';
@@ -187,31 +188,9 @@ export async function cmdApprove(args: string[]) {
   const id = args[0];
   if (!id) throw new Error('Usage: mgs approve <id>');
   const dir = getProjectDir(id);
-  const l1 = JSON.parse(await readFile(path.join(dir, 'qc', 'L1.json'), 'utf-8')) as QcReport;
-  const l2 = JSON.parse(await readFile(path.join(dir, 'qc', 'L2.json'), 'utf-8')) as QcReport;
-  let l0bAnswers = true;
-  try {
-    const l0b = JSON.parse(await readFile(path.join(dir, 'qc', 'L0b.json'), 'utf-8')) as {
-      answers_question?: boolean;
-    };
-    l0bAnswers = l0b.answers_question !== false;
-  } catch {
-    l0bAnswers = true;
-  }
-  const script = JSON.parse(await readFile(path.join(dir, 'script.json'), 'utf-8')) as Script;
-  const ledger = JSON.parse(await readFile(path.join(dir, 'fact-ledger.json'), 'utf-8')) as FactLedger;
-  const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
-
-  // Only reject if L2 has errors, script references unverified claim, or L0b answers_question = false
-  const referencedIds = new Set(script.scenes.flatMap((s) => s.sentences.flatMap((st) => st.claim_refs)));
-  const l1ErrorsOnUsedClaims = l1.issues.filter((i) => i.severity === 'error' && referencedIds.has(i.ref));
-  const l2Errors = l2.issues.filter((i) => i.severity === 'error');
-  const unverifiedUsed = [...referencedIds].filter((cid) => claimMap.get(cid)?.status !== 'verified');
-
-  if (l1ErrorsOnUsedClaims.length > 0 || l2Errors.length > 0 || unverifiedUsed.length > 0 || !l0bAnswers) {
-    throw new Error(
-      `Gerbang 1 DITOLAK: L2 errors=${l2Errors.length}, unverified refs=${unverifiedUsed.length}, answers_question=${l0bAnswers}.`
-    );
+  const check = await validateGate1Approval(dir);
+  if (!check.approved) {
+    throw new Error(`Gerbang 1 DITOLAK: ${check.reasons.join(' | ')}`);
   }
 
   const project = await loadProject(id);
