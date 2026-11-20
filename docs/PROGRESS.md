@@ -355,3 +355,37 @@
   - `mut5-shot-variety` → `Storyboard QC`: `5` error (`SB_LOW_SHOT_VARIETY`)
   - `mut6-sync-real-render` → `sync`: `1` error (`SYNC_OUT_OF_WINDOW`)
 - **Statistik & Verifikasi:** [`stats.md`](../out/review/p3b/stats.md) & [`verify.txt`](../out/review/p3b/verify.txt) (UTF-8).
+
+---
+
+## Fase P4 — Akurasi Teks di Layar, Audio, & Video Final (`docs/P4-AUDIO-FINAL.md`)
+
+- **Status:** **PARTIAL** (Langkah 0, Bagian A, & implementasi/unit-test Bagian B selesai penuh; Bagian C terhenti di S8 `p2-kereta` karena `DailyQuotaExhaustedError` HTTP 429 pada Gemini API)
+- **Branch:** `phase/p4-audio-final` (tag awal `p4-start`, setelah merge P3B/P3C ke `main` dengan tag `p3b-done`)
+- **Tanggal:** 2026-11-20
+
+### Yang Sudah Selesai
+1. **Langkah 0 (Merge P3B ke `main`):**
+   - `phase/p3b-storyboard-coder` di-merge `--no-ff` ke `main` (`p3b-done`), lalu branch `phase/p4-audio-final` (`p4-start`) dibuat.
+2. **Bagian A — Tindak Lanjut `REVIEW-P3C.md` (Selesai Penuh + Teruji):**
+   - **A1:** `quantity` dan `display: "value" | "qualitative"` pada kontrak HUD `bind_to_driver` (`storyboard.ts`, `storyboard-code.ts`, `media-checks.ts`, `HudCore.tsx`, `StoryboardHudContext.tsx`), kamus `QUANTITY_LABELS`, serta error `L5_DRIVER_LABEL_MISMATCH` dan `L5_UNSOURCED_DRIVER_VALUE`.
+   - **A2:** Verifier L5 semantik (`src/core/qc/l5-semantic.ts`) dalam 1 panggilan LLM per video + pra-cek `L5_ABSOLUTE_WORD` (`tanpa`, `selalu`, `kontinu`, `semua` vs kata lunak di kutipan), dengan error `L5_SEMANTIC_OVERSTATEMENT`, `L5_SEMANTIC_DROPPED_CONDITION`, `L5_SEMANTIC_UNSUPPORTED`, dan `L5_OFF_TOPIC_TITLE`.
+   - **A3:** Revisi `RailCrossSection.tsx` menjadi penampang irisan sungguhan (tapak kerucut, flens dalam, kepala rel I-beam, titik kontak, dan garis jari-jari efektif dari `computeWheelsetLayout`), badge wajib `<ExaggerationBadge>` (`VIS_EXAGGERATION_UNLABELED`), dan `SHOT_VIEW_MISMATCH` di `storyboard-code.ts`.
+   - **A4:** Framing `establishing` dan `summary` mewajibkan `>= 30%` area bebas sebagai **error** `FRAMING_TOO_SMALL` (`checks.ts`, `scene-safety.ts`), penyesuaian `CameraRig.tsx`, dan larangan jarak kamera manual (`CAMERA_MANUAL_DISTANCE`).
+   - Unit test baru: [`tests/p4PartA.test.ts`](../tests/p4PartA.test.ts) (4 test lulus).
+3. **Bagian B — Audio, Takarir, & Render Final (Implementasi & Unit Test Selesai):**
+   - **B1:** `src/core/audio/vo-tighten.ts` & `tightenExistingVoiceStage` (`voice.ts`) memangkas jeda VO > 0,4s tanpa TTS ulang (bantalan 40ms) dan menghasilkan `timeline-gaps.md`.
+   - **B2:** Hook `useTrigger` (`remotion/src/kit/drivers/useTrigger.tsx`) + peringatan `SC_LITERAL_TIMING` di `scene-safety.ts`.
+   - **B3:** `layout-zones.ts` (9:16 menghindari 20% bawah & 15% kanan, dicatat di `DECISIONS.md`), `HudZones.tsx`, `kinetic-captions.ts` (`captions.srt`, pemetaan `spoken_text` ↔ tampilan), `KineticCaptions.tsx`, dan `captions-qc.ts` (`CAPTION_TEXT_MISMATCH`, `CAPTION_DESYNC`, `CAPTION_HUD_OVERLAP`, `CAPTION_UNSAFE_AREA`, `CAPTION_TOO_LONG`).
+   - **B4–B7 & CLI:** `src/core/stages/mix.ts` (S11 2-pass loudnorm `-14 LUFS`, `vo.wav`/`sfx.wav`/`mix.wav`), `final-render.ts` (S10 render chunk senyap + concat + mux), `final.ts` (S12 `final-qc.json`/`final-qc.md`), `publish.ts` (`PUBLISH_UNKNOWN_SOURCE`), dan `src/cli/p4.ts`.
+   - Unit test baru: [`tests/p4PartB.test.ts`](../tests/p4PartB.test.ts) (3 test lulus).
+4. **Bagian C — Sebagian Selesai Sebelum Kuota Habis:**
+   - `p2-kereta` B1 VO dirapatkan: jeda maks turun dari `0.851s` → `0.301s` ([`timeline-gaps.md`](../out/review/p4/p2-kereta/timeline-gaps.md)).
+   - `p2-kereta` S6–S7 Storyboard & L5 semantik lulus (`0` error; [`storyboard.json`](../out/review/p4/p2-kereta/storyboard.json), [`l5-semantic.json`](../out/review/p4/p2-kereta/l5-semantic.json)).
+   - Bukti visual non-LLM: [`zones-overlay.png`](../out/review/p4/zones-overlay.png) & [`cross-section/`](../out/review/p4/cross-section/) (3 still pergeseran lateral + `radii-telemetry.md`).
+   - [`verify.txt`](../out/review/p4/verify.txt) (UTF-8): `19 test files / 72 tests passed`, `check:size OK` (126 file).
+
+### Yang Belum Selesai (Terblokir Kuota Harian Gemini `429`)
+- S8–S12 `p2-kereta` (profil `standar`) & S6–S12 `p2-mesin4tak` (profil `hemat`) untuk menghasilkan `final.mp4`, `final-qc.json`, `loudness.txt`, `captions.srt`, `onscreen-text.md`, `publish.md`, contact sheet, still per adegan, dan `stats.md`.
+- Eksekusi 12 mutasi end-to-end pada `final.mp4` sungguhan (`out/review/p4/mutations/mutation-summary.md`).
+- Setelah kuota Gemini pulih, cukup jalankan `node --env-file=.env.local --import tsx scripts/run-p4-e2e.ts`.

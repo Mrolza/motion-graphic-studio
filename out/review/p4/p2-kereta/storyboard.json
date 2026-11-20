@@ -1,0 +1,224 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "dolly_in",
+      "duration_sec": 4.512,
+      "sentence_refs": [
+        "S1.1"
+      ],
+      "focus_entities": [
+        "train_car"
+      ],
+      "visible_parts": [
+        "body"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": 0,
+        "to": 5
+      },
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Kenapa kereta tidak tergelincir?"
+          },
+          "illustrative": true
+        }
+      ],
+      "trigger_words": [
+        "tanpa setir",
+        "stabil"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 9.503,
+      "sentence_refs": [
+        "S2.1",
+        "S2.2"
+      ],
+      "focus_entities": [
+        "rail_cross_section"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "lateral_shift",
+        "unit": "mm",
+        "from": 0,
+        "to": 10
+      },
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "MeasureReveal",
+          "props": {
+            "label": "Kemiringan Roda",
+            "valueText": "1 banding 20"
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Mengikuti tikungan dengan peluang lebih kecil flens bergesekan dengan sisi rel"
+          },
+          "claim_ref": "C1"
+        }
+      ],
+      "trigger_words": [
+        "bentuk kerucut",
+        "1 banding 20"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "diagram_overlay",
+      "camera_move": "orbit_curve",
+      "duration_sec": 8.542,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "progress",
+        "unit": "%",
+        "from": 0,
+        "to": 100
+      },
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Tanpa bentuk kerucut, inersia kendaraan membuat roda cenderung terus melaju lurus di tikungan"
+          },
+          "claim_ref": "C2"
+        },
+        {
+          "hud_id": "S3_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Geser Lateral"
+          },
+          "claim_ref": "C2",
+          "bind_to_driver": true,
+          "quantity": "lateral_shift",
+          "display": "qualitative"
+        }
+      ],
+      "trigger_words": [
+        "inersia",
+        "lurus"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "comparison",
+      "camera_move": "dolly_in",
+      "duration_sec": 8.865,
+      "sentence_refs": [
+        "S4.1",
+        "S4.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "effective_diameter",
+        "unit": "mm",
+        "from": 0,
+        "to": 10
+      },
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "StatCounter",
+          "props": {
+            "label": "Diameter Efektif"
+          },
+          "claim_ref": "C3",
+          "bind_to_driver": true,
+          "quantity": "effective_diameter",
+          "display": "qualitative"
+        },
+        {
+          "hud_id": "S4_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh"
+          },
+          "claim_ref": "C3"
+        }
+      ],
+      "trigger_words": [
+        "diameter efektif",
+        "sisi luar"
+      ]
+    },
+    {
+      "id": "S5",
+      "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "static_cross_section",
+      "duration_sec": 4.512,
+      "sentence_refs": [
+        "S5.1"
+      ],
+      "focus_entities": [
+        "train_car"
+      ],
+      "visible_parts": [
+        "body"
+      ],
+      "driver": {
+        "name": "progress",
+        "unit": "%",
+        "from": 0,
+        "to": 100
+      },
+      "hud": [
+        {
+          "hud_id": "S5_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Mekanisme fisika ini membantu rangkaian kereta mengikuti kurva jalur secara efisien"
+          },
+          "claim_ref": "C3"
+        }
+      ],
+      "trigger_words": [
+        "Mekanisme fisika",
+        "efisien"
+      ]
+    }
+  ]
+}

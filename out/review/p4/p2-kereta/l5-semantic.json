@@ -1,0 +1,75 @@
+[
+  {
+    "hud_id": "S1_H1",
+    "scene_id": "S1",
+    "text": "Kenapa kereta tidak tergelincir?",
+    "verdict": "OK",
+    "reason": "Judul ilustratif sangat tepat sasaran dan relevan dengan topik utama video mengenai mengapa kereta tidak tergelincir.",
+    "hints": []
+  },
+  {
+    "hud_id": "S2_H1",
+    "scene_id": "S2",
+    "text": "Kemiringan Roda — 1 banding 20",
+    "claim_ref": "C1",
+    "verdict": "OK",
+    "reason": "Teks akurat merangkum klaim sumber mengenai kemiringan kerucut roda 1 banding 20.",
+    "hints": []
+  },
+  {
+    "hud_id": "S2_H2",
+    "scene_id": "S2",
+    "text": "Mengikuti tikungan dengan peluang lebih kecil flens bergesekan dengan sisi rel",
+    "claim_ref": "C1",
+    "verdict": "OK",
+    "reason": "Makna setia pada sumber, menerjemahkan dengan baik fungsi untuk mengikuti tikungan dengan peluang lebih kecil flens bergesekan.",
+    "hints": []
+  },
+  {
+    "hud_id": "S3_H1",
+    "scene_id": "S3",
+    "text": "Tanpa bentuk kerucut, inersia kendaraan membuat roda cenderung terus melaju lurus di tikungan",
+    "claim_ref": "C2",
+    "verdict": "OK",
+    "reason": "Penggunaan kata 'tanpa' dan 'cenderung' sudah akurat dalam merepresentasikan kondisi hipotetis tanpa bentuk kerucut pada sumber.",
+    "hints": [
+      "L5_ABSOLUTE_WORD: kata mutlak (tanpa) di HUD dipadukan dengan kata lunak (tend) di kutipan"
+    ]
+  },
+  {
+    "hud_id": "S3_H2",
+    "scene_id": "S3",
+    "text": "Geser Lateral",
+    "claim_ref": "C2",
+    "verdict": "OK",
+    "reason": "Istilah 'Geser Lateral' secara tepat merepresentasikan pergerakan roda menuju rel luar pada teks sumber.",
+    "hints": []
+  },
+  {
+    "hud_id": "S4_H1",
+    "scene_id": "S4",
+    "text": "Diameter Efektif",
+    "claim_ref": "C3",
+    "verdict": "OK",
+    "reason": "Istilah 'Diameter Efektif' sesuai dan akurat merujuk pada bagian awal klaim C3.",
+    "hints": []
+  },
+  {
+    "hud_id": "S4_H2",
+    "scene_id": "S4",
+    "text": "Roda terpasang kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh",
+    "claim_ref": "C3",
+    "verdict": "OK",
+    "reason": "Pernyataan sesuai secara substansial dengan penjelasan bahwa roda terpasang kaku pada gandar dan roda luar menempuh jarak lebih jauh.",
+    "hints": []
+  },
+  {
+    "hud_id": "S5_H1",
+    "scene_id": "S5",
+    "text": "Mekanisme fisika ini membantu rangkaian kereta mengikuti kurva jalur secara efisien",
+    "claim_ref": "C3",
+    "verdict": "OK",
+    "reason": "Kesimpulan merangkum mekanisme fisika dengan sangat baik dan akurat berdasarkan klaim C3.",
+    "hints": []
+  }
+]
