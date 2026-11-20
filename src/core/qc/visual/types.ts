@@ -18,6 +18,7 @@ export interface TelemetryEntitySample {
 
 export interface TelemetryHudSample {
   id: string;
+  hud_id?: string;
   component: string;
   zone: 'title' | 'free' | 'callout' | 'caption';
   bbox: ScreenBox;
@@ -25,6 +26,18 @@ export interface TelemetryHudSample {
   driverName?: string;
   numericValue?: number;
   claimRef?: string;
+}
+
+export interface ExpectedHudSpec {
+  hud_id: string;
+  component: string;
+  expectedText: string;
+  claim_ref?: string;
+  claimValue?: number;
+  claimUnit?: string;
+  claimAllowedNumbers?: number[];
+  bind_to_driver?: boolean;
+  when?: { driver_between: [number, number] };
 }
 
 export interface TelemetrySample {
@@ -85,6 +98,9 @@ export interface VisualCheckSpec {
   visibleParts?: VisiblePartSpec[];
   geometryRules?: GeometryRule[];
   maxActiveHudPanels?: number;
+  expectedHud?: ExpectedHudSpec[];
+  syncTargetSec?: number;
+  syncToleranceSec?: number;
   safeBounds?: { minX: number; maxX: number; minY: number; maxY: number };
   maxHudOverlapRatio?: number;
 }
@@ -101,6 +117,8 @@ export interface VisualQcResult {
     framing: QcReport;
     hudOverlap: QcReport;
     hudFormat: QcReport;
+    onscreenTruth: QcReport;
+    sync: QcReport;
     blank: QcReport;
   };
 }

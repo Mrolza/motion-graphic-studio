@@ -283,3 +283,75 @@
 - [`mutations/mutation-summary.md`](../out/review/p3a/mutations/mutation-summary.md): **10/10 mutasi** tertangkap dengan error yang tepat (`mut1`–`mut5` P3A + `mut6-lift-wheel` `114` error `geometry`, `mut7-rotate-axle` `57` error `geometry`, `mut8-detach-rod` `120` error `geometry`, `mut9-occlude-crank` `59` error `visibility`, `mut10-three-panels` `38` error `hudOverlap`).
 - [`perf.md`](../out/review/p3a/perf.md): `DemoKereta` normal `13572 ms` vs telemetri `14405 ms` (`+6.1%`); `DemoMesin` normal `13790 ms` vs telemetri `13531 ms` (`-1.9%`).
 - [`verify.txt`](../out/review/p3a/verify.txt) (UTF-8).
+
+---
+
+## Fase P3B — Suara, Storyboard, dan Gemini Scene Coder (`docs/P3B-STORYBOARD-CODER.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p3b-storyboard-coder` (tag awal `p3b-start`, setelah perbaikan `REVIEW-P3A2.md` & merge P3A ke `main` dengan tag `p3a-done`)
+- **Tanggal:** 2026-11-20
+
+### Langkah 0 (`REVIEW-P3A2.md` + Merge P3A)
+- Menyelesaikan 6 perbaikan `REVIEW-P3A2.md` (tapak kerucut padat `LatheGeometry`, cincin diameter efektif kontras, panah inersia `Arrow3D` tebal, cek `HUD_CLAIM_ID_LEAK`, warning `FRAMING_TOO_SMALL`, format derajat `"68°"` tanpa spasi), dengan bukti render ulang di [`out/review/p3a/fix/`](../out/review/p3a/fix/) (`DemoKereta` & `DemoMesin` keduanya `passed=true`, `0` framing warning, `0` visibility error).
+- Merge `phase/p3a-scene-kit` ke `main` (`--no-ff`, tag `p3a-done`), lalu buat `phase/p3b-storyboard-coder` (`p3b-start`).
+
+### Apa yang Dikerjakan & Dibuat (P3B)
+1. **S5 Suara & Timeline (`src/core/stages/voice.ts`):**
+   - `toIndonesianSpokenText` mengubah angka/rasio/derajat ke `spoken_text` ramah TTS (`"1:20"` → `"1 banding 20"`, `"1.435"` → `"1435"`, `"3,5"` → `"3 koma 5"`, `"720°"` → `"720 derajat"`) tanpa mengubah teks tampilan (dicatat di `docs/DECISIONS.md`).
+   - Sintesis VO per adegan via `msedge-tts` (`id-ID-ArdiNeural`) + word boundary timing → `timeline.json` + `audio/vo-full.mp3`, tanpa Gemini (`mgs voice <id>`).
+2. **S6–S7 Storyboard & QC Storyboard (`src/core/stages/storyboard.ts`, `src/core/qc/storyboard.ts`):**
+   - `S6`: 1 panggilan Gemini menghasilkan `storyboard.json` (`lane: code_3d`, `focus_entities`, `visible_parts`, `driver`, `invariants`, `hud` maks 2 panel, `trigger_words`).
+   - `S7`: cek kode deterministik (durasi timeline, `trigger_words`, `claim_ref` ke klaim `verified`, angka cocok dengan ledger & format `id-ID`, maks 2 HUD, invarian merujuk driver) + 1 panggilan LLM konsistensi visual, maks 1 penulisan ulang.
+3. **S8–S9 Scene Coder, Validasi Berurutan, & QC `sync` (`src/core/stages/scene-coder.ts`, `scene-safety.ts`, `scene-registry.ts`, `media-checks.ts`):**
+   - Per adegan: Gemini menulis `.tsx` menggunakan Scene Kit saja, lalu divalidasi berurutan: whitelist impor & larangan API (`<= 300` baris, wajib `TelemetryProvider` + `BlueprintStage` + rakitan/`TelemetryEntity`) → `tsc --noEmit` → render telemetri & seluruh QC visual P3A + **`sync`** (gerak utama mulai dalam `±0,35s` dari `trigger_words`), maks 2 perbaikan per adegan.
+4. **Perakitan & Pratinjau VO (`src/core/stages/preview.ts`, `src/cli/p3b.ts`):**
+   - Menggabungkan adegan lewat `<Series>` sesuai durasi `timeline.json`, merender `720×1280` 30 fps sesuai profil perangkat, dan melakukan mux dengan VO mentah ke `preview.mp4`.
+   - CLI: `mgs voice <id>`, `mgs storyboard <id>`, `mgs scenes <id>`, `mgs render <id> --preview`, `mgs run <id> --from voice --until preview`.
+
+### Bukti (`out/review/p3b/`)
+- **`p2-kereta` ([`out/review/p3b/p2-kereta/`](../out/review/p3b/p2-kereta/)):**
+  - `preview.mp4`, `contact-sheet.png`, 5 still (`S1`–`S5`), `timeline.json`, `storyboard.json`, `qc/`, `scenes/` (raw & final).
+  - **10 panggilan LLM** (S6–S9: `1/3/6/0`), `0` error storyboard, **5/5 adegan lulus** (`S1:0, S2:0, S3:0, S4:0, S5:0` perbaikan), durasi video `38.67s` vs VO `38.68s`, render `33.870 ms`.
+- **`p2-mesin4tak` ([`out/review/p3b/p2-mesin4tak/`](../out/review/p3b/p2-mesin4tak/)):**
+  - `preview.mp4`, `contact-sheet.png`, 4 still (`S1`–`S4`), `timeline.json`, `storyboard.json`, `qc/`, `scenes/` (raw & final).
+  - **13 panggilan LLM** (S6–S9: `2/5/5/1`), `0` error storyboard, **4/4 adegan lulus** (`S1:0, S2:0, S3:1, S4:0` perbaikan), durasi video `37.60s` vs VO `37.614s`, render `30.856 ms`.
+- **Statistik & Mutasi:** [`stats.md`](../out/review/p3b/stats.md), [`mutations/mutation-summary.md`](../out/review/p3b/mutations/mutation-summary.md) (**5/5 mutasi tertangkap**: `SB_HUD_NUMBER_NOT_IN_CLAIM`, `SB_MISSING_TRIGGER_WORD`, `SB_HUD_BUDGET`, `SB_UNVERIFIED_CLAIM`, `SYNC_OUT_OF_WINDOW`), dan [`verify.txt`](../out/review/p3b/verify.txt) (UTF-8).
+
+---
+
+## Fase P3C — Kebenaran Teks di Layar (L5), Gate S7 Wajib, & Variasi Shot (`docs/P3C-ONSCREEN-TRUTH.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p3b-storyboard-coder` (tindak lanjut `docs/REVIEW-P3B.md`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Diperbaiki & Dibuat (P3C)
+1. **HUD Berbasis Data Storyboard & L5 Runtime (`StoryboardHudContext.tsx`, `HudZones.tsx`, `media-checks.ts`, `scene-safety.ts`):**
+   - Menambahkan `hud_id`, `when.driver_between`, dan `shot_type`/`camera_move` pada kontrak storyboard (`src/core/contracts/storyboard.ts`).
+   - Membuat `<StoryboardHudProvider items={...}>` + `<Hud id="..." driver={...} />` agar teks/nilai HUD hanya berasal dari `storyboard.json` dan otomatis tersembunyi di luar rentang `when.driver_between`.
+   - `validateSceneCodeSafety` menolak pemanggilan langsung `<KineticTitle>`, `<Callout>`, `<MeasureReveal>`, `<StatCounter>`, `<CompareCard>`, `<ListReveal>`, `<DimensionLine>` (`UNSANCTIONED_HUD_DIRECT_CALL`).
+   - `checkOnscreenTruthFromTelemetry` (layer **`onscreenTruth` L5**) memeriksa setiap elemen HUD yang ter-render di telemetri (`L5_UNSANCTIONED_HUD`, `L5_FACT_MISMATCH`), sementara `checkMechanicsFromTelemetry` memeriksa `MECHANICS_HUD_OUT_OF_PHASE` untuk HUD ber-`when.driver_between`.
+   - Normalisasi unit sudut (`deg` → `°` tanpa spasi) via `normalizeUnit` & `formatValueWithUnit`, serta penolakan satuan `"deg"` pada `HUD_UNNORMALIZED_UNIT`.
+2. **Gate S7 Wajib & Cek Teks Storyboard Akurat (`src/core/qc/storyboard.ts`, `scene-coder.ts`, `src/cli/p3b.ts`):**
+   - `runScenesStage` & CLI memblokir eksekusi S8 jika `project.stages.S7 !== 'done'`.
+   - `collectTextValues` hanya memeriksa field teks tampilan (`title`, `subtitle`, `label`, `detail`, `valueText`, `leftTitle`, `leftValue`, `rightTitle`, `rightValue`, `dateText`, `items`, `steps`), tidak memeriksa `hud_id`/`claim_ref`/`shot_type`.
+   - Storyboard QC mewajibkan `hud_id`, `shot_type` (minimal 3 jenis `shot_type` berbeda per video & dilarang `(shot_type, focus_entities)` berurutan identik), dan `bind_to_driver` yang merujuk `driver` adegan.
+3. **Rakitan Baru & Overlay 2D (`TrainCar.tsx`, `RailCrossSection.tsx`, `EngineBlock.tsx`, `DiagramOverlay.tsx`):**
+   - `TrainCar` kini memakai dua bogie `WheelsetOnRail` di sumbu Z + `TelemetryEntity`; ditambahkan `RailCrossSection` (potongan lintang rel & tapak kerucut), `EngineBlock` (blok 4-silinder cutaway), dan `DiagramOverlay` (overlay SVG 2D di dalam `<HudLayout>`).
+4. **Ringkasan Teks di Layar (`src/core/stages/preview.ts`):**
+   - Menghasilkan `onscreen-text.md` yang memetakan setiap `hud_id` → komponen → teks → `claim_ref`/`driver` → kutipan sumber.
+
+### Bukti (`out/review/p3b/`)
+- **`p2-kereta` ([`out/review/p3b/p2-kereta/`](../out/review/p3b/p2-kereta/)):**
+  - **11 panggilan LLM** (S6–S9: `1/1/7/2`), `0` error storyboard, **5/5 adegan lulus** (`S1:0, S2:2, S3:0, S4:0, S5:0` perbaikan), durasi video `38.67s` vs VO `38.68s`, render `39.129 ms`, [`onscreen-text.md`](../out/review/p3b/p2-kereta/onscreen-text.md) lengkap (`S1_H1`–`S5_H1`), variasi shot terlihat di [`contact-sheet.png`](../out/review/p3b/p2-kereta/contact-sheet.png).
+- **`p2-mesin4tak` ([`out/review/p3b/p2-mesin4tak/`](../out/review/p3b/p2-mesin4tak/)):**
+  - **9 panggilan LLM** (S6–S9: `2/1/6/0`), `0` error storyboard, **4/4 adegan lulus** (`S1:0, S2:0, S3:0, S4:0` perbaikan), durasi video `37.60s` vs VO `37.614s`, render `39.168 ms`, [`onscreen-text.md`](../out/review/p3b/p2-mesin4tak/onscreen-text.md) lengkap (`S1_H1`–`S4_H1`), variasi shot terlihat di [`contact-sheet.png`](../out/review/p3b/p2-mesin4tak/contact-sheet.png).
+- **Mutasi P3C ([`mutations/mutation-summary.md`](../out/review/p3b/mutations/mutation-summary.md)):** **6/6 mutasi tertangkap lewat render & telemetri sungguhan**:
+  - `mut1-unsanctioned-hud` → `onscreenTruth (L5)`: `5` error (`L5_UNSANCTIONED_HUD`)
+  - `mut2-fact-mismatch` → `onscreenTruth (L5)`: `3` error (`L5_FACT_MISMATCH`)
+  - `mut3-phase-hud` → `mechanics`: `44` error (`MECHANICS_HUD_OUT_OF_PHASE`)
+  - `mut4-deg-unit` → `hudFormat`: `1` error (`HUD_UNNORMALIZED_UNIT`)
+  - `mut5-shot-variety` → `Storyboard QC`: `5` error (`SB_LOW_SHOT_VARIETY`)
+  - `mut6-sync-real-render` → `sync`: `1` error (`SYNC_OUT_OF_WINDOW`)
+- **Statistik & Verifikasi:** [`stats.md`](../out/review/p3b/stats.md) & [`verify.txt`](../out/review/p3b/verify.txt) (UTF-8).

@@ -1,0 +1,2942 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "curveRadius": {
+        "value": 100,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.4,
+          "y": 329.2,
+          "width": 562.7,
+          "height": 509.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 341.9,
+            "y": 369.1,
+            "width": 300.2,
+            "height": 372.5
+          },
+          "wheel_right": {
+            "x": 91.2,
+            "y": 383.9,
+            "width": 289.1,
+            "height": 387.2
+          },
+          "contact_left": {
+            "x": 462,
+            "y": 601.8,
+            "width": 34.9,
+            "height": 30.7
+          },
+          "contact_right": {
+            "x": 219.1,
+            "y": 624.5,
+            "width": 35.3,
+            "height": 32
+          },
+          "flange": {
+            "x": 324,
+            "y": 347.2,
+            "width": 302.4,
+            "height": 420.8
+          }
+        },
+        "partStates": {
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "curveRadius": {
+        "value": 100,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.4,
+          "y": 329.2,
+          "width": 562.7,
+          "height": 509.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 341.9,
+            "y": 369.1,
+            "width": 300.2,
+            "height": 372.5
+          },
+          "wheel_right": {
+            "x": 91.2,
+            "y": 383.9,
+            "width": 289.1,
+            "height": 387.2
+          },
+          "contact_left": {
+            "x": 462,
+            "y": 601.9,
+            "width": 34.9,
+            "height": 30.7
+          },
+          "contact_right": {
+            "x": 219.1,
+            "y": 624.5,
+            "width": 35.3,
+            "height": 32
+          },
+          "flange": {
+            "x": 324,
+            "y": 347.2,
+            "width": 302.3,
+            "height": 420.8
+          }
+        },
+        "partStates": {
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "curveRadius": {
+        "value": 100,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.5,
+          "y": 329.2,
+          "width": 562.6,
+          "height": 509.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 342,
+            "y": 369.1,
+            "width": 300.1,
+            "height": 372.5
+          },
+          "wheel_right": {
+            "x": 91.3,
+            "y": 383.9,
+            "width": 288.9,
+            "height": 387.1
+          },
+          "contact_left": {
+            "x": 462,
+            "y": 601.9,
+            "width": 34.9,
+            "height": 30.7
+          },
+          "contact_right": {
+            "x": 219.1,
+            "y": 624.5,
+            "width": 35.3,
+            "height": 32
+          },
+          "flange": {
+            "x": 324.1,
+            "y": 347.3,
+            "width": 302.2,
+            "height": 420.9
+          }
+        },
+        "partStates": {
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "curveRadius": {
+        "value": 100,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.8,
+          "y": 329.2,
+          "width": 562.4,
+          "height": 509
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 342.2,
+            "y": 369.2,
+            "width": 299.9,
+            "height": 372.7
+          },
+          "wheel_right": {
+            "x": 91.5,
+            "y": 383.8,
+            "width": 288.4,
+            "height": 387.1
+          },
+          "contact_left": {
+            "x": 462.1,
+            "y": 602,
+            "width": 34.9,
+            "height": 30.7
+          },
+          "contact_right": {
+            "x": 219,
+            "y": 624.3,
+            "width": 35.2,
+            "height": 32
+          },
+          "flange": {
+            "x": 324.4,
+            "y": 347.3,
+            "width": 301.8,
+            "height": 421
+          }
+        },
+        "partStates": {
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "curveRadius": {
+        "value": 100,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 87.2,
+          "y": 329.3,
+          "width": 561.8,
+          "height": 508.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 342.8,
+            "y": 369.3,
+            "width": 299.3,
+            "height": 372.9
+          },
+          "wheel_right": {
+            "x": 92,
+            "y": 383.6,
+            "width": 287.4,
+            "height": 387
+          },
+          "contact_left": {
+            "x": 462.3,
+            "y": 602.3,
+            "width": 34.9,
+            "height": 30.7
+          },
+          "contact_right": {
+            "x": 219,
+            "y": 624.1,
+            "width": 35.2,
+            "height": 32
+          },
+          "flange": {
+            "x": 325,
+            "y": 347.4,
+            "width": 301.1,
+            "height": 421.3
+          }
+        },
+        "partStates": {
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "curveRadius": {
+        "value": 100,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 88,
+          "y": 329.4,
+          "width": 561,
+          "height": 508.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 343.6,
+            "y": 369.5,
+            "width": 298.4,
+            "height": 373.2
+          },
+          "wheel_right": {
+            "x": 92.7,
+            "y": 383.3,
+            "width": 285.7,
+            "height": 386.8
+          },
+          "contact_left": {
+            "x": 462.6,
+            "y": 602.7,
+            "width": 34.9,
+            "height": 30.7
+          },
+          "contact_right": {
+            "x": 218.8,
+            "y": 623.7,
+            "width": 35.1,
+            "height": 31.9
+          },
+          "flange": {
+            "x": 326,
+            "y": 347.5,
+            "width": 299.8,
+            "height": 421.7
+          }
+        },
+        "partStates": {
+          "distance": 100,
+          "wheel_angle_deg": 12455.6,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "curveRadius": {
+        "value": 104.167,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 88.9,
+          "y": 347.7,
+          "width": 560,
+          "height": 470.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 338.1,
+            "y": 403.3,
+            "width": 309.3,
+            "height": 342.8
+          },
+          "wheel_right": {
+            "x": 90.3,
+            "y": 389.4,
+            "width": 291.6,
+            "height": 331
+          },
+          "contact_left": {
+            "x": 464.3,
+            "y": 622.7,
+            "width": 39.1,
+            "height": 33.2
+          },
+          "contact_right": {
+            "x": 221.3,
+            "y": 602.4,
+            "width": 37,
+            "height": 31.9
+          },
+          "flange": {
+            "x": 318.6,
+            "y": 382.9,
+            "width": 309,
+            "height": 380.3
+          }
+        },
+        "partStates": {
+          "distance": 104.167,
+          "wheel_angle_deg": 12974.59,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "curveRadius": {
+        "value": 111.111,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 135.1,
+          "y": 351.1,
+          "width": 463.3,
+          "height": 448.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 299.2,
+            "y": 430.7,
+            "width": 282.7,
+            "height": 337.2
+          },
+          "wheel_right": {
+            "x": 152.9,
+            "y": 375.8,
+            "width": 258.9,
+            "height": 298.4
+          },
+          "contact_left": {
+            "x": 424.2,
+            "y": 655.3,
+            "width": 30.8,
+            "height": 31.1
+          },
+          "contact_right": {
+            "x": 275.1,
+            "y": 577.3,
+            "width": 27.1,
+            "height": 27.1
+          },
+          "flange": {
+            "x": 277.5,
+            "y": 406,
+            "width": 295,
+            "height": 371.5
+          }
+        },
+        "partStates": {
+          "distance": 111.111,
+          "wheel_angle_deg": 13839.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "curveRadius": {
+        "value": 118.056,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 80.5,
+          "y": 327.5,
+          "width": 583.1,
+          "height": 516.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 170,
+            "y": 412.1,
+            "width": 364.4,
+            "height": 408.7
+          },
+          "wheel_right": {
+            "x": 212.4,
+            "y": 348.2,
+            "width": 315.9,
+            "height": 346.7
+          },
+          "contact_left": {
+            "x": 331,
+            "y": 664.5,
+            "width": 39.2,
+            "height": 35.4
+          },
+          "contact_right": {
+            "x": 351.1,
+            "y": 567.3,
+            "width": 34.3,
+            "height": 29.4
+          },
+          "flange": {
+            "x": 167,
+            "y": 383.3,
+            "width": 372.2,
+            "height": 449.5
+          }
+        },
+        "partStates": {
+          "distance": 118.056,
+          "wheel_angle_deg": 14704.53,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "curveRadius": {
+        "value": 125,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 136.7,
+          "y": 383.8,
+          "width": 457.4,
+          "height": 377.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 166.3,
+            "y": 449.7,
+            "width": 199.2,
+            "height": 292.7
+          },
+          "wheel_right": {
+            "x": 355.4,
+            "y": 400.2,
+            "width": 193.6,
+            "height": 260.6
+          },
+          "contact_left": {
+            "x": 249.7,
+            "y": 649.2,
+            "width": 33.5,
+            "height": 32.3
+          },
+          "contact_right": {
+            "x": 429.4,
+            "y": 581,
+            "width": 31.3,
+            "height": 28.5
+          },
+          "flange": {
+            "x": 191.7,
+            "y": 428.6,
+            "width": 180.2,
+            "height": 324.3
+          }
+        },
+        "partStates": {
+          "distance": 125,
+          "wheel_angle_deg": 15569.51,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "curveRadius": {
+        "value": 131.944,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 97.1,
+          "y": 330.4,
+          "width": 552.9,
+          "height": 504.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 100,
+            "y": 377.2,
+            "width": 269.3,
+            "height": 382.8
+          },
+          "wheel_right": {
+            "x": 351.6,
+            "y": 374.4,
+            "width": 293.6,
+            "height": 380.1
+          },
+          "contact_left": {
+            "x": 218,
+            "y": 615.2,
+            "width": 34,
+            "height": 31.3
+          },
+          "contact_right": {
+            "x": 466.7,
+            "y": 611,
+            "width": 35.3,
+            "height": 31.1
+          },
+          "flange": {
+            "x": 122.5,
+            "y": 353.3,
+            "width": 265.9,
+            "height": 431.8
+          }
+        },
+        "partStates": {
+          "distance": 131.944,
+          "wheel_angle_deg": 16434.48,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "curveRadius": {
+        "value": 138.889,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 116.8,
+          "y": 345.8,
+          "width": 515.7,
+          "height": 468.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 119.8,
+            "y": 375.8,
+            "width": 291,
+            "height": 315.5
+          },
+          "wheel_right": {
+            "x": 305.4,
+            "y": 419,
+            "width": 323.8,
+            "height": 349.6
+          },
+          "contact_left": {
+            "x": 252.4,
+            "y": 583.3,
+            "width": 32.2,
+            "height": 29.3
+          },
+          "contact_right": {
+            "x": 441.8,
+            "y": 645.8,
+            "width": 36.5,
+            "height": 33
+          },
+          "flange": {
+            "x": 124.6,
+            "y": 360.3,
+            "width": 307,
+            "height": 353.8
+          }
+        },
+        "partStates": {
+          "distance": 138.889,
+          "wheel_angle_deg": 17299.45,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "curveRadius": {
+        "value": 145.833,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 143.4,
+          "y": 356.2,
+          "width": 460.7,
+          "height": 439.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 212.1,
+            "y": 375.7,
+            "width": 266.3,
+            "height": 282
+          },
+          "wheel_right": {
+            "x": 224.1,
+            "y": 445,
+            "width": 307.4,
+            "height": 328.4
+          },
+          "contact_left": {
+            "x": 331.6,
+            "y": 568.6,
+            "width": 28.1,
+            "height": 27.2
+          },
+          "contact_right": {
+            "x": 360.4,
+            "y": 665.7,
+            "width": 32.4,
+            "height": 32.4
+          },
+          "flange": {
+            "x": 202.2,
+            "y": 363.6,
+            "width": 287.4,
+            "height": 316.3
+          }
+        },
+        "partStates": {
+          "distance": 145.833,
+          "wheel_angle_deg": 18164.42,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "curveRadius": {
+        "value": 152.778,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 109.4,
+          "y": 330.6,
+          "width": 542.6,
+          "height": 501.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 301.5,
+            "y": 351.8,
+            "width": 279,
+            "height": 356.1
+          },
+          "wheel_right": {
+            "x": 137.2,
+            "y": 403,
+            "width": 295.9,
+            "height": 406.5
+          },
+          "contact_left": {
+            "x": 414,
+            "y": 576.2,
+            "width": 32.7,
+            "height": 28.8
+          },
+          "contact_right": {
+            "x": 264.1,
+            "y": 654.5,
+            "width": 35,
+            "height": 33.4
+          },
+          "flange": {
+            "x": 290.6,
+            "y": 332.8,
+            "width": 281.2,
+            "height": 405.9
+          }
+        },
+        "partStates": {
+          "distance": 152.778,
+          "wheel_angle_deg": 19029.4,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "curveRadius": {
+        "value": 159.722,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 178.2,
+          "y": 387.9,
+          "width": 384,
+          "height": 358.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 423.7,
+            "y": 412.7,
+            "width": 131.2,
+            "height": 282.7
+          },
+          "wheel_right": {
+            "x": 181.8,
+            "y": 424,
+            "width": 105.7,
+            "height": 290.3
+          },
+          "contact_left": {
+            "x": 469,
+            "y": 607.1,
+            "width": 25.7,
+            "height": 26.9
+          },
+          "contact_right": {
+            "x": 223.5,
+            "y": 623,
+            "width": 24.2,
+            "height": 27.7
+          },
+          "flange": {
+            "x": 419.4,
+            "y": 393.6,
+            "width": 101.4,
+            "height": 325.2
+          }
+        },
+        "partStates": {
+          "distance": 159.722,
+          "wheel_angle_deg": 19894.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "curveRadius": {
+        "value": 166.667,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 139.9,
+          "y": 340.2,
+          "width": 489,
+          "height": 473.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 334.1,
+            "y": 405,
+            "width": 293,
+            "height": 373.2
+          },
+          "wheel_right": {
+            "x": 141.1,
+            "y": 367,
+            "width": 245.6,
+            "height": 340.1
+          },
+          "contact_left": {
+            "x": 449.1,
+            "y": 643.2,
+            "width": 33.7,
+            "height": 31.4
+          },
+          "contact_right": {
+            "x": 248,
+            "y": 586.6,
+            "width": 28.6,
+            "height": 28.3
+          },
+          "flange": {
+            "x": 316.9,
+            "y": 378.8,
+            "width": 293.4,
+            "height": 416.6
+          }
+        },
+        "partStates": {
+          "distance": 166.667,
+          "wheel_angle_deg": 20759.34,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "curveRadius": {
+        "value": 173.611,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 173.3,
+          "y": 358.9,
+          "width": 386.8,
+          "height": 418.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 228.7,
+            "y": 451.8,
+            "width": 310.4,
+            "height": 303.8
+          },
+          "wheel_right": {
+            "x": 207.3,
+            "y": 379.9,
+            "width": 268.5,
+            "height": 266
+          },
+          "contact_left": {
+            "x": 369,
+            "y": 667.2,
+            "width": 24,
+            "height": 28.7
+          },
+          "contact_right": {
+            "x": 331.5,
+            "y": 570.2,
+            "width": 20.5,
+            "height": 24.4
+          },
+          "flange": {
+            "x": 204.5,
+            "y": 427.9,
+            "width": 349.3,
+            "height": 330.4
+          }
+        },
+        "partStates": {
+          "distance": 173.611,
+          "wheel_angle_deg": 21624.31,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "curveRadius": {
+        "value": 180.556,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 134.3,
+          "y": 368,
+          "width": 421.6,
+          "height": 408.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 135.5,
+            "y": 444.6,
+            "width": 268.2,
+            "height": 308
+          },
+          "wheel_right": {
+            "x": 317.5,
+            "y": 388.4,
+            "width": 230.5,
+            "height": 272.5
+          },
+          "contact_left": {
+            "x": 264.1,
+            "y": 655.1,
+            "width": 31.5,
+            "height": 31
+          },
+          "contact_right": {
+            "x": 418.6,
+            "y": 577.5,
+            "width": 26.3,
+            "height": 27
+          },
+          "flange": {
+            "x": 145.6,
+            "y": 422.2,
+            "width": 275.2,
+            "height": 338
+          }
+        },
+        "partStates": {
+          "distance": 180.556,
+          "wheel_angle_deg": 22489.29,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "curveRadius": {
+        "value": 187.5,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 107.7,
+          "y": 337,
+          "width": 464,
+          "height": 478
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 113.3,
+            "y": 379,
+            "width": 215.7,
+            "height": 383.7
+          },
+          "wheel_right": {
+            "x": 395,
+            "y": 372.2,
+            "width": 174.6,
+            "height": 377
+          },
+          "contact_left": {
+            "x": 219.9,
+            "y": 619.6,
+            "width": 30.1,
+            "height": 29
+          },
+          "contact_right": {
+            "x": 469.5,
+            "y": 609.1,
+            "width": 27.1,
+            "height": 28.5
+          },
+          "flange": {
+            "x": 142.2,
+            "y": 352.8,
+            "width": 196.2,
+            "height": 438.2
+          }
+        },
+        "partStates": {
+          "distance": 187.5,
+          "wheel_angle_deg": 23354.26,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "curveRadius": {
+        "value": 194.444,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 111.2,
+          "y": 368,
+          "width": 469.1,
+          "height": 411.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 156.1,
+            "y": 385.9,
+            "width": 204.6,
+            "height": 297.3
+          },
+          "wheel_right": {
+            "x": 359.2,
+            "y": 429.2,
+            "width": 202.1,
+            "height": 330.4
+          },
+          "contact_left": {
+            "x": 252.1,
+            "y": 584,
+            "width": 31.1,
+            "height": 28.4
+          },
+          "contact_right": {
+            "x": 444.5,
+            "y": 646,
+            "width": 32.2,
+            "height": 31.8
+          },
+          "flange": {
+            "x": 176.9,
+            "y": 370.1,
+            "width": 190,
+            "height": 338.7
+          }
+        },
+        "partStates": {
+          "distance": 194.444,
+          "wheel_angle_deg": 24219.23,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "curveRadius": {
+        "value": 201.389,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 80.4,
+          "y": 338.8,
+          "width": 526,
+          "height": 484.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 197.4,
+            "y": 358.9,
+            "width": 297.2,
+            "height": 320.5
+          },
+          "wheel_right": {
+            "x": 199.4,
+            "y": 425,
+            "width": 342.3,
+            "height": 375.7
+          },
+          "contact_left": {
+            "x": 332.9,
+            "y": 567.9,
+            "width": 31.6,
+            "height": 28.4
+          },
+          "contact_right": {
+            "x": 354.7,
+            "y": 665,
+            "width": 36.1,
+            "height": 34
+          },
+          "flange": {
+            "x": 191.2,
+            "y": 344,
+            "width": 314.4,
+            "height": 361.8
+          }
+        },
+        "partStates": {
+          "distance": 201.389,
+          "wheel_angle_deg": 25084.2,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "curveRadius": {
+        "value": 208.333,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 97.2,
+          "y": 339.4,
+          "width": 503.3,
+          "height": 477.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 292.4,
+            "y": 367.1,
+            "width": 293.7,
+            "height": 318.7
+          },
+          "wheel_right": {
+            "x": 111.3,
+            "y": 419.5,
+            "width": 325.7,
+            "height": 359.4
+          },
+          "contact_left": {
+            "x": 419.8,
+            "y": 577.8,
+            "width": 28.9,
+            "height": 27.8
+          },
+          "contact_right": {
+            "x": 260.8,
+            "y": 653.8,
+            "width": 33.1,
+            "height": 31.9
+          },
+          "flange": {
+            "x": 271.5,
+            "y": 351.1,
+            "width": 317.5,
+            "height": 358.8
+          }
+        },
+        "partStates": {
+          "distance": 208.333,
+          "wheel_angle_deg": 25949.18,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "curveRadius": {
+        "value": 215.278,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 88.2,
+          "y": 364.7,
+          "width": 525.5,
+          "height": 428.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 357.9,
+            "y": 406.5,
+            "width": 254.7,
+            "height": 301.4
+          },
+          "wheel_right": {
+            "x": 89.5,
+            "y": 415.5,
+            "width": 272.6,
+            "height": 308.1
+          },
+          "contact_left": {
+            "x": 464.4,
+            "y": 606.3,
+            "width": 36.4,
+            "height": 31.9
+          },
+          "contact_right": {
+            "x": 216,
+            "y": 619,
+            "width": 38.3,
+            "height": 32.6
+          },
+          "flange": {
+            "x": 341.1,
+            "y": 390.4,
+            "width": 249.6,
+            "height": 335.4
+          }
+        },
+        "partStates": {
+          "distance": 215.278,
+          "wheel_angle_deg": 26814.15,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "curveRadius": {
+        "value": 222.222,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 115.9,
+          "y": 336.3,
+          "width": 473.8,
+          "height": 481.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 359.1,
+            "y": 400.2,
+            "width": 212.5,
+            "height": 383.7
+          },
+          "wheel_right": {
+            "x": 141.1,
+            "y": 362.5,
+            "width": 219.6,
+            "height": 349.6
+          },
+          "contact_left": {
+            "x": 451.4,
+            "y": 643.9,
+            "width": 28.7,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 248.8,
+            "y": 587.2,
+            "width": 27,
+            "height": 27.1
+          },
+          "flange": {
+            "x": 345,
+            "y": 371.9,
+            "width": 203.3,
+            "height": 432.7
+          }
+        },
+        "partStates": {
+          "distance": 222.222,
+          "wheel_angle_deg": 27679.12,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "curveRadius": {
+        "value": 229.167,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 72,
+          "y": 348,
+          "width": 563.6,
+          "height": 469.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 225.9,
+            "y": 431,
+            "width": 321,
+            "height": 366.8
+          },
+          "wheel_right": {
+            "x": 192.4,
+            "y": 366,
+            "width": 280.4,
+            "height": 311.2
+          },
+          "contact_left": {
+            "x": 367.4,
+            "y": 663.2,
+            "width": 40.5,
+            "height": 35.9
+          },
+          "contact_right": {
+            "x": 318,
+            "y": 567.9,
+            "width": 35.6,
+            "height": 29.9
+          },
+          "flange": {
+            "x": 222.9,
+            "y": 405.4,
+            "width": 317.5,
+            "height": 401.8
+          }
+        },
+        "partStates": {
+          "distance": 229.167,
+          "wheel_angle_deg": 28544.09,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "curveRadius": {
+        "value": 236.111,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 109.7,
+          "y": 347.4,
+          "width": 492.9,
+          "height": 460.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151,
+            "y": 427.6,
+            "width": 285.9,
+            "height": 354.3
+          },
+          "wheel_right": {
+            "x": 295.8,
+            "y": 369.1,
+            "width": 259.3,
+            "height": 309
+          },
+          "contact_left": {
+            "x": 276.9,
+            "y": 658.5,
+            "width": 33,
+            "height": 32.2
+          },
+          "contact_right": {
+            "x": 404.6,
+            "y": 574,
+            "width": 29.1,
+            "height": 27.7
+          },
+          "flange": {
+            "x": 161.5,
+            "y": 401.6,
+            "width": 291.5,
+            "height": 391
+          }
+        },
+        "partStates": {
+          "distance": 236.111,
+          "wheel_angle_deg": 29409.07,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "curveRadius": {
+        "value": 243.056,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 60.8,
+          "y": 327,
+          "width": 590.2,
+          "height": 518.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 62.6,
+            "y": 387.2,
+            "width": 342.1,
+            "height": 388.4
+          },
+          "wheel_right": {
+            "x": 318.1,
+            "y": 367.3,
+            "width": 331.2,
+            "height": 368.8
+          },
+          "contact_left": {
+            "x": 219.6,
+            "y": 628,
+            "width": 38.6,
+            "height": 33.3
+          },
+          "contact_right": {
+            "x": 457.7,
+            "y": 597.6,
+            "width": 36.6,
+            "height": 31.4
+          },
+          "flange": {
+            "x": 79.5,
+            "y": 363,
+            "width": 349,
+            "height": 432.3
+          }
+        },
+        "partStates": {
+          "distance": 243.056,
+          "wheel_angle_deg": 30274.04,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "curveRadius": {
+        "value": 250,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 121.7,
+          "y": 378.1,
+          "width": 478.5,
+          "height": 394.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 125.1,
+            "y": 409.6,
+            "width": 231.3,
+            "height": 268.7
+          },
+          "wheel_right": {
+            "x": 364,
+            "y": 437.1,
+            "width": 233.4,
+            "height": 286.6
+          },
+          "contact_left": {
+            "x": 231,
+            "y": 594.6,
+            "width": 34.1,
+            "height": 30.2
+          },
+          "contact_right": {
+            "x": 460.2,
+            "y": 632.5,
+            "width": 35.7,
+            "height": 32.4
+          },
+          "flange": {
+            "x": 143.8,
+            "y": 396.6,
+            "width": 225.8,
+            "height": 299.6
+          }
+        },
+        "partStates": {
+          "distance": 250,
+          "wheel_angle_deg": 31139.01,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "curveRadius": {
+        "value": 256.944,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 73.9,
+          "y": 328.4,
+          "width": 568.9,
+          "height": 511.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 153.6,
+            "y": 350.5,
+            "width": 295.4,
+            "height": 350.4
+          },
+          "wheel_right": {
+            "x": 252.4,
+            "y": 407.9,
+            "width": 328.8,
+            "height": 406.1
+          },
+          "contact_left": {
+            "x": 291.6,
+            "y": 571.9,
+            "width": 33.1,
+            "height": 29.1
+          },
+          "contact_right": {
+            "x": 400,
+            "y": 659.3,
+            "width": 37.4,
+            "height": 34.3
+          },
+          "flange": {
+            "x": 155.1,
+            "y": 332.7,
+            "width": 304.2,
+            "height": 398.2
+          }
+        },
+        "partStates": {
+          "distance": 256.944,
+          "wheel_angle_deg": 32003.98,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "curveRadius": {
+        "value": 263.889,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 77.4,
+          "y": 342.2,
+          "width": 561.5,
+          "height": 482.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 248.5,
+            "y": 361.1,
+            "width": 287.8,
+            "height": 322.1
+          },
+          "wheel_right": {
+            "x": 163,
+            "y": 424.8,
+            "width": 328.9,
+            "height": 378.5
+          },
+          "contact_left": {
+            "x": 371.8,
+            "y": 568.5,
+            "width": 34.7,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 306.9,
+            "y": 662.8,
+            "width": 39.6,
+            "height": 35.4
+          },
+          "flange": {
+            "x": 242.1,
+            "y": 346.3,
+            "width": 293.9,
+            "height": 364.2
+          }
+        },
+        "partStates": {
+          "distance": 263.889,
+          "wheel_angle_deg": 32868.96,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "curveRadius": {
+        "value": 270.833,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 112.6,
+          "y": 353,
+          "width": 492.6,
+          "height": 449
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 340.4,
+            "y": 381.6,
+            "width": 252.6,
+            "height": 309.4
+          },
+          "wheel_right": {
+            "x": 122.5,
+            "y": 420.7,
+            "width": 260.3,
+            "height": 339.5
+          },
+          "contact_left": {
+            "x": 442.6,
+            "y": 586.6,
+            "width": 30.7,
+            "height": 28.6
+          },
+          "contact_right": {
+            "x": 237.3,
+            "y": 642.8,
+            "width": 33.3,
+            "height": 31.7
+          },
+          "flange": {
+            "x": 324.9,
+            "y": 365.4,
+            "width": 257.6,
+            "height": 349.2
+          }
+        },
+        "partStates": {
+          "distance": 270.833,
+          "wheel_angle_deg": 33733.93,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "curveRadius": {
+        "value": 277.778,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 54.1,
+          "y": 323.1,
+          "width": 611.7,
+          "height": 530.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 318,
+            "y": 375.9,
+            "width": 346,
+            "height": 390.9
+          },
+          "wheel_right": {
+            "x": 55.9,
+            "y": 370.6,
+            "width": 345.1,
+            "height": 385.4
+          },
+          "contact_left": {
+            "x": 465.6,
+            "y": 616.4,
+            "width": 38.9,
+            "height": 33
+          },
+          "contact_right": {
+            "x": 217.1,
+            "y": 608.3,
+            "width": 38.5,
+            "height": 32.5
+          },
+          "flange": {
+            "x": 294.1,
+            "y": 352.7,
+            "width": 353.4,
+            "height": 436.9
+          }
+        },
+        "partStates": {
+          "distance": 277.778,
+          "wheel_angle_deg": 34598.9,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "curveRadius": {
+        "value": 284.722,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 154.5,
+          "y": 379.9,
+          "width": 416.4,
+          "height": 383.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 355.7,
+            "y": 451.2,
+            "width": 199.4,
+            "height": 286.9
+          },
+          "wheel_right": {
+            "x": 172,
+            "y": 400.1,
+            "width": 191.6,
+            "height": 256.5
+          },
+          "contact_left": {
+            "x": 438.6,
+            "y": 650.5,
+            "width": 28.9,
+            "height": 30.2
+          },
+          "contact_right": {
+            "x": 262.4,
+            "y": 581.7,
+            "width": 26.2,
+            "height": 26.7
+          },
+          "flange": {
+            "x": 342.3,
+            "y": 430,
+            "width": 190.4,
+            "height": 316.3
+          }
+        },
+        "partStates": {
+          "distance": 284.722,
+          "wheel_angle_deg": 35463.87,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "curveRadius": {
+        "value": 291.667,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 58.2,
+          "y": 327.3,
+          "width": 603.9,
+          "height": 520.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 189.9,
+            "y": 410.9,
+            "width": 364.3,
+            "height": 413.6
+          },
+          "wheel_right": {
+            "x": 189.8,
+            "y": 347.6,
+            "width": 315.8,
+            "height": 350.1
+          },
+          "contact_left": {
+            "x": 352,
+            "y": 664,
+            "width": 41,
+            "height": 36.1
+          },
+          "contact_right": {
+            "x": 331.2,
+            "y": 567.1,
+            "width": 35.7,
+            "height": 30
+          },
+          "flange": {
+            "x": 185.8,
+            "y": 382.2,
+            "width": 367.3,
+            "height": 455.1
+          }
+        },
+        "partStates": {
+          "distance": 291.667,
+          "wheel_angle_deg": 36328.85,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "curveRadius": {
+        "value": 298.611,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 104.5,
+          "y": 342.6,
+          "width": 511.1,
+          "height": 473.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 145.2,
+            "y": 419.5,
+            "width": 281.9,
+            "height": 369.2
+          },
+          "wheel_right": {
+            "x": 304.4,
+            "y": 364.8,
+            "width": 260.1,
+            "height": 323.3
+          },
+          "contact_left": {
+            "x": 268.3,
+            "y": 656.1,
+            "width": 33.8,
+            "height": 32.5
+          },
+          "contact_right": {
+            "x": 411.8,
+            "y": 575.6,
+            "width": 30.1,
+            "height": 28.1
+          },
+          "flange": {
+            "x": 159.3,
+            "y": 392.7,
+            "width": 282.7,
+            "height": 409.2
+          }
+        },
+        "partStates": {
+          "distance": 298.611,
+          "wheel_angle_deg": 37193.82,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Inersia membuat roda melaju lurus",
+        "claimRef": "C2"
+      }
+    ]
+  }
+]

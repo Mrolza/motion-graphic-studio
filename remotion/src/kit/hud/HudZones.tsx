@@ -61,7 +61,7 @@ export const HudZone: React.FC<HudZoneProps> = ({
   children,
 }) => {
   const tokens = getThemeTokens(palette);
-  const rect = ZONE_RECTS[zone];
+  const rect = ZONE_RECTS[zone] ?? ZONE_RECTS.callout;
   return (
     <div
       style={{
@@ -83,6 +83,7 @@ export const HudZone: React.FC<HudZoneProps> = ({
 
 export interface TelemetryHudBoxProps {
   id: string;
+  hudId?: string;
   component: string;
   zone: HudZoneId;
   text: string;
@@ -98,6 +99,7 @@ export interface TelemetryHudBoxProps {
  */
 export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
   id,
+  hudId,
   component,
   zone,
   text,
@@ -118,6 +120,7 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
     const offsetY = rootRect ? rootRect.top : 0;
     telemetry.reportHud({
       id,
+      hud_id: hudId ?? id,
       component,
       zone,
       bbox: {

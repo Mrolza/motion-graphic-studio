@@ -1,10 +1,10 @@
-import { execFile } from 'node:child_process';
-import { promisify } from 'node:util';
-import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
 import type { QcIssue } from '@core/contracts/qc-report';
 import type { ScreenBox, TelemetrySample, VisualCheckSpec } from './types';
-
-const execFileAsync = promisify(execFile);
+export {
+  checkBlankFrames,
+  checkOnscreenTruthFromTelemetry,
+  checkSyncFromTelemetry,
+} from './media-checks';
 
 function intersectionArea(a: ScreenBox, b: ScreenBox): number {
   const x1 = Math.max(a.x, b.x);
@@ -72,6 +72,23 @@ export function checkMechanicsFromTelemetry(
           issues.push({
             severity: 'error',
             message: `MECHANICS_KINEMATICS: wheel_angle_deg=${angleDeg} != expected=${expectedDeg.toFixed(2)}`,
+            ref,
+          });
+        }
+      }
+    }
+
+    // Check phase-bound HUD items (when.driver_between)
+    const firstDriver = Object.values(sample.drivers)[0];
+    if (firstDriver && spec.expectedHud) {
+      for (const exp of spec.expectedHud) {
+        if (!exp.when?.driver_between) continue;
+        const [a, b] = exp.when.driver_between;
+        const shown = sample.hud.some((h) => (h.hud_id ?? h.id) === exp.hud_id);
+        if (shown && (firstDriver.value < a - 0.5 || firstDriver.value > b + 0.5)) {
+          issues.push({
+            severity: 'error',
+            message: `MECHANICS_HUD_OUT_OF_PHASE: HUD "${exp.hud_id}" tampil pada driver=${firstDriver.value} di luar rentang [${a},${b}]`,
             ref,
           });
         }
@@ -225,6 +242,17 @@ export function checkHudFormatFromTelemetry(samples: TelemetrySample[]): QcIssue
           });
         }
       }
+      if (/\b\d+\s*deg\b/i.test(h.text)) {
+        const key = `${h.id}:deg`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          issues.push({
+            severity: 'error',
+            message: `HUD_UNNORMALIZED_UNIT: "${h.id}" menampilkan satuan "deg" (gunakan "°" tanpa spasi) pada "${h.text}"`,
+            ref,
+          });
+        }
+      }
     }
   }
   return issues;
@@ -341,46 +369,6 @@ export function checkVisibilityFromTelemetry(
           });
         }
       }
-    }
-  }
-  return issues;
-}
-
-/**
- * Checks sampled PNG frames using FFmpeg rawvideo luminance mean and standard deviation.
- */
-export async function checkBlankFrames(framePngPaths: string[]): Promise<QcIssue[]> {
-  const issues: QcIssue[] = [];
-  const ffmpegBin = ffmpegInstaller.path;
-
-  for (const pngPath of framePngPaths) {
-    const { stdout } = await execFileAsync(
-      ffmpegBin,
-      ['-v', 'error', '-i', pngPath, '-vf', 'scale=90:160', '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1'],
-      { encoding: 'buffer', maxBuffer: 1024 * 1024 }
-    );
-    const buf = stdout as unknown as Buffer;
-    const pixelCount = Math.floor(buf.length / 3);
-    if (pixelCount === 0) {
-      issues.push({ severity: 'error', message: 'BLANK_FRAME: gagal membaca piksel frame', ref: pngPath });
-      continue;
-    }
-    let sum = 0;
-    let sumSq = 0;
-    for (let i = 0; i < pixelCount * 3; i += 3) {
-      const luma = 0.2126 * buf[i]! + 0.7152 * buf[i + 1]! + 0.0722 * buf[i + 2]!;
-      sum += luma;
-      sumSq += luma * luma;
-    }
-    const mean = sum / pixelCount;
-    const variance = Math.max(0, sumSq / pixelCount - mean * mean);
-    const std = Math.sqrt(variance);
-    if (mean < 4 || std < 2) {
-      issues.push({
-        severity: 'error',
-        message: `BLANK_FRAME: frame kosong/datar (meanLuma=${mean.toFixed(2)}, std=${std.toFixed(2)})`,
-        ref: pngPath,
-      });
     }
   }
   return issues;

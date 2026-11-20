@@ -105,3 +105,21 @@ export function formatIdNumber(value: number, decimals = 0): string {
     maximumFractionDigits: decimals,
   }).format(value);
 }
+
+/**
+ * Normalizes unit strings (e.g. "deg"/"derajat" -> "°") and formats value + unit in id-ID locale.
+ */
+export function normalizeUnit(unit?: string): string {
+  if (!unit) return '';
+  const u = unit.trim();
+  if (/^(deg|degree|degrees|derajat)$/i.test(u)) return '°';
+  return u;
+}
+
+export function formatValueWithUnit(value: number, unit?: string, decimals = 0): string {
+  const num = formatIdNumber(value, decimals);
+  const u = normalizeUnit(unit);
+  if (!u) return num;
+  if (u === '°' || u === '%') return `${num}${u}`;
+  return `${num} ${u}`;
+}

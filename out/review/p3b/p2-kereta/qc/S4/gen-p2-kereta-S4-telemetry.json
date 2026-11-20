@@ -1,0 +1,3098 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "lateralShift": {
+        "value": 5,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 118.2,
+          "y": 366.8,
+          "width": 491.4,
+          "height": 418.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 122.2,
+            "y": 421.2,
+            "width": 229.8,
+            "height": 312.3
+          },
+          "wheel_right": {
+            "x": 367.2,
+            "y": 400.3,
+            "width": 236.8,
+            "height": 296.9
+          },
+          "contact_left": {
+            "x": 221.6,
+            "y": 628.4,
+            "width": 34.2,
+            "height": 31.7
+          },
+          "contact_right": {
+            "x": 459.6,
+            "y": 598.7,
+            "width": 33.5,
+            "height": 30
+          },
+          "flange": {
+            "x": 147.9,
+            "y": 401.3,
+            "width": 218.5,
+            "height": 347.8
+          }
+        },
+        "partStates": {
+          "distance": 5,
+          "wheel_angle_deg": 622.78,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 5 mm",
+        "driverName": "lateralShift",
+        "numericValue": 5,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "lateralShift": {
+        "value": 5.282,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 94.9,
+          "y": 335.7,
+          "width": 544.4,
+          "height": 492.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 100.3,
+            "y": 391.3,
+            "width": 273.3,
+            "height": 375.1
+          },
+          "wheel_right": {
+            "x": 348,
+            "y": 373.4,
+            "width": 283.4,
+            "height": 358.3
+          },
+          "contact_left": {
+            "x": 220.5,
+            "y": 626.9,
+            "width": 34.6,
+            "height": 31.9
+          },
+          "contact_right": {
+            "x": 460.6,
+            "y": 599.9,
+            "width": 34.1,
+            "height": 30.3
+          },
+          "flange": {
+            "x": 122.8,
+            "y": 367,
+            "width": 270,
+            "height": 420.6
+          }
+        },
+        "partStates": {
+          "distance": 5.282,
+          "wheel_angle_deg": 657.89,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 5 mm",
+        "driverName": "lateralShift",
+        "numericValue": 5.282,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "lateralShift": {
+        "value": 5.564,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 93.3,
+          "y": 336.1,
+          "width": 548,
+          "height": 492.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 98,
+            "y": 390.6,
+            "width": 275.8,
+            "height": 373.5
+          },
+          "wheel_right": {
+            "x": 347.7,
+            "y": 374.8,
+            "width": 286.7,
+            "height": 358.7
+          },
+          "contact_left": {
+            "x": 219.5,
+            "y": 625.2,
+            "width": 34.9,
+            "height": 31.9
+          },
+          "contact_right": {
+            "x": 461.7,
+            "y": 601.4,
+            "width": 34.6,
+            "height": 30.5
+          },
+          "flange": {
+            "x": 120.5,
+            "y": 366.7,
+            "width": 272.8,
+            "height": 418.8
+          }
+        },
+        "partStates": {
+          "distance": 5.564,
+          "wheel_angle_deg": 693,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 6 mm",
+        "driverName": "lateralShift",
+        "numericValue": 5.564,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "lateralShift": {
+        "value": 5.846,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 111.8,
+          "y": 363.8,
+          "width": 506.8,
+          "height": 427.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 114.1,
+            "y": 414.8,
+            "width": 240.4,
+            "height": 316.2
+          },
+          "wheel_right": {
+            "x": 365,
+            "y": 401.1,
+            "width": 250.5,
+            "height": 305.7
+          },
+          "contact_left": {
+            "x": 218.6,
+            "y": 622.9,
+            "width": 35.1,
+            "height": 31.9
+          },
+          "contact_right": {
+            "x": 463,
+            "y": 603.3,
+            "width": 35.1,
+            "height": 30.8
+          },
+          "flange": {
+            "x": 139.3,
+            "y": 395.4,
+            "width": 230.6,
+            "height": 352.3
+          }
+        },
+        "partStates": {
+          "distance": 5.846,
+          "wheel_angle_deg": 728.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 6 mm",
+        "driverName": "lateralShift",
+        "numericValue": 5.846,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "lateralShift": {
+        "value": 6.128,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.9,
+          "y": 326.9,
+          "width": 567,
+          "height": 514.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 90.7,
+            "y": 378.2,
+            "width": 287.9,
+            "height": 390.8
+          },
+          "wheel_right": {
+            "x": 343.3,
+            "y": 369.2,
+            "width": 304.7,
+            "height": 381.6
+          },
+          "contact_left": {
+            "x": 217.8,
+            "y": 620,
+            "width": 35.1,
+            "height": 31.8
+          },
+          "contact_right": {
+            "x": 464.6,
+            "y": 606.1,
+            "width": 35.5,
+            "height": 31
+          },
+          "flange": {
+            "x": 112.2,
+            "y": 353.6,
+            "width": 287,
+            "height": 439.6
+          }
+        },
+        "partStates": {
+          "distance": 6.128,
+          "wheel_angle_deg": 763.22,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 6 mm",
+        "driverName": "lateralShift",
+        "numericValue": 6.128,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "lateralShift": {
+        "value": 6.409,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 110.6,
+          "y": 357.6,
+          "width": 516.7,
+          "height": 441.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 112.1,
+            "y": 403.4,
+            "width": 242.9,
+            "height": 327.2
+          },
+          "wheel_right": {
+            "x": 364.6,
+            "y": 399.1,
+            "width": 260.8,
+            "height": 323.7
+          },
+          "contact_left": {
+            "x": 217.7,
+            "y": 616.1,
+            "width": 34.6,
+            "height": 31.6
+          },
+          "contact_right": {
+            "x": 466.2,
+            "y": 609.9,
+            "width": 35.7,
+            "height": 31.2
+          },
+          "flange": {
+            "x": 136.8,
+            "y": 383.7,
+            "width": 234,
+            "height": 366.4
+          }
+        },
+        "partStates": {
+          "distance": 6.409,
+          "wheel_angle_deg": 798.33,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 6 mm",
+        "driverName": "lateralShift",
+        "numericValue": 6.409,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "lateralShift": {
+        "value": 6.691,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 106.3,
+          "y": 341.3,
+          "width": 535.1,
+          "height": 478.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 108.1,
+            "y": 384,
+            "width": 254.1,
+            "height": 359.2
+          },
+          "wheel_right": {
+            "x": 358,
+            "y": 386.7,
+            "width": 280.8,
+            "height": 361.6
+          },
+          "contact_left": {
+            "x": 218.9,
+            "y": 611.1,
+            "width": 33.7,
+            "height": 31
+          },
+          "contact_right": {
+            "x": 467.3,
+            "y": 615.1,
+            "width": 35.6,
+            "height": 31.3
+          },
+          "flange": {
+            "x": 131,
+            "y": 362.2,
+            "width": 248.8,
+            "height": 404.9
+          }
+        },
+        "partStates": {
+          "distance": 6.691,
+          "wheel_angle_deg": 833.45,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 7 mm",
+        "driverName": "lateralShift",
+        "numericValue": 6.691,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "lateralShift": {
+        "value": 6.973,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 115.2,
+          "y": 335.9,
+          "width": 526.7,
+          "height": 488.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 116.7,
+            "y": 373.5,
+            "width": 244.4,
+            "height": 368.3
+          },
+          "wheel_right": {
+            "x": 359,
+            "y": 384.7,
+            "width": 280.5,
+            "height": 379.2
+          },
+          "contact_left": {
+            "x": 222.8,
+            "y": 604.9,
+            "width": 31.9,
+            "height": 30.2
+          },
+          "contact_right": {
+            "x": 467,
+            "y": 622,
+            "width": 34.9,
+            "height": 31.1
+          },
+          "flange": {
+            "x": 138.6,
+            "y": 351.1,
+            "width": 239.6,
+            "height": 417.4
+          }
+        },
+        "partStates": {
+          "distance": 6.973,
+          "wheel_angle_deg": 868.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 7 mm",
+        "driverName": "lateralShift",
+        "numericValue": 6.973,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "lateralShift": {
+        "value": 7.255,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 156.3,
+          "y": 380.8,
+          "width": 440.8,
+          "height": 380.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 157.2,
+            "y": 406.9,
+            "width": 176.3,
+            "height": 278.5
+          },
+          "wheel_right": {
+            "x": 385.3,
+            "y": 430.8,
+            "width": 210.7,
+            "height": 294.5
+          },
+          "contact_left": {
+            "x": 231,
+            "y": 597.6,
+            "width": 28.9,
+            "height": 28.8
+          },
+          "contact_right": {
+            "x": 463.7,
+            "y": 630.8,
+            "width": 33.1,
+            "height": 30.6
+          },
+          "flange": {
+            "x": 181.5,
+            "y": 391.4,
+            "width": 162.1,
+            "height": 314.8
+          }
+        },
+        "partStates": {
+          "distance": 7.255,
+          "wheel_angle_deg": 903.67,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 7 mm",
+        "driverName": "lateralShift",
+        "numericValue": 7.255,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "lateralShift": {
+        "value": 7.537,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 118.1,
+          "y": 342.9,
+          "width": 481,
+          "height": 459.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 139.7,
+            "y": 364.6,
+            "width": 211,
+            "height": 349.6
+          },
+          "wheel_right": {
+            "x": 371.6,
+            "y": 399.1,
+            "width": 225.9,
+            "height": 380.5
+          },
+          "contact_left": {
+            "x": 244.2,
+            "y": 589.6,
+            "width": 27.4,
+            "height": 26.9
+          },
+          "contact_right": {
+            "x": 455.1,
+            "y": 641.5,
+            "width": 29.3,
+            "height": 29.5
+          },
+          "flange": {
+            "x": 159.5,
+            "y": 343.2,
+            "width": 201.1,
+            "height": 401.1
+          }
+        },
+        "partStates": {
+          "distance": 7.537,
+          "wheel_angle_deg": 938.78,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 8 mm",
+        "driverName": "lateralShift",
+        "numericValue": 7.537,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "lateralShift": {
+        "value": 7.819,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 98.3,
+          "y": 355.6,
+          "width": 484.5,
+          "height": 440.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 151.1,
+            "y": 374.3,
+            "width": 231.9,
+            "height": 314.3
+          },
+          "wheel_right": {
+            "x": 331.6,
+            "y": 422.3,
+            "width": 236.1,
+            "height": 353.6
+          },
+          "contact_left": {
+            "x": 261.3,
+            "y": 580.3,
+            "width": 31.4,
+            "height": 28.4
+          },
+          "contact_right": {
+            "x": 435.1,
+            "y": 650.2,
+            "width": 32.6,
+            "height": 32.2
+          },
+          "flange": {
+            "x": 166.5,
+            "y": 357.8,
+            "width": 225.2,
+            "height": 357.7
+          }
+        },
+        "partStates": {
+          "distance": 7.819,
+          "wheel_angle_deg": 973.89,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 8 mm",
+        "driverName": "lateralShift",
+        "numericValue": 7.819,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "lateralShift": {
+        "value": 8.101,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 76.8,
+          "y": 345.9,
+          "width": 535.2,
+          "height": 468.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 155.8,
+            "y": 364.9,
+            "width": 264.3,
+            "height": 324.9
+          },
+          "wheel_right": {
+            "x": 286.1,
+            "y": 420.2,
+            "width": 285.7,
+            "height": 373.7
+          },
+          "contact_left": {
+            "x": 279.5,
+            "y": 574.3,
+            "width": 33.6,
+            "height": 29.2
+          },
+          "contact_right": {
+            "x": 413,
+            "y": 656.3,
+            "width": 36.6,
+            "height": 34.1
+          },
+          "flange": {
+            "x": 165.2,
+            "y": 348.8,
+            "width": 263.2,
+            "height": 368.7
+          }
+        },
+        "partStates": {
+          "distance": 8.101,
+          "wheel_angle_deg": 1009,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 8 mm",
+        "driverName": "lateralShift",
+        "numericValue": 8.101,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "lateralShift": {
+        "value": 8.383,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 54.4,
+          "y": 326.9,
+          "width": 586.6,
+          "height": 517.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 154.3,
+            "y": 347.7,
+            "width": 303.9,
+            "height": 356.5
+          },
+          "wheel_right": {
+            "x": 240,
+            "y": 405.8,
+            "width": 339.6,
+            "height": 415.5
+          },
+          "contact_left": {
+            "x": 296,
+            "y": 570.7,
+            "width": 34.8,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 393.3,
+            "y": 660.1,
+            "width": 39,
+            "height": 35.1
+          },
+          "flange": {
+            "x": 157.2,
+            "y": 329.8,
+            "width": 310.3,
+            "height": 405.2
+          }
+        },
+        "partStates": {
+          "distance": 8.383,
+          "wheel_angle_deg": 1044.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 8 mm",
+        "driverName": "lateralShift",
+        "numericValue": 8.383,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "lateralShift": {
+        "value": 8.665,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 96.7,
+          "y": 374.1,
+          "width": 516.5,
+          "height": 408.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 205.3,
+            "y": 389.1,
+            "width": 238.4,
+            "height": 262.6
+          },
+          "wheel_right": {
+            "x": 260.8,
+            "y": 456.5,
+            "width": 270.9,
+            "height": 308.9
+          },
+          "contact_left": {
+            "x": 309.9,
+            "y": 568.7,
+            "width": 35.4,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 376.8,
+            "y": 662.3,
+            "width": 40.2,
+            "height": 35.7
+          },
+          "flange": {
+            "x": 212.4,
+            "y": 379.3,
+            "width": 233.1,
+            "height": 294.1
+          }
+        },
+        "partStates": {
+          "distance": 8.665,
+          "wheel_angle_deg": 1079.22,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 9 mm",
+        "driverName": "lateralShift",
+        "numericValue": 8.665,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "lateralShift": {
+        "value": 8.946,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 52.8,
+          "y": 325.5,
+          "width": 605.6,
+          "height": 524.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 177.3,
+            "y": 346.1,
+            "width": 316.8,
+            "height": 354.7
+          },
+          "wheel_right": {
+            "x": 200.9,
+            "y": 408.3,
+            "width": 363.7,
+            "height": 418.2
+          },
+          "contact_left": {
+            "x": 321,
+            "y": 567.7,
+            "width": 35.7,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 363.8,
+            "y": 663.4,
+            "width": 40.7,
+            "height": 36
+          },
+          "flange": {
+            "x": 175.2,
+            "y": 328.9,
+            "width": 326.2,
+            "height": 402.4
+          }
+        },
+        "partStates": {
+          "distance": 8.946,
+          "wheel_angle_deg": 1114.33,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 9 mm",
+        "driverName": "lateralShift",
+        "numericValue": 8.946,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "lateralShift": {
+        "value": 9.228,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 65.5,
+          "y": 338,
+          "width": 585.3,
+          "height": 494.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 196.6,
+            "y": 357.1,
+            "width": 298.4,
+            "height": 329.5
+          },
+          "wheel_right": {
+            "x": 201.8,
+            "y": 421.8,
+            "width": 343.9,
+            "height": 389.4
+          },
+          "contact_left": {
+            "x": 329.6,
+            "y": 567.2,
+            "width": 35.8,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 353.8,
+            "y": 664,
+            "width": 41,
+            "height": 36.1
+          },
+          "flange": {
+            "x": 195.2,
+            "y": 342,
+            "width": 304.5,
+            "height": 372.6
+          }
+        },
+        "partStates": {
+          "distance": 9.228,
+          "wheel_angle_deg": 1149.44,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 9 mm",
+        "driverName": "lateralShift",
+        "numericValue": 9.228,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "lateralShift": {
+        "value": 9.51,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 73.9,
+          "y": 346.5,
+          "width": 571,
+          "height": 474.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 210.5,
+            "y": 364.6,
+            "width": 285.4,
+            "height": 312.8
+          },
+          "wheel_right": {
+            "x": 202,
+            "y": 430.7,
+            "width": 329.5,
+            "height": 370
+          },
+          "contact_left": {
+            "x": 336,
+            "y": 567,
+            "width": 35.9,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 346.4,
+            "y": 664.2,
+            "width": 41.1,
+            "height": 36.2
+          },
+          "flange": {
+            "x": 209.4,
+            "y": 350.9,
+            "width": 289.2,
+            "height": 352.9
+          }
+        },
+        "partStates": {
+          "distance": 9.51,
+          "wheel_angle_deg": 1184.56,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 10 mm",
+        "driverName": "lateralShift",
+        "numericValue": 9.51,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "lateralShift": {
+        "value": 9.792,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 52.3,
+          "y": 322.5,
+          "width": 614.9,
+          "height": 532.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 196.4,
+            "y": 343.3,
+            "width": 324.3,
+            "height": 359.4
+          },
+          "wheel_right": {
+            "x": 174,
+            "y": 406.2,
+            "width": 374.7,
+            "height": 424.9
+          },
+          "contact_left": {
+            "x": 340.8,
+            "y": 566.9,
+            "width": 35.9,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 340.9,
+            "y": 664.3,
+            "width": 41.2,
+            "height": 36.2
+          },
+          "flange": {
+            "x": 191.1,
+            "y": 325.9,
+            "width": 335.2,
+            "height": 407.8
+          }
+        },
+        "partStates": {
+          "distance": 9.792,
+          "wheel_angle_deg": 1219.67,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 10 mm",
+        "driverName": "lateralShift",
+        "numericValue": 9.792,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "lateralShift": {
+        "value": 10.074,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 89.2,
+          "y": 363.3,
+          "width": 541.3,
+          "height": 434.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 233.3,
+            "y": 379.4,
+            "width": 259,
+            "height": 280.4
+          },
+          "wheel_right": {
+            "x": 207.7,
+            "y": 448,
+            "width": 298.9,
+            "height": 332
+          },
+          "contact_left": {
+            "x": 344.6,
+            "y": 566.9,
+            "width": 35.9,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 336.5,
+            "y": 664.2,
+            "width": 41.1,
+            "height": 36.2
+          },
+          "flange": {
+            "x": 233.5,
+            "y": 368.4,
+            "width": 257.9,
+            "height": 314.7
+          }
+        },
+        "partStates": {
+          "distance": 10.074,
+          "wheel_angle_deg": 1254.78,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 10 mm",
+        "driverName": "lateralShift",
+        "numericValue": 10.074,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "lateralShift": {
+        "value": 10.356,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 57.9,
+          "y": 328.1,
+          "width": 604,
+          "height": 518.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 209.1,
+            "y": 348.3,
+            "width": 315,
+            "height": 348.4
+          },
+          "wheel_right": {
+            "x": 171.6,
+            "y": 411.9,
+            "width": 363.8,
+            "height": 411.9
+          },
+          "contact_left": {
+            "x": 348,
+            "y": 567,
+            "width": 35.8,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 332.7,
+            "y": 664.2,
+            "width": 41.1,
+            "height": 36.2
+          },
+          "flange": {
+            "x": 203.9,
+            "y": 331.8,
+            "width": 324.3,
+            "height": 394.9
+          }
+        },
+        "partStates": {
+          "distance": 10.356,
+          "wheel_angle_deg": 1289.89,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 10 mm",
+        "driverName": "lateralShift",
+        "numericValue": 10.356,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "lateralShift": {
+        "value": 10.638,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 62.5,
+          "y": 332.8,
+          "width": 594.6,
+          "height": 507
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 216.7,
+            "y": 352.5,
+            "width": 307.1,
+            "height": 339.4
+          },
+          "wheel_right": {
+            "x": 172.6,
+            "y": 416.6,
+            "width": 354.4,
+            "height": 401.1
+          },
+          "contact_left": {
+            "x": 351.3,
+            "y": 567.1,
+            "width": 35.8,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 329,
+            "y": 664.1,
+            "width": 41,
+            "height": 36.1
+          },
+          "flange": {
+            "x": 211.8,
+            "y": 336.6,
+            "width": 315,
+            "height": 384.2
+          }
+        },
+        "partStates": {
+          "distance": 10.638,
+          "wheel_angle_deg": 1325,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 11 mm",
+        "driverName": "lateralShift",
+        "numericValue": 10.638,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "lateralShift": {
+        "value": 10.92,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 82.1,
+          "y": 354.3,
+          "width": 554.8,
+          "height": 455.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 237.5,
+            "y": 371.5,
+            "width": 272.4,
+            "height": 297.9
+          },
+          "wheel_right": {
+            "x": 189,
+            "y": 438.5,
+            "width": 314,
+            "height": 352.2
+          },
+          "contact_left": {
+            "x": 354.6,
+            "y": 567.2,
+            "width": 35.7,
+            "height": 30
+          },
+          "contact_right": {
+            "x": 325.3,
+            "y": 664,
+            "width": 40.9,
+            "height": 36.1
+          },
+          "flange": {
+            "x": 235.2,
+            "y": 359,
+            "width": 274.1,
+            "height": 335.4
+          }
+        },
+        "partStates": {
+          "distance": 10.92,
+          "wheel_angle_deg": 1360.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 11 mm",
+        "driverName": "lateralShift",
+        "numericValue": 10.92,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "lateralShift": {
+        "value": 11.202,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 54.6,
+          "y": 322.4,
+          "width": 610.4,
+          "height": 531.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 216.5,
+            "y": 343.4,
+            "width": 322.8,
+            "height": 359.8
+          },
+          "wheel_right": {
+            "x": 156.8,
+            "y": 405.7,
+            "width": 371.9,
+            "height": 424.6
+          },
+          "contact_left": {
+            "x": 357.9,
+            "y": 567.4,
+            "width": 35.6,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 321.6,
+            "y": 663.8,
+            "width": 40.8,
+            "height": 36
+          },
+          "flange": {
+            "x": 209.2,
+            "y": 325.9,
+            "width": 333.9,
+            "height": 408.3
+          }
+        },
+        "partStates": {
+          "distance": 11.202,
+          "wheel_angle_deg": 1395.22,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 11 mm",
+        "driverName": "lateralShift",
+        "numericValue": 11.202,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "lateralShift": {
+        "value": 11.483,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 84.6,
+          "y": 355.6,
+          "width": 549.1,
+          "height": 452.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 246.2,
+            "y": 372.7,
+            "width": 269.5,
+            "height": 295.9
+          },
+          "wheel_right": {
+            "x": 183.7,
+            "y": 439.4,
+            "width": 309.7,
+            "height": 349.2
+          },
+          "contact_left": {
+            "x": 361.3,
+            "y": 567.6,
+            "width": 35.4,
+            "height": 29.9
+          },
+          "contact_right": {
+            "x": 318,
+            "y": 663.6,
+            "width": 40.6,
+            "height": 35.9
+          },
+          "flange": {
+            "x": 243.2,
+            "y": 360.3,
+            "width": 270.9,
+            "height": 333
+          }
+        },
+        "partStates": {
+          "distance": 11.483,
+          "wheel_angle_deg": 1430.33,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 11 mm",
+        "driverName": "lateralShift",
+        "numericValue": 11.483,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "lateralShift": {
+        "value": 11.765,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 66.3,
+          "y": 333.3,
+          "width": 586.4,
+          "height": 504.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 233,
+            "y": 353,
+            "width": 304,
+            "height": 339.1
+          },
+          "wheel_right": {
+            "x": 160.9,
+            "y": 416.3,
+            "width": 349,
+            "height": 399.6
+          },
+          "contact_left": {
+            "x": 364.6,
+            "y": 567.8,
+            "width": 35.3,
+            "height": 29.8
+          },
+          "contact_right": {
+            "x": 314.4,
+            "y": 663.4,
+            "width": 40.4,
+            "height": 35.8
+          },
+          "flange": {
+            "x": 226.5,
+            "y": 337,
+            "width": 312,
+            "height": 384.1
+          }
+        },
+        "partStates": {
+          "distance": 11.765,
+          "wheel_angle_deg": 1465.44,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 12 mm",
+        "driverName": "lateralShift",
+        "numericValue": 11.765,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "lateralShift": {
+        "value": 12.047,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 64.7,
+          "y": 329.9,
+          "width": 589.6,
+          "height": 512.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 234.5,
+            "y": 350.1,
+            "width": 308.4,
+            "height": 345.9
+          },
+          "wheel_right": {
+            "x": 155.2,
+            "y": 412.5,
+            "width": 353.4,
+            "height": 407.1
+          },
+          "contact_left": {
+            "x": 367.9,
+            "y": 568.1,
+            "width": 35.1,
+            "height": 29.8
+          },
+          "contact_right": {
+            "x": 310.8,
+            "y": 663.1,
+            "width": 40.1,
+            "height": 35.7
+          },
+          "flange": {
+            "x": 227.2,
+            "y": 333.5,
+            "width": 317.5,
+            "height": 392.1
+          }
+        },
+        "partStates": {
+          "distance": 12.047,
+          "wheel_angle_deg": 1500.55,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 12 mm",
+        "driverName": "lateralShift",
+        "numericValue": 12.047,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "lateralShift": {
+        "value": 12.329,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 95.3,
+          "y": 364.3,
+          "width": 526.4,
+          "height": 430.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 264.5,
+            "y": 380.5,
+            "width": 253.7,
+            "height": 280.1
+          },
+          "wheel_right": {
+            "x": 182.5,
+            "y": 447.2,
+            "width": 289.9,
+            "height": 329.5
+          },
+          "contact_left": {
+            "x": 371.2,
+            "y": 568.4,
+            "width": 34.9,
+            "height": 29.7
+          },
+          "contact_right": {
+            "x": 307.3,
+            "y": 662.8,
+            "width": 39.9,
+            "height": 35.5
+          },
+          "flange": {
+            "x": 261.3,
+            "y": 369.2,
+            "width": 253,
+            "height": 314.6
+          }
+        },
+        "partStates": {
+          "distance": 12.329,
+          "wheel_angle_deg": 1535.66,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 12 mm",
+        "driverName": "lateralShift",
+        "numericValue": 12.329,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "lateralShift": {
+        "value": 12.611,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 63,
+          "y": 324.5,
+          "width": 593.4,
+          "height": 524
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 239.1,
+            "y": 345.7,
+            "width": 314.3,
+            "height": 356.5
+          },
+          "wheel_right": {
+            "x": 145.8,
+            "y": 406.5,
+            "width": 358.4,
+            "height": 418.2
+          },
+          "contact_left": {
+            "x": 374.6,
+            "y": 568.8,
+            "width": 34.7,
+            "height": 29.6
+          },
+          "contact_right": {
+            "x": 303.8,
+            "y": 662.5,
+            "width": 39.6,
+            "height": 35.4
+          },
+          "flange": {
+            "x": 230.2,
+            "y": 328,
+            "width": 325.1,
+            "height": 404.7
+          }
+        },
+        "partStates": {
+          "distance": 12.611,
+          "wheel_angle_deg": 1570.78,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 13 mm",
+        "driverName": "lateralShift",
+        "numericValue": 12.611,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "lateralShift": {
+        "value": 12.893,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 86.7,
+          "y": 350,
+          "width": 544,
+          "height": 463.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 262,
+            "y": 368,
+            "width": 273.6,
+            "height": 308.1
+          },
+          "wheel_right": {
+            "x": 165.1,
+            "y": 431.8,
+            "width": 311,
+            "height": 361.2
+          },
+          "contact_left": {
+            "x": 377.9,
+            "y": 569.2,
+            "width": 34.4,
+            "height": 29.5
+          },
+          "contact_right": {
+            "x": 300.4,
+            "y": 662.1,
+            "width": 39.2,
+            "height": 35.2
+          },
+          "flange": {
+            "x": 256,
+            "y": 354.3,
+            "width": 277.2,
+            "height": 347.8
+          }
+        },
+        "partStates": {
+          "distance": 12.893,
+          "wheel_angle_deg": 1605.89,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 13 mm",
+        "driverName": "lateralShift",
+        "numericValue": 12.893,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "lateralShift": {
+        "value": 13.175,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 79.8,
+          "y": 340.3,
+          "width": 558.6,
+          "height": 485.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 259.4,
+            "y": 359.9,
+            "width": 286.6,
+            "height": 326.4
+          },
+          "wheel_right": {
+            "x": 155,
+            "y": 421.8,
+            "width": 324.9,
+            "height": 381.8
+          },
+          "contact_left": {
+            "x": 381.2,
+            "y": 569.6,
+            "width": 34.1,
+            "height": 29.4
+          },
+          "contact_right": {
+            "x": 297,
+            "y": 661.7,
+            "width": 38.9,
+            "height": 35
+          },
+          "flange": {
+            "x": 251.7,
+            "y": 344.5,
+            "width": 293.1,
+            "height": 369.4
+          }
+        },
+        "partStates": {
+          "distance": 13.175,
+          "wheel_angle_deg": 1641,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 13 mm",
+        "driverName": "lateralShift",
+        "numericValue": 13.175,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "lateralShift": {
+        "value": 13.457,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 71.1,
+          "y": 328.5,
+          "width": 577.6,
+          "height": 513.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 255.4,
+            "y": 349.9,
+            "width": 302.7,
+            "height": 348.8
+          },
+          "wheel_right": {
+            "x": 143.5,
+            "y": 409.7,
+            "width": 341.9,
+            "height": 407.1
+          },
+          "contact_left": {
+            "x": 384.5,
+            "y": 570.1,
+            "width": 33.8,
+            "height": 29.3
+          },
+          "contact_right": {
+            "x": 293.7,
+            "y": 661.2,
+            "width": 38.5,
+            "height": 34.8
+          },
+          "flange": {
+            "x": 245.9,
+            "y": 332.6,
+            "width": 312.5,
+            "height": 395.9
+          }
+        },
+        "partStates": {
+          "distance": 13.457,
+          "wheel_angle_deg": 1676.11,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 13 mm",
+        "driverName": "lateralShift",
+        "numericValue": 13.457,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "lateralShift": {
+        "value": 13.739,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 113.6,
+          "y": 376.2,
+          "width": 487.8,
+          "height": 400.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 293.1,
+            "y": 391.4,
+            "width": 230.2,
+            "height": 259.7
+          },
+          "wheel_right": {
+            "x": 179.8,
+            "y": 456.7,
+            "width": 259.3,
+            "height": 302.9
+          },
+          "contact_left": {
+            "x": 387.7,
+            "y": 570.6,
+            "width": 33.5,
+            "height": 29.2
+          },
+          "contact_right": {
+            "x": 290.5,
+            "y": 660.8,
+            "width": 38,
+            "height": 34.6
+          },
+          "flange": {
+            "x": 288.8,
+            "y": 381.4,
+            "width": 227.3,
+            "height": 291
+          }
+        },
+        "partStates": {
+          "distance": 13.739,
+          "wheel_angle_deg": 1711.22,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 14 mm",
+        "driverName": "lateralShift",
+        "numericValue": 13.739,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "lateralShift": {
+        "value": 14.02,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 74.8,
+          "y": 328.1,
+          "width": 570.8,
+          "height": 512.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 264.3,
+            "y": 350.1,
+            "width": 298.8,
+            "height": 349.6
+          },
+          "wheel_right": {
+            "x": 140.3,
+            "y": 408.6,
+            "width": 335,
+            "height": 406.2
+          },
+          "contact_left": {
+            "x": 391,
+            "y": 571.1,
+            "width": 33.1,
+            "height": 29.1
+          },
+          "contact_right": {
+            "x": 287.3,
+            "y": 660.2,
+            "width": 37.6,
+            "height": 34.4
+          },
+          "flange": {
+            "x": 253.9,
+            "y": 332.5,
+            "width": 309,
+            "height": 397
+          }
+        },
+        "partStates": {
+          "distance": 14.02,
+          "wheel_angle_deg": 1746.33,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 14 mm",
+        "driverName": "lateralShift",
+        "numericValue": 14.02,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "lateralShift": {
+        "value": 14.302,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 91.6,
+          "y": 345.5,
+          "width": 535.2,
+          "height": 471
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 280.8,
+            "y": 365.5,
+            "width": 270.9,
+            "height": 317
+          },
+          "wheel_right": {
+            "x": 152.5,
+            "y": 425.4,
+            "width": 302.4,
+            "height": 367.6
+          },
+          "contact_left": {
+            "x": 394.2,
+            "y": 571.7,
+            "width": 32.7,
+            "height": 29
+          },
+          "contact_right": {
+            "x": 284.2,
+            "y": 659.7,
+            "width": 37.1,
+            "height": 34.1
+          },
+          "flange": {
+            "x": 272,
+            "y": 350.4,
+            "width": 276.4,
+            "height": 358.7
+          }
+        },
+        "partStates": {
+          "distance": 14.302,
+          "wheel_angle_deg": 1781.44,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 14 mm",
+        "driverName": "lateralShift",
+        "numericValue": 14.302,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "lateralShift": {
+        "value": 14.584,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 96.8,
+          "y": 349,
+          "width": 524.6,
+          "height": 462.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 287.6,
+            "y": 368.8,
+            "width": 263.5,
+            "height": 310.6
+          },
+          "wheel_right": {
+            "x": 153.8,
+            "y": 428.4,
+            "width": 292.9,
+            "height": 359.3
+          },
+          "contact_left": {
+            "x": 397.4,
+            "y": 572.3,
+            "width": 32.3,
+            "height": 28.8
+          },
+          "contact_right": {
+            "x": 281.2,
+            "y": 659.1,
+            "width": 36.6,
+            "height": 33.9
+          },
+          "flange": {
+            "x": 278.8,
+            "y": 354.1,
+            "width": 268.3,
+            "height": 351.3
+          }
+        },
+        "partStates": {
+          "distance": 14.584,
+          "wheel_angle_deg": 1816.55,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 15 mm",
+        "driverName": "lateralShift",
+        "numericValue": 14.584,
+        "claimRef": "C3"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "lateralShift": {
+        "value": 14.866,
+        "unit": "mm"
+      }
+    },
+    "entities": [
+      {
+        "id": "wheelset",
+        "role": "focus",
+        "bbox": {
+          "x": 83,
+          "y": 329,
+          "width": 555.1,
+          "height": 508.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 279,
+            "y": 351.9,
+            "width": 289.8,
+            "height": 348
+          },
+          "wheel_right": {
+            "x": 137.8,
+            "y": 408.2,
+            "width": 320.3,
+            "height": 401.4
+          },
+          "contact_left": {
+            "x": 400.6,
+            "y": 573,
+            "width": 31.9,
+            "height": 28.7
+          },
+          "contact_right": {
+            "x": 278.2,
+            "y": 658.5,
+            "width": 36,
+            "height": 33.6
+          },
+          "flange": {
+            "x": 267.5,
+            "y": 333.9,
+            "width": 300,
+            "height": 395.5
+          }
+        },
+        "partStates": {
+          "distance": 14.866,
+          "wheel_angle_deg": 1851.66,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S4_H1",
+        "hud_id": "S4_H1",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Diameter Efektif: 15 mm",
+        "driverName": "lateralShift",
+        "numericValue": 14.866,
+        "claimRef": "C3"
+      }
+    ]
+  }
+]

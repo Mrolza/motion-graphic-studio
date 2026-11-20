@@ -1,0 +1,65 @@
+{
+  "compositionId": "gen-p2-kereta-S5",
+  "passed": true,
+  "sampleCount": 17,
+  "renderMs": 6979,
+  "reports": {
+    "mechanics": {
+      "layer": "L5",
+      "issues": []
+    },
+    "geometry": {
+      "layer": "L5",
+      "issues": []
+    },
+    "visibility": {
+      "layer": "L5",
+      "issues": []
+    },
+    "framing": {
+      "layer": "L5",
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 19% zona bebas (< 20%)",
+          "ref": "f56 (1.87s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 15% zona bebas (< 20%)",
+          "ref": "f64 (2.13s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 11% zona bebas (< 20%)",
+          "ref": "f72 (2.40s)"
+        },
+        {
+          "severity": "warning",
+          "message": "FRAMING_TOO_SMALL: \"train_car\" hanya mengisi 16% zona bebas (< 20%)",
+          "ref": "f80 (2.67s)"
+        }
+      ]
+    },
+    "hudOverlap": {
+      "layer": "L5",
+      "issues": []
+    },
+    "hudFormat": {
+      "layer": "L5",
+      "issues": []
+    },
+    "onscreenTruth": {
+      "layer": "L5",
+      "issues": []
+    },
+    "sync": {
+      "layer": "L5",
+      "issues": []
+    },
+    "blank": {
+      "layer": "L5",
+      "issues": []
+    }
+  }
+}

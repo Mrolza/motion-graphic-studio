@@ -1,0 +1,3970 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 0,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 211.7,
+          "y": 218.6,
+          "width": 283.5,
+          "height": 591.8
+        },
+        "parts": {
+          "piston": {
+            "x": 246,
+            "y": 364,
+            "width": 220.1,
+            "height": 114.7
+          },
+          "crank": {
+            "x": 314.4,
+            "y": 618.1,
+            "width": 90.2,
+            "height": 153
+          },
+          "intake_valve": {
+            "x": 271.7,
+            "y": 227.5,
+            "width": 83.3,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 365.2,
+            "y": 230.1,
+            "width": 81.9,
+            "height": 102.3
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 231.8,
+            "width": 27.5,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 0,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 170.5,
+          "y": 215.4,
+          "width": 359.2,
+          "height": 609.2
+        },
+        "parts": {
+          "block": {
+            "x": 174.4,
+            "y": 306,
+            "width": 352,
+            "height": 419.2
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 0°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 0,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 22.535,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 211.7,
+          "y": 218.6,
+          "width": 283.5,
+          "height": 603
+        },
+        "parts": {
+          "piston": {
+            "x": 246.2,
+            "y": 372.4,
+            "width": 219.7,
+            "height": 115.4
+          },
+          "crank": {
+            "x": 303,
+            "y": 618.4,
+            "width": 114.1,
+            "height": 164.7
+          },
+          "intake_valve": {
+            "x": 272,
+            "y": 244.5,
+            "width": 83,
+            "height": 100.9
+          },
+          "exhaust_valve": {
+            "x": 365.2,
+            "y": 230.1,
+            "width": 81.9,
+            "height": 102.3
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 231.8,
+            "width": 27.5,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 22.54,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.393
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 170.5,
+          "y": 215.4,
+          "width": 359.2,
+          "height": 620.5
+        },
+        "parts": {
+          "block": {
+            "x": 174.4,
+            "y": 306,
+            "width": 352.1,
+            "height": 419.2
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.03
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 23°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 22.535,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 45.07,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 211.7,
+          "y": 218.6,
+          "width": 283.6,
+          "height": 606.9
+        },
+        "parts": {
+          "piston": {
+            "x": 246.8,
+            "y": 395.1,
+            "width": 218.7,
+            "height": 117.4
+          },
+          "crank": {
+            "x": 299.2,
+            "y": 632.7,
+            "width": 144.8,
+            "height": 157.2
+          },
+          "intake_valve": {
+            "x": 272.3,
+            "y": 258.9,
+            "width": 82.8,
+            "height": 101
+          },
+          "exhaust_valve": {
+            "x": 365.2,
+            "y": 230.2,
+            "width": 82,
+            "height": 102.3
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 231.8,
+            "width": 27.5,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 45.07,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.235
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 170.4,
+          "y": 215.4,
+          "width": 359.4,
+          "height": 624.5
+        },
+        "parts": {
+          "block": {
+            "x": 174.4,
+            "y": 305.9,
+            "width": 352.2,
+            "height": 419.3
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.06
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 45°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 45.07,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 67.606,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 211.5,
+          "y": 218.5,
+          "width": 284,
+          "height": 603.1
+        },
+        "parts": {
+          "piston": {
+            "x": 247.4,
+            "y": 426.3,
+            "width": 217.5,
+            "height": 120.2
+          },
+          "crank": {
+            "x": 303.5,
+            "y": 658.6,
+            "width": 155.4,
+            "height": 129.4
+          },
+          "intake_valve": {
+            "x": 272.4,
+            "y": 268.4,
+            "width": 82.7,
+            "height": 101.1
+          },
+          "exhaust_valve": {
+            "x": 365.1,
+            "y": 230.2,
+            "width": 82.1,
+            "height": 102.4
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 231.8,
+            "width": 27.6,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 67.61,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.017
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 170.2,
+          "y": 215.4,
+          "width": 359.9,
+          "height": 620.7
+        },
+        "parts": {
+          "block": {
+            "x": 174.2,
+            "y": 305.9,
+            "width": 352.7,
+            "height": 419.4
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.09
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 68°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 67.606,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 90.141,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 211.2,
+          "y": 218.5,
+          "width": 284.8,
+          "height": 592.3
+        },
+        "parts": {
+          "piston": {
+            "x": 248,
+            "y": 458.3,
+            "width": 216.5,
+            "height": 123.1
+          },
+          "crank": {
+            "x": 314.7,
+            "y": 671.1,
+            "width": 145.3,
+            "height": 106.6
+          },
+          "intake_valve": {
+            "x": 272.5,
+            "y": 271.6,
+            "width": 82.8,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 364.9,
+            "y": 230.2,
+            "width": 82.4,
+            "height": 102.4
+          },
+          "spark_plug": {
+            "x": 346.1,
+            "y": 231.8,
+            "width": 27.6,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 90.14,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.79
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 169.8,
+          "y": 215.3,
+          "width": 360.8,
+          "height": 609.8
+        },
+        "parts": {
+          "block": {
+            "x": 173.8,
+            "y": 305.8,
+            "width": 353.6,
+            "height": 419.7
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.13
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 90°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 90.141,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 112.676,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 210.6,
+          "y": 218.4,
+          "width": 286,
+          "height": 605
+        },
+        "parts": {
+          "piston": {
+            "x": 248.3,
+            "y": 485.2,
+            "width": 216.2,
+            "height": 125.7
+          },
+          "crank": {
+            "x": 303.3,
+            "y": 659.3,
+            "width": 155.6,
+            "height": 130.5
+          },
+          "intake_valve": {
+            "x": 272.4,
+            "y": 268.2,
+            "width": 83.2,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 364.7,
+            "y": 230.2,
+            "width": 82.8,
+            "height": 102.5
+          },
+          "spark_plug": {
+            "x": 346.1,
+            "y": 231.8,
+            "width": 27.8,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 112.68,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.596
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 169.1,
+          "y": 215.3,
+          "width": 362.3,
+          "height": 622.8
+        },
+        "parts": {
+          "block": {
+            "x": 173.1,
+            "y": 305.7,
+            "width": 355,
+            "height": 420.1
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.16
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 113°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 112.676,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 135.211,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 209.8,
+          "y": 218.4,
+          "width": 287.8,
+          "height": 631.7
+        },
+        "parts": {
+          "piston": {
+            "x": 248.1,
+            "y": 504.3,
+            "width": 216.6,
+            "height": 127.7
+          },
+          "crank": {
+            "x": 299.2,
+            "y": 655.1,
+            "width": 144.4,
+            "height": 158.4
+          },
+          "intake_valve": {
+            "x": 272.1,
+            "y": 258.5,
+            "width": 83.8,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 364.2,
+            "y": 230.2,
+            "width": 83.3,
+            "height": 102.6
+          },
+          "spark_plug": {
+            "x": 346,
+            "y": 231.8,
+            "width": 27.9,
+            "height": 89.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 135.21,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.457
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 168.2,
+          "y": 215.2,
+          "width": 364.4,
+          "height": 650.1
+        },
+        "parts": {
+          "block": {
+            "x": 172.2,
+            "y": 305.6,
+            "width": 357.1,
+            "height": 420.7
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.19
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 135°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 135.211,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 157.746,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 208.7,
+          "y": 218.2,
+          "width": 290.3,
+          "height": 647.1
+        },
+        "parts": {
+          "piston": {
+            "x": 247.6,
+            "y": 515.2,
+            "width": 217.9,
+            "height": 129.2
+          },
+          "crank": {
+            "x": 303,
+            "y": 659.1,
+            "width": 113.9,
+            "height": 165.3
+          },
+          "intake_valve": {
+            "x": 271.8,
+            "y": 244,
+            "width": 84.7,
+            "height": 101.1
+          },
+          "exhaust_valve": {
+            "x": 363.6,
+            "y": 230.3,
+            "width": 84.1,
+            "height": 102.7
+          },
+          "spark_plug": {
+            "x": 345.9,
+            "y": 231.8,
+            "width": 28.2,
+            "height": 89.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 157.75,
+          "stroke_phase": "hisap",
+          "intake_valve": "open",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.376
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 167,
+          "y": 215,
+          "width": 367.3,
+          "height": 665.9
+        },
+        "parts": {
+          "block": {
+            "x": 171,
+            "y": 305.3,
+            "width": 360,
+            "height": 421.6
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.22
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 158°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 157.746,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 180.282,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 207.3,
+          "y": 218.1,
+          "width": 293.5,
+          "height": 649.3
+        },
+        "parts": {
+          "piston": {
+            "x": 246.6,
+            "y": 518.4,
+            "width": 220.2,
+            "height": 130.2
+          },
+          "crank": {
+            "x": 313.6,
+            "y": 670.5,
+            "width": 91.9,
+            "height": 153.8
+          },
+          "intake_valve": {
+            "x": 271.4,
+            "y": 227,
+            "width": 85.8,
+            "height": 101
+          },
+          "exhaust_valve": {
+            "x": 362.8,
+            "y": 230.3,
+            "width": 85.2,
+            "height": 102.9
+          },
+          "spark_plug": {
+            "x": 345.7,
+            "y": 231.8,
+            "width": 28.5,
+            "height": 89.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 180.28,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.35
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 165.4,
+          "y": 214.8,
+          "width": 371.1,
+          "height": 668.4
+        },
+        "parts": {
+          "block": {
+            "x": 169.5,
+            "y": 305.1,
+            "width": 363.7,
+            "height": 422.7
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.25
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 180°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 180.282,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 202.817,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 205.6,
+          "y": 217.9,
+          "width": 297.3,
+          "height": 648.8
+        },
+        "parts": {
+          "piston": {
+            "x": 245.2,
+            "y": 514.3,
+            "width": 223.3,
+            "height": 130.8
+          },
+          "crank": {
+            "x": 300.9,
+            "y": 658.1,
+            "width": 116.1,
+            "height": 166.8
+          },
+          "intake_valve": {
+            "x": 271.4,
+            "y": 226.8,
+            "width": 86.8,
+            "height": 101.1
+          },
+          "exhaust_valve": {
+            "x": 361.8,
+            "y": 230.4,
+            "width": 86.4,
+            "height": 103.2
+          },
+          "spark_plug": {
+            "x": 345.5,
+            "y": 231.7,
+            "width": 28.9,
+            "height": 89.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 202.82,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.377
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 163.6,
+          "y": 214.6,
+          "width": 375.7,
+          "height": 668.3
+        },
+        "parts": {
+          "block": {
+            "x": 167.7,
+            "y": 304.7,
+            "width": 368.2,
+            "height": 424.1
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.28
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 203°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 202.817,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 225.352,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 203.7,
+          "y": 217.7,
+          "width": 301.8,
+          "height": 635
+        },
+        "parts": {
+          "piston": {
+            "x": 243.3,
+            "y": 502.6,
+            "width": 227.2,
+            "height": 130.9
+          },
+          "crank": {
+            "x": 275.3,
+            "y": 650.5,
+            "width": 145.8,
+            "height": 161.2
+          },
+          "intake_valve": {
+            "x": 271.5,
+            "y": 226.6,
+            "width": 87.9,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 360.5,
+            "y": 230.5,
+            "width": 87.9,
+            "height": 103.4
+          },
+          "spark_plug": {
+            "x": 345.3,
+            "y": 231.7,
+            "width": 29.3,
+            "height": 89.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 225.35,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.46
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 161.5,
+          "y": 214.3,
+          "width": 381,
+          "height": 654.6
+        },
+        "parts": {
+          "block": {
+            "x": 165.6,
+            "y": 304.3,
+            "width": 373.4,
+            "height": 425.7
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.31
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 225°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 225.352,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 247.887,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 201.7,
+          "y": 217.4,
+          "width": 306.8,
+          "height": 609.8
+        },
+        "parts": {
+          "piston": {
+            "x": 241.2,
+            "y": 482.7,
+            "width": 232,
+            "height": 130.2
+          },
+          "crank": {
+            "x": 262,
+            "y": 651.2,
+            "width": 155.6,
+            "height": 134.9
+          },
+          "intake_valve": {
+            "x": 271.8,
+            "y": 226.3,
+            "width": 89.2,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 359,
+            "y": 230.6,
+            "width": 89.6,
+            "height": 103.8
+          },
+          "spark_plug": {
+            "x": 345.1,
+            "y": 231.7,
+            "width": 29.8,
+            "height": 89.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 247.89,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.6
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 159.4,
+          "y": 214,
+          "width": 386.8,
+          "height": 629.5
+        },
+        "parts": {
+          "block": {
+            "x": 163.5,
+            "y": 303.8,
+            "width": 379.1,
+            "height": 427.4
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.34
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 248°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 247.887,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 270.423,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 199.7,
+          "y": 217.2,
+          "width": 312.1,
+          "height": 599.7
+        },
+        "parts": {
+          "piston": {
+            "x": 238.8,
+            "y": 455.2,
+            "width": 237.5,
+            "height": 128.8
+          },
+          "crank": {
+            "x": 262,
+            "y": 659.9,
+            "width": 145.8,
+            "height": 113.7
+          },
+          "intake_valve": {
+            "x": 272.3,
+            "y": 226,
+            "width": 90.5,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 357.1,
+            "y": 230.8,
+            "width": 91.4,
+            "height": 104.1
+          },
+          "spark_plug": {
+            "x": 344.8,
+            "y": 231.6,
+            "width": 30.3,
+            "height": 89.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 270.42,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.796
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 157.3,
+          "y": 213.7,
+          "width": 392.9,
+          "height": 619.7
+        },
+        "parts": {
+          "block": {
+            "x": 161.5,
+            "y": 303.4,
+            "width": 385.1,
+            "height": 429.3
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.38
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 270°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 270.423,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 292.958,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 197.9,
+          "y": 216.9,
+          "width": 317.3,
+          "height": 612.2
+        },
+        "parts": {
+          "piston": {
+            "x": 236.3,
+            "y": 422.8,
+            "width": 243.2,
+            "height": 126.8
+          },
+          "crank": {
+            "x": 264.7,
+            "y": 647,
+            "width": 153.8,
+            "height": 140.3
+          },
+          "intake_valve": {
+            "x": 273.2,
+            "y": 225.6,
+            "width": 91.7,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 354.8,
+            "y": 231,
+            "width": 93.3,
+            "height": 104.5
+          },
+          "spark_plug": {
+            "x": 344.6,
+            "y": 231.6,
+            "width": 30.8,
+            "height": 89.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 292.96,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.023
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 155.6,
+          "y": 213.3,
+          "width": 398.8,
+          "height": 632.9
+        },
+        "parts": {
+          "block": {
+            "x": 159.7,
+            "y": 302.9,
+            "width": 390.9,
+            "height": 431.2
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.41
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 293°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 292.958,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 315.493,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 196.5,
+          "y": 216.7,
+          "width": 321.9,
+          "height": 617.2
+        },
+        "parts": {
+          "piston": {
+            "x": 234.3,
+            "y": 391.6,
+            "width": 248.5,
+            "height": 124.5
+          },
+          "crank": {
+            "x": 278.9,
+            "y": 623.6,
+            "width": 143.3,
+            "height": 169
+          },
+          "intake_valve": {
+            "x": 274.7,
+            "y": 225.3,
+            "width": 92.8,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 352.2,
+            "y": 231.2,
+            "width": 95,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 344.3,
+            "y": 231.6,
+            "width": 31.3,
+            "height": 89.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 315.49,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.24
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 154.6,
+          "y": 213,
+          "width": 404,
+          "height": 638.5
+        },
+        "parts": {
+          "block": {
+            "x": 158.7,
+            "y": 302.5,
+            "width": 395.9,
+            "height": 433
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.44
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 315°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 315.493,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 338.028,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 196,
+          "y": 216.5,
+          "width": 325.3,
+          "height": 614
+        },
+        "parts": {
+          "piston": {
+            "x": 233,
+            "y": 369,
+            "width": 252.4,
+            "height": 122.8
+          },
+          "crank": {
+            "x": 301.6,
+            "y": 614,
+            "width": 116.8,
+            "height": 174.3
+          },
+          "intake_valve": {
+            "x": 276.9,
+            "y": 224.9,
+            "width": 93.4,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 349.3,
+            "y": 231.5,
+            "width": 96.4,
+            "height": 105.2
+          },
+          "spark_plug": {
+            "x": 344.2,
+            "y": 231.6,
+            "width": 31.6,
+            "height": 89.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 338.03,
+          "stroke_phase": "kompresi",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.395
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 154.7,
+          "y": 212.8,
+          "width": 407.4,
+          "height": 635.7
+        },
+        "parts": {
+          "block": {
+            "x": 158.8,
+            "y": 302.1,
+            "width": 399.4,
+            "height": 434.3
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.47
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 338°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 338.028,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 360.563,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 196.7,
+          "y": 216.5,
+          "width": 326.6,
+          "height": 603.7
+        },
+        "parts": {
+          "piston": {
+            "x": 233.1,
+            "y": 361.1,
+            "width": 253.8,
+            "height": 122.1
+          },
+          "crank": {
+            "x": 310.9,
+            "y": 614.9,
+            "width": 98.6,
+            "height": 160.4
+          },
+          "intake_valve": {
+            "x": 280,
+            "y": 224.5,
+            "width": 93.5,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 346,
+            "y": 231.8,
+            "width": 97.1,
+            "height": 105.5
+          },
+          "spark_plug": {
+            "x": 316.9,
+            "y": 228.6,
+            "width": 86.2,
+            "height": 118.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 360.56,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 156.5,
+          "y": 212.7,
+          "width": 408.2,
+          "height": 625.5
+        },
+        "parts": {
+          "block": {
+            "x": 160.5,
+            "y": 301.9,
+            "width": 400.1,
+            "height": 435
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.5
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 361°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 360.563,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 383.099,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 198.8,
+          "y": 216.5,
+          "width": 325.2,
+          "height": 614.3
+        },
+        "parts": {
+          "piston": {
+            "x": 234.7,
+            "y": 369.9,
+            "width": 252.2,
+            "height": 122.8
+          },
+          "crank": {
+            "x": 304.6,
+            "y": 613.6,
+            "width": 113.1,
+            "height": 176.8
+          },
+          "intake_valve": {
+            "x": 283.7,
+            "y": 224.2,
+            "width": 92.7,
+            "height": 101
+          },
+          "exhaust_valve": {
+            "x": 342.9,
+            "y": 232.2,
+            "width": 97,
+            "height": 105.6
+          },
+          "spark_plug": {
+            "x": 344.2,
+            "y": 231.6,
+            "width": 31.6,
+            "height": 89.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 383.1,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.39
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 159.9,
+          "y": 212.7,
+          "width": 405.7,
+          "height": 636.5
+        },
+        "parts": {
+          "block": {
+            "x": 163.8,
+            "y": 302,
+            "width": 397.6,
+            "height": 434.8
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.53
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 383°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 383.099,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 405.634,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 201.7,
+          "y": 216.7,
+          "width": 321.7,
+          "height": 617.1
+        },
+        "parts": {
+          "piston": {
+            "x": 237.4,
+            "y": 393,
+            "width": 248.2,
+            "height": 124.6
+          },
+          "crank": {
+            "x": 304.5,
+            "y": 627.3,
+            "width": 128.4,
+            "height": 176.8
+          },
+          "intake_valve": {
+            "x": 287.5,
+            "y": 224.1,
+            "width": 91.5,
+            "height": 100.7
+          },
+          "exhaust_valve": {
+            "x": 340.3,
+            "y": 232.5,
+            "width": 96.2,
+            "height": 105.6
+          },
+          "spark_plug": {
+            "x": 344.4,
+            "y": 231.6,
+            "width": 31.3,
+            "height": 89.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 405.63,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.23
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 164.2,
+          "y": 212.9,
+          "width": 400.7,
+          "height": 639.3
+        },
+        "parts": {
+          "block": {
+            "x": 168,
+            "y": 302.3,
+            "width": 392.7,
+            "height": 433.8
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.56
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 406°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 405.634,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 428.169,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 205,
+          "y": 216.9,
+          "width": 317,
+          "height": 611.7
+        },
+        "parts": {
+          "piston": {
+            "x": 240.6,
+            "y": 424.4,
+            "width": 242.9,
+            "height": 126.9
+          },
+          "crank": {
+            "x": 309,
+            "y": 654.1,
+            "width": 128.9,
+            "height": 152.5
+          },
+          "intake_valve": {
+            "x": 291.1,
+            "y": 223.9,
+            "width": 90,
+            "height": 100.4
+          },
+          "exhaust_valve": {
+            "x": 338.2,
+            "y": 232.8,
+            "width": 95,
+            "height": 105.6
+          },
+          "spark_plug": {
+            "x": 344.6,
+            "y": 231.6,
+            "width": 30.8,
+            "height": 89.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 428.17,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.012
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 168.8,
+          "y": 213.1,
+          "width": 394.3,
+          "height": 633.6
+        },
+        "parts": {
+          "block": {
+            "x": 172.5,
+            "y": 302.6,
+            "width": 386.4,
+            "height": 432.3
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.59
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 428°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 428.169,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 450.704,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 208.4,
+          "y": 217.2,
+          "width": 311.8,
+          "height": 599.8
+        },
+        "parts": {
+          "piston": {
+            "x": 243.9,
+            "y": 456.7,
+            "width": 237.2,
+            "height": 128.9
+          },
+          "crank": {
+            "x": 315.6,
+            "y": 667.8,
+            "width": 118.8,
+            "height": 129.6
+          },
+          "intake_valve": {
+            "x": 294.4,
+            "y": 223.9,
+            "width": 88.4,
+            "height": 100.1
+          },
+          "exhaust_valve": {
+            "x": 336.4,
+            "y": 233,
+            "width": 93.5,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 344.9,
+            "y": 231.7,
+            "width": 30.3,
+            "height": 89.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 450.7,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.785
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 173.5,
+          "y": 213.4,
+          "width": 387.3,
+          "height": 621.3
+        },
+        "parts": {
+          "block": {
+            "x": 177.1,
+            "y": 303,
+            "width": 379.6,
+            "height": 430.7
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.63
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 451°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 450.704,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 473.239,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 211.6,
+          "y": 217.4,
+          "width": 306.6,
+          "height": 611.3
+        },
+        "parts": {
+          "piston": {
+            "x": 246.9,
+            "y": 483.9,
+            "width": 231.8,
+            "height": 130.3
+          },
+          "crank": {
+            "x": 312.1,
+            "y": 654,
+            "width": 117.9,
+            "height": 155.5
+          },
+          "intake_valve": {
+            "x": 297.4,
+            "y": 223.8,
+            "width": 86.8,
+            "height": 99.9
+          },
+          "exhaust_valve": {
+            "x": 335,
+            "y": 233.2,
+            "width": 92,
+            "height": 105.3
+          },
+          "spark_plug": {
+            "x": 345.2,
+            "y": 231.7,
+            "width": 29.8,
+            "height": 89.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 473.24,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.592
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 177.9,
+          "y": 213.7,
+          "width": 380.3,
+          "height": 632.7
+        },
+        "parts": {
+          "block": {
+            "x": 181.4,
+            "y": 303.4,
+            "width": 372.8,
+            "height": 429
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.66
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 473°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 473.239,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 495.775,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 214.6,
+          "y": 217.7,
+          "width": 301.6,
+          "height": 636
+        },
+        "parts": {
+          "piston": {
+            "x": 249.5,
+            "y": 503.4,
+            "width": 227,
+            "height": 130.9
+          },
+          "crank": {
+            "x": 312.2,
+            "y": 649.5,
+            "width": 107.7,
+            "height": 178.9
+          },
+          "intake_valve": {
+            "x": 300,
+            "y": 223.8,
+            "width": 85.3,
+            "height": 99.6
+          },
+          "exhaust_valve": {
+            "x": 333.9,
+            "y": 233.4,
+            "width": 90.5,
+            "height": 105.1
+          },
+          "spark_plug": {
+            "x": 345.4,
+            "y": 231.7,
+            "width": 29.3,
+            "height": 89.5
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 495.77,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.454
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 181.9,
+          "y": 214,
+          "width": 373.8,
+          "height": 657.6
+        },
+        "parts": {
+          "block": {
+            "x": 185.2,
+            "y": 303.8,
+            "width": 366.4,
+            "height": 427.4
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.69
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 496°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 495.775,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 518.31,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 217.2,
+          "y": 217.9,
+          "width": 297.1,
+          "height": 649.2
+        },
+        "parts": {
+          "piston": {
+            "x": 251.7,
+            "y": 514.7,
+            "width": 223.1,
+            "height": 130.8
+          },
+          "crank": {
+            "x": 315,
+            "y": 654.9,
+            "width": 92,
+            "height": 175.4
+          },
+          "intake_valve": {
+            "x": 302.2,
+            "y": 223.8,
+            "width": 84,
+            "height": 99.4
+          },
+          "exhaust_valve": {
+            "x": 333,
+            "y": 233.6,
+            "width": 89.2,
+            "height": 105
+          },
+          "spark_plug": {
+            "x": 345.6,
+            "y": 231.7,
+            "width": 28.8,
+            "height": 89.4
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 518.31,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.375
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 185.3,
+          "y": 214.2,
+          "width": 368,
+          "height": 670.7
+        },
+        "parts": {
+          "block": {
+            "x": 188.6,
+            "y": 304.2,
+            "width": 360.6,
+            "height": 426
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.72
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 518°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 518.31,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 540.845,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 219.3,
+          "y": 218.1,
+          "width": 293.3,
+          "height": 649.3
+        },
+        "parts": {
+          "piston": {
+            "x": 253.4,
+            "y": 518.4,
+            "width": 220,
+            "height": 130.2
+          },
+          "crank": {
+            "x": 319.3,
+            "y": 668.4,
+            "width": 82.7,
+            "height": 158.3
+          },
+          "intake_valve": {
+            "x": 304,
+            "y": 223.9,
+            "width": 82.9,
+            "height": 99.3
+          },
+          "exhaust_valve": {
+            "x": 332.3,
+            "y": 234.3,
+            "width": 88,
+            "height": 104.8
+          },
+          "spark_plug": {
+            "x": 345.8,
+            "y": 231.8,
+            "width": 28.5,
+            "height": 89.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 540.85,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.35
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 188.2,
+          "y": 214.4,
+          "width": 363,
+          "height": 670.7
+        },
+        "parts": {
+          "block": {
+            "x": 191.4,
+            "y": 304.5,
+            "width": 355.8,
+            "height": 424.8
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.75
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 541°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 540.845,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 563.38,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 221.1,
+          "y": 218.2,
+          "width": 290.2,
+          "height": 646.6
+        },
+        "parts": {
+          "piston": {
+            "x": 254.6,
+            "y": 514.8,
+            "width": 217.9,
+            "height": 129.1
+          },
+          "crank": {
+            "x": 316.1,
+            "y": 653.7,
+            "width": 89.2,
+            "height": 175.8
+          },
+          "intake_valve": {
+            "x": 305.4,
+            "y": 223.9,
+            "width": 82,
+            "height": 99.1
+          },
+          "exhaust_valve": {
+            "x": 331.9,
+            "y": 252,
+            "width": 86.8,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 346,
+            "y": 231.8,
+            "width": 28.2,
+            "height": 89.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 563.38,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.379
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 190.5,
+          "y": 214.6,
+          "width": 358.9,
+          "height": 667.7
+        },
+        "parts": {
+          "block": {
+            "x": 193.7,
+            "y": 304.8,
+            "width": 351.8,
+            "height": 423.8
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.78
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 563°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 563.38,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 585.915,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 222.4,
+          "y": 218.4,
+          "width": 287.7,
+          "height": 630.6
+        },
+        "parts": {
+          "piston": {
+            "x": 255.3,
+            "y": 503.5,
+            "width": 216.6,
+            "height": 127.6
+          },
+          "crank": {
+            "x": 309.8,
+            "y": 641.7,
+            "width": 96.1,
+            "height": 174.6
+          },
+          "intake_valve": {
+            "x": 306.5,
+            "y": 223.9,
+            "width": 81.3,
+            "height": 99
+          },
+          "exhaust_valve": {
+            "x": 331.6,
+            "y": 266.7,
+            "width": 85.8,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 346.1,
+            "y": 231.8,
+            "width": 27.9,
+            "height": 89.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 585.92,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.462
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 192.3,
+          "y": 214.8,
+          "width": 355.8,
+          "height": 651.3
+        },
+        "parts": {
+          "block": {
+            "x": 195.4,
+            "y": 305,
+            "width": 348.7,
+            "height": 423
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.81
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 586°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 585.915,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 608.451,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 223.4,
+          "y": 218.4,
+          "width": 285.9,
+          "height": 603.4
+        },
+        "parts": {
+          "piston": {
+            "x": 255.6,
+            "y": 484.1,
+            "width": 216.2,
+            "height": 125.5
+          },
+          "crank": {
+            "x": 307,
+            "y": 640.9,
+            "width": 97,
+            "height": 147.6
+          },
+          "intake_valve": {
+            "x": 307.3,
+            "y": 223.9,
+            "width": 80.8,
+            "height": 98.9
+          },
+          "exhaust_valve": {
+            "x": 331.4,
+            "y": 276.3,
+            "width": 85.1,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 231.8,
+            "width": 27.7,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 608.45,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.605
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 193.5,
+          "y": 214.9,
+          "width": 353.5,
+          "height": 623.6
+        },
+        "parts": {
+          "block": {
+            "x": 196.7,
+            "y": 305.1,
+            "width": 346.4,
+            "height": 422.4
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.85
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 608°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 608.451,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 630.986,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 224.1,
+          "y": 218.5,
+          "width": 284.7,
+          "height": 592.8
+        },
+        "parts": {
+          "piston": {
+            "x": 255.4,
+            "y": 456.8,
+            "width": 216.6,
+            "height": 123
+          },
+          "crank": {
+            "x": 307.4,
+            "y": 649.9,
+            "width": 93,
+            "height": 124.2
+          },
+          "intake_valve": {
+            "x": 307.8,
+            "y": 223.9,
+            "width": 80.5,
+            "height": 98.9
+          },
+          "exhaust_valve": {
+            "x": 331.3,
+            "y": 279.5,
+            "width": 84.7,
+            "height": 104.8
+          },
+          "spark_plug": {
+            "x": 346.2,
+            "y": 231.8,
+            "width": 27.6,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 630.99,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.801
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 194.4,
+          "y": 214.9,
+          "width": 351.9,
+          "height": 612.7
+        },
+        "parts": {
+          "block": {
+            "x": 197.5,
+            "y": 305.2,
+            "width": 344.9,
+            "height": 422
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.88
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 631°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 630.986,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 653.521,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 224.5,
+          "y": 218.5,
+          "width": 284,
+          "height": 603.5
+        },
+        "parts": {
+          "piston": {
+            "x": 255,
+            "y": 424.6,
+            "width": 217.6,
+            "height": 120.1
+          },
+          "crank": {
+            "x": 308.1,
+            "y": 638.5,
+            "width": 95.6,
+            "height": 150.8
+          },
+          "intake_valve": {
+            "x": 308.1,
+            "y": 223.9,
+            "width": 80.2,
+            "height": 98.8
+          },
+          "exhaust_valve": {
+            "x": 331.2,
+            "y": 275.8,
+            "width": 84.5,
+            "height": 104.8
+          },
+          "spark_plug": {
+            "x": 346.3,
+            "y": 231.8,
+            "width": 27.6,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 653.52,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.029
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 194.9,
+          "y": 215,
+          "width": 351,
+          "height": 623.5
+        },
+        "parts": {
+          "block": {
+            "x": 198,
+            "y": 305.3,
+            "width": 344,
+            "height": 421.8
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.91
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 654°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 653.521,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 676.056,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 224.7,
+          "y": 218.6,
+          "width": 283.6,
+          "height": 606.9
+        },
+        "parts": {
+          "piston": {
+            "x": 254.5,
+            "y": 393.7,
+            "width": 218.8,
+            "height": 117.3
+          },
+          "crank": {
+            "x": 311.7,
+            "y": 619,
+            "width": 93.3,
+            "height": 175.2
+          },
+          "intake_valve": {
+            "x": 308.3,
+            "y": 223.9,
+            "width": 80.1,
+            "height": 98.8
+          },
+          "exhaust_valve": {
+            "x": 331,
+            "y": 265.7,
+            "width": 84.6,
+            "height": 104.7
+          },
+          "spark_plug": {
+            "x": 346.3,
+            "y": 231.8,
+            "width": 27.5,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 676.06,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.245
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 195.2,
+          "y": 215,
+          "width": 350.5,
+          "height": 627
+        },
+        "parts": {
+          "block": {
+            "x": 198.3,
+            "y": 305.3,
+            "width": 343.5,
+            "height": 421.7
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.94
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 676°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 676.056,
+        "claimRef": "C6"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 698.592,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "prop",
+        "bbox": {
+          "x": 224.8,
+          "y": 218.6,
+          "width": 283.5,
+          "height": 602.6
+        },
+        "parts": {
+          "piston": {
+            "x": 254.1,
+            "y": 371.6,
+            "width": 219.7,
+            "height": 115.3
+          },
+          "crank": {
+            "x": 318.1,
+            "y": 613.8,
+            "width": 85.7,
+            "height": 174.4
+          },
+          "intake_valve": {
+            "x": 308.3,
+            "y": 223.9,
+            "width": 80.1,
+            "height": 98.8
+          },
+          "exhaust_valve": {
+            "x": 330.9,
+            "y": 250.7,
+            "width": 84.8,
+            "height": 104.6
+          },
+          "spark_plug": {
+            "x": 346.3,
+            "y": 231.8,
+            "width": 27.5,
+            "height": 89.2
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 698.59,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.398
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      },
+      {
+        "id": "engine_block",
+        "role": "focus",
+        "bbox": {
+          "x": 195.3,
+          "y": 215,
+          "width": 350.3,
+          "height": 622.6
+        },
+        "parts": {
+          "block": {
+            "x": 198.4,
+            "y": 305.3,
+            "width": 343.3,
+            "height": 421.6
+          }
+        },
+        "partStates": {
+          "cutaway_progress": 0.97
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Siklus 4 Tak"
+      },
+      {
+        "id": "S1_H2",
+        "hud_id": "S1_H2",
+        "component": "StatCounter",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 63
+        },
+        "text": "Poros Engkol: 699°",
+        "driverName": "crankAngleDeg",
+        "numericValue": 698.592,
+        "claimRef": "C6"
+      }
+    ]
+  }
+]

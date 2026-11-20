@@ -1,0 +1,231 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "orbit_curve",
+      "duration_sec": 8.52,
+      "sentence_refs": [
+        "S1.1",
+        "S1.2"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crankAngleDeg",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Siklus 4 Tak"
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S1_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Poros Engkol",
+            "unit": "°",
+            "bind_to_driver": true
+          },
+          "claim_ref": "C6"
+        }
+      ],
+      "trigger_words": [
+        "empat langkah"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 12.48,
+      "sentence_refs": [
+        "S2.1",
+        "S2.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crankAngleDeg",
+        "unit": "°",
+        "from": 0,
+        "to": 360
+      },
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah Hisap",
+            "position": [
+              0,
+              1.5,
+              0
+            ]
+          },
+          "claim_ref": "C2",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah Kompresi",
+            "position": [
+              0,
+              1.5,
+              0
+            ]
+          },
+          "claim_ref": "C3",
+          "when": {
+            "driver_between": [
+              180,
+              360
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "Langkah hisap",
+        "Langkah kompresi"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "closeup",
+      "camera_move": "dolly_in",
+      "duration_sec": 10.968,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crankAngleDeg",
+        "unit": "°",
+        "from": 360,
+        "to": 720
+      },
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah Tenaga",
+            "position": [
+              0,
+              1.5,
+              0
+            ]
+          },
+          "claim_ref": "C9",
+          "when": {
+            "driver_between": [
+              360,
+              540
+            ]
+          }
+        },
+        {
+          "hud_id": "S3_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah Buang",
+            "position": [
+              0,
+              1.5,
+              0
+            ]
+          },
+          "claim_ref": "C5",
+          "when": {
+            "driver_between": [
+              540,
+              720
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "Langkah tenaga",
+        "Langkah buang"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "orbit_curve",
+      "duration_sec": 4.896,
+      "sentence_refs": [
+        "S4.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block",
+        "piston",
+        "crank"
+      ],
+      "driver": {
+        "name": "crankAngleDeg",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "MeasureReveal",
+          "props": {
+            "label": "Tenaga Mekanis",
+            "valueText": "Kontinu"
+          },
+          "claim_ref": "C4"
+        }
+      ],
+      "trigger_words": [
+        "berulang",
+        "tenaga mekanis"
+      ]
+    }
+  ]
+}

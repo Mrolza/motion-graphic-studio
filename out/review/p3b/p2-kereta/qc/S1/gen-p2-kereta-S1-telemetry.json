@@ -1,0 +1,2824 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 335.5,
+          "y": 503.5,
+          "width": 177.3,
+          "height": 161.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 341.7,
+            "y": 527.5,
+            "width": 71.4,
+            "height": 125.2
+          },
+          "wheel_right": {
+            "x": 431,
+            "y": 514.8,
+            "width": 74.5,
+            "height": 120.9
+          },
+          "contact_left": {
+            "x": 374.4,
+            "y": 618,
+            "width": 5.1,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 463.4,
+            "y": 602.7,
+            "width": 5.1,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 352.5,
+            "y": 516,
+            "width": 65.6,
+            "height": 146.1
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 231,
+          "y": 470.3,
+          "width": 146.7,
+          "height": 119.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 235.6,
+            "y": 489,
+            "width": 53,
+            "height": 91.8
+          },
+          "wheel_right": {
+            "x": 319.5,
+            "y": 478.7,
+            "width": 53.2,
+            "height": 89
+          },
+          "contact_left": {
+            "x": 260.7,
+            "y": 560.5,
+            "width": 4.5,
+            "height": 4.4
+          },
+          "contact_right": {
+            "x": 343.1,
+            "y": 548.3,
+            "width": 4.4,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 246.7,
+            "y": 480.6,
+            "width": 45.1,
+            "height": 106.9
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 212.3,
+          "y": 387.2,
+          "width": 343,
+          "height": 296.3
+        },
+        "parts": {
+          "body": {
+            "x": 212.3,
+            "y": 387.2,
+            "width": 343,
+            "height": 214.6
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999125,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 335.4,
+          "y": 503.5,
+          "width": 177.3,
+          "height": 161.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 341.7,
+            "y": 527.5,
+            "width": 71.4,
+            "height": 125.2
+          },
+          "wheel_right": {
+            "x": 430.9,
+            "y": 514.8,
+            "width": 74.4,
+            "height": 120.9
+          },
+          "contact_left": {
+            "x": 374.3,
+            "y": 618,
+            "width": 5.1,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 463.3,
+            "y": 602.7,
+            "width": 5.1,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 352.5,
+            "y": 516,
+            "width": 65.6,
+            "height": 146.1
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 231,
+          "y": 470.3,
+          "width": 146.7,
+          "height": 119.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 235.7,
+            "y": 489,
+            "width": 53,
+            "height": 91.8
+          },
+          "wheel_right": {
+            "x": 319.5,
+            "y": 478.7,
+            "width": 53.2,
+            "height": 89
+          },
+          "contact_left": {
+            "x": 260.8,
+            "y": 560.5,
+            "width": 4.5,
+            "height": 4.4
+          },
+          "contact_right": {
+            "x": 343.2,
+            "y": 548.3,
+            "width": 4.4,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 246.8,
+            "y": 480.6,
+            "width": 45,
+            "height": 106.9
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 212.4,
+          "y": 387.2,
+          "width": 342.8,
+          "height": 296.3
+        },
+        "parts": {
+          "body": {
+            "x": 212.4,
+            "y": 387.2,
+            "width": 342.8,
+            "height": 214.6
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860.9,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 335.1,
+          "y": 503.6,
+          "width": 177.2,
+          "height": 161.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 341.3,
+            "y": 527.5,
+            "width": 71,
+            "height": 125.2
+          },
+          "wheel_right": {
+            "x": 430.8,
+            "y": 514.9,
+            "width": 74.1,
+            "height": 121
+          },
+          "contact_left": {
+            "x": 373.8,
+            "y": 618,
+            "width": 5.1,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 463,
+            "y": 602.8,
+            "width": 5.1,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 352.2,
+            "y": 516,
+            "width": 65.1,
+            "height": 146.1
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 231.5,
+          "y": 470.3,
+          "width": 146.6,
+          "height": 119.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 236.1,
+            "y": 488.9,
+            "width": 52.8,
+            "height": 91.8
+          },
+          "wheel_right": {
+            "x": 320.1,
+            "y": 478.7,
+            "width": 53,
+            "height": 89
+          },
+          "contact_left": {
+            "x": 261.1,
+            "y": 560.4,
+            "width": 4.5,
+            "height": 4.4
+          },
+          "contact_right": {
+            "x": 343.7,
+            "y": 548.3,
+            "width": 4.4,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 247.3,
+            "y": 480.5,
+            "width": 44.7,
+            "height": 106.9
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 213,
+          "y": 387.1,
+          "width": 341.6,
+          "height": 296.4
+        },
+        "parts": {
+          "body": {
+            "x": 213,
+            "y": 387.1,
+            "width": 341.6,
+            "height": 214.7
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 334.1,
+          "y": 503.8,
+          "width": 176.9,
+          "height": 161.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 340.2,
+            "y": 527.5,
+            "width": 70.1,
+            "height": 125.3
+          },
+          "wheel_right": {
+            "x": 430.4,
+            "y": 515.2,
+            "width": 73.3,
+            "height": 121.2
+          },
+          "contact_left": {
+            "x": 372.3,
+            "y": 618.1,
+            "width": 5.1,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 462.2,
+            "y": 603.2,
+            "width": 5.1,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 351.3,
+            "y": 516,
+            "width": 63.9,
+            "height": 146.3
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 232.8,
+          "y": 470.2,
+          "width": 146.3,
+          "height": 119.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 237.3,
+            "y": 488.7,
+            "width": 52.1,
+            "height": 91.8
+          },
+          "wheel_right": {
+            "x": 321.7,
+            "y": 478.7,
+            "width": 52.4,
+            "height": 89
+          },
+          "contact_left": {
+            "x": 262,
+            "y": 560.1,
+            "width": 4.5,
+            "height": 4.4
+          },
+          "contact_right": {
+            "x": 345,
+            "y": 548.3,
+            "width": 4.4,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 248.6,
+            "y": 480.2,
+            "width": 43.8,
+            "height": 107
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 214.5,
+          "y": 387.1,
+          "width": 338.2,
+          "height": 296.7
+        },
+        "parts": {
+          "body": {
+            "x": 214.5,
+            "y": 387.1,
+            "width": 338.2,
+            "height": 214.9
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 332.2,
+          "y": 504.3,
+          "width": 176.2,
+          "height": 161.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 338.1,
+            "y": 527.5,
+            "width": 68.3,
+            "height": 125.5
+          },
+          "wheel_right": {
+            "x": 429.5,
+            "y": 515.6,
+            "width": 71.8,
+            "height": 121.5
+          },
+          "contact_left": {
+            "x": 369.4,
+            "y": 618.1,
+            "width": 5,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 460.6,
+            "y": 603.8,
+            "width": 5,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 349.6,
+            "y": 516,
+            "width": 61.5,
+            "height": 146.7
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 235.3,
+          "y": 470.1,
+          "width": 145.7,
+          "height": 119
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 239.7,
+            "y": 488.2,
+            "width": 50.8,
+            "height": 91.7
+          },
+          "wheel_right": {
+            "x": 324.8,
+            "y": 478.6,
+            "width": 51.3,
+            "height": 89.1
+          },
+          "contact_left": {
+            "x": 263.7,
+            "y": 559.6,
+            "width": 4.4,
+            "height": 4.4
+          },
+          "contact_right": {
+            "x": 347.5,
+            "y": 548.2,
+            "width": 4.3,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 251.3,
+            "y": 479.7,
+            "width": 42.1,
+            "height": 107.1
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 217.6,
+          "y": 387,
+          "width": 331.5,
+          "height": 297.2
+        },
+        "parts": {
+          "body": {
+            "x": 217.6,
+            "y": 387,
+            "width": 331.5,
+            "height": 215.4
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 329.1,
+          "y": 505,
+          "width": 174.8,
+          "height": 161.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 334.8,
+            "y": 527.4,
+            "width": 65.3,
+            "height": 125.8
+          },
+          "wheel_right": {
+            "x": 428,
+            "y": 516.4,
+            "width": 69.1,
+            "height": 122
+          },
+          "contact_left": {
+            "x": 364.7,
+            "y": 618.3,
+            "width": 5,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 457.8,
+            "y": 604.8,
+            "width": 5,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 346.9,
+            "y": 515.9,
+            "width": 57.5,
+            "height": 147.3
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 239.5,
+          "y": 470,
+          "width": 144.5,
+          "height": 118.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 243.8,
+            "y": 487.4,
+            "width": 48.6,
+            "height": 91.7
+          },
+          "wheel_right": {
+            "x": 330,
+            "y": 478.4,
+            "width": 49.4,
+            "height": 89.2
+          },
+          "contact_left": {
+            "x": 266.7,
+            "y": 558.7,
+            "width": 4.4,
+            "height": 4.3
+          },
+          "contact_right": {
+            "x": 351.7,
+            "y": 548.2,
+            "width": 4.3,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 255.7,
+            "y": 478.9,
+            "width": 39.3,
+            "height": 107.2
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 222.7,
+          "y": 386.8,
+          "width": 320.2,
+          "height": 297.9
+        },
+        "parts": {
+          "body": {
+            "x": 222.7,
+            "y": 386.8,
+            "width": 320.2,
+            "height": 216.1
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 324.6,
+          "y": 506,
+          "width": 172.3,
+          "height": 160.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 329.8,
+            "y": 527.3,
+            "width": 60.5,
+            "height": 126.2
+          },
+          "wheel_right": {
+            "x": 425.5,
+            "y": 517.5,
+            "width": 65,
+            "height": 122.8
+          },
+          "contact_left": {
+            "x": 357.5,
+            "y": 618.3,
+            "width": 4.9,
+            "height": 5
+          },
+          "contact_right": {
+            "x": 453.3,
+            "y": 606.3,
+            "width": 4.9,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 342.8,
+            "y": 515.8,
+            "width": 51.3,
+            "height": 148
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 246.1,
+          "y": 469.9,
+          "width": 142.5,
+          "height": 117.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 250,
+            "y": 486.3,
+            "width": 45.3,
+            "height": 91.6
+          },
+          "wheel_right": {
+            "x": 337.7,
+            "y": 478.3,
+            "width": 46.5,
+            "height": 89.4
+          },
+          "contact_left": {
+            "x": 271.3,
+            "y": 557.5,
+            "width": 4.3,
+            "height": 4.3
+          },
+          "contact_right": {
+            "x": 357.9,
+            "y": 548.1,
+            "width": 4.2,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 262.5,
+            "y": 477.8,
+            "width": 35,
+            "height": 107.3
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 230.6,
+          "y": 386.7,
+          "width": 302.5,
+          "height": 298.7
+        },
+        "parts": {
+          "body": {
+            "x": 230.6,
+            "y": 386.7,
+            "width": 302.5,
+            "height": 216.8
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 318.5,
+          "y": 507.4,
+          "width": 167.8,
+          "height": 159
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 323.1,
+            "y": 527.1,
+            "width": 53.5,
+            "height": 126.4
+          },
+          "wheel_right": {
+            "x": 421.8,
+            "y": 518.9,
+            "width": 58.7,
+            "height": 123.6
+          },
+          "contact_left": {
+            "x": 347.6,
+            "y": 618.2,
+            "width": 4.7,
+            "height": 4.9
+          },
+          "contact_right": {
+            "x": 446.7,
+            "y": 608.3,
+            "width": 4.8,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 337.2,
+            "y": 515.5,
+            "width": 42.3,
+            "height": 148.9
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 255.6,
+          "y": 469.9,
+          "width": 139.2,
+          "height": 115.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 259.1,
+            "y": 484.9,
+            "width": 40.5,
+            "height": 91.3
+          },
+          "wheel_right": {
+            "x": 348.6,
+            "y": 478.4,
+            "width": 42.3,
+            "height": 89.6
+          },
+          "contact_left": {
+            "x": 278.1,
+            "y": 555.9,
+            "width": 4.1,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 366.7,
+            "y": 548.2,
+            "width": 4.1,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 272.3,
+            "y": 476.4,
+            "width": 29,
+            "height": 107.5
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 242,
+          "y": 386.6,
+          "width": 276.2,
+          "height": 299.3
+        },
+        "parts": {
+          "body": {
+            "x": 242,
+            "y": 386.6,
+            "width": 276.2,
+            "height": 217.3
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "distance": {
+        "value": -2,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 310.8,
+          "y": 509.2,
+          "width": 160.1,
+          "height": 156.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 314.4,
+            "y": 526.6,
+            "width": 43.8,
+            "height": 126.5
+          },
+          "wheel_right": {
+            "x": 416.3,
+            "y": 520.8,
+            "width": 49.8,
+            "height": 124.5
+          },
+          "contact_left": {
+            "x": 334.5,
+            "y": 617.8,
+            "width": 4.4,
+            "height": 4.9
+          },
+          "contact_right": {
+            "x": 437,
+            "y": 610.8,
+            "width": 4.6,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 329.9,
+            "y": 514.9,
+            "width": 30,
+            "height": 149.6
+          }
+        },
+        "partStates": {
+          "distance": -0.3,
+          "wheel_angle_deg": -37.37,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 269,
+          "y": 470.2,
+          "width": 133.8,
+          "height": 113.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 271.8,
+            "y": 483.3,
+            "width": 34,
+            "height": 90.9
+          },
+          "wheel_right": {
+            "x": 363.1,
+            "y": 478.7,
+            "width": 36.4,
+            "height": 89.7
+          },
+          "contact_left": {
+            "x": 287.6,
+            "y": 554,
+            "width": 3.8,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 378.2,
+            "y": 548.6,
+            "width": 3.9,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 286,
+            "y": 474.8,
+            "width": 20.9,
+            "height": 107.5
+          }
+        },
+        "partStates": {
+          "distance": -3.7,
+          "wheel_angle_deg": -460.86,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 258,
+          "y": 386.8,
+          "width": 238.8,
+          "height": 299
+        },
+        "parts": {
+          "body": {
+            "x": 258,
+            "y": 386.8,
+            "width": 238.8,
+            "height": 217
+          }
+        },
+        "partStates": {
+          "distance": -2
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "distance": {
+        "value": -1.907,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 302.5,
+          "y": 514.6,
+          "width": 147.6,
+          "height": 146.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 305,
+            "y": 528.6,
+            "width": 31.4,
+            "height": 120.1
+          },
+          "wheel_right": {
+            "x": 409.4,
+            "y": 525.7,
+            "width": 37.4,
+            "height": 119.2
+          },
+          "contact_left": {
+            "x": 319.3,
+            "y": 616.8,
+            "width": 4,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 424.2,
+            "y": 613.3,
+            "width": 4.2,
+            "height": 4.7
+          },
+          "flange": {
+            "x": 322,
+            "y": 517.4,
+            "width": 14.9,
+            "height": 142.8
+          }
+        },
+        "partStates": {
+          "distance": -0.207,
+          "wheel_angle_deg": -25.83,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 286.4,
+          "y": 477.9,
+          "width": 124.7,
+          "height": 95.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 288.3,
+            "y": 487.6,
+            "width": 25,
+            "height": 78.1
+          },
+          "wheel_right": {
+            "x": 380.8,
+            "y": 485.3,
+            "width": 27.9,
+            "height": 77.6
+          },
+          "contact_left": {
+            "x": 299.8,
+            "y": 552.1,
+            "width": 3.5,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 391.9,
+            "y": 549.5,
+            "width": 3.6,
+            "height": 4
+          },
+          "flange": {
+            "x": 303.5,
+            "y": 480.2,
+            "width": 9.9,
+            "height": 92.8
+          }
+        },
+        "partStates": {
+          "distance": -3.607,
+          "wheel_angle_deg": -449.32,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 277.9,
+          "y": 387.4,
+          "width": 190.8,
+          "height": 294.3
+        },
+        "parts": {
+          "body": {
+            "x": 277.9,
+            "y": 387.4,
+            "width": 190.8,
+            "height": 215.3
+          }
+        },
+        "partStates": {
+          "distance": -1.907
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "distance": {
+        "value": -1.414,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 293.4,
+          "y": 513.1,
+          "width": 139.5,
+          "height": 149.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 295.5,
+            "y": 525.2,
+            "width": 24.4,
+            "height": 124.7
+          },
+          "wheel_right": {
+            "x": 402.5,
+            "y": 524.8,
+            "width": 28,
+            "height": 124.5
+          },
+          "contact_left": {
+            "x": 307.3,
+            "y": 615.6,
+            "width": 3.8,
+            "height": 4.6
+          },
+          "contact_right": {
+            "x": 413,
+            "y": 615,
+            "width": 3.9,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 314.2,
+            "y": 513.5,
+            "width": 5.3,
+            "height": 149
+          }
+        },
+        "partStates": {
+          "distance": 0.286,
+          "wheel_angle_deg": 35.68,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 298.4,
+          "y": 463.9,
+          "width": 121.1,
+          "height": 124.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 300.2,
+            "y": 474,
+            "width": 21.1,
+            "height": 103.5
+          },
+          "wheel_right": {
+            "x": 393.8,
+            "y": 473.7,
+            "width": 23.6,
+            "height": 103.4
+          },
+          "contact_left": {
+            "x": 310.2,
+            "y": 550.9,
+            "width": 3.3,
+            "height": 4
+          },
+          "contact_right": {
+            "x": 402.8,
+            "y": 550.5,
+            "width": 3.4,
+            "height": 4
+          },
+          "flange": {
+            "x": 316.5,
+            "y": 464.3,
+            "width": 4.4,
+            "height": 123.7
+          }
+        },
+        "partStates": {
+          "distance": -3.114,
+          "wheel_angle_deg": -387.82,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 284.6,
+          "y": 388.2,
+          "width": 159.6,
+          "height": 294.2
+        },
+        "parts": {
+          "body": {
+            "x": 284.6,
+            "y": 388.2,
+            "width": 159.6,
+            "height": 212.9
+          }
+        },
+        "partStates": {
+          "distance": -1.414
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "distance": {
+        "value": -0.92,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 281.3,
+          "y": 526.7,
+          "width": 139.9,
+          "height": 121.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 283.9,
+            "y": 536.1,
+            "width": 30.1,
+            "height": 99.8
+          },
+          "wheel_right": {
+            "x": 394.2,
+            "y": 537.6,
+            "width": 25.1,
+            "height": 100.2
+          },
+          "contact_left": {
+            "x": 298.4,
+            "y": 614.4,
+            "width": 4,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 404.1,
+            "y": 616.1,
+            "width": 3.8,
+            "height": 4.7
+          },
+          "flange": {
+            "x": 301.7,
+            "y": 526.9,
+            "width": 12.4,
+            "height": 119
+          }
+        },
+        "partStates": {
+          "distance": 0.78,
+          "wheel_angle_deg": 97.18,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 302.9,
+          "y": 462,
+          "width": 122.9,
+          "height": 128.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 305.2,
+            "y": 472,
+            "width": 26.8,
+            "height": 106.2
+          },
+          "wheel_right": {
+            "x": 401.8,
+            "y": 473.1,
+            "width": 22.4,
+            "height": 106.5
+          },
+          "contact_left": {
+            "x": 318.1,
+            "y": 550,
+            "width": 3.5,
+            "height": 4
+          },
+          "contact_right": {
+            "x": 410.6,
+            "y": 551.3,
+            "width": 3.3,
+            "height": 4
+          },
+          "flange": {
+            "x": 320.9,
+            "y": 462.1,
+            "width": 11.3,
+            "height": 126.7
+          }
+        },
+        "partStates": {
+          "distance": -2.62,
+          "wheel_angle_deg": -326.31,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 265.8,
+          "y": 387.8,
+          "width": 166.2,
+          "height": 295.1
+        },
+        "parts": {
+          "body": {
+            "x": 265.8,
+            "y": 387.8,
+            "width": 166.2,
+            "height": 214
+          }
+        },
+        "partStates": {
+          "distance": -0.92
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "distance": {
+        "value": -0.426,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 271.2,
+          "y": 516.7,
+          "width": 146.5,
+          "height": 141.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 274.5,
+            "y": 527.6,
+            "width": 36.3,
+            "height": 115.6
+          },
+          "wheel_right": {
+            "x": 384.8,
+            "y": 530.3,
+            "width": 30.5,
+            "height": 116.4
+          },
+          "contact_left": {
+            "x": 292.3,
+            "y": 613.4,
+            "width": 4.2,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 397.5,
+            "y": 616.7,
+            "width": 4,
+            "height": 4.7
+          },
+          "flange": {
+            "x": 291.7,
+            "y": 517.2,
+            "width": 19.9,
+            "height": 137.6
+          }
+        },
+        "partStates": {
+          "distance": 1.274,
+          "wheel_angle_deg": 158.69,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 308,
+          "y": 474.7,
+          "width": 125,
+          "height": 102.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 310.5,
+            "y": 482.6,
+            "width": 28.2,
+            "height": 83.3
+          },
+          "wheel_right": {
+            "x": 406,
+            "y": 484.7,
+            "width": 25.1,
+            "height": 83.8
+          },
+          "contact_left": {
+            "x": 323.8,
+            "y": 549.5,
+            "width": 3.6,
+            "height": 4
+          },
+          "contact_right": {
+            "x": 416.1,
+            "y": 552,
+            "width": 3.5,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 325.7,
+            "y": 475.1,
+            "width": 13.2,
+            "height": 99.1
+          }
+        },
+        "partStates": {
+          "distance": -2.126,
+          "wheel_angle_deg": -264.8,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 252.8,
+          "y": 387.4,
+          "width": 188.2,
+          "height": 292.4
+        },
+        "parts": {
+          "body": {
+            "x": 252.8,
+            "y": 387.4,
+            "width": 188.2,
+            "height": 215.2
+          }
+        },
+        "partStates": {
+          "distance": -0.426
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "distance": {
+        "value": 0.068,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 264.3,
+          "y": 510.4,
+          "width": 151.5,
+          "height": 155.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 268.1,
+            "y": 522.1,
+            "width": 41.1,
+            "height": 125.6
+          },
+          "wheel_right": {
+            "x": 378.2,
+            "y": 525.7,
+            "width": 34.8,
+            "height": 126.8
+          },
+          "contact_left": {
+            "x": 288.3,
+            "y": 612.7,
+            "width": 4.3,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 393,
+            "y": 617.1,
+            "width": 4.1,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 284.6,
+            "y": 511,
+            "width": 25.8,
+            "height": 149.5
+          }
+        },
+        "partStates": {
+          "distance": 1.768,
+          "wheel_angle_deg": 220.2,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 309.2,
+          "y": 464.4,
+          "width": 129.7,
+          "height": 124
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 312.1,
+            "y": 473.9,
+            "width": 32.5,
+            "height": 100.6
+          },
+          "wheel_right": {
+            "x": 407.6,
+            "y": 476.7,
+            "width": 28.9,
+            "height": 101.5
+          },
+          "contact_left": {
+            "x": 327.7,
+            "y": 549.2,
+            "width": 3.7,
+            "height": 4
+          },
+          "contact_right": {
+            "x": 419.6,
+            "y": 552.6,
+            "width": 3.6,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 326.9,
+            "y": 464.9,
+            "width": 18.4,
+            "height": 119.7
+          }
+        },
+        "partStates": {
+          "distance": -1.632,
+          "wheel_angle_deg": -203.29,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 244.3,
+          "y": 387.2,
+          "width": 202.6,
+          "height": 298.1
+        },
+        "parts": {
+          "body": {
+            "x": 244.3,
+            "y": 387.2,
+            "width": 202.6,
+            "height": 215.9
+          }
+        },
+        "partStates": {
+          "distance": 0.068
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "distance": {
+        "value": 0.562,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 262.9,
+          "y": 521.2,
+          "width": 150.6,
+          "height": 132.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 267.2,
+            "y": 531.1,
+            "width": 40.7,
+            "height": 105.5
+          },
+          "wheel_right": {
+            "x": 374.6,
+            "y": 535.9,
+            "width": 36.4,
+            "height": 107
+          },
+          "contact_left": {
+            "x": 286.5,
+            "y": 611.9,
+            "width": 4.5,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 390.2,
+            "y": 617.7,
+            "width": 4.3,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 282.3,
+            "y": 521.9,
+            "width": 26.9,
+            "height": 125.2
+          }
+        },
+        "partStates": {
+          "distance": 2.262,
+          "wheel_angle_deg": 281.71,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 309.9,
+          "y": 460.3,
+          "width": 132.4,
+          "height": 132.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 313.1,
+            "y": 470.4,
+            "width": 34.9,
+            "height": 107.5
+          },
+          "wheel_right": {
+            "x": 408.5,
+            "y": 473.6,
+            "width": 31.3,
+            "height": 108.5
+          },
+          "contact_left": {
+            "x": 330,
+            "y": 549.1,
+            "width": 3.7,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 421.7,
+            "y": 552.9,
+            "width": 3.7,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 327.6,
+            "y": 460.9,
+            "width": 21.4,
+            "height": 127.9
+          }
+        },
+        "partStates": {
+          "distance": -1.138,
+          "wheel_angle_deg": -141.78,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 239.4,
+          "y": 387.1,
+          "width": 211.1,
+          "height": 298.3
+        },
+        "parts": {
+          "body": {
+            "x": 239.4,
+            "y": 387.1,
+            "width": 211.1,
+            "height": 216.2
+          }
+        },
+        "partStates": {
+          "distance": 0.562
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "distance": {
+        "value": 1.056,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 261.8,
+          "y": 517.4,
+          "width": 153.5,
+          "height": 140.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 265.5,
+            "y": 527.4,
+            "width": 46.8,
+            "height": 111.4
+          },
+          "wheel_right": {
+            "x": 371.3,
+            "y": 533.7,
+            "width": 41.8,
+            "height": 113.3
+          },
+          "contact_left": {
+            "x": 287.7,
+            "y": 611,
+            "width": 4.7,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 390.1,
+            "y": 618.6,
+            "width": 4.6,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 279.7,
+            "y": 518,
+            "width": 34.2,
+            "height": 132
+          }
+        },
+        "partStates": {
+          "distance": 2.756,
+          "wheel_angle_deg": 343.22,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 312.7,
+          "y": 471.2,
+          "width": 130,
+          "height": 110.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 315.6,
+            "y": 479.6,
+            "width": 32.7,
+            "height": 88.5
+          },
+          "wheel_right": {
+            "x": 410.4,
+            "y": 483,
+            "width": 29.9,
+            "height": 89.4
+          },
+          "contact_left": {
+            "x": 331.2,
+            "y": 549,
+            "width": 3.8,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 422.7,
+            "y": 553,
+            "width": 3.7,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 330.2,
+            "y": 471.8,
+            "width": 18.9,
+            "height": 105.1
+          }
+        },
+        "partStates": {
+          "distance": -0.644,
+          "wheel_angle_deg": -80.27,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 236.9,
+          "y": 387,
+          "width": 215.3,
+          "height": 291.6
+        },
+        "parts": {
+          "body": {
+            "x": 236.9,
+            "y": 387,
+            "width": 215.3,
+            "height": 216.4
+          }
+        },
+        "partStates": {
+          "distance": 1.056
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "distance": {
+        "value": 1.549,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 259.9,
+          "y": 508.4,
+          "width": 162.6,
+          "height": 160
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 265.1,
+            "y": 519.6,
+            "width": 55.2,
+            "height": 126.4
+          },
+          "wheel_right": {
+            "x": 369.7,
+            "y": 527,
+            "width": 49.9,
+            "height": 129.1
+          },
+          "contact_left": {
+            "x": 291.6,
+            "y": 610.3,
+            "width": 4.9,
+            "height": 4.9
+          },
+          "contact_right": {
+            "x": 392.5,
+            "y": 619.4,
+            "width": 4.8,
+            "height": 5
+          },
+          "flange": {
+            "x": 278.3,
+            "y": 509,
+            "width": 44.1,
+            "height": 149.7
+          }
+        },
+        "partStates": {
+          "distance": 3.249,
+          "wheel_angle_deg": 404.73,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 312,
+          "y": 466.2,
+          "width": 131.7,
+          "height": 120.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 315.1,
+            "y": 475.3,
+            "width": 34.3,
+            "height": 97.2
+          },
+          "wheel_right": {
+            "x": 410.1,
+            "y": 478.8,
+            "width": 31.2,
+            "height": 98.2
+          },
+          "contact_left": {
+            "x": 331.6,
+            "y": 549,
+            "width": 3.8,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 423.1,
+            "y": 553.1,
+            "width": 3.7,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 329.6,
+            "y": 466.8,
+            "width": 20.8,
+            "height": 115.4
+          }
+        },
+        "partStates": {
+          "distance": -0.151,
+          "wheel_angle_deg": -18.76,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 236,
+          "y": 387,
+          "width": 219.3,
+          "height": 299.1
+        },
+        "parts": {
+          "body": {
+            "x": 236,
+            "y": 387,
+            "width": 216.8,
+            "height": 216.4
+          }
+        },
+        "partStates": {
+          "distance": 1.549
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S1_H1",
+        "hud_id": "S1_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Stabilitas Rel Kereta"
+      }
+    ]
+  }
+]

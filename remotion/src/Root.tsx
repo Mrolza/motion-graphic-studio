@@ -4,10 +4,12 @@ import { BLUEPRINT_TOKENS } from './kit';
 import { DemoKereta } from './scenes/DemoKereta';
 import { DemoMesin } from './scenes/DemoMesin';
 import { KitSample } from './scenes/KitSample';
+import { GeneratedCompositions } from './scenes/generated/registry';
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <GeneratedCompositions />
       <Composition
         id="KitSample"
         component={KitSample}

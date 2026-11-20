@@ -1,0 +1,621 @@
+{
+  "total_sec": 37.614,
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "start": 0,
+      "end": 8.52,
+      "audio_path": "projects/p2-mesin4tak/audio/S1.mp3"
+    },
+    {
+      "scene_id": "S2",
+      "start": 8.77,
+      "end": 21.25,
+      "audio_path": "projects/p2-mesin4tak/audio/S2.mp3"
+    },
+    {
+      "scene_id": "S3",
+      "start": 21.5,
+      "end": 32.468,
+      "audio_path": "projects/p2-mesin4tak/audio/S3.mp3"
+    },
+    {
+      "scene_id": "S4",
+      "start": 32.718,
+      "end": 37.614,
+      "audio_path": "projects/p2-mesin4tak/audio/S4.mp3"
+    }
+  ],
+  "beats": [],
+  "shots": [],
+  "words": [
+    {
+      "text": "Tahukah",
+      "start": 0.05,
+      "end": 0.5,
+      "scene_id": "S1"
+    },
+    {
+      "text": "kamu",
+      "start": 0.5,
+      "end": 0.75,
+      "scene_id": "S1"
+    },
+    {
+      "text": "bagaimana",
+      "start": 0.75,
+      "end": 1.25,
+      "scene_id": "S1"
+    },
+    {
+      "text": "cara",
+      "start": 1.25,
+      "end": 1.438,
+      "scene_id": "S1"
+    },
+    {
+      "text": "kerja",
+      "start": 1.438,
+      "end": 1.775,
+      "scene_id": "S1"
+    },
+    {
+      "text": "mesin",
+      "start": 1.775,
+      "end": 2.037,
+      "scene_id": "S1"
+    },
+    {
+      "text": "kendaraan",
+      "start": 2.037,
+      "end": 2.388,
+      "scene_id": "S1"
+    },
+    {
+      "text": "bermotor",
+      "start": 2.388,
+      "end": 2.988,
+      "scene_id": "S1"
+    },
+    {
+      "text": "Siklus",
+      "start": 3.825,
+      "end": 4.225,
+      "scene_id": "S1"
+    },
+    {
+      "text": "4",
+      "start": 4.225,
+      "end": 4.5,
+      "scene_id": "S1"
+    },
+    {
+      "text": "tak",
+      "start": 4.5,
+      "end": 4.625,
+      "scene_id": "S1"
+    },
+    {
+      "text": "terdiri",
+      "start": 4.625,
+      "end": 5.013,
+      "scene_id": "S1"
+    },
+    {
+      "text": "dari",
+      "start": 5.013,
+      "end": 5.187,
+      "scene_id": "S1"
+    },
+    {
+      "text": "empat",
+      "start": 5.187,
+      "end": 5.413,
+      "scene_id": "S1"
+    },
+    {
+      "text": "langkah",
+      "start": 5.413,
+      "end": 5.663,
+      "scene_id": "S1"
+    },
+    {
+      "text": "terpisah",
+      "start": 5.663,
+      "end": 6.125,
+      "scene_id": "S1"
+    },
+    {
+      "text": "yang",
+      "start": 6.125,
+      "end": 6.25,
+      "scene_id": "S1"
+    },
+    {
+      "text": "memerlukan",
+      "start": 6.25,
+      "end": 6.75,
+      "scene_id": "S1"
+    },
+    {
+      "text": "dua",
+      "start": 6.75,
+      "end": 6.913,
+      "scene_id": "S1"
+    },
+    {
+      "text": "putaran",
+      "start": 6.913,
+      "end": 7.25,
+      "scene_id": "S1"
+    },
+    {
+      "text": "poros",
+      "start": 7.25,
+      "end": 7.562,
+      "scene_id": "S1"
+    },
+    {
+      "text": "engkol",
+      "start": 7.562,
+      "end": 7.862,
+      "scene_id": "S1"
+    },
+    {
+      "text": "penuh",
+      "start": 7.862,
+      "end": 8.313,
+      "scene_id": "S1"
+    },
+    {
+      "text": "Langkah",
+      "start": 8.82,
+      "end": 9.257,
+      "scene_id": "S2"
+    },
+    {
+      "text": "hisap",
+      "start": 9.257,
+      "end": 9.533,
+      "scene_id": "S2"
+    },
+    {
+      "text": "menurunkan",
+      "start": 9.533,
+      "end": 9.958,
+      "scene_id": "S2"
+    },
+    {
+      "text": "piston",
+      "start": 9.958,
+      "end": 10.357,
+      "scene_id": "S2"
+    },
+    {
+      "text": "untuk",
+      "start": 10.357,
+      "end": 10.57,
+      "scene_id": "S2"
+    },
+    {
+      "text": "menarik",
+      "start": 10.57,
+      "end": 10.82,
+      "scene_id": "S2"
+    },
+    {
+      "text": "campuran",
+      "start": 10.82,
+      "end": 11.17,
+      "scene_id": "S2"
+    },
+    {
+      "text": "udara",
+      "start": 11.17,
+      "end": 11.545,
+      "scene_id": "S2"
+    },
+    {
+      "text": "dan",
+      "start": 11.545,
+      "end": 11.733,
+      "scene_id": "S2"
+    },
+    {
+      "text": "bahan",
+      "start": 11.733,
+      "end": 11.945,
+      "scene_id": "S2"
+    },
+    {
+      "text": "bakar",
+      "start": 11.945,
+      "end": 12.307,
+      "scene_id": "S2"
+    },
+    {
+      "text": "ke",
+      "start": 12.307,
+      "end": 12.408,
+      "scene_id": "S2"
+    },
+    {
+      "text": "dalam",
+      "start": 12.408,
+      "end": 12.633,
+      "scene_id": "S2"
+    },
+    {
+      "text": "silinder",
+      "start": 12.633,
+      "end": 13.045,
+      "scene_id": "S2"
+    },
+    {
+      "text": "melalui",
+      "start": 13.045,
+      "end": 13.395,
+      "scene_id": "S2"
+    },
+    {
+      "text": "katup",
+      "start": 13.395,
+      "end": 13.695,
+      "scene_id": "S2"
+    },
+    {
+      "text": "masuk",
+      "start": 13.695,
+      "end": 14.132,
+      "scene_id": "S2"
+    },
+    {
+      "text": "Langkah",
+      "start": 14.983,
+      "end": 15.332,
+      "scene_id": "S2"
+    },
+    {
+      "text": "kompresi",
+      "start": 15.332,
+      "end": 15.733,
+      "scene_id": "S2"
+    },
+    {
+      "text": "menaikkan",
+      "start": 15.733,
+      "end": 16.12,
+      "scene_id": "S2"
+    },
+    {
+      "text": "piston",
+      "start": 16.12,
+      "end": 16.52,
+      "scene_id": "S2"
+    },
+    {
+      "text": "untuk",
+      "start": 16.52,
+      "end": 16.745,
+      "scene_id": "S2"
+    },
+    {
+      "text": "memadatkan",
+      "start": 16.745,
+      "end": 17.22,
+      "scene_id": "S2"
+    },
+    {
+      "text": "campuran",
+      "start": 17.22,
+      "end": 17.558,
+      "scene_id": "S2"
+    },
+    {
+      "text": "tersebut",
+      "start": 17.558,
+      "end": 18.132,
+      "scene_id": "S2"
+    },
+    {
+      "text": "meningkatkan",
+      "start": 18.42,
+      "end": 18.908,
+      "scene_id": "S2"
+    },
+    {
+      "text": "suhu",
+      "start": 18.908,
+      "end": 19.245,
+      "scene_id": "S2"
+    },
+    {
+      "text": "dan",
+      "start": 19.245,
+      "end": 19.408,
+      "scene_id": "S2"
+    },
+    {
+      "text": "tekanan",
+      "start": 19.408,
+      "end": 19.795,
+      "scene_id": "S2"
+    },
+    {
+      "text": "sebelum",
+      "start": 19.795,
+      "end": 20.132,
+      "scene_id": "S2"
+    },
+    {
+      "text": "percikan",
+      "start": 20.132,
+      "end": 20.533,
+      "scene_id": "S2"
+    },
+    {
+      "text": "busi",
+      "start": 20.533,
+      "end": 21.033,
+      "scene_id": "S2"
+    },
+    {
+      "text": "Langkah",
+      "start": 21.55,
+      "end": 21.95,
+      "scene_id": "S3"
+    },
+    {
+      "text": "tenaga",
+      "start": 21.95,
+      "end": 22.25,
+      "scene_id": "S3"
+    },
+    {
+      "text": "menghasilkan",
+      "start": 22.25,
+      "end": 22.813,
+      "scene_id": "S3"
+    },
+    {
+      "text": "dorongan",
+      "start": 22.813,
+      "end": 23.138,
+      "scene_id": "S3"
+    },
+    {
+      "text": "ke",
+      "start": 23.138,
+      "end": 23.212,
+      "scene_id": "S3"
+    },
+    {
+      "text": "bawah",
+      "start": 23.212,
+      "end": 23.588,
+      "scene_id": "S3"
+    },
+    {
+      "text": "akibat",
+      "start": 23.588,
+      "end": 23.925,
+      "scene_id": "S3"
+    },
+    {
+      "text": "ekspansi",
+      "start": 23.925,
+      "end": 24.463,
+      "scene_id": "S3"
+    },
+    {
+      "text": "gas",
+      "start": 24.463,
+      "end": 24.7,
+      "scene_id": "S3"
+    },
+    {
+      "text": "pembakaran",
+      "start": 24.7,
+      "end": 25.187,
+      "scene_id": "S3"
+    },
+    {
+      "text": "bertekanan",
+      "start": 25.187,
+      "end": 25.663,
+      "scene_id": "S3"
+    },
+    {
+      "text": "tinggi",
+      "start": 25.663,
+      "end": 26.175,
+      "scene_id": "S3"
+    },
+    {
+      "text": "Langkah",
+      "start": 27.013,
+      "end": 27.4,
+      "scene_id": "S3"
+    },
+    {
+      "text": "buang",
+      "start": 27.4,
+      "end": 27.612,
+      "scene_id": "S3"
+    },
+    {
+      "text": "mendorong",
+      "start": 27.612,
+      "end": 27.913,
+      "scene_id": "S3"
+    },
+    {
+      "text": "sisa",
+      "start": 27.913,
+      "end": 28.213,
+      "scene_id": "S3"
+    },
+    {
+      "text": "gas",
+      "start": 28.213,
+      "end": 28.463,
+      "scene_id": "S3"
+    },
+    {
+      "text": "hasil",
+      "start": 28.463,
+      "end": 28.737,
+      "scene_id": "S3"
+    },
+    {
+      "text": "pembakaran",
+      "start": 28.737,
+      "end": 29.163,
+      "scene_id": "S3"
+    },
+    {
+      "text": "keluar",
+      "start": 29.163,
+      "end": 29.475,
+      "scene_id": "S3"
+    },
+    {
+      "text": "melalui",
+      "start": 29.475,
+      "end": 29.8,
+      "scene_id": "S3"
+    },
+    {
+      "text": "katup",
+      "start": 29.8,
+      "end": 30.063,
+      "scene_id": "S3"
+    },
+    {
+      "text": "buang",
+      "start": 30.063,
+      "end": 30.413,
+      "scene_id": "S3"
+    },
+    {
+      "text": "saat",
+      "start": 30.413,
+      "end": 30.65,
+      "scene_id": "S3"
+    },
+    {
+      "text": "piston",
+      "start": 30.65,
+      "end": 31,
+      "scene_id": "S3"
+    },
+    {
+      "text": "bergerak",
+      "start": 31,
+      "end": 31.313,
+      "scene_id": "S3"
+    },
+    {
+      "text": "kembali",
+      "start": 31.313,
+      "end": 31.638,
+      "scene_id": "S3"
+    },
+    {
+      "text": "ke",
+      "start": 31.638,
+      "end": 31.712,
+      "scene_id": "S3"
+    },
+    {
+      "text": "atas",
+      "start": 31.712,
+      "end": 32.263,
+      "scene_id": "S3"
+    },
+    {
+      "text": "Seluruh",
+      "start": 32.768,
+      "end": 33.155,
+      "scene_id": "S4"
+    },
+    {
+      "text": "rangkaian",
+      "start": 33.155,
+      "end": 33.555,
+      "scene_id": "S4"
+    },
+    {
+      "text": "gerakan",
+      "start": 33.555,
+      "end": 33.818,
+      "scene_id": "S4"
+    },
+    {
+      "text": "tersebut",
+      "start": 33.818,
+      "end": 34.268,
+      "scene_id": "S4"
+    },
+    {
+      "text": "berulang",
+      "start": 34.268,
+      "end": 34.618,
+      "scene_id": "S4"
+    },
+    {
+      "text": "secara",
+      "start": 34.618,
+      "end": 34.905,
+      "scene_id": "S4"
+    },
+    {
+      "text": "terus-menerus",
+      "start": 34.905,
+      "end": 35.543,
+      "scene_id": "S4"
+    },
+    {
+      "text": "untuk",
+      "start": 35.543,
+      "end": 35.818,
+      "scene_id": "S4"
+    },
+    {
+      "text": "menghasilkan",
+      "start": 35.818,
+      "end": 36.393,
+      "scene_id": "S4"
+    },
+    {
+      "text": "tenaga",
+      "start": 36.393,
+      "end": 36.731,
+      "scene_id": "S4"
+    },
+    {
+      "text": "mekanis",
+      "start": 36.731,
+      "end": 37.405,
+      "scene_id": "S4"
+    }
+  ],
+  "events": [
+    {
+      "type": "hook",
+      "at": 0
+    },
+    {
+      "type": "scene_cut",
+      "at": 8.77
+    },
+    {
+      "type": "scene_cut",
+      "at": 21.5
+    },
+    {
+      "type": "scene_cut",
+      "at": 32.718
+    }
+  ]
+}

@@ -26,7 +26,7 @@ export const SceneTransition: React.FC<SceneTransitionProps> = ({
   const tokens = getThemeTokens(palette);
   const fadeIn = durationSec > 0 ? clamp01(sec / durationSec) : 1;
   const fadeOut = durationSec > 0 ? clamp01((sceneDur - sec) / durationSec) : 1;
-  const alpha = Math.min(fadeIn, fadeOut);
+  const alpha = Math.max(0.45, Math.min(fadeIn, fadeOut));
 
   return (
     <AbsoluteFill style={{ opacity: alpha }}>

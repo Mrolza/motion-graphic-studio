@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatIdNumber } from '../drivers/kinematics';
+import { formatIdNumber, formatValueWithUnit, normalizeUnit } from '../drivers/kinematics';
 import type { DriverValue } from '../drivers/useDriver';
 import { clamp01, getLocalProgress, useSceneTime } from '../motion';
 import { getThemeTokens, type PaletteId } from '../tokens/index';
@@ -107,14 +107,9 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   const { sec } = useSceneTime();
   const p = getLocalProgress(sec, startSec, durationSec, 'easeOut');
   const rawVal = bindToDriver && driver ? driver.value : from + (to - from) * p;
-  const resolvedUnit = driver?.unit ?? unit;
-  const formatted = formatIdNumber(rawVal, decimals);
-  const unitSuffix = resolvedUnit
-    ? resolvedUnit === '°' || resolvedUnit === '%'
-      ? resolvedUnit
-      : ` ${resolvedUnit}`
-    : '';
-  const displayText = `${label}: ${formatted}${unitSuffix}`;
+  const resolvedUnit = normalizeUnit(driver?.unit ?? unit);
+  const formattedWithUnit = formatValueWithUnit(rawVal, resolvedUnit, decimals);
+  const displayText = `${label}: ${formattedWithUnit}`;
 
   return (
     <TelemetryHudBox
@@ -144,8 +139,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
           color: tokens.colors.accent,
         }}
       >
-        {formatted}
-        {unitSuffix}
+        {formattedWithUnit}
       </span>
     </TelemetryHudBox>
   );

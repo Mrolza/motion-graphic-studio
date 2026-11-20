@@ -1,0 +1,2824 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 344,
+          "y": 500.6,
+          "width": 176.9,
+          "height": 151.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 350.8,
+            "y": 522.4,
+            "width": 76.9,
+            "height": 118
+          },
+          "wheel_right": {
+            "x": 434.5,
+            "y": 511.2,
+            "width": 78.6,
+            "height": 113.4
+          },
+          "contact_left": {
+            "x": 386.1,
+            "y": 609.8,
+            "width": 5.2,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 469.2,
+            "y": 595.7,
+            "width": 5.1,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 360.1,
+            "y": 511.6,
+            "width": 73.4,
+            "height": 137.7
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 217.8,
+          "y": 469.3,
+          "width": 156.6,
+          "height": 132.9
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 223.6,
+            "y": 487.7,
+            "width": 64.8,
+            "height": 103.9
+          },
+          "wheel_right": {
+            "x": 303.6,
+            "y": 478.7,
+            "width": 64.6,
+            "height": 100.3
+          },
+          "contact_left": {
+            "x": 254.4,
+            "y": 565.5,
+            "width": 4.6,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 332.9,
+            "y": 554.1,
+            "width": 4.5,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 232.9,
+            "y": 478.1,
+            "width": 59.9,
+            "height": 121.5
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 201.7,
+          "y": 395.8,
+          "width": 365.6,
+          "height": 271.1
+        },
+        "parts": {
+          "body": {
+            "x": 201.7,
+            "y": 395.8,
+            "width": 365.6,
+            "height": 189.3
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": -999897,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 343.9,
+          "y": 500.6,
+          "width": 176.9,
+          "height": 151.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 350.7,
+            "y": 522.4,
+            "width": 76.8,
+            "height": 118
+          },
+          "wheel_right": {
+            "x": 434.5,
+            "y": 511.2,
+            "width": 78.6,
+            "height": 113.4
+          },
+          "contact_left": {
+            "x": 386,
+            "y": 609.8,
+            "width": 5.2,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 469.1,
+            "y": 595.7,
+            "width": 5.1,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 360,
+            "y": 511.6,
+            "width": 73.3,
+            "height": 137.7
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 217.9,
+          "y": 469.3,
+          "width": 156.6,
+          "height": 132.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 223.7,
+            "y": 487.7,
+            "width": 64.8,
+            "height": 103.9
+          },
+          "wheel_right": {
+            "x": 303.8,
+            "y": 478.7,
+            "width": 64.6,
+            "height": 100.3
+          },
+          "contact_left": {
+            "x": 254.4,
+            "y": 565.4,
+            "width": 4.6,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 333,
+            "y": 554.1,
+            "width": 4.5,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 233,
+            "y": 478.1,
+            "width": 59.9,
+            "height": 121.6
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 201.8,
+          "y": 395.7,
+          "width": 365.4,
+          "height": 271.1
+        },
+        "parts": {
+          "body": {
+            "x": 201.8,
+            "y": 395.7,
+            "width": 365.4,
+            "height": 189.3
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88.9,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 343.4,
+          "y": 500.7,
+          "width": 176.8,
+          "height": 151.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 350.1,
+            "y": 522.4,
+            "width": 76.4,
+            "height": 118.1
+          },
+          "wheel_right": {
+            "x": 434.3,
+            "y": 511.3,
+            "width": 78.2,
+            "height": 113.5
+          },
+          "contact_left": {
+            "x": 385.2,
+            "y": 609.9,
+            "width": 5.2,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 468.7,
+            "y": 595.8,
+            "width": 5.1,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 359.5,
+            "y": 511.6,
+            "width": 72.7,
+            "height": 137.8
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 218.6,
+          "y": 469.2,
+          "width": 156.4,
+          "height": 132.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 224.3,
+            "y": 487.6,
+            "width": 64.4,
+            "height": 103.9
+          },
+          "wheel_right": {
+            "x": 304.6,
+            "y": 478.7,
+            "width": 64.2,
+            "height": 100.4
+          },
+          "contact_left": {
+            "x": 254.9,
+            "y": 565.3,
+            "width": 4.6,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 333.7,
+            "y": 554.1,
+            "width": 4.5,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 233.8,
+            "y": 478,
+            "width": 59.3,
+            "height": 121.6
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 202.6,
+          "y": 395.7,
+          "width": 363.8,
+          "height": 271.3
+        },
+        "parts": {
+          "body": {
+            "x": 202.6,
+            "y": 395.7,
+            "width": 363.8,
+            "height": 189.5
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 341.9,
+          "y": 500.9,
+          "width": 176.7,
+          "height": 151.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 348.5,
+            "y": 522.4,
+            "width": 75.2,
+            "height": 118.3
+          },
+          "wheel_right": {
+            "x": 433.8,
+            "y": 511.6,
+            "width": 77.2,
+            "height": 113.8
+          },
+          "contact_left": {
+            "x": 383,
+            "y": 610,
+            "width": 5.2,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 467.7,
+            "y": 596.3,
+            "width": 5.1,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 358.2,
+            "y": 511.6,
+            "width": 71.1,
+            "height": 138.1
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 220.4,
+          "y": 469.1,
+          "width": 155.9,
+          "height": 132.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 226.1,
+            "y": 487.2,
+            "width": 63.3,
+            "height": 103.9
+          },
+          "wheel_right": {
+            "x": 307,
+            "y": 478.6,
+            "width": 63.3,
+            "height": 100.4
+          },
+          "contact_left": {
+            "x": 256,
+            "y": 564.9,
+            "width": 4.6,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 335.6,
+            "y": 554,
+            "width": 4.4,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 235.7,
+            "y": 477.7,
+            "width": 57.9,
+            "height": 121.6
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 204.7,
+          "y": 395.6,
+          "width": 359.4,
+          "height": 271.7
+        },
+        "parts": {
+          "body": {
+            "x": 204.7,
+            "y": 395.6,
+            "width": 359.4,
+            "height": 189.9
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 339.1,
+          "y": 501.4,
+          "width": 176.2,
+          "height": 151.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 345.5,
+            "y": 522.4,
+            "width": 72.9,
+            "height": 118.6
+          },
+          "wheel_right": {
+            "x": 432.6,
+            "y": 512.1,
+            "width": 75.2,
+            "height": 114.3
+          },
+          "contact_left": {
+            "x": 378.8,
+            "y": 610.2,
+            "width": 5.1,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 465.6,
+            "y": 597.1,
+            "width": 5.1,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 355.7,
+            "y": 511.6,
+            "width": 67.8,
+            "height": 138.6
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 224.1,
+          "y": 468.9,
+          "width": 154.9,
+          "height": 132.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 229.5,
+            "y": 486.6,
+            "width": 61.1,
+            "height": 103.9
+          },
+          "wheel_right": {
+            "x": 311.6,
+            "y": 478.4,
+            "width": 61.4,
+            "height": 100.6
+          },
+          "contact_left": {
+            "x": 258.4,
+            "y": 564.3,
+            "width": 4.5,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 339.3,
+            "y": 553.8,
+            "width": 4.4,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 239.6,
+            "y": 477,
+            "width": 55,
+            "height": 121.8
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 208.9,
+          "y": 395.5,
+          "width": 350.5,
+          "height": 272.6
+        },
+        "parts": {
+          "body": {
+            "x": 208.9,
+            "y": 395.5,
+            "width": 350.5,
+            "height": 190.6
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 334.4,
+          "y": 502.2,
+          "width": 175,
+          "height": 151.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 340.4,
+            "y": 522.5,
+            "width": 68.7,
+            "height": 119
+          },
+          "wheel_right": {
+            "x": 430.6,
+            "y": 512.9,
+            "width": 71.7,
+            "height": 115
+          },
+          "contact_left": {
+            "x": 371.9,
+            "y": 610.4,
+            "width": 5.1,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 461.9,
+            "y": 598.3,
+            "width": 5,
+            "height": 4.7
+          },
+          "flange": {
+            "x": 351.6,
+            "y": 511.5,
+            "width": 62.3,
+            "height": 139.4
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 230.3,
+          "y": 468.7,
+          "width": 152.8,
+          "height": 131.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 235.4,
+            "y": 485.7,
+            "width": 57.4,
+            "height": 103.8
+          },
+          "wheel_right": {
+            "x": 319.4,
+            "y": 478.1,
+            "width": 58.2,
+            "height": 100.8
+          },
+          "contact_left": {
+            "x": 262.5,
+            "y": 563.2,
+            "width": 4.4,
+            "height": 4.2
+          },
+          "contact_right": {
+            "x": 345.4,
+            "y": 553.7,
+            "width": 4.3,
+            "height": 4
+          },
+          "flange": {
+            "x": 246.1,
+            "y": 476.1,
+            "width": 50.3,
+            "height": 121.9
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 216,
+          "y": 395.2,
+          "width": 335,
+          "height": 273.7
+        },
+        "parts": {
+          "body": {
+            "x": 216,
+            "y": 395.2,
+            "width": 335,
+            "height": 191.6
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 327.6,
+          "y": 503.4,
+          "width": 172.1,
+          "height": 150.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 333,
+            "y": 522.4,
+            "width": 62.2,
+            "height": 119.5
+          },
+          "wheel_right": {
+            "x": 427.2,
+            "y": 514.2,
+            "width": 66.1,
+            "height": 116.1
+          },
+          "contact_left": {
+            "x": 361.4,
+            "y": 610.6,
+            "width": 4.9,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 455.7,
+            "y": 600.2,
+            "width": 4.9,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 345.5,
+            "y": 511.4,
+            "width": 53.6,
+            "height": 140.4
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 240.2,
+          "y": 468.4,
+          "width": 149.2,
+          "height": 130.1
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 244.6,
+            "y": 484.3,
+            "width": 51.8,
+            "height": 103.7
+          },
+          "wheel_right": {
+            "x": 331,
+            "y": 477.9,
+            "width": 53.3,
+            "height": 101.1
+          },
+          "contact_left": {
+            "x": 269,
+            "y": 561.7,
+            "width": 4.3,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 354.5,
+            "y": 553.6,
+            "width": 4.2,
+            "height": 4
+          },
+          "flange": {
+            "x": 256.3,
+            "y": 474.7,
+            "width": 43,
+            "height": 122.1
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 227.2,
+          "y": 395,
+          "width": 310.2,
+          "height": 274.9
+        },
+        "parts": {
+          "body": {
+            "x": 227.2,
+            "y": 395,
+            "width": 310.2,
+            "height": 192.6
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 318.6,
+          "y": 505,
+          "width": 166,
+          "height": 149.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 323,
+            "y": 522.2,
+            "width": 52.2,
+            "height": 119.8
+          },
+          "wheel_right": {
+            "x": 421.8,
+            "y": 515.9,
+            "width": 57.2,
+            "height": 117.2
+          },
+          "contact_left": {
+            "x": 346.9,
+            "y": 610.5,
+            "width": 4.7,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 446.1,
+            "y": 602.6,
+            "width": 4.8,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 337.2,
+            "y": 511.1,
+            "width": 40.8,
+            "height": 141.4
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 254.8,
+          "y": 468.3,
+          "width": 143,
+          "height": 128.2
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 258.5,
+            "y": 482.7,
+            "width": 43.5,
+            "height": 103.4
+          },
+          "wheel_right": {
+            "x": 347.5,
+            "y": 477.9,
+            "width": 46,
+            "height": 101.4
+          },
+          "contact_left": {
+            "x": 278.8,
+            "y": 559.8,
+            "width": 4.1,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 367.3,
+            "y": 553.7,
+            "width": 4.1,
+            "height": 4
+          },
+          "flange": {
+            "x": 271.4,
+            "y": 473.1,
+            "width": 32.7,
+            "height": 122.2
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 243.8,
+          "y": 394.9,
+          "width": 272.3,
+          "height": 275.7
+        },
+        "parts": {
+          "body": {
+            "x": 243.8,
+            "y": 394.9,
+            "width": 272.3,
+            "height": 193.3
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 307.3,
+          "y": 507,
+          "width": 154.2,
+          "height": 146.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 310.4,
+            "y": 521.6,
+            "width": 38.1,
+            "height": 119.7
+          },
+          "wheel_right": {
+            "x": 413.4,
+            "y": 518,
+            "width": 44.1,
+            "height": 118.2
+          },
+          "contact_left": {
+            "x": 327.8,
+            "y": 609.9,
+            "width": 4.3,
+            "height": 4.6
+          },
+          "contact_right": {
+            "x": 431.4,
+            "y": 605.4,
+            "width": 4.4,
+            "height": 4.6
+          },
+          "flange": {
+            "x": 326.5,
+            "y": 510.5,
+            "width": 23.1,
+            "height": 142.1
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 275.7,
+          "y": 468.7,
+          "width": 132.7,
+          "height": 125.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 278.3,
+            "y": 480.9,
+            "width": 32.1,
+            "height": 102.7
+          },
+          "wheel_right": {
+            "x": 369.5,
+            "y": 478.2,
+            "width": 35.7,
+            "height": 101.6
+          },
+          "contact_left": {
+            "x": 293.1,
+            "y": 557.6,
+            "width": 3.7,
+            "height": 4
+          },
+          "contact_right": {
+            "x": 384.2,
+            "y": 554.2,
+            "width": 3.8,
+            "height": 3.9
+          },
+          "flange": {
+            "x": 292.6,
+            "y": 471.4,
+            "width": 18.7,
+            "height": 122.1
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 267.4,
+          "y": 395.2,
+          "width": 216.6,
+          "height": 275
+        },
+        "parts": {
+          "body": {
+            "x": 267.4,
+            "y": 395.2,
+            "width": 216.6,
+            "height": 192.7
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 289.2,
+          "y": 509.2,
+          "width": 139,
+          "height": 142
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 291.5,
+            "y": 520.3,
+            "width": 26.7,
+            "height": 118.6
+          },
+          "wheel_right": {
+            "x": 400.8,
+            "y": 520.4,
+            "width": 25.3,
+            "height": 118.6
+          },
+          "contact_left": {
+            "x": 304.4,
+            "y": 608.1,
+            "width": 3.9,
+            "height": 4.5
+          },
+          "contact_right": {
+            "x": 410.1,
+            "y": 608.3,
+            "width": 3.8,
+            "height": 4.5
+          },
+          "flange": {
+            "x": 309.9,
+            "y": 509.2,
+            "width": 8.1,
+            "height": 141.8
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 300.1,
+          "y": 469.8,
+          "width": 120.6,
+          "height": 121.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 302,
+            "y": 479.4,
+            "width": 22.8,
+            "height": 101.7
+          },
+          "wheel_right": {
+            "x": 397.2,
+            "y": 479.5,
+            "width": 21.7,
+            "height": 101.7
+          },
+          "contact_left": {
+            "x": 312.9,
+            "y": 555.6,
+            "width": 3.3,
+            "height": 3.8
+          },
+          "contact_right": {
+            "x": 405.3,
+            "y": 555.7,
+            "width": 3.3,
+            "height": 3.8
+          },
+          "flange": {
+            "x": 318.1,
+            "y": 469.9,
+            "width": 6.5,
+            "height": 121.6
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 278.8,
+          "y": 396.1,
+          "width": 158.7,
+          "height": 271.7
+        },
+        "parts": {
+          "body": {
+            "x": 278.8,
+            "y": 396.1,
+            "width": 158.7,
+            "height": 189.7
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 251.6,
+          "y": 506.5,
+          "width": 158,
+          "height": 147.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 256.1,
+            "y": 517.5,
+            "width": 48,
+            "height": 118
+          },
+          "wheel_right": {
+            "x": 364,
+            "y": 521.8,
+            "width": 42.2,
+            "height": 119.8
+          },
+          "contact_left": {
+            "x": 279.7,
+            "y": 604.7,
+            "width": 4.5,
+            "height": 4.6
+          },
+          "contact_right": {
+            "x": 382.5,
+            "y": 610.1,
+            "width": 4.4,
+            "height": 4.7
+          },
+          "flange": {
+            "x": 271.4,
+            "y": 507.2,
+            "width": 34.6,
+            "height": 140.2
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 314.5,
+          "y": 468.5,
+          "width": 135.9,
+          "height": 126.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 318.1,
+            "y": 478.1,
+            "width": 38.6,
+            "height": 101.6
+          },
+          "wheel_right": {
+            "x": 412.1,
+            "y": 481.4,
+            "width": 35.4,
+            "height": 102.9
+          },
+          "contact_left": {
+            "x": 336.7,
+            "y": 554,
+            "width": 3.9,
+            "height": 3.9
+          },
+          "contact_right": {
+            "x": 427.3,
+            "y": 558.2,
+            "width": 3.8,
+            "height": 4
+          },
+          "flange": {
+            "x": 331.9,
+            "y": 469.1,
+            "width": 26.2,
+            "height": 120.8
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 226.5,
+          "y": 395.1,
+          "width": 233,
+          "height": 275.4
+        },
+        "parts": {
+          "body": {
+            "x": 226.5,
+            "y": 395.1,
+            "width": 233,
+            "height": 193
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 225.2,
+          "y": 503.9,
+          "width": 170.3,
+          "height": 150.3
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 231.4,
+            "y": 514.8,
+            "width": 63.1,
+            "height": 116.5
+          },
+          "wheel_right": {
+            "x": 331.6,
+            "y": 522.3,
+            "width": 58.9,
+            "height": 119.7
+          },
+          "contact_left": {
+            "x": 262.6,
+            "y": 601,
+            "width": 4.9,
+            "height": 4.6
+          },
+          "contact_right": {
+            "x": 358.7,
+            "y": 610.6,
+            "width": 4.8,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 243.4,
+            "y": 505.3,
+            "width": 54.5,
+            "height": 137.7
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 327.7,
+          "y": 468.4,
+          "width": 147.2,
+          "height": 129.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 332.5,
+            "y": 477.9,
+            "width": 50.8,
+            "height": 101.2
+          },
+          "wheel_right": {
+            "x": 421.8,
+            "y": 483.7,
+            "width": 49,
+            "height": 103.6
+          },
+          "contact_left": {
+            "x": 356.9,
+            "y": 553.6,
+            "width": 4.2,
+            "height": 4
+          },
+          "contact_right": {
+            "x": 443.5,
+            "y": 561,
+            "width": 4.2,
+            "height": 4.1
+          },
+          "flange": {
+            "x": 344.1,
+            "y": 469.4,
+            "width": 41.9,
+            "height": 119.8
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 189.5,
+          "y": 395,
+          "width": 297.7,
+          "height": 275.3
+        },
+        "parts": {
+          "body": {
+            "x": 189.5,
+            "y": 395,
+            "width": 297.7,
+            "height": 193
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 208.3,
+          "y": 501.9,
+          "width": 175.5,
+          "height": 151.5
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 215.5,
+            "y": 512.6,
+            "width": 73.1,
+            "height": 114.8
+          },
+          "wheel_right": {
+            "x": 307.3,
+            "y": 522.5,
+            "width": 70.3,
+            "height": 118.9
+          },
+          "contact_left": {
+            "x": 251.6,
+            "y": 597.9,
+            "width": 5.1,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 340.3,
+            "y": 610.3,
+            "width": 5.1,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 224.8,
+            "y": 503.6,
+            "width": 68.3,
+            "height": 135.2
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 338.4,
+          "y": 468.8,
+          "width": 153.7,
+          "height": 131.7
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 344.1,
+            "y": 478.2,
+            "width": 59.5,
+            "height": 100.7
+          },
+          "wheel_right": {
+            "x": 428.1,
+            "y": 486,
+            "width": 58.8,
+            "height": 103.9
+          },
+          "contact_left": {
+            "x": 372.6,
+            "y": 553.7,
+            "width": 4.4,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 454.6,
+            "y": 563.6,
+            "width": 4.5,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 353.8,
+            "y": 470.1,
+            "width": 53.5,
+            "height": 118.8
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 165.7,
+          "y": 395.3,
+          "width": 341.1,
+          "height": 273.3
+        },
+        "parts": {
+          "body": {
+            "x": 165.7,
+            "y": 395.3,
+            "width": 341.1,
+            "height": 191.2
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "distance": {
+        "value": 0,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 197.8,
+          "y": 500.3,
+          "width": 176.9,
+          "height": 151.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 205.6,
+            "y": 510.9,
+            "width": 79.4,
+            "height": 113.2
+          },
+          "wheel_right": {
+            "x": 290,
+            "y": 522.3,
+            "width": 77.9,
+            "height": 117.9
+          },
+          "contact_left": {
+            "x": 244.9,
+            "y": 595.3,
+            "width": 5.1,
+            "height": 4.6
+          },
+          "contact_right": {
+            "x": 326.9,
+            "y": 609.7,
+            "width": 5.2,
+            "height": 4.8
+          },
+          "flange": {
+            "x": 212.9,
+            "y": 502.3,
+            "width": 77.5,
+            "height": 133
+          }
+        },
+        "partStates": {
+          "distance": 1.7,
+          "wheel_angle_deg": 211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 346.7,
+          "y": 469.4,
+          "width": 157,
+          "height": 133
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 353,
+            "y": 478.8,
+            "width": 65.4,
+            "height": 100.3
+          },
+          "wheel_right": {
+            "x": 432,
+            "y": 488,
+            "width": 65.7,
+            "height": 103.9
+          },
+          "contact_left": {
+            "x": 384.1,
+            "y": 554.2,
+            "width": 4.5,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 462,
+            "y": 565.8,
+            "width": 4.6,
+            "height": 4.2
+          },
+          "flange": {
+            "x": 361,
+            "y": 471,
+            "width": 61.6,
+            "height": 118
+          }
+        },
+        "partStates": {
+          "distance": -1.7,
+          "wheel_angle_deg": -211.75,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 150.8,
+          "y": 395.8,
+          "width": 369.2,
+          "height": 270.7
+        },
+        "parts": {
+          "body": {
+            "x": 150.8,
+            "y": 395.8,
+            "width": 369.2,
+            "height": 188.9
+          }
+        },
+        "partStates": {
+          "distance": 0
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "distance": {
+        "value": 0.685,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 191.5,
+          "y": 500.5,
+          "width": 177.5,
+          "height": 149.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 201.8,
+            "y": 510.6,
+            "width": 83.7,
+            "height": 109.9
+          },
+          "wheel_right": {
+            "x": 276.4,
+            "y": 523.5,
+            "width": 83.8,
+            "height": 115.1
+          },
+          "contact_left": {
+            "x": 242.6,
+            "y": 593.1,
+            "width": 5.3,
+            "height": 4.7
+          },
+          "contact_right": {
+            "x": 316.7,
+            "y": 609.6,
+            "width": 5.4,
+            "height": 4.9
+          },
+          "flange": {
+            "x": 206.5,
+            "y": 502.4,
+            "width": 84.5,
+            "height": 128.9
+          }
+        },
+        "partStates": {
+          "distance": 2.385,
+          "wheel_angle_deg": 297.09,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 352,
+          "y": 469.1,
+          "width": 159.6,
+          "height": 135.8
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 358.8,
+            "y": 478.6,
+            "width": 70.1,
+            "height": 101.4
+          },
+          "wheel_right": {
+            "x": 434,
+            "y": 488.7,
+            "width": 71.2,
+            "height": 105.5
+          },
+          "contact_left": {
+            "x": 392.2,
+            "y": 554.6,
+            "width": 4.5,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 466.6,
+            "y": 567.4,
+            "width": 4.7,
+            "height": 4.3
+          },
+          "flange": {
+            "x": 365.6,
+            "y": 470.8,
+            "width": 68.2,
+            "height": 119.2
+          }
+        },
+        "partStates": {
+          "distance": -1.015,
+          "wheel_angle_deg": -126.4,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 141.9,
+          "y": 396.3,
+          "width": 386.7,
+          "height": 269.3
+        },
+        "parts": {
+          "body": {
+            "x": 141.9,
+            "y": 396.3,
+            "width": 386.7,
+            "height": 186.9
+          }
+        },
+        "partStates": {
+          "distance": 0.685
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "distance": {
+        "value": 2.167,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 188,
+          "y": 498.4,
+          "width": 194.7,
+          "height": 156.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 207.4,
+            "y": 508.2,
+            "width": 97.4,
+            "height": 113.8
+          },
+          "wheel_right": {
+            "x": 265.5,
+            "y": 523.5,
+            "width": 99.7,
+            "height": 120.3
+          },
+          "contact_left": {
+            "x": 254.7,
+            "y": 592.4,
+            "width": 5.9,
+            "height": 4.8
+          },
+          "contact_right": {
+            "x": 313.6,
+            "y": 612.1,
+            "width": 6.2,
+            "height": 5.1
+          },
+          "flange": {
+            "x": 210.2,
+            "y": 500,
+            "width": 99.7,
+            "height": 133.1
+          }
+        },
+        "partStates": {
+          "distance": 3.867,
+          "wheel_angle_deg": 481.62,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 356.3,
+          "y": 470.4,
+          "width": 159.3,
+          "height": 134.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 363.2,
+            "y": 479.8,
+            "width": 71.7,
+            "height": 99.7
+          },
+          "wheel_right": {
+            "x": 435.7,
+            "y": 490.5,
+            "width": 73.2,
+            "height": 103.9
+          },
+          "contact_left": {
+            "x": 397.3,
+            "y": 554.9,
+            "width": 4.6,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 469.3,
+            "y": 568.5,
+            "width": 4.8,
+            "height": 4.3
+          },
+          "flange": {
+            "x": 369.3,
+            "y": 472.2,
+            "width": 70.7,
+            "height": 116.9
+          }
+        },
+        "partStates": {
+          "distance": 0.467,
+          "wheel_angle_deg": 58.13,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 133.6,
+          "y": 396.4,
+          "width": 409.8,
+          "height": 269.5
+        },
+        "parts": {
+          "body": {
+            "x": 133.6,
+            "y": 396.4,
+            "width": 403.5,
+            "height": 186.4
+          }
+        },
+        "partStates": {
+          "distance": 2.167
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "distance": {
+        "value": 3.648,
+        "unit": "m"
+      }
+    },
+    "entities": [
+      {
+        "id": "train_car_front",
+        "role": "prop",
+        "bbox": {
+          "x": 192.9,
+          "y": 497.7,
+          "width": 209.9,
+          "height": 162.4
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 222.1,
+            "y": 507.3,
+            "width": 107.5,
+            "height": 117.4
+          },
+          "wheel_right": {
+            "x": 264,
+            "y": 524.4,
+            "width": 112.1,
+            "height": 125
+          },
+          "contact_left": {
+            "x": 274,
+            "y": 593.1,
+            "width": 6.4,
+            "height": 4.9
+          },
+          "contact_right": {
+            "x": 317.8,
+            "y": 615.3,
+            "width": 6.8,
+            "height": 5.3
+          },
+          "flange": {
+            "x": 223.5,
+            "y": 499.1,
+            "width": 110.5,
+            "height": 137.1
+          }
+        },
+        "partStates": {
+          "distance": 5.348,
+          "wheel_angle_deg": 666.14,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car_rear",
+        "role": "prop",
+        "bbox": {
+          "x": 352.7,
+          "y": 471,
+          "width": 157.5,
+          "height": 131.6
+        },
+        "parts": {
+          "wheel_left": {
+            "x": 359.6,
+            "y": 480.1,
+            "width": 71.7,
+            "height": 97
+          },
+          "wheel_right": {
+            "x": 430,
+            "y": 491.2,
+            "width": 73.5,
+            "height": 101.2
+          },
+          "contact_left": {
+            "x": 393.7,
+            "y": 554,
+            "width": 4.5,
+            "height": 4.1
+          },
+          "contact_right": {
+            "x": 463.7,
+            "y": 567.8,
+            "width": 4.8,
+            "height": 4.3
+          },
+          "flange": {
+            "x": 365.4,
+            "y": 472.9,
+            "width": 71.1,
+            "height": 113.7
+          }
+        },
+        "partStates": {
+          "distance": 1.948,
+          "wheel_angle_deg": 242.65,
+          "lateral_shift": 0,
+          "left_effective_radius": 0.46,
+          "right_effective_radius": 0.46
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "wheel_spacing_err": 0,
+          "flanges_inside": true
+        }
+      },
+      {
+        "id": "train_car",
+        "role": "focus",
+        "bbox": {
+          "x": 106,
+          "y": 393.9,
+          "width": 461.4,
+          "height": 278.1
+        },
+        "parts": {
+          "body": {
+            "x": 106,
+            "y": 393.9,
+            "width": 459.7,
+            "height": 194.3
+          }
+        },
+        "partStates": {
+          "distance": 3.648
+        },
+        "geometry": {
+          "left_contact_gap": 0,
+          "right_contact_gap": 0,
+          "axle_perpendicular_dot": 0,
+          "flanges_inside": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S5_H1",
+        "hud_id": "S5_H1",
+        "component": "KineticTitle",
+        "zone": "title",
+        "bbox": {
+          "x": 48,
+          "y": 88,
+          "width": 624,
+          "height": 49.3
+        },
+        "text": "Kurva Jalur Efisien"
+      }
+    ]
+  }
+]

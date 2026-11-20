@@ -13,6 +13,8 @@ import {
   checkHudFormatFromTelemetry,
   checkHudOverlapFromTelemetry,
   checkMechanicsFromTelemetry,
+  checkOnscreenTruthFromTelemetry,
+  checkSyncFromTelemetry,
   checkVisibilityFromTelemetry,
 } from './checks';
 import type { TelemetrySample, VisualCheckSpec, VisualQcResult } from './types';
@@ -27,6 +29,10 @@ const PROFILE_RENDER_OPTS: Record<DeviceProfileName, { gl: 'angle' | 'swangle'; 
   standar: { gl: 'angle', concurrency: 4 },
   penuh: { gl: 'angle', concurrency: 6 },
 };
+
+export function clearRemotionBundleCache(): void {
+  cachedBundleDir = null;
+}
 
 export async function getRemotionBundle(repoRoot = process.cwd()): Promise<string> {
   if (cachedBundleDir) return cachedBundleDir;
@@ -122,6 +128,8 @@ export async function runVisualQc(params: {
   const framingIssues = checkFramingFromTelemetry(sampledFrames, spec);
   const hudOverlapIssues = checkHudOverlapFromTelemetry(sampledFrames, spec);
   const hudFormatIssues = checkHudFormatFromTelemetry(sampledFrames);
+  const onscreenTruthIssues = checkOnscreenTruthFromTelemetry(sampledFrames, spec);
+  const syncIssues = checkSyncFromTelemetry(sampledFrames, spec);
   const blankIssues = await checkBlankFrames(pngPaths);
 
   await rm(framesDir, { recursive: true, force: true }).catch(() => {});
@@ -133,6 +141,8 @@ export async function runVisualQc(params: {
     framing: { layer: 'L5' as const, issues: framingIssues },
     hudOverlap: { layer: 'L5' as const, issues: hudOverlapIssues },
     hudFormat: { layer: 'L5' as const, issues: hudFormatIssues },
+    onscreenTruth: { layer: 'L5' as const, issues: onscreenTruthIssues },
+    sync: { layer: 'L5' as const, issues: syncIssues },
     blank: { layer: 'L5' as const, issues: blankIssues },
   };
 
@@ -143,6 +153,8 @@ export async function runVisualQc(params: {
     ...framingIssues,
     ...hudOverlapIssues,
     ...hudFormatIssues,
+    ...onscreenTruthIssues,
+    ...syncIssues,
     ...blankIssues,
   ];
   const passed = !allIssues.some((i) => i.severity === 'error');

@@ -1,0 +1,3488 @@
+[
+  {
+    "frame": 0,
+    "sec": 0,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 360,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 192.7,
+          "y": 181.6,
+          "width": 340.6,
+          "height": 646.9
+        },
+        "parts": {
+          "piston": {
+            "x": 227.7,
+            "y": 360.5,
+            "width": 268.4,
+            "height": 82.7
+          },
+          "crank": {
+            "x": 306,
+            "y": 630.1,
+            "width": 108.2,
+            "height": 166.4
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 190.9,
+            "width": 100.6,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.2,
+            "y": 196.3,
+            "width": 98.1,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 315.3,
+            "y": 194.1,
+            "width": 89.9,
+            "height": 119.1
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 360,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": -999139,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 8,
+    "sec": 0.267,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 368.751,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 192.7,
+          "y": 181.6,
+          "width": 340.6,
+          "height": 653.1
+        },
+        "parts": {
+          "piston": {
+            "x": 227.7,
+            "y": 361.9,
+            "width": 268.4,
+            "height": 82.9
+          },
+          "crank": {
+            "x": 301.1,
+            "y": 628.2,
+            "width": 117.9,
+            "height": 175
+          },
+          "intake_valve": {
+            "x": 267.5,
+            "y": 190.9,
+            "width": 100.6,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.3,
+            "y": 196.3,
+            "width": 98,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 315.3,
+            "y": 194.1,
+            "width": 89.9,
+            "height": 119.1
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 368.75,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.441
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 16,
+    "sec": 0.533,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 377.502,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193,
+          "y": 181.6,
+          "width": 340.2,
+          "height": 658
+        },
+        "parts": {
+          "piston": {
+            "x": 228,
+            "y": 366,
+            "width": 268,
+            "height": 83.5
+          },
+          "crank": {
+            "x": 297,
+            "y": 628.9,
+            "width": 125.8,
+            "height": 179.8
+          },
+          "intake_valve": {
+            "x": 267.4,
+            "y": 191,
+            "width": 100.5,
+            "height": 104.9
+          },
+          "exhaust_valve": {
+            "x": 352.5,
+            "y": 196.3,
+            "width": 98,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 315.3,
+            "y": 194.1,
+            "width": 89.8,
+            "height": 119.1
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 377.5,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "on",
+          "piston_y": 2.415
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 24,
+    "sec": 0.8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 386.253,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.8,
+          "y": 181.7,
+          "width": 339.2,
+          "height": 661.6
+        },
+        "parts": {
+          "piston": {
+            "x": 228.6,
+            "y": 372.7,
+            "width": 266.9,
+            "height": 84.5
+          },
+          "crank": {
+            "x": 294,
+            "y": 631.6,
+            "width": 136.4,
+            "height": 181
+          },
+          "intake_valve": {
+            "x": 267.2,
+            "y": 191,
+            "width": 100.1,
+            "height": 104.8
+          },
+          "exhaust_valve": {
+            "x": 353.1,
+            "y": 196.3,
+            "width": 97.8,
+            "height": 101.1
+          },
+          "spark_plug": {
+            "x": 343.5,
+            "y": 196.7,
+            "width": 33,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 386.25,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.373
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 32,
+    "sec": 1.067,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 395.005,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 195.4,
+          "y": 181.8,
+          "width": 337,
+          "height": 663.4
+        },
+        "parts": {
+          "piston": {
+            "x": 230,
+            "y": 381.6,
+            "width": 264.9,
+            "height": 85.8
+          },
+          "crank": {
+            "x": 292.1,
+            "y": 636.4,
+            "width": 148.9,
+            "height": 178.6
+          },
+          "intake_valve": {
+            "x": 266.8,
+            "y": 191.2,
+            "width": 99.2,
+            "height": 104.7
+          },
+          "exhaust_valve": {
+            "x": 354.3,
+            "y": 196.2,
+            "width": 97.3,
+            "height": 101.2
+          },
+          "spark_plug": {
+            "x": 343.7,
+            "y": 196.7,
+            "width": 32.7,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 395,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.316
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 40,
+    "sec": 1.333,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 403.756,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 198.4,
+          "y": 182.1,
+          "width": 332.5,
+          "height": 663.4
+        },
+        "parts": {
+          "piston": {
+            "x": 232.4,
+            "y": 392.4,
+            "width": 261.1,
+            "height": 87.2
+          },
+          "crank": {
+            "x": 291.5,
+            "y": 643.7,
+            "width": 159.3,
+            "height": 171.7
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 191.5,
+            "width": 97.6,
+            "height": 104.4
+          },
+          "exhaust_valve": {
+            "x": 356.2,
+            "y": 196,
+            "width": 96.2,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 343.9,
+            "y": 196.7,
+            "width": 32.3,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 403.76,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.246
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 48,
+    "sec": 1.6,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 412.507,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 203.6,
+          "y": 182.5,
+          "width": 324.3,
+          "height": 661.2
+        },
+        "parts": {
+          "piston": {
+            "x": 236.4,
+            "y": 404.9,
+            "width": 254.3,
+            "height": 88.6
+          },
+          "crank": {
+            "x": 292.5,
+            "y": 653.7,
+            "width": 167,
+            "height": 160.4
+          },
+          "intake_valve": {
+            "x": 266.2,
+            "y": 191.9,
+            "width": 94.7,
+            "height": 104
+          },
+          "exhaust_valve": {
+            "x": 359.1,
+            "y": 195.8,
+            "width": 94.3,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 344.3,
+            "y": 196.8,
+            "width": 31.5,
+            "height": 93.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 412.51,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.168
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 56,
+    "sec": 1.867,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 421.258,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 212.2,
+          "y": 183.3,
+          "width": 309.7,
+          "height": 656.2
+        },
+        "parts": {
+          "piston": {
+            "x": 243.2,
+            "y": 418.4,
+            "width": 242.3,
+            "height": 89.7
+          },
+          "crank": {
+            "x": 295.7,
+            "y": 666.2,
+            "width": 170.8,
+            "height": 144.6
+          },
+          "intake_valve": {
+            "x": 266.9,
+            "y": 192.6,
+            "width": 89.7,
+            "height": 103.4
+          },
+          "exhaust_valve": {
+            "x": 363.2,
+            "y": 195.6,
+            "width": 90.6,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 345,
+            "y": 196.8,
+            "width": 30,
+            "height": 93.7
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 421.26,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 2.082
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 64,
+    "sec": 2.133,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 430.009,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 225.9,
+          "y": 184.6,
+          "width": 284.7,
+          "height": 647.8
+        },
+        "parts": {
+          "piston": {
+            "x": 253.9,
+            "y": 432.8,
+            "width": 222.3,
+            "height": 89.9
+          },
+          "crank": {
+            "x": 301.9,
+            "y": 679.7,
+            "width": 168.5,
+            "height": 125.9
+          },
+          "intake_valve": {
+            "x": 269.5,
+            "y": 193.6,
+            "width": 81.6,
+            "height": 102.5
+          },
+          "exhaust_valve": {
+            "x": 368.5,
+            "y": 195.3,
+            "width": 84.1,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 346.3,
+            "y": 196.9,
+            "width": 27.6,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 430.01,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.993
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 72,
+    "sec": 2.4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 438.76,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 227.4,
+          "y": 186.6,
+          "width": 263.5,
+          "height": 635.9
+        },
+        "parts": {
+          "piston": {
+            "x": 258.2,
+            "y": 447.6,
+            "width": 202.3,
+            "height": 89.1
+          },
+          "crank": {
+            "x": 309.5,
+            "y": 687.4,
+            "width": 159.4,
+            "height": 111.6
+          },
+          "intake_valve": {
+            "x": 271.3,
+            "y": 195,
+            "width": 74.1,
+            "height": 101.3
+          },
+          "exhaust_valve": {
+            "x": 375.1,
+            "y": 194.9,
+            "width": 73.2,
+            "height": 101.3
+          },
+          "spark_plug": {
+            "x": 347.9,
+            "y": 197.1,
+            "width": 23.9,
+            "height": 93.3
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 438.76,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.903
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 80,
+    "sec": 2.667,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 447.511,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 205.7,
+          "y": 184.2,
+          "width": 292.4,
+          "height": 639
+        },
+        "parts": {
+          "piston": {
+            "x": 241.3,
+            "y": 460.2,
+            "width": 227.7,
+            "height": 93.9
+          },
+          "crank": {
+            "x": 309.3,
+            "y": 691.1,
+            "width": 161,
+            "height": 108.3
+          },
+          "intake_valve": {
+            "x": 266.9,
+            "y": 195.3,
+            "width": 86.2,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 367.3,
+            "y": 193.3,
+            "width": 84.1,
+            "height": 102.8
+          },
+          "spark_plug": {
+            "x": 345.8,
+            "y": 196.9,
+            "width": 28.3,
+            "height": 93.6
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 447.51,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.816
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 88,
+    "sec": 2.933,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 456.263,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 193.9,
+          "y": 182.8,
+          "width": 319.7,
+          "height": 647.1
+        },
+        "parts": {
+          "piston": {
+            "x": 231.8,
+            "y": 472.3,
+            "width": 248.7,
+            "height": 97.7
+          },
+          "crank": {
+            "x": 303.9,
+            "y": 687.4,
+            "width": 168.4,
+            "height": 118.9
+          },
+          "intake_valve": {
+            "x": 266.4,
+            "y": 195.7,
+            "width": 93.1,
+            "height": 101.4
+          },
+          "exhaust_valve": {
+            "x": 360.5,
+            "y": 192.2,
+            "width": 93.1,
+            "height": 103.8
+          },
+          "spark_plug": {
+            "x": 344.4,
+            "y": 196.8,
+            "width": 31,
+            "height": 93.8
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 456.26,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.733
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 96,
+    "sec": 3.2,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 465.014,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 188.4,
+          "y": 182,
+          "width": 334.3,
+          "height": 655.5
+        },
+        "parts": {
+          "piston": {
+            "x": 227.4,
+            "y": 483.6,
+            "width": 259.9,
+            "height": 100.6
+          },
+          "crank": {
+            "x": 298.4,
+            "y": 681.4,
+            "width": 172.2,
+            "height": 133.1
+          },
+          "intake_valve": {
+            "x": 267.9,
+            "y": 196.1,
+            "width": 96.7,
+            "height": 101.2
+          },
+          "exhaust_valve": {
+            "x": 355.3,
+            "y": 191.4,
+            "width": 98.3,
+            "height": 104.5
+          },
+          "spark_plug": {
+            "x": 343.7,
+            "y": 196.7,
+            "width": 32.5,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 465.01,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.657
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 104,
+    "sec": 3.467,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 473.765,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.5,
+          "y": 181.6,
+          "width": 341.4,
+          "height": 664
+        },
+        "parts": {
+          "piston": {
+            "x": 225.8,
+            "y": 493.9,
+            "width": 265.1,
+            "height": 102.8
+          },
+          "crank": {
+            "x": 295.5,
+            "y": 676.8,
+            "width": 170.4,
+            "height": 146
+          },
+          "intake_valve": {
+            "x": 270,
+            "y": 196.4,
+            "width": 98.2,
+            "height": 101.1
+          },
+          "exhaust_valve": {
+            "x": 351.4,
+            "y": 190.9,
+            "width": 100.9,
+            "height": 104.9
+          },
+          "spark_plug": {
+            "x": 343.4,
+            "y": 196.7,
+            "width": 33.2,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 473.76,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.588
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 112,
+    "sec": 3.733,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 482.516,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.2,
+          "y": 181.4,
+          "width": 344.4,
+          "height": 678.3
+        },
+        "parts": {
+          "piston": {
+            "x": 225.5,
+            "y": 502.9,
+            "width": 267.1,
+            "height": 104.5
+          },
+          "crank": {
+            "x": 294.2,
+            "y": 673.7,
+            "width": 165.2,
+            "height": 162.5
+          },
+          "intake_valve": {
+            "x": 272.1,
+            "y": 196.6,
+            "width": 98.7,
+            "height": 101
+          },
+          "exhaust_valve": {
+            "x": 348.7,
+            "y": 190.5,
+            "width": 102.2,
+            "height": 105.2
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.5,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 482.52,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.528
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 120,
+    "sec": 4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 491.267,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.5,
+          "y": 181.3,
+          "width": 345.5,
+          "height": 690.5
+        },
+        "parts": {
+          "piston": {
+            "x": 225.7,
+            "y": 510.6,
+            "width": 267.7,
+            "height": 105.7
+          },
+          "crank": {
+            "x": 294,
+            "y": 672.1,
+            "width": 157.8,
+            "height": 174.5
+          },
+          "intake_valve": {
+            "x": 273.7,
+            "y": 196.7,
+            "width": 98.8,
+            "height": 100.9
+          },
+          "exhaust_valve": {
+            "x": 346.9,
+            "y": 190.4,
+            "width": 102.7,
+            "height": 105.3
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 491.27,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.477
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 128,
+    "sec": 4.267,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 500.018,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 186.8,
+          "y": 181.3,
+          "width": 345.7,
+          "height": 700.4
+        },
+        "parts": {
+          "piston": {
+            "x": 225.9,
+            "y": 517,
+            "width": 267.8,
+            "height": 106.7
+          },
+          "crank": {
+            "x": 294.5,
+            "y": 672.1,
+            "width": 148.8,
+            "height": 182.2
+          },
+          "intake_valve": {
+            "x": 274.7,
+            "y": 196.8,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.9,
+            "y": 190.3,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 500.02,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.435
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 136,
+    "sec": 4.533,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 508.769,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 708
+        },
+        "parts": {
+          "piston": {
+            "x": 226.1,
+            "y": 522.1,
+            "width": 267.7,
+            "height": 107.5
+          },
+          "crank": {
+            "x": 295.8,
+            "y": 673.7,
+            "width": 138.4,
+            "height": 185.5
+          },
+          "intake_valve": {
+            "x": 275.2,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.4,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 508.77,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.401
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 144,
+    "sec": 4.8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 517.521,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 713.2
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 525.9,
+            "width": 267.5,
+            "height": 108
+          },
+          "crank": {
+            "x": 297.8,
+            "y": 676.7,
+            "width": 126.4,
+            "height": 184.5
+          },
+          "intake_valve": {
+            "x": 275.3,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 517.52,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.376
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 152,
+    "sec": 5.067,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 526.272,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 715.9
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 528.4,
+            "width": 267.5,
+            "height": 108.4
+          },
+          "crank": {
+            "x": 300.6,
+            "y": 681.1,
+            "width": 119.6,
+            "height": 181.4
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 526.27,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.36
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 160,
+    "sec": 5.333,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 535.023,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 715.9
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 529.7,
+            "width": 267.4,
+            "height": 108.6
+          },
+          "crank": {
+            "x": 304.2,
+            "y": 686.8,
+            "width": 112.1,
+            "height": 174.6
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 190.2,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 535.02,
+          "stroke_phase": "usaha",
+          "intake_valve": "closed",
+          "exhaust_valve": "closed",
+          "spark": "off",
+          "piston_y": 1.351
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H1",
+        "hud_id": "S3_H1",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Tenaga",
+        "claimRef": "C9"
+      }
+    ]
+  },
+  {
+    "frame": 168,
+    "sec": 5.6,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 543.774,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 715.7
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 529.8,
+            "width": 267.4,
+            "height": 108.6
+          },
+          "crank": {
+            "x": 304.8,
+            "y": 687.7,
+            "width": 110.9,
+            "height": 173.4
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 193.6,
+            "width": 103,
+            "height": 105.2
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 543.77,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.351
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 176,
+    "sec": 5.867,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 552.525,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 716
+        },
+        "parts": {
+          "piston": {
+            "x": 226.3,
+            "y": 528.7,
+            "width": 267.5,
+            "height": 108.5
+          },
+          "crank": {
+            "x": 301.1,
+            "y": 681.8,
+            "width": 118.7,
+            "height": 180.7
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 201.4,
+            "width": 102.9,
+            "height": 104.6
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 552.53,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.358
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 184,
+    "sec": 6.133,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 561.276,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 713.7
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 526.3,
+            "width": 267.5,
+            "height": 108.1
+          },
+          "crank": {
+            "x": 298.2,
+            "y": 677.2,
+            "width": 124.8,
+            "height": 184.1
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 208.9,
+            "width": 102.9,
+            "height": 104
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 561.28,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.374
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 192,
+    "sec": 6.4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 570.027,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 708.9
+        },
+        "parts": {
+          "piston": {
+            "x": 226.2,
+            "y": 522.7,
+            "width": 267.6,
+            "height": 107.6
+          },
+          "crank": {
+            "x": 289.2,
+            "y": 672.6,
+            "width": 135.9,
+            "height": 184.7
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 216,
+            "width": 102.8,
+            "height": 103.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 570.03,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.397
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 200,
+    "sec": 6.667,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 578.778,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 701.6
+        },
+        "parts": {
+          "piston": {
+            "x": 226.1,
+            "y": 517.8,
+            "width": 267.8,
+            "height": 106.8
+          },
+          "crank": {
+            "x": 281.3,
+            "y": 669.5,
+            "width": 145.1,
+            "height": 181.3
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 222.5,
+            "width": 102.7,
+            "height": 102.9
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 578.78,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.43
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 208,
+    "sec": 6.933,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 587.53,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 692
+        },
+        "parts": {
+          "piston": {
+            "x": 226,
+            "y": 511.6,
+            "width": 268,
+            "height": 105.9
+          },
+          "crank": {
+            "x": 274.8,
+            "y": 668,
+            "width": 151.9,
+            "height": 173.9
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 228.2,
+            "width": 102.7,
+            "height": 102.5
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 587.53,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.471
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 216,
+    "sec": 7.2,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 596.281,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 680.4
+        },
+        "parts": {
+          "piston": {
+            "x": 225.9,
+            "y": 504,
+            "width": 268.2,
+            "height": 104.8
+          },
+          "crank": {
+            "x": 269.6,
+            "y": 668,
+            "width": 156.2,
+            "height": 162.7
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 233,
+            "width": 102.6,
+            "height": 102.1
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 596.28,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.521
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 224,
+    "sec": 7.467,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 605.032,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 666.9
+        },
+        "parts": {
+          "piston": {
+            "x": 225.8,
+            "y": 495.1,
+            "width": 268.5,
+            "height": 103.4
+          },
+          "crank": {
+            "x": 265.9,
+            "y": 669.5,
+            "width": 158,
+            "height": 148
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 236.8,
+            "width": 102.6,
+            "height": 101.8
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 605.03,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.579
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 232,
+    "sec": 7.733,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 613.783,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 658.5
+        },
+        "parts": {
+          "piston": {
+            "x": 225.6,
+            "y": 484.8,
+            "width": 268.8,
+            "height": 101.9
+          },
+          "crank": {
+            "x": 263.9,
+            "y": 672.6,
+            "width": 157.3,
+            "height": 136.3
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 239.6,
+            "width": 102.6,
+            "height": 101.6
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 613.78,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.647
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 240,
+    "sec": 8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 622.534,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 653.3
+        },
+        "parts": {
+          "piston": {
+            "x": 225.4,
+            "y": 473.3,
+            "width": 269.1,
+            "height": 100.1
+          },
+          "crank": {
+            "x": 263.4,
+            "y": 677.1,
+            "width": 154.1,
+            "height": 125.9
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.4,
+            "y": 241.2,
+            "width": 102.5,
+            "height": 101.5
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 622.53,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.722
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 248,
+    "sec": 8.267,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 631.285,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 648.9
+        },
+        "parts": {
+          "piston": {
+            "x": 225.2,
+            "y": 460.7,
+            "width": 269.5,
+            "height": 98.2
+          },
+          "crank": {
+            "x": 264.1,
+            "y": 681.1,
+            "width": 150.4,
+            "height": 117
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.4,
+            "y": 241.6,
+            "width": 102.5,
+            "height": 101.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 631.29,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.804
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 256,
+    "sec": 8.533,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 640.036,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 655
+        },
+        "parts": {
+          "piston": {
+            "x": 225,
+            "y": 447.3,
+            "width": 269.9,
+            "height": 96.2
+          },
+          "crank": {
+            "x": 263.4,
+            "y": 675.6,
+            "width": 155.3,
+            "height": 129.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.4,
+            "y": 240.8,
+            "width": 102.5,
+            "height": 101.5
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 640.04,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.891
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 264,
+    "sec": 8.8,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 648.788,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 659.8
+        },
+        "parts": {
+          "piston": {
+            "x": 224.8,
+            "y": 433.5,
+            "width": 270.3,
+            "height": 94.1
+          },
+          "crank": {
+            "x": 264.3,
+            "y": 671.5,
+            "width": 157.8,
+            "height": 138.8
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 238.9,
+            "width": 102.6,
+            "height": 101.6
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 648.79,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 1.98
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 272,
+    "sec": 9.067,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 657.539,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 663.4
+        },
+        "parts": {
+          "piston": {
+            "x": 224.6,
+            "y": 419.7,
+            "width": 270.7,
+            "height": 92
+          },
+          "crank": {
+            "x": 266.8,
+            "y": 662.1,
+            "width": 157.9,
+            "height": 152.2
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 235.8,
+            "width": 102.6,
+            "height": 101.9
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 657.54,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.07
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 280,
+    "sec": 9.333,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 666.29,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 665.5
+        },
+        "parts": {
+          "piston": {
+            "x": 224.4,
+            "y": 406.4,
+            "width": 271.1,
+            "height": 90
+          },
+          "crank": {
+            "x": 270.8,
+            "y": 651.4,
+            "width": 155.5,
+            "height": 165.4
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 231.7,
+            "width": 102.6,
+            "height": 102.2
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 666.29,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.156
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 288,
+    "sec": 9.6,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 675.041,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 666.3
+        },
+        "parts": {
+          "piston": {
+            "x": 224.2,
+            "y": 393.9,
+            "width": 271.5,
+            "height": 88
+          },
+          "crank": {
+            "x": 276.3,
+            "y": 642.6,
+            "width": 150.5,
+            "height": 175.1
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 226.6,
+            "width": 102.7,
+            "height": 102.6
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 675.04,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.236
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 296,
+    "sec": 9.867,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 683.792,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 665.5
+        },
+        "parts": {
+          "piston": {
+            "x": 224.1,
+            "y": 382.9,
+            "width": 271.9,
+            "height": 86.3
+          },
+          "crank": {
+            "x": 283.2,
+            "y": 635.7,
+            "width": 143.1,
+            "height": 181
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 220.6,
+            "width": 102.7,
+            "height": 103.1
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 683.79,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.307
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 304,
+    "sec": 10.133,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 692.543,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 663.3
+        },
+        "parts": {
+          "piston": {
+            "x": 223.9,
+            "y": 373.7,
+            "width": 272.1,
+            "height": 84.9
+          },
+          "crank": {
+            "x": 291.5,
+            "y": 631.2,
+            "width": 133.4,
+            "height": 183.1
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 214,
+            "width": 102.8,
+            "height": 103.6
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 692.54,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.366
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 312,
+    "sec": 10.4,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 701.294,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 659.8
+        },
+        "parts": {
+          "piston": {
+            "x": 223.8,
+            "y": 366.8,
+            "width": 272.3,
+            "height": 83.8
+          },
+          "crank": {
+            "x": 298.6,
+            "y": 628.6,
+            "width": 123.8,
+            "height": 181.7
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 206.7,
+            "width": 102.9,
+            "height": 104.1
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 701.29,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.41
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 320,
+    "sec": 10.667,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 710.046,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 654.9
+        },
+        "parts": {
+          "piston": {
+            "x": 223.8,
+            "y": 362.3,
+            "width": 272.5,
+            "height": 83.1
+          },
+          "crank": {
+            "x": 301.7,
+            "y": 627.7,
+            "width": 117.3,
+            "height": 177.1
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 199.1,
+            "width": 103,
+            "height": 104.7
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 710.05,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.439
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  },
+  {
+    "frame": 328,
+    "sec": 10.933,
+    "drivers": {
+      "crankAngleDeg": {
+        "value": 718.797,
+        "unit": "°"
+      }
+    },
+    "entities": [
+      {
+        "id": "piston_crank",
+        "role": "focus",
+        "bbox": {
+          "x": 187.1,
+          "y": 181.3,
+          "width": 345.8,
+          "height": 648.8
+        },
+        "parts": {
+          "piston": {
+            "x": 223.7,
+            "y": 360.5,
+            "width": 272.5,
+            "height": 82.9
+          },
+          "crank": {
+            "x": 305.7,
+            "y": 629.4,
+            "width": 109.1,
+            "height": 168.6
+          },
+          "intake_valve": {
+            "x": 275.4,
+            "y": 196.9,
+            "width": 98.8,
+            "height": 100.8
+          },
+          "exhaust_valve": {
+            "x": 345.3,
+            "y": 191.3,
+            "width": 103,
+            "height": 105.4
+          },
+          "spark_plug": {
+            "x": 343.2,
+            "y": 196.7,
+            "width": 33.6,
+            "height": 93.9
+          }
+        },
+        "partStates": {
+          "crank_angle_deg": 718.8,
+          "stroke_phase": "buang",
+          "intake_valve": "closed",
+          "exhaust_valve": "open",
+          "spark": "off",
+          "piston_y": 2.45
+        },
+        "geometry": {
+          "rod_top_gap": 0,
+          "rod_bottom_gap": 0,
+          "piston_inside_cylinder": true
+        }
+      }
+    ],
+    "hud": [
+      {
+        "id": "S3_H2",
+        "hud_id": "S3_H2",
+        "component": "Callout",
+        "zone": "callout",
+        "bbox": {
+          "x": 48,
+          "y": 860,
+          "width": 624,
+          "height": 57
+        },
+        "text": "Langkah Buang",
+        "claimRef": "C5"
+      }
+    ]
+  }
+]
