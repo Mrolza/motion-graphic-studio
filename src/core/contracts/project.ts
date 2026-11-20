@@ -46,6 +46,7 @@ export const ProjectSchema = z.object({
   device_profile: DeviceProfileNameSchema,
   stages: z.record(StageIdSchema, StageStatusSchema),
   llm_calls: z.record(StageIdSchema, z.number().int().nonnegative()),
+  llm_calls_last_run: z.record(StageIdSchema, z.number().int().nonnegative()).optional(),
 });
 
 export type VideoFormat = z.infer<typeof VideoFormatSchema>;

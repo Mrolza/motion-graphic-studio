@@ -47,6 +47,10 @@ export async function createProject(
     StageStatus
   >;
   const llm_calls = Object.fromEntries(ALL_STAGES.map((s) => [s, 0])) as Record<StageId, number>;
+  const llm_calls_last_run = Object.fromEntries(ALL_STAGES.map((s) => [s, 0])) as Record<
+    StageId,
+    number
+  >;
 
   const project: Project = ProjectSchema.parse({
     id,
@@ -59,6 +63,7 @@ export async function createProject(
     device_profile: input.device_profile ?? 'standar',
     stages,
     llm_calls,
+    llm_calls_last_run,
   });
 
   const dir = getProjectDir(id, repoRoot);
@@ -79,6 +84,25 @@ export async function saveProject(project: Project, repoRoot = process.cwd()): P
   await writeFile(filePath, JSON.stringify(validated, null, 2), 'utf-8');
 }
 
+export async function resetProjectLastRunCalls(
+  id: string,
+  stage?: StageId,
+  repoRoot = process.cwd()
+): Promise<Project> {
+  const project = await loadProject(id, repoRoot);
+  const lastRun =
+    project.llm_calls_last_run ??
+    (Object.fromEntries(ALL_STAGES.map((s) => [s, 0])) as Record<StageId, number>);
+  if (stage) {
+    lastRun[stage] = 0;
+  } else {
+    for (const s of ALL_STAGES) lastRun[s] = 0;
+  }
+  project.llm_calls_last_run = lastRun;
+  await saveProject(project, repoRoot);
+  return project;
+}
+
 export async function incrementProjectLlmCalls(
   id: string,
   stage: StageId,
@@ -87,6 +111,11 @@ export async function incrementProjectLlmCalls(
 ): Promise<Project> {
   const project = await loadProject(id, repoRoot);
   project.llm_calls[stage] = (project.llm_calls[stage] ?? 0) + count;
+  const lastRun =
+    project.llm_calls_last_run ??
+    (Object.fromEntries(ALL_STAGES.map((s) => [s, 0])) as Record<StageId, number>);
+  lastRun[stage] = (lastRun[stage] ?? 0) + count;
+  project.llm_calls_last_run = lastRun;
   await saveProject(project, repoRoot);
   return project;
 }

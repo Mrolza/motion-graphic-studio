@@ -23,7 +23,9 @@ export const CombinedVerifierOutputSchema = z.object({
   l0b: z.object({
     answers_question: z.boolean(),
     has_off_topic_scene: z.boolean(),
+    hook_paid: z.boolean(),
     main_event_dated: z.boolean().optional(),
+    main_event_named: z.boolean().optional(),
     scores: L0bScoresSchema,
     issues: z.array(z.string()),
   }),
@@ -36,6 +38,7 @@ export const CombinedVerifierOutputSchema = z.object({
 export interface L0bResult {
   answers_question: boolean;
   has_off_topic_scene: boolean;
+  hook_paid: boolean;
   scores: z.infer<typeof L0bScoresSchema>;
   report: QcReport;
 }
@@ -80,7 +83,7 @@ export async function verifyScriptL0bAndL3(params: {
 
   const historyRule =
     format === 'today_in_history'
-      ? `\n5. KHUSUS today_in_history: isi "main_event_dated": true HANYA jika adegan 1–2 menyebut kejadian utama lengkap dengan tanggal dan tahunnya (misalnya "20 Juli 1969, Apollo 11 mendarat di Bulan").`
+      ? `\n6. KHUSUS today_in_history:\n   - "main_event_dated": true HANYA jika adegan 1–2 menyebut kejadian utama lengkap dengan tanggal dan tahunnya (misalnya "20 Juli 1969, Apollo 11 mendarat di Bulan").\n   - "main_event_named": true HANYA jika narasi secara eksplisit menyebut nama kejadian/misi utama (misalnya "Apollo 11", bukan hanya nama modul atau tokohnya).`
       : '';
 
   const systemInstruction = `Anda adalah auditor kualitas & fakta adversarial (L0b + L3).
@@ -90,7 +93,8 @@ BAGIAN 1 — L0b (Relevansi & Kualitas Naskah):
 1. answers_direct (1-5): Apakah naskah menjawab pertanyaan topik secara langsung, dan jawaban inti muncul cepat (±10 detik pertama setelah hook)?
 2. coverage (1-5): Apakah core_claims konsep terpilih tersampaikan?
 3. structure (1-5): Apakah alurnya jelas (hook -> sebab/mekanisme -> akibat -> payoff) dan hook dibayar?
-4. on_topic (1-5): Apakah seluruh adegan tetap relevan pada topik? Set "has_off_topic_scene": true jika ada adegan yang menyimpang/tidak relevan (misalnya membahas topik lain).${historyRule}
+4. on_topic (1-5): Apakah seluruh adegan tetap relevan pada topik? Set "has_off_topic_scene": true jika ada adegan yang menyimpang/tidak relevan (misalnya membahas topik lain).
+5. hook_paid: Set false jika hook di S1 menyebut fakta, perbandingan, atau janji spesifik (misalnya "memori komputer lebih kecil dari ponsel/smartphone") yang TIDAK dibahas dan dijawab lagi di adegan S2–S4. Set true hanya jika topik/janji hook benar-benar dibayar di isi naskah.${historyRule}
 Set "answers_question": true hanya jika naskah benar-benar menjawab pertanyaan topik.
 
 BAGIAN 2 — L3 (Verifier Fakta Ketat):
@@ -103,7 +107,7 @@ Periksa SEMUA kalimat (termasuk yang non_factual: true):
 
 Kembalikan JSON sesuai skema:
 {
-  "l0b": { "answers_question": true|false, "has_off_topic_scene": true|false, "main_event_dated": true|false, "scores": { "answers_direct": 1..5, "coverage": 1..5, "structure": 1..5, "on_topic": 1..5 }, "issues": ["..."] },
+  "l0b": { "answers_question": true|false, "has_off_topic_scene": true|false, "hook_paid": true|false, "main_event_dated": true|false, "main_event_named": true|false, "scores": { "answers_direct": 1..5, "coverage": 1..5, "structure": 1..5, "on_topic": 1..5 }, "issues": ["..."] },
   "l3": { "evaluations": [{ "ref": "S1.1", "verdict": "supported|overstated|unsupported|non_factual_assertion", "reason": "..." }], "extra_findings": [] }
 }`;
 
@@ -126,8 +130,15 @@ ${JSON.stringify(items, null, 2)}`;
   });
 
   const l0bIssues: QcIssue[] = [];
-  const { answers_question, has_off_topic_scene, main_event_dated, scores, issues: rawL0bIssues } =
-    res.data.l0b;
+  const {
+    answers_question,
+    has_off_topic_scene,
+    hook_paid,
+    main_event_dated,
+    main_event_named,
+    scores,
+    issues: rawL0bIssues,
+  } = res.data.l0b;
 
   if (!answers_question) {
     l0bIssues.push({
@@ -143,11 +154,25 @@ ${JSON.stringify(items, null, 2)}`;
       ref: 'script',
     });
   }
+  if (!hook_paid) {
+    l0bIssues.push({
+      severity: 'error',
+      message: 'L0B_HOOK_UNPAID: janji atau topik pada hook (S1) tidak dibahas di isi naskah',
+      ref: 'S1',
+    });
+  }
   if (format === 'today_in_history' && main_event_dated === false) {
     l0bIssues.push({
       severity: 'error',
       message: 'L0B_MISSING_MAIN_EVENT: adegan 1–2 wajib menyebut kejadian utama lengkap dengan tanggal dan tahunnya',
       ref: 'S1',
+    });
+  }
+  if (format === 'today_in_history' && main_event_named === false) {
+    l0bIssues.push({
+      severity: 'error',
+      message: 'L0B_MISSING_MAIN_EVENT_NAME: narasi wajib menyebut nama kejadian/misi utama secara eksplisit (mis. "Apollo 11")',
+      ref: 'script',
     });
   }
   for (const [k, v] of Object.entries(scores)) {
@@ -199,6 +224,7 @@ ${JSON.stringify(items, null, 2)}`;
     l0b: {
       answers_question,
       has_off_topic_scene,
+      hook_paid,
       scores,
       report: { layer: 'L0b', issues: l0bIssues },
     },

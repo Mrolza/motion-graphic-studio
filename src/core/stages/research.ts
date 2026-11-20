@@ -87,7 +87,7 @@ async function extractClaimsFromSources(params: {
   const systemInstruction = `Anda adalah ekstraktor fakta ketat. Tugas Anda menilai relevansi tiap sumber terhadap pertanyaan topik dan mengekstrak klaim faktual.
 ATURAN MUTLAK:
 1. Nilai setiap sumber di "source_evaluations": "relevant" (menjawab langsung), "partial" (terkait sebagian), atau "irrelevant" (menyimpang/tidak menjawab topik, misalnya membahas satu kereta tertentu padahal topik menanyakan mekanisme umum).
-2. "quote" HARUS berupa KALIMAT UTUH (diawali huruf kapital/awal kalimat dan diakhiri tanda baca titik/tanda tanya/seru) yang disalin KARAKTER-DEMI-KARAKTER dari teks sumber dengan "source_id" yang sesuai. JANGAN memotong frasa di tengah kalimat, dan setiap angka/tahun/tanggal di "text" WAJIB muncul di "quote".
+2. "quote" HARUS berupa KALIMAT UTUH (diawali huruf kapital/awal kalimat dan diakhiri tanda baca titik/tanda tanya/seru) yang disalin KARAKTER-DEMI-KARAKTER dari teks sumber dengan "source_id" yang sesuai. JANGAN memotong frasa di tengah kalimat. JANGAN menyisipkan angka, tahun, tanggal, atau nama depan/tokoh dari kalimat lain: setiap angka/tahun/tanggal dan nama diri di "text" WAJIB benar-benar muncul di "quote" tersebut (mis. jika kutipan hanya menyebut "Armstrong", tulis "Armstrong", bukan "Neil Armstrong"). Pastikan ada klaim yang kutipannya memuat tanggal dan tahun lengkap secara eksplisit bila relevan dengan topik.
 3. "text" ditulis dalam bahasa Indonesia yang jelas.
 4. "kind" WAJIB salah satu dari: "fact", "estimate", "hypothetical", "interpretation".
 5. Jika klaim menyebut angka penting, isi "value" (angka murni) dan "unit". Jika tidak ada, hilangkan (jangan null).

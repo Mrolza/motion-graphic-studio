@@ -98,7 +98,7 @@ export const FORMAT_PACKS: FormatPack[] = [
     ],
     fact_rules: [
       'Hanya gunakan fakta dari Fact Ledger hasil riset Wikimedia/Wikipedia.',
-      'Adegan 1–2 wajib menyebut kejadian utama lengkap dengan tanggal dan tahunnya, bersumber dari artikel utama.',
+      'Adegan 1–2 wajib menyebut nama kejadian/misi utama secara eksplisit (mis. "Apollo 11") serta tanggal dan tahunnya, bersumber dari artikel utama.',
       'Tanggal, tahun, nama tokoh, dan tempat wajib sama persis dengan sumber.',
     ],
   },

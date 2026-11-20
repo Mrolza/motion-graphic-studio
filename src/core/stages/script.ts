@@ -9,6 +9,7 @@ import {
   getProjectDir,
   incrementProjectLlmCalls,
   loadProject,
+  resetProjectLastRunCalls,
   saveProject,
 } from '@core/project/store';
 import { verifyScriptL0bAndL3, type L0bResult } from '@core/qc/l0b-quality';
@@ -34,6 +35,7 @@ async function saveL0bReport(qcDir: string, l0b: L0bResult) {
       {
         layer: 'L0b',
         answers_question: l0b.answers_question,
+        hook_paid: l0b.hook_paid,
         scores: l0b.scores,
         issues: l0b.report.issues,
       },
@@ -49,6 +51,7 @@ export async function runQcOnly(
   repoRoot = process.cwd()
 ): Promise<{ l2: QcReport; l0b: L0bResult; l3: QcReport }> {
   const projectDir = getProjectDir(projectId, repoRoot);
+  await resetProjectLastRunCalls(projectId, 'S4', repoRoot);
   const project = await loadProject(projectId, repoRoot);
   project.stages.S4 = 'running';
   await saveProject(project, repoRoot);
@@ -116,6 +119,7 @@ export async function runScriptAndQcStage(
   repoRoot = process.cwd()
 ): Promise<ScriptAndQcResult> {
   const projectDir = getProjectDir(projectId, repoRoot);
+  await resetProjectLastRunCalls(projectId, 'S4', repoRoot);
   const project = await loadProject(projectId, repoRoot);
   project.stages.S3 = 'running';
   await saveProject(project, repoRoot);

@@ -87,6 +87,79 @@ export function doClaimFactsAppearInQuote(claimText: string, quote: string): boo
   return true;
 }
 
+const NAME_EQUIVALENTS: Record<string, string[]> = {
+  bulan: ['moon', 'lunar'],
+  bumi: ['earth'],
+  matahari: ['sun', 'solar'],
+  jerman: ['german', 'germany'],
+  inggris: ['english', 'england', 'british'],
+  amerika: ['american', 'america', 'united states', 'u.s.'],
+  prusia: ['prussia', 'prussian'],
+  operasi: ['operation'],
+  tranquillity: ['tranquility'],
+  pasifik: ['pacific'],
+  atlantik: ['atlantic'],
+  soviet: ['soviet', 'ussr'],
+};
+
+const NON_PROPER_CAPITAL_WORDS = new Set([
+  ...MONTH_PAIRS.map(([id]) => id),
+  'base',
+  'modul',
+  'misi',
+  'tahun',
+  'tanggal',
+  'pukul',
+  'serikat',
+  'uni',
+  'utara',
+  'selatan',
+  'timur',
+  'barat',
+  'perang',
+  'dunia',
+  'luar',
+  'angkasa',
+  'planet',
+  'komando',
+  'program',
+  'pusat',
+  'stasiun',
+  'kolonel',
+  'jenderal',
+  'presiden',
+  'kanselir',
+  'komandan',
+  'pilot',
+  'astronot',
+  'antariksawan',
+]);
+
+export function doClaimNamesAppearInQuote(claimText: string, quote: string): string[] {
+  const rawWords = claimText.split(/\s+/).filter(Boolean);
+  const lowerQuote = quote.toLowerCase();
+  const missing: string[] = [];
+
+  for (let i = 1; i < rawWords.length; i++) {
+    const raw = rawWords[i]!;
+    // Skip words that open a quoted phrase (e.g. 'Satu langkah kecil...)
+    if (/^["""'(]/.test(raw)) continue;
+    const w = raw.replace(/^["""'(]+|[.,!?;:"""')]+$/g, '');
+    if (!/^[A-Z][a-z]{2,}$/.test(w)) continue;
+    const prev = rawWords[i - 1] ?? '';
+    if (/[.!?]$/.test(prev)) continue;
+
+    const lower = w.toLowerCase();
+    if (NON_PROPER_CAPITAL_WORDS.has(lower)) continue;
+
+    const candidates = [lower, ...(NAME_EQUIVALENTS[lower] ?? [])];
+    if (!candidates.some((c) => lowerQuote.includes(c))) {
+      missing.push(w);
+    }
+  }
+  return missing;
+}
+
 export interface L1Result {
   ledger: FactLedger;
   report: QcReport;
@@ -154,6 +227,16 @@ export function verifyLedgerL1(
       issues.push({
         severity: 'error',
         message: 'CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan',
+        ref: claim.id,
+      });
+      return { ...claim, status: 'unverified' };
+    }
+
+    const missingNames = doClaimNamesAppearInQuote(claim.text, primarySrc.quote);
+    if (missingNames.length > 0) {
+      issues.push({
+        severity: 'error',
+        message: `CLAIM_NAME_NOT_IN_QUOTE: nama diri (${missingNames.join(', ')}) pada teks klaim tidak muncul di kutipan`,
         ref: claim.id,
       });
       return { ...claim, status: 'unverified' };

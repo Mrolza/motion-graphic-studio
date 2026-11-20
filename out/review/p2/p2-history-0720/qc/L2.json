@@ -1,10 +1,4 @@
 {
   "layer": "L2",
-  "issues": [
-    {
-      "severity": "warning",
-      "message": "NAME_NOT_IN_CLAIM: nama \"Bulan\" tidak ditemukan di klaim rujukan (C6)",
-      "ref": "S1.2"
-    }
-  ]
+  "issues": []
 }

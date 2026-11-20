@@ -2,7 +2,7 @@
   "claims": [
     {
       "id": "C1",
-      "text": "Pada 20 Juli 1969, modul pendarat Apollo 11 bernama Eagle berhasil mendarat di permukaan Bulan.",
+      "text": "Pada tanggal 20 Juli 1969, misi Apollo 11 berhasil mendaratkan modul lunar Eagle di permukaan Bulan.",
       "kind": "fact",
       "status": "unverified",
       "sources": [
@@ -10,41 +10,41 @@
           "url": "https://en.wikipedia.org/wiki/Apollo_11",
           "title": "Apollo 11",
           "quote": "After a three-day transit, Armstrong and Aldrin descended to the surface aboard the LM Eagle, landing in the Sea of Tranquility (Mare Tranquillitatis) on July 20 at 20:17 UTC while Collins remained in lunar orbit aboard the CM Columbia.",
-          "retrieved_at": "2026-11-20T10:55:27.873Z"
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
         }
       ]
     },
     {
       "id": "C2",
-      "text": "Neil Armstrong dan Buzz Aldrin menjadi dua manusia pertama yang menginjakkan kaki di permukaan Bulan.",
+      "text": "Neil Armstrong dan Buzz Aldrin menjadi manusia pertama yang mendarat dan berjalan di permukaan Bulan.",
       "kind": "fact",
-      "status": "verified",
+      "status": "unverified",
       "sources": [
         {
           "url": "https://en.wikipedia.org/wiki/Apollo_11",
           "title": "Apollo 11",
-          "quote": "Apollo 11 (July 16–24, 1969) was the American spaceflight that first landed humans on the Moon, and the fifth crewed mission of NASA's Apollo program.",
-          "retrieved_at": "2026-11-20T10:55:27.873Z"
+          "quote": "Armstrong became the first human to walk on the Moon approximately six hours after landing, followed by Aldrin nineteen minutes later.",
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
         }
       ]
     },
     {
       "id": "C3",
-      "text": "Misi ini dipimpin oleh komandan Neil Armstrong yang mengucapkan kalimat ikonik 'Satu langkah kecil bagi manusia, satu lompatan raksasa bagi umat manusia'.",
+      "text": "Komandan Neil Armstrong mengucapkan kalimat bersejarah 'That's one small step for man, one giant leap for mankind' saat menginjakkan kaki di Bulan.",
       "kind": "fact",
-      "status": "verified",
+      "status": "unverified",
       "sources": [
         {
           "url": "https://en.wikipedia.org/wiki/Apollo_11",
           "title": "Apollo 11",
           "quote": "Stepping onto the lunar surface, Armstrong declared: \"That's one small step for [a] man, one giant leap for mankind.\"",
-          "retrieved_at": "2026-11-20T10:55:27.873Z"
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
         }
       ]
     },
     {
       "id": "C4",
-      "text": "Kejadian bersejarah ini disaksikan oleh sekitar 600 juta penonton televisi di seluruh dunia.",
+      "text": "Siaran langsung peristiwa pendaratan di Bulan disaksikan oleh sekitar 600 juta penonton di seluruh dunia.",
       "kind": "estimate",
       "status": "verified",
       "sources": [
@@ -52,63 +52,177 @@
           "url": "https://en.wikipedia.org/wiki/Apollo_11",
           "title": "Apollo 11",
           "quote": "Armstrong's moonwalk was broadcast live to an estimated 600 million viewers, roughly one-fifth of the world's population, making it among the most-watched television events in history.",
-          "retrieved_at": "2026-11-20T10:55:27.873Z"
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
         }
       ]
     },
     {
       "id": "C5",
-      "text": "Pada tanggal 20 Juli 1969, astronaut Neil Armstrong dan Buzz Aldrin menerbangkan modul pendarat Eagle ke Bulan.",
+      "text": "Pada 20 Juli 1969, misi Apollo 11 berhasil mendaratkan modul lunar Eagle di permukaan Bulan.",
       "kind": "fact",
       "status": "unverified",
-      "sources": [
-        {
-          "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
-          "title": "Lunar Module Eagle",
-          "quote": "It was flown to the Moon on July 20, 1969, by astronaut Neil Armstrong with navigational assistance from Buzz Aldrin.",
-          "retrieved_at": "2026-11-20T10:55:28.222Z"
-        }
-      ]
-    },
-    {
-      "id": "C6",
-      "text": "Modul Eagle mendarat di Base Tranquillity pada pukul 20:17:40 UTC tanggal 20 Juli 1969.",
-      "kind": "fact",
-      "status": "verified",
-      "sources": [
-        {
-          "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
-          "title": "Lunar Module Eagle",
-          "quote": "Eagle was landed at Tranquility Base at 20:17:40 UTC on July 20, 1969, with 216 pounds (98 kg) of usable fuel remaining.",
-          "retrieved_at": "2026-11-20T10:55:28.222Z"
-        }
-      ]
-    },
-    {
-      "id": "C7",
-      "text": "Mare Tranquillitatis menjadi lokasi pendaratan berawak pertama di Bulan pada tanggal 20 Juli 1969.",
-      "kind": "fact",
-      "status": "verified",
       "sources": [
         {
           "url": "https://en.wikipedia.org/wiki/Mare_Tranquillitatis",
           "title": "Mare Tranquillitatis",
           "quote": "Mare Tranquillitatis was the landing site for the first crewed landing on the Moon on July 20, 1969, at 20:18 UTC.",
-          "retrieved_at": "2026-11-20T10:55:28.502Z"
+          "retrieved_at": "2026-11-20T11:37:43.259Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Neil Armstrong dan Buzz Aldrin menjadi manusia pertama yang mendarat dan berjalan di Bulan.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+          "title": "Neil Armstrong",
+          "quote": "On July 20, 1969, Armstrong and Apollo 11 Lunar Module (LM) pilot Buzz Aldrin became the first people to land on the Moon, and the next day they spent two and a half hours outside the Lunar Module Eagle spacecraft while Michael Collins remained in lunar orbit in the Apollo Command Module Columbia.",
+          "retrieved_at": "2026-11-20T11:37:43.924Z"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "Komandan Neil Armstrong mengucapkan kalimat bersejarah saat pertama kali menginjakkan kaki di Bulan.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+          "title": "Neil Armstrong",
+          "quote": "When Armstrong first stepped onto the lunar surface, he famously said: \"That's one small step for [a] man, one giant leap for mankind.\"",
+          "retrieved_at": "2026-11-20T11:37:43.924Z"
         }
       ]
     },
     {
       "id": "C8",
-      "text": "Setelah pendaratan modul Eagle, Neil Armstrong menyampaikan kalimat 'The Eagle has landed' kepada pengendali penerbangan di Bumi.",
+      "text": "Lebih dari 500 juta penonton di seluruh dunia menyaksikan siaran langsung peristiwa tersebut.",
+      "value": 530000000,
+      "unit": "viewers",
+      "kind": "estimate",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+          "title": "Neil Armstrong",
+          "quote": "It was broadcast live to an estimated 530 million viewers worldwide.",
+          "retrieved_at": "2026-11-20T11:37:43.924Z"
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "text": "Misi Apollo 11 dengan modul lunar Eagle berhasil mendaratkan manusia pertama di permukaan Bulan pada 20 Juli 1969.",
       "kind": "fact",
       "status": "verified",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/Mare_Tranquillitatis",
-          "title": "Mare Tranquillitatis",
-          "quote": "After astronauts Neil Armstrong and Buzz Aldrin made a soft landing in the Apollo 11 Lunar Module Eagle, Armstrong told flight controllers on Earth, \"Houston, Tranquility Base here. The Eagle has landed.\"",
-          "retrieved_at": "2026-11-20T10:55:28.502Z"
+          "url": "https://en.wikipedia.org/wiki/Apollo_Lunar_Module",
+          "title": "Apollo Lunar Module",
+          "quote": "The first crewed lunar landing occurred on July 20, 1969, in the Apollo 11 LM-5 Eagle.",
+          "retrieved_at": "2026-11-20T11:38:09.618Z"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "text": "Neil Armstrong menginjakkan kaki di permukaan Bulan dan mengucapkan kalimat bersejarah 'That's one small step for [a] man, one giant leap for mankind'.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/One_small_step",
+          "title": "One small step",
+          "quote": "On July 21, 1969, when Neil Armstrong became the first person to set foot on the Moon, he said \"That's one small step for [a] man, one giant leap for mankind\".",
+          "retrieved_at": "2026-11-20T11:38:11.473Z"
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "text": "Neil Armstrong menginjakkan kaki kirinya di permukaan Bulan pada tanggal 21 Juli 1969 pukul 02:56 UTC.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/One_small_step",
+          "title": "One small step",
+          "quote": "He turned and set his left boot on the lunar surface at 02:56 UTC July 21, 1969, then said \"That's one small step for [a] man, one giant leap for mankind.\"",
+          "retrieved_at": "2026-11-20T11:38:11.473Z"
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "text": "Diperkirakan sekitar 530 juta orang menyaksikan peristiwa pendaratan tersebut secara langsung di seluruh dunia.",
+      "kind": "estimate",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/One_small_step",
+          "title": "One small step",
+          "quote": "An estimated 530 million people viewed the event, 20 percent out of a world population of approximately 3.6 billion.",
+          "retrieved_at": "2026-11-20T11:38:11.473Z"
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "text": "Pada tanggal 20 Juli, modul lunar Eagle mendarat di permukaan Bulan.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "After a three-day transit, Armstrong and Aldrin descended to the surface aboard the LM Eagle, landing in the Sea of Tranquility (Mare Tranquillitatis) on July 20 at 20:17 UTC while Collins remained in lunar orbit aboard the CM Columbia.",
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "text": "Neil Armstrong mengucapkan kalimat terkenal saat melangkah ke permukaan Bulan.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "Stepping onto the lunar surface, Armstrong declared: \"That's one small step for [a] man, one giant leap for mankind.\"",
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "text": "Misi Apollo 11 diluncurkan pada tanggal 16 Juli 1969.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "Launched atop a Saturn V rocket from Kennedy Space Center in Florida on July 16 at 13:32 UTC, the Apollo spacecraft consisted of three parts: the command module (CM), which housed the three astronauts and was the only part to return to Earth; the service module (SM), which provided propulsion, electrical power, oxygen, and water to the command module; and the Lunar Module (LM), which had two stages—a descent stage with a large engine and fuel tanks for landing on the Moon, and a lighter ascent stage containing a cabin for two astronauts and a small engine to return them to lunar orbit.",
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "text": "Para kru Apollo 11 kembali dengan selamat ke Bumi pada tanggal 24 Juli 1969.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Apollo_11",
+          "title": "Apollo 11",
+          "quote": "After more than 21 hours on the surface, they rejoined Collins in lunar orbit, and the crew returned safely to Earth on July 24, splashing down in the Pacific Ocean.",
+          "retrieved_at": "2026-11-20T11:37:42.753Z"
         }
       ]
     }

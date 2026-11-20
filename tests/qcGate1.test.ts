@@ -5,7 +5,13 @@ import { afterEach, describe, expect, it } from 'vitest';
 import type { FactClaim } from '@core/contracts/fact-ledger';
 import type { WikipediaSource } from '@core/research/wikipedia';
 import { validateGate1Approval } from '@core/qc/gate1-check';
+import { CombinedVerifierOutputSchema } from '@core/qc/l0b-quality';
 import { evaluateL0, verifyLedgerL1 } from '@core/qc/l1-ledger';
+import {
+  createProject,
+  incrementProjectLlmCalls,
+  resetProjectLastRunCalls,
+} from '@core/project/store';
 
 describe('P2C Gate 1 Blocking Rules, L0 Strict Core Claims, and L1 Claim-Quote Support', () => {
   const tempDirs: string[] = [];
@@ -188,5 +194,93 @@ describe('P2C Gate 1 Blocking Rules, L0 Strict Core Claims, and L1 Claim-Quote S
     );
     expect(okRes.ledger.claims[0]!.status).toBe('verified');
     expect(okRes.report.issues).toHaveLength(0);
+  });
+
+  it('L1 rejects CLAIM_NAME_NOT_IN_QUOTE when proper names in claim text are absent from quote', () => {
+    const sources: WikipediaSource[] = [
+      {
+        source_id: 'S1',
+        url: 'https://en.wikipedia.org/wiki/Apollo_11',
+        title: 'Apollo 11',
+        lang: 'en',
+        text: 'Apollo 11 was the American spaceflight that first landed humans on the Moon. Commander Neil Armstrong and lunar module pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969.',
+        retrieved_at: '2026-11-20T00:00:00.000Z',
+      },
+    ];
+
+    const missingNameRes = verifyLedgerL1(
+      [
+        {
+          id: 'C1',
+          text: 'Neil Armstrong dan Buzz Aldrin menjadi manusia pertama yang menginjakkan kaki di Bulan.',
+          kind: 'fact',
+          status: 'unverified',
+          sources: [
+            {
+              url: sources[0]!.url,
+              title: 'Apollo 11',
+              quote: 'Apollo 11 was the American spaceflight that first landed humans on the Moon.',
+              retrieved_at: '2026-11-20T00:00:00.000Z',
+            },
+          ],
+        },
+      ],
+      sources,
+      { C1: 'S1' }
+    );
+    expect(missingNameRes.ledger.claims[0]!.status).toBe('unverified');
+    expect(missingNameRes.report.issues[0]?.message).toContain('CLAIM_NAME_NOT_IN_QUOTE');
+
+    const okNameRes = verifyLedgerL1(
+      [
+        {
+          id: 'C2',
+          text: 'Komandan Neil Armstrong dan Buzz Aldrin mendaratkan Eagle pada 20 Juli 1969.',
+          kind: 'fact',
+          status: 'unverified',
+          sources: [
+            {
+              url: sources[0]!.url,
+              title: 'Apollo 11',
+              quote:
+                'Commander Neil Armstrong and lunar module pilot Buzz Aldrin landed the Apollo Lunar Module Eagle on July 20, 1969.',
+              retrieved_at: '2026-11-20T00:00:00.000Z',
+            },
+          ],
+        },
+      ],
+      sources,
+      { C2: 'S1' }
+    );
+    expect(okNameRes.ledger.claims[0]!.status).toBe('verified');
+  });
+
+  it('tracks llm_calls_last_run separately from cumulative llm_calls and validates L0b hook_paid/main_event_named', async () => {
+    const repoRoot = mkdtempSync(path.join(os.tmpdir(), 'mgs-calls-'));
+    tempDirs.push(repoRoot);
+    await createProject({ id: 'demo-calls', topic: 'Test', format: 'today_in_history', style: 'map_archive' }, repoRoot);
+    await incrementProjectLlmCalls('demo-calls', 'S3', 2, repoRoot);
+    await incrementProjectLlmCalls('demo-calls', 'S4', 1, repoRoot);
+    const resetProj = await resetProjectLastRunCalls('demo-calls', undefined, repoRoot);
+    expect(resetProj.llm_calls.S3).toBe(2);
+    expect(resetProj.llm_calls_last_run?.S3).toBe(0);
+    const afterProj = await incrementProjectLlmCalls('demo-calls', 'S4', 1, repoRoot);
+    expect(afterProj.llm_calls.S4).toBe(2);
+    expect(afterProj.llm_calls_last_run?.S4).toBe(1);
+
+    const parsed = CombinedVerifierOutputSchema.parse({
+      l0b: {
+        answers_question: true,
+        has_off_topic_scene: false,
+        hook_paid: false,
+        main_event_dated: true,
+        main_event_named: false,
+        scores: { answers_direct: 5, coverage: 5, structure: 5, on_topic: 5 },
+        issues: [],
+      },
+      l3: { evaluations: [] },
+    });
+    expect(parsed.l0b.hook_paid).toBe(false);
+    expect(parsed.l0b.main_event_named).toBe(false);
   });
 });

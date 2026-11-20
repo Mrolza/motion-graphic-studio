@@ -21,7 +21,7 @@ Jika ada konflik, ikuti urutan ini:
 ### A. Hook (0–3 detik pertama — Scene S1)
 - Scene pertama mengeksekusi hook konsep tanpa basa-basi ("halo guys", "pernahkah kamu bertanya-tanya", "di video kali ini kita akan membahas...").
 - Buka langsung dengan pertanyaan tajam, kontras visual/fakta, atau fenomena konkret yang memancing rasa ingin tahu.
-- **Kewajiban bayar hook:** Setiap janji atau pertanyaan di hook **wajib dijawab tuntas** oleh isi video. Tidak ada clickbait yang dibiarkan menggantung.
+- **Kewajiban bayar hook:** Setiap janji, perbandingan, atau pertanyaan di hook **wajib benar-benar dibahas dan dijawab tuntas** oleh isi video berdasarkan Fact Ledger. Dilarang membuka hook dengan premis/perbandingan yang tidak dibahas di scene berikutnya.
 
 ### B. Jawaban Inti Muncul Cepat (±10 detik pertama setelah hook)
 - Jangan menunda jawaban utama sampai akhir video. Penonton video pendek akan langsung pergi jika 10 detik pertama hanya berputar-putar di pengantar.
@@ -63,7 +63,7 @@ Voice-over akan dibacakan oleh mesin TTS (`msedge-tts` Indonesia), bukan manusia
 5. **Kalimat non-faktual** (`"non_factual": true`, `"claim_refs": []`) **HANYA** boleh dipakai untuk pertanyaan retoris, transisi, atau ajakan. Pernyataan tentang subjek — termasuk kalimat penilaian seperti "efisien", "andal", "tercanggih", atau kesimpulan kualitas — **BUKAN** `non_factual` dan wajib merujuk klaim `verified`. **Dilarang** memasukkan angka, tahun, atau nama diri di kalimat `non_factual`.
 6. **Klaim `kind: "interpretation"`** boleh dipakai, tetapi kalimatnya harus terbaca sebagai penafsiran ("hal ini menunjukkan...", "artinya...").
 7. **Format `what_if`**: bagian skenario hipotetis wajib memakai bahasa pengandaian ("jika", "diperkirakan", "kemungkinan", "akan"), sedangkan angka nyata tetap merujuk klaim `verified`.
-8. **Format `today_in_history`**: tanggal, tahun, nama tokoh, dan tempat wajib persis sesuai klaim sumber.
+8. **Format `today_in_history`**: adegan 1–2 wajib menyebut **nama kejadian/misi utama** secara eksplisit (mis. "Apollo 11") beserta tanggal dan tahun lengkapnya; tanggal, tahun, nama tokoh, dan tempat wajib persis sesuai klaim sumber.
 
 ---
 

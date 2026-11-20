@@ -4,22 +4,13 @@
       "id": "S1",
       "sentences": [
         {
-          "text": "Pernahkah kamu bayangkan komputer pesawat ruang angkasa masa lalu memiliki memori jauh lebih kecil dari ponselmu hari ini?",
-          "claim_refs": [],
-          "emphasis_words": [
-            "komputer",
-            "memori"
-          ],
-          "non_factual": true
-        },
-        {
-          "text": "Tepat pada 20 Juli 1969, modul Eagle sukses mendarat di permukaan Bulan.",
+          "text": "Pada tanggal 20 Juli 1969, misi Apollo 11 berhasil mendaratkan manusia pertama di permukaan Bulan.",
           "claim_refs": [
-            "C6"
+            "C9"
           ],
           "emphasis_words": [
             "20 Juli 1969",
-            "modul Eagle"
+            "Apollo 11"
           ],
           "non_factual": false
         }
@@ -29,23 +20,24 @@
       "id": "S2",
       "sentences": [
         {
-          "text": "Pendaratan bersejarah itu terjadi di lokasi khusus bernama Mare Tranquillitatis.",
+          "text": "Modul lunar Eagle sukses mendarat dan membawa Neil Armstrong serta Buzz Aldrin ke satelit bumi.",
           "claim_refs": [
-            "C7"
+            "C9",
+            "C6"
           ],
           "emphasis_words": [
-            "Mare Tranquillitatis"
+            "modul lunar Eagle",
+            "Neil Armstrong"
           ],
           "non_factual": false
         },
         {
-          "text": "Usai mendarat, Neil Armstrong segera mengabarkan ke pengendali di Bumi bahwa Eagle telah tiba.",
+          "text": "Mereka menjadi manusia pertama yang mendarat dan berjalan di Bulan.",
           "claim_refs": [
-            "C8"
+            "C6"
           ],
           "emphasis_words": [
-            "Neil Armstrong",
-            "Eagle"
+            "manusia pertama"
           ],
           "non_factual": false
         }
@@ -55,23 +47,21 @@
       "id": "S3",
       "sentences": [
         {
-          "text": "Neil Armstrong dan Buzz Aldrin kemudian tercatat sebagai dua manusia pertama yang menginjakkan kaki di Bulan.",
+          "text": "Neil Armstrong menginjakkan kaki di permukaan Bulan dan mengucapkan kalimat bersejarah.",
           "claim_refs": [
-            "C2"
+            "C10"
           ],
           "emphasis_words": [
-            "manusia pertama",
-            "Bulan"
+            "permukaan Bulan"
           ],
           "non_factual": false
         },
         {
-          "text": "Sang komandan juga mengucapkan kalimat ikonik tentang satu langkah kecil bagi umat manusia.",
+          "text": "Beliau menyatakan bahwa itu adalah satu langkah kecil bagi manusia, satu lompatan besar bagi umat manusia.",
           "claim_refs": [
-            "C3"
+            "C10"
           ],
           "emphasis_words": [
-            "komandan",
             "langkah kecil"
           ],
           "non_factual": false
@@ -82,13 +72,22 @@
       "id": "S4",
       "sentences": [
         {
-          "text": "Peristiwa luar biasa tersebut disaksikan langsung oleh sekitar 600 juta penonton televisi di seluruh penjuru dunia.",
+          "text": "Siaran langsung peristiwa pendaratan tersebut disaksikan oleh sekitar 600 juta penonton di seluruh dunia.",
           "claim_refs": [
             "C4"
           ],
           "emphasis_words": [
-            "600 juta",
-            "televisi"
+            "600 juta penonton"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Peristiwa besar ini melibatkan jutaan pasang mata yang menyaksikannya secara langsung.",
+          "claim_refs": [
+            "C4"
+          ],
+          "emphasis_words": [
+            "siaran langsung"
           ],
           "non_factual": false
         }

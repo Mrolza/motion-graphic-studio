@@ -8,8 +8,43 @@
     },
     {
       "severity": "info",
-      "message": "klaim dibuang: QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber",
+      "message": "klaim dibuang: CLAIM_NAME_NOT_IN_QUOTE: nama diri (Buzz) pada teks klaim tidak muncul di kutipan",
+      "ref": "C2"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: CLAIM_NAME_NOT_IN_QUOTE: nama diri (Neil) pada teks klaim tidak muncul di kutipan",
+      "ref": "C3"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan",
       "ref": "C5"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: CLAIM_NAME_NOT_IN_QUOTE: nama diri (Neil) pada teks klaim tidak muncul di kutipan",
+      "ref": "C7"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa",
+      "ref": "C8"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa",
+      "ref": "C11"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan",
+      "ref": "C15"
+    },
+    {
+      "severity": "info",
+      "message": "klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan",
+      "ref": "C16"
     }
   ]
 }

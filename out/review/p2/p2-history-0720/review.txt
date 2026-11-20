@@ -2,45 +2,56 @@
 Topik: Peristiwa bersejarah tanggal 07-20 | Format: today_in_history
 
 [Scene S1]
-  S1.1: Pernahkah kamu bayangkan komputer pesawat ruang angkasa masa lalu memiliki memori jauh lebih kecil dari ponselmu hari ini?
-    -> (non_factual: true)
-  S1.2: Tepat pada 20 Juli 1969, modul Eagle sukses mendarat di permukaan Bulan.
-    -> [C6 | verified] Modul Eagle mendarat di Base Tranquillity pada pukul 20:17:40 UTC tanggal 20 Juli 1969.
-       Kutipan: "Eagle was landed at Tranquility Base at 20:17:40 UTC on July 20, 1969, with 216 pounds (98 kg) of usable fuel remaining."
-       Sumber:  https://en.wikipedia.org/wiki/Lunar_Module_Eagle
+  S1.1: Pada tanggal 20 Juli 1969, misi Apollo 11 berhasil mendaratkan manusia pertama di permukaan Bulan.
+    -> [C9 | verified] Misi Apollo 11 dengan modul lunar Eagle berhasil mendaratkan manusia pertama di permukaan Bulan pada 20 Juli 1969.
+       Kutipan: "The first crewed lunar landing occurred on July 20, 1969, in the Apollo 11 LM-5 Eagle."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_Lunar_Module
 
 [Scene S2]
-  S2.1: Pendaratan bersejarah itu terjadi di lokasi khusus bernama Mare Tranquillitatis.
-    -> [C7 | verified] Mare Tranquillitatis menjadi lokasi pendaratan berawak pertama di Bulan pada tanggal 20 Juli 1969.
-       Kutipan: "Mare Tranquillitatis was the landing site for the first crewed landing on the Moon on July 20, 1969, at 20:18 UTC."
-       Sumber:  https://en.wikipedia.org/wiki/Mare_Tranquillitatis
-  S2.2: Usai mendarat, Neil Armstrong segera mengabarkan ke pengendali di Bumi bahwa Eagle telah tiba.
-    -> [C8 | verified] Setelah pendaratan modul Eagle, Neil Armstrong menyampaikan kalimat 'The Eagle has landed' kepada pengendali penerbangan di Bumi.
-       Kutipan: "After astronauts Neil Armstrong and Buzz Aldrin made a soft landing in the Apollo 11 Lunar Module Eagle, Armstrong told flight controllers on Earth, "Houston, Tranquility Base here. The Eagle has landed.""
-       Sumber:  https://en.wikipedia.org/wiki/Mare_Tranquillitatis
+  S2.1: Modul lunar Eagle sukses mendarat dan membawa Neil Armstrong serta Buzz Aldrin ke satelit bumi.
+    -> [C9 | verified] Misi Apollo 11 dengan modul lunar Eagle berhasil mendaratkan manusia pertama di permukaan Bulan pada 20 Juli 1969.
+       Kutipan: "The first crewed lunar landing occurred on July 20, 1969, in the Apollo 11 LM-5 Eagle."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_Lunar_Module
+    -> [C6 | verified] Neil Armstrong dan Buzz Aldrin menjadi manusia pertama yang mendarat dan berjalan di Bulan.
+       Kutipan: "On July 20, 1969, Armstrong and Apollo 11 Lunar Module (LM) pilot Buzz Aldrin became the first people to land on the Moon, and the next day they spent two and a half hours outside the Lunar Module Eagle spacecraft while Michael Collins remained in lunar orbit in the Apollo Command Module Columbia."
+       Sumber:  https://en.wikipedia.org/wiki/Neil_Armstrong
+  S2.2: Mereka menjadi manusia pertama yang mendarat dan berjalan di Bulan.
+    -> [C6 | verified] Neil Armstrong dan Buzz Aldrin menjadi manusia pertama yang mendarat dan berjalan di Bulan.
+       Kutipan: "On July 20, 1969, Armstrong and Apollo 11 Lunar Module (LM) pilot Buzz Aldrin became the first people to land on the Moon, and the next day they spent two and a half hours outside the Lunar Module Eagle spacecraft while Michael Collins remained in lunar orbit in the Apollo Command Module Columbia."
+       Sumber:  https://en.wikipedia.org/wiki/Neil_Armstrong
 
 [Scene S3]
-  S3.1: Neil Armstrong dan Buzz Aldrin kemudian tercatat sebagai dua manusia pertama yang menginjakkan kaki di Bulan.
-    -> [C2 | verified] Neil Armstrong dan Buzz Aldrin menjadi dua manusia pertama yang menginjakkan kaki di permukaan Bulan.
-       Kutipan: "Apollo 11 (July 16–24, 1969) was the American spaceflight that first landed humans on the Moon, and the fifth crewed mission of NASA's Apollo program."
-       Sumber:  https://en.wikipedia.org/wiki/Apollo_11
-  S3.2: Sang komandan juga mengucapkan kalimat ikonik tentang satu langkah kecil bagi umat manusia.
-    -> [C3 | verified] Misi ini dipimpin oleh komandan Neil Armstrong yang mengucapkan kalimat ikonik 'Satu langkah kecil bagi manusia, satu lompatan raksasa bagi umat manusia'.
-       Kutipan: "Stepping onto the lunar surface, Armstrong declared: "That's one small step for [a] man, one giant leap for mankind.""
-       Sumber:  https://en.wikipedia.org/wiki/Apollo_11
+  S3.1: Neil Armstrong menginjakkan kaki di permukaan Bulan dan mengucapkan kalimat bersejarah.
+    -> [C10 | verified] Neil Armstrong menginjakkan kaki di permukaan Bulan dan mengucapkan kalimat bersejarah 'That's one small step for [a] man, one giant leap for mankind'.
+       Kutipan: "On July 21, 1969, when Neil Armstrong became the first person to set foot on the Moon, he said "That's one small step for [a] man, one giant leap for mankind"."
+       Sumber:  https://en.wikipedia.org/wiki/One_small_step
+  S3.2: Beliau menyatakan bahwa itu adalah satu langkah kecil bagi manusia, satu lompatan besar bagi umat manusia.
+    -> [C10 | verified] Neil Armstrong menginjakkan kaki di permukaan Bulan dan mengucapkan kalimat bersejarah 'That's one small step for [a] man, one giant leap for mankind'.
+       Kutipan: "On July 21, 1969, when Neil Armstrong became the first person to set foot on the Moon, he said "That's one small step for [a] man, one giant leap for mankind"."
+       Sumber:  https://en.wikipedia.org/wiki/One_small_step
 
 [Scene S4]
-  S4.1: Peristiwa luar biasa tersebut disaksikan langsung oleh sekitar 600 juta penonton televisi di seluruh penjuru dunia.
-    -> [C4 | verified] Kejadian bersejarah ini disaksikan oleh sekitar 600 juta penonton televisi di seluruh dunia.
+  S4.1: Siaran langsung peristiwa pendaratan tersebut disaksikan oleh sekitar 600 juta penonton di seluruh dunia.
+    -> [C4 | verified] Siaran langsung peristiwa pendaratan di Bulan disaksikan oleh sekitar 600 juta penonton di seluruh dunia.
+       Kutipan: "Armstrong's moonwalk was broadcast live to an estimated 600 million viewers, roughly one-fifth of the world's population, making it among the most-watched television events in history."
+       Sumber:  https://en.wikipedia.org/wiki/Apollo_11
+  S4.2: Peristiwa besar ini melibatkan jutaan pasang mata yang menyaksikannya secara langsung.
+    -> [C4 | verified] Siaran langsung peristiwa pendaratan di Bulan disaksikan oleh sekitar 600 juta penonton di seluruh dunia.
        Kutipan: "Armstrong's moonwalk was broadcast live to an estimated 600 million viewers, roughly one-fifth of the world's population, making it among the most-watched television events in history."
        Sumber:  https://en.wikipedia.org/wiki/Apollo_11
 
 === LAPORAN QC (L0-L3) ===
 [L0] 0 isu
 [L0b] 0 isu
-[L1] 2 isu
+[L1] 9 isu
   INFO (C1): klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan
-  INFO (C5): klaim dibuang: QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber
-[L2] 1 isu
-  WARNING (S1.2): NAME_NOT_IN_CLAIM: nama "Bulan" tidak ditemukan di klaim rujukan (C6)
+  INFO (C2): klaim dibuang: CLAIM_NAME_NOT_IN_QUOTE: nama diri (Buzz) pada teks klaim tidak muncul di kutipan
+  INFO (C3): klaim dibuang: CLAIM_NAME_NOT_IN_QUOTE: nama diri (Neil) pada teks klaim tidak muncul di kutipan
+  INFO (C5): klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan
+  INFO (C7): klaim dibuang: CLAIM_NAME_NOT_IN_QUOTE: nama diri (Neil) pada teks klaim tidak muncul di kutipan
+  INFO (C8): klaim dibuang: QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa
+  INFO (C11): klaim dibuang: QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa
+  INFO (C15): klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan
+  INFO (C16): klaim dibuang: CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan
+[L2] 0 isu
 [L3] 0 isu

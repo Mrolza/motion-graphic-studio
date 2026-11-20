@@ -3,7 +3,12 @@ import path from 'node:path';
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
-import { getProjectDir, loadProject, saveProject } from '@core/project/store';
+import {
+  getProjectDir,
+  loadProject,
+  resetProjectLastRunCalls,
+  saveProject,
+} from '@core/project/store';
 import { validateGate1Approval } from '@core/qc/gate1-check';
 import { runIdeateStage, type ConceptsOutput } from '@core/stages/ideate';
 import { runResearchStage } from '@core/stages/research';
@@ -68,7 +73,7 @@ export async function cmdRun(args: string[]) {
     throw new Error('Usage: mgs run <id> --until gate1');
   }
 
-  let proj = await loadProject(id);
+  let proj = await resetProjectLastRunCalls(id);
   const dir = getProjectDir(id);
 
   let concepts: ConceptsOutput;
