@@ -16,6 +16,15 @@ import {
   setDeviceProfileOverride,
 } from '@core/device/profile';
 import { createProject, loadProject } from '@core/project/store';
+import {
+  cmdApprove,
+  cmdIdeate,
+  cmdQc,
+  cmdResearch,
+  cmdReview,
+  cmdRun,
+  cmdScript,
+} from './gate1';
 
 const execFileAsync = promisify(execFile);
 
@@ -138,8 +147,24 @@ async function main() {
     await runStatus(rest);
   } else if (cmd === 'profile') {
     await runProfile(rest);
+  } else if (cmd === 'ideate') {
+    await cmdIdeate(rest);
+  } else if (cmd === 'research') {
+    await cmdResearch(rest);
+  } else if (cmd === 'script') {
+    await cmdScript(rest);
+  } else if (cmd === 'qc') {
+    await cmdQc(rest);
+  } else if (cmd === 'run') {
+    await cmdRun(rest);
+  } else if (cmd === 'review') {
+    await cmdReview(rest);
+  } else if (cmd === 'approve') {
+    await cmdApprove(rest);
   } else {
-    console.log('Usage: npm run mgs -- <doctor|new|status|profile> [options]');
+    console.log(
+      'Usage: npm run mgs -- <doctor|new|status|profile|ideate|research|script|qc|run|review|approve> [options]'
+    );
     process.exit(cmd ? 1 : 0);
   }
 }

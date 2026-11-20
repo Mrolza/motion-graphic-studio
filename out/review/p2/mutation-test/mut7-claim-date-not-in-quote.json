@@ -1,0 +1,30 @@
+{
+  "ledger": {
+    "claims": [
+      {
+        "id": "C1",
+        "text": "Apollo 11 mendarat di Bulan pada 20 Juli 1969.",
+        "kind": "fact",
+        "status": "unverified",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Apollo_11",
+            "title": "Apollo 11",
+            "quote": "It marked the 50th anniversary of the first Moon landing in a special ceremony.",
+            "retrieved_at": "2026-11-20T00:00:00.000Z"
+          }
+        ]
+      }
+    ]
+  },
+  "report": {
+    "layer": "L1",
+    "issues": [
+      {
+        "severity": "error",
+        "message": "CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan",
+        "ref": "C1"
+      }
+    ]
+  }
+}

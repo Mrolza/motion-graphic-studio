@@ -111,3 +111,103 @@
 ### Catatan untuk Pemilik
 - `npm run verify` lulus 100% (41/41 test, 0 error TypeScript, `check:size` 30 file OK).
 - Smoke call nyata `generateJson` ke Gemini berstatus `NOT RUN` (opsional di P1; sudah diuji penuh dengan mock `fetch`).
+
+---
+
+## Fase P2 — Fakta & Naskah (`docs/P2-FACTS-SCRIPT.md`)
+
+- **Status:** **PARTIAL** (1/3 topik E2E + uji mutasi L3 + seluruh 49 unit test lulus; 2/3 topik E2E tertahan `Gemini HTTP 503 UNAVAILABLE` berkepanjangan pada `gemini-3.5-flash-lite`)
+- **Branch:** `phase/p2-facts-script` (tag awal: `p2-start`; P1 sudah di-merge ke `main` dengan tag `p1-done`)
+- **Tanggal:** 2026-11-18
+
+### Apa yang Dibuat
+1. **Tindak lanjut `REVIEW-P1.md` & merge P1:**
+   - `data/` ditambahkan ke `.gitignore`; state kuota di `src/core/assets/quota.ts` dipindah ke `.mgs/quota.json`.
+   - Ditambahkan test `captions.test.ts` (1 test) dan `cache.test.ts` (2 test).
+   - Bukti `out/review/p1/*.txt`/`*.json` dikonversi ke UTF-8.
+   - `phase/p1-foundation` di-merge (`--no-ff`) ke `main` dengan tag `p1-done`, lalu dibuat branch `phase/p2-facts-script` (`p2-start`).
+2. **S1 Ide (`src/core/stages/ideate.ts`):** menghasilkan 3 konsep beserta `core_claims[]` dan `search_queries[]`.
+3. **S2 Riset, Fact Ledger, L1 & L0 (`src/core/research/wikipedia.ts`, `src/core/qc/l1-ledger.ts`, `src/core/stages/research.ts`):**
+   - Pengambilan teks Wikipedia (`id`/`en`) dan Wikimedia On This Day (`today_in_history`) tanpa API key, disimpan ke `projects/<id>/sources/`.
+   - Pemeriksaan L1 (pencocokan kutipan verbatim setelah normalisasi spasi/kutip/dash + cek `value` sadar format angka `en`/`id-ID`) dan L0 (`concept_unverifiable`).
+4. **S3 Naskah & S4 QC L2/L3 (`src/core/prompts/scriptwriter.md`, `src/core/formats/format-packs.ts`, `src/core/qc/l2-script.ts`, `src/core/qc/l3-verifier.ts`, `src/core/stages/script.ts`):**
+   - Naskah hanya memakai klaim `verified`; pemeriksaan L2 (kode) + L3 (verifier LLM adversarial) + maks 1 kali tulis ulang otomatis.
+5. **Gerbang 1 via CLI (`src/cli/gate1.ts`, `src/cli/index.ts`):**
+   - `mgs ideate`, `mgs research`, `mgs script`, `mgs qc`, `mgs run <id> --until gate1`, `mgs review`, `mgs approve`.
+6. **Test & Uji Mutasi:**
+   - `tests/qcFacts.test.ts` (5 test perilaku L1/L0/L2 dengan fixture offline).
+   - Uji mutasi nyata (`scripts/run-p2-mutation.ts`): L2 dan L3 keduanya menangkap mutasi pada `p2-kereta`.
+   - Smoke call nyata `generateJson` ke `gemini-3.5-flash-lite` berhasil (`6.896 ms`).
+
+### Bukti (`out/review/p2/`, semua UTF-8)
+- [`p2-kereta/`](../out/review/p2/p2-kereta/): `fact-ledger.json`, `script.json`, `qc/` (`L0`–`L3`), `review.txt` (6 panggilan LLM, 0 error L2/L3, Gate 1 **APPROVED**).
+- [`mutation-test/`](../out/review/p2/mutation-test/): `mutated-script.json`, `qc-L2-mutated.json`, `qc-L3-mutated.json`, `mutation-summary.md`.
+- [`stats.md`](../out/review/p2/stats.md) & [`verify.txt`](../out/review/p2/verify.txt).
+
+### Yang Belum & Alasannya
+- Uji end-to-end topik `p2-mesin4tak` (`technical`) dan `p2-history-0720` (`today_in_history`) gagal diselesaikan karena API `gemini-3.5-flash-lite` mengalami lonjakan trafik berkepanjangan (`HTTP 503 UNAVAILABLE`) saat tahap S1/S2 meski sudah diberi 6 kali retry exponential backoff. Tinggal dijalankan ulang saat model stabil: `npm run mgs -- new ...` + `npm run mgs -- run <id> --until gate1`.
+
+---
+
+## Fase P2B — Relevansi, Kualitas Naskah, dan Ketahanan (`docs/P2B-RELEVANCE.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p2-facts-script` (lanjutan P2 sesuai `P2B-RELEVANCE.md`)
+- **Tanggal:** 2026-11-19
+
+### Apa yang Diperbaiki & Dibuat
+1. **Riset tepat sasaran (`ideate.ts`, `wikipedia.ts`, `research.ts`):**
+   - `S1` menghasilkan `wiki_titles` (`en` dan `id`); `S2` mengambil artikel berdasarkan judul dulu (`&redirects=1`), urutan bahasa `en` dulu untuk topik teknik/sains (`id` dulu untuk `today_in_history`).
+   - Ekstraktor klaim menilai relevansi tiap sumber (`relevant | partial | irrelevant`) di panggilan yang sama; sumber `irrelevant` dibuang dan dicatat ke `sources.md`.
+2. **Logika L0 diperbaiki (`research.ts`):**
+   - Jika ada `core_claims` yang belum didukung klaim `verified`, sistem menjalankan **1 putaran riset tambahan** khusus untuk klaim yang hilang sebelum menandai `concept_unverifiable`.
+3. **QC L0b Relevansi & L3 Ketat (`src/core/qc/l0b-quality.ts`, `l3-verifier.ts`):**
+   - Digabung dalam **1 panggilan verifier** (`l0b` + `l3`). Memeriksa `answers_question`, skor 1–5 (`answers_direct`, `coverage`, `structure`, `on_topic`), dan menolak generalisasi berlebihan (`overstated`). `mgs approve` menolak jika `answers_question = false`.
+4. **Cek durasi/kata & prompt scriptwriter (`l2-script.ts`, `src/core/prompts/scriptwriter.md`):**
+   - `verifyScriptL2` memeriksa jumlah kata terhadap `target_duration_sec * 2,3` (±20%).
+   - `scriptwriter.md` dilengkapi aturan hook + payoff, jawaban cepat, rantai sebab→akibat, dan gaya TTS `id-ID`.
+5. **Ketahanan 503 & resumable (`llm/client.ts`, `cli/gate1.ts`):**
+   - Exponential backoff dengan jitter (maks 5 retry hingga ~60s) + dukungan opsional `GEMINI_FALLBACK_MODEL`.
+   - `mgs run <id> --until gate1` melewati tahap yang sudah `done`.
+
+### Bukti (`out/review/p2/`, semua UTF-8)
+- [`p2-kereta/`](../out/review/p2/p2-kereta/): `fact-ledger.json`, `script.json`, `qc/` (`L0`, `L0b`, `L1`, `L2`, `L3`), `review.txt`, `sources.md` (**7 panggilan**, `answers_question = ya (5/5/5/5)`, `100` kata, `0` error L2/L3; menjelaskan roda kerucut `1 banding 20`, inersia tikungan, dan gandar kaku).
+- [`p2-mesin4tak/`](../out/review/p2/p2-mesin4tak/): (**10 panggilan**, `answers_question = ya (5/5/5/5)`, `87` kata, `0` error L2/L3).
+- [`p2-history-0720/`](../out/review/p2/p2-history-0720/): (**7 panggilan**, `answers_question = ya (5/2/4/5)`, `100` kata, `0` error L2/L3; catatan: skor `coverage = 2/5` karena feed OnThisDay 07-20 menautkan artikel peringatan Apollo 11).
+- [`mutation-test/`](../out/review/p2/mutation-test/): 4 mutasi halus (`mut1-similar-number`, `mut2-generalization`, `mut3-cause-effect`, `mut4-off-topic`) — **4/4 TERTANGKAP** oleh L2, L3, atau L0b (`mutation-summary.md`).
+- [`stats.md`](../out/review/p2/stats.md) (rata-rata **8,00 panggilan/topik**, target ≤ 8) & [`verify.txt`](../out/review/p2/verify.txt).
+
+---
+
+## Fase P2C — Menutup Celah QC & Gerbang 1 (`docs/P2C-GATES.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p2-facts-script` (lanjutan P2 sesuai `P2C-GATES.md` & `REVIEW-P2B.md`)
+- **Tanggal:** 2026-11-20
+
+### Apa yang Diperbaiki & Dibuat
+1. **Gerbang 1 memblokir semua error di L0, L0b, L1, L2, L3 (`src/core/qc/gate1-check.ts`, `src/cli/gate1.ts`):**
+   - `validateGate1Approval` menolak approval jika ada error di `L0`, `L0b`, `L2`, `L3`, `L0b.answers_question === false`, atau `claim_refs` merujuk klaim yang tidak `verified`.
+   - Error `L1` pada klaim yang **tidak dipakai** di naskah diturunkan menjadi `info` (`"klaim dibuang: ..."`); error `L1` pada klaim yang dipakai tetap memblokir.
+2. **Pengetatan L0, L1, L0b, L3 (`l1-ledger.ts`, `l0b-quality.ts`, `qc-report.ts`):**
+   - **L0:** memakai `coreClaimMapping` (`supports_core_claim_indices`) secara ketat, bukan sekadar kecocokan 2 kata.
+   - **L1:** menolak kutipan potongan frasa (`QUOTE_FRAGMENT`, dengan pengenalan batas kalimat termasuk setelah judul bagian Wikipedia `== ... ==`) dan menolak klaim dengan angka/tahun/bulan yang tidak ada di kutipan (`CLAIM_FACT_NOT_IN_QUOTE`, mendukung padanan bulan ID/EN).
+   - **L0b:** menolak adegan keluar topik (`has_off_topic_scene` -> error `L0B_OFF_TOPIC`) dan untuk `today_in_history` mewajibkan kejadian utama bertanggal lengkap di awal naskah (`main_event_dated === false` -> error `L0B_MISSING_MAIN_EVENT`).
+   - **L3:** memeriksa **semua** kalimat termasuk yang bertanda `non_factual: true` (pertanyaan retoris murni diizinkan sebagai `supported`; opini/klaim evaluatif dengan `non_factual: true` ditolak sebagai error `NON_FACTUAL_ASSERTION`), membandingkan `claim_text` vs `quote`, serta menolak perubahan kuantitas/cakupan parafrase (`overstated`).
+3. **Perbaikan riset sejarah & prompt (`wikipedia.ts`, `ideate.ts`, `research.ts`, `format-packs.ts`, `scriptwriter.md`, `script.ts`):**
+   - `fetchTodayInHistorySources` mengambil artikel utama `Apollo 11` (bukan halaman peringatan tahunan), `ideate.ts` & `research.ts` menyertakan artikel utama `wiki_titles` terlebih dahulu serta memperbaiki putaran riset tambahan agar menargetkan `coreIndices` yang hilang.
+   - `format-packs.ts` & `scriptwriter.md` mewajibkan scene 1–2 `today_in_history` menyebut peristiwa utama + tanggal & tahun, dan melarang klaim evaluatif memakai `non_factual: true`.
+4. **Tes baru (`tests/qcGate1.test.ts`):**
+   - 4 unit test baru untuk Gate 1 blocking/downgrade, L0 ketat, `QUOTE_FRAGMENT`, dan `CLAIM_FACT_NOT_IN_QUOTE` (termasuk `20 Juli` <-> `July 20`).
+
+### Bukti (`out/review/p2/`, semua UTF-8)
+- [`p2-kereta/`](../out/review/p2/p2-kereta/): Gate 1 **APPROVED** — `L0:0 isu`, `L0b:0 isu (ya, 5/5/5/5)`, `L1:0E / 0W / 1I` (1 klaim dibuang sebagai `info`), `L2:0 isu`, `L3:0 isu`, `97/~103` kata (15 panggilan kumulatif termasuk rewrite P2C).
+- [`p2-mesin4tak/`](../out/review/p2/p2-mesin4tak/): Gate 1 **APPROVED** — `L0:0 isu`, `L0b:0 isu (ya, 5/5/5/5)`, `L1:0 isu`, `L2:0 isu`, `L3:0 isu`, `95/~103` kata (18 panggilan kumulatif termasuk rewrite P2C).
+- [`p2-history-0720/`](../out/review/p2/p2-history-0720/): Gate 1 **APPROVED** — `L0:0 isu`, `L0b:0 isu (ya, 5/5/5/5)`, `L1:0E / 0W / 2I` (2 klaim dibuang sebagai `info`), `L2:0E / 1W / 0I` (`WARNING` pada `S1.2`: `NAME_NOT_IN_CLAIM` untuk kata `"Bulan"`), `L3:0 isu`, `99/~103` kata, `9` panggilan LLM; menyebut `"20 Juli 1969"` dan pendaratan Apollo 11 bersumber dari artikel `Apollo 11` (serta `Lunar Module Eagle` & `Mare Tranquillitatis`).
+- [`mutation-test/mutation-summary.md`](../out/review/p2/mutation-test/mutation-summary.md): **8/8 mutasi** (`mut1`–`mut8`) tertangkap sebagai **ERROR** (termasuk `mut7` L1 tanggal salah & `mut4/8` off-topic).
+- [`stats.md`](../out/review/p2/stats.md) & [`verify.txt`](../out/review/p2/verify.txt).
+
+### Catatan Kejujuran Isu Tersisa
+- Tidak ada **error** tersisa di `L0`, `L0b`, `L1`, `L2`, maupun `L3` pada ketiga topik.
+- Masih terdapat `1 WARNING` di `L2` pada `p2-history-0720` (`NAME_NOT_IN_CLAIM` pada `S1.2` karena kata `"Bulan"` muncul di naskah sementara klaim `C6` merujuk `Base Tranquillity`), serta `info` pada klaim `L1` yang tidak dipakai (`1I` di `p2-kereta`, `2I` di `p2-history-0720`).
+- Rata-rata panggilan LLM kumulatif pada `stats.md` adalah **14,00** panggilan/topik (karena `p2-kereta` & `p2-mesin4tak` membawa akumulasi panggilan dari run P2B + rewrite P2C; untuk run segar `p2-history-0720` tercatat **9** panggilan).

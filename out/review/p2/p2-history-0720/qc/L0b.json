@@ -1,0 +1,12 @@
+{
+  "layer": "L0b",
+  "answers_question": true,
+  "hook_paid": true,
+  "scores": {
+    "answers_direct": 5,
+    "coverage": 5,
+    "structure": 5,
+    "on_topic": 5
+  },
+  "issues": []
+}

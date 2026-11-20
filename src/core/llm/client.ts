@@ -66,6 +66,13 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function computeBackoffWithJitter(baseDelayMs: number, retryIndex: number): number {
+  if (baseDelayMs <= 0) return 0;
+  const exp = baseDelayMs * Math.pow(2, retryIndex - 1);
+  const jitter = Math.floor(Math.random() * Math.min(1000, baseDelayMs));
+  return Math.min(60_000, exp + jitter);
+}
+
 export async function generateJson<T>(
   schema: z.ZodType<T>,
   prompt: string,
@@ -76,12 +83,14 @@ export async function generateJson<T>(
     throw new Error('GEMINI_API_KEY is not set in environment');
   }
 
-  const model = resolveGeminiModel(opts.model);
+  let model = resolveGeminiModel(opts.model);
+  const fallbackModel = process.env.GEMINI_FALLBACK_MODEL?.trim();
+  let triedFallback = false;
   const stage = opts.stage ?? 'unknown';
   const timeoutMs = opts.timeoutMs ?? GEMINI_REQUEST_TIMEOUT_MS;
-  const maxTransientRetries = opts.maxTransientRetries ?? 2;
+  const maxTransientRetries = opts.maxTransientRetries ?? 5;
   const maxSchemaRetries = opts.maxSchemaRetries ?? 2;
-  const baseDelayMs = opts.retryDelayMs ?? 1500;
+  const baseDelayMs = opts.retryDelayMs ?? 2000;
 
   let currentPrompt = prompt;
   let attempts = 0;
@@ -125,7 +134,7 @@ export async function generateJson<T>(
       await opts.onCallRecord?.({ stage, model, durationMs, ok: false, error: msg });
       if (transientCount < maxTransientRetries) {
         transientCount++;
-        await sleep(baseDelayMs * transientCount);
+        await sleep(computeBackoffWithJitter(baseDelayMs, transientCount));
         continue;
       }
       throw new Error(`Gemini request failed after ${attempts} attempts: ${msg}`);
@@ -149,10 +158,15 @@ export async function generateJson<T>(
       const isTransientStatus = res.status === 503 || res.status === 429 || res.status === 500;
       if (isTransientStatus && transientCount < maxTransientRetries) {
         transientCount++;
-        await sleep(baseDelayMs * transientCount);
+        await sleep(computeBackoffWithJitter(baseDelayMs, transientCount));
         continue;
       }
-      throw new Error(`Gemini HTTP ${res.status}: ${errText.slice(0, 300)}`);
+      if (res.status === 503 && fallbackModel && fallbackModel !== model && !triedFallback) {
+        triedFallback = true;
+        model = fallbackModel;
+        continue;
+      }
+      throw new Error(`Gemini HTTP ${res.status} (${model}): ${errText.slice(0, 300)}`);
     }
 
     const payload = (await res.json()) as {

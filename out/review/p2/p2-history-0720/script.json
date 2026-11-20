@@ -1,0 +1,97 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Pada tanggal 20 Juli 1969, misi Apollo 11 berhasil mendaratkan manusia pertama di permukaan Bulan.",
+          "claim_refs": [
+            "C9"
+          ],
+          "emphasis_words": [
+            "20 Juli 1969",
+            "Apollo 11"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Modul lunar Eagle sukses mendarat dan membawa Neil Armstrong serta Buzz Aldrin ke satelit bumi.",
+          "claim_refs": [
+            "C9",
+            "C6"
+          ],
+          "emphasis_words": [
+            "modul lunar Eagle",
+            "Neil Armstrong"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Mereka menjadi manusia pertama yang mendarat dan berjalan di Bulan.",
+          "claim_refs": [
+            "C6"
+          ],
+          "emphasis_words": [
+            "manusia pertama"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Neil Armstrong menginjakkan kaki di permukaan Bulan dan mengucapkan kalimat bersejarah.",
+          "claim_refs": [
+            "C10"
+          ],
+          "emphasis_words": [
+            "permukaan Bulan"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Beliau menyatakan bahwa itu adalah satu langkah kecil bagi manusia, satu lompatan besar bagi umat manusia.",
+          "claim_refs": [
+            "C10"
+          ],
+          "emphasis_words": [
+            "langkah kecil"
+          ],
+          "non_factual": false
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Siaran langsung peristiwa pendaratan tersebut disaksikan oleh sekitar 600 juta penonton di seluruh dunia.",
+          "claim_refs": [
+            "C4"
+          ],
+          "emphasis_words": [
+            "600 juta penonton"
+          ],
+          "non_factual": false
+        },
+        {
+          "text": "Peristiwa besar ini melibatkan jutaan pasang mata yang menyaksikannya secara langsung.",
+          "claim_refs": [
+            "C4"
+          ],
+          "emphasis_words": [
+            "siaran langsung"
+          ],
+          "non_factual": false
+        }
+      ]
+    }
+  ]
+}

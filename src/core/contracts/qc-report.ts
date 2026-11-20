@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const QcLayerSchema = z.enum([
   'L0',
+  'L0b',
   'L1',
   'L2',
   'L3',
@@ -12,7 +13,7 @@ export const QcLayerSchema = z.enum([
   'technical',
 ]);
 
-export const QcSeveritySchema = z.enum(['error', 'warning']);
+export const QcSeveritySchema = z.enum(['error', 'warning', 'info']);
 
 export const QcIssueSchema = z.object({
   severity: QcSeveritySchema,

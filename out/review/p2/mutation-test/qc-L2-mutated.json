@@ -1,0 +1,15 @@
+{
+  "layer": "L2",
+  "issues": [
+    {
+      "severity": "error",
+      "message": "NUMBER_NOT_IN_CLAIM: angka 9999 di naskah tidak ada di klaim rujukan (C2)",
+      "ref": "S2.1"
+    },
+    {
+      "severity": "warning",
+      "message": "NAME_NOT_IN_CLAIM: nama \"Kecepatan\" tidak ditemukan di klaim rujukan (C2)",
+      "ref": "S2.1"
+    }
+  ]
+}
