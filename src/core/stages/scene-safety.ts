@@ -95,6 +95,16 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
       'CAMERA_MANUAL_DISTANCE: dilarang menyetel jarak kamera manual (from/to/radius/height) saat memakai CameraRig mode="frameEntities"'
     );
   }
+  if (/<Arrow3D\b/.test(code) && /\b(PistonCrankAssembly|EngineBlock)\b/.test(code)) {
+    errors.push(
+      'STATIC_ARROW_FOR_MOTION: dilarang memakai <Arrow3D> statis untuk gerak mesin; gunakan <MotionArrow velocity={...} bindToPart="piston" />'
+    );
+  }
+  if (/\bEngineBlock\b/.test(code) && /size\s*:\s*\[\s*1\.\d/.test(code)) {
+    errors.push(
+      'SCENE_FOCUSBOX_TOO_SMALL: EngineBlock wajib focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }} padding={1.25}'
+    );
+  }
 
   const warnings: string[] = [];
   const literalFrameMatches = code.match(/\bframe\s*(?:>=|>|<=|<|===)\s*(\d+)\b/g) ?? [];

@@ -210,90 +210,76 @@ export function verifyLedgerL1(
       (sid ? sourceById.get(sid) : undefined) ??
       (primarySrc ? sourceByUrl.get(primarySrc.url) : undefined);
 
+    const failClaim = (reason: string): FactClaim => ({
+      ...claim,
+      status: 'unverified',
+      status_reason: reason,
+    });
+
     if (!matchedSource || !primarySrc) {
-      issues.push({
-        severity: 'error',
-        message: 'SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan',
-        ref: claim.id,
-      });
-      return { ...claim, status: 'unverified' };
+      const msg = 'SOURCE_NOT_FOUND: sumber klaim tidak ditemukan di berkas sumber tersimpan';
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      return failClaim(msg);
     }
 
     const normSource = normalizedTexts.get(matchedSource.source_id) ?? '';
     const normQuote = normalizeTextForMatch(primarySrc.quote);
 
     if (!normQuote || !normSource.includes(normQuote)) {
-      issues.push({
-        severity: 'error',
-        message: 'QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber',
-        ref: claim.id,
-      });
-      return { ...claim, status: 'unverified' };
+      const msg = 'QUOTE_NOT_IN_SOURCE: kutipan tidak ditemukan apa adanya di teks sumber';
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      return failClaim(msg);
     }
 
     if (!isCompleteSentenceQuote(normQuote, normSource)) {
-      issues.push({
-        severity: 'error',
-        message: 'QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa',
-        ref: claim.id,
-      });
-      return { ...claim, status: 'unverified' };
+      const msg = 'QUOTE_FRAGMENT: kutipan harus berupa kalimat utuh dari sumber, bukan potongan frasa';
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      return failClaim(msg);
     }
 
     if (claim.value !== undefined && !doesValueAppearInQuote(claim.value, primarySrc.quote)) {
-      issues.push({
-        severity: 'error',
-        message: `VALUE_NOT_IN_QUOTE: angka ${claim.value} tidak ditemukan pada kutipan`,
-        ref: claim.id,
-      });
-      return { ...claim, status: 'unverified' };
+      const msg = `VALUE_NOT_IN_QUOTE: angka ${claim.value} tidak ditemukan pada kutipan`;
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      return failClaim(msg);
     }
 
     if (!doClaimFactsAppearInQuote(claim.text, primarySrc.quote)) {
-      issues.push({
-        severity: 'error',
-        message: 'CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan',
-        ref: claim.id,
-      });
-      return { ...claim, status: 'unverified' };
+      const msg = 'CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan';
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      return failClaim(msg);
     }
 
     const missingNames = doClaimNamesAppearInQuote(claim.text, primarySrc.quote);
     if (missingNames.length > 0) {
-      issues.push({
-        severity: 'error',
-        message: `CLAIM_NAME_NOT_IN_QUOTE: nama diri (${missingNames.join(', ')}) pada teks klaim tidak muncul di kutipan`,
-        ref: claim.id,
-      });
-      return { ...claim, status: 'unverified' };
+      const msg = `CLAIM_NAME_NOT_IN_QUOTE: nama diri (${missingNames.join(', ')}) pada teks klaim tidak muncul di kutipan`;
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      return failClaim(msg);
     }
 
     const allQuotes = claim.sources.map((s) => s.quote).join(' ');
     const { hedgeDropped, absoluteAdded } = detectHedgeAndAbsoluteMismatches(claim.text, allQuotes);
+    const hedgeMsgs: string[] = [];
     if (hedgeDropped.length > 0) {
       const desc = hedgeDropped
         .map((h) => `"${h.en}" -> butuh salah satu (${h.expectedId.join('/')})`)
         .join('; ');
-      issues.push({
-        severity: 'error',
-        message: `L1_HEDGE_DROPPED: kata hedge pada kutipan dihilangkan di klaim (${desc})`,
-        ref: claim.id,
-      });
+      const msg = `L1_HEDGE_DROPPED: kata hedge pada kutipan dihilangkan di klaim (${desc})`;
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      hedgeMsgs.push(msg);
     }
     if (absoluteAdded.length > 0) {
-      issues.push({
-        severity: 'error',
-        message: `L1_ABSOLUTE_ADDED: klaim menambahkan kata mutlak (${absoluteAdded.join(', ')}) yang tidak ada di kutipan`,
-        ref: claim.id,
-      });
+      const msg = `L1_ABSOLUTE_ADDED: klaim menambahkan kata mutlak (${absoluteAdded.join(', ')}) yang tidak ada di kutipan`;
+      issues.push({ severity: 'error', message: msg, ref: claim.id });
+      hedgeMsgs.push(msg);
     }
-    if (hedgeDropped.length > 0 || absoluteAdded.length > 0) {
-      return { ...claim, status: 'unverified' };
+    if (hedgeMsgs.length > 0) {
+      return failClaim(hedgeMsgs.join(' | '));
     }
 
     return {
       ...claim,
       status: 'verified',
+      status_reason: undefined,
       sources: claim.sources.map((s, idx) =>
         idx === 0 ? { ...s, url: matchedSource.url, title: matchedSource.title } : s
       ),

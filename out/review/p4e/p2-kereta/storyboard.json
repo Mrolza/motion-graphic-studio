@@ -1,0 +1,223 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "dolly_in",
+      "duration_sec": 4.799,
+      "sentence_refs": [
+        "S1.1"
+      ],
+      "focus_entities": [
+        "train_car"
+      ],
+      "visible_parts": [
+        "body"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": 0,
+        "to": 5
+      },
+      "invariants": [
+        {
+          "entity": "train_car",
+          "state": "on_track=true",
+          "when": {
+            "driver_between": [
+              0,
+              5
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Kenapa kereta tidak tergelincir?"
+          },
+          "illustrative": true
+        }
+      ],
+      "trigger_words": [
+        "belok",
+        "jalur"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 10.418,
+      "sentence_refs": [
+        "S2.1",
+        "S2.2"
+      ],
+      "focus_entities": [
+        "rail_cross_section"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "lateral_shift",
+        "unit": "mm",
+        "from": -5,
+        "to": 5
+      },
+      "invariants": [
+        {
+          "entity": "wheel_left",
+          "state": "conical_taper=true",
+          "when": {
+            "driver_between": [
+              -5,
+              5
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "MeasureReveal",
+          "props": {
+            "label": "Kemiringan",
+            "valueText": "1:20"
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Geser Lateral"
+          },
+          "claim_ref": "C2",
+          "bind_to_driver": true,
+          "quantity": "lateral_shift",
+          "display": "qualitative"
+        }
+      ],
+      "trigger_words": [
+        "kerucut",
+        "kelembaman"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "comparison",
+      "camera_move": "orbit_curve",
+      "duration_sec": 9.968,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "wheel_left",
+        "wheel_right",
+        "flange"
+      ],
+      "driver": {
+        "name": "effective_diameter",
+        "unit": "mm",
+        "from": 0,
+        "to": 10
+      },
+      "invariants": [
+        {
+          "entity": "wheelset",
+          "state": "rigid_axle=true",
+          "when": {
+            "driver_between": [
+              0,
+              10
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "EffectiveDiameterCompare",
+          "props": {
+            "label": "Diameter Efektif",
+            "outerLabel": "Diameter Luar",
+            "innerLabel": "Diameter Dalam"
+          },
+          "claim_ref": "C3",
+          "bind_to_driver": true,
+          "quantity": "effective_diameter",
+          "display": "qualitative"
+        }
+      ],
+      "trigger_words": [
+        "diameter efektif",
+        "jarak sedikit lebih jauh"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "closeup",
+      "camera_move": "dolly_in",
+      "duration_sec": 8.992,
+      "sentence_refs": [
+        "S4.1",
+        "S4.2"
+      ],
+      "focus_entities": [
+        "wheelset"
+      ],
+      "visible_parts": [
+        "flange",
+        "wheel_left",
+        "wheel_right"
+      ],
+      "driver": {
+        "name": "distance",
+        "unit": "m",
+        "from": 0,
+        "to": 5
+      },
+      "invariants": [
+        {
+          "entity": "flange",
+          "state": "protecting=true",
+          "when": {
+            "driver_between": [
+              0,
+              5
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "Callout",
+          "props": {
+            "label": "Flensa Roda",
+            "text": "Tonjolan pengaman di bagian dalam"
+          },
+          "claim_ref": "C5"
+        }
+      ],
+      "trigger_words": [
+        "flensa",
+        "fitur pelindung"
+      ]
+    }
+  ]
+}

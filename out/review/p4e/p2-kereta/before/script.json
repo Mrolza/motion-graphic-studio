@@ -1,0 +1,115 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Bagaimana bisa kereta yang berjalan di rel lurus mampu berbelok tanpa menggunakan kemudi?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "tanpa menggunakan kemudi"
+          ],
+          "non_factual": true,
+          "spoken_text": "Bagaimana bisa kereta yang berjalan di rel lurus mampu berbelok tanpa menggunakan kemudi?"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Roda kereta api umumnya diarahkan di sepanjang jalur menggunakan penampangnya yang berbentuk kerucut.",
+          "claim_refs": [
+            "C6"
+          ],
+          "emphasis_words": [
+            "berbentuk kerucut"
+          ],
+          "non_factual": false,
+          "spoken_text": "Roda kereta api umumnya diarahkan di sepanjang jalur menggunakan penampangnya yang berbentuk kerucut."
+        },
+        {
+          "text": "Tanpa bentuk kerucut tersebut, roda akan melaju lurus karena kelembaman dan bergerak menuju rel luar di tikungan.",
+          "claim_refs": [
+            "C9"
+          ],
+          "emphasis_words": [
+            "kelembaman"
+          ],
+          "non_factual": false,
+          "spoken_text": "Tanpa bentuk kerucut tersebut, roda akan melaju lurus karena kelembaman dan bergerak menuju rel luar di tikungan."
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Bentuk kerucut memperbesar diameter efektif roda ketika bergerak menuju rel luar.",
+          "claim_refs": [
+            "C10"
+          ],
+          "emphasis_words": [
+            "diameter efektif"
+          ],
+          "non_factual": false,
+          "spoken_text": "Bentuk kerucut memperbesar diameter efektif roda ketika bergerak menuju rel luar."
+        },
+        {
+          "text": "Karena roda dipasang secara kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh.",
+          "claim_refs": [
+            "C10"
+          ],
+          "emphasis_words": [
+            "kaku pada gandar"
+          ],
+          "non_factual": false,
+          "spoken_text": "Karena roda dipasang secara kaku pada gandar, roda luar menempuh jarak sedikit lebih jauh."
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Hal tersebut membuat perangkat roda dapat mengikuti tikungan dengan lebih efisien.",
+          "claim_refs": [
+            "C10"
+          ],
+          "emphasis_words": [
+            "lebih efisien"
+          ],
+          "non_factual": false,
+          "spoken_text": "Hal tersebut membuat perangkat roda dapat mengikuti tikungan dengan lebih efisien."
+        },
+        {
+          "text": "Selain itu, terdapat pula flensa berupa tonjolan di bagian dalam roda.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "flensa"
+          ],
+          "non_factual": false,
+          "spoken_text": "Selain itu, terdapat pula flensa berupa tonjolan di bagian dalam roda."
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "sentences": [
+        {
+          "text": "Fitur pelindung ini berfungsi menghindari keluarnya roda dari jalur pada jalur lurus maupun persimpangan.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "dari jalur"
+          ],
+          "non_factual": false,
+          "spoken_text": "Fitur pelindung ini berfungsi menghindari keluarnya roda dari jalur pada jalur lurus maupun persimpangan."
+        }
+      ]
+    }
+  ]
+}

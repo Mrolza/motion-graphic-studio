@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { RunLlmTracker } from './budget';
+import { appendLlmCallLog, type RunLlmTracker } from './budget';
 import {
   buildGeminiThinkingConfig,
   GEMINI_REQUEST_TIMEOUT_MS,
@@ -28,6 +28,7 @@ export interface GenerateJsonOptions {
   purpose?: string;
   sceneId?: string | null;
   tracker?: RunLlmTracker;
+  projectDir?: string;
   model?: string;
   apiKey?: string;
   systemInstruction?: string;
@@ -225,14 +226,27 @@ export async function generateJson<T>(
     }
 
     await opts.onCallRecord?.({ stage, model, durationMs, ok: true, ...usage });
-    await opts.tracker?.recordCall({
-      stage,
-      purpose,
-      scene_id: opts.sceneId,
-      attempt: 1 + schemaFailCount,
-      http_retries: transientCount,
-      ok: true,
-    });
+    if (opts.tracker) {
+      await opts.tracker.recordCall({
+        stage,
+        purpose,
+        scene_id: opts.sceneId,
+        attempt: 1 + schemaFailCount,
+        http_retries: transientCount,
+        ok: true,
+      });
+    } else if (opts.projectDir) {
+      await appendLlmCallLog(opts.projectDir, {
+        ts: new Date().toISOString(),
+        run_id: `stage-${stage}`,
+        stage,
+        purpose,
+        scene_id: opts.sceneId ?? null,
+        attempt: 1 + schemaFailCount,
+        http_retries: transientCount,
+        ok: true,
+      });
+    }
     return {
       data: validated.data,
       model,

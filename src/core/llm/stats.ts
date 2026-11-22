@@ -10,7 +10,10 @@ export interface LlmStatsSummary {
   callsByRun: Record<string, number>;
 }
 
-export async function aggregateLlmCallStats(projectDir: string): Promise<LlmStatsSummary> {
+export async function aggregateLlmCallStats(
+  projectDir: string,
+  sinceIso?: string
+): Promise<LlmStatsSummary> {
   const raw = await readFile(path.join(projectDir, 'llm-calls.jsonl'), 'utf-8').catch(() => '');
   const lines = raw
     .split(/\r?\n/)
@@ -24,6 +27,7 @@ export async function aggregateLlmCallStats(projectDir: string): Promise<LlmStat
   for (const line of lines) {
     try {
       const entry = JSON.parse(line) as LlmCallLogEntry;
+      if (sinceIso && entry.ts < sinceIso) continue;
       totalCalls++;
       callsByStage[entry.stage] = (callsByStage[entry.stage] ?? 0) + 1;
       callsByRun[entry.run_id] = (callsByRun[entry.run_id] ?? 0) + 1;

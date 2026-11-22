@@ -12,6 +12,7 @@ import {
   scanTelemetryOverlaps,
 } from '@core/qc/captions-qc';
 import { verifyNarrationHudSync } from '@core/qc/narration-hud-conflict';
+import { checkHudSpelling } from '@core/qc/spellcheck-id';
 import { verifyStoryboardCode } from '@core/qc/storyboard-code';
 import type { TelemetrySample } from '@core/qc/visual/types';
 import type { KineticCaptionChunk } from '@core/render/kinetic-captions';
@@ -79,6 +80,7 @@ export async function runFinalSyncAndOverlapChecks(
         }
       }
       issues.push(...verifyNarrationHudSync({ script, storyboard, timeline, captions: chunks }).issues);
+      issues.push(...checkHudSpelling(storyboard, { script, ledger }));
 
       const scan =
         telemetrySamples.length > 0

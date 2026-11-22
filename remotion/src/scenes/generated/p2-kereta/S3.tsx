@@ -1,19 +1,19 @@
 import React from 'react';
 import {
-  TelemetryProvider,
   StoryboardHudProvider,
-  StoryboardHudDataItem,
-  useDriver,
+  TelemetryProvider,
   SceneTransition,
   BlueprintStage,
   CameraRig,
   HudLayout,
   HudZone,
   Hud,
-  CurvedRail,
   Ground,
+  CurvedRail,
   WheelsetOnRail,
-  computeWheelsetLayout
+  computeWheelsetLayout,
+  useDriver,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S3Props {
@@ -28,14 +28,14 @@ const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
     to: 10,
     unit: 'mm',
     startSec: 0,
-    durationSec: 8.82,
-    curve: 'linear'
+    durationSec: 9.97,
+    curve: 'linear',
   });
 
   const wl = computeWheelsetLayout({
     distance: driver.value,
     curveStartZ: 2,
-    curveRadius: 10
+    curveRadius: 10,
   });
 
   return (
@@ -51,15 +51,6 @@ const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
-          padding={1.25}
-          elevationDeg={22}
-          startAngleDeg={-20}
-          endAngleDeg={20}
-          durationSec={8.82}
-        />
         <CurvedRail
           startZ={-10}
           curveStartZ={2}
@@ -77,8 +68,13 @@ const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           curveStartZ={2}
           curveRadius={10}
           highlightContact
-          showEffectiveDiameter
           palette="blueprint-navy"
+        />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
+          padding={1.25}
+          elevationDeg={22}
         />
       </BlueprintStage>
     </SceneTransition>

@@ -291,6 +291,19 @@ Foreground parallax elements (trackside poles, depth markers, floating particles
   - `color?: string`
   - `palette?: PaletteId`
 
+### `MotionArrow`
+3D motion arrow whose direction is derived from velocity sign/vector or explicit direction, and reported to telemetry for VIS_ARROW_DIRECTION_MISMATCH verification.
+- **Signature:** `<MotionArrow ...MotionArrowProps />`
+- **Props:**
+  - `id?: string`
+  - `bindToPart?: string`
+  - `position?: [number, number, number]`
+  - `length?: number`
+  - `velocity?: [number, number, number]`
+  - `direction?: [number, number, number]`
+  - `color?: string`
+  - `palette?: PaletteId`
+
 ### `Ground`
 - **Signature:** `<Ground ...GroundProps />`
 - **Props:**

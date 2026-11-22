@@ -3,6 +3,7 @@ import path from 'node:path';
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { Script } from '@core/contracts/script';
 import { getProjectDir } from '@core/project/store';
+import { detectHedgeAndAbsoluteMismatches } from '@core/qc/hedge-glossary';
 
 export interface PublishValidationResult {
   ok: boolean;
@@ -34,6 +35,58 @@ export function validatePublishSources(
     ok: unknownUrls.length === 0,
     unknownUrls,
   };
+}
+
+/**
+ * Checks publish.md description text against verified ledger quotes for dropped hedges or added absolutes.
+ */
+export function validatePublishHedges(
+  publishMd: string,
+  ledger: FactLedger,
+  script?: Script
+): { ok: boolean; errors: string[] } {
+  const errors: string[] = [];
+  const verifiedClaims = ledger.claims.filter((c) => c.status === 'verified');
+  const claimMap = new Map(verifiedClaims.map((c) => [c.id, c]));
+  const descMatch = publishMd.match(/##\s*Deskripsi\s*\r?\n([\s\S]*?)(?:\r?\n##\s|$)/i);
+  const descText = (descMatch?.[1] ?? publishMd).trim();
+  const sentences = descText
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+
+  if (script) {
+    const scriptSents = script.scenes.flatMap((sc) => sc.sentences);
+    for (const s of sentences) {
+      const matched = scriptSents.find((ss) => ss.text.trim() === s);
+      if (!matched || matched.claim_refs.length === 0) continue;
+      const quotes = matched.claim_refs
+        .map((id) => claimMap.get(id))
+        .filter((c): c is NonNullable<typeof c> => Boolean(c))
+        .flatMap((c) => c.sources.map((src) => src.quote))
+        .join(' ');
+      if (!quotes) continue;
+      const { hedgeDropped, absoluteAdded } = detectHedgeAndAbsoluteMismatches(s, quotes);
+      if (hedgeDropped.length > 0) {
+        errors.push(`L2_HEDGE_DROPPED: publish.md membuang kata lunak pada "${s}"`);
+      }
+      if (absoluteAdded.length > 0) {
+        errors.push(`L2_ABSOLUTE_ADDED: publish.md menambah kata mutlak (${absoluteAdded.join(', ')}) pada "${s}"`);
+      }
+    }
+  } else {
+    const allQuotes = verifiedClaims.flatMap((c) => c.sources.map((s) => s.quote)).join(' ');
+    for (const s of sentences) {
+      const { hedgeDropped, absoluteAdded } = detectHedgeAndAbsoluteMismatches(s, allQuotes);
+      if (hedgeDropped.length > 0) {
+        errors.push(`L2_HEDGE_DROPPED: publish.md membuang kata lunak pada "${s}"`);
+      }
+      if (absoluteAdded.length > 0) {
+        errors.push(`L2_ABSOLUTE_ADDED: publish.md menambah kata mutlak (${absoluteAdded.join(', ')}) pada "${s}"`);
+      }
+    }
+  }
+  return { ok: errors.length === 0, errors };
 }
 
 /**

@@ -173,6 +173,8 @@ Target durasi: ${project.target_duration_sec} detik (target jumlah kata: ~${idea
   try {
     const genRes = await generateJson(ScriptSchema, basePrompt, {
       stage: 'S3',
+      purpose: 'script_gen',
+      projectDir,
       systemInstruction: systemPrompt,
       onCallRecord: () => {
         s3Calls++;
@@ -194,6 +196,7 @@ Target durasi: ${project.target_duration_sec} detik (target jumlah kata: ~${idea
       concept: selectedRaw.concept,
       script,
       ledger,
+      projectDir,
       onCall: () => {
         s4Calls++;
       },
@@ -204,21 +207,22 @@ Target durasi: ${project.target_duration_sec} detik (target jumlah kata: ~${idea
     let l3Final = combinedBefore.l3Report;
     let rewritten = false;
 
-    const needsRewrite =
-      l2Before.issues.some(
-        (i) => i.severity === 'error' || i.message.includes('DURATION_WORD_COUNT')
-      ) ||
-      combinedBefore.l0b.report.issues.some((i) => i.severity === 'error') ||
-      combinedBefore.l3Report.issues.some((i) => i.severity === 'error');
+    for (let rwAttempt = 0; rwAttempt < 2; rwAttempt++) {
+      const stillNeedsRewrite =
+        l2Final.issues.some(
+          (i) => i.severity === 'error' || i.message.includes('DURATION_WORD_COUNT')
+        ) ||
+        l0bFinal.report.issues.some((i) => i.severity === 'error') ||
+        l3Final.issues.some((i) => i.severity === 'error');
+      if (!stillNeedsRewrite) break;
 
-    if (needsRewrite) {
       rewritten = true;
       const fixIssues = [
-        ...l2Before.issues.filter(
+        ...l2Final.issues.filter(
           (i) => i.severity === 'error' || i.message.includes('DURATION_WORD_COUNT')
         ),
-        ...combinedBefore.l0b.report.issues,
-        ...combinedBefore.l3Report.issues.filter((i) => i.severity === 'error'),
+        ...l0bFinal.report.issues,
+        ...l3Final.issues.filter((i) => i.severity === 'error'),
       ];
       const fixPrompt = `${basePrompt}
 
@@ -232,6 +236,8 @@ Tulis ulang naskah dengan memperbaiki seluruh isu di atas: jawab pertanyaan topi
 
       const rewriteRes = await generateJson(ScriptSchema, fixPrompt, {
         stage: 'S3',
+        purpose: 'script_rewrite',
+        projectDir,
         systemInstruction: systemPrompt,
         onCallRecord: () => {
           s3Calls++;
@@ -246,6 +252,7 @@ Tulis ulang naskah dengan memperbaiki seluruh isu di atas: jawab pertanyaan topi
         concept: selectedRaw.concept,
         script,
         ledger,
+        projectDir,
         onCall: () => {
           s4Calls++;
         },

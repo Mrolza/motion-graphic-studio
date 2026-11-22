@@ -1,0 +1,100 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Pernahkah kamu mikir, gimana caranya kereta yang gak punya setir bisa tetep belok dan gak keluar jalur?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "gak punya setir"
+          ],
+          "non_factual": true,
+          "spoken_text": "Pernahkah kamu mikir, gimana caranya kereta yang gak punya setir bisa tetep belok dan gak keluar jalur?"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Sebagian besar roda kereta dirancang memiliki bentuk kerucut atau tirus dengan kemiringan sekitar 1 banding 20.",
+          "claim_refs": [
+            "C1"
+          ],
+          "emphasis_words": [
+            "bentuk kerucut"
+          ],
+          "non_factual": false,
+          "spoken_text": "Sebagian besar roda kereta dirancang memiliki bentuk kerucut atau tirus dengan kemiringan sekitar 1 banding 20."
+        },
+        {
+          "text": "Tanpa bentuk kerucut tersebut, roda akan cenderung melaju lurus akibat kelembaman kendaraan rel.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "kelembaman"
+          ],
+          "non_factual": false,
+          "spoken_text": "Tanpa bentuk kerucut tersebut, roda akan cenderung melaju lurus akibat kelembaman kendaraan rel."
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Bentuk kerucut itu memperbesar diameter efektif roda saat bergerak mendekati bagian rel luar.",
+          "claim_refs": [
+            "C3"
+          ],
+          "emphasis_words": [
+            "diameter efektif"
+          ],
+          "non_factual": false,
+          "spoken_text": "Bentuk kerucut itu memperbesar diameter efektif roda saat bergerak mendekati bagian rel luar."
+        },
+        {
+          "text": "Karena roda terpasang kaku pada as, roda luar menempuh jarak sedikit lebih jauh agar kereta berbelok mulus.",
+          "claim_refs": [
+            "C3"
+          ],
+          "emphasis_words": [
+            "jarak sedikit lebih jauh"
+          ],
+          "non_factual": false,
+          "spoken_text": "Karena roda terpasang kaku pada as, roda luar menempuh jarak sedikit lebih jauh agar kereta berbelok mulus."
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Selain itu, roda kereta juga dilengkapi flensa berupa tonjolan di bagian dalam.",
+          "claim_refs": [
+            "C4",
+            "C5"
+          ],
+          "emphasis_words": [
+            "flensa"
+          ],
+          "non_factual": false,
+          "spoken_text": "Selain itu, roda kereta juga dilengkapi flensa berupa tonjolan di bagian dalam."
+        },
+        {
+          "text": "Fitur pelindung ini berfungsi untuk menghindari keluarnya roda dari jalurnya pada berbagai jalur.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "fitur pelindung"
+          ],
+          "non_factual": false,
+          "spoken_text": "Fitur pelindung ini berfungsi untuk menghindari keluarnya roda dari jalurnya pada berbagai jalur."
+        }
+      ]
+    }
+  ]
+}

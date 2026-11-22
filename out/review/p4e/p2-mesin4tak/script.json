@@ -1,0 +1,115 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Tahukah kamu bagaimana mesin motor andalanmu menghasilkan tenaga dari empat gerakan piston yang berbeda?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "empat gerakan",
+            "piston"
+          ],
+          "non_factual": true,
+          "spoken_text": "Tahukah kamu bagaimana mesin motor andalanmu menghasilkan tenaga dari empat gerakan piston yang berbeda?"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Siklus 4 tak terdiri dari langkah hisap, kompresi, tenaga, dan buang yang memerlukan dua putaran poros engkol penuh.",
+          "claim_refs": [
+            "C1"
+          ],
+          "emphasis_words": [
+            "Siklus 4 tak",
+            "poros engkol"
+          ],
+          "non_factual": false,
+          "spoken_text": "Siklus 4 tak terdiri dari langkah hisap, kompresi, tenaga, dan buang yang memerlukan dua putaran poros engkol penuh."
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "hisap",
+            "katup masuk"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk."
+        },
+        {
+          "text": "Langkah kompresi membuat kedua katup tertutup dan piston bergerak ke atas untuk memadatkan campuran gas.",
+          "claim_refs": [
+            "C3",
+            "C8"
+          ],
+          "emphasis_words": [
+            "kompresi",
+            "piston"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah kompresi membuat kedua katup tertutup dan piston bergerak ke atas untuk memadatkan campuran gas."
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Langkah tenaga menghasilkan dorongan ke bawah pada piston akibat ekspansi gas pembakaran bertekanan tinggi.",
+          "claim_refs": [
+            "C4",
+            "C9"
+          ],
+          "emphasis_words": [
+            "tenaga",
+            "ekspansi gas"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah tenaga menghasilkan dorongan ke bawah pada piston akibat ekspansi gas pembakaran bertekanan tinggi."
+        },
+        {
+          "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang saat piston bergerak ke atas.",
+          "claim_refs": [
+            "C5",
+            "C10"
+          ],
+          "emphasis_words": [
+            "buang",
+            "katup buang"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang saat piston bergerak ke atas."
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "sentences": [
+        {
+          "text": "Rangkaian empat langkah mekanis ini mengatur masuknya bahan bakar hingga pembuangan gas secara berulang.",
+          "claim_refs": [
+            "C1",
+            "C5"
+          ],
+          "emphasis_words": [
+            "empat langkah",
+            "berulang"
+          ],
+          "non_factual": false,
+          "spoken_text": "Rangkaian empat langkah mekanis ini mengatur masuknya bahan bakar hingga pembuangan gas secara berulang."
+        }
+      ]
+    }
+  ]
+}

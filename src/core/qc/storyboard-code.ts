@@ -4,7 +4,9 @@ import type { Script } from '@core/contracts/script';
 import { getHudClaimRefs, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { extractNumericValuesFromText } from '@core/qc/l1-ledger';
+import { detectHedgeAndAbsoluteMismatches } from './hedge-glossary';
 import { extractHudDisplayText, QUANTITY_LABELS } from './l5-semantic';
+import { checkHudSpelling } from './spellcheck-id';
 
 const DISPLAY_FIELDS = [
   'title',
@@ -244,6 +246,13 @@ export function verifyStoryboardCode(
           });
         }
       }
+      if (h.component === 'EffectiveDiameterCompare' && h.display === 'value') {
+        issues.push({
+          severity: 'error',
+          message: `L5_HUD_DISPLAY_MISMATCH: EffectiveDiameterCompare "${h.hud_id ?? h.component}" menampilkan perbandingan kualitatif, wajib display="qualitative"`,
+          ref,
+        });
+      }
       const needsClaim = nums.length > 0 && !isDriverStat && !h.illustrative;
       const claimRefs = getHudClaimRefs(h);
 
@@ -259,6 +268,18 @@ export function verifyStoryboardCode(
             });
           } else {
             verifiedClaims.push(claim);
+          }
+        }
+        if (verifiedClaims.length > 0) {
+          const allQuotes = verifiedClaims.flatMap((c) => c.sources.map((s) => s.quote)).join(' ');
+          const hudTxt = extractHudDisplayText(h.props ?? {});
+          const { absoluteAdded } = detectHedgeAndAbsoluteMismatches(hudTxt, allQuotes);
+          if (absoluteAdded.length > 0) {
+            issues.push({
+              severity: 'error',
+              message: `L2_ABSOLUTE_ADDED: teks HUD "${hudTxt}" menambah kata mutlak (${absoluteAdded.join(', ')}) yang tidak ada di kutipan`,
+              ref,
+            });
           }
         }
         if (verifiedClaims.length > 0 && nums.length > 0 && !isDriverStat) {
@@ -359,5 +380,6 @@ export function verifyStoryboardCode(
     }
   }
 
+  issues.push(...checkHudSpelling(storyboard, { script, ledger }));
   return { layer: 'L4', issues };
 }

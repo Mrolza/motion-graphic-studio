@@ -1,0 +1,119 @@
+1
+00:00:00,030 --> 00:00:01,618
+Tahukah kamu bagaimana
+mesin motor
+
+2
+00:00:01,618 --> 00:00:03,468
+andalanmu menghasilkan tenaga
+dari empat
+
+3
+00:00:03,468 --> 00:00:04,818
+gerakan piston
+yang berbeda?
+
+4
+00:00:05,008 --> 00:00:06,295
+Siklus 4 tak terdiri dari
+
+5
+00:00:06,295 --> 00:00:07,045
+langkah hisap,
+
+6
+00:00:07,175 --> 00:00:08,654
+kompresi, tenaga,
+
+7
+00:00:08,784 --> 00:00:09,972
+dan buang yang
+memerlukan dua
+
+8
+00:00:09,972 --> 00:00:11,334
+putaran poros
+engkol penuh.
+
+9
+00:00:11,524 --> 00:00:13,274
+Langkah hisap menurunkan
+piston untuk
+
+10
+00:00:13,274 --> 00:00:14,649
+menarik campuran udara
+dan bahan
+
+11
+00:00:14,649 --> 00:00:16,099
+bakar ke dalam
+silinder melalui
+
+12
+00:00:16,099 --> 00:00:16,836
+katup masuk.
+
+13
+00:00:16,966 --> 00:00:18,566
+Langkah kompresi membuat
+kedua katup
+
+14
+00:00:18,566 --> 00:00:19,978
+tertutup dan piston
+bergerak ke
+
+15
+00:00:19,978 --> 00:00:21,991
+atas untuk memadatkan
+campuran gas.
+
+16
+00:00:22,181 --> 00:00:23,856
+Langkah tenaga menghasilkan
+dorongan ke
+
+17
+00:00:23,856 --> 00:00:25,631
+bawah pada piston
+akibat ekspansi
+
+18
+00:00:25,631 --> 00:00:27,344
+gas pembakaran
+bertekanan tinggi.
+
+19
+00:00:27,474 --> 00:00:28,924
+Langkah buang mendorong
+sisa gas
+
+20
+00:00:28,924 --> 00:00:30,536
+hasil pembakaran keluar
+melalui katup
+
+21
+00:00:30,536 --> 00:00:31,849
+buang saat piston
+bergerak ke
+
+22
+00:00:31,849 --> 00:00:32,399
+atas.
+
+23
+00:00:32,589 --> 00:00:34,201
+Rangkaian empat langkah
+mekanis ini
+
+24
+00:00:34,201 --> 00:00:35,839
+mengatur masuknya bahan
+bakar hingga
+
+25
+00:00:35,839 --> 00:00:37,389
+pembuangan gas
+secara berulang.

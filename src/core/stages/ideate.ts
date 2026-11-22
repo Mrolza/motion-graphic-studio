@@ -15,6 +15,7 @@ export const ConceptSchema = z.object({
   angle: z.string().min(1),
   hook: z.string().min(1),
   core_claims: z.array(z.string().min(1)).min(3).max(5),
+  key_steps: z.array(z.string().min(1)).optional(),
   wiki_titles: z
     .object({
       en: z.array(z.string().min(1)).max(5),
@@ -48,7 +49,8 @@ Aturan ketat:
 - Untuk format today_in_history, fokuskan core_claims (3-4 klaim) pada fakta utama kejadian (tanggal, tahun, tokoh kunci, peristiwa inti, dan hasilnya) yang ada di bagian awal/ringkasan artikel utama Wikipedia kejadian tersebut.
 - wiki_titles wajib berisi judul artikel Wikipedia berbahasa Inggris ("en", 2-5 judul) dan Indonesia ("id", 1-3 judul) yang paling tepat menjawab pertanyaan topik (misalnya untuk kereta: "Wheelset (rail transport)", "Flange", "Track gauge", "Hunting oscillation", "Derailment").
 - search_queries wajib berisi kata kunci pencarian Wikipedia cadangan (2-6 query).
-- Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "core_claims": ["..."], "wiki_titles": { "en": ["..."], "id": ["..."] }, "search_queries": ["..."] }] }.`;
+- Untuk topik proses ("cara kerja", "bagaimana dibuat", format how_it_works/how_its_made), WAJIB isi "key_steps" berisi daftar urutan langkah utama (mis. ["Hisap", "Kompresi", "Usaha", "Buang"] untuk mesin 4 tak).
+- Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "core_claims": ["..."], "key_steps": ["..."], "wiki_titles": { "en": ["..."], "id": ["..."] }, "search_queries": ["..."] }] }.`;
 
   const prompt = `Topik: "${project.topic}"
 Format: ${project.format}
@@ -57,16 +59,19 @@ Target durasi: ${project.target_duration_sec} detik
 Hasilkan 3 konsep.`;
 
   let llmCallsThisRun = 0;
+  const projectDir = getProjectDir(projectId, repoRoot);
   try {
     const res = await generateJson(ConceptsOutputSchema, prompt, {
       stage: 'S1',
+      purpose: 'ideate',
+      projectDir,
       systemInstruction,
       onCallRecord: () => {
         llmCallsThisRun++;
       },
     });
 
-    const outPath = path.join(getProjectDir(projectId, repoRoot), 'concepts.json');
+    const outPath = path.join(projectDir, 'concepts.json');
     await mkdir(path.dirname(outPath), { recursive: true });
     await writeFile(outPath, JSON.stringify(res.data, null, 2), 'utf-8');
 

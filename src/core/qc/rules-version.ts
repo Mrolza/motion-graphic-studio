@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 
-export const QC_RULES_VERSION = 'p4d-v1';
+export const QC_RULES_VERSION = 'p4e-v1';
 
 export function sha256Hex(input: string): string {
   return createHash('sha256').update(input).digest('hex');

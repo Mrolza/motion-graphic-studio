@@ -1,0 +1,59 @@
+{
+  "projectId": "p2-kereta",
+  "passed": true,
+  "technical": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "videoCodec": "h264",
+    "pixFmt": "yuv420p",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "videoDurationSec": 34.533333,
+    "audioDurationSec": 34.533,
+    "avDiffMs": 0,
+    "frameCount": 1036,
+    "expectedFrames": 1036
+  },
+  "audio": {
+    "integratedLufs": -14.2,
+    "truePeakDbfs": -2.9,
+    "maxVoGapSec": 0,
+    "silenceHits": 0
+  },
+  "visual": {
+    "blackHits": 0,
+    "freezeHits": 1
+  },
+  "process": {
+    "totalLlmCalls": 408,
+    "exceedsPrdLlmBudget": true
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "FINAL_FREEZE_FRAME: terdeteksi 1 segmen gambar statis > 1.5s",
+      "ref": "visual"
+    },
+    {
+      "severity": "warning",
+      "message": "TEXT_UNKNOWN_WORD: kata tak dikenal (pengaman) pada Callout \"S4_H1\"",
+      "ref": "storyboard:S4:S4_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S4_H1\" berbagi 86% kata dengan caption simultan",
+      "ref": "S4:S4_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "TEXT_UNKNOWN_WORD: kata tak dikenal (pengaman) pada Callout \"S4_H1\"",
+      "ref": "S4:S4_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "PROCESS_LLM_BUDGET: total panggilan LLM S1–S12 = 408 (> 15 batas PRD §5)",
+      "ref": "process"
+    }
+  ]
+}

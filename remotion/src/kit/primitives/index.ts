@@ -39,3 +39,5 @@ export {
   type Arrow3DProps,
   type Label3DProps,
 } from './LineAndLabel3D';
+
+export { MotionArrow, type MotionArrowProps } from './MotionArrow';

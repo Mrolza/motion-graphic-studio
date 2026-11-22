@@ -184,7 +184,7 @@ const AssembledTelemetryEmitter: React.FC = () => {
 
 export const AssembledProject: React.FC<{ telemetry?: boolean }> = ({ telemetry = false }) => (
   <TelemetryProvider enabled={telemetry}>
-    <AbsoluteFill>
+    <AbsoluteFill style={{ backgroundColor: '#0A192F' }}>
       <Series>
 ${seriesItems}
       </Series>

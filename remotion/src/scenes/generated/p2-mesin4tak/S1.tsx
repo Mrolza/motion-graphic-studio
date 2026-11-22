@@ -2,7 +2,6 @@ import React from 'react';
 import {
   StoryboardHudProvider,
   TelemetryProvider,
-  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
@@ -11,6 +10,7 @@ import {
   HudLayout,
   HudZone,
   Hud,
+  useDriver,
   StoryboardHudDataItem
 } from '../../../kit';
 
@@ -25,8 +25,8 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
     from: 0,
     to: 180,
     unit: '°',
-    startSec: 1.74,
-    durationSec: 2.06,
+    startSec: 3.79,
+    durationSec: 1.07,
     curve: 'linear'
   });
 
@@ -40,17 +40,12 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
             <HudZone zone="title" palette="blueprint-navy">
               <Hud id="S1_H1" driver={driver} palette="blueprint-navy" />
             </HudZone>
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S1_H2" driver={driver} palette="blueprint-navy" />
+            </HudZone>
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }}
-          padding={0.75}
-          startAngleDeg={-20}
-          endAngleDeg={20}
-          durationSec={3.799}
-        />
         <Ground size={36} divisions={36} y={-0.55} />
         <EngineBlock
           entityId="engine_block"
@@ -58,6 +53,14 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           cutawayProgress={driver.progress}
           position={[0, 0.45, 0]}
           palette="blueprint-navy"
+        />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{
+            center: [0, 1.15, 0],
+            size: [1.2, 1.8, 1.2]
+          }}
+          padding={1.05}
         />
       </BlueprintStage>
     </SceneTransition>

@@ -11,7 +11,7 @@ import {
   saveProject,
 } from '@core/project/store';
 import { evaluateL0, verifyLedgerL1 } from '@core/qc/l1-ledger';
-import { verifyLedgerL1Semantic } from '@core/qc/l1-semantic';
+import { reparaphraseFailedClaims, verifyLedgerL1Semantic } from '@core/qc/l1-semantic';
 import {
   fetchTodayInHistorySources,
   fetchWikipediaSourcesForConcept,
@@ -76,9 +76,10 @@ async function extractClaimsFromSources(params: {
   concept: Concept;
   sources: WikipediaSource[];
   coreIndices?: number[];
+  projectDir?: string;
   onCall: () => void;
 }) {
-  const { topic, concept, sources, onCall } = params;
+  const { topic, concept, sources, projectDir, onCall } = params;
   const totalChars = sources.reduce((sum, s) => sum + s.text.length, 0);
   const batches: WikipediaSource[][] =
     totalChars > 32_000 && sources.length > 1
@@ -120,20 +121,17 @@ Kembalikan JSON { "source_evaluations": [...], "claims": [...] }.`;
 
     const res = await generateJson(ExtractionResponseSchema, prompt, {
       stage: 'S2',
+      purpose: 'extract_claims',
+      projectDir,
       systemInstruction,
       onCallRecord: onCall,
     });
     const rawEvals = res.data.source_evaluations;
     if (Array.isArray(rawEvals)) {
-      for (const ev of rawEvals) {
-        sourceEvals.set(ev.source_id, ev);
-      }
+      for (const ev of rawEvals) sourceEvals.set(ev.source_id, ev);
     } else if (rawEvals && typeof rawEvals === 'object') {
-      for (const [sid, ev] of Object.entries(
-        rawEvals as Record<string, { relevance?: string; reason?: string }>
-      )) {
-        const rel =
-          ev.relevance === 'irrelevant' || ev.relevance === 'partial' ? ev.relevance : 'relevant';
+      for (const [sid, ev] of Object.entries(rawEvals as Record<string, { relevance?: string; reason?: string }>)) {
+        const rel = ev.relevance === 'irrelevant' || ev.relevance === 'partial' ? ev.relevance : 'relevant';
         sourceEvals.set(sid, { source_id: sid, relevance: rel, reason: ev.reason });
       }
     }
@@ -212,6 +210,7 @@ export async function runResearchStage(
       topic: project.topic,
       concept,
       sources,
+      projectDir,
       onCall: trackCall,
     });
 
@@ -270,7 +269,7 @@ export async function runResearchStage(
         `Topik: "${project.topic}"\nCore claims yang belum terverifikasi:\n${missingClaims.join(
           '\n'
         )}\n\nSarankan judul artikel Wikipedia Inggris/Indonesia dan query pencarian yang spesifik untuk memverifikasi klaim di atas.`,
-        { stage: 'S2', onCallRecord: trackCall }
+        { stage: 'S2', purpose: 'follow_up_query', projectDir, onCallRecord: trackCall }
       );
 
       const followUpQueries = followUpRes.data.search_queries ?? [];
@@ -304,6 +303,7 @@ export async function runResearchStage(
           concept,
           sources: retrySources,
           coreIndices: missingIndices.length > 0 ? missingIndices : undefined,
+          projectDir,
           onCall: trackCall,
         });
         for (const [k, v] of secondPass.sourceEvals) {
@@ -314,21 +314,41 @@ export async function runResearchStage(
       }
     }
 
-    const l1Semantic = await verifyLedgerL1Semantic(l1.ledger.claims, { onCall: trackCall });
-    if (l1Semantic.issues.length > 0) {
+    const applySemantic = async () => {
+      const sem = await verifyLedgerL1Semantic(l1.ledger.claims, { projectDir, onCall: trackCall });
+      if (sem.issues.length === 0) return;
       l1 = {
         ledger: {
           ...l1.ledger,
           claims: l1.ledger.claims.map((c) =>
-            l1Semantic.unverifiedIds.has(c.id) ? { ...c, status: 'unverified' } : c
+            sem.unverifiedIds.has(c.id)
+              ? { ...c, status: 'unverified', status_reason: sem.reasons.get(c.id) ?? c.status_reason }
+              : c
           ),
         },
-        report: {
-          ...l1.report,
-          issues: [...l1.report.issues, ...l1Semantic.issues],
-        },
+        report: { ...l1.report, issues: [...l1.report.issues, ...sem.issues] },
       };
       l0 = evaluateL0(concept.core_claims, l1.ledger.claims, coreMapping);
+    };
+    await applySemantic();
+
+    // A2: Re-paraphrase claims that failed hedge/embellishment checks (1 call, max 1 retry)
+    const recoverable = l1.ledger.claims.filter(
+      (c) => c.status === 'unverified' && /^(L1_HEDGE_DROPPED|L1_ABSOLUTE_ADDED|L1_EMBELLISHED)/.test(c.status_reason ?? '')
+    );
+    if (recoverable.length > 0) {
+      const fixedTexts = await reparaphraseFailedClaims(recoverable, { projectDir, onCall: trackCall });
+      if (fixedTexts.size > 0) {
+        const droppedIds = new Set([...allEvals.values()].filter((e) => e.relevance === 'irrelevant').map((e) => e.source_id));
+        const activeList = allRawClaims.filter((rc) => !droppedIds.has(rc.source_id));
+        const targetList = activeList.length > 0 ? activeList : allRawClaims;
+        targetList.forEach((rc, idx) => {
+          const updatedText = fixedTexts.get(`C${idx + 1}`);
+          if (updatedText) rc.text = updatedText;
+        });
+        ({ l1, l0, coreMapping } = buildLedgerAndL0(sources, allRawClaims));
+        await applySemantic();
+      }
     }
 
     const sourceReport: SourceReportEntry[] = sources.map((s) => {
@@ -362,15 +382,7 @@ export async function runResearchStage(
     updated.stages.S2 = l0.passed ? 'done' : 'needs_review';
     await saveProject(updated, repoRoot);
 
-    return {
-      concept,
-      sources,
-      sourceReport,
-      ledger: l1.ledger,
-      l1Report: l1.report,
-      l0Report: l0.report,
-      l0Passed: l0.passed,
-    };
+    return { concept, sources, sourceReport, ledger: l1.ledger, l1Report: l1.report, l0Report: l0.report, l0Passed: l0.passed };
   } catch (err) {
     if (llmCallsThisRun > 0) {
       await incrementProjectLlmCalls(projectId, 'S2', llmCallsThisRun, repoRoot).catch(() => {});

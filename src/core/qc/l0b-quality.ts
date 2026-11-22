@@ -48,16 +48,75 @@ export interface CombinedQcResult {
   l3Report: QcReport;
 }
 
+export interface StepCoverageRow {
+  step: string;
+  covered: boolean;
+  sentenceRef: string | null;
+  sentenceText: string | null;
+  claimRefs: string[];
+}
+
+export function checkKeyStepsCoverage(
+  keySteps: string[] | undefined,
+  script: Script,
+  ledger: FactLedger
+): { issues: QcIssue[]; rows: StepCoverageRow[] } {
+  const issues: QcIssue[] = [];
+  const rows: StepCoverageRow[] = [];
+  if (!keySteps || keySteps.length === 0) return { issues, rows };
+
+  const verifiedIds = new Set(ledger.claims.filter((c) => c.status === 'verified').map((c) => c.id));
+  const sentences = script.scenes.flatMap((sc) =>
+    sc.sentences.map((s, idx) => ({ ref: `${sc.id}.${idx + 1}`, sent: s }))
+  );
+
+  for (const step of keySteps) {
+    const tokens = step
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+      .split(/\s+/)
+      .filter((t) => t.length >= 4);
+    if (tokens.includes('usaha')) tokens.push('tenaga');
+    if (tokens.includes('tenaga')) tokens.push('usaha');
+    if (tokens.includes('hisap')) tokens.push('isap');
+    const match = sentences.find(({ sent }) => {
+      if (sent.non_factual) return false;
+      const hasVerified = sent.claim_refs.some((cid) => verifiedIds.has(cid));
+      if (!hasVerified) return false;
+      const lower = sent.text.toLowerCase();
+      return tokens.some((tok) => lower.includes(tok));
+    });
+    if (!match) {
+      issues.push({
+        severity: 'error',
+        message: `L0B_STEP_MISSING: langkah proses "${step}" belum dijelaskan minimal 1 kalimat dengan klaim verified`,
+        ref: step,
+      });
+      rows.push({ step, covered: false, sentenceRef: null, sentenceText: null, claimRefs: [] });
+    } else {
+      rows.push({
+        step,
+        covered: true,
+        sentenceRef: match.ref,
+        sentenceText: match.sent.text,
+        claimRefs: match.sent.claim_refs.filter((cid) => verifiedIds.has(cid)),
+      });
+    }
+  }
+  return { issues, rows };
+}
+
 export async function verifyScriptL0bAndL3(params: {
   topic: string;
   format?: VideoFormat;
   concept?: Concept;
   script: Script;
   ledger: FactLedger;
+  projectDir?: string;
   onCall?: (model: string) => void;
   generateJsonFn?: typeof generateJson;
 }): Promise<CombinedQcResult> {
-  const { topic, format, concept, script, ledger, onCall, generateJsonFn } = params;
+  const { topic, format, concept, script, ledger, projectDir, onCall, generateJsonFn } = params;
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
 
   const items: Array<{
@@ -124,6 +183,8 @@ ${JSON.stringify(items, null, 2)}`;
   const genFn = generateJsonFn ?? generateJson;
   const res = await genFn(CombinedVerifierOutputSchema, prompt, {
     stage: 'S4',
+    purpose: 'l0b_l3_verify',
+    projectDir,
     systemInstruction,
     temperature: 0.1,
     onCallRecord: (rec) => {
@@ -196,9 +257,18 @@ ${JSON.stringify(items, null, 2)}`;
     }
   }
 
+  const sentByRef = new Map(
+    items.map((it) => [it.ref, it])
+  );
   const l3Issues: QcIssue[] = [];
   for (const ev of res.data.l3.evaluations) {
     if (ev.verdict === 'non_factual_assertion') {
+      const sentItem = sentByRef.get(ev.ref);
+      const isPureQuestion =
+        sentItem?.non_factual &&
+        sentItem.text.trim().endsWith('?') &&
+        !/\d/.test(sentItem.text);
+      if (isPureQuestion) continue;
       l3Issues.push({
         severity: 'error',
         message: `NON_FACTUAL_ASSERTION: ${ev.reason}`,
@@ -221,6 +291,9 @@ ${JSON.stringify(items, null, 2)}`;
       });
     }
   }
+
+  const stepCov = checkKeyStepsCoverage(concept?.key_steps, script, ledger);
+  l0bIssues.push(...stepCov.issues);
 
   return {
     l0b: {
