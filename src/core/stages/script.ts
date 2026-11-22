@@ -146,9 +146,17 @@ export async function runScriptAndQcStage(
     text: c.text,
     value: c.value,
     unit: c.unit,
+    step_id: c.step_id,
     kind: c.kind,
     quote: c.sources[0]?.quote ?? '',
   }));
+
+  const keyStepsRule =
+    selectedRaw.concept.key_steps && selectedRaw.concept.key_steps.length > 0
+      ? `\nATURAN KEY_STEPS WAJIB: Setiap langkah di key_steps (${JSON.stringify(
+          selectedRaw.concept.key_steps
+        )}) HARUS dijelaskan oleh minimal 1 kalimat KHUSUS (bukan kalimat daftar yang menyebut >=3 langkah) yang merujuk klaim verified dengan step_id yang sesuai.`
+      : '';
 
   const idealWords = Math.round(project.target_duration_sec * 2.3);
   const basePrompt = `Topik: "${project.topic}"
@@ -156,7 +164,7 @@ Format: ${formatPack.id} (${formatPack.name})
 Struktur format:
 ${formatPack.structure.join('\n')}
 Aturan fakta format:
-${formatPack.fact_rules.join('\n')}
+${formatPack.fact_rules.join('\n')}${keyStepsRule}
 
 Konsep terpilih:
 ${JSON.stringify(selectedRaw.concept, null, 2)}

@@ -3,36 +3,24 @@
     "id": "gen-p2-mesin4tak-S1",
     "importPath": "./S1",
     "exportName": "Scene_S1",
-    "durationInFrames": 146
+    "durationInFrames": 280
   },
   {
     "id": "gen-p2-mesin4tak-S2",
     "importPath": "./S2",
     "exportName": "Scene_S2",
-    "durationInFrames": 192
+    "durationInFrames": 173
   },
   {
     "id": "gen-p2-mesin4tak-S3",
     "importPath": "./S3",
     "exportName": "Scene_S3",
-    "durationInFrames": 316
-  },
-  {
-    "id": "gen-p2-mesin4tak-S4",
-    "importPath": "./S4",
-    "exportName": "Scene_S4",
-    "durationInFrames": 309
-  },
-  {
-    "id": "gen-p2-mesin4tak-S5",
-    "importPath": "./S5",
-    "exportName": "Scene_S5",
-    "durationInFrames": 146
+    "durationInFrames": 563
   },
   {
     "id": "gen-p2-mesin4tak-assembled",
     "importPath": "./Assembled",
     "exportName": "AssembledProject",
-    "durationInFrames": 1123
+    "durationInFrames": 1314
   }
 ]

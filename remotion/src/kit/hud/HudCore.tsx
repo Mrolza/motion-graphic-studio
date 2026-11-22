@@ -45,7 +45,7 @@ export const KineticTitle: React.FC<KineticTitleProps> = ({
         style={{
           fontSize: 44,
           fontWeight: 800,
-          lineHeight: 1.12,
+          lineHeight: 1.08,
           color: tokens.colors.white,
           textShadow: tokens.glow.soft,
         }}

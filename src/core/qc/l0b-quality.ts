@@ -56,15 +56,18 @@ export interface StepCoverageRow {
   claimRefs: string[];
 }
 
+const STEP_STOP_WORDS = new Set(['langkah', 'tahap', 'proses', 'bagian', 'fase', 'stroke']);
+
 function normalizeStepKey(step: string): string[] {
   const tokens = step
     .toLowerCase()
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .split(/\s+/)
-    .filter((t) => t.length >= 4);
+    .filter((t) => t.length >= 4 && !STEP_STOP_WORDS.has(t));
   if (tokens.includes('usaha')) tokens.push('tenaga');
   if (tokens.includes('tenaga')) tokens.push('usaha');
   if (tokens.includes('hisap')) tokens.push('isap');
+  if (tokens.includes('isap')) tokens.push('hisap');
   return tokens;
 }
 

@@ -219,6 +219,27 @@ export const Scene_S2 = () => (
     const cov = checkKeyStepsCoverage(['self-centering', 'geser ke rel luar'], script, ledger);
     expect(cov.issues.some((i) => i.message.includes('L0B_STEP_MISSING'))).toBe(true);
     expect(cov.rows.every((r) => !r.covered)).toBe(true);
+
+    // Generic word "langkah" must NOT cause single-step sentences to be treated as >=3-step lists
+    const engineLedger: FactLedger = {
+      claims: [
+        { id: 'C1', text: 'Isap.', step_id: 'Langkah Isap', kind: 'fact', status: 'verified', sources: [{ url: 'https://en.wikipedia.org/wiki/Four-stroke_engine', title: 'E', quote: 'Intake.', retrieved_at: '2026-11-22' }] },
+        { id: 'C2', text: 'Kompresi.', step_id: 'Langkah Kompresi', kind: 'fact', status: 'verified', sources: [{ url: 'https://en.wikipedia.org/wiki/Four-stroke_engine', title: 'E', quote: 'Compression.', retrieved_at: '2026-11-22' }] },
+      ],
+    };
+    const engineScript: Script = {
+      scenes: [
+        {
+          id: 'S2',
+          sentences: [
+            { text: 'Dalam langkah isap, katup masuk terbuka.', claim_refs: ['C1'], emphasis_words: [], non_factual: false },
+            { text: 'Dalam langkah kompresi, piston memampatkan campuran.', claim_refs: ['C2'], emphasis_words: [], non_factual: false },
+          ],
+        },
+      ],
+    };
+    const covEngine = checkKeyStepsCoverage(['Langkah Isap', 'Langkah Kompresi'], engineScript, engineLedger);
+    expect(covEngine.issues).toEqual([]);
   });
 
   it('B3 + Mutasi 36: Truncated HUD text -> HUD_TRUNCATED, Callout > 8 words -> error', () => {

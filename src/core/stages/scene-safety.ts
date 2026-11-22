@@ -119,6 +119,15 @@ export function validateSceneCodeSafety(
       'MISSING_STORYBOARD_HUD: adegan wajib memakai StoryboardHudProvider dan <Hud id="..." />'
     );
   }
+  const hudZoneMatches = code.matchAll(/<HudZone\b[^>]*\bzone\s*=\s*["']([^"']+)["']/g);
+  for (const zm of hudZoneMatches) {
+    const z = zm[1]!;
+    if (z !== 'title' && z !== 'callout' && z !== 'free') {
+      errors.push(
+        `INVALID_HUD_ZONE: HudZone zone="${z}" tidak valid; HANYA boleh "title" (untuk KineticTitle) atau "callout"`
+      );
+    }
+  }
   if (/mode\s*=\s*["']frameEntities["']/.test(code) && /<CameraRig[^>]*\b(from|to|radius|height)\s*=/.test(code)) {
     errors.push(
       'CAMERA_MANUAL_DISTANCE: dilarang menyetel jarak kamera manual (from/to/radius/height) saat memakai CameraRig mode="frameEntities"'

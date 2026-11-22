@@ -1,0 +1,101 @@
+{
+  "projectId": "p2-mesin4tak",
+  "passed": true,
+  "technical": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "videoCodec": "h264",
+    "pixFmt": "yuv420p",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "videoDurationSec": 43.8,
+    "audioDurationSec": 43.8,
+    "avDiffMs": 0,
+    "frameCount": 1314,
+    "expectedFrames": 1314
+  },
+  "audio": {
+    "integratedLufs": -14.1,
+    "truePeakDbfs": -2.7,
+    "maxVoGapSec": 0,
+    "silenceHits": 0,
+    "tts_scenes": [
+      {
+        "scene_id": "S1",
+        "engine_used": "msedge-tts",
+        "voice_id": "id-ID-ArdiNeural"
+      },
+      {
+        "scene_id": "S2",
+        "engine_used": "msedge-tts",
+        "voice_id": "id-ID-ArdiNeural"
+      },
+      {
+        "scene_id": "S3",
+        "engine_used": "msedge-tts",
+        "voice_id": "id-ID-ArdiNeural"
+      },
+      {
+        "scene_id": "S4",
+        "engine_used": "msedge-tts",
+        "voice_id": "id-ID-ArdiNeural"
+      }
+    ]
+  },
+  "visual": {
+    "blackHits": 0,
+    "freezeHits": 1
+  },
+  "process": {
+    "totalLlmCalls": 323,
+    "exceedsPrdLlmBudget": true
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "FINAL_FREEZE_FRAME: terdeteksi 1 segmen gambar statis > 1.5s",
+      "ref": "visual"
+    },
+    {
+      "severity": "warning",
+      "message": "TEXT_UNKNOWN_WORD: kata tak dikenal (Total) pada Callout \"S4_H2\"",
+      "ref": "storyboard:S4:S4_H2"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S1_H2\" berbagi 100% kata dengan caption simultan",
+      "ref": "S1:S1_H2"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S2_H1\" berbagi 100% kata dengan caption simultan",
+      "ref": "S2:S2_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S3_H1\" berbagi 100% kata dengan caption simultan",
+      "ref": "S3:S3_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S3_H2\" berbagi 100% kata dengan caption simultan",
+      "ref": "S3:S3_H2"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S4_H2\" berbagi 75% kata dengan caption simultan",
+      "ref": "S4:S4_H2"
+    },
+    {
+      "severity": "warning",
+      "message": "TEXT_UNKNOWN_WORD: kata tak dikenal (Total) pada Callout \"S4_H2\"",
+      "ref": "S4:S4_H2"
+    },
+    {
+      "severity": "warning",
+      "message": "PROCESS_LLM_BUDGET: total panggilan LLM S1–S12 = 323 (> 15 batas PRD §5)",
+      "ref": "process"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import { getThemeTokens, type PaletteId } from '../tokens/index';
 export type HudZoneId = 'title' | 'free' | 'callout' | 'caption';
 
 const ZONE_RECTS: Record<HudZoneId, { top: number; maxHeight: number }> = {
-  title: { top: 72, maxHeight: 160 },
+  title: { top: 60, maxHeight: 176 },
   free: { top: 240, maxHeight: 490 },
   callout: { top: 740, maxHeight: 170 },
   caption: { top: 935, maxHeight: 82 },
@@ -125,16 +125,16 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
     if (!truncated) {
       const nodes = [el, ...Array.from(el.querySelectorAll('*'))] as HTMLElement[];
       for (const n of nodes) {
-        if (n.clientHeight > 0 && n.scrollHeight > n.clientHeight + 2) {
+        const styleObj = typeof window !== 'undefined' ? window.getComputedStyle(n) : null;
+        const clipsY = styleObj && (styleObj.overflowY === 'hidden' || styleObj.overflowY === 'clip' || styleObj.textOverflow === 'ellipsis');
+        const clipsX = styleObj && (styleObj.overflowX === 'hidden' || styleObj.overflowX === 'clip' || styleObj.textOverflow === 'ellipsis');
+        if (clipsY && n.clientHeight > 0 && n.scrollHeight > n.clientHeight + 2) {
           truncated = true;
           break;
         }
-        if (n.clientWidth > 0 && n.scrollWidth > n.clientWidth + 2) {
-          const styleObj = typeof window !== 'undefined' ? window.getComputedStyle(n) : null;
-          if (styleObj && (styleObj.overflowX === 'hidden' || styleObj.textOverflow === 'ellipsis')) {
-            truncated = true;
-            break;
-          }
+        if (clipsX && n.clientWidth > 0 && n.scrollWidth > n.clientWidth + 2) {
+          truncated = true;
+          break;
         }
       }
     }

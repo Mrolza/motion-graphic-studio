@@ -1,18 +1,17 @@
 import React from 'react';
 import {
-  StoryboardHudProvider,
   TelemetryProvider,
-  useDriver,
+  StoryboardHudProvider,
+  StoryboardHudDataItem,
   SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
-  PistonCrankAssembly,
-  MotionArrow,
+  EngineBlock,
   HudLayout,
   HudZone,
   Hud,
-  StoryboardHudDataItem
+  useDriver
 } from '../../../kit';
 
 export interface Scene_S4Props {
@@ -23,15 +22,13 @@ export interface Scene_S4Props {
 const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'crank_angle',
-    from: 360,
+    from: 0,
     to: 720,
     unit: '°',
-    startSec: 0.44,
-    durationSec: 9.85,
+    startSec: 0,
+    durationSec: 9.57,
     curve: 'linear'
   });
-
-  const pistonVel = -Math.sin((driver.value * Math.PI) / 180);
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
@@ -47,24 +44,18 @@ const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
-        <Ground size={36} divisions={36} y={-0.55} />
-        <PistonCrankAssembly
-          entityId="piston_crank"
-          crankAngleDeg={driver.value}
-          position={[0, 0.45, 0]}
-          cutaway
-          palette="blueprint-navy"
-        />
-        <MotionArrow
-          bindToPart="piston"
-          velocity={[0, pistonVel, 0]}
-          palette="blueprint-navy"
-        />
         <CameraRig
           mode="frameEntities"
-          focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
-          padding={1.22}
-          elevationDeg={12}
+          focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }}
+          padding={1.25}
+        />
+        <Ground size={36} divisions={36} y={-0.55} />
+        <EngineBlock
+          entityId="engine_block"
+          crankAngleDeg={driver.value}
+          cutawayProgress={driver.progress}
+          position={[0, 0.45, 0]}
+          palette="blueprint-navy"
         />
       </BlueprintStage>
     </SceneTransition>
