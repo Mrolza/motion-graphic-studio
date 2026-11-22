@@ -17,6 +17,7 @@ export {
   type EasingMode,
 } from './motion';
 export { useDriver, type DriverConfig, type DriverValue } from './drivers/useDriver';
+export { TriggerProvider, useTrigger, type TriggerMap } from './drivers/useTrigger';
 export {
   solveCrankSlider,
   crankAngleFromTime,
@@ -108,11 +109,13 @@ export {
   MeasureReveal,
   DimensionLine,
   Callout,
+  ExaggerationBadge,
   type KineticTitleProps,
   type StatCounterProps,
   type MeasureRevealProps,
   type DimensionLineProps,
   type CalloutProps,
+  type ExaggerationBadgeProps,
 } from './hud/HudCore';
 export {
   ListReveal,
@@ -127,3 +130,15 @@ export {
   type WaveformProps,
 } from './hud/HudExtras';
 export { TitleCard, CaptionBar, formatNumberId, type TitleCardProps, type CaptionBarProps } from './Hud2D';
+export {
+  KineticCaptions,
+  type KineticCaptionsProps,
+  type KineticCaptionItem,
+  type KineticCaptionWord,
+} from './hud/KineticCaptions';
+export {
+  EffectiveDiameterCompare,
+  computeEffectiveCompareRadii,
+  type EffectiveDiameterCompareProps,
+  type CompareRadiiResult,
+} from './hud/EffectiveDiameterCompare';

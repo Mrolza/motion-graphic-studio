@@ -1,0 +1,105 @@
+1
+00:00:00,030 --> 00:00:01,505
+Bagaimana kereta yang
+berjalan tanpa
+
+2
+00:00:01,505 --> 00:00:02,855
+setir bisa tetap stabil di
+
+3
+00:00:02,855 --> 00:00:04,280
+jalur rel
+tanpa tergelincir?
+
+4
+00:00:04,470 --> 00:00:06,082
+Sebagian besar roda
+kereta memiliki
+
+5
+00:00:06,082 --> 00:00:07,820
+bentuk kerucut dengan
+kemiringan sekitar
+
+6
+00:00:07,820 --> 00:00:09,083
+1 banding 20.
+
+7
+00:00:09,243 --> 00:00:10,706
+Desain ini membuat
+roda dapat
+
+8
+00:00:10,706 --> 00:00:12,705
+mengikuti tikungan tanpa
+flens bergesekan
+
+9
+00:00:12,705 --> 00:00:13,605
+dengan sisi rel.
+
+10
+00:00:13,795 --> 00:00:14,895
+Tanpa bentuk kerucut,
+
+11
+00:00:15,055 --> 00:00:16,767
+inersia kendaraan membuat
+roda terus
+
+12
+00:00:16,767 --> 00:00:18,054
+melaju lurus di tikungan.
+
+13
+00:00:18,214 --> 00:00:20,449
+Akibatnya, roda akan
+bergeser langsung
+
+14
+00:00:20,449 --> 00:00:21,699
+ke arah rel bagian luar.
+
+15
+00:00:21,889 --> 00:00:23,852
+Bentuk kerucut memperbesar
+diameter efektif
+
+16
+00:00:23,852 --> 00:00:25,401
+roda ketika bergeser
+ke sisi
+
+17
+00:00:25,401 --> 00:00:26,076
+luar rel.
+
+18
+00:00:26,236 --> 00:00:27,885
+Karena terpasang kaku
+pada gandar,
+
+19
+00:00:28,045 --> 00:00:29,532
+roda luar menempuh
+jarak sedikit
+
+20
+00:00:29,532 --> 00:00:30,257
+lebih jauh.
+
+21
+00:00:30,447 --> 00:00:32,285
+Mekanisme fisika ini
+membantu rangkaian
+
+22
+00:00:32,285 --> 00:00:34,010
+kereta mengikuti kurva
+jalur secara
+
+23
+00:00:34,010 --> 00:00:34,697
+efisien.

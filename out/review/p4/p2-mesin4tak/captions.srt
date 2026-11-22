@@ -1,0 +1,107 @@
+1
+00:00:00,030 --> 00:00:01,755
+Tahukah kamu bagaimana
+cara kerja
+
+2
+00:00:01,755 --> 00:00:02,968
+mesin kendaraan bermotor?
+
+3
+00:00:03,098 --> 00:00:04,460
+Siklus 4 tak terdiri dari
+
+4
+00:00:04,460 --> 00:00:06,023
+empat langkah terpisah
+yang memerlukan
+
+5
+00:00:06,023 --> 00:00:07,586
+dua putaran poros
+engkol penuh.
+
+6
+00:00:07,776 --> 00:00:09,526
+Langkah hisap menurunkan
+piston untuk
+
+7
+00:00:09,526 --> 00:00:10,901
+menarik campuran udara
+dan bahan
+
+8
+00:00:10,901 --> 00:00:12,351
+bakar ke dalam
+silinder melalui
+
+9
+00:00:12,351 --> 00:00:13,088
+katup masuk.
+
+10
+00:00:13,218 --> 00:00:14,980
+Langkah kompresi menaikkan
+piston untuk
+
+11
+00:00:14,980 --> 00:00:16,367
+memadatkan campuran
+tersebut,
+
+12
+00:00:16,497 --> 00:00:18,209
+meningkatkan suhu dan
+tekanan sebelum
+
+13
+00:00:18,209 --> 00:00:19,110
+percikan busi.
+
+14
+00:00:19,300 --> 00:00:20,962
+Langkah tenaga menghasilkan
+dorongan ke
+
+15
+00:00:20,962 --> 00:00:22,937
+bawah akibat ekspansi
+gas pembakaran
+
+16
+00:00:22,937 --> 00:00:23,925
+bertekanan tinggi.
+
+17
+00:00:24,055 --> 00:00:25,505
+Langkah buang mendorong
+sisa gas
+
+18
+00:00:25,505 --> 00:00:27,105
+hasil pembakaran keluar
+melalui katup
+
+19
+00:00:27,105 --> 00:00:28,680
+buang saat piston
+bergerak kembali
+
+20
+00:00:28,680 --> 00:00:29,305
+ke atas.
+
+21
+00:00:29,495 --> 00:00:31,345
+Seluruh rangkaian gerakan
+tersebut berulang
+
+22
+00:00:31,345 --> 00:00:33,458
+secara terus-menerus untuk
+menghasilkan tenaga
+
+23
+00:00:33,458 --> 00:00:34,132
+mekanis.

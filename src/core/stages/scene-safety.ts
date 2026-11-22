@@ -30,6 +30,7 @@ const FORBIDDEN_PATTERNS: Array<{ name: string; re: RegExp }> = [
 export interface SafetyValidationResult {
   ok: boolean;
   errors: string[];
+  warnings?: string[];
   lineCount: number;
 }
 
@@ -83,8 +84,22 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
       'MISSING_STORYBOARD_HUD: adegan wajib memakai StoryboardHudProvider dan <Hud id="..." />'
     );
   }
+  if (/mode\s*=\s*["']frameEntities["']/.test(code) && /<CameraRig[^>]*\b(from|to|radius|height)\s*=/.test(code)) {
+    errors.push(
+      'CAMERA_MANUAL_DISTANCE: dilarang menyetel jarak kamera manual (from/to/radius/height) saat memakai CameraRig mode="frameEntities"'
+    );
+  }
 
-  return { ok: errors.length === 0, errors, lineCount: lines.length };
+  const warnings: string[] = [];
+  const literalFrameMatches = code.match(/\bframe\s*(?:>=|>|<=|<|===)\s*(\d+)\b/g) ?? [];
+  for (const m of literalFrameMatches) {
+    const n = Number(m.replace(/\D+/g, ''));
+    if (Number.isFinite(n) && n > 6) {
+      warnings.push(`SC_LITERAL_TIMING: ambang frame literal (${m}) sebaiknya memakai useTrigger(...)`);
+    }
+  }
+
+  return { ok: errors.length === 0, errors, warnings, lineCount: lines.length };
 }
 
 /**
@@ -168,7 +183,7 @@ export function buildVisualSpecForScene(
   const mainEntity = sbScene.focus_entities[0]!;
   for (const part of sbScene.visible_parts ?? []) {
     if (
-      (mainEntity === 'wheelset' && knownWheelParts.has(part)) ||
+      ((mainEntity === 'wheelset' || mainEntity === 'rail_cross_section') && knownWheelParts.has(part)) ||
       (mainEntity === 'piston_crank' && knownPistonParts.has(part))
     ) {
       visibleParts.push({ entity: mainEntity, part, maxHudCoverRatio: 0.25 });
@@ -216,6 +231,8 @@ export function buildVisualSpecForScene(
           ...claim.sources.flatMap((s) => extractNumericValuesFromText(s.quote)),
         ]
       : undefined;
+    const qty = h.quantity ?? (typeof p.quantity === 'string' ? p.quantity : undefined);
+    const disp = h.display ?? (p.display === 'qualitative' || p.display === 'value' ? p.display : undefined);
     return {
       hud_id: hid,
       component: h.component,
@@ -225,9 +242,14 @@ export function buildVisualSpecForScene(
       claimUnit: claim?.unit,
       claimAllowedNumbers,
       bind_to_driver: Boolean(h.bind_to_driver || p.bind_to_driver),
+      quantity: qty,
+      display: disp,
       when: h.when,
     };
   });
+
+  const isEstablishingOrSummary =
+    sbScene.shot_type === 'establishing' || sbScene.shot_type === 'summary';
 
   return {
     compositionId,
@@ -237,6 +259,10 @@ export function buildVisualSpecForScene(
     visibleParts,
     expectedHud,
     maxActiveHudPanels: 2,
+    shotType: sbScene.shot_type,
+    usesFrameEntities: true,
+    minSubjectFillRatio: isEstablishingOrSummary ? 0.3 : 0.2,
+    requireFillError: isEstablishingOrSummary,
     syncTargetSec: sbScene.driver ? triggerRelSec : undefined,
     syncToleranceSec: 0.35,
   };

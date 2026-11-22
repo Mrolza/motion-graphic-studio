@@ -8,6 +8,7 @@ import { ScriptSchema, type Script } from '@core/contracts/script';
 import { TimelineSchema, type Timeline } from '@core/contracts/timeline';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
 import { buildTimeline } from '@core/timeline/timeline';
+import { tightenProjectVoice, type TightenVoResult } from '@core/audio/vo-tighten';
 
 const execFileAsync = promisify(execFile);
 
@@ -167,15 +168,40 @@ export async function runVoiceStage(
       'utf-8'
     );
 
+    const tightened = await tightenProjectVoice({
+      projectId,
+      projectDir,
+      timeline,
+      repoRoot,
+    });
+
     const updated = await loadProject(projectId, repoRoot);
     updated.stages.S5 = 'done';
     await saveProject(updated, repoRoot);
 
-    return { timeline, voFullPath, sceneAudioPaths };
+    return { timeline: tightened.timeline, voFullPath, sceneAudioPaths };
   } catch (err) {
     const failed = await loadProject(projectId, repoRoot);
     failed.stages.S5 = 'failed';
     await saveProject(failed, repoRoot);
     throw err;
   }
+}
+
+/**
+ * Tightens existing VO audio pauses (> 0.4s) without re-running TTS.
+ */
+export async function tightenExistingVoiceStage(
+  projectId: string,
+  repoRoot = process.cwd()
+): Promise<TightenVoResult> {
+  const projectDir = getProjectDir(projectId, repoRoot);
+  const timeline = TimelineSchema.parse(
+    JSON.parse(await readFile(path.join(projectDir, 'timeline.json'), 'utf-8'))
+  );
+  const res = await tightenProjectVoice({ projectId, projectDir, timeline, repoRoot });
+  const updated = await loadProject(projectId, repoRoot);
+  updated.stages.S5 = 'done';
+  await saveProject(updated, repoRoot);
+  return res;
 }

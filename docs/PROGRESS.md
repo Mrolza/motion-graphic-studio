@@ -355,3 +355,89 @@
   - `mut5-shot-variety` → `Storyboard QC`: `5` error (`SB_LOW_SHOT_VARIETY`)
   - `mut6-sync-real-render` → `sync`: `1` error (`SYNC_OUT_OF_WINDOW`)
 - **Statistik & Verifikasi:** [`stats.md`](../out/review/p3b/stats.md) & [`verify.txt`](../out/review/p3b/verify.txt) (UTF-8).
+
+---
+
+## Fase P4 — Akurasi Teks di Layar, Audio, & Video Final (`docs/P4-AUDIO-FINAL.md`)
+
+- **Status:** **PARTIAL** (Langkah 0, Bagian A, & implementasi/unit-test Bagian B selesai penuh; Bagian C terhenti di S8 `p2-kereta` karena `DailyQuotaExhaustedError` HTTP 429 pada Gemini API)
+- **Branch:** `phase/p4-audio-final` (tag awal `p4-start`, setelah merge P3B/P3C ke `main` dengan tag `p3b-done`)
+- **Tanggal:** 2026-11-20
+
+### Yang Sudah Selesai
+1. **Langkah 0 (Merge P3B ke `main`):**
+   - `phase/p3b-storyboard-coder` di-merge `--no-ff` ke `main` (`p3b-done`), lalu branch `phase/p4-audio-final` (`p4-start`) dibuat.
+2. **Bagian A — Tindak Lanjut `REVIEW-P3C.md` (Selesai Penuh + Teruji):**
+   - **A1:** `quantity` dan `display: "value" | "qualitative"` pada kontrak HUD `bind_to_driver` (`storyboard.ts`, `storyboard-code.ts`, `media-checks.ts`, `HudCore.tsx`, `StoryboardHudContext.tsx`), kamus `QUANTITY_LABELS`, serta error `L5_DRIVER_LABEL_MISMATCH` dan `L5_UNSOURCED_DRIVER_VALUE`.
+   - **A2:** Verifier L5 semantik (`src/core/qc/l5-semantic.ts`) dalam 1 panggilan LLM per video + pra-cek `L5_ABSOLUTE_WORD` (`tanpa`, `selalu`, `kontinu`, `semua` vs kata lunak di kutipan), dengan error `L5_SEMANTIC_OVERSTATEMENT`, `L5_SEMANTIC_DROPPED_CONDITION`, `L5_SEMANTIC_UNSUPPORTED`, dan `L5_OFF_TOPIC_TITLE`.
+   - **A3:** Revisi `RailCrossSection.tsx` menjadi penampang irisan sungguhan (tapak kerucut, flens dalam, kepala rel I-beam, titik kontak, dan garis jari-jari efektif dari `computeWheelsetLayout`), badge wajib `<ExaggerationBadge>` (`VIS_EXAGGERATION_UNLABELED`), dan `SHOT_VIEW_MISMATCH` di `storyboard-code.ts`.
+   - **A4:** Framing `establishing` dan `summary` mewajibkan `>= 30%` area bebas sebagai **error** `FRAMING_TOO_SMALL` (`checks.ts`, `scene-safety.ts`), penyesuaian `CameraRig.tsx`, dan larangan jarak kamera manual (`CAMERA_MANUAL_DISTANCE`).
+   - Unit test baru: [`tests/p4PartA.test.ts`](../tests/p4PartA.test.ts) (4 test lulus).
+3. **Bagian B — Audio, Takarir, & Render Final (Implementasi & Unit Test Selesai):**
+   - **B1:** `src/core/audio/vo-tighten.ts` & `tightenExistingVoiceStage` (`voice.ts`) memangkas jeda VO > 0,4s tanpa TTS ulang (bantalan 40ms) dan menghasilkan `timeline-gaps.md`.
+   - **B2:** Hook `useTrigger` (`remotion/src/kit/drivers/useTrigger.tsx`) + peringatan `SC_LITERAL_TIMING` di `scene-safety.ts`.
+   - **B3:** `layout-zones.ts` (9:16 menghindari 20% bawah & 15% kanan, dicatat di `DECISIONS.md`), `HudZones.tsx`, `kinetic-captions.ts` (`captions.srt`, pemetaan `spoken_text` ↔ tampilan), `KineticCaptions.tsx`, dan `captions-qc.ts` (`CAPTION_TEXT_MISMATCH`, `CAPTION_DESYNC`, `CAPTION_HUD_OVERLAP`, `CAPTION_UNSAFE_AREA`, `CAPTION_TOO_LONG`).
+   - **B4–B7 & CLI:** `src/core/stages/mix.ts` (S11 2-pass loudnorm `-14 LUFS`, `vo.wav`/`sfx.wav`/`mix.wav`), `final-render.ts` (S10 render chunk senyap + concat + mux), `final.ts` (S12 `final-qc.json`/`final-qc.md`), `publish.ts` (`PUBLISH_UNKNOWN_SOURCE`), dan `src/cli/p4.ts`.
+   - Unit test baru: [`tests/p4PartB.test.ts`](../tests/p4PartB.test.ts) (3 test lulus).
+4. **Bagian C — Sebagian Selesai Sebelum Kuota Habis:**
+   - `p2-kereta` B1 VO dirapatkan: jeda maks turun dari `0.851s` → `0.301s` ([`timeline-gaps.md`](../out/review/p4/p2-kereta/timeline-gaps.md)).
+   - `p2-kereta` S6–S7 Storyboard & L5 semantik lulus (`0` error; [`storyboard.json`](../out/review/p4/p2-kereta/storyboard.json), [`l5-semantic.json`](../out/review/p4/p2-kereta/l5-semantic.json)).
+   - Bukti visual non-LLM: [`zones-overlay.png`](../out/review/p4/zones-overlay.png) & [`cross-section/`](../out/review/p4/cross-section/) (3 still pergeseran lateral + `radii-telemetry.md`).
+   - [`verify.txt`](../out/review/p4/verify.txt) (UTF-8): `19 test files / 72 tests passed`, `check:size OK` (126 file).
+
+### Yang Belum Selesai (Terblokir Kuota Harian Gemini `429`)
+- S8–S12 `p2-kereta` (profil `standar`) & S6–S12 `p2-mesin4tak` (profil `hemat`) untuk menghasilkan `final.mp4`, `final-qc.json`, `loudness.txt`, `captions.srt`, `onscreen-text.md`, `publish.md`, contact sheet, still per adegan, dan `stats.md`.
+- Eksekusi 12 mutasi end-to-end pada `final.mp4` sungguhan (`out/review/p4/mutations/mutation-summary.md`).
+- Setelah kuota Gemini pulih, cukup jalankan `node --env-file=.env.local --import tsx scripts/run-p4-e2e.ts`.
+
+---
+
+## Fase P4B — Hemat Kuota, Kamera Pas, & Penampang yang Menjelaskan (`docs/P4B-BUDGET-FIT.md`)
+
+- **Status:** **DONE** (Bagian A, Bagian B, F1–F4, dan Bagian C selesai penuh; kedua `final.mp4` berstatus **PASS**)
+- **Branch:** `phase/p4-audio-final`
+- **Tanggal:** 2026-11-22
+- **Panggilan Gemini:**
+  - `p2-kereta`: `6` panggilan pada run finalisasi S8–S9 (`0 / 20` pada run ulang cached), kumulatif S1–S12 = `284` ([`llm-calls.jsonl`](../out/review/p4/p2-kereta/llm-calls.jsonl)).
+  - `p2-mesin4tak`: `6` panggilan pada run terakhir (`6 / 20` untuk S8–S9), kumulatif S1–S12 = `123` ([`llm-calls.jsonl`](../out/review/p4/p2-mesin4tak/llm-calls.jsonl)).
+
+### Apa yang Dikerjakan & Dibuat (P4B Bagian A & B)
+1. **Bagian A — Hemat Kuota (`src/core/llm/budget.ts`, `client.ts`, `storyboard.ts`, `scene-coder.ts`, `checks.ts`, `.env.example`):**
+   - **A1:** Pencatatan panggilan logis ke `projects/<id>/llm-calls.jsonl` (`{ts, run_id, stage, purpose, scene_id, attempt, http_retries, ok}`), memisahkan `http_retries` dari hitungan panggilan logis.
+   - **A2:** Batas `MGS_LLM_BUDGET_PER_RUN` (default `20`, ditulis di `.env.example`) lewat `RunLlmTracker` yang melempar `LlmBudgetExceededError` sebelum panggilan ke-(limit+1).
+   - **A3:** Pemakaian ulang storyboard (`storyboard.meta.json` hash naskah + timeline + ledger + `KIT-API.md`) dan kode adegan per adegan (`scenes/cache.json` hash adegan + kit + versi prompt; hanya adegan gagal/berubah yang dibuat ulang).
+   - **A4:** Cek pra-run `checkQuotaBeforeRun` terhadap `.mgs/quota.json` dan `GEMINI_RPD_LIMIT`; error 429 kuota harian berhenti seketika dengan pesan waktu pulih 00.00 Pacific (15.00 WIB saat PST).
+   - **A5:** Kepemilikan error QC (`owner: "scene" | "kit"` pada `QcIssue`): error milik kit (`FRAMING_OUT_OF_BOUNDS` / `VISIBILITY_OUT_OF_BOUNDS` saat `frameEntities` + `GEOMETRY_*`) memicu `KitFaultError` (`KIT_FAULT`) dengan **0 panggilan perbaikan S9**.
+2. **Bagian B — Kamera, Penampang v3, & Perbandingan Efektif:**
+   - **B1 (`CameraRig.tsx`, `KitFramingHarness.tsx`):** Proyeksi sumbu kamera 9:16 pada `frameEntities` (FOV vertikal & horizontal + `projFrontD`) dan matriks framing 6 rakitan × 3 nilai penggerak = **18/18 PASS** ([`kit-framing/framing-matrix.md`](../out/review/p4/kit-framing/framing-matrix.md), [`kit-framing/contact-sheet.png`](../out/review/p4/kit-framing/contact-sheet.png)).
+   - **B2 (`RailCrossSection.tsx` v3):** Penampang Blueprint datar dengan kemiringan tapak **12×** (`>= 10×`), badge `<ExaggerationBadge>`, flens dalam, rel I-beam, gandar, dan titik kontak bergeser **44 px** kiri↔kanan (**22 px** dari tengah ke maksimum).
+   - **B3 (`EffectiveDiameterCompare.tsx`):** Perbandingan dua roda ("Roda luar" vs "Roda dalam"), lingkaran efektif roda luar lebih besar (`50px` vs `34px`, > 10% di geser maksimum, sama di tengah, tanda ikut arah geser), batang jarak tempuh, dan badge `"Ilustrasi — skala dilebihkan"` tanpa angka.
+   - **B4 (`storyboard-code.ts`, `storyboard.ts`):** Callout ringkas maks 8 kata (`> 8` peringatan, `> 12` error `HUD_TOO_LONG`).
+   - **B5 (`DemoCrossSection.tsx`):** Still & tabel [`cross-section/`](../out/review/p4/cross-section/) dirender langsung dari **`DemoCrossSection`** dengan angka layar (px) dari telemetri render (`passed: true`, pergeseran kontak kiri `138 px → 160 px → 182 px`).
+
+### Bukti & Verifikasi (Tanpa Gemini)
+- **`npm run verify`** ([`verify.txt`](../out/review/p4/verify.txt)): `tsc` lolos, **20 test files / 75 tests passed** (termasuk [`tests/p4bBudgetAndKit.test.ts`](../tests/p4bBudgetAndKit.test.ts) dengan klien LLM tiruan), `check:size OK` (129 berkas sumber).
+- **Mutasi Non-LLM ([`mutations/mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md)):** Mutasi 1–7, 12, dan 13–16 (`LLM_BUDGET_EXCEEDED`, `scene cache reuse`, `KIT_FAULT`, `HUD_TOO_LONG`) semuanya tertangkap.
+
+### Yang Menunggu Pemulihan Kuota (Bagian C)
+- Menjalankan Bagian C (`p2-kereta` profil Standar & `p2-mesin4tak` profil Hemat, batas ≤ 20 panggilan/run) untuk menghasilkan `final.mp4`, `final-qc.json`, `captions.srt`, `publish.md`, `llm-calls.jsonl`, `stats.md`, serta mutasi real-render 8–11.
+
+### Perbaikan F1–F4 (`docs/REVIEW-P4B.md`, 2026-11-21, 0 Panggilan Gemini)
+1. **F1 (`RailCrossSection.tsx` & `cross-section/`):** Rel tetap diam; wheelset bergeser ke samping dengan tinggi roda dan kemiringan gandar mengikuti perpotongan tapak kerucut (`12×`) di permukaan kepala rel, serta **garis jari-jari** dari pusat gandar ke titik kontak (`radius_left` / `radius_right`). Telemetri `DemoCrossSection` (`passed: true`):
+   - `shift-left` (`-0.060 m`): kontak kiri `161 px (dalam rel)`, jari-jari kiri `138 px` vs kanan `118 px` (**+16,9%**).
+   - `shift-center` (`-0.004 m`): `128 px` vs `127 px` (**±1 px**).
+   - `shift-right` (`0.052 m`): `119 px` vs `136 px` (**+14,3%**).
+   - Bukti dilengkapi 3 crop zoom area kontak ([`crop-left.png`](../out/review/p4/cross-section/crop-left.png), [`crop-center.png`](../out/review/p4/cross-section/crop-center.png), [`crop-right.png`](../out/review/p4/cross-section/crop-right.png)) & [`radii-telemetry.md`](../out/review/p4/cross-section/radii-telemetry.md).
+2. **F2 (`CameraRig.tsx`, `KitFramingHarness.tsx`, `framing-matrix.md`):** Pemeriksaan containment ketat terhadap **zona bebas `y=240..780`** dengan status jujur (`PASS`/`WARN`/`FAIL`). Seluruh **18/18** sel kini berada di dalam zona bebas (`0 FAIL`: 12 `PASS` dan 6 `WARN` untuk rakitan vertikal tinggi `PistonCrankAssembly` & `Suspension` 24–27%).
+3. **F3 (`storyboard-code.ts`, `mutation-summary.md`):** `SHOT_VIEW_MISMATCH` mewajibkan `rail_cross_section` pada `cross_section`; Mutasi 4 kini mencatat kedua error (`SHOT_VIEW_MISMATCH` + `VIS_EXAGGERATION_UNLABELED`).
+4. **F4 (`kinematics.ts`, `run-p4b-nonllm.ts`):** Selisih lingkaran `EffectiveDiameterCompare` diturunkan dari 47% menjadi **21%** (`46 px` vs `38 px`, berada di rentang 15–25%); Mutasi 14 & 15 dieksekusi langsung dengan klien tiruan saat membuat [`mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md).
+
+### Bagian C — Video Final & 16 Mutasi (`out/review/p4/`, 2026-11-22)
+- **`p2-kereta` (profil `standar`, [`out/review/p4/p2-kereta/`](../out/review/p4/p2-kereta/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4/p2-kereta/final-qc.md) (**PASS**): `720×1280 @ 30fps`, `1042/1042 frames`, `34.73s`, `aac 48000Hz`, **`-14.3 LUFS`**, `peak -2.7 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`, `freeze=0`.
+  - Lengkap dengan [`onscreen-text.md`](../out/review/p4/p2-kereta/onscreen-text.md) (`OK` di semua item L5 semantik), [`captions.srt`](../out/review/p4/p2-kereta/captions.srt), [`publish.md`](../out/review/p4/p2-kereta/publish.md) (URL sumber dari ledger), [`loudness.txt`](../out/review/p4/p2-kereta/loudness.txt), [`contact-sheet.png`](../out/review/p4/p2-kereta/contact-sheet.png), dan 5 still (`S1`–`S5`).
+- **`p2-mesin4tak` (profil `hemat` / `swangle`, [`out/review/p4/p2-mesin4tak/`](../out/review/p4/p2-mesin4tak/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4/p2-mesin4tak/final-qc.md) (**PASS**): `720×1280 @ 30fps`, `1025/1025 frames`, `34.17s`, `aac 48000Hz`, **`-14.3 LUFS`**, `peak -2.6 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`, `freeze=0`, render `208.524 ms`.
+  - Lengkap dengan [`onscreen-text.md`](../out/review/p4/p2-mesin4tak/onscreen-text.md), [`captions.srt`](../out/review/p4/p2-mesin4tak/captions.srt), [`publish.md`](../out/review/p4/p2-mesin4tak/publish.md), [`loudness.txt`](../out/review/p4/p2-mesin4tak/loudness.txt), [`contact-sheet.png`](../out/review/p4/p2-mesin4tak/contact-sheet.png), dan 4 still (`S1`–`S4`).
+- **Mutasi 1–16 ([`mutations/mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md)):** **16/16 mutasi tertangkap** (termasuk mutasi real-render MP4 8–11: `FINAL_LOUDNESS`, `FINAL_DEAD_AIR`, `FINAL_BLACK_FRAMES`, `FINAL_FRAME_COUNT`).
+- **Statistik & Verifikasi:** [`stats.md`](../out/review/p4/stats.md) & [`verify.txt`](../out/review/p4/verify.txt).

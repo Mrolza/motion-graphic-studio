@@ -37,6 +37,8 @@ export interface ExpectedHudSpec {
   claimUnit?: string;
   claimAllowedNumbers?: number[];
   bind_to_driver?: boolean;
+  quantity?: string;
+  display?: 'value' | 'qualitative';
   when?: { driver_between: [number, number] };
 }
 
@@ -101,6 +103,10 @@ export interface VisualCheckSpec {
   expectedHud?: ExpectedHudSpec[];
   syncTargetSec?: number;
   syncToleranceSec?: number;
+  shotType?: string;
+  usesFrameEntities?: boolean;
+  minSubjectFillRatio?: number;
+  requireFillError?: boolean;
   safeBounds?: { minX: number; maxX: number; minY: number; maxY: number };
   maxHudOverlapRatio?: number;
 }

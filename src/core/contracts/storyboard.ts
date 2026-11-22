@@ -34,6 +34,8 @@ export const StoryboardHudItemSchema = z
     props: z.record(z.unknown()),
     claim_ref: z.string().min(1).optional(),
     bind_to_driver: z.boolean().optional(),
+    quantity: z.string().min(1).optional(),
+    display: z.enum(['value', 'qualitative']).optional(),
     illustrative: z.boolean().optional(),
     when: z
       .object({
@@ -61,6 +63,7 @@ export const StoryboardSceneSchema = z.object({
   id: z.string().min(1),
   lane: StoryboardLaneSchema,
   shot_type: ShotTypeSchema.optional(),
+  view: z.enum(['section', 'perspective']).optional(),
   camera_move: z.string().min(1).optional(),
   duration_sec: z.number().positive(),
   sentence_refs: z.array(z.string().min(1)),

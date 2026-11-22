@@ -34,6 +34,12 @@ import {
   cmdStoryboard,
   cmdVoice,
 } from './p3b';
+import {
+  cmdMix,
+  cmdQcFinal,
+  cmdRenderFinal,
+  cmdRunVoiceToFinal,
+} from './p4';
 
 const execFileAsync = promisify(execFile);
 
@@ -191,6 +197,13 @@ async function main() {
       const id = rest[0];
       if (!id) throw new Error('Usage: mgs run <id> --from voice --until preview');
       await cmdRunVoiceToPreview(id);
+    } else if (parseFlag(rest, '--from') === 'voice' && parseFlag(rest, '--until') === 'final') {
+      const id = rest[0];
+      if (!id) throw new Error('Usage: mgs run <id> --from voice --until final');
+      await cmdRunVoiceToFinal(id, {
+        reuseVo: rest.includes('--reuse-vo'),
+        profile: parseFlag(rest, '--profile'),
+      });
     } else {
       await cmdRun(rest);
     }
@@ -200,8 +213,16 @@ async function main() {
     await cmdStoryboard(rest);
   } else if (cmd === 'scenes') {
     await cmdScenes(rest);
+  } else if (cmd === 'mix') {
+    await cmdMix(rest);
   } else if (cmd === 'render') {
-    await cmdRender(rest);
+    if (rest.includes('--final')) {
+      await cmdRenderFinal(rest);
+    } else {
+      await cmdRender(rest);
+    }
+  } else if (cmd === 'qc-final') {
+    await cmdQcFinal(rest);
   } else if (cmd === 'review') {
     await cmdReview(rest);
   } else if (cmd === 'approve') {

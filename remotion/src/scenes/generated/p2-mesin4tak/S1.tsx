@@ -1,40 +1,31 @@
 import React from 'react';
 import {
-  TelemetryProvider,
   StoryboardHudProvider,
-  StoryboardHudDataItem,
+  TelemetryProvider,
   useDriver,
-  SceneTransition,
   BlueprintStage,
   CameraRig,
-  Ground,
-  EngineBlock,
+  SceneTransition,
   HudLayout,
   HudZone,
-  Hud
+  Hud,
+  EngineBlock,
+  Ground
 } from '../../../kit';
 
 export interface Scene_S1Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
-export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false, hudData = [] }) => (
-  <TelemetryProvider enabled={telemetry}>
-    <StoryboardHudProvider items={hudData}>
-      <Scene_S1Inner telemetry={telemetry} />
-    </StoryboardHudProvider>
-  </TelemetryProvider>
-);
-
-const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
+const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'crankAngleDeg',
+    name: 'crank_angle',
     from: 0,
     to: 720,
     unit: '°',
     startSec: 0,
-    durationSec: 8.52,
+    durationSec: 7.63,
     curve: 'linear'
   });
 
@@ -54,15 +45,6 @@ const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: [0, 1.65, 0], size: [1.9, 2.8, 1.9] }}
-          padding={1.25}
-          startAngleDeg={15}
-          endAngleDeg={75}
-          durationSec={8.52}
-          elevationDeg={20}
-        />
         <Ground size={36} divisions={36} y={-0.55} />
         <EngineBlock
           entityId="engine_block"
@@ -71,7 +53,20 @@ const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           position={[0, 0.45, 0]}
           palette="blueprint-navy"
         />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }}
+          padding={0.75}
+        />
       </BlueprintStage>
     </SceneTransition>
   );
 };
+
+export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false, hudData = [] }) => (
+  <TelemetryProvider enabled={telemetry}>
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S1Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
+  </TelemetryProvider>
+);

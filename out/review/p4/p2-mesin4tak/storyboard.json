@@ -1,0 +1,273 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "orbit_curve",
+      "duration_sec": 7.626,
+      "sentence_refs": [
+        "S1.1",
+        "S1.2"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "engine_block",
+          "state": "active=true",
+          "when": {
+            "driver_between": [
+              0,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Bagaimana Mesin 4 Tak Bekerja?",
+            "subtitle": "Empat langkah siklus pembakaran"
+          },
+          "claim_ref": "C6"
+        },
+        {
+          "hud_id": "S1_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C6",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        }
+      ],
+      "trigger_words": [
+        "empat langkah",
+        "dua putaran"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 11.404,
+      "sentence_refs": [
+        "S2.1",
+        "S2.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 360
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "intake_open=true",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        },
+        {
+          "entity": "piston_crank",
+          "state": "compression_phase=true",
+          "when": {
+            "driver_between": [
+              180,
+              360
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "Callout",
+          "props": {
+            "label": "Langkah Hisap & Kompresi",
+            "text": "Piston menarik dan memadatkan campuran udara bakar."
+          },
+          "claim_ref": "C2",
+          "when": {
+            "driver_between": [
+              0,
+              360
+            ]
+          }
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C1",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        }
+      ],
+      "trigger_words": [
+        "Langkah hisap",
+        "Langkah kompresi"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "closeup",
+      "camera_move": "dolly_in",
+      "duration_sec": 10.075,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "exhaust_valve"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 360,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "power_phase=true",
+          "when": {
+            "driver_between": [
+              360,
+              540
+            ]
+          }
+        },
+        {
+          "entity": "piston_crank",
+          "state": "exhaust_open=true",
+          "when": {
+            "driver_between": [
+              540,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "Callout",
+          "props": {
+            "label": "Langkah Tenaga & Buang",
+            "text": "Ekspansi gas mendorong piston dan sisa gas dibuang."
+          },
+          "claim_ref": "C9",
+          "when": {
+            "driver_between": [
+              360,
+              720
+            ]
+          }
+        },
+        {
+          "hud_id": "S3_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C6",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        }
+      ],
+      "trigger_words": [
+        "Langkah tenaga",
+        "Langkah buang"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "orbit_curve",
+      "duration_sec": 4.707,
+      "sentence_refs": [
+        "S4.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "engine_block",
+          "state": "continuous_cycle=true",
+          "when": {
+            "driver_between": [
+              0,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "Callout",
+          "props": {
+            "label": "Kerja Mekanis",
+            "text": "Langkah tenaga menghasilkan kerja mekanis dari mesin."
+          },
+          "claim_ref": "C4"
+        }
+      ],
+      "trigger_words": [
+        "berulang",
+        "tenaga mekanis"
+      ]
+    }
+  ]
+}

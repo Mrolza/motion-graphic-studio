@@ -1,5 +1,8 @@
 import React from 'react';
 import {
+  StoryboardHudProvider,
+  TelemetryProvider,
+  SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
@@ -7,27 +10,23 @@ import {
   HudLayout,
   HudZone,
   Hud,
-  SceneTransition,
-  StoryboardHudProvider,
-  TelemetryProvider,
-  useDriver,
-  StoryboardHudDataItem
+  useDriver
 } from '../../../kit';
 
 export interface Scene_S4Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
 const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'crankAngleDeg',
+    name: 'crank_angle',
     from: 0,
     to: 720,
     unit: '°',
-    startSec: 1.55,
-    durationSec: 3.35,
-    curve: 'linear',
+    startSec: 1.53,
+    durationSec: 3.18,
+    curve: 'linear'
   });
 
   return (
@@ -43,6 +42,13 @@ const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }}
+          padding={0.55}
+          startAngleDeg={-22}
+          endAngleDeg={22}
+        />
         <Ground size={36} divisions={36} y={-0.55} />
         <EngineBlock
           entityId="engine_block"
@@ -50,11 +56,6 @@ const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           cutawayProgress={driver.progress}
           position={[0, 0.45, 0]}
           palette="blueprint-navy"
-        />
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: [0, 1.65, 0], size: [1.9, 2.8, 1.9] }}
-          padding={1.25}
         />
       </BlueprintStage>
     </SceneTransition>

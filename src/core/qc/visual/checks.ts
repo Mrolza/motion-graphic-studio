@@ -1,18 +1,11 @@
 import type { QcIssue } from '@core/contracts/qc-report';
 import type { ScreenBox, TelemetrySample, VisualCheckSpec } from './types';
-export {
-  checkBlankFrames,
-  checkOnscreenTruthFromTelemetry,
-  checkSyncFromTelemetry,
-} from './media-checks';
+export { checkBlankFrames, checkOnscreenTruthFromTelemetry, checkSyncFromTelemetry } from './media-checks';
 
 function intersectionArea(a: ScreenBox, b: ScreenBox): number {
-  const x1 = Math.max(a.x, b.x);
-  const y1 = Math.max(a.y, b.y);
-  const x2 = Math.min(a.x + a.width, b.x + b.width);
-  const y2 = Math.min(a.y + a.height, b.y + b.height);
-  if (x2 <= x1 || y2 <= y1) return 0;
-  return (x2 - x1) * (y2 - y1);
+  const x1 = Math.max(a.x, b.x), y1 = Math.max(a.y, b.y);
+  const x2 = Math.min(a.x + a.width, b.x + b.width), y2 = Math.min(a.y + a.height, b.y + b.height);
+  return x2 <= x1 || y2 <= y1 ? 0 : (x2 - x1) * (y2 - y1);
 }
 
 /**
@@ -133,14 +126,16 @@ export function checkFramingFromTelemetry(
           severity: 'error',
           message: `FRAMING_OUT_OF_BOUNDS: "${focusId}" bbox=[${b.x},${b.y},${b.width}x${b.height}] keluar area aman [${safe.minX}..${safe.maxX}, ${safe.minY}..${safe.maxY}]`,
           ref,
+          owner: spec.usesFrameEntities ? 'kit' : 'scene',
         });
       } else {
         const freeZoneArea = 720 * 560;
         const focusArea = b.width * b.height;
-        if (focusArea / freeZoneArea < 0.2) {
+        const minFill = spec.minSubjectFillRatio ?? 0.2;
+        if (focusArea / freeZoneArea < minFill) {
           issues.push({
-            severity: 'warning',
-            message: `FRAMING_TOO_SMALL: "${focusId}" hanya mengisi ${Math.round((focusArea / freeZoneArea) * 100)}% zona bebas (< 20%)`,
+            severity: spec.requireFillError ? 'error' : 'warning',
+            message: `FRAMING_TOO_SMALL: "${focusId}" hanya mengisi ${Math.round((focusArea / freeZoneArea) * 100)}% zona bebas (< ${Math.round(minFill * 100)}%)`,
             ref,
           });
         }
@@ -279,6 +274,7 @@ export function checkGeometryFromTelemetry(
           severity: 'error',
           message: `GEOMETRY_MISSING: ${rule.entity}.geometry.${rule.key} tidak dilaporkan`,
           ref,
+          owner: 'kit',
         });
         continue;
       }
@@ -289,6 +285,7 @@ export function checkGeometryFromTelemetry(
             severity: 'error',
             message: `GEOMETRY_VIOLATION: ${rule.entity}.${rule.key}=${String(val)} melebihi toleransi ${threshold}`,
             ref,
+            owner: 'kit',
           });
         }
       } else if (rule.op === 'equals') {
@@ -297,6 +294,7 @@ export function checkGeometryFromTelemetry(
             severity: 'error',
             message: `GEOMETRY_VIOLATION: ${rule.entity}.${rule.key}=${String(val)} (harus ${String(rule.expected)})`,
             ref,
+            owner: 'kit',
           });
         }
       }
@@ -314,6 +312,27 @@ export function checkVisibilityFromTelemetry(
   spec: VisualCheckSpec
 ): QcIssue[] {
   const issues: QcIssue[] = [];
+  const exagSeen = new Set<string>();
+  for (const sample of samples) {
+    const ref = `f${sample.frame} (${sample.sec.toFixed(2)}s)`;
+    for (const ent of sample.entities) {
+      const exag = Number(ent.partStates?.taper_exaggeration ?? 1);
+      if (Number.isFinite(exag) && exag > 1) {
+        const hasBadge = sample.hud.some(
+          (h) => h.component === 'ExaggerationBadge' || /skala\s+dilebihkan/i.test(h.text)
+        );
+        if (!hasBadge && !exagSeen.has(ent.id)) {
+          exagSeen.add(ent.id);
+          issues.push({
+            severity: 'error',
+            message: `VIS_EXAGGERATION_UNLABELED: "${ent.id}" memakai taperExaggeration=${exag} tanpa badge "skala dilebihkan"`,
+            ref,
+          });
+        }
+      }
+    }
+  }
+
   const parts = spec.visibleParts ?? [];
   if (parts.length === 0) return issues;
   const safe = spec.safeBounds ?? { minX: 0, maxX: 720, minY: 60, maxY: 1220 };
@@ -353,6 +372,7 @@ export function checkVisibilityFromTelemetry(
           severity: 'error',
           message: `VISIBILITY_OUT_OF_BOUNDS: bagian "${vp.entity}.${vp.part}" bbox=[${pBox.x},${pBox.y},${pBox.width}x${pBox.height}] keluar area aman`,
           ref,
+          owner: spec.usesFrameEntities ? 'kit' : 'scene',
         });
         continue;
       }

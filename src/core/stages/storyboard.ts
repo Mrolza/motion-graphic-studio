@@ -5,6 +5,7 @@ import type { Script } from '@core/contracts/script';
 import { StoryboardSchema, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
+import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
 
 export const KIT_SUMMARY_FOR_LLM = `Scene Kit API (remotion/src/kit/):
@@ -29,12 +30,12 @@ export const KIT_SUMMARY_FOR_LLM = `Scene Kit API (remotion/src/kit/):
 
 export async function runStoryboardStage(
   projectId: string,
-  repoRoot = process.cwd()
+  repoRoot = process.cwd(),
+  options?: { tracker?: RunLlmTracker; generateJsonFn?: typeof generateJson }
 ): Promise<Storyboard> {
   const projectDir = getProjectDir(projectId, repoRoot);
   const project = await loadProject(projectId, repoRoot);
-  project.stages.S6 = 'running';
-  await saveProject(project, repoRoot);
+  const llm = options?.generateJsonFn ?? generateJson;
 
   let llmCalls = 0;
   try {
@@ -42,6 +43,32 @@ export async function runStoryboardStage(
     const timeline = JSON.parse(await readFile(path.join(projectDir, 'timeline.json'), 'utf-8')) as Timeline;
     const ledger = JSON.parse(await readFile(path.join(projectDir, 'fact-ledger.json'), 'utf-8')) as FactLedger;
     const verifiedClaims = ledger.claims.filter((c) => c.status === 'verified');
+    const kitApi = await readFile(path.join(repoRoot, 'remotion', 'src', 'kit', 'KIT-API.md'), 'utf-8').catch(() => '');
+    const inputHash = computeStableHash({
+      script,
+      sceneIds: timeline.scenes.map((s) => s.scene_id),
+      ledger,
+      kitApi,
+    });
+
+    if (project.stages.S7 === 'done') {
+      try {
+        const meta = JSON.parse(await readFile(path.join(projectDir, 'storyboard.meta.json'), 'utf-8')) as {
+          inputHash?: string;
+        };
+        if (meta.inputHash === inputHash) {
+          const cached = StoryboardSchema.parse(
+            JSON.parse(await readFile(path.join(projectDir, 'storyboard.json'), 'utf-8'))
+          );
+          return cached;
+        }
+      } catch {
+        // Cache miss
+      }
+    }
+
+    project.stages.S6 = 'running';
+    await saveProject(project, repoRoot);
 
     const sceneDurations = timeline.scenes.map((s) => ({
       scene_id: s.scene_id,
@@ -57,12 +84,17 @@ ATURAN WAJIB:
    - Adegan 1 sebaiknya "establishing" (mis. TrainCar atau EngineBlock).
    - Minimal 3 jenis shot_type berbeda dalam satu video; dua adegan berurutan TIDAK BOLEH memakai shot_type dan focus_entities yang sama!
 3. "sentence_refs" berisi ID kalimat adegan itu (mis. ["S1.1", "S1.2"]).
-4. "focus_entities" dan "visible_parts" WAJIB tidak kosong (train_car: ["body"]; rail_cross_section: ["rail_left","rail_right"]; engine_block: ["block"]; wheelset: ["wheel_left","wheel_right","flange"]; piston_crank: ["piston","crank","intake_valve","exhaust_valve","spark_plug"]).
+4. "focus_entities" dan "visible_parts" WAJIB tidak kosong (train_car: ["body"]; rail_cross_section: ["wheel_left","wheel_right","flange"]; engine_block: ["block"]; wheelset: ["wheel_left","wheel_right","flange"]; piston_crank: ["piston","crank","intake_valve","exhaust_valve","spark_plug"]).
+   - shot_type="establishing" WAJIB memakai "train_car" atau "engine_block".
+   - shot_type="cross_section" WAJIB memakai "rail_cross_section" dan "view": "section".
 5. "driver": tentukan satu penggerak fisik utama per adegan (untuk sudut gunakan unit "°", bukan "deg").
 6. "invariants": jika ada mekanisme berstatus (intake_valve, exhaust_valve, spark), deklarasikan invarian dengan rentang "driver_between" DI DALAM [from, to] driver adegan itu.
 7. "hud": MAKSIMAL 2 item HUD per adegan (di luar judul). Setiap item WAJIB memiliki "hud_id" unik (mis. "S1_H1", "S1_H2").
    - Untuk penjelasan langkah mesin (hisap/kompresi/usaha/buang), WAJIB sertakan "when": { "driver_between": [a, b] } agar teks hanya muncul pada rentang sudut langkahnya!
    - Setiap item HUD (termasuk KineticTitle/Callout) yang memuat angka atau fakta WAJIB mengisi "claim_ref" ke salah satu ID klaim verified (atau "bind_to_driver": true untuk StatCounter, atau "illustrative": true).
+   - Jika "bind_to_driver": true (atau StatCounter): WAJIB isi "quantity" (salah satu dari "crank_angle", "lateral_shift", "distance", "effective_diameter", "progress") dan "display" ("value" | "qualitative"). Label WAJIB menyebut istilah besaran (mis. "Sudut Poros Engkol" untuk crank_angle, "Geser Lateral" untuk lateral_shift, "Diameter Efektif" untuk effective_diameter). Gunakan display="value" HANYA jika rentang angkanya didukung claim_ref; jika tidak ada dukungan angka di klaim, WAJIB display="qualitative" tanpa angka!
+   - KEBENARAN MAKNA (L5 semantik): JANGAN melebih-lebihkan klaim ("less chance" jangan ditulis "tanpa", jangan tambah kata "Kontinu"/"selalu"/"semua" jika tidak ada di kutipan), dan JANGAN hilangkan syarat ("tanpa bentuk kerucut", "cenderung"). Judul ilustratif harus persis menjawab topik "${project.topic}".
+   - HUD RINGKAS: Callout MAKSIMAL 8 kata dan 2 baris (kalimat lengkap cukup di narasi & takarir).
    - Setiap angka pada teks HUD WAJIB cocok dengan klaim rujukan dan berformat id-ID (jangan bocorkan "(C1)"/"(C2)" di teks HUD, jangan pakai "deg" — gunakan "°").
 8. "trigger_words": pilih 1-2 kata KUNCI yang BENAR-BENAR ADA persis di kalimat narasi adegan itu untuk memicu gerak utama.
 
@@ -97,14 +129,20 @@ Kembalikan JSON PERSIS mengikuti contoh struktur berikut (jangan ubah nama field
       "focus_entities": ["train_car"],
       "visible_parts": ["body"],
       "driver": { "name": "distance", "unit": "m", "from": -2, "to": 2 },
-      "hud": [{ "hud_id": "S1_H1", "component": "MeasureReveal", "props": { "label": "Kemiringan", "valueText": "1:20" }, "claim_ref": "C1" }],
+      "invariants": [{ "entity": "wheelset", "state": "flanges_inside=true", "when": { "driver_between": [-2, 2] } }],
+      "hud": [
+        { "hud_id": "S1_H1", "component": "MeasureReveal", "props": { "label": "Kemiringan", "valueText": "1:20" }, "claim_ref": "C1" },
+        { "hud_id": "S1_H2", "component": "StatCounter", "props": { "label": "Geser Lateral" }, "bind_to_driver": true, "quantity": "lateral_shift", "display": "qualitative", "claim_ref": "C2" }
+      ],
       "trigger_words": ["kerucut"]
     }
   ]
 }`;
 
-    const res = await generateJson(StoryboardSchema, prompt, {
+    const res = await llm(StoryboardSchema, prompt, {
       stage: 'S6',
+      purpose: 'storyboard',
+      tracker: options?.tracker,
       systemInstruction,
       onCallRecord: () => {
         llmCalls++;
@@ -115,6 +153,11 @@ Kembalikan JSON PERSIS mengikuti contoh struktur berikut (jangan ubah nama field
     await writeFile(
       path.join(projectDir, 'storyboard.json'),
       JSON.stringify(res.data, null, 2),
+      'utf-8'
+    );
+    await writeFile(
+      path.join(projectDir, 'storyboard.meta.json'),
+      JSON.stringify({ inputHash }, null, 2),
       'utf-8'
     );
 

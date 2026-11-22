@@ -86,15 +86,20 @@ export const CameraRig: React.FC<CameraRigProps> = ({
       const halfW = focusBox.size[0] * 0.5 * padding;
       const halfH = focusBox.size[1] * 0.5 * padding;
       const halfD = focusBox.size[2] * 0.5 * padding;
-      // Reserve top title (21%) and bottom callout+caption (34%), leaving ~45% free zone
-      const freeZoneHeightRatio = 0.45;
-      const distV = halfH / (Math.tan(vFovRad / 2) * freeZoneHeightRatio);
-      const distH = Math.max(halfW, halfD) / Math.tan(hFovRad / 2);
-      const dist = Math.max(distV, distH) + halfD;
-      // Shift lookAt slightly DOWN so the 3D subject projects into the upper-middle free zone (y ~ 280..840)
-      const freeZoneCenterShift = -dist * Math.tan(vFovRad / 2) * 0.14;
       const azimRad = ((startAngleDeg + (endAngleDeg - startAngleDeg) * p) * Math.PI) / 180;
       const elevRad = (elevationDeg * Math.PI) / 180;
+
+      // Project bounding box half-extents onto camera view axes for 9:16 portrait safety
+      const projHalfW = halfW * Math.abs(Math.cos(azimRad)) + halfD * Math.abs(Math.sin(azimRad));
+      const safeProjHalfW = Math.max(projHalfW, Math.hypot(halfW, halfD) * 0.72);
+      const projFrontD = halfW * Math.abs(Math.sin(azimRad)) + halfD * Math.abs(Math.cos(azimRad));
+      const freeZoneHeightRatio = 0.32;
+      const distV = halfH / (Math.tan(vFovRad / 2) * freeZoneHeightRatio) + projFrontD;
+      const distH = safeProjHalfW / (Math.tan(hFovRad / 2) * 0.78) + projFrontD;
+      const dist = Math.max(distV, distH);
+
+      // Shift lookAt slightly DOWN so the 3D subject projects into the upper-middle free zone (y ~ 240..780)
+      const freeZoneCenterShift = -dist * Math.tan(vFovRad / 2) * 0.12;
       const aimY = focusBox.center[1] + freeZoneCenterShift;
       camera.position.set(
         focusBox.center[0] + Math.sin(azimRad) * Math.cos(elevRad) * dist,

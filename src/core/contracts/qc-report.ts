@@ -19,6 +19,7 @@ export const QcIssueSchema = z.object({
   severity: QcSeveritySchema,
   message: z.string().min(1),
   ref: z.string().min(1),
+  owner: z.enum(['scene', 'kit']).optional(),
 });
 
 export const QcReportSchema = z.object({

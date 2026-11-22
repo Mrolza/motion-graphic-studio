@@ -74,6 +74,7 @@ export interface StatCounterProps {
   /** Bound single driver. When provided, value comes strictly from driver with NO independent easing. */
   driver?: DriverValue;
   bindToDriver?: boolean;
+  display?: 'value' | 'qualitative';
   from?: number;
   to?: number;
   unit?: string;
@@ -93,6 +94,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   label,
   driver,
   bindToDriver = Boolean(driver),
+  display = 'value',
   from = 0,
   to = 100,
   unit = '',
@@ -109,7 +111,9 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   const rawVal = bindToDriver && driver ? driver.value : from + (to - from) * p;
   const resolvedUnit = normalizeUnit(driver?.unit ?? unit);
   const formattedWithUnit = formatValueWithUnit(rawVal, resolvedUnit, decimals);
-  const displayText = `${label}: ${formattedWithUnit}`;
+  const isQualitative = display === 'qualitative';
+  const ratio = driver ? Math.max(0.05, Math.min(1, driver.progress)) : Math.max(0.05, Math.min(1, p));
+  const displayText = isQualitative ? label : `${label}: ${formattedWithUnit}`;
 
   return (
     <TelemetryHudBox
@@ -118,7 +122,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
       zone={zone}
       text={displayText}
       driverName={bindToDriver && driver ? driver.name : undefined}
-      numericValue={Math.round(rawVal * 1000) / 1000}
+      numericValue={isQualitative ? undefined : Math.round(rawVal * 1000) / 1000}
       claimRef={claimRef}
       style={{
         backgroundColor: tokens.colors.panelBg,
@@ -128,19 +132,40 @@ export const StatCounter: React.FC<StatCounterProps> = ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        gap: 16,
       }}
     >
       <span style={{ fontSize: 26, fontWeight: 600, color: tokens.colors.steelLight }}>{label}</span>
-      <span
-        style={{
-          fontSize: 32,
-          fontWeight: 800,
-          fontFamily: tokens.fonts.mono,
-          color: tokens.colors.accent,
-        }}
-      >
-        {formattedWithUnit}
-      </span>
+      {isQualitative ? (
+        <div
+          style={{
+            width: 180,
+            height: 14,
+            borderRadius: 7,
+            backgroundColor: 'rgba(255,255,255,0.14)',
+            overflow: 'hidden',
+          }}
+        >
+          <div
+            style={{
+              width: `${Math.round(ratio * 100)}%`,
+              height: '100%',
+              backgroundColor: tokens.colors.accent,
+            }}
+          />
+        </div>
+      ) : (
+        <span
+          style={{
+            fontSize: 32,
+            fontWeight: 800,
+            fontFamily: tokens.fonts.mono,
+            color: tokens.colors.accent,
+          }}
+        >
+          {formattedWithUnit}
+        </span>
+      )}
     </TelemetryHudBox>
   );
 };
@@ -348,3 +373,5 @@ export const Callout: React.FC<CalloutProps> = ({
     </>
   );
 };
+
+export { ExaggerationBadge, type ExaggerationBadgeProps } from './ExaggerationBadge';

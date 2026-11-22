@@ -1,34 +1,33 @@
 import React from 'react';
-import { 
-  BlueprintStage, 
-  CameraRig, 
-  Ground, 
-  CurvedRail, 
-  WheelsetOnRail, 
-  computeWheelsetLayout, 
-  Hud, 
-  HudLayout, 
-  HudZone, 
-  SceneTransition, 
-  TelemetryProvider, 
-  StoryboardHudProvider, 
-  useDriver, 
-  StoryboardHudDataItem 
+import {
+  StoryboardHudProvider,
+  TelemetryProvider,
+  useDriver,
+  SceneTransition,
+  BlueprintStage,
+  CameraRig,
+  HudLayout,
+  HudZone,
+  Hud,
+  CurvedRail,
+  Ground,
+  WheelsetOnRail,
+  computeWheelsetLayout
 } from '../../../kit';
 
 export interface Scene_S4Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
-const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
+const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'lateralShift',
-    from: 5,
-    to: 15,
+    name: 'effective_diameter',
+    from: 0,
+    to: 10,
     unit: 'mm',
     startSec: 0,
-    durationSec: 9.46,
+    durationSec: 8.87,
     curve: 'linear'
   });
 
@@ -45,8 +44,11 @@ const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
-            <HudZone zone="callout" palette="blueprint-navy">
+            <HudZone zone="title" palette="blueprint-navy">
               <Hud id="S4_H1" driver={driver} palette="blueprint-navy" />
+            </HudZone>
+            <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S4_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
@@ -72,16 +74,22 @@ const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         />
         <CameraRig
           mode="frameEntities"
-          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
-          padding={1.85}
-          elevationDeg={24}
+          focusBox={{
+            center: wl.center,
+            size: [1.9, 1.25, 1.6]
+          }}
+          padding={1.25}
+          elevationDeg={22}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false, hudData = [] }) => (
+export const Scene_S4: React.FC<Scene_S4Props> = ({
+  telemetry = false,
+  hudData = []
+}) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>
       <Scene_S4Inner telemetry={telemetry} />

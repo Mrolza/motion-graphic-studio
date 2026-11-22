@@ -65,7 +65,7 @@ describe('P3B Voice spoken_text, Storyboard QC, Safety Validator, and Sync Mutat
       {
         id: 'S1',
         lane: 'code_3d',
-        shot_type: 'establishing',
+        shot_type: 'closeup',
         camera_move: 'dolly',
         duration_sec: 4.5,
         sentence_refs: ['S1.1'],

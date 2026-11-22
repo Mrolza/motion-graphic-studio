@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import type { RunLlmTracker } from './budget';
 import {
   buildGeminiThinkingConfig,
   GEMINI_REQUEST_TIMEOUT_MS,
@@ -24,6 +25,9 @@ export interface LlmCallRecord {
 
 export interface GenerateJsonOptions {
   stage?: string;
+  purpose?: string;
+  sceneId?: string | null;
+  tracker?: RunLlmTracker;
   model?: string;
   apiKey?: string;
   systemInstruction?: string;
@@ -39,6 +43,7 @@ export interface GenerateJsonResult<T> {
   data: T;
   model: string;
   attempts: number;
+  httpRetries: number;
   totalDurationMs: number;
   usage?: { inputTokens?: number; outputTokens?: number };
 }
@@ -91,6 +96,8 @@ export async function generateJson<T>(
   const maxTransientRetries = opts.maxTransientRetries ?? 5;
   const maxSchemaRetries = opts.maxSchemaRetries ?? 2;
   const baseDelayMs = opts.retryDelayMs ?? 2000;
+  const purpose = opts.purpose ?? stage;
+  opts.tracker?.assertCanCall(stage, purpose);
 
   let currentPrompt = prompt;
   let attempts = 0;
@@ -152,7 +159,17 @@ export async function generateJson<T>(
       });
 
       if (res.status === 429 && isDailyQuotaMessage(errText)) {
-        throw new DailyQuotaExhaustedError(`Daily Gemini quota exhausted: ${errText.slice(0, 300)}`);
+        await opts.tracker?.recordCall({
+          stage,
+          purpose,
+          scene_id: opts.sceneId,
+          attempt: attempts,
+          http_retries: transientCount,
+          ok: false,
+        });
+        throw new DailyQuotaExhaustedError(
+          `Daily Gemini quota exhausted (kuota harian pulih pukul 00.00 Pacific / 15.00 WIB saat PST): ${errText.slice(0, 300)}`
+        );
       }
 
       const isTransientStatus = res.status === 503 || res.status === 429 || res.status === 500;
@@ -208,10 +225,19 @@ export async function generateJson<T>(
     }
 
     await opts.onCallRecord?.({ stage, model, durationMs, ok: true, ...usage });
+    await opts.tracker?.recordCall({
+      stage,
+      purpose,
+      scene_id: opts.sceneId,
+      attempt: 1 + schemaFailCount,
+      http_retries: transientCount,
+      ok: true,
+    });
     return {
       data: validated.data,
       model,
       attempts,
+      httpRetries: transientCount,
       totalDurationMs: Date.now() - tStartAll,
       usage,
     };

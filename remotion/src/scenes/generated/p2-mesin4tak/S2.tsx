@@ -10,23 +10,22 @@ import {
   HudLayout,
   HudZone,
   Hud,
-  useDriver,
-  StoryboardHudDataItem
+  useDriver
 } from '../../../kit';
 
 export interface Scene_S2Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
-const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
+const Scene_S2Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'crankAngleDeg',
+    name: 'crank_angle',
     from: 0,
     to: 360,
     unit: '°',
     startSec: 0,
-    durationSec: 12.48,
+    durationSec: 11.4,
     curve: 'linear'
   });
 
@@ -37,9 +36,11 @@ const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
+            <HudZone zone="title" palette="blueprint-navy">
+              <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />
+            </HudZone>
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S2_H1" driver={driver} palette="blueprint-navy" />
-              <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
@@ -54,16 +55,19 @@ const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         />
         <CameraRig
           mode="frameEntities"
-          focusBox={{ center: [0, 1.65, 0], size: [1.5, 2.75, 1.5] }}
-          padding={1.18}
-          elevationDeg={10}
+          focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
+          padding={1.22}
+          elevationDeg={12}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S2: React.FC<Scene_S2Props> = ({ telemetry = false, hudData = [] }) => (
+export const Scene_S2: React.FC<Scene_S2Props> = ({
+  telemetry = false,
+  hudData = []
+}) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>
       <Scene_S2Inner telemetry={telemetry} />
