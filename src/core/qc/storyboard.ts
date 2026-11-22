@@ -7,6 +7,7 @@ import type { Script } from '@core/contracts/script';
 import { StoryboardSchema, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
+import type { RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
 import { verifyStoryboardL5Semantic, type L5SemanticVerdict } from './l5-semantic';
 import { verifyStoryboardCode } from './storyboard-code';
@@ -29,7 +30,8 @@ const StoryboardLlmReviewSchema = z.object({
  */
 export async function runStoryboardQcStage(
   projectId: string,
-  repoRoot = process.cwd()
+  repoRoot = process.cwd(),
+  options?: { tracker?: RunLlmTracker }
 ): Promise<{ storyboard: Storyboard; report: QcReport; rewritten: boolean }> {
   const projectDir = getProjectDir(projectId, repoRoot);
   const project = await loadProject(projectId, repoRoot);
@@ -61,6 +63,8 @@ export async function runStoryboardQcStage(
           )}\n\nStoryboard:\n${JSON.stringify(sb, null, 2)}`,
         {
           stage: 'S7',
+          purpose: 'storyboard_review',
+          tracker: options?.tracker,
           onCallRecord: () => {
             llmCalls++;
           },
@@ -76,6 +80,7 @@ export async function runStoryboardQcStage(
         topic: project.topic,
         storyboard: sb,
         ledger,
+        tracker: options?.tracker,
         onCall: () => {
           llmCalls++;
         },
@@ -105,6 +110,8 @@ export async function runStoryboardQcStage(
         )}`,
         {
           stage: 'S7',
+          purpose: 'storyboard_rewrite',
+          tracker: options?.tracker,
           onCallRecord: () => {
             llmCalls++;
           },

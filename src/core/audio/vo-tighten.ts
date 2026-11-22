@@ -45,8 +45,8 @@ export async function tightenProjectVoice(params: {
   const gaps: GapRecord[] = [];
   let maxGapBeforeSec = 0;
   let maxGapAfterSec = 0;
-  const padSec = 0.04;
-  const sceneGapSec = 0.22;
+  const padSec = 0.015;
+  const sceneGapSec = 0.12;
 
   const newScenes: Timeline['scenes'] = [];
   const newWords: TimelineWord[] = [];
@@ -65,9 +65,14 @@ export async function tightenProjectVoice(params: {
 
     const origDur = Math.max(0.2, sc.end - sc.start);
     const keepRanges: Array<{ start: number; end: number }> = [];
-    let segStart = 0;
-    let removedTotal = 0;
+    const leadTrim = scWords.length > 0 ? Math.max(0, scWords[0]!.start - 0.03) : 0;
+    const tailEnd = scWords.length > 0 ? Math.min(origDur, scWords[scWords.length - 1]!.end + 0.04) : origDur;
+    let segStart = leadTrim;
+    let removedTotal = leadTrim + Math.max(0, origDur - tailEnd);
     const shifts: Array<{ afterOrigSec: number; removedSec: number }> = [];
+    if (leadTrim > 0.01) {
+      shifts.push({ afterOrigSec: 0, removedSec: leadTrim });
+    }
 
     for (let i = 0; i < scWords.length - 1; i++) {
       const cur = scWords[i]!;
@@ -75,9 +80,9 @@ export async function tightenProjectVoice(params: {
       const gap = nxt.start - cur.end;
       if (gap > maxGapBeforeSec) maxGapBeforeSec = round3(gap);
 
-      if (gap > 0.4) {
+      if (gap > 0.22) {
         const isSentenceEnd = /[.!?]$/.test(cur.text.trim());
-        const targetGap = isSentenceEnd ? 0.22 : 0.26;
+        const targetGap = isSentenceEnd ? 0.15 : 0.13;
         const cutStart = cur.end + padSec;
         const cutEnd = nxt.start - padSec;
         const available = cutEnd - cutStart;
@@ -104,9 +109,9 @@ export async function tightenProjectVoice(params: {
         maxGapAfterSec = round3(gap);
       }
     }
-    keepRanges.push({ start: round3(segStart), end: round3(origDur) });
+    keepRanges.push({ start: round3(segStart), end: round3(tailEnd) });
 
-    if (removedTotal > 0.01 && keepRanges.length > 1) {
+    if (removedTotal > 0.01) {
       const tmpOut = path.join(audioDir, `${sc.scene_id}.tight.mp3`);
       const filterParts = keepRanges.map(
         (r, idx) => `[0:a]atrim=start=${r.start}:end=${r.end},asetpts=PTS-STARTPTS[a${idx}]`

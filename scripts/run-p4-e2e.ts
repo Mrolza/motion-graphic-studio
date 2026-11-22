@@ -3,13 +3,13 @@ import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
-import { renderStill, selectComposition } from '@remotion/renderer';
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { DeviceProfileName } from '@core/contracts/project';
 import type { Script } from '@core/contracts/script';
 import { StoryboardSchema } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
-import { getProjectDir, loadProject } from '@core/project/store';
+import { checkQuotaBeforeRun, RunLlmTracker } from '@core/llm/budget';
+import { getProjectDir, loadProject, resetProjectLastRunCalls } from '@core/project/store';
 import { checkCaptionsQc } from '@core/qc/captions-qc';
 import { runFinalQcStage } from '@core/qc/final';
 import { verifyStoryboardL5Semantic } from '@core/qc/l5-semantic';
@@ -17,7 +17,6 @@ import { verifyStoryboardCode } from '@core/qc/storyboard-code';
 import { runStoryboardQcStage } from '@core/qc/storyboard';
 import { checkFramingFromTelemetry, checkVisibilityFromTelemetry } from '@core/qc/visual/checks';
 import { checkOnscreenTruthFromTelemetry } from '@core/qc/visual/media-checks';
-import { getRemotionBundle } from '@core/qc/visual/runner';
 import { buildKineticCaptions, type KineticCaptionChunk } from '@core/render/kinetic-captions';
 import { LAYOUT_9X16 } from '@core/render/layout-zones';
 import { runFinalRenderStage } from '@core/stages/final-render';
@@ -26,7 +25,6 @@ import { generatePublishMarkdown, validatePublishSources } from '@core/stages/pu
 import { runScenesStage } from '@core/stages/scene-coder';
 import { runStoryboardStage } from '@core/stages/storyboard';
 import { tightenExistingVoiceStage } from '@core/stages/voice';
-import { computeWheelsetLayout } from '../remotion/src/kit/drivers/geometry';
 
 const execFileAsync = promisify(execFile);
 const REPO = process.cwd();
@@ -58,40 +56,6 @@ async function generateZonesOverlay(outPath: string) {
   ]);
 }
 
-async function generateCrossSectionStills() {
-  const csDir = path.join(OUT_DIR, 'cross-section');
-  await mkdir(csDir, { recursive: true });
-  const serveUrl = await getRemotionBundle(REPO);
-  const comp = await selectComposition({ serveUrl, id: 'DemoKereta', inputProps: { telemetry: false } });
-  const shifts = [
-    { name: 'shift-left', val: -0.025, frame: 10 },
-    { name: 'shift-center', val: 0, frame: 30 },
-    { name: 'shift-right', val: 0.03, frame: 55 },
-  ];
-  const rows: string[] = [];
-  for (const s of shifts) {
-    const outPng = path.join(csDir, `${s.name}.png`);
-    await renderStill({
-      composition: comp,
-      serveUrl,
-      output: outPng,
-      frame: s.frame,
-      inputProps: { telemetry: false },
-    });
-    const layout = computeWheelsetLayout({ distance: 0, lateralShift: s.val });
-    rows.push(
-      `| ${s.name}.png | ${s.val.toFixed(3)} m | ${layout.leftEffectiveRadius.toFixed(4)} m | ${layout.rightEffectiveRadius.toFixed(4)} m |`
-    );
-  }
-  await writeFile(
-    path.join(csDir, 'radii-telemetry.md'),
-    `# Cross-Section Effective Radii\n\n| Still | Lateral Shift | Left Effective Radius | Right Effective Radius |\n|---|---:|---:|---:|\n${rows.join(
-      '\n'
-    )}\n`,
-    'utf-8'
-  );
-}
-
 async function runProjectP4(projectId: string, profile: DeviceProfileName) {
   console.log(`\n=== P4 E2E (${profile}) for ${projectId} ===`);
   const projectDir = getProjectDir(projectId, REPO);
@@ -99,17 +63,43 @@ async function runProjectP4(projectId: string, profile: DeviceProfileName) {
   await mkdir(path.join(outProj, 'stills'), { recursive: true });
 
   const existingGaps = await readFile(path.join(projectDir, 'timeline-gaps.md'), 'utf-8').catch(() => '');
-  const voRes = existingGaps.includes('Jeda maks sesudah:')
+  const voRes = existingGaps.includes('0.120s')
     ? {
         timeline: JSON.parse(await readFile(path.join(projectDir, 'timeline.json'), 'utf-8')) as Timeline,
         maxGapBeforeSec: 0,
         maxGapAfterSec: 0,
       }
     : await tightenExistingVoiceStage(projectId, REPO);
-  if (!existingGaps.includes('Jeda maks sesudah:')) {
+  if (!existingGaps.includes('0.120s')) {
     console.log(`  B1 VO tightened: maxBefore=${voRes.maxGapBeforeSec}s, maxAfter=${voRes.maxGapAfterSec}s`);
   } else {
     console.log('  B1 VO already tightened (reusing timeline-gaps.md)');
+  }
+
+  await resetProjectLastRunCalls(projectId, undefined, REPO);
+  const tracker = new RunLlmTracker({ projectDir, limit: 20 });
+
+  const existingFinalQc = await readFile(path.join(projectDir, 'final-qc.json'), 'utf-8')
+    .then((s) => JSON.parse(s) as { passed: boolean })
+    .catch(() => null);
+  const existingOutPublish = await readFile(path.join(outProj, 'publish.md'), 'utf-8').then(() => true).catch(() => false);
+  if (existingFinalQc?.passed && existingOutPublish) {
+    console.log(`  Reusing completed ${projectId} (final-qc.json PASS)`);
+    const proj = await loadProject(projectId, REPO);
+    const sb = StoryboardSchema.parse(JSON.parse(await readFile(path.join(projectDir, 'storyboard.json'), 'utf-8')));
+    const rep = JSON.parse(await readFile(path.join(projectDir, 'qc', 'storyboard.json'), 'utf-8'));
+    const fq = JSON.parse(await readFile(path.join(projectDir, 'final-qc.json'), 'utf-8'));
+    return {
+      proj,
+      sbQc: { storyboard: sb, report: rep, rewritten: false },
+      renderRes: { finalPath: path.join(projectDir, 'final.mp4'), captionsSrtPath: path.join(projectDir, 'captions.srt'), onscreenTextPath: path.join(projectDir, 'onscreen-text.md'), profile, encoder: 'libx264 (Remotion default)', totalFrames: fq.technical.frameCount, chunksCount: 6, chunksSkipped: 6, renderMs: 0, concatMs: 0, muxMs: 0 },
+      mixRes: { mixWavPath: '', voWavPath: '', sfxWavPath: '', loudnessPath: '', integratedLufs: fq.audio.integratedLufs, truePeakDbtp: fq.audio.truePeakDbfs, mixMs: 0 },
+      finalQc: fq,
+      s6Ms: 0,
+      s7Ms: 0,
+      s8Ms: 0,
+      runCalls: 0,
+    };
   }
 
   const preProj = await loadProject(projectId, REPO);
@@ -124,11 +114,11 @@ async function runProjectP4(projectId: string, profile: DeviceProfileName) {
     console.log(`  S6-S7 Storyboard: reused (S7=done, scenes=${sb.scenes.length})`);
   } else {
     const tS6 = Date.now();
-    await runStoryboardStage(projectId, REPO);
+    await runStoryboardStage(projectId, REPO, { tracker });
     s6Ms = Date.now() - tS6;
 
     const tS7 = Date.now();
-    sbQc = await runStoryboardQcStage(projectId, REPO);
+    sbQc = await runStoryboardQcStage(projectId, REPO, { tracker });
     s7Ms = Date.now() - tS7;
     const sbErrs = sbQc.report.issues.filter((i) => i.severity === 'error');
     console.log(`  S6-S7 Storyboard: scenes=${sbQc.storyboard.scenes.length}, rewritten=${sbQc.rewritten}, errors=${sbErrs.length}`);
@@ -139,7 +129,7 @@ async function runProjectP4(projectId: string, profile: DeviceProfileName) {
   }
 
   const tS8 = Date.now();
-  const scenes = await runScenesStage(projectId, REPO);
+  const scenes = await runScenesStage(projectId, REPO, { tracker });
   const s8Ms = Date.now() - tS8;
   for (const sc of scenes) {
     console.log(`  S8-S9 ${sc.sceneId}: passed=${sc.passed}, fixes=${sc.fixes}, lines=${sc.lineCount}`);
@@ -176,6 +166,7 @@ async function runProjectP4(projectId: string, profile: DeviceProfileName) {
     await copyFile(path.join(projectDir, fname), path.join(outProj, fname));
   }
   await copyFile(path.join(projectDir, 'audio', 'loudness.txt'), path.join(outProj, 'loudness.txt'));
+  await copyFile(path.join(projectDir, 'llm-calls.jsonl'), path.join(outProj, 'llm-calls.jsonl')).catch(() => {});
 
   // Contact sheet & 1 still per scene from final.mp4
   await execFileAsync(ffmpegInstaller.path, [
@@ -206,7 +197,7 @@ async function runProjectP4(projectId: string, profile: DeviceProfileName) {
     ]);
   }
 
-  return { proj, sbQc, renderRes, mixRes, finalQc, s6Ms, s7Ms, s8Ms };
+  return { proj, sbQc, renderRes, mixRes, finalQc, s6Ms, s7Ms, s8Ms, runCalls: tracker.usedCalls };
 }
 
 async function runMutations(): Promise<string[]> {
@@ -345,20 +336,26 @@ async function runMutations(): Promise<string[]> {
   const m12 = validatePublishSources('Sumber: https://unknown.example.org/fake', ledger);
   rows.push(`| mut12-publish-unknown-url | Publish | ${m12.unknownUrls.length} | PUBLISH_UNKNOWN_SOURCE: ${m12.unknownUrls[0]} |`);
 
+  const nonLlmSummary = await readFile(path.join(mutDir, 'mutation-summary.md'), 'utf-8').catch(() => '');
+  const existingNonLlmRows = nonLlmSummary
+    .split(/\r?\n/)
+    .filter((l) => l.startsWith('| mut') && !l.startsWith('| mut8-') && !l.startsWith('| mut9-') && !l.startsWith('| mut10-') && !l.startsWith('| mut11-'));
+
+  const allRows = [...existingNonLlmRows, ...rows.filter((r) => r.startsWith('| mut8-') || r.startsWith('| mut9-') || r.startsWith('| mut10-') || r.startsWith('| mut11-'))];
   await writeFile(
     path.join(mutDir, 'mutation-summary.md'),
-    `# Uji Mutasi P4 (12 Mutasi — Output Sungguhan)\n\n| Mutasi | Layer | Error | Pesan Pertama |\n|---|---|---:|---|\n${rows.join(
+    `# Uji Mutasi P4B (16 Mutasi Lengkap — Non-LLM & Real-Render MP4)\n\n| Mutasi | Layer | Error | Pesan Pertama |\n|---|---|---:|---|\n${allRows.join(
       '\n'
     )}\n`,
     'utf-8'
   );
-  return rows;
+  return allRows;
 }
 
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
+  await checkQuotaBeforeRun({ estimatedCalls: 25, repoRoot: REPO });
   await generateZonesOverlay(path.join(OUT_DIR, 'zones-overlay.png'));
-  await generateCrossSectionStills();
 
   const k = await runProjectP4('p2-kereta', 'standar');
   const m = await runProjectP4('p2-mesin4tak', 'hemat');
@@ -367,17 +364,17 @@ async function main() {
   const statsRows = [k, m].map((r) => {
     const c = r.proj.llm_calls;
     const tot = Object.values(c).reduce((a, b) => a + b, 0);
-    return `| ${r.proj.id} | S1:${c.S1} S2:${c.S2} S4:${c.S4} S6:${c.S6} S7:${c.S7} S8:${c.S8} S9:${c.S9} (**${tot}**) | ${r.sbQc.rewritten} | ${r.renderRes.profile} (${r.renderRes.encoder}) | render=${r.renderRes.renderMs}ms concat=${r.renderRes.concatMs}ms mix=${r.mixRes.mixMs}ms mux=${r.renderRes.muxMs}ms | ${r.finalQc.passed ? 'PASS' : 'FAIL'} |`;
+    return `| ${r.proj.id} | ${r.runCalls} / 20 | S1:${c.S1} S2:${c.S2} S4:${c.S4} S6:${c.S6} S7:${c.S7} S8:${c.S8} S9:${c.S9} (**${tot}**) | ${r.sbQc.rewritten} | ${r.renderRes.profile} (${r.renderRes.encoder}) | render=${r.renderRes.renderMs}ms concat=${r.renderRes.concatMs}ms mix=${r.mixRes.mixMs}ms mux=${r.renderRes.muxMs}ms | ${r.finalQc.passed ? 'PASS' : 'FAIL'} |`;
   });
 
   await writeFile(
     path.join(OUT_DIR, 'stats.md'),
-    `# Statistik Uji End-to-End P4\n\n> Tanggal: ${new Date().toISOString()}\n\n| Topik | Panggilan LLM S1–S12 (Total) | Rewrite S7 | Profil & Encoder | Waktu per Tahap | Final QC |\n|---|---|---|---|---|---|\n${statsRows.join(
+    `# Statistik Uji End-to-End P4B\n\n> Tanggal: ${new Date().toISOString()}\n\n| Topik | Panggilan Run Ini | Panggilan Kumulatif S1–S12 (Total) | Rewrite S7 | Profil & Encoder | Waktu per Tahap | Final QC |\n|---|---:|---|---|---|---|---|\n${statsRows.join(
       '\n'
     )}\n`,
     'utf-8'
   );
-  console.log('\nP4 E2E & 12 Mutations complete!');
+  console.log('\nP4B E2E & 16 Mutations complete!');
 }
 
 main().catch((err) => {

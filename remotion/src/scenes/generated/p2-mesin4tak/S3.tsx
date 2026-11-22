@@ -1,17 +1,17 @@
 import React from 'react';
 import {
+  StoryboardHudProvider,
+  TelemetryProvider,
+  SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
-  Hud,
+  PistonCrankAssembly,
   HudLayout,
   HudZone,
-  PistonCrankAssembly,
-  SceneTransition,
-  StoryboardHudProvider,
-  StoryboardHudDataItem,
-  TelemetryProvider,
-  useDriver
+  Hud,
+  useDriver,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S3Props {
@@ -19,14 +19,14 @@ export interface Scene_S3Props {
   hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
+const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'crankAngleDeg',
+    name: 'crank_angle',
     from: 360,
     to: 720,
     unit: '°',
     startSec: 0,
-    durationSec: 10.97,
+    durationSec: 10.07,
     curve: 'linear'
   });
 
@@ -44,12 +44,6 @@ const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: [0, 1.65, 0], size: [1.5, 2.75, 1.5] }}
-          padding={1.18}
-          elevationDeg={10}
-        />
         <Ground size={36} divisions={36} y={-0.55} />
         <PistonCrankAssembly
           entityId="piston_crank"
@@ -57,6 +51,14 @@ const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           position={[0, 0.45, 0]}
           cutaway
           palette="blueprint-navy"
+        />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
+          padding={1.22}
+          elevationDeg={12}
+          startAngleDeg={0}
+          endAngleDeg={0}
         />
       </BlueprintStage>
     </SceneTransition>

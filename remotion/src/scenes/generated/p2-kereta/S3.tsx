@@ -1,21 +1,5 @@
 import React from 'react';
-import {
-  useDriver,
-  SceneTransition,
-  BlueprintStage,
-  CameraRig,
-  Ground,
-  CurvedRail,
-  WheelsetOnRail,
-  HudLayout,
-  HudZone,
-  Hud,
-  DiagramOverlay,
-  computeWheelsetLayout,
-  TelemetryProvider,
-  StoryboardHudProvider,
-  StoryboardHudDataItem
-} from '../../../kit';
+import { SceneTransition, BlueprintStage, CameraRig, Ground, CurvedRail, WheelsetOnRail, HudLayout, HudZone, Hud, DiagramOverlay, useDriver, computeWheelsetLayout, TelemetryProvider, StoryboardHudProvider, StoryboardHudDataItem } from '../../../kit';
 
 export interface Scene_S3Props {
   telemetry?: boolean;
@@ -24,12 +8,12 @@ export interface Scene_S3Props {
 
 const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'curveRadius',
-    from: 100,
-    to: 300,
-    unit: 'm',
+    name: 'progress',
+    from: 0,
+    to: 100,
+    unit: '%',
     startSec: 1.44,
-    durationSec: 7.68,
+    durationSec: 7.1,
     curve: 'linear',
   });
 
@@ -49,18 +33,11 @@ const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
             <DiagramOverlay curveArc inertiaArrow palette="blueprint-navy" />
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S3_H1" driver={driver} palette="blueprint-navy" />
+              <Hud id="S3_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
-          padding={1.85}
-          elevationDeg={24}
-          durationSec={9.12}
-        />
-        <Ground size={60} divisions={60} y={0} />
         <CurvedRail
           startZ={-10}
           curveStartZ={2}
@@ -70,6 +47,7 @@ const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           highlighted
           palette="blueprint-navy"
         />
+        <Ground size={60} divisions={60} y={0} />
         <WheelsetOnRail
           entityId="wheelset"
           distance={driver.value}
@@ -78,6 +56,18 @@ const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           curveRadius={10}
           highlightContact
           palette="blueprint-navy"
+        />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{
+            center: wl.center,
+            size: [1.9, 1.25, 1.6],
+          }}
+          padding={1.25}
+          elevationDeg={22}
+          startAngleDeg={-22}
+          endAngleDeg={22}
+          durationSec={8.542}
         />
       </BlueprintStage>
     </SceneTransition>

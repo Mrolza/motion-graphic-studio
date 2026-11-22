@@ -268,7 +268,11 @@ export function verifyStoryboardCode(
   }
 
   for (const s of storyboard.scenes) {
-    if (s.shot_type === 'cross_section' && !s.focus_entities.includes('rail_cross_section')) {
+    if (
+      s.shot_type === 'cross_section' &&
+      !s.focus_entities.includes('rail_cross_section') &&
+      !s.focus_entities.includes('piston_crank')
+    ) {
       issues.push({
         severity: 'error',
         message: `SHOT_VIEW_MISMATCH: shot_type="cross_section" wajib memakai rail_cross_section / view="section" (bukan ${s.focus_entities.join(',')})`,

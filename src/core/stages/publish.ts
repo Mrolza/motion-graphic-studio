@@ -19,7 +19,14 @@ export function validatePublishSources(
   const allowedUrls = new Set(
     ledger.claims.flatMap((c) => c.sources.map((s) => s.url.trim()))
   );
-  const foundUrls = publishMd.match(/https?:\/\/[^\s)>\]"]+/g) ?? [];
+  const rawUrls = publishMd.match(/https?:\/\/[^\s\]>"']+/g) ?? [];
+  const foundUrls = rawUrls.map((u) => {
+    let cleaned = u.replace(/[.,;:!?]+$/, '');
+    if (cleaned.endsWith(')') && !cleaned.includes('(')) {
+      cleaned = cleaned.slice(0, -1);
+    }
+    return cleaned;
+  });
   const unknownUrls = foundUrls.filter((u) => !allowedUrls.has(u.trim()));
   return {
     ok: unknownUrls.length === 0,

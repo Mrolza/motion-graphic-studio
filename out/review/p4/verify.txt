@@ -17,33 +17,33 @@
 
 [1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mD:/motion-graphic-studio[39m
 
- [32m✓[39m tests/moduleBoundary.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 71[2mms[22m[39m
- [32m✓[39m tests/copied/quota.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 40[2mms[22m[39m
- [32m✓[39m tests/copied/tts.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 510[2mms[22m[39m
-   [33m[2m✓[22m[39m trimAudioSilence (R3-1)[2m > [22mremoves leading and trailing silence from MP3 using bundled FFmpeg 4.1 [33m 504[2mms[22m[39m
- [32m✓[39m tests/qcGate1.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 301[2mms[22m[39m
- [32m✓[39m tests/p3bStoryboard.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 103[2mms[22m[39m
- [32m✓[39m tests/kitDrivers.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 40[2mms[22m[39m
- [32m✓[39m tests/copied/wikimedia.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 36[2mms[22m[39m
- [32m✓[39m tests/copied/cache.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 21[2mms[22m[39m
- [32m✓[39m tests/llmClient.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 21[2mms[22m[39m
- [32m✓[39m tests/copied/beats.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 20[2mms[22m[39m
- [32m✓[39m tests/copied/audioMix.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 1895[2mms[22m[39m
-   [33m[2m✓[22m[39m audio-mix (M6)[2m > [22mmixes 3 scene sines + 3 SFX + 1 BGM sine on bundled FFmpeg 4.1 within ±0.05s and -14±1 LUFS [33m 1890[2mms[22m[39m
- [32m✓[39m tests/p4bBudgetAndKit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 164[2mms[22m[39m
- [32m✓[39m tests/copied/timeline.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 11[2mms[22m[39m
- [32m✓[39m tests/deviceProfile.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 37[2mms[22m[39m
- [32m✓[39m tests/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 12[2mms[22m[39m
- [32m✓[39m tests/copied/providers.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
- [32m✓[39m tests/p4PartA.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 9[2mms[22m[39m
- [32m✓[39m tests/p4PartB.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
- [32m✓[39m tests/qcFacts.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
- [32m✓[39m tests/copied/captions.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/moduleBoundary.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m tests/copied/quota.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m tests/qcGate1.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 199[2mms[22m[39m
+ [32m✓[39m tests/p3bStoryboard.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/copied/tts.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 610[2mms[22m[39m
+   [33m[2m✓[22m[39m trimAudioSilence (R3-1)[2m > [22mremoves leading and trailing silence from MP3 using bundled FFmpeg 4.1 [33m 606[2mms[22m[39m
+ [32m✓[39m tests/copied/wikimedia.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/copied/cache.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32m✓[39m tests/copied/beats.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/kitDrivers.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/llmClient.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/p4bBudgetAndKit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 134[2mms[22m[39m
+ [32m✓[39m tests/deviceProfile.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 49[2mms[22m[39m
+ [32m✓[39m tests/qcFacts.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/copied/timeline.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/p4PartA.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/copied/audioMix.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2093[2mms[22m[39m
+   [33m[2m✓[22m[39m audio-mix (M6)[2m > [22mmixes 3 scene sines + 3 SFX + 1 BGM sine on bundled FFmpeg 4.1 within ±0.05s and -14±1 LUFS [33m 2090[2mms[22m[39m
+ [32m✓[39m tests/copied/captions.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/p4PartB.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/copied/providers.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 3[2mms[22m[39m
 
 [2m Test Files [22m [1m[32m20 passed[39m[22m[90m (20)[39m
 [2m      Tests [22m [1m[32m75 passed[39m[22m[90m (75)[39m
-[2m   Start at [22m 06:34:32
-[2m   Duration [22m 3.76s[2m (transform 1.62s, setup 0ms, collect 8.92s, tests 3.32s, environment 5ms, prepare 4.81s)[22m
+[2m   Start at [22m 08:16:58
+[2m   Duration [22m 3.37s[2m (transform 1.46s, setup 0ms, collect 6.92s, tests 3.37s, environment 4ms, prepare 3.30s)[22m
 
 
 > motion-graphic-studio@0.1.0 check:size

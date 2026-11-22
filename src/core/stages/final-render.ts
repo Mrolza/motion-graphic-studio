@@ -263,6 +263,7 @@ ${seriesItems}
     const tMux0 = Date.now();
     const mixWavPath = path.join(projectDir, 'audio', 'mix.wav');
     const finalPath = path.join(projectDir, 'final.mp4');
+    const exactDur = (totalFrames / 30).toFixed(3);
     await execFileAsync(ffmpegInstaller.path, [
       '-y',
       '-v',
@@ -283,7 +284,8 @@ ${seriesItems}
       '48000',
       '-b:a',
       '192k',
-      '-shortest',
+      '-t',
+      exactDur,
       finalPath,
     ]);
     const muxMs = Date.now() - tMux0;

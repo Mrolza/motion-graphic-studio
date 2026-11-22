@@ -1,0 +1,39 @@
+{
+  "projectId": "p2-mesin4tak",
+  "passed": true,
+  "technical": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "videoCodec": "h264",
+    "pixFmt": "yuvj420p",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "videoDurationSec": 34.166667,
+    "audioDurationSec": 34.167,
+    "avDiffMs": 0,
+    "frameCount": 1025,
+    "expectedFrames": 1025
+  },
+  "audio": {
+    "integratedLufs": -14.3,
+    "truePeakDbfs": -2.6,
+    "maxVoGapSec": 0,
+    "silenceHits": 0
+  },
+  "visual": {
+    "blackHits": 0,
+    "freezeHits": 0
+  },
+  "process": {
+    "totalLlmCalls": 123,
+    "exceedsPrdLlmBudget": true
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "PROCESS_LLM_BUDGET: total panggilan LLM S1–S12 = 123 (> 15 batas PRD §5)",
+      "ref": "process"
+    }
+  ]
+}

@@ -2,31 +2,31 @@ import React from 'react';
 import {
   StoryboardHudProvider,
   TelemetryProvider,
-  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
   RailCrossSection,
+  ExaggerationBadge,
   HudLayout,
   HudZone,
   Hud,
-  StoryboardHudDataItem
+  useDriver
 } from '../../../kit';
 
 export interface Scene_S2Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
 const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'lateralShift',
+    name: 'lateral_shift',
     from: 0,
-    to: 1,
+    to: 10,
     unit: 'mm',
     startSec: 0,
-    durationSec: 10.08,
+    durationSec: 9.5,
     curve: 'linear'
   });
 
@@ -37,6 +37,7 @@ const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
+            <ExaggerationBadge factor={12} palette="blueprint-navy" />
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S2_H1" driver={driver} palette="blueprint-navy" />
               <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />
@@ -46,14 +47,18 @@ const Scene_S2Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
       >
         <CameraRig
           mode="frameEntities"
-          focusBox={{ center: [0, 0.4, 0], size: [2.5, 1.2, 2.0] }}
-          padding={1.5}
+          focusBox={{ center: [0, 0.55, 0], size: [1.9, 1.15, 0.35] }}
+          padding={1.15}
+          startAngleDeg={0}
+          endAngleDeg={0}
+          elevationDeg={2}
         />
         <Ground size={40} divisions={40} y={0} />
         <RailCrossSection
           entityId="rail_cross_section"
-          lateralShift={driver.value}
-          taperExaggeration={1}
+          view="section"
+          lateralShift={driver.value * 0.001}
+          taperExaggeration={12}
           palette="blueprint-navy"
         />
       </BlueprintStage>

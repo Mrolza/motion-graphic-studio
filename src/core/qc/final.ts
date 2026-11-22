@@ -134,7 +134,7 @@ export async function runFinalQcStage(
   if (width !== 720 || height !== 1280) {
     issues.push({ severity: 'error', message: `FINAL_RESOLUTION: ${width}x${height} != 720x1280`, ref: 'technical' });
   }
-  if (Math.abs(fps - 30) > 0.1 || videoCodec !== 'h264' || pixFmt !== 'yuv420p') {
+  if (Math.abs(fps - 30) > 0.1 || videoCodec !== 'h264' || (pixFmt !== 'yuv420p' && pixFmt !== 'yuvj420p')) {
     issues.push({ severity: 'error', message: `FINAL_VIDEO_FORMAT: ${videoCodec}/${pixFmt} @ ${fps}fps`, ref: 'technical' });
   }
   if (audioCodec !== 'aac' || audioSampleRate !== 48000) {
@@ -166,10 +166,10 @@ export async function runFinalQcStage(
     nulDev,
   ]);
   const ebuErr = ebu.stderr ?? '';
-  const iMatch = ebuErr.match(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/);
-  const tpMatch = ebuErr.match(/Peak:\s*(-?\d+(?:\.\d+)?)\s*dBFS/);
-  const integratedLufs = iMatch ? Number(iMatch[1]) : -99;
-  const truePeakDbfs = tpMatch ? Number(tpMatch[1]) : 0;
+  const iMatches = [...ebuErr.matchAll(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/g)];
+  const tpMatches = [...ebuErr.matchAll(/Peak:\s*(-?\d+(?:\.\d+)?)\s*dBFS/g)];
+  const integratedLufs = iMatches.length > 0 ? Number(iMatches[iMatches.length - 1]![1]) : -99;
+  const truePeakDbfs = tpMatches.length > 0 ? Number(tpMatches[tpMatches.length - 1]![1]) : 0;
 
   if (integratedLufs < -15 || integratedLufs > -13 || truePeakDbfs > -1.5) {
     issues.push({

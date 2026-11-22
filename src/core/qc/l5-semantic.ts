@@ -2,6 +2,7 @@ import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { Storyboard } from '@core/contracts/storyboard';
 import { generateJson } from '@core/llm/client';
+import type { RunLlmTracker } from '@core/llm/budget';
 import { z } from 'zod';
 
 export const QUANTITY_LABELS: Record<string, string> = {
@@ -86,9 +87,10 @@ export async function verifyStoryboardL5Semantic(params: {
   topic: string;
   storyboard: Storyboard;
   ledger: FactLedger;
+  tracker?: RunLlmTracker;
   onCall?: () => void;
 }): Promise<{ report: QcReport; verdicts: L5SemanticVerdict[] }> {
-  const { topic, storyboard, ledger, onCall } = params;
+  const { topic, storyboard, ledger, tracker, onCall } = params;
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
   const issues: QcIssue[] = [];
 
@@ -137,6 +139,8 @@ export async function verifyStoryboardL5Semantic(params: {
 
   const res = await generateJson(L5SemanticLlmSchema, prompt, {
     stage: 'S7',
+    purpose: 'l5_semantic',
+    tracker,
     onCallRecord: onCall,
   });
 

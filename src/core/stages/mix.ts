@@ -242,10 +242,10 @@ export async function runMixStage(
       process.platform === 'win32' ? 'NUL' : '/dev/null',
     ]);
     const ebuOut = ebu.stderr ?? '';
-    const iMatch = ebuOut.match(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/);
-    const tpMatch = ebuOut.match(/Peak:\s*(-?\d+(?:\.\d+)?)\s*dBFS/);
-    const integratedLufs = iMatch ? Number(iMatch[1]) : -14;
-    const truePeakDbtp = tpMatch ? Number(tpMatch[1]) : -1.5;
+    const iMatches = [...ebuOut.matchAll(/I:\s*(-?\d+(?:\.\d+)?)\s*LUFS/g)];
+    const tpMatches = [...ebuOut.matchAll(/Peak:\s*(-?\d+(?:\.\d+)?)\s*dBFS/g)];
+    const integratedLufs = iMatches.length > 0 ? Number(iMatches[iMatches.length - 1]![1]) : -14;
+    const truePeakDbtp = tpMatches.length > 0 ? Number(tpMatches[tpMatches.length - 1]![1]) : -1.5;
 
     const loudnessPath = path.join(audioDir, 'loudness.txt');
     await writeFile(

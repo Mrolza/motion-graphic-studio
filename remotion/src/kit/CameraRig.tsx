@@ -91,14 +91,15 @@ export const CameraRig: React.FC<CameraRigProps> = ({
 
       // Project bounding box half-extents onto camera view axes for 9:16 portrait safety
       const projHalfW = halfW * Math.abs(Math.cos(azimRad)) + halfD * Math.abs(Math.sin(azimRad));
+      const safeProjHalfW = Math.max(projHalfW, Math.hypot(halfW, halfD) * 0.72);
       const projFrontD = halfW * Math.abs(Math.sin(azimRad)) + halfD * Math.abs(Math.cos(azimRad));
-      const freeZoneHeightRatio = 0.36;
+      const freeZoneHeightRatio = 0.32;
       const distV = halfH / (Math.tan(vFovRad / 2) * freeZoneHeightRatio) + projFrontD;
-      const distH = projHalfW / (Math.tan(hFovRad / 2) * 0.86) + projFrontD;
+      const distH = safeProjHalfW / (Math.tan(hFovRad / 2) * 0.78) + projFrontD;
       const dist = Math.max(distV, distH);
 
       // Shift lookAt slightly DOWN so the 3D subject projects into the upper-middle free zone (y ~ 240..780)
-      const freeZoneCenterShift = -dist * Math.tan(vFovRad / 2) * 0.19;
+      const freeZoneCenterShift = -dist * Math.tan(vFovRad / 2) * 0.12;
       const aimY = focusBox.center[1] + freeZoneCenterShift;
       camera.position.set(
         focusBox.center[0] + Math.sin(azimRad) * Math.cos(elevRad) * dist,

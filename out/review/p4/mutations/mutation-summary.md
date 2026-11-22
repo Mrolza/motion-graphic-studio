@@ -1,6 +1,4 @@
-# Uji Mutasi P4B (Mutasi Non-LLM 1–7, 12, 13–16)
-
-> Mutasi 8–11 membutuhkan `final.mp4` dari Bagian C (menunggu kuota Gemini pulih).
+# Uji Mutasi P4B (16 Mutasi Lengkap — Non-LLM & Real-Render MP4)
 
 | Mutasi | Layer | Error | Pesan Pertama |
 |---|---|---:|---|
@@ -16,3 +14,7 @@
 | mut14-partial-scene-reuse | Scene Cache (Mock LLM) | 1 | Re-run generated 2 scenes, reused 1 cached scene(s) |
 | mut15-kit-fault-no-s9 | Kit Ownership | 1 | KIT_FAULT: S2 gagal karena kesalahan milik kit ([framing:kit] f0: FRAMING_OUT_OF_BOUNDS) (S9 calls=0) |
 | mut16-callout-14-words | Storyboard QC | 1 | HUD_TOO_LONG: Callout "S2_H1" berisi 17 kata (maks 8 kata, error > 12 kata) |
+| mut8-loudness-20lufs | Final QC Audio | 1 | FINAL_LOUDNESS: -20.3 LUFS / -8.6 dBFS di luar target [-15..-13 LUFS, <= -1.5 dBTP] |
+| mut9-dead-air-0.8s | Final QC Audio | 1 | FINAL_DEAD_AIR: terdeteksi 1 jeda hening >= 0.4s pada audio mix |
+| mut10-black-frames-0.5s | Final QC Visual | 1 | FINAL_BLACK_FRAMES: terdeteksi 1 segmen frame hitam >= 0.1s |
+| mut11-frame-count-mismatch | Final QC Tech | 1 | FINAL_FRAME_COUNT: jumlah frame 1042 != target 1072 |

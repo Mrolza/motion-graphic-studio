@@ -129,6 +129,7 @@ Kembalikan JSON PERSIS mengikuti contoh struktur berikut (jangan ubah nama field
       "focus_entities": ["train_car"],
       "visible_parts": ["body"],
       "driver": { "name": "distance", "unit": "m", "from": -2, "to": 2 },
+      "invariants": [{ "entity": "wheelset", "state": "flanges_inside=true", "when": { "driver_between": [-2, 2] } }],
       "hud": [
         { "hud_id": "S1_H1", "component": "MeasureReveal", "props": { "label": "Kemiringan", "valueText": "1:20" }, "claim_ref": "C1" },
         { "hud_id": "S1_H2", "component": "StatCounter", "props": { "label": "Geser Lateral" }, "bind_to_driver": true, "quantity": "lateral_shift", "display": "qualitative", "claim_ref": "C2" }

@@ -394,10 +394,12 @@
 
 ## Fase P4B — Hemat Kuota, Kamera Pas, & Penampang yang Menjelaskan (`docs/P4B-BUDGET-FIT.md`)
 
-- **Status:** **PARTIAL — menunggu kuota** (Bagian A, Bagian B, seluruh test mock, matriks framing kit, `DemoCrossSection`, & mutasi non-LLM selesai penuh dengan **0 panggilan Gemini sungguhan**; Bagian C menunggu pemulihan kuota harian Gemini pukul 00.00 Pacific / 15.00 WIB saat PST)
+- **Status:** **DONE** (Bagian A, Bagian B, F1–F4, dan Bagian C selesai penuh; kedua `final.mp4` berstatus **PASS**)
 - **Branch:** `phase/p4-audio-final`
-- **Tanggal:** 2026-11-20
-- **Panggilan Gemini sungguhan pada fase P4B ini:** **0**
+- **Tanggal:** 2026-11-22
+- **Panggilan Gemini:**
+  - `p2-kereta`: `6` panggilan pada run finalisasi S8–S9 (`0 / 20` pada run ulang cached), kumulatif S1–S12 = `284` ([`llm-calls.jsonl`](../out/review/p4/p2-kereta/llm-calls.jsonl)).
+  - `p2-mesin4tak`: `6` panggilan pada run terakhir (`6 / 20` untuk S8–S9), kumulatif S1–S12 = `123` ([`llm-calls.jsonl`](../out/review/p4/p2-mesin4tak/llm-calls.jsonl)).
 
 ### Apa yang Dikerjakan & Dibuat (P4B Bagian A & B)
 1. **Bagian A — Hemat Kuota (`src/core/llm/budget.ts`, `client.ts`, `storyboard.ts`, `scene-coder.ts`, `checks.ts`, `.env.example`):**
@@ -429,3 +431,13 @@
 2. **F2 (`CameraRig.tsx`, `KitFramingHarness.tsx`, `framing-matrix.md`):** Pemeriksaan containment ketat terhadap **zona bebas `y=240..780`** dengan status jujur (`PASS`/`WARN`/`FAIL`). Seluruh **18/18** sel kini berada di dalam zona bebas (`0 FAIL`: 12 `PASS` dan 6 `WARN` untuk rakitan vertikal tinggi `PistonCrankAssembly` & `Suspension` 24–27%).
 3. **F3 (`storyboard-code.ts`, `mutation-summary.md`):** `SHOT_VIEW_MISMATCH` mewajibkan `rail_cross_section` pada `cross_section`; Mutasi 4 kini mencatat kedua error (`SHOT_VIEW_MISMATCH` + `VIS_EXAGGERATION_UNLABELED`).
 4. **F4 (`kinematics.ts`, `run-p4b-nonllm.ts`):** Selisih lingkaran `EffectiveDiameterCompare` diturunkan dari 47% menjadi **21%** (`46 px` vs `38 px`, berada di rentang 15–25%); Mutasi 14 & 15 dieksekusi langsung dengan klien tiruan saat membuat [`mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md).
+
+### Bagian C — Video Final & 16 Mutasi (`out/review/p4/`, 2026-11-22)
+- **`p2-kereta` (profil `standar`, [`out/review/p4/p2-kereta/`](../out/review/p4/p2-kereta/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4/p2-kereta/final-qc.md) (**PASS**): `720×1280 @ 30fps`, `1042/1042 frames`, `34.73s`, `aac 48000Hz`, **`-14.3 LUFS`**, `peak -2.7 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`, `freeze=0`.
+  - Lengkap dengan [`onscreen-text.md`](../out/review/p4/p2-kereta/onscreen-text.md) (`OK` di semua item L5 semantik), [`captions.srt`](../out/review/p4/p2-kereta/captions.srt), [`publish.md`](../out/review/p4/p2-kereta/publish.md) (URL sumber dari ledger), [`loudness.txt`](../out/review/p4/p2-kereta/loudness.txt), [`contact-sheet.png`](../out/review/p4/p2-kereta/contact-sheet.png), dan 5 still (`S1`–`S5`).
+- **`p2-mesin4tak` (profil `hemat` / `swangle`, [`out/review/p4/p2-mesin4tak/`](../out/review/p4/p2-mesin4tak/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4/p2-mesin4tak/final-qc.md) (**PASS**): `720×1280 @ 30fps`, `1025/1025 frames`, `34.17s`, `aac 48000Hz`, **`-14.3 LUFS`**, `peak -2.6 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`, `freeze=0`, render `208.524 ms`.
+  - Lengkap dengan [`onscreen-text.md`](../out/review/p4/p2-mesin4tak/onscreen-text.md), [`captions.srt`](../out/review/p4/p2-mesin4tak/captions.srt), [`publish.md`](../out/review/p4/p2-mesin4tak/publish.md), [`loudness.txt`](../out/review/p4/p2-mesin4tak/loudness.txt), [`contact-sheet.png`](../out/review/p4/p2-mesin4tak/contact-sheet.png), dan 4 still (`S1`–`S4`).
+- **Mutasi 1–16 ([`mutations/mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md)):** **16/16 mutasi tertangkap** (termasuk mutasi real-render MP4 8–11: `FINAL_LOUDNESS`, `FINAL_DEAD_AIR`, `FINAL_BLACK_FRAMES`, `FINAL_FRAME_COUNT`).
+- **Statistik & Verifikasi:** [`stats.md`](../out/review/p4/stats.md) & [`verify.txt`](../out/review/p4/verify.txt).
