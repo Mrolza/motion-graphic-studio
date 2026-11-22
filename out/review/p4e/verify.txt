@@ -1,0 +1,61 @@
+﻿
+> motion-graphic-studio@0.1.0 verify
+> npm run generate:kit-api && npm run typecheck && npm run test && npm run check:size
+
+
+> motion-graphic-studio@0.1.0 generate:kit-api
+> node --import tsx scripts/generate-kit-api.ts
+
+Generated D:\motion-graphic-studio\remotion\src\kit\KIT-API.md (83 items across 10 categories).
+
+> motion-graphic-studio@0.1.0 typecheck
+> tsc --noEmit && npm --prefix remotion run typecheck
+
+
+> motion-graphic-studio-remotion@0.1.0 typecheck
+> tsc --noEmit
+
+
+> motion-graphic-studio@0.1.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mD:/motion-graphic-studio[39m
+
+ [32m✓[39m tests/copied/wikimedia.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32m✓[39m tests/qcGate1.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 369[2mms[22m[39m
+ [32m✓[39m tests/copied/tts.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 901[2mms[22m[39m
+   [33m[2m✓[22m[39m trimAudioSilence (R3-1)[2m > [22mremoves leading and trailing silence from MP3 using bundled FFmpeg 4.1 [33m 896[2mms[22m[39m
+ [32m✓[39m tests/p4dTruthSync.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 447[2mms[22m[39m
+ [32m✓[39m tests/p4eCalibration.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 498[2mms[22m[39m
+   [33m[2m✓[22m[39m P4E Truth Calibration & Honest Counting (0 real Gemini calls)[2m > [22mMutasi 31 + B2: 3 consecutive runs without changes -> run 2 and run 3 make 0 LLM calls; phase stats filter works [33m 460[2mms[22m[39m
+ [32m✓[39m tests/moduleBoundary.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 47[2mms[22m[39m
+ [32m✓[39m tests/copied/quota.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m tests/p3bStoryboard.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m tests/copied/cache.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/qcFacts.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32m✓[39m tests/copied/audioMix.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 2868[2mms[22m[39m
+   [33m[2m✓[22m[39m audio-mix (M6)[2m > [22mmixes 3 scene sines + 3 SFX + 1 BGM sine on bundled FFmpeg 4.1 within ±0.05s and -14±1 LUFS [33m 2863[2mms[22m[39m
+ [32m✓[39m tests/p4PartA.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+ [32m✓[39m tests/kitDrivers.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/copied/beats.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/llmClient.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/copied/timeline.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/contracts.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/p4bBudgetAndKit.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 1216[2mms[22m[39m
+   [33m[2m✓[22m[39m P4B Part A & B — Budget, Cache, Kit Fault, Compare, & HUD Length[2m > [22mreuses cached passing scenes and stops with KIT_FAULT (0 S9 calls) on kit-owned errors [33m 752[2mms[22m[39m
+ [32m✓[39m tests/copied/captions.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/p4PartB.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/copied/providers.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/deviceProfile.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m22 passed[39m[22m[90m (22)[39m
+[2m      Tests [22m [1m[32m91 passed[39m[22m[90m (91)[39m
+[2m   Start at [22m 10:50:05
+[2m   Duration [22m 6.01s[2m (transform 3.83s, setup 0ms, collect 15.14s, tests 6.84s, environment 5ms, prepare 5.67s)[22m
+
+
+> motion-graphic-studio@0.1.0 check:size
+> node --import tsx scripts/check-size.ts
+
+check:size OK (146 source files checked, all within limits).

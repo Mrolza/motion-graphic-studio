@@ -4,7 +4,10 @@ export const HEDGE_EQUIVALENTS: Record<string, string[]> = {
   approximately: ['sekitar', 'kira-kira', 'kurang lebih', 'mendekati'],
   'less chance': [
     'peluang lebih kecil',
+    'peluang yang lebih kecil',
     'lebih kecil kemungkinan',
+    'kemungkinan lebih kecil',
+    'kemungkinan yang lebih kecil',
     'cenderung lebih kecil',
     'mengurangi kemungkinan',
     'mengurangi risiko',
@@ -60,6 +63,16 @@ export function detectHedgeAndAbsoluteMismatches(
   const hedgeDropped: Array<{ en: string; expectedId: string[] }> = [];
   for (const [enTerm, idEquivs] of Object.entries(HEDGE_EQUIVALENTS)) {
     if (containsTerm(quoteLower, enTerm)) {
+      // If the quote mentions "less chance of <subject>" (e.g. flanges rubbing/contact),
+      // only require the hedge when the text actually discusses that clause (or uses an absolute).
+      if (
+        enTerm === 'less chance' &&
+        !/\b(flens|flange|gesek|bergesekan|bersentuhan|menyentuh|kontak|peluang|kemungkinan|risiko|jarang)\b/i.test(
+          textLower
+        )
+      ) {
+        continue;
+      }
       const hasMatch = idEquivs.some((eq) => containsTerm(textLower, eq)) || containsTerm(textLower, enTerm);
       if (!hasMatch) {
         hedgeDropped.push({ en: enTerm, expectedId: idEquivs });

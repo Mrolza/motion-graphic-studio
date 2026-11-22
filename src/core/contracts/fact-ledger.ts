@@ -23,6 +23,7 @@ export const FactClaimSchema = z.object({
   unit: z.string().min(1).optional(),
   kind: ClaimKindSchema,
   status: ClaimStatusSchema,
+  status_reason: z.string().optional(),
   sources: z.array(ClaimSourceSchema).min(1),
 });
 

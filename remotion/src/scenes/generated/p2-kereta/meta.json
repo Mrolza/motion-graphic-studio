@@ -3,24 +3,12 @@
     "id": "gen-p2-kereta-S1",
     "importPath": "./S1",
     "exportName": "Scene_S1",
-    "durationInFrames": 125
-  },
-  {
-    "id": "gen-p2-kereta-S2",
-    "importPath": "./S2",
-    "exportName": "Scene_S2",
-    "durationInFrames": 307
-  },
-  {
-    "id": "gen-p2-kereta-S3",
-    "importPath": "./S3",
-    "exportName": "Scene_S3",
-    "durationInFrames": 265
+    "durationInFrames": 144
   },
   {
     "id": "gen-p2-kereta-assembled",
     "importPath": "./Assembled",
     "exportName": "AssembledProject",
-    "durationInFrames": 1093
+    "durationInFrames": 1036
   }
 ]

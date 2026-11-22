@@ -21,11 +21,11 @@ export const KIT_SUMMARY_FOR_LLM = `Scene Kit API (remotion/src/kit/):
   - EngineBlock: { entityId?: 'engine_block', crankAngleDeg: number, cutawayProgress?: number, position?: [x,y,z], palette?: 'blueprint-navy' } (untuk shot establishing / transisi cutaway blok mesin)
   - PistonCrankAssembly: { entityId?: 'piston_crank', crankAngleDeg: number, position?: [x,y,z], cutaway?: boolean, palette?: 'blueprint-navy' }
   - Suspension: { entityId?: 'suspension', position?: [x,y,z], phaseRad?: number, restLength?: number, amplitude?: number, palette?: 'blueprint-navy' }
-- Primitif 3D: Ground, Rail, Arrow3D, Line3D, Label3D, Box, Cylinder, Sphere, Torus, Cone, Group
+- Primitif 3D: Ground, Rail, Arrow3D, MotionArrow ({ id?, bindToPart?, position?, length?, velocity?, direction?, palette? }), Line3D, Label3D, Box, Cylinder, Sphere, Torus, Cone, Group
 - Overlay 2D (taruh di dalam <HudLayout>, BUKAN di children 3D <BlueprintStage>): DiagramOverlay ({ curveArc?: boolean, inertiaArrow?: boolean, palette? })
 - Driver: useDriver({ name, from, to, unit, startSec, durationSec, curve }) -> { name, value, unit, progress }; valveStateFromCrankAngle(deg)
 - HUD (DIKENDALIKAN DATA STORYBOARD lewat <StoryboardHudProvider items={hudData}> dan <Hud id="..." driver={driver} palette="blueprint-navy" />; DILARANG menulis teks HUD langsung di kode adegan!):
-  - Komponen di storyboard hud[]: KineticTitle, Callout, MeasureReveal, StatCounter (wajib bind_to_driver: true; gunakan illustrative: true jika quantity="progress"), CompareCard, ListReveal, DimensionLine, EffectiveDiameterCompare (untuk shot_type="comparison" pada wheelset/rail_cross_section: { outerLabel?, innerLabel?, bind_to_driver?: true })
+  - Komponen di storyboard hud[]: KineticTitle, Callout, MeasureReveal, StatCounter (wajib bind_to_driver: true; gunakan illustrative: true jika quantity="progress"), CompareCard, ListReveal, DimensionLine, EffectiveDiameterCompare (untuk shot_type="comparison" pada wheelset/rail_cross_section: { outerLabel?, innerLabel?, bind_to_driver?: true, display: 'qualitative' })
   - Satuan sudut WAJIB "°" (jangan "deg") atau biarkan StatCounter memformat unit driver ("°").
 - Foreground & Transisi: ParallaxForeground ({ distance, zOffset, palette }), SceneTransition ({ variant: 'fade'|'wipe-grid', durationSec, palette, children })`;
 
@@ -95,7 +95,7 @@ ATURAN WAJIB:
 6. "invariants": jika ada mekanisme berstatus (intake_valve, exhaust_valve, spark), deklarasikan invarian dengan rentang "driver_between" DI DALAM [from, to] driver adegan itu.
 7. "hud": MAKSIMAL 2 item HUD per adegan (di luar judul). Setiap item WAJIB memiliki "hud_id" unik (mis. "S1_H1", "S1_H2").
    - Untuk penjelasan langkah mesin (hisap/kompresi/usaha/buang), WAJIB sertakan "when": { "driver_between": [a, b] } agar teks hanya muncul pada rentang sudut langkahnya!
-   - Setiap item HUD (termasuk KineticTitle/Callout) yang memuat angka atau fakta WAJIB mengisi "claim_ref" ke salah satu ID klaim verified (atau "bind_to_driver": true untuk StatCounter, atau "illustrative": true).
+   - Setiap item HUD (termasuk KineticTitle/Callout) yang memuat angka atau fakta WAJIB mengisi "claim_ref" ke salah satu ID klaim verified (format "C1", "C2", ..., BUKAN ID kalimat "S1.1"/"S2.1"!) atau "bind_to_driver": true untuk StatCounter, atau "illustrative": true.
    - Jika "bind_to_driver": true (atau StatCounter): WAJIB isi "quantity" (salah satu dari "crank_angle", "lateral_shift", "distance", "effective_diameter", "progress") dan "display" ("value" | "qualitative"). Label WAJIB menyebut istilah besaran (mis. "Sudut Poros Engkol" untuk crank_angle, "Geser Lateral" untuk lateral_shift, "Diameter Efektif" untuk effective_diameter). Gunakan display="value" HANYA jika rentang angkanya didukung claim_ref; jika tidak ada dukungan angka di klaim, WAJIB display="qualitative" tanpa angka!
    - KEBENARAN MAKNA (L5 semantik): JANGAN melebih-lebihkan klaim ("less chance" jangan ditulis "tanpa", jangan tambah kata "Kontinu"/"selalu"/"semua" jika tidak ada di kutipan), dan JANGAN hilangkan syarat ("tanpa bentuk kerucut", "cenderung"). Judul ilustratif harus persis menjawab topik "${project.topic}".
    - HUD RINGKAS: Callout MAKSIMAL 8 kata dan 2 baris (kalimat lengkap cukup di narasi & takarir).

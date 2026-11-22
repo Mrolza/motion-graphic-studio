@@ -50,36 +50,65 @@ export async function runStoryboardQcStage(
 
     let latestVerdicts: L5SemanticVerdict[] = [];
     const l5MetaPath = path.join(projectDir, 'qc', 'l5-semantic.meta.json');
+    const reviewMetaPath = path.join(projectDir, 'qc', 'storyboard-review.meta.json');
     const genFn = options?.generateJsonFn ?? generateJson;
 
     const checkOnce = async (sb: Storyboard): Promise<QcReport> => {
       const codeRep = verifyStoryboardCode(sb, script, timeline, ledger);
-      const llmRes = await genFn(
-        StoryboardLlmReviewSchema,
-        `Periksa konsistensi visual storyboard terhadap naskah dan klaim verified:\n` +
-          `1. Apakah rencana visual & komponen tiap adegan konsisten dengan klaim yang dirujuk (mis. flens di sisi dalam, piston turun saat hisap)?\n` +
-          `2. Apakah visual menjelaskan kalimat narasi adegan itu (bukan sekadar dekorasi)?\n\n` +
-          `Kembalikan JSON dengan format persis: {"consistent": boolean, "issues": [{"scene_id": string, "severity": "error" | "warning", "message": string}]}.\n\n` +
-          `Naskah:\n${JSON.stringify(script, null, 2)}\n\nKlaim:\n${JSON.stringify(
-            ledger.claims.filter((c) => c.status === 'verified'),
-            null,
-            2
-          )}\n\nStoryboard:\n${JSON.stringify(sb, null, 2)}`,
-        {
-          stage: 'S7',
-          purpose: 'storyboard_review',
-          tracker: options?.tracker,
-          onCallRecord: () => {
-            llmCalls++;
-          },
+      const reviewHash = computeStableHash({
+        storyboard: sb,
+        script,
+        ledger,
+        rulesVersion: QC_RULES_VERSION,
+      });
+      let llmIssues: QcIssue[] | null = null;
+      try {
+        const cachedRev = JSON.parse(await readFile(reviewMetaPath, 'utf-8')) as {
+          hash?: string;
+          issues?: QcIssue[];
+        };
+        if (cachedRev.hash === reviewHash && Array.isArray(cachedRev.issues)) {
+          llmIssues = cachedRev.issues;
         }
-      );
+      } catch {
+        // Cache miss
+      }
 
-      const llmIssues: QcIssue[] = llmRes.data.issues.map((iss) => ({
-        severity: iss.severity,
-        message: `SB_LLM: ${iss.message}`,
-        ref: iss.scene_id,
-      }));
+      if (!llmIssues) {
+        const llmRes = await genFn(
+          StoryboardLlmReviewSchema,
+          `Periksa konsistensi visual storyboard terhadap naskah dan klaim verified:\n` +
+            `1. Apakah rencana visual & komponen tiap adegan konsisten dengan klaim yang dirujuk (mis. flens di sisi dalam, piston turun saat hisap)?\n` +
+            `2. Apakah visual menjelaskan kalimat narasi adegan itu (bukan sekadar dekorasi)?\n\n` +
+            `Kembalikan JSON dengan format persis: {"consistent": boolean, "issues": [{"scene_id": string, "severity": "error" | "warning", "message": string}]}.\n\n` +
+            `Naskah:\n${JSON.stringify(script, null, 2)}\n\nKlaim:\n${JSON.stringify(
+              ledger.claims.filter((c) => c.status === 'verified'),
+              null,
+              2
+            )}\n\nStoryboard:\n${JSON.stringify(sb, null, 2)}`,
+          {
+            stage: 'S7',
+            purpose: 'storyboard_review',
+            tracker: options?.tracker,
+            projectDir,
+            onCallRecord: () => {
+              llmCalls++;
+            },
+          }
+        );
+
+        llmIssues = llmRes.data.issues.map((iss) => ({
+          severity: iss.severity,
+          message: `SB_LLM: ${iss.message}`,
+          ref: iss.scene_id,
+        }));
+        await mkdir(path.join(projectDir, 'qc'), { recursive: true });
+        await writeFile(
+          reviewMetaPath,
+          JSON.stringify({ hash: reviewHash, issues: llmIssues }, null, 2),
+          'utf-8'
+        );
+      }
 
       const l5Hash = computeStableHash({ storyboard: sb, ledger, rulesVersion: QC_RULES_VERSION });
       let l5Sem: { report: QcReport; verdicts: L5SemanticVerdict[] } | null = null;
@@ -129,7 +158,7 @@ export async function runStoryboardQcStage(
         StoryboardSchema,
         `Perbaiki storyboard berikut agar lolos semua pemeriksaan (0 error):\n${errors
           .map((e) => `- [${e.ref}] ${e.message}`)
-          .join('\n')}\n\nATURAN PERBAIKAN: Setiap item di hud[] yang menyebut angka apa pun WAJIB memiliki "claim_ref": "<ID klaim verified>" atau "bind_to_driver": true atau "illustrative": true. Untuk StatCounter / bind_to_driver: true, WAJIB sertakan di level item hud (bukan hanya di props): "quantity": "crank_angle"|"lateral_shift"|"effective_diameter"|"progress" dan "display": "value"|"qualitative", serta props.label menyebut nama besaran ("Sudut Poros Engkol", "Geser Lateral", atau "Diameter Efektif"). Jangan melebih-lebihkan kutipan (hindari "tanpa"/"Kontinu"/"selalu" jika sumber lunak).\n\nStoryboard lama:\n${JSON.stringify(storyboard, null, 2)}\n\nTimeline:\n${JSON.stringify(
+          .join('\n')}\n\nATURAN PERBAIKAN: Setiap item di hud[] yang menyebut angka atau fakta WAJIB memiliki "claim_ref": "<ID klaim verified, format C1/C2/..., BUKAN S1.1/S2.1>" atau "bind_to_driver": true atau "illustrative": true. Untuk StatCounter / bind_to_driver: true, WAJIB sertakan di level item hud (bukan hanya di props): "quantity": "crank_angle"|"lateral_shift"|"effective_diameter"|"progress" dan "display": "value"|"qualitative", serta props.label menyebut nama besaran ("Sudut Poros Engkol", "Geser Lateral", atau "Diameter Efektif"). Jangan melebih-lebihkan kutipan (hindari "tanpa"/"Kontinu"/"selalu" jika sumber lunak).\n\nStoryboard lama:\n${JSON.stringify(storyboard, null, 2)}\n\nTimeline:\n${JSON.stringify(
           timeline.scenes,
           null,
           2

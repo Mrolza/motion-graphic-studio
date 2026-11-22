@@ -80,12 +80,13 @@ export const CameraRig: React.FC<CameraRigProps> = ({
     const lookZ = lookFrom[2] + (lookTo[2] - lookFrom[2]) * p;
 
     if (mode === 'frameEntities' && focusBox) {
+      const safePad = Math.max(1.24, padding);
       const aspect = size.width / Math.max(1, size.height);
       const vFovRad = (fov * Math.PI) / 180;
       const hFovRad = 2 * Math.atan(Math.tan(vFovRad / 2) * aspect);
-      const halfW = focusBox.size[0] * 0.5 * padding;
-      const halfH = focusBox.size[1] * 0.5 * padding;
-      const halfD = focusBox.size[2] * 0.5 * padding;
+      const halfW = focusBox.size[0] * 0.5 * safePad;
+      const halfH = focusBox.size[1] * 0.5 * safePad;
+      const halfD = focusBox.size[2] * 0.5 * safePad;
       const azimRad = ((startAngleDeg + (endAngleDeg - startAngleDeg) * p) * Math.PI) / 180;
       const elevRad = (elevationDeg * Math.PI) / 180;
 
@@ -93,9 +94,9 @@ export const CameraRig: React.FC<CameraRigProps> = ({
       const projHalfW = halfW * Math.abs(Math.cos(azimRad)) + halfD * Math.abs(Math.sin(azimRad));
       const safeProjHalfW = Math.max(projHalfW, Math.hypot(halfW, halfD) * 0.72);
       const projFrontD = halfW * Math.abs(Math.sin(azimRad)) + halfD * Math.abs(Math.cos(azimRad));
-      const freeZoneHeightRatio = 0.32;
+      const freeZoneHeightRatio = 0.41;
       const distV = halfH / (Math.tan(vFovRad / 2) * freeZoneHeightRatio) + projFrontD;
-      const distH = safeProjHalfW / (Math.tan(hFovRad / 2) * 0.78) + projFrontD;
+      const distH = safeProjHalfW / (Math.tan(hFovRad / 2) * 0.94) + projFrontD;
       const dist = Math.max(distV, distH);
 
       // Shift lookAt slightly DOWN so the 3D subject projects into the upper-middle free zone (y ~ 240..780)

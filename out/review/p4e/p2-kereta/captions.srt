@@ -1,0 +1,108 @@
+1
+00:00:00,030 --> 00:00:01,129
+Pernahkah kamu mikir,
+
+2
+00:00:01,259 --> 00:00:02,459
+gimana caranya kereta
+yang gak
+
+3
+00:00:02,459 --> 00:00:03,684
+punya setir bisa
+tetep belok
+
+4
+00:00:03,684 --> 00:00:04,759
+dan gak keluar jalur?
+
+5
+00:00:04,949 --> 00:00:06,587
+Sebagian besar roda
+kereta dirancang
+
+6
+00:00:06,587 --> 00:00:08,124
+memiliki bentuk kerucut
+atau tirus
+
+7
+00:00:08,124 --> 00:00:09,862
+dengan kemiringan sekitar
+1 banding
+
+8
+00:00:09,862 --> 00:00:12,042
+20. Tanpa bentuk
+kerucut tersebut,
+
+9
+00:00:12,172 --> 00:00:13,584
+roda akan cenderung
+melaju lurus
+
+10
+00:00:13,584 --> 00:00:15,297
+akibat kelembaman
+kendaraan rel.
+
+11
+00:00:15,487 --> 00:00:17,200
+Bentuk kerucut itu
+memperbesar diameter
+
+12
+00:00:17,200 --> 00:00:18,999
+efektif roda saat
+bergerak mendekati
+
+13
+00:00:18,999 --> 00:00:20,025
+bagian rel luar.
+
+14
+00:00:20,155 --> 00:00:21,468
+Karena roda terpasang
+kaku pada
+
+15
+00:00:21,468 --> 00:00:23,122
+as, roda luar
+menempuh jarak
+
+16
+00:00:23,122 --> 00:00:24,510
+sedikit lebih jauh
+agar kereta
+
+17
+00:00:24,510 --> 00:00:25,385
+berbelok mulus.
+
+18
+00:00:25,575 --> 00:00:26,337
+Selain itu,
+
+19
+00:00:26,467 --> 00:00:28,092
+roda kereta juga
+dilengkapi flensa
+
+20
+00:00:28,092 --> 00:00:29,804
+berupa tonjolan di
+bagian dalam.
+
+21
+00:00:29,934 --> 00:00:31,510
+Fitur pelindung ini
+berfungsi untuk
+
+22
+00:00:31,510 --> 00:00:33,310
+menghindari keluarnya roda
+dari jalurnya
+
+23
+00:00:33,310 --> 00:00:34,497
+pada berbagai jalur.

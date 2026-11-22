@@ -1,0 +1,145 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Siklus 4 tak terdiri dari langkah hisap, kompresi, tenaga, dan buang yang berlangsung dalam putaran poros engkol.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "At this point the crankshaft (assuming all 4 strokes take 720° of crankshaft rotation) has completed a full 360° revolution.",
+          "retrieved_at": "2026-11-22T03:28:33.427Z"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "In this stroke the intake valve must be in the open position while the piston pulls an air-fuel mixture into the cylinder by producing a partial vacuum (negative pressure) in the cylinder through its downward motion.",
+          "retrieved_at": "2026-11-22T03:28:33.427Z"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "Langkah kompresi membuat kedua katup tertutup dan piston bergerak ke atas sehingga mengurangi volume ruang bakar hingga mencapai minimum saat piston berada di TDC.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "title": "Internal combustion engine",
+          "quote": "In this stroke, both valves are closed and the piston moves upward reducing the combustion chamber volume which reaches its minimum when the piston is at TDC.",
+          "retrieved_at": "2026-11-22T03:28:39.812Z"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "title": "Internal combustion engine",
+          "quote": "The pressure of the combustion gases pushes the piston downward, generating more kinetic energy than is required to compress the charge.",
+          "retrieved_at": "2026-11-22T03:28:39.812Z"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "title": "Internal combustion engine",
+          "quote": "The exhaust valve remains open while the piston moves upward expelling the combustion gases.",
+          "retrieved_at": "2026-11-22T03:28:39.812Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Siklus 4 tak terdiri dari langkah hisap dan kompresi yang memerlukan satu putaran poros engkol, serta langkah tenaga dan buang yang memerlukan satu putaran lainnya sehingga total memerlukan dua putaran poros engkol penuh.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "The intake stroke and compression stroke require one rotation of the engine crankshaft. The power stroke and exhaust stroke require another rotation. For two rotations there is one work generating stroke.",
+          "retrieved_at": "2026-11-22T03:28:40.288Z"
+        }
+      ],
+      "status_reason": "CLAIM_FACT_NOT_IN_QUOTE: angka/tahun/tanggal pada teks klaim tidak muncul di kutipan"
+    },
+    {
+      "id": "C7",
+      "text": "Langkah hisap menarik massa udara atau campuran bahan bakar ke dalam silinder saat piston turun melalui katup masuk yang terbuka.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "A mass of air (working fluid) is drawn into the cylinder, from 0 to 1, at atmospheric pressure (constant pressure) through the open intake valve, while the exhaust valve is closed during this process.",
+          "retrieved_at": "2026-11-22T03:28:40.288Z"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "text": "Langkah kompresi memampatkan gas campuran di dalam silinder saat piston bergerak dari titik mati bawah ke titik mati atas, yang memerlukan penambahan kerja mekanis.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "Mechanically this is the isentropic compression of the air/fuel mixture in the cylinder, also known as the compression stroke. This isentropic process assumes that no mechanical energy is lost due to friction and no heat is transferred to or from the gas, hence the process is reversible. The compression process requires that mechanical work be added to the working gas.",
+          "retrieved_at": "2026-11-22T03:28:40.288Z"
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "text": "Langkah tenaga menghasilkan dorongan pada piston menuju titik mati bawah akibat ekspansi gas campuran panas bertekanan tinggi di dalam silinder.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "Mechanically this is the expansion of the hot gaseous mixture in the cylinder known as expansion (power) stroke.",
+          "retrieved_at": "2026-11-22T03:28:40.288Z"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "text": "Langkah buang mengeluarkan campuran gas sisa pembakaran keluar dari silinder saat piston bergerak dari titik mati bawah ke titik mati atas dengan katup buang terbuka.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "As the piston moves from \"BDC\" (point 1) to \"TDC\" (point 0) with the exhaust valve opened, the gaseous mixture is vented to the atmosphere and the process starts anew.",
+          "retrieved_at": "2026-11-22T03:28:40.288Z"
+        }
+      ]
+    }
+  ]
+}

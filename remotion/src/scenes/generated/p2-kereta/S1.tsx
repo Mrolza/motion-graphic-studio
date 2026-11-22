@@ -2,17 +2,17 @@ import React from 'react';
 import {
   StoryboardHudProvider,
   TelemetryProvider,
+  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
+  CurvedRail,
+  Ground,
+  TrainCar,
   HudLayout,
   HudZone,
   Hud,
-  useDriver,
-  computeWheelsetLayout,
-  TrainCar,
-  CurvedRail,
-  Ground
+  computeWheelsetLayout
 } from '../../../kit';
 
 export interface Scene_S1Props {
@@ -24,19 +24,18 @@ const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'distance',
     from: 0,
-    to: 10,
+    to: 5,
     unit: 'm',
-    startSec: 3.36,
-    durationSec: 0.8,
+    startSec: 3.37,
+    durationSec: 1.43,
     curve: 'linear'
   });
 
   const distM = -2 + driver.progress * 5;
   const curveRadius = 16;
-  const curveStartZ = 2;
   const wl = computeWheelsetLayout({
     distance: driver.value,
-    curveStartZ,
+    curveStartZ: 2,
     curveRadius
   });
 
@@ -53,16 +52,9 @@ const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }}
-          padding={0.7}
-          startAngleDeg={-20}
-          endAngleDeg={20}
-        />
         <CurvedRail
           startZ={-10}
-          curveStartZ={curveStartZ}
+          curveStartZ={2}
           curveRadius={curveRadius}
           curveLength={18}
           gauge={1.435}
@@ -73,19 +65,23 @@ const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
         <TrainCar
           entityId="train_car"
           distance={distM}
-          curveStartZ={curveStartZ}
+          curveStartZ={2}
           curveRadius={curveRadius}
           palette="blueprint-navy"
+        />
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }}
+          padding={1.25}
+          startAngleDeg={-20}
+          endAngleDeg={20}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S1: React.FC<Scene_S1Props> = ({
-  telemetry = false,
-  hudData = []
-}) => (
+export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false, hudData = [] }) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>
       <Scene_S1Inner telemetry={telemetry} />

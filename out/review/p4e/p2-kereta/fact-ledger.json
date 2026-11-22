@@ -1,0 +1,102 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Sebagian besar roda kereta memiliki bentuk kerucut atau tirus (conical taper) dengan kemiringan sekitar 1 banding 20.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Wheelset_(rail_transport)",
+          "title": "Wheelset (rail transport)",
+          "quote": "Most train wheels have a conical taper of about 1 in 20 to enable the wheelset to follow curves with less chance of the wheel flanges coming in contact with the rail sides, and to reduce curve resistance.",
+          "retrieved_at": "2026-11-22T03:42:04.769Z"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Tanpa bentuk kerucut tersebut, roda akan cenderung melaju lurus akibat kelembaman kendaraan rel dan menyebabkan perangkat roda bergerak ke arah rel luar saat berbelok.",
+      "kind": "hypothetical",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Wheelset_(rail_transport)",
+          "title": "Wheelset (rail transport)",
+          "quote": "Without the conical shape, a wheel would tend to continue in a straight path due to the inertia of the rail vehicle, causing the wheelset to move towards the outer rail on the curve.",
+          "retrieved_at": "2026-11-22T03:42:04.769Z"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "Bentuk kerucut tersebut memperbesar diameter efektif roda saat bergerak mendekati rel luar.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Wheelset_(rail_transport)",
+          "title": "Wheelset (rail transport)",
+          "quote": "The cone increases the effective diameter of the wheel as it moves towards the outer rail, and since the wheels are mounted rigidly on the axle, the outer wheels travel slightly farther, causing the wheelsets to more efficiently follow the curve.",
+          "retrieved_at": "2026-11-22T03:42:04.769Z"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Roda kereta api atau tram memiliki flensa yang berfungsi agar kereta api tetap berada di jalurnya.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Roda_kereta_api",
+          "title": "Roda kereta api",
+          "quote": "Roda kereta api atau tram memiliki flensa yang berfungsi agar kereta api tetap berada di jalurnya.",
+          "retrieved_at": "2026-11-22T03:42:06.163Z"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "Flensa dalam dunia perkeretaapian adalah fitur pelindung yang terdapat pada roda berbentuk tonjolan di bagian dalam untuk menghindari keluarnya roda dari jalurnya.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Roda_kereta_api",
+          "title": "Roda kereta api",
+          "quote": "Flensa dalam dunia perkeretaapian adalah fitur pelindung yang terdapat pada roda berbentuk tonjolan di bagian dalam untuk menghindari keluarnya roda dari jalurnya, baik jalur lurus maupun jalur persimpangan.",
+          "retrieved_at": "2026-11-22T03:42:06.163Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Flensa adalah pinggiran luar yang menonjol seperti pipa gas, pipa air, atau alat bantu lain untuk menyambung atau menempatkan pada kedudukan yang baik.",
+      "kind": "interpretation",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Roda_kereta_api",
+          "title": "Roda kereta api",
+          "quote": "Namun, secara umum, Kamus besar bahasa Indonesia mencatat bahwa flensa adalah pinggiran luar yang menonjol seperti pipa gas, pipa air, atau alat bantu lain untuk menyambung atau menempatkan pada kedudukan yang baik.",
+          "retrieved_at": "2026-11-22T03:42:06.163Z"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "Roda kereta api adalah roda kendaraan yang didesain khusus untuk modal kereta api atau tram.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://id.wikipedia.org/wiki/Roda_kereta_api",
+          "title": "Roda kereta api",
+          "quote": "Roda kereta api adalah roda kendaraan yang didesain khusus untuk modal kereta api atau tram.",
+          "retrieved_at": "2026-11-22T03:42:06.163Z"
+        }
+      ]
+    }
+  ]
+}

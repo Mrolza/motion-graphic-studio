@@ -1,17 +1,18 @@
 import React from 'react';
 import {
-  TelemetryProvider,
   StoryboardHudProvider,
-  StoryboardHudDataItem,
+  TelemetryProvider,
+  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
   Ground,
-  PistonCrankAssembly,
+  RailCrossSection,
+  ExaggerationBadge,
   HudLayout,
   HudZone,
   Hud,
-  useDriver
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S3Props {
@@ -19,16 +20,18 @@ export interface Scene_S3Props {
   hudData?: StoryboardHudDataItem[];
 }
 
-const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
+const Scene_S3Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'crank_angle',
     from: 0,
-    to: 180,
+    to: 360,
     unit: '°',
-    startSec: 0,
-    durationSec: 5.53,
+    startSec: 0.47,
+    durationSec: 10.07,
     curve: 'linear'
   });
+
+  const lateralShift = 0.045 * Math.sin(driver.progress * Math.PI);
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
@@ -37,25 +40,29 @@ const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
+            <ExaggerationBadge factor={12} palette="blueprint-navy" />
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S3_H1" driver={driver} palette="blueprint-navy" />
+              <Hud id="S3_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
       >
-        <Ground size={36} divisions={36} y={-0.55} />
-        <PistonCrankAssembly
-          entityId="piston_crank"
-          crankAngleDeg={driver.value}
-          position={[0, 0.45, 0]}
-          cutaway
+        <Ground size={40} divisions={40} y={0} />
+        <RailCrossSection
+          entityId="rail_cross_section"
+          view="section"
+          lateralShift={lateralShift}
+          taperExaggeration={12}
           palette="blueprint-navy"
         />
         <CameraRig
           mode="frameEntities"
-          focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
-          padding={1.22}
-          elevationDeg={12}
+          focusBox={{ center: [0, 0.55, 0], size: [1.9, 1.15, 0.35] }}
+          padding={1.15}
+          startAngleDeg={0}
+          endAngleDeg={0}
+          elevationDeg={2}
         />
       </BlueprintStage>
     </SceneTransition>

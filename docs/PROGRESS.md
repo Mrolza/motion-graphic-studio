@@ -483,3 +483,42 @@
   - `p2-mesin4tak`: kumulatif `llm-calls.jsonl` = **77 panggilan** di **11 run** (maks **14 calls/run**, ≤ 20/run; per tahap `S6:4, S7:32, S8:24, S9:17`).
 - **Mutasi 1–23 ([`mutations/mutation-summary.md`](../out/review/p4d/mutations/mutation-summary.md)):** **23/23 mutasi tertangkap** (0 panggilan Gemini).
 - **Verifikasi ([`verify.txt`](../out/review/p4d/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 82 item, `tsc` 0 error, **21 test files / 83 tests passed**, `check:size OK` 141 berkas).
+
+---
+
+## Fase P4E — Kalibrasi Gerbang Fakta, Cakupan, Arah, dan Ejaan (`docs/P4E-TRUTH-CALIBRATION.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p4e-truth-calibration` (tag awal `p4e-start`, setelah merge `phase/p4d-truth-sync` ke `main` dengan tag `p4d-done`)
+- **Tanggal:** 2026-11-22
+
+### Apa yang Diperbaiki & Dibuat (Bagian A–B, 0 Panggilan Gemini)
+1. **Langkah 0 (`before/`):** Snapshot `fact-ledger.json`, `script.json`, dan `storyboard.json` kedua topik diambil langsung dari tag `p4d-done` ke `out/review/p4e/<topik>/before/`.
+2. **Bagian A — Kalibrasi Gerbang:**
+   - **A1 (`l2-script.ts`, `publish.ts`, `storyboard-code.ts`):** Pemeriksaan `L2_HEDGE_DROPPED` dan `L2_ABSOLUTE_ADDED` diterapkan pada setiap kalimat naskah, `publish.md` (`validatePublishHedges`), dan teks HUD.
+   - **A2 (`l1-semantic.ts`, `research.ts`, `fact-ledger.ts`):** Klaim yang gagal L1 (`L1_HEDGE_DROPPED`, `L1_ABSOLUTE_ADDED`, `L1_EMBELLISHED`) diparafrase ulang (1 panggilan untuk semua klaim gagal, maks 1 ulang) dari kutipan aslinya; setiap klaim `unverified` wajib mencatat `status_reason`.
+   - **A3 (`hedge-glossary.ts`):** Menambahkan padanan `'peluang yang lebih kecil'` / `'kemungkinan (yang) lebih kecil'` dan konteks klausa pada `'less chance'`, serta membuat test regresi untuk C1 & C7 kereta P4D agar keduanya `verified`.
+   - **A4 (`ideate.ts`, `l0b-quality.ts`):** Menambahkan `key_steps` pada konsep dan cek `L0B_STEP_MISSING` (setiap langkah proses wajib punya minimal 1 kalimat dengan klaim `verified`) + `coverage.md`.
+   - **A5 (`MotionArrow.tsx`, `arrow-check.ts`, `checks.ts`, `scene-safety.ts`):** Komponen `MotionArrow` terikat vektor gerak/kecepatan dan diverifikasi terhadap `piston_y` (`VIS_ARROW_DIRECTION_MISMATCH`); panah statis `<Arrow3D>` dilarang untuk gerak mesin (`STATIC_ARROW_FOR_MOTION`).
+   - **A6 (`spellcheck-id.ts`, `storyboard-code.ts`, `final-checks.ts`):** Pemeriksaan ejaan id-ID pada HUD (`TEXT_UNKNOWN_WORD` error pada `KineticTitle`, warning pada `Callout`; test `"Tegelincir"` → error).
+   - **A7 (`storyboard-code.ts`, `storyboard.ts`):** `EffectiveDiameterCompare` diwajibkan `display: "qualitative"` (`L5_HUD_DISPLAY_MISMATCH`).
+3. **Bagian B — Hitungan Panggilan Jujur:**
+   - **B1 (`llm/client.ts`, `ideate.ts`, `research.ts`, `script.ts`):** Seluruh panggilan S1–S12 dicatat di `llm-calls.jsonl` (termasuk riset, naskah, Gerbang 1, dan verifier ledger).
+   - **B2 (`llm/stats.ts`):** `aggregateLlmCallStats(projectDir, sinceIso)` menghitung total per fase terpisah dari kumulatif.
+   - **B3–B4 (`qc/storyboard.ts`):** `storyboard_review` di-cache di `qc/storyboard-review.meta.json` berdasarkan hash storyboard, naskah, ledger, dan `QC_RULES_VERSION`; 3 run berturut-turut tanpa perubahan memakai 0 panggilan pada run ke-2 dan ke-3 (`tests/p4eCalibration.test.ts`).
+
+### Hasil Bagian C & Bukti (`out/review/p4e/`)
+- **`p2-mesin4tak` (profil `hemat`, [`out/review/p4e/p2-mesin4tak/`](../out/review/p4e/p2-mesin4tak/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4e/p2-mesin4tak/final-qc.md) (**PASS**): `720×1280 @ 30fps (h264/yuv420p)`, `1123/1123 frames`, `37.43s`, `aac 48000Hz`, **`-14.3 LUFS`**, `peak -2.6 dBFS`, `A/V diff 4ms`, `silence hits=0`, `black=0`, `freeze=0`.
+  - [`coverage.md`](../out/review/p4e/p2-mesin4tak/coverage.md): Keempat langkah (`Hisap`, `Kompresi`, `Usaha / Tenaga`, `Buang`) tercakup dengan klaim `verified`.
+  - [`arrows.md`](../out/review/p4e/p2-mesin4tak/arrows.md): `S4` (`motion_arrow`) `Avg Dir Y = -0.067`, `Piston Delta Y = -0.023` (`Cocok = YA`).
+  - Lengkap dengan [`before/`](../out/review/p4e/p2-mesin4tak/before/), [`ledger-diff.md`](../out/review/p4e/p2-mesin4tak/ledger-diff.md), [`script-diff.md`](../out/review/p4e/p2-mesin4tak/script-diff.md), [`overlap-scan.md`](../out/review/p4e/p2-mesin4tak/overlap-scan.md), [`onscreen-text.md`](../out/review/p4e/p2-mesin4tak/onscreen-text.md), [`captions.srt`](../out/review/p4e/p2-mesin4tak/captions.srt), [`publish.md`](../out/review/p4e/p2-mesin4tak/publish.md), [`contact-sheet.png`](../out/review/p4e/p2-mesin4tak/contact-sheet.png), dan 5 still (`S1`–`S5`).
+- **`p2-kereta` (profil `standar`, [`out/review/p4e/p2-kereta/`](../out/review/p4e/p2-kereta/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4e/p2-kereta/final-qc.md) (**PASS**): `720×1280 @ 30fps (h264/yuv420p)`, `1036/1036 frames`, `34.53s`, `aac 48000Hz`, **`-14.2 LUFS`**, `peak -2.9 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`.
+  - C1 (`1:20`) `verified` dan kembali ke naskah; kalimat inersia memakai `"cenderung"`; judul `"Kenapa kereta tidak tergelincir?"` tanpa salah ketik; `S3` memakai `EffectiveDiameterCompare` (`display: qualitative`).
+  - Lengkap dengan [`before/`](../out/review/p4e/p2-kereta/before/), [`ledger-diff.md`](../out/review/p4e/p2-kereta/ledger-diff.md), [`script-diff.md`](../out/review/p4e/p2-kereta/script-diff.md), [`coverage.md`](../out/review/p4e/p2-kereta/coverage.md), [`overlap-scan.md`](../out/review/p4e/p2-kereta/overlap-scan.md), [`onscreen-text.md`](../out/review/p4e/p2-kereta/onscreen-text.md), [`captions.srt`](../out/review/p4e/p2-kereta/captions.srt), [`publish.md`](../out/review/p4e/p2-kereta/publish.md), [`contact-sheet.png`](../out/review/p4e/p2-kereta/contact-sheet.png), dan 4 still (`S1`–`S4`).
+- **Jumlah Panggilan Gemini Fase P4E ([`stats.md`](../out/review/p4e/stats.md)):**
+  - `p2-kereta`: **23 panggilan fase P4E** across **6 run** (maks **12 calls/run** ≤ 20, target fase ≤ 40 tercapai; per tahap `S2:3, S3:2, S4:2, S6:1, S7:5, S8:6, S9:4`; kumulatif 90).
+  - `p2-mesin4tak`: **66 panggilan fase P4E** across **12 run** (maks **10 calls/run** ≤ 20; per tahap `S2:10, S3:9, S4:9, S6:2, S7:10, S8:13, S9:13`; kumulatif 143 — melebihi target 40 karena iterasi kalibrasi S3–S5 `EngineBlock` & `L3` selama pengembangan).
+- **Mutasi 1–31 ([`mutations/mutation-summary.md`](../out/review/p4e/mutations/mutation-summary.md)):** **31/31 mutasi tertangkap** (0 panggilan Gemini).
+- **Verifikasi ([`verify.txt`](../out/review/p4e/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 83 item, `tsc` 0 error, **22 test files / 91 tests passed**, `check:size OK` 146 berkas).

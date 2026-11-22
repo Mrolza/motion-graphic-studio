@@ -1,0 +1,288 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "orbit_curve",
+      "duration_sec": 4.858,
+      "sentence_refs": [
+        "S1.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 180
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Bagaimana mesin 4 tak bekerja?",
+            "subtitle": "Siklus Empat Gerakan Piston"
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S1_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C1",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        }
+      ],
+      "trigger_words": [
+        "empat gerakan",
+        "piston"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "diagram_overlay",
+      "camera_move": "dolly_in",
+      "duration_sec": 6.396,
+      "sentence_refs": [
+        "S2.1"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Siklus 4 tak berlangsung dalam putaran poros engkol."
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C1",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        }
+      ],
+      "trigger_words": [
+        "Siklus 4 tak",
+        "poros engkol"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 10.537,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2"
+      ],
+      "focus_entities": [
+        "rail_cross_section"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 360
+      },
+      "invariants": [
+        {
+          "entity": "piston_crank",
+          "state": "intake_open=true",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Hisap: Piston turun menarik campuran bahan bakar."
+          },
+          "claim_ref": "C2",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        },
+        {
+          "hud_id": "S3_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Kompresi: Katup tertutup dan gas dipadatkan."
+          },
+          "claim_ref": "C3",
+          "when": {
+            "driver_between": [
+              180,
+              360
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "hisap",
+        "kompresi"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "comparison",
+      "camera_move": "orbit_curve",
+      "duration_sec": 10.288,
+      "sentence_refs": [
+        "S4.1",
+        "S4.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 360,
+        "to": 720
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Tenaga: Dorongan akibat ekspansi gas pembakaran."
+          },
+          "claim_ref": "C4",
+          "when": {
+            "driver_between": [
+              360,
+              540
+            ]
+          }
+        },
+        {
+          "hud_id": "S4_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Buang: Sisa gas didorong keluar melalui katup buang."
+          },
+          "claim_ref": "C5",
+          "when": {
+            "driver_between": [
+              540,
+              720
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "tenaga",
+        "buang"
+      ]
+    },
+    {
+      "id": "S5",
+      "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "dolly_in",
+      "duration_sec": 4.87,
+      "sentence_refs": [
+        "S5.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block",
+        "piston"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S5_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Empat langkah mekanis mengatur proses secara berulang."
+          },
+          "claim_ref": "C1"
+        },
+        {
+          "hud_id": "S5_H2",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C1",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        }
+      ],
+      "trigger_words": [
+        "empat langkah",
+        "berulang"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import type { QcIssue } from '@core/contracts/qc-report';
+import { analyzeArrowDirectionFromTelemetry } from './arrow-check';
 import type { ScreenBox, TelemetrySample, VisualCheckSpec } from './types';
 export { checkBlankFrames, checkOnscreenTruthFromTelemetry, checkSyncFromTelemetry } from './media-checks';
 
@@ -79,15 +80,15 @@ export function checkMechanicsFromTelemetry(
         const [a, b] = exp.when.driver_between;
         const shown = sample.hud.some((h) => (h.hud_id ?? h.id) === exp.hud_id);
         if (shown && (firstDriver.value < a - 0.5 || firstDriver.value > b + 0.5)) {
-          issues.push({
-            severity: 'error',
-            message: `MECHANICS_HUD_OUT_OF_PHASE: HUD "${exp.hud_id}" tampil pada driver=${firstDriver.value} di luar rentang [${a},${b}]`,
-            ref,
-          });
+          issues.push({ severity: 'error', message: `MECHANICS_HUD_OUT_OF_PHASE: HUD "${exp.hud_id}" tampil pada driver=${firstDriver.value} di luar rentang [${a},${b}]`, ref });
         }
       }
     }
   }
+
+  // A5: Compare MotionArrow direction vector against bound part motion (e.g. piston_y)
+  issues.push(...analyzeArrowDirectionFromTelemetry(samples).issues);
+
   return issues;
 }
 

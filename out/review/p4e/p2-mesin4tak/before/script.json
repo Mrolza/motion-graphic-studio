@@ -1,0 +1,99 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Bagaimana mesin motor menghasilkan tenaga hanya dari empat gerakan piston?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "tenaga",
+            "empat gerakan"
+          ],
+          "non_factual": true,
+          "spoken_text": "Bagaimana mesin motor menghasilkan tenaga hanya dari empat gerakan piston?"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Siklus empat langkah ini memerlukan dua putaran poros engkol penuh untuk menyelesaikan prosesnya.",
+          "claim_refs": [
+            "C1"
+          ],
+          "emphasis_words": [
+            "dua putaran",
+            "poros engkol"
+          ],
+          "non_factual": false,
+          "spoken_text": "Siklus empat langkah ini memerlukan dua putaran poros engkol penuh untuk menyelesaikan prosesnya."
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "langkah hisap",
+            "katup masuk"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk."
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Langkah tenaga menghasilkan dorongan pada piston ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
+          "claim_refs": [
+            "C9"
+          ],
+          "emphasis_words": [
+            "langkah tenaga",
+            "gas pembakaran"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah tenaga menghasilkan dorongan pada piston ke bawah akibat ekspansi gas pembakaran bertekanan tinggi."
+        },
+        {
+          "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar silinder saat piston naik.",
+          "claim_refs": [
+            "C10"
+          ],
+          "emphasis_words": [
+            "langkah buang",
+            "piston naik"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah buang mendorong sisa gas hasil pembakaran keluar silinder saat piston naik."
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "sentences": [
+        {
+          "text": "Rangkaian langkah hisap, kompresi, tenaga, dan buang ini berulang secara terus-menerus selama mesin dihidupkan.",
+          "claim_refs": [
+            "C1"
+          ],
+          "emphasis_words": [
+            "langkah",
+            "berulang"
+          ],
+          "non_factual": false,
+          "spoken_text": "Rangkaian langkah hisap, kompresi, tenaga, dan buang ini berulang secara terus-menerus selama mesin dihidupkan."
+        }
+      ]
+    }
+  ]
+}

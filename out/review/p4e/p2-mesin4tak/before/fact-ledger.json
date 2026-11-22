@@ -1,0 +1,144 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Siklus 4 tak terdiri dari langkah hisap, kompresi, tenaga, dan buang yang memerlukan dua putaran poros engkol penuh.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "At this point the crankshaft (assuming all 4 strokes take 720° of crankshaft rotation) has completed a full 360° revolution.",
+          "retrieved_at": "2026-11-22T02:07:18.407Z"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "In this stroke the intake valve must be in the open position while the piston pulls an air-fuel mixture into the cylinder by producing a partial vacuum (negative pressure) in the cylinder through its downward motion.",
+          "retrieved_at": "2026-11-22T02:07:18.407Z"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran tersebut, meningkatkan suhu dan tekanan sebelum percikan busi.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "title": "Internal combustion engine",
+          "quote": "In this stroke, both valves are closed and the piston moves upward reducing the combustion chamber volume which reaches its minimum when the piston is at TDC.",
+          "retrieved_at": "2026-11-22T02:07:18.933Z"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "title": "Internal combustion engine",
+          "quote": "The pressure of the combustion gases pushes the piston downward, generating more kinetic energy than is required to compress the charge.",
+          "retrieved_at": "2026-11-22T02:07:18.933Z"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "During the exhaust stroke, the piston, once again heads downwards from a point to another point (B.D.C. to T.D.C. in an Otto cycle) while the exhaust valve is open.",
+          "retrieved_at": "2026-11-22T02:07:18.407Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Siklus empat tak pada mesin Otto memerlukan dua putaran poros engkol penuh.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "The intake stroke and compression stroke require one rotation of the engine crankshaft. The power stroke and exhaust stroke require another rotation.",
+          "retrieved_at": "2026-11-22T02:07:20.804Z"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "Langkah hisap melibatkan massa udara atau campuran bahan bakar dan oksigen yang ditarik ke dalam silinder oleh piston yang bergerak turun.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "A mass containing a mixture of fuel and oxygen is drawn into the cylinder by the descending piston, it is compressed by the piston rising, the mass is ignited by a spark releasing energy in the heat, the resulting gas is allowed to expand as it pushes the piston down, and finally the mass is exhausted as the piston rises a second time.",
+          "retrieved_at": "2026-11-22T02:07:20.804Z"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran bahan bakar, meningkatkan suhu dan tekanan sebelum penyalaan.",
+      "kind": "fact",
+      "status": "unverified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "Mechanically this is the isentropic compression of the air/fuel mixture in the cylinder, also known as the compression stroke.",
+          "retrieved_at": "2026-11-22T02:07:20.804Z"
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "text": "Langkah tenaga menghasilkan dorongan pada piston ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "The increased high pressure exerts a force on the piston and pushes it towards the BDC.",
+          "retrieved_at": "2026-11-22T02:07:20.804Z"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar silinder saat piston naik.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "As the piston moves from \"BDC\" (point 1) to \"TDC\" (point 0) with the exhaust valve opened, the gaseous mixture is vented to the atmosphere and the process starts anew.",
+          "retrieved_at": "2026-11-22T02:07:20.804Z"
+        }
+      ]
+    }
+  ]
+}

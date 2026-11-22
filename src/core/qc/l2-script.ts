@@ -1,6 +1,7 @@
 import type { FactClaim, FactLedger } from '@core/contracts/fact-ledger';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
+import { detectHedgeAndAbsoluteMismatches } from './hedge-glossary';
 import { extractNumericValuesFromText } from './l1-ledger';
 
 function getClaimAllowedNumbers(claim: FactClaim): number[] {
@@ -128,6 +129,31 @@ export function verifyScriptL2(
           issues.push({
             severity: 'warning',
             message: `NAME_NOT_IN_CLAIM: nama "${name}" tidak ditemukan di klaim rujukan (${sent.claim_refs.join(', ')})`,
+            ref,
+          });
+        }
+      }
+
+      if (referencedClaims.length > 0) {
+        const allQuotes = referencedClaims.flatMap((c) => c.sources.map((s) => s.quote)).join(' ');
+        const { hedgeDropped, absoluteAdded } = detectHedgeAndAbsoluteMismatches(
+          sent.text,
+          allQuotes
+        );
+        if (hedgeDropped.length > 0) {
+          const desc = hedgeDropped
+            .map((h) => `"${h.en}" -> butuh (${h.expectedId.join('/')})`)
+            .join('; ');
+          issues.push({
+            severity: 'error',
+            message: `L2_HEDGE_DROPPED: kalimat naskah membuang kata lunak (${desc})`,
+            ref,
+          });
+        }
+        if (absoluteAdded.length > 0) {
+          issues.push({
+            severity: 'error',
+            message: `L2_ABSOLUTE_ADDED: kalimat naskah menambah kata mutlak (${absoluteAdded.join(', ')}) yang tidak ada di kutipan`,
             ref,
           });
         }
