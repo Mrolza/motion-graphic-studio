@@ -1,0 +1,118 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "sentences": [
+        {
+          "text": "Bagaimana gerakan naik turun piston dapat menghasilkan tenaga mekanis yang andal?",
+          "claim_refs": [],
+          "emphasis_words": [
+            "piston",
+            "tenaga mekanis"
+          ],
+          "non_factual": true,
+          "spoken_text": "Bagaimana gerakan naik turun piston dapat menghasilkan tenaga mekanis yang andal?"
+        },
+        {
+          "text": "Siklus Otto adalah siklus termodinamika ideal yang menggambarkan fungsi mesin piston pengapian percikan khas.",
+          "claim_refs": [
+            "C8"
+          ],
+          "emphasis_words": [
+            "Siklus Otto",
+            "termodinamika"
+          ],
+          "non_factual": false,
+          "spoken_text": "Siklus Otto adalah siklus termodinamika ideal yang menggambarkan fungsi mesin piston pengapian percikan khas."
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "sentences": [
+        {
+          "text": "Dalam langkah isap, katup masuk harus terbuka sementara piston menarik campuran udara dan bahan bakar ke dalam silinder.",
+          "claim_refs": [
+            "C5"
+          ],
+          "emphasis_words": [
+            "langkah isap",
+            "silinder"
+          ],
+          "non_factual": false,
+          "spoken_text": "Dalam langkah isap, katup masuk harus terbuka sementara piston menarik campuran udara dan bahan bakar ke dalam silinder."
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "sentences": [
+        {
+          "text": "Dalam langkah kompresi, piston mengompresi campuran udara dan bahan bakar sebagai persiapan untuk penyalaan.",
+          "claim_refs": [
+            "C6"
+          ],
+          "emphasis_words": [
+            "kompresi",
+            "piston"
+          ],
+          "non_factual": false,
+          "spoken_text": "Dalam langkah kompresi, piston mengompresi campuran udara dan bahan bakar sebagai persiapan untuk penyalaan."
+        },
+        {
+          "text": "Busi memantik campuran udara dan bahan bakar yang terkompresi pada akhir langkah kompresi.",
+          "claim_refs": [
+            "C3"
+          ],
+          "emphasis_words": [
+            "Busi",
+            "akhir langkah kompresi"
+          ],
+          "non_factual": false,
+          "spoken_text": "Busi memantik campuran udara dan bahan bakar yang terkompresi pada akhir langkah kompresi."
+        },
+        {
+          "text": "Langkah tersebut menghasilkan kerja mekanis dari mesin untuk memutar poros engkol.",
+          "claim_refs": [
+            "C4"
+          ],
+          "emphasis_words": [
+            "langkah usaha",
+            "poros engkol"
+          ],
+          "non_factual": false,
+          "spoken_text": "Langkah tersebut menghasilkan kerja mekanis dari mesin untuk memutar poros engkol."
+        },
+        {
+          "text": "Selama langkah buang, piston bergerak dari satu titik ke titik lain sementara katup buang terbuka.",
+          "claim_refs": [
+            "C7"
+          ],
+          "emphasis_words": [
+            "langkah buang",
+            "katup buang"
+          ],
+          "non_factual": false,
+          "spoken_text": "Selama langkah buang, piston bergerak dari satu titik ke titik lain sementara katup buang terbuka."
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "sentences": [
+        {
+          "text": "Dengan asumsi seluruh empat langkah memerlukan rotasi poros engkol sebesar 720 derajat, poros engkol telah menyelesaikan satu revolusi penuh 360 derajat pada titik tertentu.",
+          "claim_refs": [
+            "C2"
+          ],
+          "emphasis_words": [
+            "poros engkol",
+            "720 derajat"
+          ],
+          "non_factual": false,
+          "spoken_text": "Dengan asumsi seluruh empat langkah memerlukan rotasi poros engkol sebesar 720 derajat, poros engkol telah menyelesaikan satu revolusi penuh 360 derajat pada titik tertentu."
+        }
+      ]
+    }
+  ]
+}

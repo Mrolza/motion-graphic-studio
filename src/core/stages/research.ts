@@ -25,6 +25,7 @@ const ExtractedClaimSchema = z.object({
   value: z.number().nullish(),
   unit: z.string().min(1).nullish(),
   kind: ClaimKindSchema,
+  step_id: z.string().min(1).nullish(),
   source_id: z.string().min(1),
   quote: z.string().min(1),
   supports_core_claim_indices: z.array(z.number().int().nonnegative()).optional(),
@@ -94,7 +95,8 @@ ATURAN MUTLAK:
 4. "kind" WAJIB salah satu dari: "fact", "estimate", "hypothetical", "interpretation".
 5. Jika klaim menyebut angka penting, isi "value" (angka murni) dan "unit". Jika tidak ada, hilangkan (jangan null).
 6. Isi "supports_core_claim_indices" (array indeks 0-based core_claims yang didukung klaim ini).
-7. Selalu ekstrak minimal 4 klaim faktual penting dengan format PERSIS: { "source_evaluations": [{ "source_id": "S1", "relevance": "relevant", "reason": "..." }], "claims": [{ "text": "...", "kind": "fact", "source_id": "S1", "quote": "Kalimat utuh persis dari sumber.", "supports_core_claim_indices": [0] }] }.`;
+7. Jika konsep memiliki "key_steps", untuk setiap klaim yang menjelaskan satu langkah khusus, isi "step_id" persis sesuai nama langkahnya (mis. "Hisap", "Kompresi", "Usaha", "Buang"). Jangan isi step_id untuk klaim daftar yang merangkum >= 3 langkah sekaligus.
+8. Selalu ekstrak minimal 4 klaim faktual penting dengan format PERSIS: { "source_evaluations": [{ "source_id": "S1", "relevance": "relevant", "reason": "..." }], "claims": [{ "text": "...", "kind": "fact", "step_id": "Hisap", "source_id": "S1", "quote": "Kalimat utuh persis dari sumber.", "supports_core_claim_indices": [0] }] }.`;
 
   const rawClaims: Array<z.infer<typeof ExtractedClaimSchema>> = [];
   const sourceEvals = new Map<string, z.infer<typeof SourceEvalSchema>>();
@@ -109,8 +111,13 @@ ATURAN MUTLAK:
       .map((i) => `[${i}] ${concept.core_claims[i]}`)
       .join('\n');
 
+    const keyStepsHint =
+      concept.key_steps && concept.key_steps.length > 0
+        ? `\nKey steps yang wajib punya klaim khusus (step_id): ${JSON.stringify(concept.key_steps)}`
+        : '';
+
     const prompt = `Topik: "${topic}"
-Konsep: "${concept.title}"
+Konsep: "${concept.title}"${keyStepsHint}
 Core claims target:
 ${targetList}
 
@@ -241,6 +248,7 @@ export async function runResearchStage(
           text: rc.text,
           value: rc.value ?? undefined,
           unit: rc.unit ?? undefined,
+          step_id: rc.step_id ?? undefined,
           kind: rc.kind,
           status: 'unverified',
           sources: [
@@ -371,22 +379,15 @@ export async function runResearchStage(
     await writeFile(path.join(projectDir, 'sources-report.json'), JSON.stringify(sourceReport, null, 2), 'utf-8');
     await writeFile(path.join(qcDir, 'L1.json'), JSON.stringify(l1.report, null, 2), 'utf-8');
     await writeFile(path.join(qcDir, 'L0.json'), JSON.stringify(l0.report, null, 2), 'utf-8');
-    await writeFile(
-      path.join(projectDir, 'selected-concept.json'),
-      JSON.stringify({ index: idx, concept }, null, 2),
-      'utf-8'
-    );
+    await writeFile(path.join(projectDir, 'selected-concept.json'), JSON.stringify({ index: idx, concept }, null, 2), 'utf-8');
 
     await incrementProjectLlmCalls(projectId, 'S2', llmCallsThisRun, repoRoot);
     const updated = await loadProject(projectId, repoRoot);
     updated.stages.S2 = l0.passed ? 'done' : 'needs_review';
     await saveProject(updated, repoRoot);
-
     return { concept, sources, sourceReport, ledger: l1.ledger, l1Report: l1.report, l0Report: l0.report, l0Passed: l0.passed };
   } catch (err) {
-    if (llmCallsThisRun > 0) {
-      await incrementProjectLlmCalls(projectId, 'S2', llmCallsThisRun, repoRoot).catch(() => {});
-    }
+    if (llmCallsThisRun > 0) await incrementProjectLlmCalls(projectId, 'S2', llmCallsThisRun, repoRoot).catch(() => {});
     const failed = await loadProject(projectId, repoRoot);
     failed.stages.S2 = 'failed';
     await saveProject(failed, repoRoot);

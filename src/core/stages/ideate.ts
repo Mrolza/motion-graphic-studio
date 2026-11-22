@@ -2,6 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
 import { generateJson } from '@core/llm/client';
+import { detectTopicDomain } from '@core/kit/domain-registry';
 import {
   getProjectDir,
   incrementProjectLlmCalls,
@@ -14,6 +15,7 @@ export const ConceptSchema = z.object({
   title: z.string().min(1),
   angle: z.string().min(1),
   hook: z.string().min(1),
+  domain: z.enum(['rail', 'engine', 'generic']).optional(),
   core_claims: z.array(z.string().min(1)).min(3).max(5),
   key_steps: z.array(z.string().min(1)).optional(),
   wiki_titles: z
@@ -50,7 +52,8 @@ Aturan ketat:
 - wiki_titles wajib berisi judul artikel Wikipedia berbahasa Inggris ("en", 2-5 judul) dan Indonesia ("id", 1-3 judul) yang paling tepat menjawab pertanyaan topik (misalnya untuk kereta: "Wheelset (rail transport)", "Flange", "Track gauge", "Hunting oscillation", "Derailment").
 - search_queries wajib berisi kata kunci pencarian Wikipedia cadangan (2-6 query).
 - Untuk topik proses ("cara kerja", "bagaimana dibuat", format how_it_works/how_its_made), WAJIB isi "key_steps" berisi daftar urutan langkah utama (mis. ["Hisap", "Kompresi", "Usaha", "Buang"] untuk mesin 4 tak).
-- Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "core_claims": ["..."], "key_steps": ["..."], "wiki_titles": { "en": ["..."], "id": ["..."] }, "search_queries": ["..."] }] }.`;
+- WAJIB isi "domain": "rail" (untuk topik kereta/rel/flens), "engine" (untuk topik mesin/piston/silinder/4 tak), atau "generic" (lainnya).
+- Kembalikan JSON sesuai skema: { "concepts": [{ "id": "C1", "title": "...", "angle": "...", "hook": "...", "domain": "rail|engine|generic", "core_claims": ["..."], "key_steps": ["..."], "wiki_titles": { "en": ["..."], "id": ["..."] }, "search_queries": ["..."] }] }.`;
 
   const prompt = `Topik: "${project.topic}"
 Format: ${project.format}
@@ -71,15 +74,22 @@ Hasilkan 3 konsep.`;
       },
     });
 
+    const normalized = {
+      concepts: res.data.concepts.map((c) => ({
+        ...c,
+        domain: c.domain ?? detectTopicDomain(project.topic),
+      })),
+    };
+
     const outPath = path.join(projectDir, 'concepts.json');
     await mkdir(path.dirname(outPath), { recursive: true });
-    await writeFile(outPath, JSON.stringify(res.data, null, 2), 'utf-8');
+    await writeFile(outPath, JSON.stringify(normalized, null, 2), 'utf-8');
 
     await incrementProjectLlmCalls(projectId, 'S1', llmCallsThisRun, repoRoot);
     const updated = await loadProject(projectId, repoRoot);
     updated.stages.S1 = 'done';
     await saveProject(updated, repoRoot);
-    return res.data;
+    return normalized;
   } catch (err) {
     if (llmCallsThisRun > 0) {
       await incrementProjectLlmCalls(projectId, 'S1', llmCallsThisRun, repoRoot).catch(() => {});

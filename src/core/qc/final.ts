@@ -7,7 +7,12 @@ import ffprobeInstaller from '@ffprobe-installer/ffprobe';
 import type { QcIssue } from '@core/contracts/qc-report';
 import { TimelineSchema } from '@core/contracts/timeline';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
-import { checkFinalTechnicalFormat, runFinalSyncAndOverlapChecks } from '@core/qc/final-checks';
+import {
+  checkFinalTechnicalFormat,
+  checkTtsVoiceConsistency,
+  runFinalSyncAndOverlapChecks,
+  type TtsSceneRecord,
+} from '@core/qc/final-checks';
 
 export { checkFinalTechnicalFormat };
 
@@ -35,6 +40,7 @@ export interface FinalQcReport {
     truePeakDbfs: number;
     maxVoGapSec: number;
     silenceHits: number;
+    tts_scenes?: TtsSceneRecord[];
   };
   visual: {
     blackHits: number;
@@ -287,6 +293,9 @@ export async function runFinalQcStage(
     await runFinalSyncAndOverlapChecks(projectId, projectDir, issues);
   }
 
+  const ttsCheck = await checkTtsVoiceConsistency(projectDir);
+  issues.push(...ttsCheck.issues);
+
   const totalLlmCalls = Object.values(project.llm_calls).reduce((a, b) => a + b, 0);
   const exceedsPrdLlmBudget = totalLlmCalls > 15;
   if (exceedsPrdLlmBudget) {
@@ -320,6 +329,7 @@ export async function runFinalQcStage(
       truePeakDbfs,
       maxVoGapSec,
       silenceHits,
+      ...(ttsCheck.ttsScenes.length > 0 ? { tts_scenes: ttsCheck.ttsScenes } : {}),
     },
     visual: {
       blackHits,

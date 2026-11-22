@@ -56,6 +56,31 @@ export interface StepCoverageRow {
   claimRefs: string[];
 }
 
+const STEP_STOP_WORDS = new Set(['langkah', 'tahap', 'proses', 'bagian', 'fase', 'stroke']);
+
+function normalizeStepKey(step: string): string[] {
+  const tokens = step
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .split(/\s+/)
+    .filter((t) => t.length >= 4 && !STEP_STOP_WORDS.has(t));
+  if (tokens.includes('usaha')) tokens.push('tenaga');
+  if (tokens.includes('tenaga')) tokens.push('usaha');
+  if (tokens.includes('hisap')) tokens.push('isap');
+  if (tokens.includes('isap')) tokens.push('hisap');
+  return tokens;
+}
+
+function stepMatchesId(step: string, stepId: string | undefined): boolean {
+  if (!stepId) return false;
+  const a = step.toLowerCase().trim();
+  const b = stepId.toLowerCase().trim();
+  if (a === b) return true;
+  const aTokens = normalizeStepKey(step);
+  const bTokens = normalizeStepKey(stepId);
+  return aTokens.some((t) => bTokens.includes(t));
+}
+
 export function checkKeyStepsCoverage(
   keySteps: string[] | undefined,
   script: Script,
@@ -65,31 +90,31 @@ export function checkKeyStepsCoverage(
   const rows: StepCoverageRow[] = [];
   if (!keySteps || keySteps.length === 0) return { issues, rows };
 
-  const verifiedIds = new Set(ledger.claims.filter((c) => c.status === 'verified').map((c) => c.id));
+  const verifiedClaims = ledger.claims.filter((c) => c.status === 'verified');
+  const verifiedById = new Map(verifiedClaims.map((c) => [c.id, c]));
   const sentences = script.scenes.flatMap((sc) =>
     sc.sentences.map((s, idx) => ({ ref: `${sc.id}.${idx + 1}`, sent: s }))
   );
 
+  const countStepsMentioned = (text: string): number => {
+    const lower = text.toLowerCase();
+    return keySteps.filter((st) => normalizeStepKey(st).some((tok) => lower.includes(tok))).length;
+  };
+
   for (const step of keySteps) {
-    const tokens = step
-      .toLowerCase()
-      .replace(/[^\p{L}\p{N}\s]/gu, ' ')
-      .split(/\s+/)
-      .filter((t) => t.length >= 4);
-    if (tokens.includes('usaha')) tokens.push('tenaga');
-    if (tokens.includes('tenaga')) tokens.push('usaha');
-    if (tokens.includes('hisap')) tokens.push('isap');
     const match = sentences.find(({ sent }) => {
       if (sent.non_factual) return false;
-      const hasVerified = sent.claim_refs.some((cid) => verifiedIds.has(cid));
-      if (!hasVerified) return false;
-      const lower = sent.text.toLowerCase();
-      return tokens.some((tok) => lower.includes(tok));
+      // Kalimat daftar yang menyebut >= 3 langkah tidak dihitung sebagai kalimat khusus
+      if (countStepsMentioned(sent.text) >= 3) return false;
+      return sent.claim_refs.some((cid) => {
+        const claim = verifiedById.get(cid);
+        return claim ? stepMatchesId(step, claim.step_id) : false;
+      });
     });
     if (!match) {
       issues.push({
         severity: 'error',
-        message: `L0B_STEP_MISSING: langkah proses "${step}" belum dijelaskan minimal 1 kalimat dengan klaim verified`,
+        message: `L0B_STEP_MISSING: langkah proses "${step}" belum punya kalimat khusus dengan klaim verified bertanda step_id="${step}"`,
         ref: step,
       });
       rows.push({ step, covered: false, sentenceRef: null, sentenceText: null, claimRefs: [] });
@@ -99,7 +124,10 @@ export function checkKeyStepsCoverage(
         covered: true,
         sentenceRef: match.ref,
         sentenceText: match.sent.text,
-        claimRefs: match.sent.claim_refs.filter((cid) => verifiedIds.has(cid)),
+        claimRefs: match.sent.claim_refs.filter((cid) => {
+          const claim = verifiedById.get(cid);
+          return claim ? stepMatchesId(step, claim.step_id) : false;
+        }),
       });
     }
   }

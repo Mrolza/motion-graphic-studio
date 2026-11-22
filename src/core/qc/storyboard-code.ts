@@ -3,10 +3,12 @@ import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
 import { getHudClaimRefs, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
+import type { KitDomain } from '@core/kit/domain-registry';
 import { extractNumericValuesFromText } from '@core/qc/l1-ledger';
 import { detectHedgeAndAbsoluteMismatches } from './hedge-glossary';
 import { extractHudDisplayText, QUANTITY_LABELS } from './l5-semantic';
 import { checkHudSpelling } from './spellcheck-id';
+import { checkStoryboardDomainAndShots } from './storyboard-domain';
 
 const DISPLAY_FIELDS = [
   'title',
@@ -45,7 +47,8 @@ export function verifyStoryboardCode(
   storyboard: Storyboard,
   script: Script,
   timeline: Timeline,
-  ledger: FactLedger
+  ledger: FactLedger,
+  options?: { domain?: KitDomain }
 ): QcReport {
   const issues: QcIssue[] = [];
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
@@ -146,16 +149,10 @@ export function verifyStoryboardCode(
       const propText = collectTextValues(h.props);
       if (h.component === 'Callout') {
         const wordCount = propText.trim().split(/\s+/).filter(Boolean).length;
-        if (wordCount > 12) {
+        if (wordCount > 8) {
           issues.push({
             severity: 'error',
-            message: `HUD_TOO_LONG: Callout "${h.hud_id ?? h.component}" berisi ${wordCount} kata (maks 8 kata, error > 12 kata)`,
-            ref,
-          });
-        } else if (wordCount > 8) {
-          issues.push({
-            severity: 'warning',
-            message: `HUD_TOO_LONG_WARN: Callout "${h.hud_id ?? h.component}" berisi ${wordCount} kata (disarankan <= 8 kata)`,
+            message: `HUD_TOO_LONG: Callout "${h.hud_id ?? h.component}" berisi ${wordCount} kata (> 8 kata)`,
             ref,
           });
         }
@@ -232,16 +229,10 @@ export function verifyStoryboardCode(
           .trim()
           .split(/\s+/)
           .filter(Boolean).length;
-        if (calloutWords > 12) {
+        if (calloutWords > 8) {
           issues.push({
             severity: 'error',
-            message: `SB_CALLOUT_TOO_LONG: Callout "${h.hud_id ?? h.component}" memiliki ${calloutWords} kata (> 12 kata)`,
-            ref,
-          });
-        } else if (calloutWords > 8) {
-          issues.push({
-            severity: 'warning',
-            message: `SB_CALLOUT_WORD_LIMIT: Callout "${h.hud_id ?? h.component}" memiliki ${calloutWords} kata (> 8 kata)`,
+            message: `SB_CALLOUT_TOO_LONG: Callout "${h.hud_id ?? h.component}" memiliki ${calloutWords} kata (> 8 kata)`,
             ref,
           });
         }
@@ -330,56 +321,7 @@ export function verifyStoryboardCode(
     }
   }
 
-  for (const s of storyboard.scenes) {
-    if (
-      s.shot_type === 'cross_section' &&
-      !s.focus_entities.includes('rail_cross_section') &&
-      !s.focus_entities.includes('piston_crank')
-    ) {
-      issues.push({
-        severity: 'error',
-        message: `SHOT_VIEW_MISMATCH: shot_type="cross_section" wajib memakai rail_cross_section / view="section" (bukan ${s.focus_entities.join(',')})`,
-        ref: s.id,
-      });
-    }
-    if (
-      s.shot_type === 'establishing' &&
-      !s.focus_entities.includes('train_car') &&
-      !s.focus_entities.includes('engine_block')
-    ) {
-      issues.push({
-        severity: 'error',
-        message: `SHOT_VIEW_MISMATCH: shot_type="establishing" wajib menampilkan objek konteks (train_car atau engine_block), bukan ${s.focus_entities.join(',')}`,
-        ref: s.id,
-      });
-    }
-  }
-
-  const shotTypes = storyboard.scenes.map((s) => s.shot_type).filter(Boolean);
-  if (storyboard.scenes.length >= 3 && new Set(shotTypes).size < 3) {
-    issues.push({
-      severity: 'error',
-      message: `SB_LOW_SHOT_VARIETY: hanya ${new Set(shotTypes).size} jenis shot_type berbeda (minimal 3 per video)`,
-      ref: 'storyboard',
-    });
-  }
-  for (let i = 1; i < storyboard.scenes.length; i++) {
-    const prev = storyboard.scenes[i - 1]!;
-    const cur = storyboard.scenes[i]!;
-    if (
-      prev.shot_type &&
-      cur.shot_type &&
-      prev.shot_type === cur.shot_type &&
-      prev.focus_entities.join(',') === cur.focus_entities.join(',')
-    ) {
-      issues.push({
-        severity: 'error',
-        message: `SB_CONSECUTIVE_DUPLICATE_SHOT: ${prev.id} dan ${cur.id} memakai shot_type (${cur.shot_type}) dan focus_entities (${cur.focus_entities.join(',')}) yang sama berturut-turut`,
-        ref: cur.id,
-      });
-    }
-  }
-
+  issues.push(...checkStoryboardDomainAndShots(storyboard, options?.domain));
   issues.push(...checkHudSpelling(storyboard, { script, ledger }));
   return { layer: 'L4', issues };
 }

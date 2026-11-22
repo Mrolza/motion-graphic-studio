@@ -23,6 +23,8 @@ export interface TelemetryHudSample {
   zone: 'title' | 'free' | 'callout' | 'caption';
   bbox: ScreenBox;
   text: string;
+  domText?: string;
+  truncated?: boolean;
   driverName?: string;
   numericValue?: number;
   claimRef?: string;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import * as THREE from 'three';
+import { useTelemetry } from '../telemetry/TelemetryContext';
 import { getThemeTokens, type PaletteId } from '../tokens/index';
 
 export interface Line3DProps {
@@ -47,6 +48,8 @@ export const Line3D: React.FC<Line3DProps> = ({
 export interface Arrow3DProps extends Line3DProps {
   headRadius?: number;
   headLength?: number;
+  telemetryId?: string;
+  skipTelemetry?: boolean;
 }
 
 /**
@@ -60,8 +63,11 @@ export const Arrow3D: React.FC<Arrow3DProps> = ({
   headLength = 0.18,
   color,
   palette = 'blueprint-navy',
+  telemetryId = 'arrow3d_unbound',
+  skipTelemetry = false,
 }) => {
   const tokens = getThemeTokens(palette);
+  const telemetry = useTelemetry();
   const start = new THREE.Vector3(...from);
   const end = new THREE.Vector3(...to);
   const dir = new THREE.Vector3().subVectors(end, start);
@@ -72,6 +78,22 @@ export const Arrow3D: React.FC<Arrow3DProps> = ({
   const quat = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), unit);
   const euler = new THREE.Euler().setFromQuaternion(quat);
   const c = color ?? tokens.colors.accent;
+
+  useLayoutEffect(() => {
+    if (!skipTelemetry && telemetry.enabled) {
+      telemetry.reportEntity({
+        id: telemetryId,
+        role: 'prop',
+        partStates: {
+          arrow_dir_x: Number(unit.x.toFixed(3)),
+          arrow_dir_y: Number(unit.y.toFixed(3)),
+          arrow_dir_z: Number(unit.z.toFixed(3)),
+          bind_to_part: 'unbound',
+          arrow_bound: false,
+        },
+      });
+    }
+  });
 
   return (
     <group>

@@ -522,3 +522,37 @@
   - `p2-mesin4tak`: **66 panggilan fase P4E** across **12 run** (maks **10 calls/run** ≤ 20; per tahap `S2:10, S3:9, S4:9, S6:2, S7:10, S8:13, S9:13`; kumulatif 143 — melebihi target 40 karena iterasi kalibrasi S3–S5 `EngineBlock` & `L3` selama pengembangan).
 - **Mutasi 1–31 ([`mutations/mutation-summary.md`](../out/review/p4e/mutations/mutation-summary.md)):** **31/31 mutasi tertangkap** (0 panggilan Gemini).
 - **Verifikasi ([`verify.txt`](../out/review/p4e/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 83 item, `tsc` 0 error, **22 test files / 91 tests passed**, `check:size OK` 146 berkas).
+
+---
+
+## Fase P4F — Visual Sesuai Topik, Cek Panah & Cakupan yang Jujur, Render Deterministik (`docs/P4F-DOMAIN-SAFETY.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p4f-domain-safety` (tag awal `p4f-start`, setelah merge `phase/p4e-truth-calibration` ke `main` dengan tag `p4e-done`)
+- **Tanggal:** 2026-11-22
+
+### Apa yang Diperbaiki & Dibuat (Bagian A–C, 0 Panggilan Gemini)
+1. **Bagian A — Domain Kit:**
+   - **A1 (`domain-registry.ts`, `RailCurveOverlay.tsx`, `DiagramOverlay.tsx`, `generate-kit-api.ts`):** Setiap rakitan/overlay kini memiliki `domain` (`rail`, `engine`, `generic`) dan daftar `entities` yang otomatis ditulis ke `KIT-API.md` (85 item). `DiagramOverlay` dipecah: `curveArc` dan `inertiaArrow` dipindah ke `RailCurveOverlay` (domain `rail`), sedangkan `DiagramOverlay` generik hanya berisi elemen netral (`axisGuides`, `highlightRing`, `gridGuide`).
+   - **A2 & A4 (`ideate.ts`, `storyboard.ts`, `storyboard-code.ts`, `storyboard-domain.ts`, `scene-safety.ts`, `scene-coder.ts`):** S1 menentukan `domain`; prompt storyboard & scene coder hanya menampilkan komponen/entitas/shot domain terkait + `generic`. Error baru `SB_ENTITY_OFF_TOPIC` dan `SCENE_COMPONENT_OFF_TOPIC`; aturan variasi shot dihitung dari shot yang tersedia di domain.
+   - **A3 (`CylinderSection.tsx`, `KitFramingHarness.tsx`):** Penampang silinder 4 tak (dinding silinder, piston, conrod, katup masuk 0–180°, katup buang 540–720°, busi, ruang bakar bervolume dinamis) terverifikasi pada 8 sudut sampel (`0°`–`630°`) via telemetri render Remotion.
+2. **Bagian B — Cek Visual yang Jujur:**
+   - **B1 (`arrow-check.ts`, `MotionArrow.tsx`, `LineAndLabel3D.tsx`, `RailCurveOverlay.tsx`):** Semua panah (`MotionArrow`, `Arrow3D`, `RailCurveOverlay`) didaftarkan ke telemetri; panah terikat dicek per frame (`≥ 95%` kecocokan tanda kecepatan bagian rujukan → `VIS_ARROW_DIRECTION_MISMATCH`), panah tak terikat bersama gerak bolak-balik → `VIS_ARROW_UNBOUND`.
+   - **B2 (`fact-ledger.ts`, `research.ts`, `script.ts`, `l0b-quality.ts`):** Setiap `key_step` wajib punya kalimat khusus yang klaim `verified`-nya bertanda `step_id` langkah tersebut (kalimat daftar `≥ 3` langkah dikecualikan).
+   - **B3 (`HudZones.tsx`, `HudCore.tsx`, `media-checks.ts`, `storyboard-code.ts`):** Telemetri DOM HUD memeriksa teks terpotong/ellipsis (`HUD_TRUNCATED`), line clamp `Callout` dihapus, dan `Callout > 8` kata menjadi `error`.
+3. **Bagian C — Determinisme & Kebersihan:**
+   - **C1 (`scene-safety.ts`):** Melarang `Math.random`, `Date.now`, `new Date(`, `performance.now`, `setTimeout`, `setInterval`, `requestAnimationFrame`, `useFrame`, `clock` (`FORBIDDEN_API`) dan `INVALID_HUD_ZONE`.
+   - **C2 (`tts.ts`, `voice.ts`, `final-checks.ts`, `final.ts`):** Satu video memakai satu mesin & suara TTS (jika 1 adegan jatuh ke fallback, semua adegan dibuat ulang dengan mesin yang sama); `tts-manifest.json` diverifikasi (`AUDIO_VOICE_MISMATCH`) dan dicatat di `final-qc.json`.
+   - **C3 (`runner.ts`, `final-render.ts`):** Peringatan `THREE.Clock` disaring di handler `onBrowserLog`.
+   - **C4 (`scene-coder.ts`):** Typecheck adegan memanggil `tsc` langsung lewat `process.execPath` tanpa `shell: true`.
+
+### Hasil Bagian D & Bukti (`out/review/p4f/`)
+- **`p2-mesin4tak` (profil `hemat`, [`out/review/p4f/p2-mesin4tak/`](../out/review/p4f/p2-mesin4tak/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4f/p2-mesin4tak/final-qc.md) (**PASS**): `720×1280 @ 30fps (h264/yuv420p)`, `1314/1314 frames`, `43.80s`, `aac 48000Hz`, **`-14.1 LUFS`**, `peak -2.7 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`, `freeze=1` (warning); seluruh 4 adegan memakai `msedge-tts` / `id-ID-ArdiNeural` (`final-qc.json`).
+  - `S2` memakai `CylinderSection` (`view: section`); [`coverage.md`](../out/review/p4f/p2-mesin4tak/coverage.md) mencatat 4 kalimat khusus (`[S2.1]`, `[S3.1]`, `[S3.3]`, `[S3.4]`); [`arrows.md`](../out/review/p4f/p2-mesin4tak/arrows.md) `S3` `motion_arrow` terikat `piston` **61/61 frame (100.0% ≥ 95%)**.
+  - Lengkap dengan [`onscreen-text.md`](../out/review/p4f/p2-mesin4tak/onscreen-text.md), [`captions.srt`](../out/review/p4f/p2-mesin4tak/captions.srt), [`publish.md`](../out/review/p4f/p2-mesin4tak/publish.md), still per adegan (`S1`–`S4`), dan [`cylinder-section/`](../out/review/p4f/cylinder-section/telemetry.md) (8 still `0°`–`630°` + tabel telemetri katup/piston).
+- **Kualifikasi Ulang Kereta P4E ([`requalify.md`](../out/review/p4f/requalify.md)):** Video kereta P4E (`out/review/p4e/p2-kereta/final.mp4`, tidak dibuat ulang) **PASS** pada QC teknis/audio/visual, domain `rail` & storyboard (0 error), dan panah per frame (0 error); B2 gagal sesuai prediksi Mutasi 35 karena `fact-ledger.json` P4E belum memakai `step_id`.
+- **Jumlah Panggilan Gemini Fase P4F ([`stats.md`](../out/review/p4f/stats.md)):**
+  - `p2-mesin4tak`: **47 panggilan fase P4F** across **7 run** (maks **11 calls/run** ≤ 20; per tahap `S1:2, S2:10, S3:6, S4:6, S6:1, S7:2, S8:8, S9:12`; kumulatif 190 — melebihi target fase ≤ 40 sebesar 7 panggilan akibat retry `S1`/`S3` `HudZoneId` sebelum `INVALID_HUD_ZONE` ditambahkan).
+- **Mutasi 1–39 ([`mutations/mutation-summary.md`](../out/review/p4f/mutations/mutation-summary.md)):** **39/39 mutasi tertangkap** (0 panggilan Gemini).
+- **Verifikasi ([`verify.txt`](../out/review/p4f/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 85 item, `tsc` 0 error, **23 test files / 100 tests passed**, `check:size OK` 153 berkas).

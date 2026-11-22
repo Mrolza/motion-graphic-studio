@@ -1,6 +1,11 @@
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { StoryboardScene } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
+import {
+  KIT_COMPONENTS,
+  isComponentAllowedInDomain,
+  type KitDomain,
+} from '@core/kit/domain-registry';
 import { extractNumericValuesFromText } from '@core/qc/l1-ledger';
 import type {
   ExpectedHudSpec,
@@ -25,6 +30,15 @@ const FORBIDDEN_PATTERNS: Array<{ name: string; re: RegExp }> = [
   { name: 'dangerouslySetInnerHTML', re: /\bdangerouslySetInnerHTML\b/ },
   { name: 'document.cookie', re: /\bdocument\.cookie\b/ },
   { name: 'window.location', re: /\bwindow\.location\b/ },
+  { name: 'Math.random', re: /\bMath\.random\b/ },
+  { name: 'Date.now', re: /\bDate\.now\b/ },
+  { name: 'new Date(', re: /\bnew\s+Date\s*\(/ },
+  { name: 'performance.now', re: /\bperformance\.now\b/ },
+  { name: 'setTimeout', re: /\bsetTimeout\b/ },
+  { name: 'setInterval', re: /\bsetInterval\b/ },
+  { name: 'requestAnimationFrame', re: /\brequestAnimationFrame\b/ },
+  { name: 'useFrame', re: /\buseFrame\b/ },
+  { name: 'clock', re: /\b(?:THREE\.Clock|clock)\b/i },
 ];
 
 export interface SafetyValidationResult {
@@ -36,9 +50,12 @@ export interface SafetyValidationResult {
 
 /**
  * Validates generated Remotion scene TSX against import whitelist, forbidden APIs,
- * 300-line limit, and mandatory telemetry wrappers.
+ * domain component safety, 300-line limit, and mandatory telemetry wrappers.
  */
-export function validateSceneCodeSafety(code: string): SafetyValidationResult {
+export function validateSceneCodeSafety(
+  code: string,
+  domain?: KitDomain
+): SafetyValidationResult {
   const errors: string[] = [];
   const lines = code.split(/\r?\n/);
   if (lines.length > 300) {
@@ -62,9 +79,21 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
   const hasTelemetryProvider = /\bTelemetryProvider\b/.test(code);
   const hasBlueprintStage = /\bBlueprintStage\b/.test(code);
   const hasEntityOrAssembly =
-    /\b(TelemetryEntity|WheelsetOnRail|PistonCrankAssembly|Suspension|TrainCar|RailCrossSection|EngineBlock)\b/.test(
+    /\b(TelemetryEntity|WheelsetOnRail|PistonCrankAssembly|CylinderSection|Suspension|TrainCar|RailCrossSection|EngineBlock)\b/.test(
       code
     );
+  if (domain) {
+    for (const comp of KIT_COMPONENTS) {
+      if (!isComponentAllowedInDomain(comp.name, domain)) {
+        const compRe = new RegExp(`\\b${comp.name}\\b`);
+        if (compRe.test(code)) {
+          errors.push(
+            `SCENE_COMPONENT_OFF_TOPIC: komponen "${comp.name}" (domain ${comp.domain}) dilarang pada topik domain "${domain}"`
+          );
+        }
+      }
+    }
+  }
   if (!hasTelemetryProvider || !hasBlueprintStage || !hasEntityOrAssembly) {
     errors.push(
       'MISSING_TELEMETRY_WRAPPER: adegan wajib memakai TelemetryProvider, BlueprintStage, dan minimal satu TelemetryEntity/Rakitan'
@@ -89,6 +118,15 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
     errors.push(
       'MISSING_STORYBOARD_HUD: adegan wajib memakai StoryboardHudProvider dan <Hud id="..." />'
     );
+  }
+  const hudZoneMatches = code.matchAll(/<HudZone\b[^>]*\bzone\s*=\s*["']([^"']+)["']/g);
+  for (const zm of hudZoneMatches) {
+    const z = zm[1]!;
+    if (z !== 'title' && z !== 'callout' && z !== 'free') {
+      errors.push(
+        `INVALID_HUD_ZONE: HudZone zone="${z}" tidak valid; HANYA boleh "title" (untuk KineticTitle) atau "callout"`
+      );
+    }
   }
   if (/mode\s*=\s*["']frameEntities["']/.test(code) && /<CameraRig[^>]*\b(from|to|radius|height)\s*=/.test(code)) {
     errors.push(
@@ -185,22 +223,46 @@ export function buildVisualSpecForScene(
     );
   }
 
-  if (sbScene.focus_entities.includes('piston_crank') || sbScene.focus_entities.includes('engine_block')) {
-    const entId = sbScene.focus_entities.includes('engine_block') ? 'engine_block' : 'piston_crank';
+  if (
+    sbScene.focus_entities.includes('piston_crank') ||
+    sbScene.focus_entities.includes('engine_block') ||
+    sbScene.focus_entities.includes('cylinder_section')
+  ) {
+    const entId = sbScene.focus_entities.includes('cylinder_section')
+      ? 'cylinder_section'
+      : sbScene.focus_entities.includes('engine_block')
+      ? 'engine_block'
+      : 'piston_crank';
     geometryRules.push(
       { entity: entId, key: 'rod_top_gap', op: 'max_abs', threshold: 0.01 },
       { entity: entId, key: 'rod_bottom_gap', op: 'max_abs', threshold: 0.01 },
       { entity: entId, key: 'piston_inside_cylinder', op: 'equals', expected: true }
     );
+    if (entId === 'cylinder_section') {
+      invariants.push(
+        { kind: 'driver_state', entity: 'cylinder_section', stateKey: 'intake_valve', expectedValue: 'open', whenDriverBetween: [0, 180], driverName: 'crank_angle', epsilon: 2 },
+        { kind: 'driver_state', entity: 'cylinder_section', stateKey: 'intake_valve', expectedValue: 'closed', whenDriverBetween: [180, 720], driverName: 'crank_angle', epsilon: 2 },
+        { kind: 'driver_state', entity: 'cylinder_section', stateKey: 'exhaust_valve', expectedValue: 'closed', whenDriverBetween: [0, 540], driverName: 'crank_angle', epsilon: 2 },
+        { kind: 'driver_state', entity: 'cylinder_section', stateKey: 'exhaust_valve', expectedValue: 'open', whenDriverBetween: [540, 720], driverName: 'crank_angle', epsilon: 2 }
+      );
+    }
   }
 
   const knownWheelParts = new Set(['wheel_left', 'wheel_right', 'contact_left', 'contact_right', 'flange']);
-  const knownPistonParts = new Set(['piston', 'crank', 'intake_valve', 'exhaust_valve', 'spark_plug']);
+  const knownPistonParts = new Set([
+    'piston',
+    'crank',
+    'conrod',
+    'intake_valve',
+    'exhaust_valve',
+    'spark_plug',
+    'combustion_chamber',
+  ]);
   const mainEntity = sbScene.focus_entities[0]!;
   for (const part of sbScene.visible_parts ?? []) {
     if (
       ((mainEntity === 'wheelset' || mainEntity === 'rail_cross_section') && knownWheelParts.has(part)) ||
-      (mainEntity === 'piston_crank' && knownPistonParts.has(part))
+      ((mainEntity === 'piston_crank' || mainEntity === 'cylinder_section') && knownPistonParts.has(part))
     ) {
       visibleParts.push({ entity: mainEntity, part, maxHudCoverRatio: 0.25 });
     }

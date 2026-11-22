@@ -5,7 +5,7 @@ import { getThemeTokens, type PaletteId } from '../tokens/index';
 export type HudZoneId = 'title' | 'free' | 'callout' | 'caption';
 
 const ZONE_RECTS: Record<HudZoneId, { top: number; maxHeight: number }> = {
-  title: { top: 72, maxHeight: 160 },
+  title: { top: 60, maxHeight: 176 },
   free: { top: 240, maxHeight: 490 },
   callout: { top: 740, maxHeight: 170 },
   caption: { top: 935, maxHeight: 82 },
@@ -115,10 +115,29 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
 
   useLayoutEffect(() => {
     if (!telemetry.enabled || !ref.current) return;
-    const r = ref.current.getBoundingClientRect();
+    const el = ref.current;
+    const r = el.getBoundingClientRect();
     const rootRect = telemetry.getLayoutRect();
     const offsetX = rootRect ? rootRect.left : 0;
     const offsetY = rootRect ? rootRect.top : 0;
+    const domText = (el.innerText || el.textContent || '').replace(/\s+/g, ' ').trim();
+    let truncated = domText.includes('…') || domText.includes('...');
+    if (!truncated) {
+      const nodes = [el, ...Array.from(el.querySelectorAll('*'))] as HTMLElement[];
+      for (const n of nodes) {
+        const styleObj = typeof window !== 'undefined' ? window.getComputedStyle(n) : null;
+        const clipsY = styleObj && (styleObj.overflowY === 'hidden' || styleObj.overflowY === 'clip' || styleObj.textOverflow === 'ellipsis');
+        const clipsX = styleObj && (styleObj.overflowX === 'hidden' || styleObj.overflowX === 'clip' || styleObj.textOverflow === 'ellipsis');
+        if (clipsY && n.clientHeight > 0 && n.scrollHeight > n.clientHeight + 2) {
+          truncated = true;
+          break;
+        }
+        if (clipsX && n.clientWidth > 0 && n.scrollWidth > n.clientWidth + 2) {
+          truncated = true;
+          break;
+        }
+      }
+    }
     telemetry.reportHud({
       id,
       hud_id: hudId ?? id,
@@ -131,6 +150,8 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
         height: Math.round(r.height * 10) / 10,
       },
       text,
+      domText,
+      truncated,
       driverName,
       numericValue,
       claimRef,

@@ -21,6 +21,7 @@ export const FactClaimSchema = z.object({
   text: z.string().min(1),
   value: z.number().optional(),
   unit: z.string().min(1).optional(),
+  step_id: z.string().min(1).optional(),
   kind: ClaimKindSchema,
   status: ClaimStatusSchema,
   status_reason: z.string().optional(),

@@ -20,6 +20,8 @@ const crank = useDriver({ name: "crank_angle", from: 0, to: 720, unit: "°", dur
 
 ### `CurvedRail`
 Twin steel rails with sleepers supporting a straight entry seamlessly into a curved arc. Rail head top sits at world Y = 0.22 to match WheelsetOnRail contact geometry.
+- **Domain:** `rail`
+- **Entities:** `curved_rail`, `rail_left`, `rail_right`
 - **Signature:** `<CurvedRail ...CurvedRailProps />`
 - **Props:**
   - `startZ?: number` — Straight approach start Z. Defaults to -10.
@@ -30,8 +32,27 @@ Twin steel rails with sleepers supporting a straight entry seamlessly into a cur
   - `highlighted?: boolean` — Highlight rails.
   - `palette?: PaletteId` — Palette token ID.
 
+### `CylinderSection`
+Cross-section of a 4-stroke engine cylinder: cutaway walls, piston, connecting rod, crank pin, intake & exhaust valves, spark plug, and variable-volume combustion chamber. Domain: engine. Entities: cylinder_section, piston, crank, conrod, intake_valve, exhaust_valve, spark_plug, combustion_chamber.
+- **Domain:** `engine`
+- **Entities:** `cylinder_section`, `piston`, `crank`, `conrod`, `intake_valve`, `exhaust_valve`, `spark_plug`, `combustion_chamber`
+- **Signature:** `<CylinderSection ...CylinderSectionProps />`
+- **Props:**
+  - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "cylinder_section".
+  - `view?: 'section'` — View mode; defaults to "section".
+  - `role?: 'focus' | 'prop'` — Role in framing QC. Defaults to "focus".
+  - `crankAngleDeg: number` — Crankshaft angle in degrees (0-720 for full 4-stroke cycle), from useDriver.
+  - `crankRadius?: number` — Crank throw radius. Defaults to 0.55.
+  - `rodLength?: number` — Connecting rod length. Defaults to 1.45.
+  - `position?: [number, number, number]` — World-space position of crankshaft center. Defaults to [0, 0.35, 0].
+  - `overrideIntakeOpen?: boolean` — Optional override ONLY for mutation testing (simulates buggy intake valve).
+  - `overrideExhaustOpen?: boolean` — Optional override ONLY for mutation testing (simulates buggy exhaust valve).
+  - `palette?: PaletteId` — Palette token ID.
+
 ### `EngineBlock`
 Exterior 4-stroke engine block with cooling fins that transitions cleanly into cutaway mode.
+- **Domain:** `engine`
+- **Entities:** `engine_block`, `block`
 - **Signature:** `<EngineBlock ...EngineBlockProps />`
 - **Props:**
   - `entityId?: string`
@@ -42,6 +63,8 @@ Exterior 4-stroke engine block with cooling fins that transitions cleanly into c
 
 ### `PistonCrankAssembly`
 4-stroke piston, connecting rod, crankshaft, enlarged intake/exhaust valves, spark plug, and driver-linked combustion chamber tint.
+- **Domain:** `engine`
+- **Entities:** `piston_crank`, `piston`, `crank`, `intake_valve`, `exhaust_valve`, `spark_plug`
 - **Signature:** `<PistonCrankAssembly ...PistonCrankAssemblyProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "piston_crank".
@@ -57,6 +80,8 @@ Exterior 4-stroke engine block with cooling fins that transitions cleanly into c
 
 ### `RailCrossSection`
 RailCrossSection v3 (F1): True geometric portrait cross-section. Rails are fixed; wheelset shifts laterally, each wheel's height & axle tilt follow the exaggerated conical tread intersection with the fixed rail head top.
+- **Domain:** `rail`
+- **Entities:** `rail_cross_section`, `wheel_left`, `wheel_right`, `flange`, `rail_left`, `rail_right`
 - **Signature:** `<RailCrossSection ...RailCrossSectionProps />`
 - **Props:**
   - `entityId?: string`
@@ -68,6 +93,8 @@ RailCrossSection v3 (F1): True geometric portrait cross-section. Rails are fixed
 
 ### `Suspension`
 Coil spring + telescopic damper anchored flush between an axle mount and an upper bogie frame.
+- **Domain:** `generic`
+- **Entities:** `suspension`, `spring`, `damper`
 - **Signature:** `<Suspension ...SuspensionProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "suspension".
@@ -80,6 +107,8 @@ Coil spring + telescopic damper anchored flush between an axle mount and an uppe
 
 ### `WheelsetOnRail`
 Conical wheelset seated flush on twin Z-axis rail heads, with solid conical lathe tread + integral inner flange, perpendicular axle, and rotation from distance.
+- **Domain:** `rail`
+- **Entities:** `wheelset`, `wheel_left`, `wheel_right`, `flange`, `rail_left`, `rail_right`
 - **Signature:** `<WheelsetOnRail ...WheelsetOnRailProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "wheelset".
@@ -280,6 +309,8 @@ Foreground parallax elements (trackside poles, depth markers, floating particles
 - **Props:**
   - `headRadius?: number`
   - `headLength?: number`
+  - `telemetryId?: string`
+  - `skipTelemetry?: boolean`
 
 ### `Label3D`
 3D marker plate used as an anchor/callout target in world space.
@@ -374,15 +405,20 @@ Foreground parallax elements (trackside poles, depth markers, floating particles
 ## HUD & Zone Layout
 
 ### `DiagramOverlay`
-Pure vector 2D diagram overlay (arcs and directional arrows, no unsanctioned text) rendered over the 3D scene inside HudLayout.
+Generic 2D vector diagram overlay with domain-neutral geometric guides only. Domain: generic. Entities: grid_guide, axis_guide, highlight_ring.
+- **Domain:** `generic`
+- **Entities:** `grid_guide`, `axis_guide`, `highlight_ring`
 - **Signature:** `<DiagramOverlay ...DiagramOverlayProps />`
 - **Props:**
-  - `curveArc?: boolean` — Show curved track arc guide in the free zone.
-  - `inertiaArrow?: boolean` — Show straight inertia vector arrow in the free zone.
+  - `axisGuides?: boolean` — Show subtle neutral blueprint axis guides.
+  - `highlightRing?: boolean` — Show neutral circular highlight ring around center focal zone.
+  - `gridGuide?: boolean` — Show subtle blueprint grid reticle.
   - `palette?: PaletteId` — Palette token ID.
 
 ### `EffectiveDiameterCompare`
 Side-by-side wheel comparison illustrating larger effective diameter and longer travel distance for the outer wheel on a curve. Qualitative only (no numbers), with illustration badge.
+- **Domain:** `rail`
+- **Entities:** `wheel_left`, `wheel_right`, `effective_diameter`
 - **Signature:** `<EffectiveDiameterCompare ...EffectiveDiameterCompareProps />`
 - **Props:**
   - `id?: string`
@@ -553,6 +589,16 @@ Renders 2–5 word kinetic captions in the safe 9:16 caption band (y=935..1017, 
   - `palette?: PaletteId`
   - `suppressRanges?: ReadonlyArray<{ start_sec: number; end_sec: number }>`
 
+### `RailCurveOverlay`
+Rail-domain 2D vector diagram overlay (curved track arc + inertia arrow). Domain: rail. Entities: curve_arc, inertia_arrow.
+- **Domain:** `rail`
+- **Entities:** `curve_arc`, `inertia_arrow`
+- **Signature:** `<RailCurveOverlay ...RailCurveOverlayProps />`
+- **Props:**
+  - `curveArc?: boolean` — Show curved track arc guide in the free zone.
+  - `inertiaArrow?: boolean` — Show straight inertia vector arrow in the free zone.
+  - `palette?: PaletteId` — Palette token ID.
+
 ### `StoryboardHudProvider`
 Provides storyboard-sanctioned HUD data items to <Hud id="..." /> components.
 - **Signature:** `<StoryboardHudProvider ...StoryboardHudProviderProps />`
@@ -666,6 +712,8 @@ Returns a pulsing highlight intensity in [0, 1] during [startSec, startSec + dur
 
 ### `TrainCar`
 Low-poly train car aligned along the Z-axis track with front and rear WheelsetOnRail bogies seated flush on the rail heads (`y = 0.22`).
+- **Domain:** `rail`
+- **Entities:** `train_car`, `body`
 - **Signature:** `<TrainCar ...TrainCarProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "train_car".

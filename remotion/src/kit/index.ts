@@ -60,6 +60,7 @@ export {
   PistonCrankAssembly,
   type PistonCrankAssemblyProps,
 } from './assemblies/PistonCrankAssembly';
+export { CylinderSection, type CylinderSectionProps } from './assemblies/CylinderSection';
 export { Suspension, type SuspensionProps } from './assemblies/Suspension';
 export {
   StoryboardHudProvider,
@@ -69,6 +70,7 @@ export {
   type HudProps,
 } from './hud/StoryboardHudContext';
 export { DiagramOverlay, type DiagramOverlayProps } from './hud/DiagramOverlay';
+export { RailCurveOverlay, type RailCurveOverlayProps } from './hud/RailCurveOverlay';
 export {
   ParallaxForeground,
   type ParallaxForegroundProps,

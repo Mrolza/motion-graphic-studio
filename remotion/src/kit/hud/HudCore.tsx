@@ -45,7 +45,7 @@ export const KineticTitle: React.FC<KineticTitleProps> = ({
         style={{
           fontSize: 44,
           fontWeight: 800,
-          lineHeight: 1.12,
+          lineHeight: 1.08,
           color: tokens.colors.white,
           textShadow: tokens.glow.soft,
         }}
@@ -363,15 +363,13 @@ export const Callout: React.FC<CalloutProps> = ({
           border: `1.5px solid ${tokens.colors.accent}`,
           borderRadius: 10,
           padding: '8px 14px',
-          maxHeight: 156,
-          overflow: 'hidden',
         }}
       >
-        <div style={{ fontSize: 26, fontWeight: 700, lineHeight: 1.2, color: tokens.colors.accent, display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+        <div style={{ fontSize: 25, fontWeight: 700, lineHeight: 1.2, color: tokens.colors.accent }}>
           {label}
         </div>
         {detail ? (
-          <div style={{ fontSize: 24, lineHeight: 1.25, color: tokens.colors.white, marginTop: 2, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+          <div style={{ fontSize: 22, lineHeight: 1.25, color: tokens.colors.white, marginTop: 2 }}>
             {detail}
           </div>
         ) : null}

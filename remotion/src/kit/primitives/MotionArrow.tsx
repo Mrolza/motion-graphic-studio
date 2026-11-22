@@ -52,9 +52,10 @@ export const MotionArrow: React.FC<MotionArrowProps> = ({
         arrow_dir_y: Number(dir[1].toFixed(3)),
         arrow_dir_z: Number(dir[2].toFixed(3)),
         bind_to_part: bindToPart,
+        arrow_bound: true,
       }}
     >
-      <Arrow3D from={position} to={to} color={color} palette={palette} />
+      <Arrow3D from={position} to={to} color={color} palette={palette} skipTelemetry />
     </TelemetryEntity>
   );
 };

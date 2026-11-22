@@ -1,4 +1,5 @@
 import { execFile } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -7,6 +8,7 @@ import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { Script } from '@core/contracts/script';
 import { StoryboardSchema, type Storyboard, type StoryboardScene } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
+import { detectTopicDomain, type KitDomain } from '@core/kit/domain-registry';
 import { generateJson } from '@core/llm/client';
 import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
@@ -15,7 +17,7 @@ import { clearRemotionBundleCache, runVisualQc } from '@core/qc/visual/runner';
 import type { VisualQcResult } from '@core/qc/visual/types';
 import { syncGeneratedRegistry, type GeneratedCompMeta } from './scene-registry';
 import { buildVisualSpecForScene, findTriggerTimeInScene, validateSceneCodeSafety } from './scene-safety';
-import { KIT_SUMMARY_FOR_LLM } from './storyboard';
+import { buildKitSummaryForDomain } from './storyboard';
 
 const execFileAsync = promisify(execFile);
 const SceneCodeOutputSchema = z.object({
@@ -57,12 +59,14 @@ async function runRemotionTscForFile(
   repoRoot: string,
   targetFileSuffix: string
 ): Promise<{ ok: boolean; errorText: string }> {
+  const remotionTsc = path.join(repoRoot, 'remotion', 'node_modules', 'typescript', 'bin', 'tsc');
+  const rootTsc = path.join(repoRoot, 'node_modules', 'typescript', 'bin', 'tsc');
+  const tscBin = existsSync(remotionTsc) ? remotionTsc : rootTsc;
+  const tsconfigPath = path.join(repoRoot, 'remotion', 'tsconfig.json');
   try {
-    await execFileAsync(
-      process.platform === 'win32' ? 'npm.cmd' : 'npm',
-      ['--prefix', 'remotion', 'run', 'typecheck'],
-      { cwd: repoRoot, shell: process.platform === 'win32' }
-    );
+    await execFileAsync(process.execPath, [tscBin, '--noEmit', '-p', tsconfigPath], {
+      cwd: repoRoot,
+    });
     return { ok: true, errorText: '' };
   } catch (err: unknown) {
     const e = err as { stdout?: string; stderr?: string; message?: string };
@@ -76,19 +80,36 @@ async function runRemotionTscForFile(
 
 function buildScenePrompt(params: {
   projectId: string;
+  domain: KitDomain;
   sbScene: StoryboardScene;
   narrationText: string;
   triggerRelSec: number;
   exportName: string;
 }): string {
-  const { sbScene, narrationText, triggerRelSec, exportName } = params;
+  const { domain, sbScene, narrationText, triggerRelSec, exportName } = params;
   const driverDur = Math.max(0.5, Number((sbScene.duration_sec - triggerRelSec).toFixed(2)));
   const hudIds = sbScene.hud.map((h, i) => h.hud_id ?? `${sbScene.id}_H${i + 1}`);
   const hudTags = hudIds
     .map((id) => `          <Hud id="${id}" driver={driver} palette="blueprint-navy" />`)
     .join('\n');
 
-  return `Tulis satu komponen adegan Remotion TSX bernama "${exportName}" (<= 220 baris) untuk adegan "${sbScene.id}" (shot_type: "${sbScene.shot_type ?? 'closeup'}").
+  const assemblyRecipes =
+    domain === 'rail'
+      ? `   - "train_car" (establishing/summary): hitung const distM = -2 + driver.progress * 5; lalu <CurvedRail startZ={-10} curveStartZ={2} curveRadius={16} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <TrainCar entityId="train_car" distance={distM} curveStartZ={2} curveRadius={16} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }} padding={1.25} startAngleDeg={-20} endAngleDeg={20} (gunakan distM dan curveRadius: 16 pada computeWheelsetLayout!).
+   - "rail_cross_section" (cross_section): <Ground size={40} divisions={40} y={0} /> + <RailCrossSection entityId="rail_cross_section" view="section" lateralShift={driver.unit === 'mm' ? driver.value * 0.001 : 0.045 * Math.sin(driver.progress * Math.PI)} taperExaggeration={12} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 0.55, 0], size: [1.9, 1.15, 0.35] }} padding={1.15} startAngleDeg={0} endAngleDeg={0} elevationDeg={2}. WAJIB sertakan <ExaggerationBadge factor={12} palette="blueprint-navy" /> di dalam <HudLayout>!
+   - "wheelset": <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <WheelsetOnRail entityId="wheelset" distance={driver.value} taperExaggeration={4.5} curveStartZ={2} curveRadius={10} highlightContact palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }} padding={1.25} elevationDeg={22}.`
+      : domain === 'engine'
+      ? `   - "engine_block" (establishing/summary/cutaway): <Ground size={36} divisions={36} y={-0.55} /> + <EngineBlock entityId="engine_block" crankAngleDeg={driver.value} cutawayProgress={driver.progress} position={[0, 0.45, 0]} palette="blueprint-navy" /> + <CameraRig mode="frameEntities" focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }} padding={1.25} /> (JANGAN taruh focusBox/padding di EngineBlock!).
+   - "cylinder_section" (cross_section hisap/kompresi): <Ground size={36} divisions={36} y={-0.55} /> + <CylinderSection entityId="cylinder_section" view="section" crankAngleDeg={driver.value} position={[0, 0.35, 0]} palette="blueprint-navy" /> + <CameraRig mode="frameEntities" focusBox={{ center: [0, 1.72, 0], size: [1.55, 3.05, 0.95] }} padding={1.18} startAngleDeg={0} endAngleDeg={0} elevationDeg={2} />.
+   - "piston_crank": <Ground size={36} divisions={36} y={-0.55} /> + <PistonCrankAssembly entityId="piston_crank" crankAngleDeg={driver.value} position={[0, 0.45, 0]} cutaway palette="blueprint-navy" /> + <CameraRig mode="frameEntities" framing="portrait-center" focusBox={{ center: [0, 0.95, 0], size: [1.45, 3.4, 1.45] }} padding={1.45} elevationDeg={12} />. Jika menampilkan panah gerak piston, WAJIB pakai <MotionArrow bindToPart="piston" velocity={[0, -Math.sin((driver.value * Math.PI) / 180), 0]} ... /> (DILARANG <Arrow3D>).`
+      : `   - "suspension": <Ground size={36} divisions={36} y={0} /> + <Suspension entityId="suspension" phaseRad={driver.progress * Math.PI * 2} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 1, 0], size: [1.5, 2.2, 1.5] }} padding={1.25}.`;
+
+  const overlayNote =
+    domain === 'rail'
+      ? `   Catatan Overlay 2D: Jika shot_type="diagram_overlay", taruh <RailCurveOverlay curveArc inertiaArrow /> sebagai anak langsung dari <HudLayout> (di dalam prop hud={...}), DILARANG menaruhnya di children 3D <BlueprintStage>!`
+      : `   Catatan Overlay 2D: Untuk domain "${domain}", DILARANG mengimpor RailCurveOverlay atau komponen domain lain! Jika shot_type="diagram_overlay", taruh <DiagramOverlay axisGuides highlightRing /> sebagai anak langsung dari <HudLayout> (di dalam prop hud={...}), DILARANG menaruhnya di children 3D <BlueprintStage>!`;
+
+  return `Tulis satu komponen adegan Remotion TSX bernama "${exportName}" (<= 220 baris) untuk adegan "${sbScene.id}" (domain: "${domain}", shot_type: "${sbScene.shot_type ?? 'closeup'}").
 
 Spesifikasi Storyboard:
 ${JSON.stringify(sbScene, null, 2)}
@@ -115,18 +136,15 @@ ATURAN MUTLAK:
     sbScene.driver?.unit === 'deg' ? '°' : sbScene.driver?.unit ?? ''
   }', startSec: ${triggerRelSec}, durationSec: ${driverDur}, curve: 'linear' }).
 4. Bungkus 3D + HUD dalam <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy"><BlueprintStage palette="blueprint-navy" telemetry={telemetry} hud={...}>...</BlueprintStage></SceneTransition>.
-5. Pilih rakitan sesuai shot_type/focus_entities (CameraRig HANYA mendukung mode="frameEntities", DILARANG mode="follow" dan DILARANG menyetel from/to/radius/height manual! Jika memakai curveRadius, hitung const wl = computeWheelsetLayout({ distance: driver.value, curveStartZ: 2, curveRadius: 10 }); agar focusBox mengikuti tikungan):
-   - "train_car" (establishing/summary): hitung const distM = -2 + driver.progress * 5; lalu <CurvedRail startZ={-10} curveStartZ={2} curveRadius={16} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <TrainCar entityId="train_car" distance={distM} curveStartZ={2} curveRadius={16} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }} padding={1.25} startAngleDeg={-20} endAngleDeg={20} (gunakan distM dan curveRadius: 16 pada computeWheelsetLayout!).
-   - "rail_cross_section" (cross_section): <Ground size={40} divisions={40} y={0} /> + <RailCrossSection entityId="rail_cross_section" view="section" lateralShift={driver.unit === 'mm' ? driver.value * 0.001 : 0.045 * Math.sin(driver.progress * Math.PI)} taperExaggeration={12} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 0.55, 0], size: [1.9, 1.15, 0.35] }} padding={1.15} startAngleDeg={0} endAngleDeg={0} elevationDeg={2}. WAJIB sertakan <ExaggerationBadge factor={12} palette="blueprint-navy" /> di dalam <HudLayout>!
-   - "wheelset": <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <WheelsetOnRail entityId="wheelset" distance={driver.value} taperExaggeration={4.5} curveStartZ={2} curveRadius={10} highlightContact palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }} padding={1.25} elevationDeg={22}.
-   - "engine_block" (establishing/summary/cutaway): <Ground size={36} divisions={36} y={-0.55} /> + <EngineBlock entityId="engine_block" crankAngleDeg={driver.value} cutawayProgress={driver.progress} position={[0, 0.45, 0]} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }} padding={1.25}.
-   - "piston_crank": <Ground size={36} divisions={36} y={-0.55} /> + <PistonCrankAssembly entityId="piston_crank" crankAngleDeg={driver.value} position={[0, 0.45, 0]} cutaway palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }} padding={1.22} elevationDeg={12}. Jika menampilkan panah gerak piston, WAJIB pakai <MotionArrow bindToPart="piston" velocity={[0, -Math.sin((driver.value * Math.PI) / 180), 0]} ... /> (DILARANG <Arrow3D>).
+5. Pilih rakitan HANYA dari domain "${domain}" sesuai shot_type/focus_entities (CameraRig HANYA mendukung mode="frameEntities", DILARANG mode="follow" dan DILARANG menyetel from/to/radius/height manual!):
+${assemblyRecipes}
 6. DILARANG menulis teks HUD langsung atau memanggil KineticTitle/Callout/MeasureReveal/StatCounter/CompareCard langsung!
-   Di prop hud={<HudLayout palette="blueprint-navy"><HudZone zone="callout" palette="blueprint-navy">...</HudZone></HudLayout>} (HudZone HANYA menerima zone="title" atau zone="callout", DILARANG "footer"), HANYA gunakan:
+   Di prop hud={<HudLayout palette="blueprint-navy"><HudZone zone="callout" palette="blueprint-navy">...</HudZone></HudLayout>} (HudZone HANYA menerima zone="title" atau zone="callout", DILARANG "footer", "bottomLeft", "bottomRight", "topLeft", "topRight"), HANYA gunakan:
 ${hudTags}
-   Catatan DiagramOverlay: <DiagramOverlay curveArc inertiaArrow /> adalah elemen SVG 2D! Jika shot_type="diagram_overlay", taruh <DiagramOverlay curveArc inertiaArrow /> sebagai anak langsung dari <HudLayout> (di dalam prop hud={...}), DILARANG menaruh <DiagramOverlay> di dalam children 3D <BlueprintStage> (akan crash Three.js R3F)!
+${overlayNote}
+7. DILARANG memakai Math.random, Date.now, new Date(, performance.now, setTimeout, setInterval, requestAnimationFrame, useFrame, atau clock. Semua gerak wajib deterministik dari useDriver / useCurrentFrame.
 
-${KIT_SUMMARY_FOR_LLM}
+${buildKitSummaryForDomain(domain)}
 
 Kembalikan JSON { "tsx": "..." }.`;
 }
@@ -213,8 +231,10 @@ export async function runScenesStage(
         }
       }
 
+      const domain = detectTopicDomain(project.topic);
       const basePrompt = buildScenePrompt({
         projectId: safeSlug,
+        domain,
         sbScene,
         narrationText,
         triggerRelSec,
@@ -254,7 +274,7 @@ export async function runScenesStage(
           clearRemotionBundleCache();
         }
 
-        const safety = validateSceneCodeSafety(code);
+        const safety = validateSceneCodeSafety(code, domain);
         if (!safety.ok) {
           lastErrors = safety.errors;
         } else {

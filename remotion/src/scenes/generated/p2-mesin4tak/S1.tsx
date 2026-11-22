@@ -11,7 +11,7 @@ import {
   HudZone,
   Hud,
   useDriver,
-  StoryboardHudDataItem
+  StoryboardHudDataItem,
 } from '../../../kit';
 
 export interface Scene_S1Props {
@@ -23,11 +23,11 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'crank_angle',
     from: 0,
-    to: 180,
+    to: 90,
     unit: '°',
-    startSec: 3.79,
-    durationSec: 1.07,
-    curve: 'linear'
+    startSec: 1.29,
+    durationSec: 8.05,
+    curve: 'linear',
   });
 
   return (
@@ -57,17 +57,20 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         <CameraRig
           mode="frameEntities"
           focusBox={{
-            center: [0, 1.15, 0],
-            size: [1.2, 1.8, 1.2]
+            center: [0, 1.72, 0],
+            size: [2.05, 3.15, 2.05],
           }}
-          padding={1.05}
+          padding={1.25}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false, hudData = [] }) => (
+export const Scene_S1: React.FC<Scene_S1Props> = ({
+  telemetry = false,
+  hudData = [],
+}) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>
       <Scene_S1Inner telemetry={telemetry} />

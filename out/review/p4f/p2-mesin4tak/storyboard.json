@@ -1,0 +1,230 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "dolly_in",
+      "duration_sec": 9.337,
+      "sentence_refs": [
+        "S1.1",
+        "S1.2"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 90
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Bagaimana mesin 4 tak bekerja?",
+            "subtitle": "Siklus Otto"
+          },
+          "illustrative": true
+        },
+        {
+          "hud_id": "S1_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Siklus termodinamika ideal"
+          },
+          "claim_ref": "C8"
+        }
+      ],
+      "trigger_words": [
+        "piston",
+        "Siklus Otto"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 5.762,
+      "sentence_refs": [
+        "S2.1"
+      ],
+      "focus_entities": [
+        "cylinder_section"
+      ],
+      "visible_parts": [
+        "piston",
+        "intake_valve",
+        "combustion_chamber"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 180
+      },
+      "invariants": [
+        {
+          "entity": "intake_valve",
+          "state": "open=true",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah isap katup terbuka"
+          },
+          "claim_ref": "C5",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "langkah isap",
+        "silinder"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "closeup",
+      "camera_move": "orbit_curve",
+      "duration_sec": 18.772,
+      "sentence_refs": [
+        "S3.1",
+        "S3.2",
+        "S3.3",
+        "S3.4"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "spark_plug",
+        "exhaust_valve"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 180,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "spark_plug",
+          "state": "spark=true",
+          "when": {
+            "driver_between": [
+              350,
+              370
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Kompresi dan penyalaan busi"
+          },
+          "claim_ref": "C3",
+          "when": {
+            "driver_between": [
+              180,
+              360
+            ]
+          }
+        },
+        {
+          "hud_id": "S3_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Kerja mekanis poros engkol"
+          },
+          "claim_ref": "C4",
+          "when": {
+            "driver_between": [
+              360,
+              540
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "kompresi",
+        "Busi"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "dolly_in",
+      "duration_sec": 9.574,
+      "sentence_refs": [
+        "S4.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block",
+        "crank"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C2",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        },
+        {
+          "hud_id": "S4_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Total rotasi 720 derajat"
+          },
+          "claim_ref": "C2"
+        }
+      ],
+      "trigger_words": [
+        "poros engkol",
+        "720 derajat"
+      ]
+    }
+  ]
+}
