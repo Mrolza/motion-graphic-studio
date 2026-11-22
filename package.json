@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "mgs": "node --env-file-if-exists=.env.local --import tsx src/cli/index.ts",
+    "generate:kit-api": "node --import tsx scripts/generate-kit-api.ts",
+    "prebuild": "npm run generate:kit-api",
     "typecheck": "tsc --noEmit && npm --prefix remotion run typecheck",
     "test": "vitest run",
     "check:size": "node --import tsx scripts/check-size.ts",
-    "verify": "npm run typecheck && npm run test && npm run check:size"
+    "verify": "npm run generate:kit-api && npm run typecheck && npm run test && npm run check:size"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",

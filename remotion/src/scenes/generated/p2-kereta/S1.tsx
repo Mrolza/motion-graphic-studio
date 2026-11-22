@@ -1,41 +1,43 @@
 import React from 'react';
 import {
-  TelemetryProvider,
   StoryboardHudProvider,
+  TelemetryProvider,
   SceneTransition,
   BlueprintStage,
   CameraRig,
-  Ground,
-  CurvedRail,
-  TrainCar,
   HudLayout,
   HudZone,
   Hud,
-  computeWheelsetLayout,
   useDriver,
-  StoryboardHudDataItem
+  computeWheelsetLayout,
+  TrainCar,
+  CurvedRail,
+  Ground
 } from '../../../kit';
 
 export interface Scene_S1Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
-const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
+const Scene_S1Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'distance',
     from: 0,
-    to: 5,
+    to: 10,
     unit: 'm',
-    startSec: 2.35,
-    durationSec: 2.16,
-    curve: 'linear',
+    startSec: 3.36,
+    durationSec: 0.8,
+    curve: 'linear'
   });
 
+  const distM = -2 + driver.progress * 5;
+  const curveRadius = 16;
+  const curveStartZ = 2;
   const wl = computeWheelsetLayout({
     distance: driver.value,
-    curveStartZ: 2,
-    curveRadius: 10,
+    curveStartZ,
+    curveRadius
   });
 
   return (
@@ -51,10 +53,17 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }}
+          padding={0.7}
+          startAngleDeg={-20}
+          endAngleDeg={20}
+        />
         <CurvedRail
           startZ={-10}
-          curveStartZ={2}
-          curveRadius={10}
+          curveStartZ={curveStartZ}
+          curveRadius={curveRadius}
           curveLength={18}
           gauge={1.435}
           highlighted
@@ -63,25 +72,20 @@ const Scene_S1Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
         <Ground size={60} divisions={60} y={0} />
         <TrainCar
           entityId="train_car"
-          distance={driver.value}
-          curveStartZ={2}
-          curveRadius={10}
+          distance={distM}
+          curveStartZ={curveStartZ}
+          curveRadius={curveRadius}
           palette="blueprint-navy"
-        />
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }}
-          padding={1.22}
-          startAngleDeg={-22}
-          endAngleDeg={22}
-          durationSec={4.512}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
 
-export const Scene_S1: React.FC<Scene_S1Props> = ({ telemetry = false, hudData = [] }) => (
+export const Scene_S1: React.FC<Scene_S1Props> = ({
+  telemetry = false,
+  hudData = []
+}) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>
       <Scene_S1Inner telemetry={telemetry} />

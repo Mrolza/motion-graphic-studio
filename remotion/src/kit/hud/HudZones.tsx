@@ -6,9 +6,9 @@ export type HudZoneId = 'title' | 'free' | 'callout' | 'caption';
 
 const ZONE_RECTS: Record<HudZoneId, { top: number; maxHeight: number }> = {
   title: { top: 72, maxHeight: 160 },
-  free: { top: 240, maxHeight: 540 },
-  callout: { top: 790, maxHeight: 140 },
-  caption: { top: 942, maxHeight: 78 },
+  free: { top: 240, maxHeight: 490 },
+  callout: { top: 740, maxHeight: 170 },
+  caption: { top: 935, maxHeight: 82 },
 };
 
 export interface HudLayoutProps {
@@ -70,6 +70,7 @@ export const HudZone: React.FC<HudZoneProps> = ({
         left: tokens.safeZone.left,
         right: 112,
         maxHeight: rect.maxHeight,
+        overflow: zone === 'callout' || zone === 'caption' ? 'hidden' : 'visible',
         display: 'flex',
         flexDirection: 'column',
         alignItems: align,

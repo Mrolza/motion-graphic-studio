@@ -70,6 +70,12 @@ export function validateSceneCodeSafety(code: string): SafetyValidationResult {
       'MISSING_TELEMETRY_WRAPPER: adegan wajib memakai TelemetryProvider, BlueprintStage, dan minimal satu TelemetryEntity/Rakitan'
     );
   }
+  const telemetryProviderCount = (code.match(/<\s*TelemetryProvider\b/g) ?? []).length;
+  if (telemetryProviderCount > 1) {
+    errors.push(
+      'DOUBLE_TELEMETRY_PROVIDER: hanya boleh ada tepat 1 <TelemetryProvider> di wrapper luar; jangan membungkus *Inner dengan <TelemetryProvider> lagi'
+    );
+  }
 
   const directHudMatches = code.match(
     /<\s*(KineticTitle|Callout|MeasureReveal|StatCounter|CompareCard|ListReveal|DimensionLine)\b/g

@@ -5,11 +5,11 @@ import { promisify } from 'node:util';
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
 import ffprobeInstaller from '@ffprobe-installer/ffprobe';
 import type { QcIssue } from '@core/contracts/qc-report';
-import type { Script } from '@core/contracts/script';
 import { TimelineSchema } from '@core/contracts/timeline';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
-import { checkCaptionsQc } from '@core/qc/captions-qc';
-import type { KineticCaptionChunk } from '@core/render/kinetic-captions';
+import { checkFinalTechnicalFormat, runFinalSyncAndOverlapChecks } from '@core/qc/final-checks';
+
+export { checkFinalTechnicalFormat };
 
 const execFileAsync = promisify(execFile);
 
@@ -131,15 +131,17 @@ export async function runFinalQcStage(
     }
   }
 
-  if (width !== 720 || height !== 1280) {
-    issues.push({ severity: 'error', message: `FINAL_RESOLUTION: ${width}x${height} != 720x1280`, ref: 'technical' });
-  }
-  if (Math.abs(fps - 30) > 0.1 || videoCodec !== 'h264' || (pixFmt !== 'yuv420p' && pixFmt !== 'yuvj420p')) {
-    issues.push({ severity: 'error', message: `FINAL_VIDEO_FORMAT: ${videoCodec}/${pixFmt} @ ${fps}fps`, ref: 'technical' });
-  }
-  if (audioCodec !== 'aac' || audioSampleRate !== 48000) {
-    issues.push({ severity: 'error', message: `FINAL_AUDIO_FORMAT: ${audioCodec} @ ${audioSampleRate}Hz`, ref: 'technical' });
-  }
+  issues.push(
+    ...checkFinalTechnicalFormat({
+      width,
+      height,
+      fps,
+      videoCodec,
+      pixFmt,
+      audioCodec,
+      audioSampleRate,
+    })
+  );
   if (!options?.skipAggregatedReports && (videoDurationSec < 30 || videoDurationSec > 60)) {
     issues.push({ severity: 'error', message: `FINAL_DURATION: ${videoDurationSec.toFixed(2)}s di luar [30, 60]s`, ref: 'technical' });
   }
@@ -282,21 +284,7 @@ export async function runFinalQcStage(
     } catch {
       issues.push({ severity: 'error', message: 'FINAL_MISSING_SCENE_SUMMARY', ref: 'facts' });
     }
-    try {
-      const script = JSON.parse(await readFile(path.join(projectDir, 'script.json'), 'utf-8')) as Script;
-      const timeline = TimelineSchema.parse(
-        JSON.parse(await readFile(path.join(projectDir, 'timeline.json'), 'utf-8'))
-      );
-      const chunks = JSON.parse(
-        await readFile(path.join(projectDir, 'captions.json'), 'utf-8')
-      ) as KineticCaptionChunk[];
-      const capRep = checkCaptionsQc({ chunks, script, timeline });
-      for (const iss of capRep.issues) {
-        issues.push(iss);
-      }
-    } catch {
-      issues.push({ severity: 'error', message: 'FINAL_MISSING_CAPTIONS', ref: 'captions' });
-    }
+    await runFinalSyncAndOverlapChecks(projectId, projectDir, issues);
   }
 
   const totalLlmCalls = Object.values(project.llm_calls).reduce((a, b) => a + b, 0);

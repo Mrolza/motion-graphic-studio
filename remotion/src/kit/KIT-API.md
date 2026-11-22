@@ -30,6 +30,16 @@ Twin steel rails with sleepers supporting a straight entry seamlessly into a cur
   - `highlighted?: boolean` — Highlight rails.
   - `palette?: PaletteId` — Palette token ID.
 
+### `EngineBlock`
+Exterior 4-stroke engine block with cooling fins that transitions cleanly into cutaway mode.
+- **Signature:** `<EngineBlock ...EngineBlockProps />`
+- **Props:**
+  - `entityId?: string`
+  - `crankAngleDeg: number`
+  - `cutawayProgress?: number` — 0 = solid exterior block, 1 = cutaway revealing PistonCrankAssembly inside.
+  - `position?: [number, number, number]`
+  - `palette?: PaletteId`
+
 ### `PistonCrankAssembly`
 4-stroke piston, connecting rod, crankshaft, enlarged intake/exhaust valves, spark plug, and driver-linked combustion chamber tint.
 - **Signature:** `<PistonCrankAssembly ...PistonCrankAssemblyProps />`
@@ -45,6 +55,17 @@ Twin steel rails with sleepers supporting a straight entry seamlessly into a cur
   - `detachRodOffset?: [number, number, number]` — Optional rod offset ONLY for geometry mutation testing (detaches rod from crank pin).
   - `palette?: PaletteId` — Palette token ID.
 
+### `RailCrossSection`
+RailCrossSection v3 (F1): True geometric portrait cross-section. Rails are fixed; wheelset shifts laterally, each wheel's height & axle tilt follow the exaggerated conical tread intersection with the fixed rail head top.
+- **Signature:** `<RailCrossSection ...RailCrossSectionProps />`
+- **Props:**
+  - `entityId?: string`
+  - `view?: 'section'`
+  - `lateralShift?: number`
+  - `gauge?: number`
+  - `taperExaggeration?: number`
+  - `palette?: PaletteId`
+
 ### `Suspension`
 Coil spring + telescopic damper anchored flush between an axle mount and an upper bogie frame.
 - **Signature:** `<Suspension ...SuspensionProps />`
@@ -58,7 +79,7 @@ Coil spring + telescopic damper anchored flush between an axle mount and an uppe
   - `palette?: PaletteId` — Palette token ID.
 
 ### `WheelsetOnRail`
-Conical wheelset seated flush on twin Z-axis rail heads, with axle perpendicular to the track, inner flanges, and rotation derived strictly from distance.
+Conical wheelset seated flush on twin Z-axis rail heads, with solid conical lathe tread + integral inner flange, perpendicular axle, and rotation from distance.
 - **Signature:** `<WheelsetOnRail ...WheelsetOnRailProps />`
 - **Props:**
   - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "wheelset".
@@ -148,9 +169,27 @@ Derives 4-stroke intake/exhaust valve states, spark timing, and stroke phase pur
 Formats numbers according to Indonesian locale (dots for thousands, commas for decimals).
 - **Signature:** `(value: number, decimals?: number) => string`
 
+### `normalizeUnit`
+Normalizes unit strings (e.g. "deg"/"derajat" -> "°") and formats value + unit in id-ID locale.
+- **Signature:** `(unit?: string | undefined) => string`
+
+### `formatValueWithUnit`
+- **Signature:** `(value: number, unit?: string | undefined, decimals?: number) => string`
+
+### `computeEffectiveCompareRadii`
+Computes exaggerated effective rolling radii (px) for side-by-side comparison.
+- **Signature:** `(lateralShift: number, maxShift?: number) => CompareRadiiResult`
+
 ### `useDriver`
 Single-source driver hook. Derives a continuous physical quantity per frame and reports it to telemetry when enabled.
 - **Signature:** `(config: DriverConfig) => DriverValue`
+
+### `TriggerProvider`
+- **Signature:** `<TriggerProvider />`
+
+### `useTrigger`
+Returns local start frame & second for a storyboard trigger word or hud_id.
+- **Signature:** `(target: string) => { startFrame: number; startSec: number; }`
 
 ## Foreground & Parallax
 
@@ -321,6 +360,31 @@ Foreground parallax elements (trackside poles, depth markers, floating particles
 
 ## HUD & Zone Layout
 
+### `DiagramOverlay`
+Pure vector 2D diagram overlay (arcs and directional arrows, no unsanctioned text) rendered over the 3D scene inside HudLayout.
+- **Signature:** `<DiagramOverlay ...DiagramOverlayProps />`
+- **Props:**
+  - `curveArc?: boolean` — Show curved track arc guide in the free zone.
+  - `inertiaArrow?: boolean` — Show straight inertia vector arrow in the free zone.
+  - `palette?: PaletteId` — Palette token ID.
+
+### `EffectiveDiameterCompare`
+Side-by-side wheel comparison illustrating larger effective diameter and longer travel distance for the outer wheel on a curve. Qualitative only (no numbers), with illustration badge.
+- **Signature:** `<EffectiveDiameterCompare ...EffectiveDiameterCompareProps />`
+- **Props:**
+  - `id?: string`
+  - `lateralShift: number` — Lateral shift in meters: >0 shifts toward right rail (right wheel = outer), <0 toward left rail.
+  - `maxShift?: number`
+  - `zone?: HudZoneId`
+  - `palette?: PaletteId`
+
+### `ExaggerationBadge`
+Mandatory kit badge whenever taperExaggeration > 1 in cross-section or wheelset views.
+- **Signature:** `<ExaggerationBadge ...ExaggerationBadgeProps />`
+- **Props:**
+  - `factor: number`
+  - `palette?: PaletteId`
+
 ### `KineticTitle`
 Primary kinetic title (>= 44px) placed in the top safe zone.
 - **Signature:** `<KineticTitle ...KineticTitleProps />`
@@ -340,6 +404,7 @@ Dynamic counter ONLY for changing quantities. Bound to driver when `driver` is p
   - `label: string`
   - `driver?: DriverValue` — Bound single driver. When provided, value comes strictly from driver with NO independent easing.
   - `bindToDriver?: boolean`
+  - `display?: 'value' | 'qualitative'`
   - `from?: number`
   - `to?: number`
   - `unit?: string`
@@ -457,6 +522,7 @@ Measures the rendered DOM bounding box of a HUD element and reports it to teleme
 - **Signature:** `<TelemetryHudBox ...TelemetryHudBoxProps />`
 - **Props:**
   - `id: string`
+  - `hudId?: string`
   - `component: string`
   - `zone: HudZoneId`
   - `text: string`
@@ -465,6 +531,31 @@ Measures the rendered DOM bounding box of a HUD element and reports it to teleme
   - `claimRef?: string`
   - `style?: React.CSSProperties`
   - `children: React.ReactNode`
+
+### `KineticCaptions`
+Renders 2–5 word kinetic captions in the safe 9:16 caption band (y=935..1017, x<=608) with active word highlighting synced to the VO word timeline.
+- **Signature:** `<KineticCaptions ...KineticCaptionsProps />`
+- **Props:**
+  - `chunks: readonly KineticCaptionItem[]`
+  - `palette?: PaletteId`
+  - `suppressRanges?: ReadonlyArray<{ start_sec: number; end_sec: number }>`
+
+### `StoryboardHudProvider`
+Provides storyboard-sanctioned HUD data items to <Hud id="..." /> components.
+- **Signature:** `<StoryboardHudProvider ...StoryboardHudProviderProps />`
+- **Props:**
+  - `items?: StoryboardHudDataItem[]`
+  - `children: React.ReactNode`
+
+### `Hud`
+Data-driven HUD component. Reads text and numeric values exclusively from storyboard data. Automatically hides when outside `when.driver_between`.
+- **Signature:** `<Hud ...HudProps />`
+- **Props:**
+  - `id: string` — Unique hud_id from storyboard.json.
+  - `driver?: DriverValue` — Optional active driver for bind_to_driver StatCounter or `when.driver_between` gating.
+  - `activeIndex?: number` — Optional active index override for ListReveal.
+  - `pointerTo?: [number, number]` — Optional screen pointer target [x, y] for Callout.
+  - `palette?: PaletteId` — Palette token ID.
 
 ## Motion & Core
 
@@ -561,17 +652,16 @@ Returns a pulsing highlight intensity in [0, 1] during [startSec, startSec + dur
 - **Signature:** `(sec: number, startSec?: number, durationSec?: number, pulseHz?: number) => number`
 
 ### `TrainCar`
+Low-poly train car aligned along the Z-axis track with front and rear WheelsetOnRail bogies seated flush on the rail heads (`y = 0.22`).
 - **Signature:** `<TrainCar ...TrainCarProps />`
 - **Props:**
-  - `position?: [number, number, number]`
-  - `from?: [number, number, number]`
-  - `to?: [number, number, number]`
-  - `easing?: EasingMode`
-  - `gauge?: number`
-  - `spinRps?: number`
-  - `length?: number`
-  - `startSec?: number`
-  - `durationSec?: number`
+  - `entityId?: string` — Entity ID for telemetry and framing QC. Defaults to "train_car".
+  - `distance?: number` — Travel distance along the Z-axis track (from useDriver).
+  - `curveStartZ?: number` — Optional curve start Z and curve radius (>0 curves toward +X).
+  - `curveRadius?: number`
+  - `gauge?: number` — Track gauge. Defaults to 1.435.
+  - `length?: number` — Car body length. Defaults to 5.6.
+  - `palette?: PaletteId` — Palette token ID.
 
 ## Telemetry
 

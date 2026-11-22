@@ -38,29 +38,31 @@ export const EffectiveDiameterCompare: React.FC<EffectiveDiameterCompareProps> =
       hudId={id}
       component="EffectiveDiameterCompare"
       zone={zone}
-      text={`Ilustrasi — skala dilebihkan | ${leftLabel} vs ${rightLabel}`}
+      text={`Diameter Efektif (Ilustrasi — skala dilebihkan) | ${leftLabel} vs ${rightLabel}`}
       style={{
         backgroundColor: tokens.colors.panelBg,
         border: `1.5px solid ${tokens.colors.panelBorder}`,
         borderRadius: 12,
-        padding: '10px 14px',
+        padding: '6px 12px',
+        maxHeight: 164,
+        overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        gap: 8,
+        gap: 4,
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: 20, fontWeight: 700, color: tokens.colors.accent }}>
-          Ilustrasi — skala dilebihkan
+        <span style={{ fontSize: 18, fontWeight: 700, color: tokens.colors.accent, whiteSpace: 'nowrap' }}>
+          Diameter Efektif — Ilustrasi (skala dilebihkan)
         </span>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: 16 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', gap: 12 }}>
         {[
           { label: leftLabel, r: radii.leftRadiusPx, travelW: leftTravelW, isOuter: radii.outerSide === 'left' },
           { label: rightLabel, r: radii.rightRadiusPx, travelW: rightTravelW, isOuter: radii.outerSide === 'right' },
         ].map((w, idx) => (
-          <div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-            <svg width={116} height={108} viewBox="0 0 116 108">
+          <div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+            <svg width={104} height={82} viewBox="0 0 116 108">
               <circle
                 cx={58}
                 cy={54}

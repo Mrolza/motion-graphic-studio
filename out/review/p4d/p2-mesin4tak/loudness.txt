@@ -1,0 +1,27 @@
+Integrated: -14.5 LUFS
+True Peak: -3 dBFS
+Sample Rate: 48000 Hz
+SFX Events: 5
+BGM: none (no files in assets/bgm/)
+
+--- ebur128 summary ---
+.2 S: -10.8     I: -14.5 LUFS       LRA:   4.9 LU  FTPK:  -4.6  -4.6 dBFS  TPK:  -3.0  -3.0 dBFS
+[Parsed_ebur128_0 @ 0000024059e29b80] t: 30.2       TARGET:-23 LUFS    M: -11.2 S: -10.9     I: -14.5 LUFS       LRA:   5.0 LU  FTPK:  -4.7  -4.7 dBFS  TPK:  -3.0  -3.0 dBFS
+[Parsed_ebur128_0 @ 0000024059e29b80] t: 30.3       TARGET:-23 LUFS    M: -11.7 S: -10.9     I: -14.5 LUFS       LRA:   5.0 LU  FTPK:  -4.3  -4.3 dBFS  TPK:  -3.0  -3.0 dBFS
+size=N/A time=00:00:30.34 bitrate=N/A speed= 296x    
+video:0kB audio:5690kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+[Parsed_ebur128_0 @ 0000024059e29b80] Summary:
+
+  Integrated loudness:
+    I:         -14.5 LUFS
+    Threshold: -24.5 LUFS
+
+  Loudness range:
+    LRA:         5.0 LU
+    Threshold: -34.8 LUFS
+    LRA low:   -16.7 LUFS
+    LRA high:  -11.8 LUFS
+
+  True peak:
+    Peak:       -3.0 dBFS
+

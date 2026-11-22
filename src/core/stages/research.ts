@@ -11,6 +11,7 @@ import {
   saveProject,
 } from '@core/project/store';
 import { evaluateL0, verifyLedgerL1 } from '@core/qc/l1-ledger';
+import { verifyLedgerL1Semantic } from '@core/qc/l1-semantic';
 import {
   fetchTodayInHistorySources,
   fetchWikipediaSourcesForConcept,
@@ -88,7 +89,7 @@ async function extractClaimsFromSources(params: {
 ATURAN MUTLAK:
 1. Nilai setiap sumber di "source_evaluations": "relevant" (menjawab langsung), "partial" (terkait sebagian), atau "irrelevant" (menyimpang/tidak menjawab topik, misalnya membahas satu kereta tertentu padahal topik menanyakan mekanisme umum).
 2. "quote" HARUS berupa KALIMAT UTUH (diawali huruf kapital/awal kalimat dan diakhiri tanda baca titik/tanda tanya/seru) yang disalin KARAKTER-DEMI-KARAKTER dari teks sumber dengan "source_id" yang sesuai. JANGAN memotong frasa di tengah kalimat. JANGAN menyisipkan angka, tahun, tanggal, atau nama depan/tokoh dari kalimat lain: setiap angka/tahun/tanggal dan nama diri di "text" WAJIB benar-benar muncul di "quote" tersebut (mis. jika kutipan hanya menyebut "Armstrong", tulis "Armstrong", bukan "Neil Armstrong"). Pastikan ada klaim yang kutipannya memuat tanggal dan tahun lengkap secara eksplisit bila relevan dengan topik.
-3. "text" ditulis dalam bahasa Indonesia yang jelas.
+3. "text" ditulis dalam bahasa Indonesia yang jelas. PERTAHANKAN kata hedge/peluang dari kutipan (mis. "most"->"sebagian besar", "less chance"->"peluang lebih kecil", "about"->"sekitar", "may"->"dapat") dan JANGAN menambahkan kata mutlak ("tanpa", "selalu", "pasti", "terus", "semua") jika tidak ada di kutipan.
 4. "kind" WAJIB salah satu dari: "fact", "estimate", "hypothetical", "interpretation".
 5. Jika klaim menyebut angka penting, isi "value" (angka murni) dan "unit". Jika tidak ada, hilangkan (jangan null).
 6. Isi "supports_core_claim_indices" (array indeks 0-based core_claims yang didukung klaim ini).
@@ -256,10 +257,10 @@ export async function runResearchStage(
 
       const l1 = verifyLedgerL1(claims, currentSources, claimSourceIds);
       const l0 = evaluateL0(concept.core_claims, l1.ledger.claims, coreMapping);
-      return { l1, l0 };
+      return { l1, l0, coreMapping };
     };
 
-    let { l1, l0 } = buildLedgerAndL0(sources, allRawClaims);
+    let { l1, l0, coreMapping } = buildLedgerAndL0(sources, allRawClaims);
 
     // Fixed L0 logic: if any core_claims are unsupported, run ONE targeted follow-up research round
     if (!l0.passed) {
@@ -309,8 +310,25 @@ export async function runResearchStage(
           if (!allEvals.has(k)) allEvals.set(k, v);
         }
         allRawClaims.push(...secondPass.rawClaims);
-        ({ l1, l0 } = buildLedgerAndL0(sources, allRawClaims));
+        ({ l1, l0, coreMapping } = buildLedgerAndL0(sources, allRawClaims));
       }
+    }
+
+    const l1Semantic = await verifyLedgerL1Semantic(l1.ledger.claims, { onCall: trackCall });
+    if (l1Semantic.issues.length > 0) {
+      l1 = {
+        ledger: {
+          ...l1.ledger,
+          claims: l1.ledger.claims.map((c) =>
+            l1Semantic.unverifiedIds.has(c.id) ? { ...c, status: 'unverified' } : c
+          ),
+        },
+        report: {
+          ...l1.report,
+          issues: [...l1.report.issues, ...l1Semantic.issues],
+        },
+      };
+      l0 = evaluateL0(concept.core_claims, l1.ledger.claims, coreMapping);
     }
 
     const sourceReport: SourceReportEntry[] = sources.map((s) => {

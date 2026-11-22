@@ -7,8 +7,9 @@ import type { Script } from '@core/contracts/script';
 import { StoryboardSchema, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
-import type { RunLlmTracker } from '@core/llm/budget';
+import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
+import { QC_RULES_VERSION } from '@core/qc/rules-version';
 import { verifyStoryboardL5Semantic, type L5SemanticVerdict } from './l5-semantic';
 import { verifyStoryboardCode } from './storyboard-code';
 
@@ -31,7 +32,7 @@ const StoryboardLlmReviewSchema = z.object({
 export async function runStoryboardQcStage(
   projectId: string,
   repoRoot = process.cwd(),
-  options?: { tracker?: RunLlmTracker }
+  options?: { tracker?: RunLlmTracker; generateJsonFn?: typeof generateJson }
 ): Promise<{ storyboard: Storyboard; report: QcReport; rewritten: boolean }> {
   const projectDir = getProjectDir(projectId, repoRoot);
   const project = await loadProject(projectId, repoRoot);
@@ -48,9 +49,12 @@ export async function runStoryboardQcStage(
     const ledger = JSON.parse(await readFile(path.join(projectDir, 'fact-ledger.json'), 'utf-8')) as FactLedger;
 
     let latestVerdicts: L5SemanticVerdict[] = [];
+    const l5MetaPath = path.join(projectDir, 'qc', 'l5-semantic.meta.json');
+    const genFn = options?.generateJsonFn ?? generateJson;
+
     const checkOnce = async (sb: Storyboard): Promise<QcReport> => {
       const codeRep = verifyStoryboardCode(sb, script, timeline, ledger);
-      const llmRes = await generateJson(
+      const llmRes = await genFn(
         StoryboardLlmReviewSchema,
         `Periksa konsistensi visual storyboard terhadap naskah dan klaim verified:\n` +
           `1. Apakah rencana visual & komponen tiap adegan konsisten dengan klaim yang dirujuk (mis. flens di sisi dalam, piston turun saat hisap)?\n` +
@@ -76,15 +80,41 @@ export async function runStoryboardQcStage(
         message: `SB_LLM: ${iss.message}`,
         ref: iss.scene_id,
       }));
-      const l5Sem = await verifyStoryboardL5Semantic({
-        topic: project.topic,
-        storyboard: sb,
-        ledger,
-        tracker: options?.tracker,
-        onCall: () => {
-          llmCalls++;
-        },
-      });
+
+      const l5Hash = computeStableHash({ storyboard: sb, ledger, rulesVersion: QC_RULES_VERSION });
+      let l5Sem: { report: QcReport; verdicts: L5SemanticVerdict[] } | null = null;
+      try {
+        const cachedMeta = JSON.parse(await readFile(l5MetaPath, 'utf-8')) as {
+          hash?: string;
+          report?: QcReport;
+          verdicts?: L5SemanticVerdict[];
+        };
+        if (cachedMeta.hash === l5Hash && cachedMeta.report && cachedMeta.verdicts) {
+          l5Sem = { report: cachedMeta.report, verdicts: cachedMeta.verdicts };
+        }
+      } catch {
+        // Cache miss
+      }
+
+      if (!l5Sem) {
+        l5Sem = await verifyStoryboardL5Semantic({
+          topic: project.topic,
+          storyboard: sb,
+          ledger,
+          tracker: options?.tracker,
+          generateJsonFn: genFn,
+          onCall: () => {
+            llmCalls++;
+          },
+        });
+        await mkdir(path.join(projectDir, 'qc'), { recursive: true });
+        await writeFile(
+          l5MetaPath,
+          JSON.stringify({ hash: l5Hash, report: l5Sem.report, verdicts: l5Sem.verdicts }, null, 2),
+          'utf-8'
+        );
+      }
+
       latestVerdicts = l5Sem.verdicts;
       return { layer: 'L4', issues: [...codeRep.issues, ...llmIssues, ...l5Sem.report.issues] };
     };
@@ -95,7 +125,7 @@ export async function runStoryboardQcStage(
     const errors = report.issues.filter((i) => i.severity === 'error');
     if (errors.length > 0) {
       rewritten = true;
-      const rw = await generateJson(
+      const rw = await genFn(
         StoryboardSchema,
         `Perbaiki storyboard berikut agar lolos semua pemeriksaan (0 error):\n${errors
           .map((e) => `- [${e.ref}] ${e.message}`)

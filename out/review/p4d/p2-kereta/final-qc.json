@@ -1,0 +1,59 @@
+{
+  "projectId": "p2-kereta",
+  "passed": true,
+  "technical": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30,
+    "videoCodec": "h264",
+    "pixFmt": "yuv420p",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "videoDurationSec": 36.433333,
+    "audioDurationSec": 36.421,
+    "avDiffMs": 12,
+    "frameCount": 1093,
+    "expectedFrames": 1093
+  },
+  "audio": {
+    "integratedLufs": -14.3,
+    "truePeakDbfs": -2.7,
+    "maxVoGapSec": 0,
+    "silenceHits": 0
+  },
+  "visual": {
+    "blackHits": 0,
+    "freezeHits": 0
+  },
+  "process": {
+    "totalLlmCalls": 382,
+    "exceedsPrdLlmBudget": true
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S2_H1\" berbagi 75% kata dengan caption simultan",
+      "ref": "S2:S2_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S4_H1\" berbagi 100% kata dengan caption simultan",
+      "ref": "S4:S4_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S4_H2\" berbagi 100% kata dengan caption simultan",
+      "ref": "S4:S4_H2"
+    },
+    {
+      "severity": "warning",
+      "message": "HUD_DUPLICATES_CAPTION: Callout \"S5_H1\" berbagi 100% kata dengan caption simultan",
+      "ref": "S5:S5_H1"
+    },
+    {
+      "severity": "warning",
+      "message": "PROCESS_LLM_BUDGET: total panggilan LLM S1–S12 = 382 (> 15 batas PRD §5)",
+      "ref": "process"
+    }
+  ]
+}

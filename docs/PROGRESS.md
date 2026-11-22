@@ -441,3 +441,45 @@
   - Lengkap dengan [`onscreen-text.md`](../out/review/p4/p2-mesin4tak/onscreen-text.md), [`captions.srt`](../out/review/p4/p2-mesin4tak/captions.srt), [`publish.md`](../out/review/p4/p2-mesin4tak/publish.md), [`loudness.txt`](../out/review/p4/p2-mesin4tak/loudness.txt), [`contact-sheet.png`](../out/review/p4/p2-mesin4tak/contact-sheet.png), dan 4 still (`S1`–`S4`).
 - **Mutasi 1–16 ([`mutations/mutation-summary.md`](../out/review/p4/mutations/mutation-summary.md)):** **16/16 mutasi tertangkap** (termasuk mutasi real-render MP4 8–11: `FINAL_LOUDNESS`, `FINAL_DEAD_AIR`, `FINAL_BLACK_FRAMES`, `FINAL_FRAME_COUNT`).
 - **Statistik & Verifikasi:** [`stats.md`](../out/review/p4/stats.md) & [`verify.txt`](../out/review/p4/verify.txt).
+
+---
+
+## Fase P4D — Sinkronisasi Kebenaran & Layar (`docs/P4D-TRUTH-SYNC.md`)
+
+- **Status:** **DONE**
+- **Branch:** `phase/p4d-truth-sync` (tag awal `p4d-start`, setelah merge `phase/p4-audio-final` ke `main` dengan tag `p4-done`)
+- **Tanggal:** 2026-11-22
+
+### Apa yang Diperbaiki & Dibuat (Bagian A–C, 0 Panggilan Gemini)
+1. **Bagian A — Kebenaran di Hulu (`hedge-glossary.ts`, `l1-ledger.ts`, `l1-semantic.ts`, `research.ts`, `l0b-quality.ts`, `publish.ts`):**
+   - **A1:** `src/core/qc/hedge-glossary.ts` & `src/core/qc/l1-ledger.ts` mendeteksi `L1_HEDGE_DROPPED` dan `L1_ABSOLUTE_ADDED` (`"tanpa"` hanya diizinkan jika kutipan memakai `"without"`).
+   - **A2:** `src/core/qc/l1-semantic.ts` (1 panggilan LLM per ledger di `runResearchStage`) mendeteksi `L1_EMBELLISHED` dan `L1_HEDGE_DROPPED`.
+   - **A3:** `src/core/qc/l0b-quality.ts` baris **79** (`quotes: c.sources.map((s) => s.quote).filter(Boolean)`) dan baris **104–105** (instruksi membandingkan kalimat naskah langsung terhadap semua kutipan sumber asli `quotes`, bukan hanya `claim_text`).
+   - **A4:** `BAD_CLAIM_REF`, `SB_UNVERIFIED_CLAIM`, dan `validatePublishSources` menolak klaim berstatus `unverified`.
+2. **Bagian B — Kebenaran Layar & Sinkron (`layout-zones.ts`, `HudZones.tsx`, `HudCore.tsx`, `KineticCaptions.tsx`, `EffectiveDiameterCompare.tsx`, `captions-qc.ts`, `narration-hud-conflict.ts`, `storyboard.ts`, `storyboard-code.ts`):**
+   - **B1 (`captions-qc.ts`):** Pemindaian telemetri DOM setiap ≤ 5 frame di seluruh durasi video (`AssembledTelemetryEmitter` di `final-render.ts` & `TelemetryContext.tsx`), menghasilkan `overlap-scan.md` (termasuk uji regresi terhadap `out/review/p4/p2-kereta/storyboard.json` yang gagal `CAPTION_HUD_OVERLAP` sejak `f130` / `4.33s`).
+   - **B2 (`layout-zones.ts`, `HudZones.tsx`, `HudCore.tsx`, `EffectiveDiameterCompare.tsx`):** Zona eksklusif (`callout`: `740..910`, `caption`: `935..1017 < 1024`), `Callout` dibatasi 2 baris (`WebkitLineClamp`), dan `EffectiveDiameterCompare` diringkas (`maxHeight: 164`).
+   - **B3–B4 (`narration-hud-conflict.ts`):** `L5_NARRATION_HUD_CONFLICT` (error jika HUD & narasi klaim sama bertentangan mutlak vs hedge) dan `HUD_DUPLICATES_CAPTION` (warning jika ≥ 70% kata sama dengan takarir simultan).
+   - **B5 (`contracts/storyboard.ts`, `l5-semantic.ts`, `storyboard-code.ts`, `final-render.ts`):** Dukungan `claim_refs?: string[]` pada HUD multi-klaim.
+3. **Bagian C — Cache Jujur & Format Standar (`rules-version.ts`, `final.ts`, `final-checks.ts`, `final-render.ts`, `qc/storyboard.ts`, `llm/stats.ts`, `package.json`):**
+   - **C1:** `QC_RULES_VERSION = 'p4d-v1'` & `KIT-API.md` hash pada cache storyboard & scene; `generate:kit-api` masuk `prebuild` & `verify`.
+   - **C2:** `runFinalQcStage` selalu menjalankan ulang cek kode deterministik (`verifyStoryboardCode`, `verifyNarrationHudSync`, `checkCaptionsQc` + `overlap-scan.md`) walau artefak di-cache.
+   - **C3:** `src/core/llm/stats.ts` mengagregasi seluruh run dari `llm-calls.jsonl` dan menulis `"dipakai ulang"` saat chunk dipakai ulang.
+   - **C4:** `qc/l5-semantic.meta.json` men-cache hasil L5 semantik per versi `{storyboard, ledger, rulesVersion}` (1 panggilan per versi storyboard, teruji di `tests/p4dTruthSync.test.ts`).
+   - **C5:** `final-render.ts` mewajibkan `pixelFormat: 'yuv420p'` (`libx264 -pix_fmt yuv420p`) dan `final-checks.ts` menolak selain `yuv420p` (`FINAL_PIXFMT`).
+
+### Hasil Bagian D & Bukti (`out/review/p4d/`)
+- **`p2-kereta` (profil `standar`, [`out/review/p4d/p2-kereta/`](../out/review/p4d/p2-kereta/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4d/p2-kereta/final-qc.md) (**PASS**): `720×1280 @ 30fps (h264/yuv420p)`, `1093/1093 frames`, `36.43s`, `aac 48000Hz`, **`-14.3 LUFS`**, `peak -2.7 dBFS`, `A/V diff 12ms`, `silence hits=0`, `black=0`, `freeze=0`.
+  - [`overlap-scan.md`](../out/review/p4d/p2-kereta/overlap-scan.md): Mode `telemetry`, step `5` frame, `219` frame dipindai, **`0` overlap**.
+  - `S3` memakai `EffectiveDiameterCompare`; seluruh callout S1–S5 ≤ 6 kata (≤ 8 kata batas warning, 0 > 12 kata); narasi, caption, HUD, dan [`publish.md`](../out/review/p4d/p2-kereta/publish.md) bersih dari `"tanpa flens bergesekan"` dan `"terus melaju lurus"` tanpa hedge.
+  - Perbandingan sebelum/sesudah: [`ledger-diff.md`](../out/review/p4d/p2-kereta/ledger-diff.md), [`script-diff.md`](../out/review/p4d/p2-kereta/script-diff.md), [`onscreen-text.md`](../out/review/p4d/p2-kereta/onscreen-text.md), [`captions.srt`](../out/review/p4d/p2-kereta/captions.srt), [`contact-sheet.png`](../out/review/p4d/p2-kereta/contact-sheet.png), dan 5 still (`S1`–`S5`).
+- **`p2-mesin4tak` (profil `hemat`, [`out/review/p4d/p2-mesin4tak/`](../out/review/p4d/p2-mesin4tak/)):**
+  - `final.mp4`, [`final-qc.md`](../out/review/p4d/p2-mesin4tak/final-qc.md) (**PASS**): `720×1280 @ 30fps (h264/yuv420p)`, `910/910 frames`, `30.33s`, `aac 48000Hz`, **`-14.5 LUFS`**, `peak -3 dBFS`, `A/V diff 0ms`, `silence hits=0`, `black=0`, `freeze=0`.
+  - [`overlap-scan.md`](../out/review/p4d/p2-mesin4tak/overlap-scan.md): Mode `telemetry`, step `5` frame, `182` frame dipindai, **`0` overlap**.
+  - Dilengkapi [`ledger-diff.md`](../out/review/p4d/p2-mesin4tak/ledger-diff.md), [`script-diff.md`](../out/review/p4d/p2-mesin4tak/script-diff.md), [`onscreen-text.md`](../out/review/p4d/p2-mesin4tak/onscreen-text.md), [`captions.srt`](../out/review/p4d/p2-mesin4tak/captions.srt), [`publish.md`](../out/review/p4d/p2-mesin4tak/publish.md), [`contact-sheet.png`](../out/review/p4d/p2-mesin4tak/contact-sheet.png), dan 5 still (`S1`–`S5`).
+- **Jumlah Panggilan Gemini ([`stats.md`](../out/review/p4d/stats.md)):**
+  - `p2-kereta`: kumulatif `llm-calls.jsonl` = **67 panggilan** di **25 run** (maks **9 calls/run**, ≤ 20/run; per tahap `S6:3, S7:31, S8:26, S9:7`).
+  - `p2-mesin4tak`: kumulatif `llm-calls.jsonl` = **77 panggilan** di **11 run** (maks **14 calls/run**, ≤ 20/run; per tahap `S6:4, S7:32, S8:24, S9:17`).
+- **Mutasi 1–23 ([`mutations/mutation-summary.md`](../out/review/p4d/mutations/mutation-summary.md)):** **23/23 mutasi tertangkap** (0 panggilan Gemini).
+- **Verifikasi ([`verify.txt`](../out/review/p4d/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 82 item, `tsc` 0 error, **21 test files / 83 tests passed**, `check:size OK` 141 berkas).

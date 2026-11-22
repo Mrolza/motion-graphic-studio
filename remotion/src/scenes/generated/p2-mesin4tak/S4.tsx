@@ -6,26 +6,36 @@ import {
   BlueprintStage,
   CameraRig,
   Ground,
-  EngineBlock,
+  PistonCrankAssembly,
   HudLayout,
   HudZone,
   Hud,
-  useDriver
+  DiagramOverlay,
+  useDriver,
+  StoryboardHudDataItem
 } from '../../../kit';
 
 export interface Scene_S4Props {
   telemetry?: boolean;
-  hudData?: any[];
+  hudData?: StoryboardHudDataItem[];
 }
+
+export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false, hudData = [] }) => (
+  <TelemetryProvider enabled={telemetry}>
+    <StoryboardHudProvider items={hudData}>
+      <Scene_S4Inner telemetry={telemetry} />
+    </StoryboardHudProvider>
+  </TelemetryProvider>
+);
 
 const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'crank_angle',
-    from: 0,
+    from: 360,
     to: 720,
     unit: '°',
-    startSec: 1.53,
-    durationSec: 3.18,
+    startSec: 0,
+    durationSec: 9.54,
     curve: 'linear'
   });
 
@@ -36,36 +46,29 @@ const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
+            <DiagramOverlay curveArc inertiaArrow palette="blueprint-navy" />
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S4_H1" driver={driver} palette="blueprint-navy" />
+              <Hud id="S4_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
       >
+        <Ground size={36} divisions={36} y={-0.55} />
+        <PistonCrankAssembly
+          entityId="piston_crank"
+          crankAngleDeg={driver.value}
+          position={[0, 0.45, 0]}
+          cutaway
+          palette="blueprint-navy"
+        />
         <CameraRig
           mode="frameEntities"
-          focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }}
-          padding={0.55}
-          startAngleDeg={-22}
-          endAngleDeg={22}
-        />
-        <Ground size={36} divisions={36} y={-0.55} />
-        <EngineBlock
-          entityId="engine_block"
-          crankAngleDeg={driver.value}
-          cutawayProgress={driver.progress}
-          position={[0, 0.45, 0]}
-          palette="blueprint-navy"
+          focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
+          padding={1.22}
+          elevationDeg={12}
         />
       </BlueprintStage>
     </SceneTransition>
   );
 };
-
-export const Scene_S4: React.FC<Scene_S4Props> = ({ telemetry = false, hudData = [] }) => (
-  <TelemetryProvider enabled={telemetry}>
-    <StoryboardHudProvider items={hudData}>
-      <Scene_S4Inner telemetry={telemetry} />
-    </StoryboardHudProvider>
-  </TelemetryProvider>
-);

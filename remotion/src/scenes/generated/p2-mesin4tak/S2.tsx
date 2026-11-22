@@ -1,32 +1,20 @@
 import React from 'react';
-import {
-  StoryboardHudProvider,
-  TelemetryProvider,
-  SceneTransition,
-  BlueprintStage,
-  CameraRig,
-  Ground,
-  PistonCrankAssembly,
-  HudLayout,
-  HudZone,
-  Hud,
-  useDriver
-} from '../../../kit';
+import { SceneTransition, BlueprintStage, CameraRig, Ground, PistonCrankAssembly, HudLayout, HudZone, Hud, useDriver, TelemetryProvider, StoryboardHudProvider, StoryboardHudDataItem } from '../../../kit';
 
 export interface Scene_S2Props {
   telemetry?: boolean;
-  hudData?: any[];
+  hudData?: StoryboardHudDataItem[];
 }
 
 const Scene_S2Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'crank_angle',
     from: 0,
-    to: 360,
+    to: 720,
     unit: '°',
     startSec: 0,
-    durationSec: 11.4,
-    curve: 'linear'
+    durationSec: 4.87,
+    curve: 'linear',
   });
 
   return (
@@ -36,11 +24,9 @@ const Scene_S2Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
-            <HudZone zone="title" palette="blueprint-navy">
-              <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />
-            </HudZone>
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S2_H1" driver={driver} palette="blueprint-navy" />
+              <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
@@ -58,6 +44,8 @@ const Scene_S2Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
           padding={1.22}
           elevationDeg={12}
+          startAngleDeg={0}
+          endAngleDeg={0}
         />
       </BlueprintStage>
     </SceneTransition>
@@ -66,7 +54,7 @@ const Scene_S2Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
 
 export const Scene_S2: React.FC<Scene_S2Props> = ({
   telemetry = false,
-  hudData = []
+  hudData = [],
 }) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>

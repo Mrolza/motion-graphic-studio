@@ -1,0 +1,144 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Siklus 4 tak terdiri dari empat langkah terpisah yang memerlukan putaran poros engkol.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "A four-stroke (also four-cycle) engine is an internal combustion engine (ICE or IC engine) in which the piston completes four separate strokes while turning the crankshaft.",
+          "retrieved_at": "2026-11-19T12:53:08.872Z"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk yang terbuka.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "In this stroke the intake valve must be in the open position while the piston pulls an air-fuel mixture into the cylinder by producing a partial vacuum (negative pressure) in the cylinder through its downward motion.",
+          "retrieved_at": "2026-11-19T12:53:08.872Z"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran udara dan bahan bakar dengan kedua katup tertutup.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "In this stroke the piston compresses the air-fuel mixture in preparation for ignition during the power stroke (below). Both the intake and exhaust valves are closed during this stage.",
+          "retrieved_at": "2026-11-19T12:53:08.872Z"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "text": "Langkah tenaga menghasilkan kerja mekanis dan dorongan akibat ekspansi gas pembakaran.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "This stroke produces mechanical work from the engine to turn the crankshaft.",
+          "retrieved_at": "2026-11-19T12:53:08.872Z"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang saat piston bergerak kembali ke atas.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Four-stroke_engine",
+          "title": "Four-stroke engine",
+          "quote": "During the exhaust stroke, the piston, once again, returns from B.D.C. to T.D.C. while the exhaust valve is open. This action expels the spent air-fuel mixture through the exhaust port.",
+          "retrieved_at": "2026-11-19T12:53:08.872Z"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "text": "Siklus 4 tak terdiri dari langkah hisap, kompresi, tenaga, dan buang yang memerlukan dua putaran poros engkol penuh.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "The intake stroke and compression stroke require one rotation of the engine crankshaft. The power stroke and exhaust stroke require another rotation.",
+          "retrieved_at": "2026-11-19T12:53:10.542Z"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "text": "Langkah hisap menurunkan piston untuk menarik campuran udara dan bahan bakar ke dalam silinder melalui katup masuk.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "A mass of air (working fluid) is drawn into the cylinder, from 0 to 1, at atmospheric pressure (constant pressure) through the open intake valve, while the exhaust valve is closed during this process.",
+          "retrieved_at": "2026-11-19T12:53:10.542Z"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "text": "Langkah kompresi menaikkan piston untuk memadatkan campuran tersebut, meningkatkan suhu dan tekanan sebelum percikan busi.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "Piston moves from crank end (BDC, bottom dead centre and maximum volume) to cylinder head end (TDC, top dead centre and minimum volume) as the working gas with initial state 1 is compressed isentropically to state point 2",
+          "retrieved_at": "2026-11-19T12:53:10.542Z"
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "text": "Langkah tenaga menghasilkan dorongan ke bawah akibat ekspansi gas pembakaran bertekanan tinggi.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "The increased high pressure exerts a force on the piston and pushes it towards the BDC. Expansion of working fluid takes place isentropically and work is done by the system on the piston.",
+          "retrieved_at": "2026-11-19T12:53:10.542Z"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "text": "Langkah buang mendorong sisa gas hasil pembakaran keluar melalui katup buang.",
+      "kind": "fact",
+      "status": "verified",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Otto_cycle",
+          "title": "Otto cycle",
+          "quote": "As the piston moves from \"BDC\" (point 1) to \"TDC\" (point 0) with the exhaust valve opened, the gaseous mixture is vented to the atmosphere and the process starts anew.",
+          "retrieved_at": "2026-11-19T12:53:10.542Z"
+        }
+      ]
+    }
+  ]
+}

@@ -6,12 +6,13 @@ import {
   SceneTransition,
   BlueprintStage,
   CameraRig,
-  HudLayout,
-  HudZone,
-  Hud,
   CurvedRail,
   Ground,
   WheelsetOnRail,
+  HudLayout,
+  HudZone,
+  Hud,
+  DiagramOverlay,
   computeWheelsetLayout
 } from '../../../kit';
 
@@ -20,21 +21,21 @@ export interface Scene_S4Props {
   hudData?: any[];
 }
 
-const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
+const Scene_S4Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'effective_diameter',
+    name: 'progress',
     from: 0,
-    to: 10,
-    unit: 'mm',
-    startSec: 0,
-    durationSec: 8.87,
-    curve: 'linear'
+    to: 100,
+    unit: '%',
+    startSec: 3.03,
+    durationSec: 4.69,
+    curve: 'linear',
   });
 
   const wl = computeWheelsetLayout({
     distance: driver.value,
     curveStartZ: 2,
-    curveRadius: 10
+    curveRadius: 10,
   });
 
   return (
@@ -44,10 +45,9 @@ const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
-            <HudZone zone="title" palette="blueprint-navy">
-              <Hud id="S4_H1" driver={driver} palette="blueprint-navy" />
-            </HudZone>
+            <DiagramOverlay curveArc inertiaArrow palette="blueprint-navy" />
             <HudZone zone="callout" palette="blueprint-navy">
+              <Hud id="S4_H1" driver={driver} palette="blueprint-navy" />
               <Hud id="S4_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
@@ -74,10 +74,7 @@ const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
         />
         <CameraRig
           mode="frameEntities"
-          focusBox={{
-            center: wl.center,
-            size: [1.9, 1.25, 1.6]
-          }}
+          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
           padding={1.25}
           elevationDeg={22}
         />
@@ -88,7 +85,7 @@ const Scene_S4Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
 
 export const Scene_S4: React.FC<Scene_S4Props> = ({
   telemetry = false,
-  hudData = []
+  hudData = [],
 }) => (
   <TelemetryProvider enabled={telemetry}>
     <StoryboardHudProvider items={hudData}>
