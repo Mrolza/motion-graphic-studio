@@ -1,10 +1,10 @@
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
-import type { Storyboard } from '@core/contracts/storyboard';
+import { getHudClaimRefs, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { extractNumericValuesFromText } from '@core/qc/l1-ledger';
-import { QUANTITY_LABELS } from './l5-semantic';
+import { extractHudDisplayText, QUANTITY_LABELS } from './l5-semantic';
 
 const DISPLAY_FIELDS = [
   'title',
@@ -193,7 +193,11 @@ export function verifyStoryboardCode(
         } else {
           const expectedLabel = QUANTITY_LABELS[qty];
           const labelStr = String(h.props?.label ?? h.props?.title ?? '');
-          if (expectedLabel && !labelStr.toLowerCase().includes(expectedLabel.toLowerCase())) {
+          if (
+            h.component !== 'EffectiveDiameterCompare' &&
+            expectedLabel &&
+            !labelStr.toLowerCase().includes(expectedLabel.toLowerCase())
+          ) {
             issues.push({
               severity: 'error',
               message: `L5_DRIVER_LABEL_MISMATCH: label "${labelStr}" tidak sesuai besaran "${qty}" (harus menyebut "${expectedLabel}")`,
@@ -201,8 +205,9 @@ export function verifyStoryboardCode(
             });
           }
           if (disp === 'value') {
-            const claim = h.claim_ref ? claimMap.get(h.claim_ref) : undefined;
-            if (!claim || claim.status !== 'verified') {
+            const hudRefs = getHudClaimRefs(h);
+            const hasVerified = hudRefs.some((cid) => claimMap.get(cid)?.status === 'verified');
+            if (!hasVerified) {
               issues.push({
                 severity: 'error',
                 message: `L5_UNSOURCED_DRIVER_VALUE: HUD driver "${h.hud_id ?? h.component}" memakai display="value" tanpa claim_ref verified pendukung`,
@@ -212,27 +217,64 @@ export function verifyStoryboardCode(
           }
         }
       }
-      const needsClaim = nums.length > 0 && !isDriverStat && !h.illustrative;
-
-      if (h.claim_ref) {
-        const claim = claimMap.get(h.claim_ref);
-        if (!claim || claim.status !== 'verified') {
+      if (h.props?.zone === 'caption') {
+        issues.push({
+          severity: 'error',
+          message: `SB_HUD_IN_CAPTION_ZONE: HUD "${h.component}" dilarang menempati zona "caption"`,
+          ref,
+        });
+      }
+      if (h.component === 'Callout') {
+        const calloutWords = extractHudDisplayText(h.props ?? {})
+          .replace(/[—–-]/g, ' ')
+          .trim()
+          .split(/\s+/)
+          .filter(Boolean).length;
+        if (calloutWords > 12) {
           issues.push({
             severity: 'error',
-            message: `SB_UNVERIFIED_CLAIM: claim_ref "${h.claim_ref}" tidak ditemukan atau belum verified`,
+            message: `SB_CALLOUT_TOO_LONG: Callout "${h.hud_id ?? h.component}" memiliki ${calloutWords} kata (> 12 kata)`,
             ref,
           });
-        } else if (nums.length > 0 && !isDriverStat) {
-          const allowedNums = new Set<number>([
-            ...(claim.value !== undefined ? [claim.value] : []),
-            ...extractNumericValuesFromText(claim.text),
-            ...claim.sources.flatMap((s) => extractNumericValuesFromText(s.quote)),
-          ]);
+        } else if (calloutWords > 8) {
+          issues.push({
+            severity: 'warning',
+            message: `SB_CALLOUT_WORD_LIMIT: Callout "${h.hud_id ?? h.component}" memiliki ${calloutWords} kata (> 8 kata)`,
+            ref,
+          });
+        }
+      }
+      const needsClaim = nums.length > 0 && !isDriverStat && !h.illustrative;
+      const claimRefs = getHudClaimRefs(h);
+
+      if (claimRefs.length > 0) {
+        const verifiedClaims = [];
+        for (const cid of claimRefs) {
+          const claim = claimMap.get(cid);
+          if (!claim || claim.status !== 'verified') {
+            issues.push({
+              severity: 'error',
+              message: `SB_UNVERIFIED_CLAIM: claim_ref "${cid}" tidak ditemukan atau belum verified`,
+              ref,
+            });
+          } else {
+            verifiedClaims.push(claim);
+          }
+        }
+        if (verifiedClaims.length > 0 && nums.length > 0 && !isDriverStat) {
+          const allowedNums = new Set<number>();
+          for (const claim of verifiedClaims) {
+            if (claim.value !== undefined) allowedNums.add(claim.value);
+            for (const v of extractNumericValuesFromText(claim.text)) allowedNums.add(v);
+            for (const src of claim.sources) {
+              for (const v of extractNumericValuesFromText(src.quote)) allowedNums.add(v);
+            }
+          }
           for (const n of nums) {
             if (![...allowedNums].some((a) => Math.abs(a - n) < 1e-4)) {
               issues.push({
                 severity: 'error',
-                message: `SB_HUD_NUMBER_NOT_IN_CLAIM: angka ${n} di HUD "${propText}" tidak ada di klaim ${h.claim_ref}`,
+                message: `SB_HUD_NUMBER_NOT_IN_CLAIM: angka ${n} di HUD "${propText}" tidak ada di klaim ${claimRefs.join(', ')}`,
                 ref,
               });
             }

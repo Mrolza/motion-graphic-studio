@@ -20,20 +20,26 @@ export interface KineticCaptionItem {
 export interface KineticCaptionsProps {
   chunks: readonly KineticCaptionItem[];
   palette?: PaletteId;
+  suppressRanges?: ReadonlyArray<{ start_sec: number; end_sec: number }>;
 }
 
 /**
- * Renders 2–5 word kinetic captions in the safe 9:16 caption band (y=942..1020, x<=608)
+ * Renders 2–5 word kinetic captions in the safe 9:16 caption band (y=935..1017, x<=608)
  * with active word highlighting synced to the VO word timeline.
  */
 export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
   chunks,
   palette = 'blueprint-navy',
+  suppressRanges,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const sec = frame / Math.max(1, fps);
   const tokens = getThemeTokens(palette);
+
+  if (suppressRanges?.some((r) => sec >= r.start_sec && sec <= r.end_sec)) {
+    return null;
+  }
 
   const active = chunks.find((c) => sec >= c.start_sec && sec <= c.end_sec + 0.04);
   if (!active) return null;
@@ -43,9 +49,11 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
     <div
       style={{
         position: 'absolute',
-        top: 942,
+        top: 935,
         left: 48,
         right: 112,
+        maxHeight: 82,
+        overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
         pointerEvents: 'none',
@@ -61,12 +69,12 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
           backgroundColor: 'rgba(8, 17, 32, 0.86)',
           border: `1.5px solid ${tokens.colors.panelBorder}`,
           borderRadius: 10,
-          padding: '8px 16px',
+          padding: '6px 14px',
           textAlign: 'center',
           fontFamily: tokens.fonts.sans,
-          fontSize: 32,
+          fontSize: 28,
           fontWeight: 700,
-          lineHeight: 1.2,
+          lineHeight: 1.15,
           maxWidth: 556,
         }}
       >

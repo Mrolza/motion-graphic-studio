@@ -362,12 +362,18 @@ export const Callout: React.FC<CalloutProps> = ({
           backgroundColor: tokens.colors.panelBg,
           border: `1.5px solid ${tokens.colors.accent}`,
           borderRadius: 10,
-          padding: '10px 16px',
+          padding: '8px 14px',
+          maxHeight: 156,
+          overflow: 'hidden',
         }}
       >
-        <div style={{ fontSize: 26, fontWeight: 700, color: tokens.colors.accent }}>{label}</div>
+        <div style={{ fontSize: 26, fontWeight: 700, lineHeight: 1.2, color: tokens.colors.accent, display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+          {label}
+        </div>
         {detail ? (
-          <div style={{ fontSize: 26, color: tokens.colors.white, marginTop: 2 }}>{detail}</div>
+          <div style={{ fontSize: 24, lineHeight: 1.25, color: tokens.colors.white, marginTop: 2, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+            {detail}
+          </div>
         ) : null}
       </TelemetryHudBox>
     </>

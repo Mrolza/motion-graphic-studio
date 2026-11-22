@@ -33,6 +33,7 @@ export const StoryboardHudItemSchema = z
     component: z.string().min(1),
     props: z.record(z.unknown()),
     claim_ref: z.string().min(1).optional(),
+    claim_refs: z.array(z.string().min(1)).optional(),
     bind_to_driver: z.boolean().optional(),
     quantity: z.string().min(1).optional(),
     display: z.enum(['value', 'qualitative']).optional(),
@@ -51,7 +52,12 @@ export const StoryboardHudItemSchema = z
         hud.component === 'DimensionLine' ||
         hasNumericProp;
       if (!isNumericHud) return true;
-      return Boolean(hud.claim_ref || hud.bind_to_driver || hud.illustrative);
+      return Boolean(
+        hud.claim_ref ||
+          (hud.claim_refs && hud.claim_refs.length > 0) ||
+          hud.bind_to_driver ||
+          hud.illustrative
+      );
     },
     {
       message:
@@ -84,5 +90,18 @@ export type ShotType = z.infer<typeof ShotTypeSchema>;
 export type StoryboardDriver = z.infer<typeof StoryboardDriverSchema>;
 export type StoryboardInvariant = z.infer<typeof StoryboardInvariantSchema>;
 export type StoryboardHudItem = z.infer<typeof StoryboardHudItemSchema>;
+
+export function getHudClaimRefs(
+  hud: Pick<StoryboardHudItem, 'claim_ref' | 'claim_refs'>
+): string[] {
+  const out: string[] = [];
+  if (hud.claim_ref) out.push(hud.claim_ref);
+  if (hud.claim_refs) {
+    for (const r of hud.claim_refs) {
+      if (r && !out.includes(r)) out.push(r);
+    }
+  }
+  return out;
+}
 export type StoryboardScene = z.infer<typeof StoryboardSceneSchema>;
 export type Storyboard = z.infer<typeof StoryboardSchema>;

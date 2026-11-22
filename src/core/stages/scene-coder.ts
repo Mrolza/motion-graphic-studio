@@ -10,6 +10,7 @@ import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
 import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
+import { QC_RULES_VERSION } from '@core/qc/rules-version';
 import { clearRemotionBundleCache, runVisualQc } from '@core/qc/visual/runner';
 import type { VisualQcResult } from '@core/qc/visual/types';
 import { syncGeneratedRegistry, type GeneratedCompMeta } from './scene-registry';
@@ -115,8 +116,8 @@ ATURAN MUTLAK:
   }', startSec: ${triggerRelSec}, durationSec: ${driverDur}, curve: 'linear' }).
 4. Bungkus 3D + HUD dalam <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy"><BlueprintStage palette="blueprint-navy" telemetry={telemetry} hud={...}>...</BlueprintStage></SceneTransition>.
 5. Pilih rakitan sesuai shot_type/focus_entities (CameraRig HANYA mendukung mode="frameEntities", DILARANG mode="follow" dan DILARANG menyetel from/to/radius/height manual! Jika memakai curveRadius, hitung const wl = computeWheelsetLayout({ distance: driver.value, curveStartZ: 2, curveRadius: 10 }); agar focusBox mengikuti tikungan):
-   - "train_car" (establishing/summary): hitung const distM = driver.unit === '%' ? -2 + driver.progress * 6 : driver.value; lalu <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <TrainCar entityId="train_car" distance={distM} curveStartZ={2} curveRadius={10} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }} padding={1.22} startAngleDeg={-22} endAngleDeg={22} (gunakan distM pada computeWheelsetLayout!).
-   - "rail_cross_section" (cross_section): <Ground size={40} divisions={40} y={0} /> + <RailCrossSection entityId="rail_cross_section" view="section" lateralShift={driver.name.toLowerCase().includes('lateral') || driver.name.toLowerCase().includes('shift') ? driver.value : 0.045 * Math.sin(driver.progress * Math.PI)} taperExaggeration={12} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 0.55, 0], size: [1.9, 1.15, 0.35] }} padding={1.15} startAngleDeg={0} endAngleDeg={0} elevationDeg={2}. WAJIB sertakan <ExaggerationBadge factor={12} palette="blueprint-navy" /> di dalam <HudLayout>!
+   - "train_car" (establishing/summary): hitung const distM = -2 + driver.progress * 5; lalu <CurvedRail startZ={-10} curveStartZ={2} curveRadius={16} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <TrainCar entityId="train_car" distance={distM} curveStartZ={2} curveRadius={16} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }} padding={1.25} startAngleDeg={-20} endAngleDeg={20} (gunakan distM dan curveRadius: 16 pada computeWheelsetLayout!).
+   - "rail_cross_section" (cross_section): <Ground size={40} divisions={40} y={0} /> + <RailCrossSection entityId="rail_cross_section" view="section" lateralShift={driver.unit === 'mm' ? driver.value * 0.001 : 0.045 * Math.sin(driver.progress * Math.PI)} taperExaggeration={12} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 0.55, 0], size: [1.9, 1.15, 0.35] }} padding={1.15} startAngleDeg={0} endAngleDeg={0} elevationDeg={2}. WAJIB sertakan <ExaggerationBadge factor={12} palette="blueprint-navy" /> di dalam <HudLayout>!
    - "wheelset": <CurvedRail startZ={-10} curveStartZ={2} curveRadius={10} curveLength={18} gauge={1.435} highlighted palette="blueprint-navy" /> + <Ground size={60} divisions={60} y={0} /> + <WheelsetOnRail entityId="wheelset" distance={driver.value} taperExaggeration={4.5} curveStartZ={2} curveRadius={10} highlightContact palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }} padding={1.25} elevationDeg={22}.
    - "engine_block" (establishing/summary/cutaway): <Ground size={36} divisions={36} y={-0.55} /> + <EngineBlock entityId="engine_block" crankAngleDeg={driver.value} cutawayProgress={driver.progress} position={[0, 0.45, 0]} palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 1.72, 0], size: [2.05, 3.15, 2.05] }} padding={1.25}.
    - "piston_crank": <Ground size={36} divisions={36} y={-0.55} /> + <PistonCrankAssembly entityId="piston_crank" crankAngleDeg={driver.value} position={[0, 0.45, 0]} cutaway palette="blueprint-navy" />, CameraRig mode="frameEntities" focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }} padding={1.22} elevationDeg={12}.
@@ -187,7 +188,13 @@ export async function runScenesStage(
       const scScene = scriptMap.get(sbScene.id);
       const narrationText = scScene?.sentences.map((s) => s.text).join(' ') ?? '';
       const triggerRelSec = findTriggerTimeInScene(sbScene.id, sbScene.trigger_words, timeline);
-      const sceneHash = computeStableHash({ sbScene, kitApi, promptVersion: 'p4b-v1' });
+      const sceneHash = computeStableHash({
+        sbScene,
+        kitApi,
+        ledger,
+        rulesVersion: QC_RULES_VERSION,
+        promptVersion: 'p4d-v3',
+      });
       const tsxPath = path.join(genDir, `${sbScene.id}.tsx`);
 
       if (sceneCache[sbScene.id]?.hash === sceneHash && sceneCache[sbScene.id]?.passed === true) {

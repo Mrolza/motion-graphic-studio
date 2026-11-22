@@ -2,38 +2,36 @@ import React from 'react';
 import {
   StoryboardHudProvider,
   TelemetryProvider,
-  useDriver,
   SceneTransition,
   BlueprintStage,
   CameraRig,
+  Ground,
+  CurvedRail,
+  WheelsetOnRail,
   HudLayout,
   HudZone,
   Hud,
-  CurvedRail,
-  Ground,
-  TrainCar,
   computeWheelsetLayout,
-  StoryboardHudDataItem
+  useDriver
 } from '../../../kit';
 
 export interface Scene_S5Props {
   telemetry?: boolean;
-  hudData?: StoryboardHudDataItem[];
+  hudData?: any[];
 }
 
 const Scene_S5Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
-    name: 'progress',
+    name: 'distance',
     from: 0,
-    to: 100,
-    unit: '%',
-    startSec: 3.61,
-    durationSec: 0.9,
+    to: 5,
+    unit: 'm',
+    startSec: 0,
+    durationSec: 5.01,
     curve: 'linear'
   });
 
-  const distM = driver.unit === '%' ? -2 + driver.progress * 6 : driver.value;
-  const wl = computeWheelsetLayout({ distance: distM, curveStartZ: 2, curveRadius: 10 });
+  const wl = computeWheelsetLayout({ distance: driver.value, curveStartZ: 2, curveRadius: 10 });
 
   return (
     <SceneTransition variant="fade" durationSec={0.25} palette="blueprint-navy">
@@ -48,6 +46,15 @@ const Scene_S5Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           </HudLayout>
         }
       >
+        <CameraRig
+          mode="frameEntities"
+          focusBox={{ center: wl.center, size: [1.9, 1.25, 1.6] }}
+          padding={1.25}
+          elevationDeg={22}
+          startAngleDeg={-15}
+          endAngleDeg={15}
+          durationSec={5.01}
+        />
         <CurvedRail
           startZ={-10}
           curveStartZ={2}
@@ -58,19 +65,14 @@ const Scene_S5Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
           palette="blueprint-navy"
         />
         <Ground size={60} divisions={60} y={0} />
-        <TrainCar
-          entityId="train_car"
-          distance={distM}
+        <WheelsetOnRail
+          entityId="wheelset"
+          distance={driver.value}
+          taperExaggeration={4.5}
           curveStartZ={2}
           curveRadius={10}
+          highlightContact
           palette="blueprint-navy"
-        />
-        <CameraRig
-          mode="frameEntities"
-          focusBox={{ center: wl.center, size: [2.2, 2.0, 4.4] }}
-          padding={1.22}
-          startAngleDeg={-22}
-          endAngleDeg={22}
         />
       </BlueprintStage>
     </SceneTransition>

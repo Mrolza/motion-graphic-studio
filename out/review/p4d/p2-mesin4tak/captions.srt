@@ -1,0 +1,90 @@
+1
+00:00:00,032 --> 00:00:02,145
+Bagaimana mesin motor
+menghasilkan tenaga
+
+2
+00:00:02,145 --> 00:00:03,757
+hanya dari empat
+gerakan piston?
+
+3
+00:00:03,958 --> 00:00:05,649
+Siklus empat langkah
+ini memerlukan
+
+4
+00:00:05,649 --> 00:00:07,089
+dua putaran poros
+engkol penuh
+
+5
+00:00:07,089 --> 00:00:08,754
+untuk menyelesaikan
+prosesnya.
+
+6
+00:00:08,923 --> 00:00:10,662
+Langkah hisap menurunkan
+piston untuk
+
+7
+00:00:10,662 --> 00:00:12,115
+menarik campuran udara
+dan bahan
+
+8
+00:00:12,115 --> 00:00:13,633
+bakar ke dalam
+silinder melalui
+
+9
+00:00:13,633 --> 00:00:14,413
+katup masuk.
+
+10
+00:00:14,583 --> 00:00:16,258
+Langkah tenaga menghasilkan
+dorongan pada
+
+11
+00:00:16,258 --> 00:00:18,001
+piston ke bawah
+akibat ekspansi
+
+12
+00:00:18,001 --> 00:00:19,811
+gas pembakaran
+bertekanan tinggi.
+
+13
+00:00:19,948 --> 00:00:21,494
+Langkah buang mendorong
+sisa gas
+
+14
+00:00:21,494 --> 00:00:23,290
+hasil pembakaran keluar
+silinder saat
+
+15
+00:00:23,290 --> 00:00:24,083
+piston naik.
+
+16
+00:00:24,252 --> 00:00:25,176
+Rangkaian langkah hisap,
+
+17
+00:00:25,314 --> 00:00:26,892
+kompresi, tenaga,
+
+18
+00:00:27,029 --> 00:00:28,403
+dan buang ini
+berulang secara
+
+19
+00:00:28,403 --> 00:00:30,306
+terus-menerus selama
+mesin dihidupkan.

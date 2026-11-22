@@ -55,15 +55,16 @@ export async function verifyScriptL0bAndL3(params: {
   script: Script;
   ledger: FactLedger;
   onCall?: (model: string) => void;
+  generateJsonFn?: typeof generateJson;
 }): Promise<CombinedQcResult> {
-  const { topic, format, concept, script, ledger, onCall } = params;
+  const { topic, format, concept, script, ledger, onCall, generateJsonFn } = params;
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
 
   const items: Array<{
     ref: string;
     non_factual: boolean;
     text: string;
-    claims: Array<{ id: string; claim_text: string; quote: string }>;
+    claims: Array<{ id: string; claim_text: string; quotes: string[] }>;
   }> = [];
 
   for (const scene of script.scenes) {
@@ -75,7 +76,7 @@ export async function verifyScriptL0bAndL3(params: {
         .map((c) => ({
           id: c.id,
           claim_text: c.text,
-          quote: c.sources[0]?.quote ?? '',
+          quotes: c.sources.map((s) => s.quote).filter(Boolean),
         }));
       items.push({ ref, non_factual: Boolean(sent.non_factual), text: sent.text, claims });
     });
@@ -100,8 +101,8 @@ Set "answers_question": true hanya jika naskah benar-benar menjawab pertanyaan t
 BAGIAN 2 — L3 (Verifier Fakta Ketat):
 Periksa SEMUA kalimat (termasuk yang non_factual: true):
 - Jika "non_factual": true — hanya boleh pertanyaan retoris murni, transisi, atau ajakan (kalimat tanya retoris murni seperti "Tahukah kamu bagaimana X bekerja?" adalah SAH dan diberi verdict "supported"). Jika berisi kalimat pernyataan faktual atau penilaian tentang subjek (misalnya "efisien", "andal", "tercanggih", "desain terbaik") → verdict WAJIB "non_factual_assertion".
-- Jika kalimat faktual — bandingkan kalimat DAN "claim_text" klaim rujukan terhadap "quote":
-  - "supported": kalimat & claim_text didukung langsung oleh kutipan tanpa mengubah makna.
+- Jika kalimat faktual — bandingkan kalimat naskah ("text") LANGSUNG terhadap kutipan sumber asli ("quotes"), bukan hanya "claim_text":
+  - "supported": kalimat naskah didukung langsung oleh "quotes" tanpa mengubah makna, tanpa menghilangkan kata hedge/peluang di "quotes", dan tanpa menambahkan kata mutlak ("tanpa", "selalu", "pasti", "terus", "semua") yang tidak ada di "quotes".
   - "overstated": menggeneralisasi berlebihan (satu model/produk -> semua kereta/mesin), ATAU **menghilangkan/mengubah kuantitas/subjek/cakupan sehingga maknanya berubah** (misalnya "dua putaran" menjadi "putaran penuh", "sebagian besar" menjadi "semua", "wheelset" menjadi "lokomotif"), ATAU menambah sebab-akibat yang tidak ada di kutipan.
   - "unsupported": bertentangan atau tidak didukung kutipan, atau claim_text tidak didukung oleh quote-nya.
 
@@ -120,7 +121,8 @@ ${JSON.stringify(script, null, 2)}
 Pasangan kalimat, claim_text, & kutipan sumber untuk L3:
 ${JSON.stringify(items, null, 2)}`;
 
-  const res = await generateJson(CombinedVerifierOutputSchema, prompt, {
+  const genFn = generateJsonFn ?? generateJson;
+  const res = await genFn(CombinedVerifierOutputSchema, prompt, {
     stage: 'S4',
     systemInstruction,
     temperature: 0.1,

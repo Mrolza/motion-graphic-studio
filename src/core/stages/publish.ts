@@ -17,7 +17,9 @@ export function validatePublishSources(
   ledger: FactLedger
 ): PublishValidationResult {
   const allowedUrls = new Set(
-    ledger.claims.flatMap((c) => c.sources.map((s) => s.url.trim()))
+    ledger.claims
+      .filter((c) => c.status === 'verified')
+      .flatMap((c) => c.sources.map((s) => s.url.trim()))
   );
   const rawUrls = publishMd.match(/https?:\/\/[^\s\]>"']+/g) ?? [];
   const foundUrls = rawUrls.map((u) => {

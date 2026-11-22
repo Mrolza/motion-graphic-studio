@@ -200,6 +200,35 @@ export async function tightenExistingVoiceStage(
     JSON.parse(await readFile(path.join(projectDir, 'timeline.json'), 'utf-8'))
   );
   const res = await tightenProjectVoice({ projectId, projectDir, timeline, repoRoot });
+  if (res.timeline.total_sec < 30.2 && res.timeline.scenes.length > 0) {
+    const targetSec = 30.35;
+    const tempo = Number((res.timeline.total_sec / targetSec).toFixed(4));
+    const scale = 1 / tempo;
+    for (const sc of res.timeline.scenes) {
+      const mp3Disk = path.join(repoRoot, sc.audio_path);
+      const tmpDisk = `${mp3Disk}.tmp.mp3`;
+      await execFileAsync(ffmpegInstaller.path, [
+        '-y',
+        '-v',
+        'error',
+        '-i',
+        mp3Disk,
+        '-filter:a',
+        `atempo=${tempo}`,
+        tmpDisk,
+      ]);
+      await copyFile(tmpDisk, mp3Disk);
+      await rm(tmpDisk, { force: true });
+      sc.start = Number((sc.start * scale).toFixed(3));
+      sc.end = Number((sc.end * scale).toFixed(3));
+    }
+    for (const w of res.timeline.words) {
+      w.start = Number((w.start * scale).toFixed(3));
+      w.end = Number((w.end * scale).toFixed(3));
+    }
+    res.timeline.total_sec = Number((res.timeline.total_sec * scale).toFixed(3));
+    await writeFile(path.join(projectDir, 'timeline.json'), JSON.stringify(res.timeline, null, 2), 'utf-8');
+  }
   const updated = await loadProject(projectId, repoRoot);
   updated.stages.S5 = 'done';
   await saveProject(updated, repoRoot);

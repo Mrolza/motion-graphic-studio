@@ -8,10 +8,11 @@ import ffprobeInstaller from '@ffprobe-installer/ffprobe';
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { DeviceProfileName } from '@core/contracts/project';
 import type { Script } from '@core/contracts/script';
-import { StoryboardSchema } from '@core/contracts/storyboard';
+import { getHudClaimRefs, StoryboardSchema } from '@core/contracts/storyboard';
 import { TimelineSchema } from '@core/contracts/timeline';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
-import type { L5SemanticVerdict } from '@core/qc/l5-semantic';
+import { extractHudDisplayText, type L5SemanticVerdict } from '@core/qc/l5-semantic';
+import type { TelemetrySample } from '@core/qc/visual/types';
 import { clearRemotionBundleCache, getRemotionBundle } from '@core/qc/visual/runner';
 import { buildKineticCaptions, captionsToSrt } from '@core/render/kinetic-captions';
 import { syncGeneratedRegistry, type GeneratedCompMeta } from './scene-registry';
@@ -109,14 +110,26 @@ export async function runFinalRenderStage(
       s.hud.forEach((h, hIdx) => {
         const hid = h.hud_id ?? `${s.id}_H${hIdx + 1}`;
         const p = h.props ?? {};
-        const txt = [p.title, p.subtitle, p.label, p.detail, p.valueText, p.text]
-          .filter((x) => typeof x === 'string')
-          .join(' — ');
-        const claim = h.claim_ref ? claimMap.get(h.claim_ref) : undefined;
+        const txt = extractHudDisplayText(p);
+        const claimRefs = getHudClaimRefs(h);
+        const claims = claimRefs
+          .map((cid) => claimMap.get(cid))
+          .filter((c): c is NonNullable<typeof c> => Boolean(c));
         const claimCell = h.bind_to_driver || p.bind_to_driver
           ? `driver:${s.driver?.name ?? 'driver'} (${h.display ?? 'value'})`
-          : h.claim_ref ?? (h.illustrative ? 'illustrative' : '-');
-        const quoteCell = claim?.sources[0]?.quote ? `"${claim.sources[0].quote}"` : '-';
+          : claimRefs.length > 0
+            ? claimRefs.join(', ')
+            : h.illustrative
+              ? 'illustrative'
+              : '-';
+        const quoteCell =
+          claims.length > 0
+            ? claims
+                .map((c) => c.sources[0]?.quote)
+                .filter(Boolean)
+                .map((q) => `"${q}"`)
+                .join(' | ') || '-'
+            : '-';
         const sem = semanticMap.get(hid);
         const semCell = sem ? `${sem.verdict}${sem.code ? ` (${sem.code})` : ''}: ${sem.reason}` : 'OK';
         rows.push(`| ${s.id} | ${hid} | ${h.component} | ${txt} | ${claimCell} | ${quoteCell} | ${semCell} |`);
@@ -157,11 +170,17 @@ export async function runFinalRenderStage(
 
     const remotionPkg = 'remotion';
     const assembledTsx = `import React from 'react';
-import { AbsoluteFill, Series } from '${remotionPkg}';
-import { KineticCaptions, TelemetryProvider } from '../../../kit';
+import { AbsoluteFill, Series, useCurrentFrame, useVideoConfig } from '${remotionPkg}';
+import { KineticCaptions, TelemetryEmitter, TelemetryProvider } from '../../../kit';
 ${imports}
 
 const CAPTION_CHUNKS = ${JSON.stringify(captionChunks)};
+
+const AssembledTelemetryEmitter: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  return <TelemetryEmitter frame={frame} fps={fps} />;
+};
 
 export const AssembledProject: React.FC<{ telemetry?: boolean }> = ({ telemetry = false }) => (
   <TelemetryProvider enabled={telemetry}>
@@ -170,6 +189,7 @@ export const AssembledProject: React.FC<{ telemetry?: boolean }> = ({ telemetry 
 ${seriesItems}
       </Series>
       <KineticCaptions chunks={CAPTION_CHUNKS} palette="blueprint-navy" />
+      {telemetry ? <AssembledTelemetryEmitter /> : null}
     </AbsoluteFill>
   </TelemetryProvider>
 );
@@ -199,16 +219,20 @@ ${seriesItems}
     const composition = await selectComposition({
       serveUrl,
       id: assembledId,
-      inputProps: { telemetry: false },
+      inputProps: { telemetry: true },
     });
     const chunksDir = path.join(projectDir, 'chunks');
-    if (assembledChanged) {
+    const telemetrySamplesPath = path.join(projectDir, 'telemetry-samples.json');
+    const hasTelemetry = await stat(telemetrySamplesPath).then(() => true).catch(() => false);
+    if (assembledChanged || !hasTelemetry) {
       await rm(chunksDir, { recursive: true, force: true });
     }
     await mkdir(chunksDir, { recursive: true });
 
     const chunkPaths: string[] = [];
     let chunksSkipped = 0;
+    const telemetryByFrame = new Map<number, TelemetrySample>();
+    const TELEMETRY_PREFIX = 'MGS_TELEMETRY ';
     for (let startF = 0, idx = 0; startF < totalFrames; startF += opts.chunkFrames, idx++) {
       const endF = Math.min(totalFrames - 1, startF + opts.chunkFrames - 1);
       const expectedFrames = endF - startF + 1;
@@ -224,13 +248,34 @@ ${seriesItems}
         composition,
         serveUrl,
         codec: 'h264',
+        pixelFormat: 'yuv420p',
         outputLocation: chunkPath,
-        inputProps: { telemetry: false },
+        inputProps: { telemetry: true },
         frameRange: [startF, endF],
         muted: true,
         concurrency: opts.concurrency,
         chromiumOptions: { gl: opts.gl },
+        onBrowserLog: (log) => {
+          if (log.text.startsWith(TELEMETRY_PREFIX)) {
+            try {
+              const parsed = JSON.parse(log.text.slice(TELEMETRY_PREFIX.length)) as TelemetrySample;
+              telemetryByFrame.set(parsed.frame, parsed);
+            } catch {
+              // ignore malformed telemetry
+            }
+          }
+        },
       });
+    }
+    if (telemetryByFrame.size > 0) {
+      const sortedTelemetry = [...telemetryByFrame.values()]
+        .sort((a, b) => a.frame - b.frame)
+        .filter((s, idx) => idx === 0 || s.frame % 5 === 0);
+      await writeFile(
+        path.join(projectDir, 'telemetry-samples.json'),
+        JSON.stringify(sortedTelemetry, null, 2),
+        'utf-8'
+      );
     }
     const renderMs = Date.now() - tRender0;
 
@@ -277,7 +322,13 @@ ${seriesItems}
       '-map',
       '1:a:0',
       '-c:v',
-      'copy',
+      'libx264',
+      '-pix_fmt',
+      'yuv420p',
+      '-preset',
+      'fast',
+      '-crf',
+      '18',
       '-c:a',
       'aac',
       '-ar',

@@ -32,11 +32,15 @@ Sebuah fase hanya boleh ditulis **DONE** jika:
 3. Ada **bukti yang bisa dilihat** di `out/review/<fase>/`: still, video, atau screenshot.
 4. Semua kriteria fase teruji. Kalau ada yang tidak teruji, tulis **PARTIAL** beserta daftar yang belum dan alasannya.
 5. Bukti harus memeriksa **perilaku di output** (frame, nilai, file hasil), bukan sekadar keberadaan fungsi atau pemanggilan di kode. Contoh: "gerak piston benar" dibuktikan dengan nilai posisi piston di frame sampel dibandingkan dengan perhitungan, bukan dengan "kode memanggil `solveCrankSlider`".
+6. Bukti visual harus dirender dari **komponen atau komposisi yang diklaim**. Angka di tabel bukti harus berasal dari **telemetri render itu**, bukan dihitung ulang dari rumus.
+7. Laporan fase yang memakai LLM wajib mencantumkan **jumlah panggilan LLM** yang dipakai selama fase.
 
 ## 6. Pengujian langkah panjang
 - Langkah yang memanggil LLM atau render bisa memakan menit. Gunakan polling atau timeout klien minimal 10 menit.
 - Timeout di alat uji **bukan** bukti aplikasi gagal. Ulangi sekali dengan timeout lebih panjang sebelum menyimpulkan.
 - Kalau kuota API habis, berhenti dan laporkan apa yang sudah selesai.
+- **Kegagalan yang sama dua kali berturut-turut:** jangan jalankan ulang pipeline. Diagnosis dulu tanpa LLM (render lokal, test, baca log), perbaiki penyebabnya, baru jalankan lagi.
+- Debug dan mutasi memakai klien LLM tiruan (mock). Panggilan LLM sungguhan hanya untuk run end-to-end yang diminta spec.
 
 ## 7. Dokumen
 - `docs/PRD.md` **tidak boleh diubah** oleh AG.

@@ -1,0 +1,259 @@
+{
+  "scenes": [
+    {
+      "id": "S1",
+      "lane": "code_3d",
+      "shot_type": "establishing",
+      "camera_move": "orbit_curve",
+      "duration_sec": 3.799,
+      "sentence_refs": [
+        "S1.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 180
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S1_H1",
+          "component": "KineticTitle",
+          "props": {
+            "title": "Bagaimana mesin 4 tak bekerja?"
+          },
+          "claim_ref": "C1"
+        }
+      ],
+      "trigger_words": [
+        "tenaga",
+        "empat gerakan"
+      ]
+    },
+    {
+      "id": "S2",
+      "lane": "code_3d",
+      "shot_type": "cross_section",
+      "camera_move": "static_cross_section",
+      "duration_sec": 4.87,
+      "sentence_refs": [
+        "S2.1"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "cylinder"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S2_H1",
+          "component": "StatCounter",
+          "props": {
+            "label": "Sudut Poros Engkol"
+          },
+          "claim_ref": "C1",
+          "bind_to_driver": true,
+          "quantity": "crank_angle",
+          "display": "value"
+        },
+        {
+          "hud_id": "S2_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Siklus memerlukan poros engkol berputar"
+          },
+          "claim_ref": "C1"
+        }
+      ],
+      "trigger_words": [
+        "dua putaran",
+        "poros engkol"
+      ]
+    },
+    {
+      "id": "S3",
+      "lane": "code_3d",
+      "shot_type": "closeup",
+      "camera_move": "dolly_in",
+      "duration_sec": 5.533,
+      "sentence_refs": [
+        "S3.1"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 180
+      },
+      "invariants": [
+        {
+          "entity": "intake_valve",
+          "state": "open=true",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S3_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah hisap menurunkan piston"
+          },
+          "claim_ref": "C2",
+          "when": {
+            "driver_between": [
+              0,
+              180
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "langkah hisap",
+        "katup masuk"
+      ]
+    },
+    {
+      "id": "S4",
+      "lane": "code_3d",
+      "shot_type": "diagram_overlay",
+      "camera_move": "orbit_curve",
+      "duration_sec": 9.542,
+      "sentence_refs": [
+        "S4.1",
+        "S4.2"
+      ],
+      "focus_entities": [
+        "piston_crank"
+      ],
+      "visible_parts": [
+        "piston",
+        "crank",
+        "intake_valve",
+        "exhaust_valve",
+        "spark_plug"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 360,
+        "to": 720
+      },
+      "invariants": [
+        {
+          "entity": "exhaust_valve",
+          "state": "open=true",
+          "when": {
+            "driver_between": [
+              540,
+              720
+            ]
+          }
+        }
+      ],
+      "hud": [
+        {
+          "hud_id": "S4_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah tenaga dorong piston ke bawah"
+          },
+          "claim_ref": "C9",
+          "when": {
+            "driver_between": [
+              360,
+              540
+            ]
+          }
+        },
+        {
+          "hud_id": "S4_H2",
+          "component": "Callout",
+          "props": {
+            "text": "Langkah buang dorong sisa gas"
+          },
+          "claim_ref": "C10",
+          "when": {
+            "driver_between": [
+              540,
+              720
+            ]
+          }
+        }
+      ],
+      "trigger_words": [
+        "langkah tenaga",
+        "langkah buang"
+      ]
+    },
+    {
+      "id": "S5",
+      "lane": "code_3d",
+      "shot_type": "summary",
+      "camera_move": "static_cross_section",
+      "duration_sec": 6.097,
+      "sentence_refs": [
+        "S5.1"
+      ],
+      "focus_entities": [
+        "engine_block"
+      ],
+      "visible_parts": [
+        "block"
+      ],
+      "driver": {
+        "name": "crank_angle",
+        "unit": "°",
+        "from": 0,
+        "to": 720
+      },
+      "invariants": [],
+      "hud": [
+        {
+          "hud_id": "S5_H1",
+          "component": "Callout",
+          "props": {
+            "text": "Rangkaian langkah berulang pada mesin"
+          },
+          "claim_ref": "C1"
+        }
+      ],
+      "trigger_words": [
+        "langkah",
+        "berulang"
+      ]
+    }
+  ]
+}

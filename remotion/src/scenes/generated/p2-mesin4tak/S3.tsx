@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  StoryboardHudProvider,
   TelemetryProvider,
+  StoryboardHudProvider,
+  StoryboardHudDataItem,
   SceneTransition,
   BlueprintStage,
   CameraRig,
@@ -10,8 +11,7 @@ import {
   HudLayout,
   HudZone,
   Hud,
-  useDriver,
-  StoryboardHudDataItem
+  useDriver
 } from '../../../kit';
 
 export interface Scene_S3Props {
@@ -22,11 +22,11 @@ export interface Scene_S3Props {
 const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
   const driver = useDriver({
     name: 'crank_angle',
-    from: 360,
-    to: 720,
+    from: 0,
+    to: 180,
     unit: '°',
     startSec: 0,
-    durationSec: 10.07,
+    durationSec: 5.53,
     curve: 'linear'
   });
 
@@ -39,7 +39,6 @@ const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           <HudLayout palette="blueprint-navy">
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S3_H1" driver={driver} palette="blueprint-navy" />
-              <Hud id="S3_H2" driver={driver} palette="blueprint-navy" />
             </HudZone>
           </HudLayout>
         }
@@ -57,8 +56,6 @@ const Scene_S3Inner: React.FC<{ telemetry?: boolean }> = ({ telemetry }) => {
           focusBox={{ center: [0, 1.72, 0], size: [1.35, 3.15, 1.35] }}
           padding={1.22}
           elevationDeg={12}
-          startAngleDeg={0}
-          endAngleDeg={0}
         />
       </BlueprintStage>
     </SceneTransition>

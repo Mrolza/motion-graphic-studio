@@ -14,8 +14,8 @@ export const LAYOUT_9X16 = {
   platformBottomUnsafeY: 1024,
   zones: {
     title: { top: 72, maxHeight: 160 },
-    free: { top: 240, maxHeight: 540 },
-    callout: { top: 790, maxHeight: 140 },
-    caption: { top: 942, maxHeight: 78 },
+    free: { top: 240, maxHeight: 490 },
+    callout: { top: 740, maxHeight: 170 },
+    caption: { top: 935, maxHeight: 82 },
   },
 } as const;

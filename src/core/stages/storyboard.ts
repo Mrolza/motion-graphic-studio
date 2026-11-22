@@ -7,6 +7,7 @@ import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
 import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
+import { QC_RULES_VERSION } from '@core/qc/rules-version';
 
 export const KIT_SUMMARY_FOR_LLM = `Scene Kit API (remotion/src/kit/):
 - Stage & Camera:
@@ -24,7 +25,7 @@ export const KIT_SUMMARY_FOR_LLM = `Scene Kit API (remotion/src/kit/):
 - Overlay 2D (taruh di dalam <HudLayout>, BUKAN di children 3D <BlueprintStage>): DiagramOverlay ({ curveArc?: boolean, inertiaArrow?: boolean, palette? })
 - Driver: useDriver({ name, from, to, unit, startSec, durationSec, curve }) -> { name, value, unit, progress }; valveStateFromCrankAngle(deg)
 - HUD (DIKENDALIKAN DATA STORYBOARD lewat <StoryboardHudProvider items={hudData}> dan <Hud id="..." driver={driver} palette="blueprint-navy" />; DILARANG menulis teks HUD langsung di kode adegan!):
-  - Komponen di storyboard hud[]: KineticTitle, Callout, MeasureReveal, StatCounter (wajib bind_to_driver: true), CompareCard, ListReveal, DimensionLine
+  - Komponen di storyboard hud[]: KineticTitle, Callout, MeasureReveal, StatCounter (wajib bind_to_driver: true; gunakan illustrative: true jika quantity="progress"), CompareCard, ListReveal, DimensionLine, EffectiveDiameterCompare (untuk shot_type="comparison" pada wheelset/rail_cross_section: { outerLabel?, innerLabel?, bind_to_driver?: true })
   - Satuan sudut WAJIB "°" (jangan "deg") atau biarkan StatCounter memformat unit driver ("°").
 - Foreground & Transisi: ParallaxForeground ({ distance, zOffset, palette }), SceneTransition ({ variant: 'fade'|'wipe-grid', durationSec, palette, children })`;
 
@@ -49,6 +50,8 @@ export async function runStoryboardStage(
       sceneIds: timeline.scenes.map((s) => s.scene_id),
       ledger,
       kitApi,
+      rulesVersion: QC_RULES_VERSION,
+      promptVersion: 'p4d-v1',
     });
 
     if (project.stages.S7 === 'done') {
@@ -87,6 +90,7 @@ ATURAN WAJIB:
 4. "focus_entities" dan "visible_parts" WAJIB tidak kosong (train_car: ["body"]; rail_cross_section: ["wheel_left","wheel_right","flange"]; engine_block: ["block"]; wheelset: ["wheel_left","wheel_right","flange"]; piston_crank: ["piston","crank","intake_valve","exhaust_valve","spark_plug"]).
    - shot_type="establishing" WAJIB memakai "train_car" atau "engine_block".
    - shot_type="cross_section" WAJIB memakai "rail_cross_section" dan "view": "section".
+   - shot_type="comparison" pada wheelset/rail_cross_section WAJIB menyertakan HUD "EffectiveDiameterCompare" di hud[].
 5. "driver": tentukan satu penggerak fisik utama per adegan (untuk sudut gunakan unit "°", bukan "deg").
 6. "invariants": jika ada mekanisme berstatus (intake_valve, exhaust_valve, spark), deklarasikan invarian dengan rentang "driver_between" DI DALAM [from, to] driver adegan itu.
 7. "hud": MAKSIMAL 2 item HUD per adegan (di luar judul). Setiap item WAJIB memiliki "hud_id" unik (mis. "S1_H1", "S1_H2").

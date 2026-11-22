@@ -1,6 +1,6 @@
 import type { FactLedger } from '@core/contracts/fact-ledger';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
-import type { Storyboard } from '@core/contracts/storyboard';
+import { getHudClaimRefs, type Storyboard } from '@core/contracts/storyboard';
 import { generateJson } from '@core/llm/client';
 import type { RunLlmTracker } from '@core/llm/budget';
 import { z } from 'zod';
@@ -67,7 +67,11 @@ export function extractHudDisplayText(props: Record<string, unknown>): string {
 export function precheckAbsoluteWords(hudText: string, quoteText: string): string[] {
   const lowerHud = hudText.toLowerCase();
   const lowerQuote = quoteText.toLowerCase();
-  const foundAbs = ABSOLUTE_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, 'i').test(lowerHud));
+  const foundAbs = ABSOLUTE_WORDS.filter((w) => {
+    if (!new RegExp(`\\b${w}\\b`, 'i').test(lowerHud)) return false;
+    if (w === 'tanpa' && /\bwithout\b/i.test(lowerQuote)) return false;
+    return true;
+  });
   const foundHedge = HEDGE_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, 'i').test(lowerQuote));
   if (foundAbs.length > 0 && foundHedge.length > 0) {
     return [
@@ -89,8 +93,9 @@ export async function verifyStoryboardL5Semantic(params: {
   ledger: FactLedger;
   tracker?: RunLlmTracker;
   onCall?: () => void;
+  generateJsonFn?: typeof generateJson;
 }): Promise<{ report: QcReport; verdicts: L5SemanticVerdict[] }> {
-  const { topic, storyboard, ledger, tracker, onCall } = params;
+  const { topic, storyboard, ledger, tracker, onCall, generateJsonFn } = params;
   const claimMap = new Map(ledger.claims.map((c) => [c.id, c]));
   const issues: QcIssue[] = [];
 
@@ -107,8 +112,14 @@ export async function verifyStoryboardL5Semantic(params: {
     s.hud.forEach((h, idx) => {
       const hid = h.hud_id ?? `${s.id}_H${idx + 1}`;
       const text = extractHudDisplayText(h.props ?? {});
-      const claim = h.claim_ref ? claimMap.get(h.claim_ref) : undefined;
-      const quote = claim?.sources[0]?.quote ?? claim?.text ?? '';
+      const claimRefs = getHudClaimRefs(h);
+      const claims = claimRefs
+        .map((cid) => claimMap.get(cid))
+        .filter((c): c is NonNullable<typeof c> => Boolean(c));
+      const quote = claims
+        .flatMap((c) => c.sources.map((src) => src.quote))
+        .filter(Boolean)
+        .join(' | ');
       const hints = precheckAbsoluteWords(text, quote);
       for (const hint of hints) {
         issues.push({ severity: 'warning', message: hint, ref: `${s.id}:${hid}` });
@@ -117,9 +128,9 @@ export async function verifyStoryboardL5Semantic(params: {
         hud_id: hid,
         scene_id: s.id,
         text,
-        claim_ref: h.claim_ref,
+        claim_ref: claimRefs.join(', ') || undefined,
         reference: quote
-          ? `Klaim ${h.claim_ref}: "${quote}"`
+          ? `Klaim ${claimRefs.join(', ')}: "${quote}"`
           : `Topik/pertanyaan video (ilustratif): "${topic}"`,
         hints,
       });
@@ -129,7 +140,7 @@ export async function verifyStoryboardL5Semantic(params: {
   const prompt =
     `Periksa makna SEMUA teks HUD storyboard berikut terhadap kutipan sumbernya (atau topik video jika ilustratif).\n` +
     `Aturan ketat:\n` +
-    `- L5_SEMANTIC_OVERSTATEMENT: klaim dilebih-lebihkan (mis. "less chance" menjadi "tanpa", "most" menjadi "semua").\n` +
+    `- L5_SEMANTIC_OVERSTATEMENT: klaim dilebih-lebihkan (mis. "less chance" menjadi "tanpa", "most" menjadi "semua"). Catatan: kata "tanpa" adalah terjemahan SAH jika kutipan asli memang memakai "without" (mis. "Without the conical shape" -> "Tanpa bentuk kerucut").\n` +
     `- L5_SEMANTIC_DROPPED_CONDITION: syarat penting atau kata lunak ("tanpa bentuk kerucut", "cenderung") dihilangkan sehingga makna berubah.\n` +
     `- L5_SEMANTIC_UNSUPPORTED: kata sifat/klaim baru tidak ada di sumber (mis. "Kontinu" padahal hanya 1 dari 4 langkah).\n` +
     `- L5_OFF_TOPIC_TITLE: judul/subjudul ilustratif tidak tepat sasaran terhadap topik "${topic}".\n` +
@@ -137,7 +148,8 @@ export async function verifyStoryboardL5Semantic(params: {
     `Kembalikan JSON persis:\n{"items":[{"hud_id":string,"verdict":"OK"|"ERROR","code":"L5_SEMANTIC_OVERSTATEMENT"|"L5_SEMANTIC_DROPPED_CONDITION"|"L5_SEMANTIC_UNSUPPORTED"|"L5_OFF_TOPIC_TITLE" (jika ERROR),"reason":string}]}\n\n` +
     `Daftar HUD:\n${JSON.stringify(entries, null, 2)}`;
 
-  const res = await generateJson(L5SemanticLlmSchema, prompt, {
+  const genFn = generateJsonFn ?? generateJson;
+  const res = await genFn(L5SemanticLlmSchema, prompt, {
     stage: 'S7',
     purpose: 'l5_semantic',
     tracker,

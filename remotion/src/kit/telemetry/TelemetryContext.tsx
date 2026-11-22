@@ -42,12 +42,17 @@ export const TelemetryProvider: React.FC<TelemetryProviderProps> = ({
   enabled = false,
   children,
 }) => {
+  const parent = useContext(TelemetryContext);
   const layoutElRef = useRef<HTMLElement | null>(null);
   const driversRef = useRef<Record<string, { value: number; unit: string }>>({});
   const entitiesRef = useRef<Map<string, TelemetryEntitySample>>(new Map());
   const hudRef = useRef<Map<string, TelemetryHudSample>>(new Map());
   const lastFrameRef = useRef<number>(-1);
   const frame = useCurrentFrame();
+
+  if (parent.enabled) {
+    return <>{children}</>;
+  }
 
   if (enabled && frame !== lastFrameRef.current) {
     lastFrameRef.current = frame;
@@ -76,10 +81,12 @@ export const TelemetryProvider: React.FC<TelemetryProviderProps> = ({
       reportHud: (sample) => {
         hudRef.current.set(sample.id, sample);
       },
-      flushFrame: (f, sec) => {
+      flushFrame: (_f, _sec) => {
+        const globalFrame = frame;
+        const globalSec = _f === frame ? _sec : frame / 30;
         const payload: TelemetryFramePayload = {
-          frame: f,
-          sec: Math.round(sec * 1000) / 1000,
+          frame: globalFrame,
+          sec: Math.round(globalSec * 1000) / 1000,
           drivers: { ...driversRef.current },
           entities: [...entitiesRef.current.values()],
           hud: [...hudRef.current.values()],

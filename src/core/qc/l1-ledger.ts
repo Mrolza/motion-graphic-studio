@@ -1,6 +1,7 @@
 import type { FactClaim, FactLedger } from '@core/contracts/fact-ledger';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { WikipediaSource } from '@core/research/wikipedia';
+import { detectHedgeAndAbsoluteMismatches } from '@core/qc/hedge-glossary';
 
 const MONTH_PAIRS: Array<[string, string]> = [
   ['januari', 'january'],
@@ -264,6 +265,29 @@ export function verifyLedgerL1(
         message: `CLAIM_NAME_NOT_IN_QUOTE: nama diri (${missingNames.join(', ')}) pada teks klaim tidak muncul di kutipan`,
         ref: claim.id,
       });
+      return { ...claim, status: 'unverified' };
+    }
+
+    const allQuotes = claim.sources.map((s) => s.quote).join(' ');
+    const { hedgeDropped, absoluteAdded } = detectHedgeAndAbsoluteMismatches(claim.text, allQuotes);
+    if (hedgeDropped.length > 0) {
+      const desc = hedgeDropped
+        .map((h) => `"${h.en}" -> butuh salah satu (${h.expectedId.join('/')})`)
+        .join('; ');
+      issues.push({
+        severity: 'error',
+        message: `L1_HEDGE_DROPPED: kata hedge pada kutipan dihilangkan di klaim (${desc})`,
+        ref: claim.id,
+      });
+    }
+    if (absoluteAdded.length > 0) {
+      issues.push({
+        severity: 'error',
+        message: `L1_ABSOLUTE_ADDED: klaim menambahkan kata mutlak (${absoluteAdded.join(', ')}) yang tidak ada di kutipan`,
+        ref: claim.id,
+      });
+    }
+    if (hedgeDropped.length > 0 || absoluteAdded.length > 0) {
       return { ...claim, status: 'unverified' };
     }
 
