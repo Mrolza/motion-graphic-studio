@@ -115,10 +115,29 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
 
   useLayoutEffect(() => {
     if (!telemetry.enabled || !ref.current) return;
-    const r = ref.current.getBoundingClientRect();
+    const el = ref.current;
+    const r = el.getBoundingClientRect();
     const rootRect = telemetry.getLayoutRect();
     const offsetX = rootRect ? rootRect.left : 0;
     const offsetY = rootRect ? rootRect.top : 0;
+    const domText = (el.innerText || el.textContent || '').replace(/\s+/g, ' ').trim();
+    let truncated = domText.includes('…') || domText.includes('...');
+    if (!truncated) {
+      const nodes = [el, ...Array.from(el.querySelectorAll('*'))] as HTMLElement[];
+      for (const n of nodes) {
+        if (n.clientHeight > 0 && n.scrollHeight > n.clientHeight + 2) {
+          truncated = true;
+          break;
+        }
+        if (n.clientWidth > 0 && n.scrollWidth > n.clientWidth + 2) {
+          const styleObj = typeof window !== 'undefined' ? window.getComputedStyle(n) : null;
+          if (styleObj && (styleObj.overflowX === 'hidden' || styleObj.textOverflow === 'ellipsis')) {
+            truncated = true;
+            break;
+          }
+        }
+      }
+    }
     telemetry.reportHud({
       id,
       hud_id: hudId ?? id,
@@ -131,6 +150,8 @@ export const TelemetryHudBox: React.FC<TelemetryHudBoxProps> = ({
         height: Math.round(r.height * 10) / 10,
       },
       text,
+      domText,
+      truncated,
       driverName,
       numericValue,
       claimRef,

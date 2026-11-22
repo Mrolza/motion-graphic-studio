@@ -2,25 +2,31 @@ import React from 'react';
 import { getThemeTokens, type PaletteId } from '../tokens/index';
 
 export interface DiagramOverlayProps {
-  /** Show curved track arc guide in the free zone. */
-  curveArc?: boolean;
-  /** Show straight inertia vector arrow in the free zone. */
-  inertiaArrow?: boolean;
+  /** Show subtle neutral blueprint axis guides. */
+  axisGuides?: boolean;
+  /** Show neutral circular highlight ring around center focal zone. */
+  highlightRing?: boolean;
+  /** Show subtle blueprint grid reticle. */
+  gridGuide?: boolean;
   /** Palette token ID. */
   palette?: PaletteId;
 }
 
 /**
- * Pure vector 2D diagram overlay (arcs and directional arrows, no unsanctioned text)
- * rendered over the 3D scene inside HudLayout.
+ * Generic 2D vector diagram overlay with domain-neutral geometric guides only.
+ * Domain: generic. Entities: grid_guide, axis_guide, highlight_ring.
  */
 export const DiagramOverlay: React.FC<DiagramOverlayProps> = ({
-  curveArc = false,
-  inertiaArrow = false,
+  axisGuides = false,
+  highlightRing = false,
+  gridGuide = false,
   palette = 'blueprint-navy',
 }) => {
   const tokens = getThemeTokens(palette);
-  if (!curveArc && !inertiaArrow) return null;
+  if (!axisGuides && !highlightRing && !gridGuide) return null;
+
+  const cx = tokens.viewport.width / 2;
+  const cy = Math.round(tokens.viewport.height * 0.52);
 
   return (
     <svg
@@ -28,37 +34,36 @@ export const DiagramOverlay: React.FC<DiagramOverlayProps> = ({
       height={tokens.viewport.height}
       style={{ position: 'absolute', left: 0, top: 0, pointerEvents: 'none' }}
     >
-      <defs>
-        <marker
-          id="mgs-diagram-arrow"
-          markerWidth="10"
-          markerHeight="10"
-          refX="8"
-          refY="3"
-          orient="auto"
-        >
-          <path d="M0,0 L0,6 L9,3 z" fill={tokens.colors.accent} />
-        </marker>
-      </defs>
-      {curveArc ? (
-        <path
-          d="M 240 760 Q 320 520 540 420"
+      {gridGuide ? (
+        <rect
+          x={90}
+          y={260}
+          width={tokens.viewport.width - 180}
+          height={640}
+          rx={12}
           fill="none"
-          stroke={tokens.colors.primaryGlow}
-          strokeWidth={3}
-          strokeDasharray="10 6"
-          opacity={0.85}
+          stroke={tokens.colors.gridSecondary}
+          strokeWidth={1.5}
+          strokeDasharray="8 8"
+          opacity={0.5}
         />
       ) : null}
-      {inertiaArrow ? (
-        <line
-          x1={320}
-          y1={640}
-          x2={320}
-          y2={420}
+      {axisGuides ? (
+        <g stroke={tokens.colors.primaryGlow} strokeWidth={1.5} strokeDasharray="6 6" opacity={0.55}>
+          <line x1={cx} y1={280} x2={cx} y2={880} />
+          <line x1={120} y1={cy} x2={tokens.viewport.width - 120} y2={cy} />
+        </g>
+      ) : null}
+      {highlightRing ? (
+        <circle
+          cx={cx}
+          cy={cy}
+          r={170}
+          fill="none"
           stroke={tokens.colors.accent}
-          strokeWidth={4}
-          markerEnd="url(#mgs-diagram-arrow)"
+          strokeWidth={2.5}
+          strokeDasharray="10 6"
+          opacity={0.7}
         />
       ) : null}
     </svg>

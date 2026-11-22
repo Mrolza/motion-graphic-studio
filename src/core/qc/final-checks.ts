@@ -14,9 +14,42 @@ import {
 import { verifyNarrationHudSync } from '@core/qc/narration-hud-conflict';
 import { checkHudSpelling } from '@core/qc/spellcheck-id';
 import { verifyStoryboardCode } from '@core/qc/storyboard-code';
+import { detectTopicDomain } from '@core/kit/domain-registry';
 import type { TelemetrySample } from '@core/qc/visual/types';
 import type { KineticCaptionChunk } from '@core/render/kinetic-captions';
 import { LAYOUT_9X16 } from '@core/render/layout-zones';
+
+export interface TtsSceneRecord {
+  scene_id: string;
+  engine_used: string;
+  voice_id: string;
+}
+
+export async function checkTtsVoiceConsistency(
+  projectDir: string
+): Promise<{ issues: QcIssue[]; ttsScenes: TtsSceneRecord[] }> {
+  const issues: QcIssue[] = [];
+  let ttsScenes: TtsSceneRecord[] = [];
+  try {
+    const raw = await readFile(path.join(projectDir, 'audio', 'tts-manifest.json'), 'utf-8');
+    const parsed = JSON.parse(raw) as TtsSceneRecord[];
+    if (Array.isArray(parsed)) {
+      ttsScenes = parsed;
+      const engines = new Set(parsed.map((s) => s.engine_used).filter(Boolean));
+      const voices = new Set(parsed.map((s) => s.voice_id).filter(Boolean));
+      if (engines.size > 1 || voices.size > 1) {
+        issues.push({
+          severity: 'error',
+          message: `AUDIO_VOICE_MISMATCH: mesin/suara TTS tidak seragam antar adegan (engines=[${[...engines].join(',')}], voices=[${[...voices].join(',')}])`,
+          ref: 'audio',
+        });
+      }
+    }
+  } catch {
+    // No manifest (e.g., legacy or synthetic audio-only test)
+  }
+  return { issues, ttsScenes };
+}
 
 export function checkFinalTechnicalFormat(params: {
   width: number;
@@ -72,8 +105,11 @@ export async function runFinalSyncAndOverlapChecks(
     if (storyboardRaw && ledgerRaw) {
       const storyboard = StoryboardSchema.parse(JSON.parse(storyboardRaw));
       const ledger = JSON.parse(ledgerRaw) as FactLedger;
+      const projRaw = await readFile(path.join(projectDir, 'project.json'), 'utf-8').catch(() => '');
+      const projTopic = projRaw ? (JSON.parse(projRaw) as { topic?: string }).topic ?? '' : '';
+      const domain = projTopic ? detectTopicDomain(projTopic) : undefined;
 
-      const freshSbCode = verifyStoryboardCode(storyboard, script, timeline, ledger);
+      const freshSbCode = verifyStoryboardCode(storyboard, script, timeline, ledger, { domain });
       for (const iss of freshSbCode.issues) {
         if (!issues.some((e) => e.message === iss.message && e.ref === `storyboard:${iss.ref ?? ''}`)) {
           issues.push({ ...iss, ref: `storyboard:${iss.ref ?? ''}` });

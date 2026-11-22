@@ -12,7 +12,7 @@ import {
   HudLayout,
   HudZone,
   Hud,
-  DiagramOverlay,
+  RailCurveOverlay,
   StoryboardHudDataItem
 } from '../../../kit';
 
@@ -49,7 +49,7 @@ const Scene_S2Inner: React.FC<{ telemetry: boolean }> = ({ telemetry }) => {
         telemetry={telemetry}
         hud={
           <HudLayout palette="blueprint-navy">
-            <DiagramOverlay curveArc inertiaArrow />
+            <RailCurveOverlay curveArc inertiaArrow />
             <HudZone zone="callout" palette="blueprint-navy">
               <Hud id="S2_H1" driver={driver} palette="blueprint-navy" />
               <Hud id="S2_H2" driver={driver} palette="blueprint-navy" />

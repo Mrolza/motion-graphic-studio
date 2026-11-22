@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import ts from 'typescript';
+import { getKitComponentByName } from '../src/core/kit/domain-registry';
 
 interface ExtractedItem {
   category: string;
@@ -153,6 +154,13 @@ function main() {
     for (const item of list) {
       lines.push(`### \`${item.name}\``);
       if (item.doc) lines.push(item.doc);
+      const domainSpec = getKitComponentByName(item.name);
+      if (domainSpec) {
+        lines.push(`- **Domain:** \`${domainSpec.domain}\``);
+        if (domainSpec.entities.length > 0) {
+          lines.push(`- **Entities:** ${domainSpec.entities.map((e) => `\`${e}\``).join(', ')}`);
+        }
+      }
       lines.push(`- **Signature:** \`${item.signature}\``);
       if (item.props && item.props.length > 0) {
         lines.push('- **Props:**');

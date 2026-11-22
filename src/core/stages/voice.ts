@@ -167,6 +167,19 @@ export async function runVoiceStage(
       JSON.stringify(timeline, null, 2),
       'utf-8'
     );
+    await writeFile(
+      path.join(audioDir, 'tts-manifest.json'),
+      JSON.stringify(
+        updatedScenes.map((sc, idx) => ({
+          scene_id: sc.id,
+          engine_used: ttsRes.audioAssets[idx]?.engine_used ?? 'msedge-tts',
+          voice_id: ttsRes.audioAssets[idx]?.voice_id ?? (options?.voice ?? 'id-ID-ArdiNeural'),
+        })),
+        null,
+        2
+      ),
+      'utf-8'
+    );
 
     const tightened = await tightenProjectVoice({
       projectId,

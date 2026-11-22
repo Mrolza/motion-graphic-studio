@@ -3,6 +3,7 @@ import {
   BlueprintStage,
   CameraRig,
   CurvedRail,
+  CylinderSection,
   EngineBlock,
   ExaggerationBadge,
   Ground,
@@ -22,6 +23,7 @@ export type KitAssemblyKind =
   | 'RailCrossSection'
   | 'EngineBlock'
   | 'PistonCrankAssembly'
+  | 'CylinderSection'
   | 'Suspension';
 
 export interface KitFramingHarnessProps {
@@ -119,6 +121,20 @@ const KitFramingInner: React.FC<Required<KitFramingHarnessProps>> = ({
               elevationDeg={12}
             />
             <PistonCrankAssembly entityId="focus_entity" crankAngleDeg={driverValue} position={[0, 0.45, 0]} cutaway palette="blueprint-navy" />
+          </>
+        );
+      case 'CylinderSection':
+        return (
+          <>
+            <CameraRig
+              mode="frameEntities"
+              focusBox={{ center: [0, 1.72, 0], size: [1.55, 3.05, 0.95] }}
+              padding={1.18}
+              startAngleDeg={0}
+              endAngleDeg={0}
+              elevationDeg={2}
+            />
+            <CylinderSection entityId="focus_entity" view="section" crankAngleDeg={driverValue} position={[0, 0.35, 0]} palette="blueprint-navy" />
           </>
         );
       case 'Suspension':

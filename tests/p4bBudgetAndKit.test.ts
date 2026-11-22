@@ -154,7 +154,7 @@ describe('P4B Part A & B — Budget, Cache, Kit Fault, Compare, & HUD Length', (
   it('reuses cached passing scenes and stops with KIT_FAULT (0 S9 calls) on kit-owned errors', async () => {
     const tmp = await mkdtemp(path.join(os.tmpdir(), 'mgs-p4b-scenes-'));
     tempDirs.push(tmp);
-    await createProject({ id: 'p-test', topic: 'Test', format: 'how_its_made', style: 'blueprint' }, tmp);
+    await createProject({ id: 'p-test', topic: 'Kenapa roda kereta tidak tergelincir', format: 'how_its_made', style: 'blueprint' }, tmp);
     const p = await loadProject('p-test', tmp);
     p.stages.S7 = 'done';
     await saveProject(p, tmp);

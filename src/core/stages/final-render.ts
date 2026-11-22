@@ -256,6 +256,9 @@ ${seriesItems}
         concurrency: opts.concurrency,
         chromiumOptions: { gl: opts.gl },
         onBrowserLog: (log) => {
+          if (log.text.includes('THREE.Clock') && log.text.includes('deprecated')) {
+            return;
+          }
           if (log.text.startsWith(TELEMETRY_PREFIX)) {
             try {
               const parsed = JSON.parse(log.text.slice(TELEMETRY_PREFIX.length)) as TelemetrySample;

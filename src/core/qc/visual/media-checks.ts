@@ -83,6 +83,38 @@ export function checkOnscreenTruthFromTelemetry(
         continue;
       }
 
+      if (
+        h.truncated === true ||
+        (h.domText ?? h.text).includes('…') ||
+        (h.domText ?? h.text).includes('...')
+      ) {
+        const key = `truncated:${hid}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          issues.push({
+            severity: 'error',
+            message: `HUD_TRUNCATED: teks HUD "${hid}" terpotong di layar ("${h.domText ?? h.text}")`,
+            ref,
+          });
+        }
+      } else if (!exp.bind_to_driver && h.domText && exp.expectedText) {
+        const norm = (s: string) =>
+          s.replace(/[—–:\-]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+        const actualN = norm(h.domText);
+        const expN = norm(exp.expectedText);
+        if (expN.length > 0 && actualN !== expN && !actualN.includes(expN)) {
+          const key = `truncated_mismatch:${hid}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            issues.push({
+              severity: 'error',
+              message: `HUD_TRUNCATED: teks DOM "${h.domText}" tidak cocok dengan teks storyboard "${exp.expectedText}"`,
+              ref,
+            });
+          }
+        }
+      }
+
       if (exp.bind_to_driver) {
         const expectedLabel = exp.quantity ? QUANTITY_LABELS[exp.quantity] : undefined;
         if (expectedLabel && !h.text.toLowerCase().includes(expectedLabel.toLowerCase())) {

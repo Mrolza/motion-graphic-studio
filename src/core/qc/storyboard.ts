@@ -8,6 +8,7 @@ import { StoryboardSchema, type Storyboard } from '@core/contracts/storyboard';
 import type { Timeline } from '@core/contracts/timeline';
 import { generateJson } from '@core/llm/client';
 import { computeStableHash, type RunLlmTracker } from '@core/llm/budget';
+import { detectTopicDomain } from '@core/kit/domain-registry';
 import { getProjectDir, incrementProjectLlmCalls, loadProject, saveProject } from '@core/project/store';
 import { QC_RULES_VERSION } from '@core/qc/rules-version';
 import { verifyStoryboardL5Semantic, type L5SemanticVerdict } from './l5-semantic';
@@ -53,8 +54,9 @@ export async function runStoryboardQcStage(
     const reviewMetaPath = path.join(projectDir, 'qc', 'storyboard-review.meta.json');
     const genFn = options?.generateJsonFn ?? generateJson;
 
+    const domain = detectTopicDomain(project.topic);
     const checkOnce = async (sb: Storyboard): Promise<QcReport> => {
-      const codeRep = verifyStoryboardCode(sb, script, timeline, ledger);
+      const codeRep = verifyStoryboardCode(sb, script, timeline, ledger, { domain });
       const reviewHash = computeStableHash({
         storyboard: sb,
         script,

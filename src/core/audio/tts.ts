@@ -270,7 +270,7 @@ export async function synthesizeScenesVoiceOver(params: {
       scene_number: scene.scene_number,
       scene_id: sceneId,
       narration: narrationText,
-      voice_id: voice,
+      voice_id: engineUsed === "google-translate-tts" ? ("id-ID-google" as VoiceId) : voice,
       audio_url: publicAudioUrl,
       local_file_path: `public/audio/${fileName}`,
       byte_length: byteLength,
@@ -279,6 +279,35 @@ export async function synthesizeScenesVoiceOver(params: {
       timing_source: timingSource,
       engine_used: engineUsed,
     });
+  }
+
+  // C2: Satu video memakai satu mesin TTS dan satu suara
+  const usedEngines = new Set(audioAssets.map((a) => a.engine_used));
+  if (usedEngines.size > 1 && usedEngines.has("google-translate-tts")) {
+    console.warn(
+      "[VoiceOver] Sebagian adegan jatuh ke fallback Google TTS; membuat ulang semua adegan dengan Google TTS agar suara seragam."
+    );
+    for (let i = 0; i < audioAssets.length; i++) {
+      const asset = audioAssets[i]!;
+      if (asset.engine_used === "google-translate-tts") continue;
+      const diskFilePath = path.join(process.cwd(), asset.local_file_path);
+      const byteLength = await synthesizeWithGoogleTtsFallback({
+        text: asset.narration,
+        outputFilePath: diskFilePath,
+      });
+      const trimmedBytes = await trimAudioSilence(diskFilePath);
+      const durationSec = (await probeMp3DurationSec(diskFilePath)) || 4;
+      const words = estimateWordTimingsProportional(asset.narration, durationSec);
+      audioAssets[i] = {
+        ...asset,
+        byte_length: trimmedBytes || byteLength,
+        duration_sec: durationSec,
+        words,
+        timing_source: "proportional_estimate",
+        engine_used: "google-translate-tts",
+        voice_id: "id-ID-google" as VoiceId,
+      };
+    }
   }
 
   return {
