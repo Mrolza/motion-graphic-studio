@@ -48,8 +48,11 @@ Jika ada konflik, ikuti urutan ini:
 
 ## 4. GAYA VOICE-OVER RAMAH TTS (`id-ID`)
 Voice-over akan dibacakan oleh mesin TTS (`msedge-tts` Indonesia), bukan manusia. Tulis agar terdengar alami dan diucapkan dengan benar oleh mesin:
-- **Gaya bahasa:** percakapan cerdas, aktif, spesifik, mudah dipahami penonton umum. Hindari bahasa birokrasi atau terjemahan kaku ("oleh karena hal tersebut maka...").
-- **Tanda baca jelas:** gunakan titik dan koma untuk mengatur jeda napas. Jangan membuat satu kalimat sepanjang 30 kata tanpa jeda.
+- **Gaya bahasa:** percakapan cerdas, aktif, spesifik, mudah dipahami penonton umum. **Terjemahkan konsep dengan wajar** (bukan terjemahan harfiah/kaku dari Wikipedia Inggris). Hindari bahasa birokrasi ("oleh karena hal tersebut maka...") dan frasa kosong ("dari satu titik ke titik lain", "pada titik tertentu", "dan sebagainya").
+- **Sebut nama langkah & arah gerak:** pada setiap kalimat yang menjelaskan langkah proses, **sebut nama langkahnya secara eksplisit** (jangan mulai dengan "Langkah tersebut..." tanpa menyebut namanya) dan nyatakan **arah gerak** (naik/turun) bila klaim mendukungnya.
+- **Panjang kalimat:** usahakan setiap kalimat **≤ 20 kata** (maksimal 28 kata) dengan titik dan koma yang jelas untuk jeda TTS.
+- **Pembuka & penutup:** kalimat pembuka dan penutup wajib langsung menjawab pertanyaan topik.
+- **Gabung klaim:** Anda boleh menggabungkan beberapa klaim dalam satu kalimat agar mengalir alami, asalkan semua ID klaimnya dicantumkan di `claim_refs`.
 - **Format angka Indonesia (`id-ID`):** tulis pemisah ribuan dengan **titik** (`1.435`, bukan `1,435`) dan desimal dengan **koma** (`3,5`, bukan `3.5`).
 - **Hindari singkatan ambigu:** tulis "milimeter" atau "mm" secara konsisten, "kilometer per jam" atau "km/jam", dan hindari simbol aneh yang sulit dibaca TTS.
 

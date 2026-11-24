@@ -9,6 +9,7 @@ import {
   resetProjectLastRunCalls,
   saveProject,
 } from '@core/project/store';
+import { editScriptSentences, parseMarkdownScriptEdits } from '@core/qc/edit-script';
 import { validateGate1Approval } from '@core/qc/gate1-check';
 import { runIdeateStage, type ConceptsOutput } from '@core/stages/ideate';
 import { runResearchStage } from '@core/stages/research';
@@ -187,6 +188,44 @@ export async function cmdReview(args: string[]) {
   const id = args[0];
   if (!id) throw new Error('Usage: mgs review <id>');
   console.log(await formatReviewText(id));
+}
+
+export async function cmdEdit(args: string[]) {
+  const id = args[0];
+  if (!id) throw new Error('Usage: mgs edit <id> --sentence S3.3 --text "..." [--claims C4,C9] | --file naskah.md');
+  const filePath = parseFlag(args, '--file');
+  const sentenceRef = parseFlag(args, '--sentence');
+  const newText = parseFlag(args, '--text');
+  const claimsRaw = parseFlag(args, '--claims');
+  const claims = claimsRaw
+    ? claimsRaw.split(',').map((c) => c.trim()).filter(Boolean)
+    : undefined;
+
+  let edits;
+  if (filePath) {
+    const dir = getProjectDir(id);
+    const script = JSON.parse(await readFile(path.join(dir, 'script.json'), 'utf-8')) as Script;
+    const md = await readFile(filePath, 'utf-8');
+    edits = parseMarkdownScriptEdits(md, script);
+  } else if (sentenceRef && newText !== undefined) {
+    edits = [{ ref: sentenceRef, text: newText, claims }];
+  } else {
+    throw new Error('Gunakan --sentence S3.3 --text "..." atau --file naskah.md');
+  }
+
+  const res = await editScriptSentences({ projectId: id, edits });
+  console.log(
+    `Edited ${res.editedRefs.join(', ')} for ${id}: hasErrors=${res.hasErrors} (L2=${res.l2Report.issues.filter((i) => i.severity === 'error').length}, L0b=${res.l0bIssues.filter((i) => i.severity === 'error').length}, L3=${res.l3Report.issues.filter((i) => i.severity === 'error').length})`
+  );
+  if (res.hasErrors) {
+    for (const iss of [
+      ...res.l2Report.issues,
+      ...res.l0bIssues,
+      ...res.l3Report.issues,
+    ].filter((i) => i.severity === 'error')) {
+      console.log(`  ERROR (${iss.ref}): ${iss.message}`);
+    }
+  }
 }
 
 export async function cmdApprove(args: string[]) {

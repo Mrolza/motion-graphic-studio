@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { z } from 'zod';
-import { ClaimKindSchema, type FactClaim, type FactLedger } from '@core/contracts/fact-ledger';
+import type { z } from 'zod';
+import type { FactClaim, FactLedger } from '@core/contracts/fact-ledger';
 import type { QcReport } from '@core/contracts/qc-report';
 import { generateJson } from '@core/llm/client';
 import {
@@ -13,54 +13,22 @@ import {
 import { evaluateL0, verifyLedgerL1 } from '@core/qc/l1-ledger';
 import { reparaphraseFailedClaims, verifyLedgerL1Semantic } from '@core/qc/l1-semantic';
 import {
+  buildQuoteSelectionMarkdown,
+  ExtractedClaimSchema,
+  ExtractionResponseSchema,
+  FollowUpQuerySchema,
+  scoreQuoteClarity,
+  SourceEvalSchema,
+  type SourceReportEntry,
+} from '@core/research/quote-scorer';
+import {
   fetchTodayInHistorySources,
   fetchWikipediaSourcesForConcept,
   type WikipediaSource,
 } from '@core/research/wikipedia';
 import type { Concept, ConceptsOutput } from '@core/stages/ideate';
 
-const ExtractedClaimSchema = z.object({
-  id: z.string().optional(),
-  text: z.string().min(1),
-  value: z.number().nullish(),
-  unit: z.string().min(1).nullish(),
-  kind: ClaimKindSchema,
-  step_id: z.string().min(1).nullish(),
-  source_id: z.string().min(1),
-  quote: z.string().min(1),
-  supports_core_claim_indices: z.array(z.number().int().nonnegative()).optional(),
-});
-
-const SourceEvalSchema = z.object({
-  source_id: z.string().min(1),
-  relevance: z.enum(['relevant', 'partial', 'irrelevant']),
-  reason: z.string().optional(),
-});
-
-const ExtractionResponseSchema = z.object({
-  source_evaluations: z.any().optional(),
-  claims: z.array(ExtractedClaimSchema).min(1),
-});
-
-const FollowUpQuerySchema = z.object({
-  wiki_titles: z
-    .object({
-      en: z.array(z.string().min(1)).max(4).optional().default([]),
-      id: z.array(z.string().min(1)).max(3).optional().default([]),
-    })
-    .optional(),
-  search_queries: z.array(z.string().min(1)).max(4).optional().default([]),
-});
-
-export interface SourceReportEntry {
-  source_id: string;
-  title: string;
-  lang: string;
-  url: string;
-  relevance: 'relevant' | 'partial' | 'irrelevant';
-  reason: string;
-  kept: boolean;
-}
+export type { SourceReportEntry };
 
 export interface ResearchStageResult {
   concept: Concept;
@@ -90,7 +58,7 @@ async function extractClaimsFromSources(params: {
   const systemInstruction = `Anda adalah ekstraktor fakta ketat. Tugas Anda menilai relevansi tiap sumber terhadap pertanyaan topik dan mengekstrak klaim faktual.
 ATURAN MUTLAK:
 1. Nilai setiap sumber di "source_evaluations": "relevant" (menjawab langsung), "partial" (terkait sebagian), atau "irrelevant" (menyimpang/tidak menjawab topik, misalnya membahas satu kereta tertentu padahal topik menanyakan mekanisme umum).
-2. "quote" HARUS berupa KALIMAT UTUH (diawali huruf kapital/awal kalimat dan diakhiri tanda baca titik/tanda tanya/seru) yang disalin KARAKTER-DEMI-KARAKTER dari teks sumber dengan "source_id" yang sesuai. JANGAN memotong frasa di tengah kalimat. JANGAN menyisipkan angka, tahun, tanggal, atau nama depan/tokoh dari kalimat lain: setiap angka/tahun/tanggal dan nama diri di "text" WAJIB benar-benar muncul di "quote" tersebut (mis. jika kutipan hanya menyebut "Armstrong", tulis "Armstrong", bukan "Neil Armstrong"). Pastikan ada klaim yang kutipannya memuat tanggal dan tahun lengkap secara eksplisit bila relevan dengan topik.
+2. "quote" HARUS berupa KALIMAT UTUH (diawali huruf kapital/awal kalimat dan diakhiri tanda baca titik/tanda tanya/seru) yang disalin KARAKTER-DEMI-KARAKTER dari teks sumber dengan "source_id" yang sesuai. Pilih kutipan yang berdiri sendiri (jangan diawali "This stroke", "At this point", "It"; hindari sisipan dalam kurung "(assuming...)"; jangan pilih kalimat dengan arah gerak kontradiktif seperti "downwards... BDC to TDC"). JANGAN memotong frasa di tengah kalimat. JANGAN menyisipkan angka, tahun, tanggal, atau nama depan/tokoh dari kalimat lain: setiap angka/tahun/tanggal dan nama diri di "text" WAJIB benar-benar muncul di "quote" tersebut.
 3. "text" ditulis dalam bahasa Indonesia yang jelas. PERTAHANKAN kata hedge/peluang dari kutipan (mis. "most"->"sebagian besar", "less chance"->"peluang lebih kecil", "about"->"sekitar", "may"->"dapat") dan JANGAN menambahkan kata mutlak ("tanpa", "selalu", "pasti", "terus", "semua") jika tidak ada di kutipan.
 4. "kind" WAJIB salah satu dari: "fact", "estimate", "hypothetical", "interpretation".
 5. Jika klaim menyebut angka penting, isi "value" (angka murni) dan "unit". Jika tidak ada, hilangkan (jangan null).
@@ -373,8 +341,26 @@ export async function runResearchStage(
       };
     });
 
+    // Sort verified claims by quote clarity score descending within step_id so clearest quotes come first
+    l1.ledger.claims.sort((a, b) => {
+      if (a.step_id && a.step_id === b.step_id) {
+        return scoreQuoteClarity(b.sources[0]?.quote ?? '').score - scoreQuoteClarity(a.sources[0]?.quote ?? '').score;
+      }
+      return 0;
+    });
+    const quoteReport = buildQuoteSelectionMarkdown(
+      l1.ledger.claims.map((c) => ({
+        id: c.id,
+        step_id: c.step_id,
+        sourceTitle: c.sources[0]?.title ?? '-',
+        quote: c.sources[0]?.quote ?? '',
+        status: c.status,
+      }))
+    );
+
     const qcDir = path.join(projectDir, 'qc');
     await mkdir(qcDir, { recursive: true });
+    await writeFile(path.join(projectDir, 'quote-selection.md'), quoteReport.markdown, 'utf-8');
     await writeFile(path.join(projectDir, 'fact-ledger.json'), JSON.stringify(l1.ledger, null, 2), 'utf-8');
     await writeFile(path.join(projectDir, 'sources-report.json'), JSON.stringify(sourceReport, null, 2), 'utf-8');
     await writeFile(path.join(qcDir, 'L1.json'), JSON.stringify(l1.report, null, 2), 'utf-8');

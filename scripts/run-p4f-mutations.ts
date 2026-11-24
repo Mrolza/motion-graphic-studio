@@ -195,9 +195,12 @@ export const Scene_S2 = () => (<TelemetryProvider><StoryboardHudProvider items={
   console.log(`P4F mutations (1-39) written to ${summaryPath}`);
 }
 
-const repoRoot = process.cwd();
-const outDir = path.join(repoRoot, 'out', 'review', 'p4f');
-runP4FMutations(repoRoot, outDir).catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+const isMain = process.argv[1] && path.resolve(process.argv[1]).endsWith('run-p4f-mutations.ts');
+if (isMain) {
+  const repoRoot = process.cwd();
+  const outDir = path.join(repoRoot, 'out', 'review', 'p4f');
+  runP4FMutations(repoRoot, outDir).catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
+}

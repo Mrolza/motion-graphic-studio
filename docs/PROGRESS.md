@@ -556,3 +556,32 @@
   - `p2-mesin4tak`: **47 panggilan fase P4F** across **7 run** (maks **11 calls/run** ≤ 20; per tahap `S1:2, S2:10, S3:6, S4:6, S6:1, S7:2, S8:8, S9:12`; kumulatif 190 — melebihi target fase ≤ 40 sebesar 7 panggilan akibat retry `S1`/`S3` `HudZoneId` sebelum `INVALID_HUD_ZONE` ditambahkan).
 - **Mutasi 1–39 ([`mutations/mutation-summary.md`](../out/review/p4f/mutations/mutation-summary.md)):** **39/39 mutasi tertangkap** (0 panggilan Gemini).
 - **Verifikasi ([`verify.txt`](../out/review/p4f/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 85 item, `tsc` 0 error, **23 test files / 100 tests passed**, `check:size OK` 153 berkas).
+
+---
+
+## Fase P4G — Naskah Jelas di Bawah Batasan Fakta & Suntingan Pemilik di Gerbang 1 (`docs/P4G-SCRIPT-CLARITY.md`)
+
+- **Status:** **PARTIAL** (Bagian A, B, C, Mutasi 1–44, dan `npm run verify` selesai & lolos; Bagian D terhenti di **S4** karena `DailyQuotaExhaustedError`)
+- **Branch:** `phase/p4g-script-clarity` (tag awal `p4g-start`, setelah merge `phase/p4f-domain-safety` ke `main` dengan tag `p4f-done`)
+- **Tanggal:** 2026-11-24
+
+### Apa yang Selesai (Bagian A–C + Uji & Mutasi)
+1. **Bagian A — Kutipan Jernih (`src/core/research/quote-scorer.ts`, `src/core/stages/research.ts`):**
+   - `scoreQuoteClarity()` menilai kemandirian kutipan dan memberi penalti untuk awalan rujukan (`this`, `that`, `it`, `these`, `at this point`, `the stroke`, dll.), sisipan dalam kurung, panjang `> 45` kata, dan kontradiksi arah (`TDC → BDC` vs `upwards`, `BDC → TDC` vs `downwards`).
+   - `research.ts` mengurutkan klaim per `step_id` berdasarkan skor tertinggi dan menulis laporan skor & penalti ke `quote-selection.md`.
+2. **Bagian B — Kejelasan Naskah (`src/core/prompts/scriptwriter.md`, `src/core/qc/l0b-clarity.ts`, `src/core/qc/l0b-quality.ts`):**
+   - Prompt penulis diperbarui: terjemahan wajar, wajib menyebut nama langkah & arah gerak, kalimat ≤ 20 kata, pembuka/penutup menjawab topik, serta boleh menggabungkan klaim jika semua dirujuk.
+   - Cek deterministik di Gerbang 1 (`checkScriptClarity`): `L0B_STEP_UNNAMED`, `L0B_VAGUE_PHRASE`, `L0B_DANGLING_REFERENCE`, panjang kalimat `> 20` (warning) dan `> 28` (error).
+3. **Bagian C — Suntingan Pemilik di Gerbang 1 & TTS Per Kalimat (`src/core/qc/edit-script.ts`, `src/cli/gate1.ts`, `src/cli/index.ts`, `src/core/audio/sentence-tts-cache.ts`, `src/core/stages/voice.ts`):**
+   - `mgs edit <id> --sentence S3.3 --text "..."` (atau `--file naskah.md`, opsional `--claims`) menyunting naskah, mencatat ke `edits.jsonl`, lalu memeriksa ulang **hanya** kalimat yang disunting (L2 hedge, L0b kejelasan, dan 1 panggilan L3).
+   - `runVoiceStage()` menyimpan cache audio & word timings per kalimat di `audio/sentences/manifest.json` berdasarkan hash `(voice | spoken_text)` sehingga suntingan 1 kalimat hanya mensintesis ulang kalimat yang berubah.
+
+### Yang Belum & Alasan (Bagian D)
+- **Terhenti karena `DailyQuotaExhaustedError`** saat menjalankan `scripts/run-p4g-e2e.ts` pada tahap **S4** (kuota harian Gemini habis; pulih pukul 00.00 Pacific / 15.00 WIB).
+- **Yang sudah berjalan di Bagian D:** `S2` Research (7 panggilan Gemini → [`quote-selection.md`](../out/review/p4g/quote-selection.md)) dan `S3` Script (3 panggilan Gemini), serta 6 panggilan di `S4` sebelum kuota habis (**total 16 panggilan Gemini**).
+- **Yang belum:** menyelesaikan `S4`–`S12` untuk `p2-mesin4tak` (`final.mp4`, `final-qc.md`, `script.md`, `coverage.md`, `onscreen-text.md`, `publish.md`, stills) dan demo Bagian C pada `p2-mesin4tak-edit-demo` (`out/review/p4g/edit-demo/`).
+
+### Verifikasi & Mutasi (`out/review/p4g/`)
+- **Mutasi 1–44 ([`mutations/mutation-summary.md`](../out/review/p4g/mutations/mutation-summary.md)):** **44/44 mutasi tertangkap** (0 panggilan Gemini).
+- **Verifikasi ([`verify.txt`](../out/review/p4g/verify.txt)):** `npm run verify` lolos (`generate:kit-api` 85 item, `tsc` 0 error, **24 test files / 104 tests passed**, `check:size OK` 159 berkas).
+- **Statistik Panggilan Gemini ([`stats.md`](../out/review/p4g/stats.md)):** 16 panggilan (`S2:7, S3:3, S4:6`).

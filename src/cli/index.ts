@@ -20,6 +20,7 @@ import { runVisualQc } from '@core/qc/visual/runner';
 import { getVisualCheckSpec } from '@core/qc/visual/specs';
 import {
   cmdApprove,
+  cmdEdit,
   cmdIdeate,
   cmdQc,
   cmdResearch,
@@ -225,6 +226,8 @@ async function main() {
     await cmdQcFinal(rest);
   } else if (cmd === 'review') {
     await cmdReview(rest);
+  } else if (cmd === 'edit') {
+    await cmdEdit(rest);
   } else if (cmd === 'approve') {
     await cmdApprove(rest);
   } else if (cmd === 'qc-visual') {

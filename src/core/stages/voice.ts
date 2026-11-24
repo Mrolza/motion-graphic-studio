@@ -3,7 +3,12 @@ import { copyFile, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
-import { synthesizeScenesVoiceOver, type VoiceId } from '@core/audio/tts';
+import {
+  synthesizeSceneFromSentenceCache,
+  type SentenceManifest,
+  type SynthesizeSentenceFn,
+} from '@core/audio/sentence-tts-cache';
+import { type VoiceId } from '@core/audio/tts';
 import { ScriptSchema, type Script } from '@core/contracts/script';
 import { TimelineSchema, type Timeline } from '@core/contracts/timeline';
 import { getProjectDir, loadProject, saveProject } from '@core/project/store';
@@ -30,14 +35,21 @@ export interface VoiceStageResult {
   timeline: Timeline;
   voFullPath: string;
   sceneAudioPaths: Record<string, string>;
+  reusedSentenceRefs: string[];
+  synthesizedSentenceRefs: string[];
 }
 
 /**
- * S5: Synthesizes raw id-ID voice-over per scene using msedge-tts and builds timeline.json.
+ * S5: Synthesizes raw id-ID voice-over per sentence (with hash cache) & per scene, and builds timeline.json.
  */
 export async function runVoiceStage(
   projectId: string,
-  options?: { voice?: VoiceId; repoRoot?: string }
+  options?: {
+    voice?: VoiceId;
+    repoRoot?: string;
+    synthesizeSentenceFn?: SynthesizeSentenceFn;
+    skipTighten?: boolean;
+  }
 ): Promise<VoiceStageResult> {
   const repoRoot = options?.repoRoot ?? process.cwd();
   const projectDir = getProjectDir(projectId, repoRoot);
@@ -61,44 +73,57 @@ export async function runVoiceStage(
       })),
     }));
 
-    const ttsScenes = updatedScenes.map((sc, idx) => ({
-      scene_number: idx + 1,
-      narration: sc.sentences.map((s) => s.spoken_text).join(' '),
-    }));
-
-    const ttsRes = await synthesizeScenesVoiceOver({
-      scenes: ttsScenes,
-      voice: options?.voice ?? 'id-ID-ArdiNeural',
-    });
-
+    const voiceId: VoiceId = options?.voice ?? 'id-ID-ArdiNeural';
     const audioDir = path.join(projectDir, 'audio');
     await mkdir(audioDir, { recursive: true });
+    const manifestPath = path.join(audioDir, 'sentences', 'manifest.json');
+    let manifest: SentenceManifest = {};
+    try {
+      manifest = JSON.parse(await readFile(manifestPath, 'utf-8')) as SentenceManifest;
+    } catch {
+      manifest = {};
+    }
 
     const sceneAudioPaths: Record<string, string> = {};
     const timelineScenes: Array<{
       scene_id: string;
       audio_path: string;
       duration_sec: number;
-      words: typeof ttsRes.audioAssets[number]['words'];
+      words: Awaited<ReturnType<typeof synthesizeSceneFromSentenceCache>>['words'];
     }> = [];
+    const sceneEngines: Array<{ scene_id: string; engine_used: string; voice_id: VoiceId }> = [];
+    const reusedSentenceRefs: string[] = [];
+    const synthesizedSentenceRefs: string[] = [];
 
-    for (let i = 0; i < updatedScenes.length; i++) {
-      const sc = updatedScenes[i]!;
-      const asset = ttsRes.audioAssets[i]!;
-      const srcDisk = path.join(repoRoot, asset.local_file_path);
+    for (const sc of updatedScenes) {
+      const sentItems = sc.sentences.map((s, idx) => ({
+        ref: `${sc.id}.${idx + 1}`,
+        spokenText: s.spoken_text,
+      }));
+      const scRes = await synthesizeSceneFromSentenceCache({
+        sceneId: sc.id,
+        sentences: sentItems,
+        voice: voiceId,
+        audioDir,
+        repoRoot,
+        manifest,
+        synthesizeSentenceFn: options?.synthesizeSentenceFn,
+      });
+      reusedSentenceRefs.push(...scRes.reusedRefs);
+      synthesizedSentenceRefs.push(...scRes.synthesizedRefs);
+
       const destRel = `projects/${projectId}/audio/${sc.id}.mp3`;
-      const destDisk = path.join(audioDir, `${sc.id}.mp3`);
-      await copyFile(srcDisk, destDisk);
-      await rm(srcDisk, { force: true }).catch(() => {});
       sceneAudioPaths[sc.id] = destRel;
-
+      sceneEngines.push({ scene_id: sc.id, engine_used: scRes.engine_used, voice_id: voiceId });
       timelineScenes.push({
         scene_id: sc.id,
         audio_path: destRel,
-        duration_sec: asset.duration_sec,
-        words: asset.words,
+        duration_sec: scRes.duration_sec,
+        words: scRes.words,
       });
     }
+
+    await writeFile(manifestPath, JSON.stringify(manifest, null, 2), 'utf-8');
 
     const sceneGapSec = 0.25;
     const rawTimeline = buildTimeline({
@@ -169,30 +194,32 @@ export async function runVoiceStage(
     );
     await writeFile(
       path.join(audioDir, 'tts-manifest.json'),
-      JSON.stringify(
-        updatedScenes.map((sc, idx) => ({
-          scene_id: sc.id,
-          engine_used: ttsRes.audioAssets[idx]?.engine_used ?? 'msedge-tts',
-          voice_id: ttsRes.audioAssets[idx]?.voice_id ?? (options?.voice ?? 'id-ID-ArdiNeural'),
-        })),
-        null,
-        2
-      ),
+      JSON.stringify(sceneEngines, null, 2),
       'utf-8'
     );
 
-    const tightened = await tightenProjectVoice({
-      projectId,
-      projectDir,
-      timeline,
-      repoRoot,
-    });
+    const finalTimeline = options?.skipTighten
+      ? timeline
+      : (
+          await tightenProjectVoice({
+            projectId,
+            projectDir,
+            timeline,
+            repoRoot,
+          })
+        ).timeline;
 
     const updated = await loadProject(projectId, repoRoot);
     updated.stages.S5 = 'done';
     await saveProject(updated, repoRoot);
 
-    return { timeline: tightened.timeline, voFullPath, sceneAudioPaths };
+    return {
+      timeline: finalTimeline,
+      voFullPath,
+      sceneAudioPaths,
+      reusedSentenceRefs,
+      synthesizedSentenceRefs,
+    };
   } catch (err) {
     const failed = await loadProject(projectId, repoRoot);
     failed.stages.S5 = 'failed';

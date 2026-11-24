@@ -4,6 +4,7 @@ import type { VideoFormat } from '@core/contracts/project';
 import type { QcIssue, QcReport } from '@core/contracts/qc-report';
 import type { Script } from '@core/contracts/script';
 import { generateJson } from '@core/llm/client';
+import { checkScriptClarity } from '@core/qc/l0b-clarity';
 import type { Concept } from '@core/stages/ideate';
 
 export const L0bScoresSchema = z.object({
@@ -322,6 +323,12 @@ ${JSON.stringify(items, null, 2)}`;
 
   const stepCov = checkKeyStepsCoverage(concept?.key_steps, script, ledger);
   l0bIssues.push(...stepCov.issues);
+
+  const clarityIssues = checkScriptClarity(script, {
+    keySteps: concept?.key_steps,
+    ledger,
+  });
+  l0bIssues.push(...clarityIssues);
 
   return {
     l0b: {
